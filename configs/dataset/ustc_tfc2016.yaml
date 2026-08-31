@@ -1,0 +1,11 @@
+# USTC-TFC2016 Stage 0 数据配置（v2 计划 §5.1、§6）
+dataset: USTC-TFC2016
+raw_pcap_root: "D:\\USTC-TFC2016数据集\\USTC-TFC2016-master\\USTC-TFC2016-master"
+
+# 流定义（§6.2 Task 0.2）：五元组 (srcIP,srcPort,dstIP,dstPort,proto)，反向五元组视为同一双向流
+# 方向（Task 0.1）：以每个流第一个包的方向为 forward（initiator）
+protocols: [6, 17]  # TCP, UDP
+
+outputs:
+  flows_dir: "data/flows"          # 每 (类,源文件) 一个 pkl：包级数据
+  stage0_dir: "outputs/stage0_data"  # §6.3 交付物：flow_index.csv / dataset_statistics.csv
