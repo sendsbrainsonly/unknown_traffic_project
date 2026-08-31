@@ -1,0 +1,31 @@
+# Additive Task 0.3 configuration. Existing Stage 0 files remain unchanged.
+default_policy: compatible_min1
+
+inputs:
+  flows_dir: data/flows
+
+outputs:
+  root_dir: data/trafficformer_input
+
+format:
+  # 14-byte Ethernet header is excluded; at most 64 following bytes are used.
+  ethernet_offset_bytes: 14
+  bytes_per_packet: 64
+  max_packets: 5
+  add_sep_before_packet: true
+  # Applied by the downstream TrafficFormer reader, not by this generator.
+  seq_length: 320
+  padding: downstream_token_tail
+
+policies:
+  # Primary Stage 0 adaptation: preserve every non-empty flow.
+  compatible_min1:
+    min_packets: 1
+  # Coverage/sensitivity comparison for the official <3-packet rejection.
+  strict_min3:
+    min_packets: 3
+
+official_reference:
+  repository: https://github.com/IDP-code/TrafficFormer
+  commit: 6d0ba64d82e74fb130c6c7301ef20885dbfbdf29
+  rifa_applied: false
