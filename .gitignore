@@ -1,0 +1,16 @@
+# 数据与产物（体积大，本地在 D:\unknown_traffic_project，不入仓库）
+data/
+outputs/
+*.pkl
+*.npy
+*.pt
+*.bin
+*.tsv
+*.csv
+*.log
+
+# Python
+__pycache__/
+*.pyc
+.idea/
+.vscode/

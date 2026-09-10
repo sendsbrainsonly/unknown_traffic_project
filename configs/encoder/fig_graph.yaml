@@ -1,0 +1,44 @@
+# Additive Task 0.4 configuration. Existing Stage 0 / Task 0.3 files remain
+# unchanged.  Every Stage 0 flow is retained with the same flow_id set as the
+# Task 0.3 compatible_min1 cohort.
+default_policy: all_flows
+
+inputs:
+  flows_dir: data/flows
+
+outputs:
+  root_dir: data/fig_graph
+
+format:
+  # FEC-OSL implementation detail: Nv = 30 nodes (first 30 packets).  Shorter
+  # flows keep their natural node count; nothing is padded or synthesized.
+  max_packets: 30
+  # Shen 2021 Algorithm 1: bursts are maximal same-direction runs.  No time
+  # threshold is applied (the FEC-OSL prose "predefined burst threshold"
+  # inherits the classic wording, but the procedure it follows is
+  # direction-only).
+  burst_method: direction
+  # Node feature 2 uses caplen; wirelen differs for 6 packets in the whole
+  # Stage 0 corpus, so this choice is immaterial.
+  length_field: caplen
+  # Node feature 3 is seconds since the flow's first packet.
+  timestamp_mode: relative_delta
+  # Stage 0 packet schema: direction 1 = initiator, 0 = responder.
+  initiator_direction_value: 1
+  # Features 6-7 for nodes in the first burst (no preceding burst exists).
+  first_burst_ratio_fill: 0.0
+
+policies:
+  # FIG never drops short flows; this single policy covers every flow_id.
+  all_flows:
+    min_packets: 1
+
+references:
+  fecosl:
+    title: End-to-End Open-Set Semi-Supervised Learning for Fine-Grained Encrypted Traffic Classification
+    venue: IEEE Transactions on Information Forensics and Security, 2026
+  seminal_burst:
+    authors: M. Shen, J. Zhang, L. Zhu, K. Xu, and X. Du
+    title: Accurate Decentralized Application Identification via Encrypted Traffic Analysis Using Graph Neural Networks
+    venue: IEEE Transactions on Information Forensics and Security, vol. 16, pp. 2367-2380, 2021
+    doi: 10.1109/TIFS.2021.3050608
