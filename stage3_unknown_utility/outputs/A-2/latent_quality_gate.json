@@ -1,0 +1,9 @@
+{
+  "all_pairwise_split_overlaps": 0,
+  "flow_ids_unique": true,
+  "inf_count": 0,
+  "latent_dim": 128,
+  "nan_count": 0,
+  "setting": "A-2",
+  "status": "PASS"
+}

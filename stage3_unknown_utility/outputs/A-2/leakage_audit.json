@@ -1,0 +1,48 @@
+{
+  "counts": {
+    "known_final_test": 43332,
+    "known_train": 346651,
+    "known_validation": 43331,
+    "unknown_final_test": 5579
+  },
+  "data_manifest_sha256": "b730fa60e4c8f55c13d525c093d6f5831bace0d255138147f43dadb74f4710cb",
+  "execution_plan_sha256": "197e36be2e3559c20dddf4375d117855b24cab1c1ab0f89d76f08a7f164d13de",
+  "known_classes": [
+    "Gmail",
+    "FTP",
+    "Nsis-ay",
+    "Facetime",
+    "Weibo",
+    "Cridex",
+    "Zeus",
+    "SMB",
+    "BitTorrent",
+    "WorldOfWarcraft",
+    "Shifu",
+    "Outlook",
+    "Virut",
+    "MySQL",
+    "Skype",
+    "Miuref",
+    "Neris"
+  ],
+  "protocol_canonical_sha256": "1fff4ed33211de0b123cf4c0ec6b203cc33be683ac315b610ffd8f0194550ae1",
+  "raw_byte_inputs_all_valid": true,
+  "setting": "A-2",
+  "status": "PASS",
+  "unknown_classes": [
+    "Geodo",
+    "Htbot",
+    "Tinba"
+  ],
+  "unknown_forbidden_usage_counts": {
+    "used_density_fit": 0,
+    "used_encoder_train": 0,
+    "used_encoder_val": 0,
+    "used_pca_fit": 0,
+    "used_scaler_fit": 0,
+    "used_threshold_calibration": 0
+  },
+  "unknown_train_rows_excluded": 44629,
+  "unknown_validation_rows_excluded": 5579
+}

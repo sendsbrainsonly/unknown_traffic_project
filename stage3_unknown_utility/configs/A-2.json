@@ -1,0 +1,18 @@
+{
+  "setting": "A-2",
+  "primary": true,
+  "known_classes": 17,
+  "unknown_classes": ["Geodo", "Htbot", "Tinba"],
+  "encoder_seed": 2022,
+  "batch_size": 512,
+  "early_stopping_patience": 5,
+  "latent_dim": 128,
+  "pca_dim": 64,
+  "reg_covar": 0.001,
+  "gmm_components": 2,
+  "gmm_n_init": 3,
+  "gmm_max_iter": 300,
+  "gmm_seed": 0,
+  "bootstrap_resamples": 1000,
+  "bootstrap_seed": 0
+}

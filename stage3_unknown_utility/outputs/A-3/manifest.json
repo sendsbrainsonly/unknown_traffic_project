@@ -1,0 +1,383 @@
+{
+  "artifacts": [
+    {
+      "hash_status": "verified",
+      "path": "../../artifacts/A-3/best_checkpoint.pt",
+      "role": "checkpoint-or-derived-artifact",
+      "scope": "external",
+      "sha256": "3221521fee79339400ff3039a35e3c78cc1c734710249eeee0cf1e5699244cbc",
+      "size_bytes": 323641671
+    },
+    {
+      "hash_status": "verified",
+      "path": "../../artifacts/A-3/frozen_final_predictions.parquet",
+      "role": "checkpoint-or-derived-artifact",
+      "scope": "external",
+      "sha256": "e463e0e627421abcea863f7341a742cb55bb986efb83fd150a1f8fa7f6035cb3",
+      "size_bytes": 1475526
+    },
+    {
+      "hash_status": "verified",
+      "path": "../../artifacts/A-3/latest_checkpoint.pt",
+      "role": "checkpoint-or-derived-artifact",
+      "scope": "external",
+      "sha256": "0a955a0a92512a9c22c0e6caa12c380d6698548aac6ffcc2096c3dceefb1428c",
+      "size_bytes": 323642971
+    },
+    {
+      "hash_status": "verified",
+      "path": "../../artifacts/A-3/multi_full_k2_models.joblib",
+      "role": "checkpoint-or-derived-artifact",
+      "scope": "external",
+      "sha256": "c1b0b9dcb656bd69f0286aa240c3db128fd18bcdf1e2baf15f663913756ae915",
+      "size_bytes": 2978243
+    },
+    {
+      "hash_status": "verified",
+      "path": "../../artifacts/A-3/pca64.joblib",
+      "role": "checkpoint-or-derived-artifact",
+      "scope": "external",
+      "sha256": "c20b8b5219b31a0985b7ca2c0140a5a9f6e0fa888163246ec39bc3bec2dc2e9d",
+      "size_bytes": 69021
+    },
+    {
+      "hash_status": "verified",
+      "path": "../../artifacts/A-3/single_full_k1_models.joblib",
+      "role": "checkpoint-or-derived-artifact",
+      "scope": "external",
+      "sha256": "70abb479fa85a26ebaef9426470ec99d2c74b0cd9c5e538277219e2adf465757",
+      "size_bytes": 1489800
+    },
+    {
+      "hash_status": "verified",
+      "path": "../../artifacts/A-3/smoke_checkpoint.pt",
+      "role": "checkpoint-or-derived-artifact",
+      "scope": "external",
+      "sha256": "753e6cc5358b8f519c33c1ee1cc1c82cf4e3390afa46253df251e2beca26395f",
+      "size_bytes": 323642321
+    },
+    {
+      "hash_status": "verified",
+      "path": "../../artifacts/A-3/smoke_latest_checkpoint.pt",
+      "role": "checkpoint-or-derived-artifact",
+      "scope": "external",
+      "sha256": "d3fb69844206ed3cba459b9ebd194268352b3b7189584fdd79d4cd06f090a109",
+      "size_bytes": 323646935
+    },
+    {
+      "hash_status": "verified",
+      "path": "../../artifacts/A-3/standard_scaler.joblib",
+      "role": "checkpoint-or-derived-artifact",
+      "scope": "external",
+      "sha256": "58fbfd728bd3b4cadf1f265c8551cc9d071f5dcd04115fdd44d89eae7db2f2e6",
+      "size_bytes": 3687
+    },
+    {
+      "hash_status": "verified",
+      "path": "../../artifacts/A-3/test_known_mu.parquet",
+      "role": "checkpoint-or-derived-artifact",
+      "scope": "external",
+      "sha256": "56a54390e6975c6e26d5296d6577263cd73648e304c34eb51073e8d9579e933d",
+      "size_bytes": 28053462
+    },
+    {
+      "hash_status": "verified",
+      "path": "../../artifacts/A-3/test_unknown_mu.parquet",
+      "role": "checkpoint-or-derived-artifact",
+      "scope": "external",
+      "sha256": "60e336b3eef533a14e122de3a927b3200bbc5be06c5df92a3dc43711295e36a0",
+      "size_bytes": 7159232
+    },
+    {
+      "hash_status": "verified",
+      "path": "../../artifacts/A-3/train_known_mu.parquet",
+      "role": "checkpoint-or-derived-artifact",
+      "scope": "external",
+      "sha256": "8602314cfeebfcffc0469da4dd44d372bad23e7d098a548bca646d2e51b2cd75",
+      "size_bytes": 216312218
+    },
+    {
+      "hash_status": "verified",
+      "path": "../../artifacts/A-3/val_known_mu.parquet",
+      "role": "checkpoint-or-derived-artifact",
+      "scope": "external",
+      "sha256": "a8222e5218f7037f816589010978be0a989fe44908ceb51d71be5c0467bf89ee",
+      "size_bytes": 28054758
+    },
+    {
+      "hash_status": "verified",
+      "path": "../../artifacts/A-3/val_known_scores.parquet",
+      "role": "checkpoint-or-derived-artifact",
+      "scope": "external",
+      "sha256": "02467819a7651c5c811cf8ed5569e45b73bb5df22b38b085bf14041b74d534c0",
+      "size_bytes": 1154498
+    },
+    {
+      "hash_status": "verified",
+      "path": "../../../.tmux-task/stage3_after_a2_v3/output.log",
+      "role": "execution-log",
+      "scope": "external",
+      "sha256": "499693636675dc53b2c9e5a5ed97f4c85b29a8de7a6c3ba00b7e2caaeb657482",
+      "size_bytes": 35886
+    },
+    {
+      "path": "checkpoint_selection.json",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 443,
+      "sha256": "490f661247f0515a3028c3d9c036a33a892f8c1d8e3ba2358e7e33a51cbe6045",
+      "hash_status": "verified"
+    },
+    {
+      "path": "data_manifest.csv",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 42755811,
+      "sha256": "8d52ab0d60e3e13a6504c7299ec23b0a1a67af78bc31b1649318a35a371522ea",
+      "hash_status": "verified"
+    },
+    {
+      "path": "decision_transition_matrix.csv",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 657,
+      "sha256": "70de08d6c26d0af1182b9b1d884b4a45eefbae5f31191bdf9a11027d322e0b37",
+      "hash_status": "verified"
+    },
+    {
+      "path": "density_fit_warnings.csv",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 1115,
+      "sha256": "7abf7d9e1f925889b3aa147bbaee5391b585d48bcbd0502b990d605d67cb3a06",
+      "hash_status": "verified"
+    },
+    {
+      "path": "density_validation_loglik.csv",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 1258,
+      "sha256": "34840ea40b6ca110cb9e1dd2a6c58c6aadcee2b204663050a4061a2fa9f0fda0",
+      "hash_status": "verified"
+    },
+    {
+      "path": "detector_metrics.csv",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 1097,
+      "sha256": "03991f5d56e09065b31967086f3635da6c15c9df1fa297f019235356eca899ee",
+      "hash_status": "verified"
+    },
+    {
+      "path": "frozen_model_hashes.json",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 3206,
+      "sha256": "00b4c32c6ba4d7f0276a1941a79c031aca3f01840e9f48016b2783f68a887a26",
+      "hash_status": "verified"
+    },
+    {
+      "path": "k2_stability.csv",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 3104,
+      "sha256": "877c9eaf374ab17adc037ef24fd3c966cb146b5b329fabc537c686370165f530",
+      "hash_status": "verified"
+    },
+    {
+      "path": "latent_export_manifest.json",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 2302,
+      "sha256": "b9b292bf9da14c0ecb2782cd13e97ff6772b381284640f7ab2caca2a5b9d456b",
+      "hash_status": "verified"
+    },
+    {
+      "path": "latent_quality_gate.json",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 163,
+      "sha256": "6881f7418fec9b8091431495d9df919adecc101a681a009eb5e422120436f31e",
+      "hash_status": "verified"
+    },
+    {
+      "path": "leakage_audit.json",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 1135,
+      "sha256": "7356906bcd5646eb58629ce9a448f9b59796bfc35815407951e181861cf755a1",
+      "hash_status": "verified"
+    },
+    {
+      "path": "paired_bootstrap_ci.csv",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 398,
+      "sha256": "148ee631a6bb3f9e0ca9ec588e4ec328f39da5089046b38d537fc16af65edd0f",
+      "hash_status": "verified"
+    },
+    {
+      "path": "paired_bootstrap_samples.csv",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 70949,
+      "sha256": "e1cf3103b82cb48de05f1b505d688ff9c1411e58a719fe7762ca13f0fdba568c",
+      "hash_status": "verified"
+    },
+    {
+      "path": "per_unknown_class_results.csv",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 451,
+      "sha256": "639bd78ab17470580b0b8e06860b1413ce542adbfe87d6d0485c801342d2b158",
+      "hash_status": "verified"
+    },
+    {
+      "path": "run_metadata.json",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 2182,
+      "sha256": "76446cda5c09ad1e6fa0e0ba845bfd743afa47722d181d239d65bf120c3a35b5",
+      "hash_status": "verified"
+    },
+    {
+      "path": "smoke_checkpoint_selection.json",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 445,
+      "sha256": "f1e67a42fb7d71c7fc367eb687d607065bae79acccd0eb2a059295f5a54450db",
+      "hash_status": "verified"
+    },
+    {
+      "path": "smoke_metrics.csv",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 1348,
+      "sha256": "0a15565085ba7ef3518f41ce48294ab27744b8ed614fd972a54d1851dd4dea3f",
+      "hash_status": "verified"
+    },
+    {
+      "path": "smoke_report.md",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 631,
+      "sha256": "f81cba01f1983eb5bbddaec9e45ad7eeb0d97fca6e483025d44e5255341abc13",
+      "hash_status": "verified"
+    },
+    {
+      "path": "smoke_training_config.json",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 1939,
+      "sha256": "718635a28fd8bf1bf92d3e7b343a135c326c02adbd1f8567c08331118cc0ed62",
+      "hash_status": "verified"
+    },
+    {
+      "path": "threshold_calibration.csv",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 514,
+      "sha256": "59065964e9fcee945cc1f5185843df29ea3118ee333b3723804cd4e1c1aa9007",
+      "hash_status": "verified"
+    },
+    {
+      "path": "training_config.json",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 1947,
+      "sha256": "5305e35bd2065756e1397da7d7759423e20cf66596bc837ca0a71afdee5da5bf",
+      "hash_status": "verified"
+    },
+    {
+      "path": "training_metrics.csv",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 14472,
+      "sha256": "409fbfb22417a81c0fd2736d072088842809279d993ad31293a01e47e115d5ed",
+      "hash_status": "verified"
+    },
+    {
+      "path": "unknown_absorption_by_known_class.csv",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 191,
+      "sha256": "2e00d7d063e201557d9293ca8273200e7f0cac6f62b3bc00647503534b1156e8",
+      "hash_status": "verified"
+    },
+    {
+      "path": "unknown_leakage_audit.md",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 1133,
+      "sha256": "2b1ac41a5005bf5a0fe10755aff75f864714608e9846906872ee5fe684a167fb",
+      "hash_status": "verified"
+    }
+  ],
+  "claim_scope": "approximate",
+  "code": {
+    "changes": [
+      "stage3_unknown_utility execution implementation"
+    ],
+    "dirty": true,
+    "revision": "25cd43c98878075fce13b9d5e5ed956170c89f2b"
+  },
+  "configuration": {
+    "files": [
+      "/home/birkenwald/data/SEU-WXY/WXY-SEU/TrafficClassifier/Projects/unknown_traffic_project/stage3_unknown_utility/configs/A-3.json"
+    ],
+    "parameters": {
+      "K_multi": 2,
+      "K_single": 1,
+      "pca_dim": 64,
+      "reg_covar": 0.001
+    },
+    "seeds": [
+      2022,
+      0
+    ]
+  },
+  "core_results": [
+    {
+      "name": "single_unknown_far",
+      "value": 0.11643702697457792
+    },
+    {
+      "name": "multi_unknown_far",
+      "value": 0.09353774500291093
+    },
+    {
+      "name": "delta_unknown_far_multi_minus_single",
+      "value": -0.02289928197166699
+    }
+  ],
+  "created_at_utc": "2026-09-12T15:13:34Z",
+  "execution": {
+    "command": "evaluate_final.py --setting A-3 --bootstrap-resamples 1000 --bootstrap-seed 0",
+    "environment": "/home/birkenwald/data/SEU-WXY/conda_envs/2025-10-8-WXY-dgl_py310",
+    "exit_code": 0,
+    "physical_gpu_ids": [
+      "4"
+    ],
+    "tmux_session": "stage3_after_a2_v3"
+  },
+  "experiment_id": "stage3-ustc-a3-primary-20260912",
+  "experiment_type": "unknown-detection",
+  "inputs": [
+    {
+      "path": "/home/birkenwald/data/SEU-WXY/WXY-SEU/TrafficClassifier/Projects/unknown_traffic_project/data/splits/compatible_min1",
+      "role": "frozen source split"
+    },
+    {
+      "path": "/home/birkenwald/data/SEU-WXY/WXY-SEU/TrafficClassifier/Projects/unknown_traffic_project/stage3_protocol",
+      "role": "frozen protocol"
+    }
+  ],
+  "limitations": [
+    "Official author sample-fold identities are unavailable; local frozen split is non-author-equivalent."
+  ],
+  "next_step": "Stop after the frozen Gate; no later-stage execution is authorized.",
+  "objective": "Strict unknown-free Single-Full versus Multi-Full-K2 utility test for A-3",
+  "schema_version": 1,
+  "status": "success",
+  "updated_at_utc": "2026-09-12T20:18:03Z"
+}

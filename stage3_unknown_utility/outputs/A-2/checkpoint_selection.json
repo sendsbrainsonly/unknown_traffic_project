@@ -1,0 +1,14 @@
+{
+  "best_epoch": 28,
+  "checkpoint_sha256": "c31edd56327dd42c0cdd0a4b63d3fd8e91fa18742cba7d0dc011f189a74f0f50",
+  "combined_score": 0.9771873399978809,
+  "early_stopping_patience": 5,
+  "mode": "formal",
+  "selection_data": "Known Validation only",
+  "setting": "A-2",
+  "stability_guard_cumulative_activations": 1,
+  "stop_epoch": 33,
+  "unknown_samples_used": 0,
+  "val_accuracy": 0.9768295215896241,
+  "val_macro_f1": 0.9775454206441788
+}

@@ -1,0 +1,5 @@
+setting,unknown_class,absorbed_known_class_single,single_false_accept_count,multi_still_accepts_same_samples,multi_recovers_same_samples
+A-2,Geodo,Miuref,3413,3367,46
+A-2,Geodo,Shifu,1,0,1
+A-2,Htbot,Miuref,33,32,1
+A-2,Htbot,Shifu,2,2,0

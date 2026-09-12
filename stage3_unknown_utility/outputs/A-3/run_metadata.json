@@ -1,0 +1,39 @@
+{
+  "checkpoint_hash": "3221521fee79339400ff3039a35e3c78cc1c734710249eeee0cf1e5699244cbc",
+  "completed_utc": "2026-09-12T20:12:57Z",
+  "cuda": "12.8",
+  "execution_plan_hash": "197e36be2e3559c20dddf4375d117855b24cab1c1ab0f89d76f08a7f164d13de",
+  "final_predictions_hash": "e463e0e627421abcea863f7341a742cb55bb986efb83fd150a1f8fa7f6035cb3",
+  "frozen_model_manifest_hash": "00b4c32c6ba4d7f0276a1941a79c031aca3f01840e9f48016b2783f68a887a26",
+  "git_commit": "25cd43c98878075fce13b9d5e5ed956170c89f2b",
+  "git_dirty_at_execution": true,
+  "gpu": "4",
+  "multi_gmm_hash": "c1b0b9dcb656bd69f0286aa240c3db128fd18bcdf1e2baf15f663913756ae915",
+  "numpy": "1.26.4",
+  "open_detect_commit": "f26ac911be4324110a6632912388cd19413353bd",
+  "pca_hash": "c20b8b5219b31a0985b7ca2c0140a5a9f6e0fa888163246ec39bc3bec2dc2e9d",
+  "protocol_hash": "1fff4ed33211de0b123cf4c0ec6b203cc33be683ac315b610ffd8f0194550ae1",
+  "python": "3.10.18",
+  "pytorch": "2.8.0+cu128",
+  "scaler_hash": "58fbfd728bd3b4cadf1f265c8551cc9d071f5dcd04115fdd44d89eae7db2f2e6",
+  "script_hashes": {
+    "common.py": "80c8c61a7b21381c919c3cada9d624f7427647f0a8afc6f22dbce4431f48e684",
+    "evaluate_final.py": "037a49f39d3a772577330b2da43321e8d693744a2fbbce2f4e1cce2401cfa610",
+    "extract_latents.py": "e40877a4aa9b723d3c14d199c2ad5b2efe28f258322b226c6c2ff40ebf1d7c2a",
+    "fit_support_models.py": "ae6e04ced30b35570a8908b4e266a7227fccc8b079d8b1c1db3e093ca770dfbd",
+    "prepare_setting.py": "cec821a83f46c2bb5f63830cb207cf8ff49d718b26299d4b61123bc27b5e7625",
+    "stage3_model.py": "46980485024f271f33288057b46d1310760f7981b4ef21cdaef67e57f7687e49",
+    "summarize_primary.py": "8973a7b33caba4f7e847239f150f5aee63d3549cbcdfe815d5c1db426cef3e0a",
+    "train_known_only.py": "5e22b0d5804b227e7e58ba4a69ee71f41c4a8c1061ceff15308783d6863e28c8",
+    "verify_stage3.py": "dee31e5d6a32c5c80b2320984189ac1ea1454f37942436a587c8afb4dde74952"
+  },
+  "seed": 2022,
+  "setting": "A-3",
+  "single_gaussian_hash": "70abb479fa85a26ebaef9426470ec99d2c74b0cd9c5e538277219e2adf465757",
+  "sklearn": "1.7.2",
+  "thresholds": {
+    "Multi-Full-K2": 45.759145759637555,
+    "Native": -2.6052154064178445,
+    "Single-Full": 37.33511906226489
+  }
+}

@@ -1,0 +1,50 @@
+{
+  "checkpoint_sha256": "8932a118936117d772b64fdaa4a53fb64f4a1fff06fead9847a0bcb10d70c3b4",
+  "files": {
+    "test_known_mu.parquet": {
+      "file": "test_known_mu.parquet",
+      "flow_id_set_sha256": "26cdc23a24d763a9f900d43893b37de3cd30837422112c52e01f86b81afcb7f5",
+      "flow_id_unique": true,
+      "inf_count": 0,
+      "latent_dim": 128,
+      "nan_count": 0,
+      "path": "/home/birkenwald/data/SEU-WXY/WXY-SEU/TrafficClassifier/Projects/unknown_traffic_project/stage3_unknown_utility/artifacts/A-1/test_known_mu.parquet",
+      "rows": 48061,
+      "sha256": "4c689ca871fe147729662362ed0396faf9c249b7846aab97089178c3fd108bd4"
+    },
+    "test_unknown_mu.parquet": {
+      "file": "test_unknown_mu.parquet",
+      "flow_id_set_sha256": "55829c0ddf6465cf0d6de92e2e4cee074bd2e14856cab4eced58ea0fcbc7be5e",
+      "flow_id_unique": true,
+      "inf_count": 0,
+      "latent_dim": 128,
+      "nan_count": 0,
+      "path": "/home/birkenwald/data/SEU-WXY/WXY-SEU/TrafficClassifier/Projects/unknown_traffic_project/stage3_unknown_utility/artifacts/A-1/test_unknown_mu.parquet",
+      "rows": 850,
+      "sha256": "45d9b3bf2366b31a4f69575aa4ec9546c5cf11b08c22b7d4ab621f9fc3584366"
+    },
+    "train_known_mu.parquet": {
+      "file": "train_known_mu.parquet",
+      "flow_id_set_sha256": "b818f9bf4bb73f0b2e85a2e80d1c77104972a6aaed08391811c3d1f22c54c1e3",
+      "flow_id_unique": true,
+      "inf_count": 0,
+      "latent_dim": 128,
+      "nan_count": 0,
+      "path": "/home/birkenwald/data/SEU-WXY/WXY-SEU/TrafficClassifier/Projects/unknown_traffic_project/stage3_unknown_utility/artifacts/A-1/train_known_mu.parquet",
+      "rows": 384478,
+      "sha256": "80de4d3c81a3b29ccfeeecbb360b94fe33c2edcd70ec3649740511818e353fbf"
+    },
+    "val_known_mu.parquet": {
+      "file": "val_known_mu.parquet",
+      "flow_id_set_sha256": "e070bdc49fe71205eb143ae5be5c79e0947ac97a8f504797b9d511f2abfadac0",
+      "flow_id_unique": true,
+      "inf_count": 0,
+      "latent_dim": 128,
+      "nan_count": 0,
+      "path": "/home/birkenwald/data/SEU-WXY/WXY-SEU/TrafficClassifier/Projects/unknown_traffic_project/stage3_unknown_utility/artifacts/A-1/val_known_mu.parquet",
+      "rows": 48059,
+      "sha256": "bf3e3cf041b4775fc86031be1a9a0269535da8c63e76614f9c836aac19cc7891"
+    }
+  },
+  "setting": "A-1"
+}

@@ -1,0 +1,68 @@
+{
+  "bad_gradients": {
+    "encoder.conv1.weight": {
+      "finite": false,
+      "finite_max": 2.6781934128274333e+38,
+      "finite_min": -1.5914780307794117e+38,
+      "nonfinite_count": 76,
+      "shape": [
+        64,
+        1,
+        3,
+        3
+      ]
+    }
+  },
+  "batch_index_zero_based": 44,
+  "logvar": {
+    "finite": true,
+    "finite_max": 87.541748046875,
+    "finite_min": -32.11609649658203,
+    "nonfinite_count": 0,
+    "shape": [
+      512,
+      128
+    ]
+  },
+  "losses": {
+    "dis": {
+      "finite": true,
+      "finite_max": 75391.59375,
+      "finite_min": 75391.59375,
+      "nonfinite_count": 0,
+      "shape": []
+    },
+    "ent": {
+      "finite": true,
+      "finite_max": 2.8332133293151855,
+      "finite_min": 2.8332133293151855,
+      "nonfinite_count": 0,
+      "shape": []
+    },
+    "kld": {
+      "finite": true,
+      "finite_max": 1.0490577230064987e+35,
+      "finite_min": 1.0490577230064987e+35,
+      "nonfinite_count": 0,
+      "shape": []
+    },
+    "rec": {
+      "finite": true,
+      "finite_max": 0.0629466325044632,
+      "finite_min": 0.0629466325044632,
+      "nonfinite_count": 0,
+      "shape": []
+    }
+  },
+  "mu": {
+    "finite": true,
+    "finite_max": 83.49333953857422,
+    "finite_min": -82.7656021118164,
+    "nonfinite_count": 0,
+    "shape": [
+      512,
+      128
+    ]
+  },
+  "status": "REPRODUCED_NONFINITE_GRADIENT"
+}

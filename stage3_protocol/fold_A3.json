@@ -1,0 +1,13 @@
+{
+  "scenario": "A-3",
+  "fold_kind": "official_class_holdout_scenario_not_author_sample_fold",
+  "known_count": 15,
+  "unknown_count": 5,
+  "known_classes": ["Gmail", "FTP", "Nsis-ay", "Facetime", "Weibo", "Cridex", "Zeus", "SMB", "BitTorrent", "WorldOfWarcraft", "Shifu", "Outlook", "Virut", "MySQL", "Skype"],
+  "unknown_classes": ["Geodo", "Htbot", "Tinba", "Miuref", "Neris"],
+  "known_current_project_ids": [5, 2, 10, 3, 17, 1, 19, 12, 0, 18, 13, 11, 16, 8, 14],
+  "unknown_current_project_ids": [4, 6, 15, 7, 9],
+  "formal_counts": {"known_train": 308836, "known_validation": 38604, "known_final_test": 38605, "unknown_final_test": 10306},
+  "sample_split": "data/splits/compatible_min1",
+  "encoder_policy": "train a new Known-only encoder; do not use the existing 20-class checkpoint"
+}

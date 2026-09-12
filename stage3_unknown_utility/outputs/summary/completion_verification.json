@@ -1,0 +1,32 @@
+{
+  "settings": [
+    {
+      "bootstrap_resamples": 1000,
+      "known_classes": 19,
+      "latent_dim": 128,
+      "leakage": "PASS",
+      "setting": "A-1",
+      "status": "PASS",
+      "unknown_classes": 1
+    },
+    {
+      "bootstrap_resamples": 1000,
+      "known_classes": 17,
+      "latent_dim": 128,
+      "leakage": "PASS",
+      "setting": "A-2",
+      "status": "PASS",
+      "unknown_classes": 3
+    },
+    {
+      "bootstrap_resamples": 1000,
+      "known_classes": 15,
+      "latent_dim": 128,
+      "leakage": "PASS",
+      "setting": "A-3",
+      "status": "PASS",
+      "unknown_classes": 5
+    }
+  ],
+  "status": "PASS"
+}

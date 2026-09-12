@@ -1,0 +1,38 @@
+{
+  "checkpoint_hash": "8932a118936117d772b64fdaa4a53fb64f4a1fff06fead9847a0bcb10d70c3b4",
+  "completed_utc": "2026-09-12T16:30:28Z",
+  "cuda": "12.8",
+  "execution_plan_hash": "197e36be2e3559c20dddf4375d117855b24cab1c1ab0f89d76f08a7f164d13de",
+  "final_predictions_hash": "6fbffff51e19af0fbe5a3a025ac3b16ba38e287d727cf2ff7aac48b84f6683e1",
+  "frozen_model_manifest_hash": "ea1836bfadb47cf06817c2bd9a4c9bf8ead5a14df9f5f3680e4070f5b0c0839f",
+  "git_commit": "25cd43c98878075fce13b9d5e5ed956170c89f2b",
+  "git_dirty_at_execution": true,
+  "gpu": "4",
+  "multi_gmm_hash": "9a031690bc3f9e87e8432df664ec0f8279b97ad6f9b2dcffd84891ca5b914060",
+  "numpy": "1.26.4",
+  "open_detect_commit": "f26ac911be4324110a6632912388cd19413353bd",
+  "pca_hash": "1d47caf0460d56685ac4140d2a7826e6c4dcfe15fdf8f8755ff225dc904e9345",
+  "protocol_hash": "1fff4ed33211de0b123cf4c0ec6b203cc33be683ac315b610ffd8f0194550ae1",
+  "python": "3.10.18",
+  "pytorch": "2.8.0+cu128",
+  "scaler_hash": "dfab9ae66db8f27d1e6878b6097dc6eaeb2caab0af0305eea82c21c40d15b9b6",
+  "script_hashes": {
+    "common.py": "80c8c61a7b21381c919c3cada9d624f7427647f0a8afc6f22dbce4431f48e684",
+    "evaluate_final.py": "54601abd7ad38f8905e797c26861938404581f73baa3b3f6be4b91cafc6944d4",
+    "extract_latents.py": "c2ef5755ef81c3b3101bb8f8b81b566f88163665d8848ca2802644444aba0524",
+    "fit_support_models.py": "ae6e04ced30b35570a8908b4e266a7227fccc8b079d8b1c1db3e093ca770dfbd",
+    "prepare_setting.py": "cec821a83f46c2bb5f63830cb207cf8ff49d718b26299d4b61123bc27b5e7625",
+    "summarize_primary.py": "8973a7b33caba4f7e847239f150f5aee63d3549cbcdfe815d5c1db426cef3e0a",
+    "train_known_only.py": "45096250d0cfdb991cee2fb38e5263aff9df3bfcb1c3f9cf1a24cf02b38558e2",
+    "verify_stage3.py": "dee31e5d6a32c5c80b2320984189ac1ea1454f37942436a587c8afb4dde74952"
+  },
+  "seed": 2022,
+  "setting": "A-1",
+  "single_gaussian_hash": "38da94ba94f1305962a617223695b0af8b4cc7ca9bf16767ddb727e11e57ea76",
+  "sklearn": "1.7.2",
+  "thresholds": {
+    "Multi-Full-K2": 24.267435809863418,
+    "Native": -8.071707439422607,
+    "Single-Full": 12.140391740091557
+  }
+}

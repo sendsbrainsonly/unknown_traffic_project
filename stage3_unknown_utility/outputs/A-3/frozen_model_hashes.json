@@ -1,0 +1,60 @@
+{
+  "created_before_final_test": true,
+  "execution_plan_sha256": "197e36be2e3559c20dddf4375d117855b24cab1c1ab0f89d76f08a7f164d13de",
+  "files": [
+    {
+      "path": "/home/birkenwald/data/SEU-WXY/WXY-SEU/TrafficClassifier/Projects/unknown_traffic_project/stage3_unknown_utility/artifacts/A-3/best_checkpoint.pt",
+      "sha256": "3221521fee79339400ff3039a35e3c78cc1c734710249eeee0cf1e5699244cbc"
+    },
+    {
+      "path": "/home/birkenwald/data/SEU-WXY/WXY-SEU/TrafficClassifier/Projects/unknown_traffic_project/stage3_unknown_utility/artifacts/A-3/standard_scaler.joblib",
+      "sha256": "58fbfd728bd3b4cadf1f265c8551cc9d071f5dcd04115fdd44d89eae7db2f2e6"
+    },
+    {
+      "path": "/home/birkenwald/data/SEU-WXY/WXY-SEU/TrafficClassifier/Projects/unknown_traffic_project/stage3_unknown_utility/artifacts/A-3/pca64.joblib",
+      "sha256": "c20b8b5219b31a0985b7ca2c0140a5a9f6e0fa888163246ec39bc3bec2dc2e9d"
+    },
+    {
+      "path": "/home/birkenwald/data/SEU-WXY/WXY-SEU/TrafficClassifier/Projects/unknown_traffic_project/stage3_unknown_utility/artifacts/A-3/single_full_k1_models.joblib",
+      "sha256": "70abb479fa85a26ebaef9426470ec99d2c74b0cd9c5e538277219e2adf465757"
+    },
+    {
+      "path": "/home/birkenwald/data/SEU-WXY/WXY-SEU/TrafficClassifier/Projects/unknown_traffic_project/stage3_unknown_utility/artifacts/A-3/multi_full_k2_models.joblib",
+      "sha256": "c1b0b9dcb656bd69f0286aa240c3db128fd18bcdf1e2baf15f663913756ae915"
+    },
+    {
+      "path": "/home/birkenwald/data/SEU-WXY/WXY-SEU/TrafficClassifier/Projects/unknown_traffic_project/stage3_unknown_utility/outputs/A-3/threshold_calibration.csv",
+      "sha256": "59065964e9fcee945cc1f5185843df29ea3118ee333b3723804cd4e1c1aa9007"
+    },
+    {
+      "path": "/home/birkenwald/data/SEU-WXY/WXY-SEU/TrafficClassifier/Projects/unknown_traffic_project/stage3_unknown_utility/outputs/A-3/training_config.json",
+      "sha256": "5305e35bd2065756e1397da7d7759423e20cf66596bc837ca0a71afdee5da5bf"
+    },
+    {
+      "path": "/home/birkenwald/data/SEU-WXY/WXY-SEU/TrafficClassifier/Projects/unknown_traffic_project/stage3_unknown_utility/artifacts/A-3/train_known_mu.parquet",
+      "sha256": "8602314cfeebfcffc0469da4dd44d372bad23e7d098a548bca646d2e51b2cd75"
+    },
+    {
+      "path": "/home/birkenwald/data/SEU-WXY/WXY-SEU/TrafficClassifier/Projects/unknown_traffic_project/stage3_unknown_utility/artifacts/A-3/val_known_mu.parquet",
+      "sha256": "a8222e5218f7037f816589010978be0a989fe44908ceb51d71be5c0467bf89ee"
+    },
+    {
+      "path": "/home/birkenwald/data/SEU-WXY/WXY-SEU/TrafficClassifier/Projects/unknown_traffic_project/stage3_unknown_utility/artifacts/A-3/val_known_scores.parquet",
+      "sha256": "02467819a7651c5c811cf8ed5569e45b73bb5df22b38b085bf14041b74d534c0"
+    }
+  ],
+  "fit_data": "Known Train only",
+  "frozen_at_utc": "2026-09-12T20:11:14Z",
+  "gmm_max_iter": 300,
+  "gmm_n_init": 3,
+  "gmm_seed": 0,
+  "k1": 1,
+  "k2": 2,
+  "pca_dim": 64,
+  "protocol_canonical_sha256": "1fff4ed33211de0b123cf4c0ec6b203cc33be683ac315b610ffd8f0194550ae1",
+  "reg_covar": 0.001,
+  "setting": "A-3",
+  "test_data_read": false,
+  "threshold_data": "Known Validation only",
+  "unknown_samples_used_for_fit_or_calibration": 0
+}

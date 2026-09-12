@@ -1,0 +1,9 @@
+setting,population,transition,count,population_size,rate
+A-1,Unknown,"Recovered Unknown: Single accepted, Multi rejected",0,850,0.0
+A-1,Unknown,"Regressed Unknown: Single rejected, Multi accepted",86,850,0.1011764705882353
+A-1,Unknown,Accepted by both,444,850,0.5223529411764706
+A-1,Unknown,Rejected by both,320,850,0.3764705882352941
+A-1,Known,"Recovered Known: Single rejected, Multi accepted",464,48061,0.009654397536464077
+A-1,Known,"Regressed Known: Single accepted, Multi rejected",453,48061,0.009425521732797903
+A-1,Known,Accepted by both,45318,48061,0.9429266973221531
+A-1,Known,Rejected by both,1826,48061,0.03799338340858492

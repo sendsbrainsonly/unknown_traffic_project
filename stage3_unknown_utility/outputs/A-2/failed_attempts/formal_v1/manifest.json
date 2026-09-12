@@ -1,0 +1,97 @@
+{
+  "schema_version": 1,
+  "experiment_id": "stage3-a2-formal-failed-v1-20260912",
+  "created_at_utc": "2026-09-12T16:32:37Z",
+  "updated_at_utc": "2026-09-12T16:44:11Z",
+  "status": "failed",
+  "experiment_type": "training-failure",
+  "claim_scope": "diagnostic",
+  "objective": "Reproduce and preserve the A-2 first-epoch non-finite Open-Detect loss",
+  "inputs": [
+    {
+      "path": "/home/birkenwald/data/SEU-WXY/WXY-SEU/TrafficClassifier/Projects/unknown_traffic_project/data/splits/compatible_min1",
+      "role": "frozen source split"
+    },
+    {
+      "path": "/home/birkenwald/data/SEU-WXY/WXY-SEU/TrafficClassifier/Projects/unknown_traffic_project/stage3_protocol",
+      "role": "frozen protocol"
+    }
+  ],
+  "code": {
+    "revision": "25cd43c98878075fce13b9d5e5ed956170c89f2b",
+    "dirty": true,
+    "changes": [
+      "stage3_unknown_utility execution implementation"
+    ]
+  },
+  "execution": {
+    "tmux_session": "stage3_primary_continue_v1",
+    "command": "train_known_only.py --setting A-2 --mode formal",
+    "exit_code": 1,
+    "environment": "/home/birkenwald/data/SEU-WXY/conda_envs/2025-10-8-WXY-dgl_py310",
+    "physical_gpu_ids": [
+      "4"
+    ]
+  },
+  "configuration": {
+    "files": [
+      "/home/birkenwald/data/SEU-WXY/WXY-SEU/TrafficClassifier/Projects/unknown_traffic_project/stage3_unknown_utility/configs/A-2.json"
+    ],
+    "parameters": {
+      "batch_size": 512,
+      "failure_zero_based_batch": 5,
+      "raw_logvar_max": 102.106575
+    },
+    "seeds": [
+      2022
+    ]
+  },
+  "core_results": [
+    {
+      "name": "nonfinite_variance_elements",
+      "value": 2
+    },
+    {
+      "name": "guarded_recheck_finite_batches",
+      "value": 6
+    }
+  ],
+  "artifacts": [
+    {
+      "path": "failure_trace.md",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 645,
+      "sha256": "4089d4907bdb440f3fb8ac36929bce835f51c8d12c042ee2c5e2ad023d5bbe50",
+      "hash_status": "verified"
+    },
+    {
+      "path": "guarded_recheck.json",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 71,
+      "sha256": "2ab32724695ef55b99ba4824f61f4152ccec6fcaa5a6c181a6f825eaa64e1b8a",
+      "hash_status": "verified"
+    },
+    {
+      "path": "nonfinite_diagnostics.json",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 1873,
+      "sha256": "0cd904080fc29bcc48b7e16acf6d738fb7d8072a574c3e64c8cffef0ebefa162",
+      "hash_status": "verified"
+    },
+    {
+      "path": "training_config.json",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 1823,
+      "sha256": "bd8cfa8a40f7cdd09170c320b35c96a99d0262f67777a713dbaa9ac7a6e8eb9d",
+      "hash_status": "verified"
+    }
+  ],
+  "limitations": [
+    "This failed run produced no formal epoch metric or checkpoint and never reached Unknown evaluation."
+  ],
+  "next_step": "Rerun A-2 from the same seed with the documented overflow-triggered guard; preserve this attempt."
+}

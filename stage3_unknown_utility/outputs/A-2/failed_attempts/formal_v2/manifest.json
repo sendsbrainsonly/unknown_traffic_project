@@ -1,0 +1,90 @@
+{
+  "schema_version": 1,
+  "experiment_id": "stage3-a2-formal-failed-v2-20260912",
+  "created_at_utc": "2026-09-12T17:00:00Z",
+  "updated_at_utc": "2026-09-12T16:53:38Z",
+  "status": "failed",
+  "experiment_type": "training-failure",
+  "claim_scope": "diagnostic",
+  "objective": "Diagnose the A-2 non-finite gradient after the initial forward-overflow guard",
+  "inputs": [
+    {
+      "path": "/home/birkenwald/data/SEU-WXY/WXY-SEU/TrafficClassifier/Projects/unknown_traffic_project/data/splits/compatible_min1",
+      "role": "frozen source split"
+    },
+    {
+      "path": "/home/birkenwald/data/SEU-WXY/WXY-SEU/TrafficClassifier/Projects/unknown_traffic_project/stage3_protocol",
+      "role": "frozen protocol"
+    }
+  ],
+  "code": {
+    "revision": "25cd43c98878075fce13b9d5e5ed956170c89f2b",
+    "dirty": true,
+    "changes": [
+      "stage3_unknown_utility initial forward-overflow guard"
+    ]
+  },
+  "execution": {
+    "tmux_session": "stage3_a2_formal_v2",
+    "command": "train_known_only.py --setting A-2 --mode formal",
+    "exit_code": 1,
+    "environment": "/home/birkenwald/data/SEU-WXY/conda_envs/2025-10-8-WXY-dgl_py310",
+    "physical_gpu_ids": [
+      "4"
+    ]
+  },
+  "configuration": {
+    "files": [
+      "/home/birkenwald/data/SEU-WXY/WXY-SEU/TrafficClassifier/Projects/unknown_traffic_project/stage3_unknown_utility/configs/A-2.json"
+    ],
+    "parameters": {
+      "batch_size": 512,
+      "failure_zero_based_batch": 44,
+      "raw_logvar_max": 87.541748046875,
+      "kld": 1.0490577230064987e+35
+    },
+    "seeds": [
+      2022
+    ]
+  },
+  "core_results": [
+    {
+      "name": "nonfinite_encoder_conv1_gradient_elements",
+      "value": 76
+    },
+    {
+      "name": "upper_guard_full_epoch_finite_batches",
+      "value": 678
+    }
+  ],
+  "artifacts": [
+    {
+      "path": "nonfinite_diagnostics.json",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 1393,
+      "sha256": "40f32326959f939d8c6c5cbfc76c7204974d1b9be941a5160f012dc0bd689092",
+      "hash_status": "verified"
+    },
+    {
+      "path": "training_config.json",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 1948,
+      "sha256": "6a3c04a6585a880f4a7e3d8690338ee090ad9d84eb8785fe475ab2b979545141",
+      "hash_status": "verified"
+    },
+    {
+      "path": "upper_guard_epoch_recheck.json",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 73,
+      "sha256": "7c30fa6ce37b07caf30000a229e7de8162920e6a63ac582cf9e78db128e0eac7",
+      "hash_status": "verified"
+    }
+  ],
+  "limitations": [
+    "This failed run produced no formal epoch metric or checkpoint and never reached Unknown evaluation."
+  ],
+  "next_step": "Rerun A-2 from the same seed with the documented upper-logvar bound; preserve this attempt."
+}

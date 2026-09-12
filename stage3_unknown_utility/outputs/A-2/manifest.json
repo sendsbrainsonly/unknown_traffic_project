@@ -1,0 +1,503 @@
+{
+  "artifacts": [
+    {
+      "hash_status": "verified",
+      "path": "../../artifacts/A-2/best_checkpoint.pt",
+      "role": "checkpoint-or-derived-artifact",
+      "scope": "external",
+      "sha256": "c31edd56327dd42c0cdd0a4b63d3fd8e91fa18742cba7d0dc011f189a74f0f50",
+      "size_bytes": 323644743
+    },
+    {
+      "hash_status": "verified",
+      "path": "../../artifacts/A-2/frozen_final_predictions.parquet",
+      "role": "checkpoint-or-derived-artifact",
+      "scope": "external",
+      "sha256": "c9a3b2b19c48bfd821b4a6e88af77ba42078a4ed67e72f52b21b854c016fa3e5",
+      "size_bytes": 1486644
+    },
+    {
+      "hash_status": "verified",
+      "path": "../../artifacts/A-2/latest_checkpoint.pt",
+      "role": "checkpoint-or-derived-artifact",
+      "scope": "external",
+      "sha256": "82a6fbdaedf03db4fba1ecdcbe13a1c8cf96185139b79ea0dded390e4b6ef437",
+      "size_bytes": 323646043
+    },
+    {
+      "hash_status": "verified",
+      "path": "../../artifacts/A-2/multi_full_k2_models.joblib",
+      "role": "checkpoint-or-derived-artifact",
+      "scope": "external",
+      "sha256": "f698a4257e2025a8ee48dcd06343faa3cf45b6bfc511d15677def0131cdc28a9",
+      "size_bytes": 3370733
+    },
+    {
+      "hash_status": "verified",
+      "path": "../../artifacts/A-2/pca64.joblib",
+      "role": "checkpoint-or-derived-artifact",
+      "scope": "external",
+      "sha256": "bfc935ddf945664e7409ed669c1f930e769dae17dd14a4257b6487e3fd8639e2",
+      "size_bytes": 69021
+    },
+    {
+      "hash_status": "verified",
+      "path": "../../artifacts/A-2/single_full_k1_models.joblib",
+      "role": "checkpoint-or-derived-artifact",
+      "scope": "external",
+      "sha256": "893a80ca12516f22c0bba273d72b1e164f51f6fa5dcf6b063a1a99c50d64b936",
+      "size_bytes": 1688360
+    },
+    {
+      "hash_status": "verified",
+      "path": "../../artifacts/A-2/smoke_checkpoint.pt",
+      "role": "checkpoint-or-derived-artifact",
+      "scope": "external",
+      "sha256": "e5f2bb42c07bae5826adafef9ea199260e2c3b5a2fafca36104c9524cedf1360",
+      "size_bytes": 323645265
+    },
+    {
+      "hash_status": "verified",
+      "path": "../../artifacts/A-2/smoke_latest_checkpoint.pt",
+      "role": "checkpoint-or-derived-artifact",
+      "scope": "external",
+      "sha256": "dea787bfac315dbe162e8b9745b9d821616584dca2c298fda5a42f42e44eed58",
+      "size_bytes": 323649879
+    },
+    {
+      "hash_status": "verified",
+      "path": "../../artifacts/A-2/standard_scaler.joblib",
+      "role": "checkpoint-or-derived-artifact",
+      "scope": "external",
+      "sha256": "fc540ef43244e8b295be3378ba10213891dace79bdcfc41647809e99599e0bba",
+      "size_bytes": 3687
+    },
+    {
+      "hash_status": "verified",
+      "path": "../../artifacts/A-2/test_known_mu.parquet",
+      "role": "checkpoint-or-derived-artifact",
+      "scope": "external",
+      "sha256": "3b59d3661cab8e396216ec83714cda89f0d5e6aec6f3583762587c6dc3803a21",
+      "size_bytes": 31571719
+    },
+    {
+      "hash_status": "verified",
+      "path": "../../artifacts/A-2/test_unknown_mu.parquet",
+      "role": "checkpoint-or-derived-artifact",
+      "scope": "external",
+      "sha256": "6f4fb267b0c00a234148b09a7c13c98a6b643f3f7889664a5690bd67164fa7b1",
+      "size_bytes": 3798060
+    },
+    {
+      "hash_status": "verified",
+      "path": "../../artifacts/A-2/train_known_mu.parquet",
+      "role": "checkpoint-or-derived-artifact",
+      "scope": "external",
+      "sha256": "5e3c47b3fffc19dda51d1edfaacc2c9871352aa236acaf1bef9c47e1a0a2f210",
+      "size_bytes": 237520199
+    },
+    {
+      "hash_status": "verified",
+      "path": "../../artifacts/A-2/val_known_mu.parquet",
+      "role": "checkpoint-or-derived-artifact",
+      "scope": "external",
+      "sha256": "8c18f4abdbfa0c0105fbd429a84a6fecaf0ac6a812470402502caeb57d7cf13e",
+      "size_bytes": 31572211
+    },
+    {
+      "hash_status": "verified",
+      "path": "../../artifacts/A-2/val_known_scores.parquet",
+      "role": "checkpoint-or-derived-artifact",
+      "scope": "external",
+      "sha256": "b47b5413ba32a2f4b82e7a162303546244e695727770410ac83756907983e2a7",
+      "size_bytes": 1306593
+    },
+    {
+      "hash_status": "verified",
+      "path": "../../../.tmux-task/stage3_a2_formal_v2/output.log",
+      "role": "execution-log",
+      "scope": "external",
+      "sha256": "44bc79e6f75e8619bcbf929737f9c713c6441690fda1a0701d9803571c8890c3",
+      "size_bytes": 2363
+    },
+    {
+      "hash_status": "verified",
+      "path": "../../../.tmux-task/stage3_a2_formal_v2/exit.status",
+      "role": "execution-log",
+      "scope": "external",
+      "sha256": "4355a46b19d348dc2f57c046f8ef63d4538ebb936000f3c9ee954a27460dd865",
+      "size_bytes": 2
+    },
+    {
+      "hash_status": "verified",
+      "path": "../../../.tmux-task/stage3_a2_formal_v3/output.log",
+      "role": "execution-log",
+      "scope": "external",
+      "sha256": "0b22072b0856edf530c0db23bc470204920523b28f95f70855af33f6e2c10534",
+      "size_bytes": 12089
+    },
+    {
+      "hash_status": "verified",
+      "path": "../../../.tmux-task/stage3_a2_formal_v3/exit.status",
+      "role": "execution-log",
+      "scope": "external",
+      "sha256": "9a271f2a916b0b6ee6cecb2426f0b3206ef074578be55d9bc94f6f3fe3ab86aa",
+      "size_bytes": 2
+    },
+    {
+      "hash_status": "verified",
+      "path": "../../../.tmux-task/stage3_after_a2_v3/output.log",
+      "role": "execution-log",
+      "scope": "external",
+      "sha256": "499693636675dc53b2c9e5a5ed97f4c85b29a8de7a6c3ba00b7e2caaeb657482",
+      "size_bytes": 35886
+    },
+    {
+      "path": "checkpoint_selection.json",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 443,
+      "sha256": "19b2ce85f47efad3efb86ba54f68dd9532625e3dbd0e380472e3509ed4fe6505",
+      "hash_status": "verified"
+    },
+    {
+      "path": "data_manifest.csv",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 42500559,
+      "sha256": "b730fa60e4c8f55c13d525c093d6f5831bace0d255138147f43dadb74f4710cb",
+      "hash_status": "verified"
+    },
+    {
+      "path": "decision_transition_matrix.csv",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 669,
+      "sha256": "f2ff0104a8528bab0e4b452b209401488744c6f28f8e5dc55fd5f5c299ae423f",
+      "hash_status": "verified"
+    },
+    {
+      "path": "density_fit_warnings.csv",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 1245,
+      "sha256": "24667f21debcfebeb945cace6f407f6958677b9acb0fb8e3b97286c8d6ca9ed5",
+      "hash_status": "verified"
+    },
+    {
+      "path": "density_validation_loglik.csv",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 1437,
+      "sha256": "53ecd256842bed898bf0d5f1778f0a4266656d76575462e471fb33d189df4b6e",
+      "hash_status": "verified"
+    },
+    {
+      "path": "detector_metrics.csv",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 1101,
+      "sha256": "4660530a48376f4220404a6c32a7395f139a85dd1536d3e98bd6fb60b1fc7aa2",
+      "hash_status": "verified"
+    },
+    {
+      "path": "failed_attempts/formal_v1/RESULTS.md",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 1724,
+      "sha256": "a2795222aa6cd0ad375ef5f15f159ba086bb765e7cfe17556f5c424252b0fb0c",
+      "hash_status": "verified"
+    },
+    {
+      "path": "failed_attempts/formal_v1/failure_trace.md",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 645,
+      "sha256": "4089d4907bdb440f3fb8ac36929bce835f51c8d12c042ee2c5e2ad023d5bbe50",
+      "hash_status": "verified"
+    },
+    {
+      "path": "failed_attempts/formal_v1/guarded_recheck.json",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 71,
+      "sha256": "2ab32724695ef55b99ba4824f61f4152ccec6fcaa5a6c181a6f825eaa64e1b8a",
+      "hash_status": "verified"
+    },
+    {
+      "path": "failed_attempts/formal_v1/manifest.json",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 2966,
+      "sha256": "eefb4f1cd6d164097dd318972f40743212eadbe0b9935d90a1a390097e7093cc",
+      "hash_status": "verified"
+    },
+    {
+      "path": "failed_attempts/formal_v1/nonfinite_diagnostics.json",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 1873,
+      "sha256": "0cd904080fc29bcc48b7e16acf6d738fb7d8072a574c3e64c8cffef0ebefa162",
+      "hash_status": "verified"
+    },
+    {
+      "path": "failed_attempts/formal_v1/training_config.json",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 1823,
+      "sha256": "bd8cfa8a40f7cdd09170c320b35c96a99d0262f67777a713dbaa9ac7a6e8eb9d",
+      "hash_status": "verified"
+    },
+    {
+      "path": "failed_attempts/formal_v2/RESULTS.md",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 1988,
+      "sha256": "5e67ebb2c4c4272a71a26074b45c097e54c519f83ce0981742bff05a5a23be50",
+      "hash_status": "verified"
+    },
+    {
+      "path": "failed_attempts/formal_v2/manifest.json",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 2804,
+      "sha256": "b370d984532776f898e3df396fe5ac1229bde9bb1ef5dfd03219fff4399daecf",
+      "hash_status": "verified"
+    },
+    {
+      "path": "failed_attempts/formal_v2/nonfinite_diagnostics.json",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 1393,
+      "sha256": "40f32326959f939d8c6c5cbfc76c7204974d1b9be941a5160f012dc0bd689092",
+      "hash_status": "verified"
+    },
+    {
+      "path": "failed_attempts/formal_v2/training_config.json",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 1948,
+      "sha256": "6a3c04a6585a880f4a7e3d8690338ee090ad9d84eb8785fe475ab2b979545141",
+      "hash_status": "verified"
+    },
+    {
+      "path": "failed_attempts/formal_v2/upper_guard_epoch_recheck.json",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 73,
+      "sha256": "7c30fa6ce37b07caf30000a229e7de8162920e6a63ac582cf9e78db128e0eac7",
+      "hash_status": "verified"
+    },
+    {
+      "path": "frozen_model_hashes.json",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 3206,
+      "sha256": "977431846fd89b56a1e1d100f63f1213edc8d811f34638c919264a3c71fd238e",
+      "hash_status": "verified"
+    },
+    {
+      "path": "k2_stability.csv",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 3442,
+      "sha256": "cf8f52e150532e43b6d3a8beb62f023ca38d523601c6e11d7dedd2596c055510",
+      "hash_status": "verified"
+    },
+    {
+      "path": "latent_export_manifest.json",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 2301,
+      "sha256": "0561a22b2ce6b300522d1c40f7d895ea5ead17aa4e83a0e17ae17be44a68dccb",
+      "hash_status": "verified"
+    },
+    {
+      "path": "latent_quality_gate.json",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 163,
+      "sha256": "90d59fcfb592adf12070b087b197e19346b71d54dc95b3e89a534b277bda1a60",
+      "hash_status": "verified"
+    },
+    {
+      "path": "leakage_audit.json",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 1133,
+      "sha256": "c5402556f867f4b26cfc9e05ccf9f52ff9d30e320833ec74699168f51234d8ef",
+      "hash_status": "verified"
+    },
+    {
+      "path": "paired_bootstrap_ci.csv",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 390,
+      "sha256": "b6f03e288fa6e807a6151668aa97c572e75a0f8acbff2dfbb8b937e5c65775a8",
+      "hash_status": "verified"
+    },
+    {
+      "path": "paired_bootstrap_samples.csv",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 68063,
+      "sha256": "090a70a1e2f557aec56113f5a1d0e52ed69f951ea612666f145899dee1e66d77",
+      "hash_status": "verified"
+    },
+    {
+      "path": "per_unknown_class_results.csv",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 347,
+      "sha256": "1a9b37c856db4cdd2e9444e5ccf45273b9502b034a3ddd08d079347dc41f26c1",
+      "hash_status": "verified"
+    },
+    {
+      "path": "run_metadata.json",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 2184,
+      "sha256": "97b4ad6e4c364415fedcbb0a5d1bfc40bd057062969602f62d5e63ce367f930d",
+      "hash_status": "verified"
+    },
+    {
+      "path": "smoke_checkpoint_selection.json",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 397,
+      "sha256": "540d8c183f358bce06dcd78ade01404a370e99d9497198ffc3a0bfa2a9ed5519",
+      "hash_status": "verified"
+    },
+    {
+      "path": "smoke_metrics.csv",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 1242,
+      "sha256": "e51792eb063954d602db777726c138657eb350d16d76455500cebb712e6b56c1",
+      "hash_status": "verified"
+    },
+    {
+      "path": "smoke_report.md",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 585,
+      "sha256": "b9267b0c3a376d19bceeda3bf96add8119b53f410bc0d0eb8e18a3ee2618d8bc",
+      "hash_status": "verified"
+    },
+    {
+      "path": "smoke_training_config.json",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 1815,
+      "sha256": "e94054846473b0643bc7c77b766ee926ee19f5cad37423efd4048b2b658f119f",
+      "hash_status": "verified"
+    },
+    {
+      "path": "threshold_calibration.csv",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 522,
+      "sha256": "9f8edf039df37e19b1fc9fff9f1989555290eb27370ac10dbc1a2f05f4426548",
+      "hash_status": "verified"
+    },
+    {
+      "path": "training_config.json",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 1947,
+      "sha256": "3f8cb6f2c22770faec3ca2522366b3686eab3d99b793e2553b2dce86781d60ea",
+      "hash_status": "verified"
+    },
+    {
+      "path": "training_metrics.csv",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 11631,
+      "sha256": "947885db4054b9c324bcb21d45c235c081bae6eb51966d8250be8e3a8f680c63",
+      "hash_status": "verified"
+    },
+    {
+      "path": "unknown_absorption_by_known_class.csv",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 241,
+      "sha256": "4f0b4c5b8c8bc891b9280d7190a3e22e4c56f7fbc5d4a8cf5f13ba6e0bc74704",
+      "hash_status": "verified"
+    },
+    {
+      "path": "unknown_leakage_audit.md",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 1131,
+      "sha256": "0d35968c6a4a6ff34c596284ff771ce453367f53978b5ac48ceeee042355a96d",
+      "hash_status": "verified"
+    }
+  ],
+  "claim_scope": "approximate",
+  "code": {
+    "changes": [
+      "stage3_unknown_utility execution implementation"
+    ],
+    "dirty": true,
+    "revision": "25cd43c98878075fce13b9d5e5ed956170c89f2b"
+  },
+  "configuration": {
+    "files": [
+      "/home/birkenwald/data/SEU-WXY/WXY-SEU/TrafficClassifier/Projects/unknown_traffic_project/stage3_unknown_utility/configs/A-2.json"
+    ],
+    "parameters": {
+      "K_multi": 2,
+      "K_single": 1,
+      "pca_dim": 64,
+      "reg_covar": 0.001
+    },
+    "seeds": [
+      2022,
+      0
+    ]
+  },
+  "core_results": [
+    {
+      "name": "single_unknown_far",
+      "value": 0.618211148951425
+    },
+    {
+      "name": "multi_unknown_far",
+      "value": 0.6208998028320487
+    },
+    {
+      "name": "delta_unknown_far_multi_minus_single",
+      "value": 0.0026886538806236704
+    }
+  ],
+  "created_at_utc": "2026-09-12T15:13:34Z",
+  "execution": {
+    "command": "evaluate_final.py --setting A-2 --bootstrap-resamples 1000 --bootstrap-seed 0",
+    "environment": "/home/birkenwald/data/SEU-WXY/conda_envs/2025-10-8-WXY-dgl_py310",
+    "exit_code": 0,
+    "physical_gpu_ids": [
+      "4"
+    ],
+    "tmux_session": "stage3_after_a2_v3"
+  },
+  "experiment_id": "stage3-ustc-a2-primary-20260912",
+  "experiment_type": "unknown-detection",
+  "inputs": [
+    {
+      "path": "/home/birkenwald/data/SEU-WXY/WXY-SEU/TrafficClassifier/Projects/unknown_traffic_project/data/splits/compatible_min1",
+      "role": "frozen source split"
+    },
+    {
+      "path": "/home/birkenwald/data/SEU-WXY/WXY-SEU/TrafficClassifier/Projects/unknown_traffic_project/stage3_protocol",
+      "role": "frozen protocol"
+    }
+  ],
+  "limitations": [
+    "Official author sample-fold identities are unavailable; local frozen split is non-author-equivalent."
+  ],
+  "next_step": "Stop after the frozen Gate; no later-stage execution is authorized.",
+  "objective": "Strict unknown-free Single-Full versus Multi-Full-K2 utility test for A-2",
+  "schema_version": 1,
+  "status": "success",
+  "updated_at_utc": "2026-09-12T20:18:01Z"
+}

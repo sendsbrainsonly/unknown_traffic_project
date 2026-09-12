@@ -1,0 +1,415 @@
+{
+  "artifacts": [
+    {
+      "hash_status": "verified",
+      "path": "../../artifacts/A-1/best_checkpoint.pt",
+      "role": "checkpoint-or-derived-artifact",
+      "scope": "external",
+      "sha256": "8932a118936117d772b64fdaa4a53fb64f4a1fff06fead9847a0bcb10d70c3b4",
+      "size_bytes": 323647687
+    },
+    {
+      "hash_status": "verified",
+      "path": "../../artifacts/A-1/frozen_final_predictions.parquet",
+      "role": "checkpoint-or-derived-artifact",
+      "scope": "external",
+      "sha256": "6fbffff51e19af0fbe5a3a025ac3b16ba38e287d727cf2ff7aac48b84f6683e1",
+      "size_bytes": 1462927
+    },
+    {
+      "hash_status": "verified",
+      "path": "../../artifacts/A-1/latest_checkpoint.pt",
+      "role": "checkpoint-or-derived-artifact",
+      "scope": "external",
+      "sha256": "5ea7344808e6cea8aad1223f57f0cad0244ec067ec16118d8b0099b80b43aef7",
+      "size_bytes": 323648987
+    },
+    {
+      "hash_status": "verified",
+      "path": "../../artifacts/A-1/multi_full_k2_models.joblib",
+      "role": "checkpoint-or-derived-artifact",
+      "scope": "external",
+      "sha256": "9a031690bc3f9e87e8432df664ec0f8279b97ad6f9b2dcffd84891ca5b914060",
+      "size_bytes": 3770175
+    },
+    {
+      "hash_status": "verified",
+      "path": "../../artifacts/A-1/pca64.joblib",
+      "role": "checkpoint-or-derived-artifact",
+      "scope": "external",
+      "sha256": "1d47caf0460d56685ac4140d2a7826e6c4dcfe15fdf8f8755ff225dc904e9345",
+      "size_bytes": 69021
+    },
+    {
+      "hash_status": "verified",
+      "path": "../../artifacts/A-1/single_full_k1_models.joblib",
+      "role": "checkpoint-or-derived-artifact",
+      "scope": "external",
+      "sha256": "38da94ba94f1305962a617223695b0af8b4cc7ca9bf16767ddb727e11e57ea76",
+      "size_bytes": 1886920
+    },
+    {
+      "hash_status": "verified",
+      "path": "../../artifacts/A-1/smoke_checkpoint.pt",
+      "role": "checkpoint-or-derived-artifact",
+      "scope": "external",
+      "sha256": "ce29848662a76d1812c2c26fbcfb28847ae21ef20519c8158612d3d88bbb9288",
+      "size_bytes": 323648337
+    },
+    {
+      "hash_status": "verified",
+      "path": "../../artifacts/A-1/smoke_latest_checkpoint.pt",
+      "role": "checkpoint-or-derived-artifact",
+      "scope": "external",
+      "sha256": "6197169f14507bbd5be6e69ca8f66859e9a6be185ec45aaef061b5690dfff3b4",
+      "size_bytes": 323652951
+    },
+    {
+      "hash_status": "verified",
+      "path": "../../artifacts/A-1/standard_scaler.joblib",
+      "role": "checkpoint-or-derived-artifact",
+      "scope": "external",
+      "sha256": "dfab9ae66db8f27d1e6878b6097dc6eaeb2caab0af0305eea82c21c40d15b9b6",
+      "size_bytes": 3687
+    },
+    {
+      "hash_status": "verified",
+      "path": "../../artifacts/A-1/test_known_mu.parquet",
+      "role": "checkpoint-or-derived-artifact",
+      "scope": "external",
+      "sha256": "4c689ca871fe147729662362ed0396faf9c249b7846aab97089178c3fd108bd4",
+      "size_bytes": 35052605
+    },
+    {
+      "hash_status": "verified",
+      "path": "../../artifacts/A-1/test_unknown_mu.parquet",
+      "role": "checkpoint-or-derived-artifact",
+      "scope": "external",
+      "sha256": "45d9b3bf2366b31a4f69575aa4ec9546c5cf11b08c22b7d4ab621f9fc3584366",
+      "size_bytes": 601584
+    },
+    {
+      "hash_status": "verified",
+      "path": "../../artifacts/A-1/train_known_mu.parquet",
+      "role": "checkpoint-or-derived-artifact",
+      "scope": "external",
+      "sha256": "80de4d3c81a3b29ccfeeecbb360b94fe33c2edcd70ec3649740511818e353fbf",
+      "size_bytes": 252151546
+    },
+    {
+      "hash_status": "verified",
+      "path": "../../artifacts/A-1/val_known_mu.parquet",
+      "role": "checkpoint-or-derived-artifact",
+      "scope": "external",
+      "sha256": "bf3e3cf041b4775fc86031be1a9a0269535da8c63e76614f9c836aac19cc7891",
+      "size_bytes": 35053443
+    },
+    {
+      "hash_status": "verified",
+      "path": "../../artifacts/A-1/val_known_scores.parquet",
+      "role": "checkpoint-or-derived-artifact",
+      "scope": "external",
+      "sha256": "0232c14c65daca7a70eb8b01dc0b98d2ced3cbaff9a3e80ed211355aa69151ad",
+      "size_bytes": 1422112
+    },
+    {
+      "hash_status": "verified",
+      "path": "../../../.tmux-task/stage3_a1_smoke_v1/output.log",
+      "role": "execution-log",
+      "scope": "external",
+      "sha256": "5465dfe1660eef8d67a5560c9db800321e17dc2a9a669dbb0fb495983eb994cb",
+      "size_bytes": 2482
+    },
+    {
+      "hash_status": "verified",
+      "path": "../../../.tmux-task/stage3_a1_smoke_v1/exit.status",
+      "role": "execution-log",
+      "scope": "external",
+      "sha256": "9a271f2a916b0b6ee6cecb2426f0b3206ef074578be55d9bc94f6f3fe3ab86aa",
+      "size_bytes": 2
+    },
+    {
+      "hash_status": "verified",
+      "path": "../../../.tmux-task/stage3_a1_formal_v1/output.log",
+      "role": "execution-log",
+      "scope": "external",
+      "sha256": "a17406460456653c984c11119739aa970c640bd93f78b0f479cc662c873970ba",
+      "size_bytes": 7271
+    },
+    {
+      "hash_status": "verified",
+      "path": "../../../.tmux-task/stage3_a1_formal_v1/exit.status",
+      "role": "execution-log",
+      "scope": "external",
+      "sha256": "9a271f2a916b0b6ee6cecb2426f0b3206ef074578be55d9bc94f6f3fe3ab86aa",
+      "size_bytes": 2
+    },
+    {
+      "hash_status": "verified",
+      "path": "../../../.tmux-task/stage3_primary_continue_v1/output.log",
+      "role": "execution-log",
+      "scope": "external",
+      "sha256": "f7fe2025ee3cab9180da158bfb1b377f58cfe582713e5ec1b721f98dce74765d",
+      "size_bytes": 12900
+    },
+    {
+      "path": "checkpoint_selection.json",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 396,
+      "sha256": "f02f948d4eff9c8cbde3ce5a64e50c4c79c1e0538592c16039c3e8d0abbf2bd2",
+      "hash_status": "verified"
+    },
+    {
+      "path": "data_manifest.csv",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 42245227,
+      "sha256": "32fc99ac29722b87523b8719c36761ff85858679bbfbfbb3808f3a08c1f67ffc",
+      "hash_status": "verified"
+    },
+    {
+      "path": "decision_transition_matrix.csv",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 644,
+      "sha256": "94d8852cdd96da4be0bae8f07ca8916ca041cf7bf491f738b29b2db07634d969",
+      "hash_status": "verified"
+    },
+    {
+      "path": "density_fit_warnings.csv",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 1385,
+      "sha256": "1b11493dc7b7bbedf1a409927a8d98251473458e35ed16e19958ba8a6adb75fc",
+      "hash_status": "verified"
+    },
+    {
+      "path": "density_validation_loglik.csv",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 1543,
+      "sha256": "c6b8187917facd2ba7d5ea75880ae6d8a3fe11f25eaf838a28601d5d36c31bfc",
+      "hash_status": "verified"
+    },
+    {
+      "path": "detector_metrics.csv",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 1093,
+      "sha256": "fbb72e607ad83d4a286eb6a2f24b1537296093117e1e6d6912af1cd1cb2a9f33",
+      "hash_status": "verified"
+    },
+    {
+      "path": "frozen_model_hashes.json",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 3206,
+      "sha256": "ea1836bfadb47cf06817c2bd9a4c9bf8ead5a14df9f5f3680e4070f5b0c0839f",
+      "hash_status": "verified"
+    },
+    {
+      "path": "k2_stability.csv",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 3826,
+      "sha256": "e7c96b82e476f8c24625776d0d755d2d7e254af3654f636b33b60d601fc6db92",
+      "hash_status": "verified"
+    },
+    {
+      "path": "latent_export_manifest.json",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 2300,
+      "sha256": "9f8fe19a1ebe5e3f2b333797b17329d3e41cbd104fb389f4d724a18ba20d82bd",
+      "hash_status": "verified"
+    },
+    {
+      "path": "latent_quality_gate.json",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 163,
+      "sha256": "130404202557ce7bcf89201d4223142bed5d27f5b28cdbb6e21d65f97d2ccc98",
+      "hash_status": "verified"
+    },
+    {
+      "path": "leakage_audit.json",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 1130,
+      "sha256": "f26a4a8f8d5e58a954b651a2d0818c49fd884ad9e6ba42c97fe95d41816e9e79",
+      "hash_status": "verified"
+    },
+    {
+      "path": "paired_bootstrap_ci.csv",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 393,
+      "sha256": "6c45655628ebca5315ec3e10d56dc8e9276551f5fc6ec8935e9851e5d2cc45d6",
+      "hash_status": "verified"
+    },
+    {
+      "path": "paired_bootstrap_samples.csv",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 68247,
+      "sha256": "54861ceb6415a75ff4fde5d21712c029ecb1fad85ec66e8304ce9df0f6be74a7",
+      "hash_status": "verified"
+    },
+    {
+      "path": "per_unknown_class_results.csv",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 223,
+      "sha256": "39b6857d1a1e31762600bdf85c5998a61a36eb6fe7404eb12f12c806eec9385c",
+      "hash_status": "verified"
+    },
+    {
+      "path": "run_metadata.json",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 2091,
+      "sha256": "d8dff1abad302565663cf78efa8406f6c2eba17e607365c8d65da36bbcd30dd2",
+      "hash_status": "verified"
+    },
+    {
+      "path": "smoke_checkpoint_selection.json",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 398,
+      "sha256": "39bb897aafe60bd729de7fdc7061d604aafd6a6c28b4bd78f6a23f90a6917a62",
+      "hash_status": "verified"
+    },
+    {
+      "path": "smoke_metrics.csv",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 1227,
+      "sha256": "c72da4e639287fa56c0bf68f2304f386aa624c8e121d82bc4af4128d66f69887",
+      "hash_status": "verified"
+    },
+    {
+      "path": "smoke_report.md",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 585,
+      "sha256": "c560527501884ae91492ba382dd7cf8ba1adb31f3e5f8123b56891ebddb823d3",
+      "hash_status": "verified"
+    },
+    {
+      "path": "smoke_training_config.json",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 1815,
+      "sha256": "0b302dd2aa8f2c5f1159034140063f41f2da08a74b959bb56faf6036f85293af",
+      "hash_status": "verified"
+    },
+    {
+      "path": "threshold_calibration.csv",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 517,
+      "sha256": "ca605e65e844d6eaa99acf3700ed1345cd09eff221f15e4eaa5a4ad747a1cc13",
+      "hash_status": "verified"
+    },
+    {
+      "path": "training_config.json",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 1823,
+      "sha256": "da52a077baa195c7dd17aba3503d1050222a5437a8efd120a266af72ab891117",
+      "hash_status": "verified"
+    },
+    {
+      "path": "training_metrics.csv",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 6278,
+      "sha256": "ebfbdbe50ad6e1cda44cb2668b4b500234df6fc044f22d36d513d95e7e371e90",
+      "hash_status": "verified"
+    },
+    {
+      "path": "unknown_absorption_by_known_class.csv",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 165,
+      "sha256": "62794ef0286288c9de20d74bc281871f76df470daadca0e0ed3df59596dc89e9",
+      "hash_status": "verified"
+    },
+    {
+      "path": "unknown_leakage_audit.md",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 1128,
+      "sha256": "017e7bea0532e3333b3aee8ae86b4bcdae03402bfa76e25a891bfe7b8ffc541f",
+      "hash_status": "verified"
+    }
+  ],
+  "claim_scope": "approximate",
+  "code": {
+    "changes": [
+      "stage3_unknown_utility execution implementation"
+    ],
+    "dirty": true,
+    "revision": "25cd43c98878075fce13b9d5e5ed956170c89f2b"
+  },
+  "configuration": {
+    "files": [
+      "/home/birkenwald/data/SEU-WXY/WXY-SEU/TrafficClassifier/Projects/unknown_traffic_project/stage3_unknown_utility/configs/A-1.json"
+    ],
+    "parameters": {
+      "K_multi": 2,
+      "K_single": 1,
+      "pca_dim": 64,
+      "reg_covar": 0.001
+    },
+    "seeds": [
+      2022,
+      0
+    ]
+  },
+  "core_results": [
+    {
+      "name": "single_unknown_far",
+      "value": 0.5223529411764706
+    },
+    {
+      "name": "multi_unknown_far",
+      "value": 0.6235294117647059
+    },
+    {
+      "name": "delta_unknown_far_multi_minus_single",
+      "value": 0.10117647058823531
+    }
+  ],
+  "created_at_utc": "2026-09-12T15:13:34Z",
+  "execution": {
+    "command": "evaluate_final.py --setting A-1 --bootstrap-resamples 1000 --bootstrap-seed 0",
+    "environment": "/home/birkenwald/data/SEU-WXY/conda_envs/2025-10-8-WXY-dgl_py310",
+    "exit_code": 0,
+    "physical_gpu_ids": [
+      "4"
+    ],
+    "tmux_session": "stage3_primary_continue_v1"
+  },
+  "experiment_id": "stage3-ustc-a1-primary-20260912",
+  "experiment_type": "unknown-detection",
+  "inputs": [
+    {
+      "path": "/home/birkenwald/data/SEU-WXY/WXY-SEU/TrafficClassifier/Projects/unknown_traffic_project/data/splits/compatible_min1",
+      "role": "frozen source split"
+    },
+    {
+      "path": "/home/birkenwald/data/SEU-WXY/WXY-SEU/TrafficClassifier/Projects/unknown_traffic_project/stage3_protocol",
+      "role": "frozen protocol"
+    }
+  ],
+  "limitations": [
+    "Official author sample-fold identities are unavailable; local frozen split is non-author-equivalent."
+  ],
+  "next_step": "Stop after the frozen Gate; no later-stage execution is authorized.",
+  "objective": "Strict unknown-free Single-Full versus Multi-Full-K2 utility test for A-1",
+  "schema_version": 1,
+  "status": "success",
+  "updated_at_utc": "2026-09-12T20:18:00Z"
+}

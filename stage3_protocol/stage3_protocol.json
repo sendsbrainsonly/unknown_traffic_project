@@ -1,0 +1,134 @@
+{
+  "schema_version": 1,
+  "status": "FROZEN_ADAPTED_NON_AUTHOR_EQUIVALENT",
+  "created_utc": "2026-09-12",
+  "dataset": "USTC-TFC2016",
+  "dataset_version": {
+    "local_view": "compatible_min1",
+    "flow_count": 489101,
+    "sample_split": "stratified 80/10/10",
+    "split_summary": "data/splits/compatible_min1/split_summary.json",
+    "train_tsv_sha256": "2fba25d698a71746e30751dc3d1e2fa22b90d98f2c9c4d603caf1a90b406e8b2",
+    "val_tsv_sha256": "55d0d2203c9174fd6b3d8b7730aefd36d77df9918384c7032cbe4ff005027603",
+    "test_tsv_sha256": "b5c957d9973fc0cbc636c903c8d95425da6a98469e44a89830b63c8961b24d39"
+  },
+  "logical_class_count": 20,
+  "smb_merge_rule": "SMB-1.pcap and SMB-2.pcap are two source captures of one logical class SMB",
+  "official_opendetect_protocol_recovered": {
+    "status": "PARTIAL",
+    "ustc_class_scenarios": true,
+    "known_unknown_counts": true,
+    "paper_threshold_rule": true,
+    "paper_sample_fivefold_assignments": false,
+    "paper_fold_seeds_or_indices": false,
+    "standalone_validation_artifact": false
+  },
+  "known_unknown_count_settings": [
+    {"scenario": "A-1", "known": 19, "unknown": 1},
+    {"scenario": "A-2", "known": 17, "unknown": 3},
+    {"scenario": "A-3", "known": 15, "unknown": 5}
+  ],
+  "num_folds": {
+    "paper_reported_sample_folds": 5,
+    "paper_sample_folds_recovered": 0,
+    "frozen_class_holdout_scenarios": 3,
+    "local_sample_splits_per_scenario": 1
+  },
+  "class_selection_rule": "Reuse fixed Open-Detect USTC A-1/A-2/A-3 lists by class name; never translate by numeric ID and never reselect from results",
+  "split_status": "FROZEN_OFFICIAL_CLASS_SCENARIOS_WITH_LOCAL_FIXED_SAMPLE_SPLIT",
+  "sample_split_rule": {
+    "source": "data/splits/compatible_min1",
+    "seed1": 41,
+    "seed2": 42,
+    "known_train": "source train rows restricted to Known classes",
+    "known_validation": "source val rows restricted to Known classes",
+    "known_final_test": "source test rows restricted to Known classes",
+    "unknown_final_test": "source test rows restricted to held-out Unknown classes",
+    "heldout_train_val_rows": "excluded and not loaded"
+  },
+  "random_seed": {
+    "encoder_training": 2022,
+    "scaler": "deterministic",
+    "pca": 0,
+    "gaussian_gmm": 0,
+    "bootstrap": 0,
+    "bootstrap_resamples": 10000
+  },
+  "unknown_free_constraints": [
+    "No Unknown class in encoder training",
+    "No Unknown class in encoder validation or checkpoint selection",
+    "No Unknown class in scaler fitting",
+    "No Unknown class in PCA fitting",
+    "No Unknown class in Gaussian/GMM fitting",
+    "No Unknown class in K selection",
+    "No Unknown class in threshold calibration",
+    "No Unknown class in hyperparameter tuning",
+    "Unknown is loaded only for Final Test",
+    "Each scenario retrains a Known-only encoder",
+    "The existing 20-class Open-Detect checkpoint is diagnosis-only"
+  ],
+  "threshold_rule": {
+    "calibration_data": "Known Validation only",
+    "operating_point": "95% Known Validation acceptance",
+    "per_method": true,
+    "unknown_or_final_test_used_for_selection": false
+  },
+  "primary_metrics": {
+    "unknown_positive_definition": "Unknown is positive; Known is negative",
+    "metrics": [
+      "Unknown False Acceptance Rate",
+      "Unknown Rejection Rate",
+      "Known Test False Rejection Rate",
+      "AUROC",
+      "AUPRC-Unknown",
+      "FPR at 95% Unknown TPR (diagnostic)",
+      "Unknown TPR at 95% Known Validation acceptance"
+    ],
+    "comparison": "Single-Full vs Multi-Full-K2 at matched 95% Known Validation acceptance",
+    "uncertainty": "paired class-stratified bootstrap 95% CI on frozen final-test predictions"
+  },
+  "representation": {
+    "encoder": "separately trained Known-only Open-Detect",
+    "latent": "deterministic mu_x",
+    "density_pipeline": "mu_x -> Known-Train StandardScaler -> Known-Train PCA64",
+    "forbidden_formal_checkpoint": "existing 20-class Open-Detect diagnosis checkpoint"
+  },
+  "support_models": [
+    {
+      "name": "Open-Detect Native",
+      "role": "Baseline A",
+      "score": "nearest learned-prototype KL score"
+    },
+    {
+      "name": "Single-Full",
+      "role": "Baseline B and controlled baseline",
+      "model": "one full-covariance Gaussian per Known class",
+      "reg_covar": 0.001
+    },
+    {
+      "name": "Multi-Full-K2",
+      "role": "Method Diagnostic",
+      "model": "fixed K=2 full-covariance GMM per Known class",
+      "reg_covar": 0.001,
+      "n_init": 3,
+      "max_iter": 300,
+      "seed": 0
+    }
+  ],
+  "forbidden_primary_selection": [
+    "BIC",
+    "Adaptive K",
+    "Unknown-selected K",
+    "test-selected K",
+    "post-hoc class-dependent K"
+  ],
+  "utility_gates": {
+    "A": "TASK UTILITY CONFIRMED",
+    "B": "DENSITY ONLY",
+    "C": "MULTI HURTS",
+    "D": "MIXED"
+  },
+  "created_before_unknown_test": true,
+  "protocol_sha256_algorithm": "SHA-256 of jq -Sc canonical JSON after deleting protocol_sha256",
+  "protocol_sha256": "1fff4ed33211de0b123cf4c0ec6b203cc33be683ac315b610ffd8f0194550ae1"
+}

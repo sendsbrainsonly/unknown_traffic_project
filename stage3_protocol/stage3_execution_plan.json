@@ -1,0 +1,30 @@
+{
+  "schema_version": 1,
+  "status": "FROZEN_EXECUTION_LEVEL",
+  "created_utc": "2026-09-12T15:11:35Z",
+  "created_before_unknown_evaluation": true,
+  "primary_settings": [
+    "A-1",
+    "A-2",
+    "A-3"
+  ],
+  "execution_order": [
+    "A-1",
+    "A-2",
+    "A-3"
+  ],
+  "report_all_primary_settings": true,
+  "stop_after_good_result": false,
+  "frozen_protocol": {
+    "path": "stage3_protocol/stage3_protocol.json",
+    "canonical_sha256": "1fff4ed33211de0b123cf4c0ec6b203cc33be683ac315b610ffd8f0194550ae1",
+    "raw_file_sha256": "86718b1930c71ef6a904f16f37a199b8ceeea6600d3ceba65e7592048f54677a"
+  },
+  "project_git_commit_at_freeze": "25cd43c98878075fce13b9d5e5ed956170c89f2b",
+  "split_change": false,
+  "split_statement": "This execution-level supplement does not modify the frozen Known/Unknown class lists or the existing USTC train/validation/test flow split.",
+  "independent_training": true,
+  "warm_start_between_settings": false,
+  "forbidden_checkpoint": "opendetect_ustc_encoder_audit/artifacts/best_checkpoint.pt",
+  "final_test_order": "Only after each setting's checkpoint, scaler, PCA64, K1/K2 density models, and validation-only thresholds are frozen and hashed."
+}

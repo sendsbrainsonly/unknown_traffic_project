@@ -1,0 +1,102 @@
+{
+  "batch_index_zero_based": 5,
+  "dist": {
+    "finite": false,
+    "finite_max": 1.159006453417597e+38,
+    "finite_min": 189.68138122558594,
+    "nonfinite_count": 17,
+    "shape": [
+      512,
+      17
+    ]
+  },
+  "exp_logvar": {
+    "finite": false,
+    "finite_max": 1.8309049620078123e+33,
+    "finite_min": 5.531766156252615e-10,
+    "nonfinite_count": 2,
+    "shape": [
+      512,
+      128
+    ]
+  },
+  "kl_div": {
+    "finite": false,
+    "finite_max": 9.154524810039061e+32,
+    "finite_min": 76.22903442382812,
+    "nonfinite_count": 34,
+    "shape": [
+      512,
+      17
+    ]
+  },
+  "labels": {
+    "finite": true,
+    "finite_max": 16.0,
+    "finite_min": 0.0,
+    "nonfinite_count": 0,
+    "shape": [
+      512
+    ]
+  },
+  "logvar": {
+    "finite": true,
+    "finite_max": 102.10657501220703,
+    "finite_min": -21.315343856811523,
+    "nonfinite_count": 0,
+    "shape": [
+      512,
+      128
+    ]
+  },
+  "losses": {
+    "dis": {
+      "finite": false,
+      "nonfinite_count": 1,
+      "shape": []
+    },
+    "ent": {
+      "finite": false,
+      "nonfinite_count": 1,
+      "shape": []
+    },
+    "kld": {
+      "finite": false,
+      "nonfinite_count": 1,
+      "shape": []
+    },
+    "rec": {
+      "finite": true,
+      "finite_max": 0.07006364315748215,
+      "finite_min": 0.07006364315748215,
+      "nonfinite_count": 0,
+      "shape": []
+    }
+  },
+  "mu": {
+    "finite": true,
+    "finite_max": 32.229339599609375,
+    "finite_min": -21.38364601135254,
+    "nonfinite_count": 0,
+    "shape": [
+      512,
+      128
+    ]
+  },
+  "prototypes": {
+    "finite": true,
+    "finite_max": 0.44310349225997925,
+    "finite_min": -0.42911267280578613,
+    "nonfinite_count": 0,
+    "shape": [
+      17,
+      128
+    ]
+  },
+  "status": "REPRODUCED_NONFINITE_TOTAL",
+  "total": {
+    "finite": false,
+    "nonfinite_count": 1,
+    "shape": []
+  }
+}

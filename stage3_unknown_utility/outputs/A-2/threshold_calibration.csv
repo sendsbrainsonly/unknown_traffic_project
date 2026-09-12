@@ -1,0 +1,4 @@
+setting,detector,score_semantics,threshold,target_known_acceptance,actual_known_acceptance,known_val_FRR,calibration_split,unknown_samples_used
+A-2,Native,higher_is_more_known,-7.4628961086273184,0.95,0.9499896148254137,0.050010385174586336,Known Validation only,0
+A-2,Single-Full,higher_is_more_known,-49.480737519073884,0.95,0.9499896148254137,0.050010385174586336,Known Validation only,0
+A-2,Multi-Full-K2,higher_is_more_known,-36.57948917571852,0.95,0.9499896148254137,0.050010385174586336,Known Validation only,0

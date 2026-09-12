@@ -1,0 +1,7 @@
+{
+  "gate": "D",
+  "gate_name": "MIXED",
+  "primary_settings_all_reported": true,
+  "rule": "Gate A requires Delta UFAR < 0 with a paired-bootstrap upper 95% CI bound < 0 in all three primary settings; inconsistent directions force Gate D.",
+  "utility_proven": false
+}
