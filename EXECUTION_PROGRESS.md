@@ -462,7 +462,7 @@ H1 是当前唯一推荐候选，但必须附带以下限定：
 - 当前正式粗粒度协议：Stage 20 VPN-6 / TOR-7 closed split 与 13 个 LOSO protocols。
 - 当前方法边界：Stage 22 的 E3 相对同 run TrafficFormer 在 VPN Macro-F1 低 `0.001115`、TOR 高 `0.000918`，两个数据集都只有 `1/2` positive seeds，不支持稳定优越性结论。
 - Storage cleanup：已完成三轮；前两轮删除 108 个 latest/last checkpoint 和全部 Python/pytest cache，第三轮删除 181 个 A+B 候选文件并实际释放约 `5.288 GiB`。当前项目 apparent size `52.086 GiB`、实际分配空间 `43.736 GiB`；正式 checkpoint 与正式结果均保留。
-- GitHub publication：Stage 21 快照已发布；Stage 22 完成结果正在按同一白名单补充发布，大模型、数据和运行日志不进入普通 Git。
+- GitHub publication：Stage 22 完成结果已按同一白名单发布；大模型、数据和运行日志未进入普通 Git。
 - 安全恢复点：不得将 Stage 22 闭集结果外推为 Unknown-Free open-set 结论；不得继续批量删除历史 checkpoint。
 
 ## 14. 关键证据入口
@@ -564,7 +564,7 @@ H1 是当前唯一推荐候选，但必须附带以下限定：
 
 ## 20. Stage 15F-DQ — Cross-Paper Performance Gap Attribution（2026-09-20）
 
-- 状态：`in_progress`。
+- 状态：`complete`。
 - 当前授权范围：严格依次执行 DQ-0～DQ-3，并提交共享 31 个 ISCX-VPN PCAP 的中期报告；DQ-4～DQ-7、ISCXTor 扩展及跨模型公平训练保持 `NOT_RUN`。
 - 数据边界：仅使用开发允许的 Known Train/Validation 与既有冻结 Known Validation 预测；Known Test/Unknown Test 不用于样本定义、标签映射、模型选择或诊断协议设计。
 - 起始状态：独立输出目录尚不存在；Stage 12～15F-1B 历史资产保持原位；工作树已有大量历史未跟踪实验文件和 tracked 用户修改，本任务不整理或覆盖它们。
@@ -856,4 +856,5 @@ H1 是当前唯一推荐候选，但必须附带以下限定：
 - 起始状态：Stage 22 `4/4` formal runs 已完成，自带核验=`99/99 PASS`；`RESULTS.md` 与核心汇总文件已生成，但根级 README、`CURRENT_PROGRESS.md`、`EXPERIMENT_RESULTS.md` 和本交接文档仍记录为 `running`。
 - 已执行：核对四个 JSON 可解析；运行 Stage 22 自带 `verify_completion.py` 得到 `PASS / 99 checks / 0 failures`；发现通用实验包校验因 `manifest.json.artifacts=[]` 失败，随后按保存规范刷新为 80 个 bundle artifact 条目并保留本地证据哈希。
 - 科学结论：VPN E1/E3 Macro-F1=`0.860607±0.003961/0.859493±0.007015`，TOR=`0.821259±0.006376/0.822178±0.007643`；E3−E1 mean delta=`-0.001115/+0.000918`，每个数据集均仅 `1/2` positive seeds，不能宣称 E3 稳定优于 TrafficFormer。
-- 当前动作：更新公开说明与索引，重新验证 bundle、提交白名单和敏感/大文件边界，然后通过已验证的 GitHub SSH 443 通道非强制推送并核对远端 SHA。
+- 完成证据：通用 bundle 校验为 `status=success, artifacts=80, bundle_files=80`；公开提交仅含 9 个文件，禁止路径/扩展名、敏感模式、JSON 解析和 diff 检查均 PASS；提交 `f33ae3354243511c9f6753453b17b7d838d9a629` 已通过 GitHub SSH 443 非强制推送，首次远端 SHA 核对一致。
+- 发布边界：checkpoint、representation、predictions、运行日志、缓存和其他大型产物继续保留在本地且未提交；普通 Git 仅新增轻量汇总、完成性核验、保护资产哈希、manifest 与同步说明。
