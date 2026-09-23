@@ -835,7 +835,7 @@ H1 是当前唯一推荐候选，但必须附带以下限定：
 
 ## 32. 精简仓库重新发布（2026-09-23）
 
-- 状态：`in_progress`。
+- 状态：`blocked_on_explicit_remote_approval`。
 - 目标：将代码、配置、测试、项目说明、各阶段 `RESULTS.md`、`manifest.json` 和小型核心结果重新整理并推送到 GitHub；模型权重、数据、embedding、缓存、运行日志和大体积中间产物继续保留在本地，不进入普通 Git。
 - 起始状态：工作树实际占用约 `54 GiB`、逻辑大小约 `65 GiB`；已跟踪文件约 `0.81 MiB`；现有忽略规则之外仍有约 `3.25 GiB` 未跟踪文件，其中包含大于 GitHub 普通 Git 单文件限制的 Parquet/NPZ 产物。
 - 科学状态：Stage 21 已完成并通过 `98/98` checks；Stage 22 正在 `stage22-pretrained-e3-grid-20260923` 会话中运行，当前不得记录为完成，也不得提交其动态 checkpoint、run 目录或日志。
@@ -844,3 +844,6 @@ H1 是当前唯一推荐候选，但必须附带以下限定：
 - 发布白名单：源码、配置、测试、Markdown/Word 文档、稳定 JSON/manifest/hash，以及小于 2 MiB 的命名汇总 CSV；Stage 22 仅含方法、配置、预检和 `running` 状态，不含动态 run/checkpoint/log。
 - 提交前核验：暂存 `1,382` 个文件、`15.24 MiB`，最大文件小于 `1 MiB`；禁止的模型/数组/数据扩展和 `runs/artifacts/checkpoints/cache` 路径均未暂存；敏感模式扫描 PASS；`410` 个新增 Python 文件语法编译 PASS；`532` 个 JSON 解析 PASS；核心 Markdown 相对链接 PASS；USTC YAML 解析 PASS。
 - 已知格式边界：全量 `git diff --check` 会报告第三方 UER 源码、历史 CSV 的 CRLF/尾随空白及 Markdown hard-break；这些是原始历史内容，不在本次批量改写，新增的核心发布文档单独检查通过。
+- 本地提交：`9422136 Publish reproducible project snapshot through Stage 21`；连同既有未推提交 `ffcb0df`，本地 `main` 当前领先 `origin/main` 两个提交。
+- 推送状态：尚未推送。向 `https://github.com/sendsbrainsonly/unknown_traffic_project.git` 的 `main` 执行非强制 push 时，外部披露安全审查要求用户明确确认该具体远端。
+- 安全下一步：收到对上述远端和分支的明确授权后执行 `git push origin main`，随后核对远端分支 SHA；不得使用 force push。
