@@ -1,0 +1,231 @@
+{
+  "schema_version": 1,
+  "experiment_id": "stage15a-failure-regime-complementarity-20260918-v1",
+  "created_at_utc": "2026-09-18T14:08:03Z",
+  "updated_at_utc": "2026-09-18T14:28:27Z",
+  "status": "success",
+  "experiment_type": "diagnostic_analysis",
+  "claim_scope": "diagnostic",
+  "objective": "Diagnose frozen Open-Detect versus DES failure regimes and sample-level complementarity without training or detector changes.",
+  "inputs": [
+    {
+      "path": "stage14d_vnat_frozen_open_set_evaluation",
+      "role": "primary frozen VNAT M0/M1/M2 latent and score artifacts",
+      "access": "read_only"
+    },
+    {
+      "path": "stage11b_decoupled_support_readout and stage13a2_global_local_fusion",
+      "role": "supplementary frozen USTC M0/M1/M2 development artifacts",
+      "access": "read_only"
+    },
+    {
+      "path": "stage12_dual_external_validation/runs/iscx_vpn",
+      "role": "supplementary frozen ISCX-VPN M0/M1 artifacts",
+      "access": "read_only"
+    },
+    {
+      "path": "stage12_dual_external_validation/runs/iscx_tor",
+      "role": "supplementary frozen ISCXTor2016 M0/M1 artifacts",
+      "access": "read_only"
+    }
+  ],
+  "code": {
+    "entrypoint": "scripts/run_stage15a.py",
+    "tests": "tests/test_stage15a.py",
+    "revision": null,
+    "dirty": true,
+    "changes": [
+      "new isolated Stage 15A diagnostic bundle only"
+    ]
+  },
+  "execution": {
+    "tmux_session": "s15a_analysis_enriched_20260918_1641",
+    "command": "python stage15a_failure_regime_complementarity_diagnosis/scripts/run_stage15a.py",
+    "exit_code": 0,
+    "environment": "/home/birkenwald/data/SEU-WXY/conda_envs/2025-10-8-WXY-dgl_py310",
+    "log": ".tmux-task/s15a_analysis_enriched_20260918_1641/output.log",
+    "exit_status": ".tmux-task/s15a_analysis_enriched_20260918_1641/exit.status",
+    "physical_gpu_ids": []
+  },
+  "configuration": {
+    "files": [
+      "config.json"
+    ],
+    "parameters": {
+      "protocols": 60,
+      "primary_dataset": "VNAT",
+      "threshold": "frozen Known-Validation P95",
+      "ranking": "exact unknown-known pair ordering",
+      "new_encoder_training": false,
+      "new_detector_fitting": false,
+      "parameter_search": false
+    },
+    "seeds": [
+      2022,
+      2023,
+      2024,
+      2025,
+      2026
+    ]
+  },
+  "core_results": [
+    {
+      "name": "final_gate",
+      "value": "COMPLEMENTARITY_CONFIRMED"
+    },
+    {
+      "name": "protocols",
+      "value": 60
+    },
+    {
+      "name": "unknown_class_units",
+      "value": 160
+    },
+    {
+      "name": "sample_comparison_rows",
+      "value": 481190
+    },
+    {
+      "name": "vnat_m1_minus_m0_mean_auroc",
+      "value": 0.014171
+    },
+    {
+      "name": "vnat_m2_minus_m0_mean_auroc",
+      "value": 0.015549
+    },
+    {
+      "name": "vnat_positive_negative_class_protocol_units",
+      "value": "24/21"
+    },
+    {
+      "name": "vnat_p95_od_only_des_only_rescue",
+      "value": "15129/11585"
+    },
+    {
+      "name": "vnat_support_overlap_spearman",
+      "value": -0.343555
+    },
+    {
+      "name": "vnat_support_overlap_p_value",
+      "value": 0.020854
+    },
+    {
+      "name": "frozen_source_hashes_unchanged",
+      "value": true
+    }
+  ],
+  "artifacts": [
+    {
+      "path": "completion_verification.json",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 4055,
+      "sha256": "19e4338afa33931e0502296e84cfa8285f728fb5f135bd6df17640e04935d3a4",
+      "hash_status": "verified"
+    },
+    {
+      "path": "config.json",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 2902,
+      "sha256": "8dc56fe86fd799b25e0e2c3462c3d8e7aca162e50b299d1eebec82fbc624ffb6",
+      "hash_status": "verified"
+    },
+    {
+      "path": "scripts/__pycache__/run_stage15a.cpython-310.pyc",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 34615,
+      "sha256": "264fd47356a46f8b59f1857e7a83163dc5e2cae140a6c45079e4fb4fcce5b5c4",
+      "hash_status": "verified"
+    },
+    {
+      "path": "scripts/run_stage15a.py",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 43256,
+      "sha256": "31834f28dbcbc2c4238680b5b4e77145b3a6008acac9495759845c23e9be9f4b",
+      "hash_status": "verified"
+    },
+    {
+      "path": "source_hashes_after.json",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 62193,
+      "sha256": "7366855aa838a4ea9fe1bb50059c3a1a7f47167c05a0c70860c75761fb72e985",
+      "hash_status": "verified"
+    },
+    {
+      "path": "source_hashes_before.json",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 62193,
+      "sha256": "7366855aa838a4ea9fe1bb50059c3a1a7f47167c05a0c70860c75761fb72e985",
+      "hash_status": "verified"
+    },
+    {
+      "path": "stage15a_failure_regime_report.md",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 7187,
+      "sha256": "cd9ef42022e85c1c600b7ce493f635a40a78aa5e3ae9b2bbc1c286d167103638",
+      "hash_status": "verified"
+    },
+    {
+      "path": "stage15a_protocol_diagnosis.csv",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 47498,
+      "sha256": "8592f8deea9859ae01bb68f64217fa686d152d7a9bdc1a8a633a3c9a18951de5",
+      "hash_status": "verified"
+    },
+    {
+      "path": "stage15a_sample_complementarity.csv",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 229724141,
+      "sha256": "afc5756663ad68f9cf2d92a744b9e1c1296cfaa88b6132dc4d19d70dc92d4caa",
+      "hash_status": "verified"
+    },
+    {
+      "path": "stage15a_signal_correlation.csv",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 16351,
+      "sha256": "ee9eb7f8c96a8de293d592dd671ffd169b21411fcd15eafa69aea4d9b597dd98",
+      "hash_status": "verified"
+    },
+    {
+      "path": "stage15a_unknown_class_diagnosis.csv",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 120995,
+      "sha256": "610312598a952e1194dd9f0f89091b41cc38a288a55895f34b5398a83fafcff6",
+      "hash_status": "verified"
+    },
+    {
+      "path": "tests/__pycache__/test_stage15a.cpython-310-pytest-8.4.2.pyc",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 3582,
+      "sha256": "bde339d106a44e78afb7e7bae7e088f145e704ee44c748a5e72a30f57ce94cf9",
+      "hash_status": "verified"
+    },
+    {
+      "path": "tests/test_stage15a.py",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 1420,
+      "sha256": "7d1bd97f40cfc44be08dc476de14691d6af8daf38a08a2432d20955072ed09bd",
+      "hash_status": "verified"
+    }
+  ],
+  "limitations": [
+    "correlation units are not independent and all p-values are exploratory",
+    "USTC is development evidence",
+    "VNAT is not an untouched external dataset",
+    "ISCX-VPN and ISCXTor2016 have no frozen M2 scores",
+    "mean gains are not protocol-uniform"
+  ],
+  "next_step": "A later Hybrid detector design stage is permitted by the gate but was not started."
+}

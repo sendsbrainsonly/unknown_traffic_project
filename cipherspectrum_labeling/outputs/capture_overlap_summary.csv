@@ -1,0 +1,13 @@
+scope,group_a,group_b,capture_id_count
+single_group,aes-128-gcm,,9085
+single_group,aes-256-gcm,,9286
+single_group,chacha20-poly1305,,9109
+single_group,mix,,18356
+pairwise_overlap,aes-128-gcm,aes-256-gcm,530
+pairwise_overlap,aes-128-gcm,chacha20-poly1305,0
+pairwise_overlap,aes-128-gcm,mix,5754
+pairwise_overlap,aes-256-gcm,chacha20-poly1305,299
+pairwise_overlap,aes-256-gcm,mix,5948
+pairwise_overlap,chacha20-poly1305,mix,5780
+all_unique,ALL,,28312
+multi_group,ALL,,16737

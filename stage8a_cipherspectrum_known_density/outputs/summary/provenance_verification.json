@@ -1,0 +1,49 @@
+{
+  "known_test_opened": 0,
+  "settings": [
+    {
+      "checkpoint_best_epoch": 26,
+      "checkpoint_path": "/home/birkenwald/data/SEU-WXY/WXY-SEU/TrafficClassifier/Projects/unknown_traffic_project/stage7_cipherspectrum_known_training/runs/formal-low-20260913/artifacts/training_best_checkpoint.pt",
+      "checkpoint_sha256": "78e23b0d9795a7829c03d740c67c5a823ca9f6ea36bda4cd0e24338a168b4d92",
+      "protocol_sha256": "96eba64c7fbc85323604c68c1ece03c4702548c6f1908dae4fd22d7c37f7f666",
+      "setting": "low",
+      "stage7_manifest_path": "/home/birkenwald/data/SEU-WXY/WXY-SEU/TrafficClassifier/Projects/unknown_traffic_project/stage7_cipherspectrum_known_training/runs/formal-low-20260913/manifest.json",
+      "stage7_manifest_sha256": "9e163fbb61e190cf3f8b8c019b0194ffcb59c800e4879110b4340fbcf9a0c68b",
+      "stage7_package_artifacts_verified": 15,
+      "verification_status": "PASS"
+    },
+    {
+      "checkpoint_best_epoch": 22,
+      "checkpoint_path": "/home/birkenwald/data/SEU-WXY/WXY-SEU/TrafficClassifier/Projects/unknown_traffic_project/stage7_cipherspectrum_known_training/runs/formal-medium-20260913/artifacts/training_best_checkpoint.pt",
+      "checkpoint_sha256": "59858ee8d9dcc0d36e64a8a396fcf0f401b720dbed8d2aa2f783761be352ac48",
+      "protocol_sha256": "96eba64c7fbc85323604c68c1ece03c4702548c6f1908dae4fd22d7c37f7f666",
+      "setting": "medium",
+      "stage7_manifest_path": "/home/birkenwald/data/SEU-WXY/WXY-SEU/TrafficClassifier/Projects/unknown_traffic_project/stage7_cipherspectrum_known_training/runs/formal-medium-20260913/manifest.json",
+      "stage7_manifest_sha256": "d0afbc68db3be2a72d69f35c274f809614c30e2684edb64cbacea3a3be8f6556",
+      "stage7_package_artifacts_verified": 15,
+      "verification_status": "PASS"
+    },
+    {
+      "checkpoint_best_epoch": 22,
+      "checkpoint_path": "/home/birkenwald/data/SEU-WXY/WXY-SEU/TrafficClassifier/Projects/unknown_traffic_project/stage7_cipherspectrum_known_training/runs/formal-high-20260913/artifacts/training_best_checkpoint.pt",
+      "checkpoint_sha256": "588c9eeec5d352f28b5598163aed193e01e53b8a408cdbf6ddbbaf58dbaae213",
+      "protocol_sha256": "96eba64c7fbc85323604c68c1ece03c4702548c6f1908dae4fd22d7c37f7f666",
+      "setting": "high",
+      "stage7_manifest_path": "/home/birkenwald/data/SEU-WXY/WXY-SEU/TrafficClassifier/Projects/unknown_traffic_project/stage7_cipherspectrum_known_training/runs/formal-high-20260913/manifest.json",
+      "stage7_manifest_sha256": "6258abd8021355465b51a651e8ed945662644b329ade9fdb7b5484c9cfe5b250",
+      "stage7_package_artifacts_verified": 15,
+      "verification_status": "PASS"
+    }
+  ],
+  "stage6": {
+    "artifacts_verified": 16,
+    "protocol_hash_manifest_sha256": "c3783084f0f9b1242e1c05e263ecb9203f6c017f1b746cd885b99c637fccc290",
+    "protocol_sha256": "96eba64c7fbc85323604c68c1ece03c4702548c6f1908dae4fd22d7c37f7f666",
+    "split_manifest_sha256": "021e46a5c9aa2d9e44798af450d493aa572601c575fa5ae5ac4eee94054b45b4",
+    "verification_status": "PASS"
+  },
+  "stage7_checkpoints_distinct": true,
+  "status": "PASS",
+  "unknown_inference_executed": false,
+  "unknown_test_opened": 0
+}

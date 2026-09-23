@@ -1,0 +1,23 @@
+{
+  "dataset": "iscx_vpn",
+  "features": [
+    "packet_count",
+    "total_bytes",
+    "duration_seconds",
+    "packet_length_mean",
+    "packet_length_std",
+    "iat_mean_seconds",
+    "iat_std_seconds",
+    "forward_packets",
+    "reverse_packets",
+    "forward_reverse_ratio",
+    "direction_changes",
+    "payload_bytes"
+  ],
+  "flows": 14521,
+  "matrix_sha256": "e522956619851d50545a4f54c5207e08bbbc3e0336a9dbd2dc5b99fe081014eb",
+  "missing_values": 0,
+  "source": "/home/birkenwald/data/SEU-WXY/WXY-SEU/TrafficClassifier/Projects/unknown_traffic_project/stage15r_representation_bottleneck_audit/feature_cache/iscx_vpn/flow_statistics.csv",
+  "source_sha256": "47a04183a1da7074f117bc9e53beb3fc177494296b05ca9e0f85c64ddf6998ca",
+  "status": "PASS"
+}

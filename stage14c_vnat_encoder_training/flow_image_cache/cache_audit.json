@@ -1,0 +1,19 @@
+{
+  "generated_at_utc": "2026-09-17T13:39:50.468553+00:00",
+  "status": "PASS",
+  "scope": "protocol-neutral cache; not a model fit and never directly exposed wholesale to a run",
+  "freeze_hash": "c904daef04d2c8e79469191121325c0a6ceeaeb3e595ef9c4c7d7a62c980ae2f",
+  "clean_flow_count": 23449,
+  "capture_count": 162,
+  "released_zero_fill_packet_fallbacks": 16,
+  "packet_count_mismatches": 0,
+  "zero_packet_flows": 0,
+  "flows_with_fewer_than_8_packets": 20134,
+  "representation": "first 8 packets; each packet 80 IP/header bytes + 48 Raw payload bytes; IPv4 src/dst zeroed; zero padding",
+  "flow_identity": "exact Stage 14A tshark tcp.stream/udp.stream/other-IP grouping",
+  "images_sha256": "7f77952379e2462886f97a3434a725b4ce5508b0f37cb5020239a35c98d8eeee",
+  "flow_uids_sha256": "2d5a6f4cbe4bd3302c067a892c43a061ec89f5d2590059b294399b9fe5dcd358",
+  "cache_manifest_sha256": "41e56620ca0c8a2cb539c2f4433788bc0de8a1ddaf23a71b934f5529713c5e3c",
+  "unknown_role_used_for_model_fit": false,
+  "known_test_role_used_for_model_fit": false
+}

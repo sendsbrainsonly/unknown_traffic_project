@@ -1,0 +1,15 @@
+protocol_id,run_id,class,local_label,train_support,val_support,precision,recall,f1,minority_class
+medium_seed2025,medium_seed2025_protocol,netflix,0,165,20,0.7222222222222222,0.65,0.6842105263157895,True
+medium_seed2025,medium_seed2025_protocol,rdp,1,36,4,1.0,0.75,0.8571428571428571,True
+medium_seed2025,medium_seed2025_protocol,rsync,2,1530,191,0.375,0.031413612565445,0.0579710144927536,False
+medium_seed2025,medium_seed2025_protocol,scp,3,1832,229,0.5420792079207921,0.9563318777292577,0.6919431279620853,False
+medium_seed2025,medium_seed2025_protocol,skype,4,1017,126,0.9767441860465116,1.0,0.988235294117647,False
+medium_seed2025,medium_seed2025_protocol,ssh,5,10851,1356,1.0,0.9992625368731564,0.99963113242346,False
+medium_seed2025,medium_seed2025_protocol,youtube,6,273,34,0.8,0.8235294117647058,0.8115942028985507,True
+medium_seed2026,medium_seed2026_protocol,netflix,0,165,20,0.8636363636363636,0.95,0.9047619047619048,True
+medium_seed2026,medium_seed2026_protocol,rdp,1,36,4,1.0,1.0,1.0,True
+medium_seed2026,medium_seed2026_protocol,rsync,2,1530,191,0.9896373056994818,1.0,0.9947916666666666,False
+medium_seed2026,medium_seed2026_protocol,skype,3,1017,126,0.9919354838709676,0.9761904761904762,0.984,False
+medium_seed2026,medium_seed2026_protocol,ssh,4,10851,1356,0.9977876106194692,0.9977876106194692,0.9977876106194692,False
+medium_seed2026,medium_seed2026_protocol,vimeo,5,976,121,0.9915966386554622,0.975206611570248,0.9833333333333334,False
+medium_seed2026,medium_seed2026_protocol,zoiper,6,753,93,1.0,1.0,1.0,True

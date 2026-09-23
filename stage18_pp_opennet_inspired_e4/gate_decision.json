@@ -1,0 +1,35 @@
+{
+  "conditions": {
+    "both_services_absolute_ufar": false,
+    "both_services_auroc": false,
+    "both_services_closed": true,
+    "no_closed_catastrophe": true,
+    "overall_positive_auroc": false,
+    "positive_auroc_runs_at_least_4": false
+  },
+  "final_gate": "E4_FAIL_NO_FUSION",
+  "fusion_started": false,
+  "minimum_full_macro_f1": 0.7321568627450981,
+  "overall_mean_delta_auroc_vs_e0": -0.05696951435818232,
+  "positive_auroc_runs_vs_e0": 3,
+  "service_checks": [
+    {
+      "absolute_ufar_pass": false,
+      "auroc_pass": true,
+      "closed_pass": true,
+      "mean_delta_auroc": 0.025275502982509395,
+      "mean_delta_macro_f1": 0.051606982528210534,
+      "mean_ufar95": 0.8829365079365079,
+      "service": "Email"
+    },
+    {
+      "absolute_ufar_pass": true,
+      "auroc_pass": false,
+      "closed_pass": true,
+      "mean_delta_auroc": -0.13921453169887404,
+      "mean_delta_macro_f1": 0.10362846613028509,
+      "mean_ufar95": 0.8389004871259568,
+      "service": "Streaming"
+    }
+  ]
+}

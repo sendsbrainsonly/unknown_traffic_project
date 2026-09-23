@@ -1,0 +1,372 @@
+{
+  "schema_version": 1,
+  "experiment_id": "four_dataset_final_readiness_audit_20260913_v1",
+  "created_at_utc": "2026-09-13T03:36:31Z",
+  "updated_at_utc": "2026-09-13T04:13:13.816937+00:00",
+  "status": "complete",
+  "experiment_type": "data-readiness-audit",
+  "claim_scope": "diagnostic",
+  "objective": "Audit four local datasets for integrity, labels, grouping, provenance, leakage, calibration capacity, and readiness without modeling.",
+  "inputs": [
+    {
+      "path": "/home/birkenwald/data/SEU-WXY/WXY-SEU/TrafficClassifier/Projects/unknown_traffic_project/data/fig_graph/all_flows/label_map.json",
+      "size_bytes": 787,
+      "sha256": "57a3b1a3abd2dfbd8a090de674ad513405e3921bd82a8747e6e0b6adc3342c59",
+      "read_only": true
+    },
+    {
+      "path": "/home/birkenwald/data/SEU-WXY/WXY-SEU/TrafficClassifier/Projects/unknown_traffic_project/data/splits/compatible_min1/split_summary.json",
+      "size_bytes": 1695,
+      "sha256": "6c6c3145e5be77b1428d5c12b2d499b316ee7a87bbc0884d842986fc7d29f27a",
+      "read_only": true
+    },
+    {
+      "path": "/home/birkenwald/data/SEU-WXY/WXY-SEU/TrafficClassifier/Projects/unknown_traffic_project/cipherspectrum_labeling/outputs/cipherspectrum_official40_manifest.csv",
+      "size_bytes": 76149093,
+      "sha256": "3ec053adcdf3fb39693129bdc53ab45fccd9f5563a1ed47791f01b98267cd5be",
+      "read_only": true
+    },
+    {
+      "path": "/home/birkenwald/data/SEU-WXY/WXY-SEU/TrafficClassifier/Projects/unknown_traffic_project/stage5_dual_gate_boundary/outputs/cstnet_protocol/split_hashes.sha256",
+      "size_bytes": 874,
+      "sha256": "11cf607d54532689f54ee56b879a886267f6e0b6745e442151791c2f03d38059",
+      "read_only": true
+    },
+    {
+      "path": "/home/birkenwald/data/SEU-WXY/WXY-SEU/TrafficClassifier/Dataset/CIC-IDS-2017/CIC-IDS-2017(whole)/outputs/cicids2017_pcap_label_mapping/reports/sanity_check.csv",
+      "size_bytes": 865,
+      "sha256": "df81361eedca547b0aff280dc57aa393935b0d6a3271dea968cb984845af42cb",
+      "read_only": true
+    }
+  ],
+  "execution": {
+    "tmux_sessions": [
+      "four_data_inventory_run_20260913",
+      "four_data_cipher_full_20260913",
+      "four_data_cicids_input_20260913",
+      "four_data_finalize_20260913",
+      "four_data_verify_20260913"
+    ],
+    "commands": [
+      "python -u four_dataset_readiness_audit/scripts/run_inventory_audits.py",
+      "python -u four_dataset_readiness_audit/scripts/run_cipher_audits.py",
+      "python -u four_dataset_readiness_audit/scripts/run_cicids_input_audit.py",
+      "python -u four_dataset_readiness_audit/scripts/finalize_readiness_audit.py",
+      "python -u four_dataset_readiness_audit/tests/verify_readiness_audit.py"
+    ],
+    "environment": "/home/birkenwald/data/SEU-WXY/conda_envs/2025-10-8-WXY-dgl_py310",
+    "physical_gpu_ids": []
+  },
+  "configuration": {
+    "seed": 20260913,
+    "cipher_input_max": "20 classes x 20 PCAPs",
+    "cicids_input_max": "10 classes x 20 flows",
+    "cicids_primary_thresholds": {
+      "too_small": 100,
+      "primary_min": 1000,
+      "severe_endpoint_top1": 0.95,
+      "min_five_minute_groups": 3
+    }
+  },
+  "core_results": [
+    {
+      "dataset": "USTC-TFC2016",
+      "role": "Development / Mechanism",
+      "raw_pcap_available": "YES",
+      "label_quality": "20-class logical mapping verified; SMB-1/2 merged",
+      "class_count": 20,
+      "usable_class_count": 20,
+      "sample_count": 489101,
+      "group_id_available": "NO authoritative session group",
+      "group_split_ready": "EXISTING FLOW SPLIT FOUND",
+      "direct_domain_leakage": "NOT RE-AUDITED",
+      "endpoint_port_risk": "NOT RE-AUDITED",
+      "calibration_capacity": "existing development split available",
+      "component_p05_feasibility": "class-dependent; not reassessed",
+      "unknown_split_status": "existing frozen development folds",
+      "independent_validation_status": "DEVELOPMENT_ONLY",
+      "blocking_issue": "Unknown test informed development",
+      "final_readiness": "READY"
+    },
+    {
+      "dataset": "CipherSpectrum",
+      "role": "Primary Independent External Validation",
+      "raw_pcap_available": "YES",
+      "label_quality": "official40 directory-label manifest; getpocket excluded",
+      "class_count": 40,
+      "usable_class_count": 40,
+      "sample_count": 120000,
+      "group_id_available": "YES: split_group_id",
+      "group_split_ready": "FEASIBLE; not frozen",
+      "direct_domain_leakage": "LOW",
+      "endpoint_port_risk": "PORT_VISIBLE; group control required",
+      "calibration_capacity": "300/class (80/10/10) or 450/class (70/15/15)",
+      "component_p05_feasibility": "15 or 22/class; below n=30 fallback threshold",
+      "unknown_split_status": "NOT FROZEN",
+      "independent_validation_status": "INDEPENDENT_CANDIDATE",
+      "blocking_issue": "MIX=PARTIALLY_OVERLAPPING; exclude MIX and freeze group-aware split",
+      "final_readiness": "READY"
+    },
+    {
+      "dataset": "CSTNET-TLS1.3",
+      "role": "Secondary Sparse-Calibration Stress Test",
+      "raw_pcap_available": "YES",
+      "label_quality": "directory labels; 119 eligible of 120",
+      "class_count": 120,
+      "usable_class_count": 119,
+      "sample_count": 46372,
+      "group_id_available": "YES: frozen one-minute proxy",
+      "group_split_ready": "YES: hashes PASS",
+      "direct_domain_leakage": "LOW (0/600)",
+      "endpoint_port_risk": "PORT_VISIBLE; endpoint novelty unresolved",
+      "calibration_capacity": "sparse: validation medians 44/42/39",
+      "component_p05_feasibility": "fallback expected for all classes",
+      "unknown_split_status": "FROZEN Low/Medium/High",
+      "independent_validation_status": "INDEPENDENT_CANDIDATE",
+      "blocking_issue": "component calibration sparse; protocol v2 needed before method run",
+      "final_readiness": "CONDITIONALLY_READY"
+    },
+    {
+      "dataset": "CIC-IDS-2017",
+      "role": "Independent NIDS / Unknown-Attack Validation",
+      "raw_pcap_available": "YES",
+      "label_quality": "strict official flow-CSV matches; 3 schedule sanity-risk labels",
+      "class_count": 15,
+      "usable_class_count": 3,
+      "sample_count": 2087440,
+      "group_id_available": "candidate five-minute capture block",
+      "group_split_ready": "FEASIBLE; not frozen",
+      "direct_domain_leakage": "NOT A DOMAIN-LABEL DATASET",
+      "endpoint_port_risk": "HIGH for multiple attack classes",
+      "calibration_capacity": "large overall; only 3 PRIMARY_ELIGIBLE",
+      "component_p05_feasibility": "not evaluated before class policy freeze",
+      "unknown_split_status": "NOT FROZEN",
+      "independent_validation_status": "INDEPENDENT_BUT_CONFOUNDED",
+      "blocking_issue": "one-day/PCAP attack binding, endpoint shortcuts, class policy and Unknown split unfrozen",
+      "final_readiness": "CONDITIONALLY_READY"
+    }
+  ],
+  "artifacts": [
+    {
+      "path": "EXPERIMENT_INDEX.md",
+      "size_bytes": 216,
+      "sha256": "6c0d417a22ff3121d2964b517f483d4342e4571a9541518358792de07042a465"
+    },
+    {
+      "path": "README.md",
+      "size_bytes": 7603,
+      "sha256": "85877f4923b81619f8e4872b1a88e4431d0cbe2cf48e4a2d583d79a4f1279901"
+    },
+    {
+      "path": "outputs/RESULTS.md",
+      "size_bytes": 1159,
+      "sha256": "45d676e2117e34a3ac3d87bae78f149445d85ee26847b3f9f6ee33eef74a8963"
+    },
+    {
+      "path": "outputs/cicids2017/class_day_matrix.csv",
+      "size_bytes": 1091,
+      "sha256": "eb00457a0b357f89a26f97c0932df875bace620d511bb16b5939755cf775b5ab"
+    },
+    {
+      "path": "outputs/cicids2017/class_eligibility.csv",
+      "size_bytes": 2288,
+      "sha256": "b3005ce1b59d8e22e50e97a93d143520af150af13c9b279643d69e009214be54"
+    },
+    {
+      "path": "outputs/cicids2017/class_hour_distribution.csv",
+      "size_bytes": 3547,
+      "sha256": "edc71a07a4a0b2063f5a5de3187828e6802c048165d4e94571af45766ec4b3dd"
+    },
+    {
+      "path": "outputs/cicids2017/class_inventory.csv",
+      "size_bytes": 1718,
+      "sha256": "150046ac8842be02fda909cdd4639b8dd498a32c96dce52bd23a22e4e5c2476e"
+    },
+    {
+      "path": "outputs/cicids2017/class_pcap_matrix.csv",
+      "size_bytes": 1573,
+      "sha256": "4987e3880d2eae8a138ac231dced1380f6356cb439d42334181801cb408a3363"
+    },
+    {
+      "path": "outputs/cicids2017/confounding_summary.json",
+      "size_bytes": 332,
+      "sha256": "ceb0710ff53cfbf7539104cfc428a9e07b2f67077c537fba69d3d9e28c3f2867"
+    },
+    {
+      "path": "outputs/cicids2017/endpoint_port_shortcut.csv",
+      "size_bytes": 4663,
+      "sha256": "1aa100765c2261e74a782a5c771167a4425edbc487de435b66465989b5a00a2d"
+    },
+    {
+      "path": "outputs/cicids2017/input_endpoint_audit.md",
+      "size_bytes": 660,
+      "sha256": "08ca777b53e74d2d298f9d82659a0174ff7b536d4d73d53f017b62ec642a4eeb"
+    },
+    {
+      "path": "outputs/cicids2017/raw_input_manifest.csv",
+      "size_bytes": 33019,
+      "sha256": "72642a6c5564ddc496d612d3526f5b84e4ad8b22a75aa7f108e485ea705dd162"
+    },
+    {
+      "path": "outputs/cicids2017/sample_candidates.json",
+      "size_bytes": 109101,
+      "sha256": "436042383209e691134dfc89819eb31f3f4c9cf213a7a57a8c2529cf24e66c7f"
+    },
+    {
+      "path": "outputs/cicids2017/split_feasibility.md",
+      "size_bytes": 816,
+      "sha256": "0cad81ea46b700fd68326bda930e811fa45f3480e0b5340b7d1f7745cd921c8a"
+    },
+    {
+      "path": "outputs/cipherspectrum/all_pcap_fingerprints.csv",
+      "size_bytes": 109914458,
+      "sha256": "e62eb5ac15bff6057e6632dcdba601afdbeb2886de4b7ae68434fc1802fd49f1"
+    },
+    {
+      "path": "outputs/cipherspectrum/calibration_capacity.csv",
+      "size_bytes": 898,
+      "sha256": "2033d86a94aa846f436096a02488abb79d07488cc2a0926b9a62f6b8c4259a0a"
+    },
+    {
+      "path": "outputs/cipherspectrum/domain_sni_leakage.csv",
+      "size_bytes": 41129,
+      "sha256": "cbad31bd5ac886a51757cc90f5110cf623388b21891436b16c460f787ec2d0e5"
+    },
+    {
+      "path": "outputs/cipherspectrum/endpoint_input_audit.md",
+      "size_bytes": 772,
+      "sha256": "b561a8a0524eb950ca6c87d4ab9b628492912ec536320644a0fd03fa260c75d7"
+    },
+    {
+      "path": "outputs/cipherspectrum/grouping_audit.csv",
+      "size_bytes": 454,
+      "sha256": "e262ea681a9a6a48f3638d1a2caee8c05d69e34a14a8dcb8a9de9b88c0ea2de4"
+    },
+    {
+      "path": "outputs/cipherspectrum/mix_duplicate_pairs.csv",
+      "size_bytes": 172,
+      "sha256": "77be5a4d5ea056a8041f2e3f489c636d0de817ab0b0169aa2f59d843ec28777d"
+    },
+    {
+      "path": "outputs/cipherspectrum/mix_provenance_audit.csv",
+      "size_bytes": 468,
+      "sha256": "5add4fdd8ec48e9f976758703fba50bec42517e78dd79d03f2998cea70a7e602"
+    },
+    {
+      "path": "outputs/cipherspectrum/mix_provenance_summary.json",
+      "size_bytes": 384,
+      "sha256": "e6fef114feeb78334176a4f64a332c115e5acfad6db1755f19040b946f411ce6"
+    },
+    {
+      "path": "outputs/cipherspectrum/mix_provenance_summary.md",
+      "size_bytes": 734,
+      "sha256": "dca269098cf0d1b117643d344cafb4c656c412aa86f8f934ca882362e84b0536"
+    },
+    {
+      "path": "outputs/cipherspectrum/raw_input_manifest.csv",
+      "size_bytes": 97276,
+      "sha256": "8a634d2e722b58387acad78d1c5a393c7169a13a87587e1ea8bd1ce6d9a02f2a"
+    },
+    {
+      "path": "outputs/cipherspectrum/source_class_counts.csv",
+      "size_bytes": 8421,
+      "sha256": "dfdeb72cf1683edc69b4869a8c471b4361d33b9280b99bc74df24b41e3424025"
+    },
+    {
+      "path": "outputs/cipherspectrum/unmanifested_pcap.csv",
+      "size_bytes": 1176,
+      "sha256": "33132da2f0d52adccaac13f6d44f50c3df26701b4036ab4bbf01e08091696855"
+    },
+    {
+      "path": "outputs/cstnet/calibration_capacity.csv",
+      "size_bytes": 1080,
+      "sha256": "e3b553cbbbb2f0e6c045933f51af42ed7f90f0a5fad13808b4cf13d38b880b37"
+    },
+    {
+      "path": "outputs/cstnet/frozen_protocol_verification.md",
+      "size_bytes": 695,
+      "sha256": "08927ae980f3c800dfb3628ad34c43ac96bfa80d0c8b546016b13cae80811491"
+    },
+    {
+      "path": "outputs/cstnet/input_leakage_summary.md",
+      "size_bytes": 470,
+      "sha256": "4a41b5e95ba996a904af0cfeb1cbc6e8e5533236d8d7b78e2f2737411443ea23"
+    },
+    {
+      "path": "outputs/summary/audit_summary.json",
+      "size_bytes": 13742,
+      "sha256": "5f521ec017e9c98742e5b921fc92a865b54df7994c04937825d46f5a07288018"
+    },
+    {
+      "path": "outputs/summary/dataset_path_resolution.csv",
+      "size_bytes": 613,
+      "sha256": "5c047e10613aea835ce9bbce1fdcade7c7bac56372b10d5b25d5f8f1315409a9"
+    },
+    {
+      "path": "outputs/summary/four_dataset_readiness_matrix.csv",
+      "size_bytes": 1959,
+      "sha256": "387eed4e99e6d9b9e5f73d6735d1cb7ec35bbdabaf1ce73c2e94d97535f81d87"
+    },
+    {
+      "path": "outputs/ustc/class_inventory.csv",
+      "size_bytes": 1265,
+      "sha256": "7bfef3ef03c6136c6caf6ef4160bdbd59672c623fcd882be9bf1a2ae8875ba53"
+    },
+    {
+      "path": "outputs/ustc/duplicate_summary.csv",
+      "size_bytes": 8067,
+      "sha256": "49ace9220d4ce0ae87bd3ea86e45d4f650c307eca2336d0348696c3068a4bdbb"
+    },
+    {
+      "path": "outputs/ustc/existing_split_summary.md",
+      "size_bytes": 2395,
+      "sha256": "380b92b8e3a89f5183c0d9be15fbbbe20df0c6749cba65249d64d6d9a3a58e8a"
+    },
+    {
+      "path": "outputs/ustc/file_integrity.csv",
+      "size_bytes": 25052,
+      "sha256": "1a5d3caba4a42a5adb5b531498fabb92b5bfb8ceed7ab89914534bedb5436064"
+    },
+    {
+      "path": "outputs/ustc/readiness.md",
+      "size_bytes": 324,
+      "sha256": "ae41b533f8176949618b05fbcd7d3b5014e04544773410bd0538e7fb9375be78"
+    },
+    {
+      "path": "scripts/audit_utils.py",
+      "size_bytes": 8807,
+      "sha256": "69b88f8b89731f69cf53dc5aff35831e7db75eaf6994839151a6491955e7cc3b"
+    },
+    {
+      "path": "scripts/finalize_readiness_audit.py",
+      "size_bytes": 24591,
+      "sha256": "2c1e79b877dd1e1223aadaf5c61fd36110627cc659b299404a2e86bcfe3e7256"
+    },
+    {
+      "path": "scripts/run_cicids_input_audit.py",
+      "size_bytes": 11174,
+      "sha256": "e67dc04720897d69f67725eeba9a05cb522865386e1b235bffc96b576833ff09"
+    },
+    {
+      "path": "scripts/run_cipher_audits.py",
+      "size_bytes": 15095,
+      "sha256": "0a8535f45c781d65f7b4c2085a18d3d9acc0f9151a5c999275e1a96aa6e32939"
+    },
+    {
+      "path": "scripts/run_inventory_audits.py",
+      "size_bytes": 28629,
+      "sha256": "f95bea2ed2bfc077a6c133a13a2eb276eb4cc07656f63fea6f11311ca0c394ba"
+    },
+    {
+      "path": "tests/verify_readiness_audit.py",
+      "size_bytes": 5346,
+      "sha256": "5a7f06691b8436b94813f5a3084b0e68cbcf6e225a394a4946e48be889c5df6c"
+    }
+  ],
+  "limitations": [
+    "diagnostic data audit only",
+    "no model or Unknown evaluation",
+    "CICIDS attacks are day/PCAP bound"
+  ],
+  "next_step": "freeze downstream group-aware protocols only after explicit authorization"
+}

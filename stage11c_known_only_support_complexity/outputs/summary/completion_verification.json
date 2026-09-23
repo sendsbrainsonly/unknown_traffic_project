@@ -1,0 +1,20 @@
+{
+  "status": "PASS",
+  "formal_runs": 15,
+  "known_only_features": 15,
+  "class_level_geometry": 510,
+  "covariance_stability": 255,
+  "validation_fit": 255,
+  "validation_classification": 15,
+  "coverage": 510,
+  "candidate_rules": 72,
+  "loso": 72,
+  "new_training": false,
+  "unknown_feature_used_for_criterion": false,
+  "cipherspectrum_stage9_sample_level_test_used": false,
+  "frozen_experiment_modified": false,
+  "next_stage_started": false,
+  "final_gate": "WEAK_SIGNAL",
+  "mechanism": "C4",
+  "failures": []
+}

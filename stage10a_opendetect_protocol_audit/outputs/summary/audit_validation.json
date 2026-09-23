@@ -1,0 +1,27 @@
+{
+  "status": "PASS",
+  "csv_files_verified": {
+    "outputs/paper/paper_protocol.csv": 26,
+    "outputs/official_code/official_implementation_map.csv": 19,
+    "outputs/ustc_reproduction/ustc_reproduction_protocol.csv": 25,
+    "outputs/ustc_reproduction/ustc_open_set_reproduction.csv": 15,
+    "outputs/summary/paper_vs_ustc.csv": 16,
+    "outputs/cipherspectrum/native_implementation_audit.csv": 12,
+    "outputs/summary/preprocessing_comparison.csv": 13,
+    "outputs/summary/result_definition_alignment.csv": 8,
+    "outputs/summary/failure_decomposition.csv": 6,
+    "outputs/summary/latent_mode_audit.csv": 4,
+    "outputs/summary/threshold_comparison.csv": 6,
+    "outputs/summary/leakage_risk_audit.csv": 7,
+    "outputs/summary/same_encoder_detector_comparison.csv": 9,
+    "outputs/cipherspectrum/stage7_encoder_audit.csv": 3
+  },
+  "required_documents_verified": true,
+  "required_report_headings_verified": true,
+  "final_gate": "B",
+  "claim_status": "EXTERNAL_RESULT_NOT_YET_ATTRIBUTABLE",
+  "upstream_integrity": "PASS",
+  "frozen_experiment_modified": false,
+  "opendetect_sibling_integrity": "PASS",
+  "opendetect_source_modified_by_audit": false
+}

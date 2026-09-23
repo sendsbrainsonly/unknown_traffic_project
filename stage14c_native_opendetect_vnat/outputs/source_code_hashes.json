@@ -1,0 +1,10 @@
+{
+  "files": {
+    "/home/birkenwald/data/SEU-WXY/WXY-SEU/TrafficClassifier/Projects/Open-Detect/code/model.py": "756fc2d3c5ac146ce7fb1f0e1fa00a07b7ca7b626b2baffc2e14562121c1c636",
+    "/home/birkenwald/data/SEU-WXY/WXY-SEU/TrafficClassifier/Projects/Open-Detect/code/train.py": "91d0f1d5d01fa82398d771a190eabafe77faac0d7cc6b3b554151e6bf5b90f88",
+    "/home/birkenwald/data/SEU-WXY/WXY-SEU/TrafficClassifier/Projects/Open-Detect/code/utils.py": "24cf8e8ad11418c86a29f4e0a24491f53b594306892865be4eee36b3b8e26ad7",
+    "/home/birkenwald/data/SEU-WXY/WXY-SEU/TrafficClassifier/Projects/Open-Detect/reproduction/run_reproduction.py": "7d674a1cb135a8762e3818538449a0e88b103a2943e603ce860bddc6fd752491"
+  },
+  "opendetect_code_git_commit": "b50a18515a01799468c10f6c9b60c01f8a6a4e7c",
+  "opendetect_code_git_status_short": "M __pycache__/model.cpython-310.pyc\n M __pycache__/utils.cpython-310.pyc\n M data/__pycache__/splits.cpython-310.pyc\n M networks/__pycache__/__init__.cpython-310.pyc\n M networks/__pycache__/resnet.cpython-310.pyc\n?? .agents/\n?? AGENTS.md\n?? data/Preprocessing/__pycache__/\n?? \"data/dataset/Open-Detect dataset.zip\"\n?? \"data/dataset/Open-Detect dataset/\""
+}

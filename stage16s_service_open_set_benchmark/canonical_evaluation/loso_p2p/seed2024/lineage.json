@@ -1,0 +1,8 @@
+{
+  "parameters_updated": false,
+  "source_checkpoint": "/home/birkenwald/data/SEU-WXY/WXY-SEU/TrafficClassifier/Projects/unknown_traffic_project/stage16s_service_open_set_benchmark/runs/loso_p2p/seed2024/model_best.pt",
+  "source_checkpoint_sha256": "99bc1dbc0ae3d477fb252159d2688994aa81f1ccc43d796e9959e88439b34408",
+  "source_failure": null,
+  "source_run": "/home/birkenwald/data/SEU-WXY/WXY-SEU/TrafficClassifier/Projects/unknown_traffic_project/stage16s_service_open_set_benchmark/runs/loso_p2p/seed2024",
+  "training_performed": false
+}

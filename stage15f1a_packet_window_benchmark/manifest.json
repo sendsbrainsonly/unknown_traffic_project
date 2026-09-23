@@ -1,0 +1,4383 @@
+{
+  "artifacts": [
+    {
+      "path": "completion_verification.json",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 6219,
+      "sha256": "ba7ddafa677804c4376c5aefcf58ec35771bd3f03f4a7db36d8b39229e0df6c9",
+      "hash_status": "verified"
+    },
+    {
+      "path": "config.json",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 3071,
+      "sha256": "6e7e252b1aab2c429f0d1470732ba49b59dddc4e80358c5a96a3ca82be2500eb",
+      "hash_status": "verified"
+    },
+    {
+      "path": "failed_attempts/aggregate_v1_missing_class_breadth_constraint/FAILURE_NOTE.txt",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 208,
+      "sha256": "b218ec877232a3df5c057c6f97d090173601c5a82eec485349d03879a77e2fc5",
+      "hash_status": "verified"
+    },
+    {
+      "path": "failed_attempts/aggregate_v1_missing_class_breadth_constraint/RESULTS.md",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 438,
+      "sha256": "c203d53241ca83b1cfbd72e18f4dc78393cf0e5fba0e847bf9e4f519d5f51169",
+      "hash_status": "verified"
+    },
+    {
+      "path": "failed_attempts/aggregate_v1_missing_class_breadth_constraint/gate_evaluation.json",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 1403,
+      "sha256": "d555204ef7539278f9d6bfcc8e64b3971460a3b2be4a23e8569636ea966624ec",
+      "hash_status": "verified"
+    },
+    {
+      "path": "failed_attempts/aggregate_v1_missing_class_breadth_constraint/stage15f1a_report.md",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 9147,
+      "sha256": "b38da3529c5af2bc8cd08a4652d382a65970c308cb1aae5ccec50ca42cb8819f",
+      "hash_status": "verified"
+    },
+    {
+      "path": "failed_attempts/aggregate_v1_missing_class_breadth_constraint/window_confusion_analysis.csv",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 127260,
+      "sha256": "4ee3286a7a4ef4ad81a8afa94997b26500e9f4509e1c1a23e26ead71dc30e736",
+      "hash_status": "verified"
+    },
+    {
+      "path": "failed_attempts/aggregate_v1_missing_class_breadth_constraint/window_coverage_vs_performance.csv",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 71226,
+      "sha256": "ee3785d8d1769f2b6602301f6f8603fda4ceb56cba139e47ea01be419fad86b3",
+      "hash_status": "verified"
+    },
+    {
+      "path": "failed_attempts/aggregate_v1_missing_class_breadth_constraint/window_error_complementarity.csv",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 18758,
+      "sha256": "cd56a77b1c55badc1a47af0e3e6d7eee39832d27cd14b886e8dcd561a637991f",
+      "hash_status": "verified"
+    },
+    {
+      "path": "failed_attempts/aggregate_v1_missing_class_breadth_constraint/window_paired_comparison.csv",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 3976,
+      "sha256": "546c175ab195bc3a15cc358f01398a9a07c3647ccfc38ff1315d3efb1bacfeec",
+      "hash_status": "verified"
+    },
+    {
+      "path": "failed_attempts/aggregate_v1_missing_class_breadth_constraint/window_per_class_results.csv",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 13451,
+      "sha256": "7bf0aba391c0c71e2b3772d19b9da015dc4236bb306844ffb76072720eadca74",
+      "hash_status": "verified"
+    },
+    {
+      "path": "failed_attempts/aggregate_v1_missing_class_breadth_constraint/window_pilot_results.csv",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 11119,
+      "sha256": "834d441e70181eca1e6f8f563dda383b817325bfaaf1eea377de58abda445372",
+      "hash_status": "verified"
+    },
+    {
+      "path": "failed_attempts/legacy_t8_parity_cpu_numeric_drift/FAILURE_NOTE.txt",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 262,
+      "sha256": "85fb94d4caf0ef2ef2cdd00c7338992c6ea10201a60f25b6ef246ea6d9008fb5",
+      "hash_status": "verified"
+    },
+    {
+      "path": "failed_attempts/legacy_t8_parity_cpu_numeric_drift/iscx_tor/medium_seed2022/parity_result.json",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 1070,
+      "sha256": "04e8fe16414f7bbd4427f77adb616c5604e2eed095f348d089795126d5f37ca7",
+      "hash_status": "verified"
+    },
+    {
+      "path": "failed_attempts/legacy_t8_parity_cpu_numeric_drift/iscx_tor/medium_seed2022/validation_predictions.npz",
+      "scope": "bundle",
+      "role": "predictions",
+      "size_bytes": 73383,
+      "sha256": "db14962ca9e1a8a68cd2fff358b65b7d46204c27bf8fccafe9eb559a3f3b6c27",
+      "hash_status": "verified"
+    },
+    {
+      "path": "failed_attempts/legacy_t8_parity_cpu_numeric_drift/iscx_vpn/medium_seed2022/parity_result.json",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 1075,
+      "sha256": "8e9650ac41317eea76a85f237973fe9fa2a5c72e981e8885ecbc6f4ce459b69a",
+      "hash_status": "verified"
+    },
+    {
+      "path": "failed_attempts/legacy_t8_parity_cpu_numeric_drift/iscx_vpn/medium_seed2022/validation_predictions.npz",
+      "scope": "bundle",
+      "role": "predictions",
+      "size_bytes": 137503,
+      "sha256": "c40c63a6b86a94db8d91cc36511a127d9289a6a3ebb0c66b9b383db7e7381ddc",
+      "hash_status": "verified"
+    },
+    {
+      "path": "failed_attempts/legacy_t8_parity_cpu_numeric_drift/parity_summary.json",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 5872,
+      "sha256": "70569fecf922b8b12eb9d2bbbb45f6264df17c57c89777c5a4dc2a39a53ea1dc",
+      "hash_status": "verified"
+    },
+    {
+      "path": "failed_attempts/legacy_t8_parity_cpu_numeric_drift/ustc/A-2/parity_result.json",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 1043,
+      "sha256": "ba17f26126eececc71d27905a473105c1e61e9b3c8329590a342d5a3ba3eebcd",
+      "hash_status": "verified"
+    },
+    {
+      "path": "failed_attempts/legacy_t8_parity_cpu_numeric_drift/ustc/A-2/validation_predictions.npz",
+      "scope": "bundle",
+      "role": "predictions",
+      "size_bytes": 2248001,
+      "sha256": "b1e4b65efdc0afa3f09de3f5b7e5c51ad438f4d437f0f1e8d4470d48f5be6f4c",
+      "hash_status": "verified"
+    },
+    {
+      "path": "failed_attempts/legacy_t8_parity_cpu_numeric_drift/vnat/medium_seed2025/parity_result.json",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 1063,
+      "sha256": "9acfbda318f2549a366475faf8da86d7a20760ba36b013644835f3ade1f2d6c8",
+      "hash_status": "verified"
+    },
+    {
+      "path": "failed_attempts/legacy_t8_parity_cpu_numeric_drift/vnat/medium_seed2025/validation_predictions.npz",
+      "scope": "bundle",
+      "role": "predictions",
+      "size_bytes": 133385,
+      "sha256": "b4da1d2bca90e7de281af5ce5bc2bdec949576bd990b50fa1025806493cc048a",
+      "hash_status": "verified"
+    },
+    {
+      "path": "failed_attempts/legacy_t8_parity_cpu_numeric_drift/vnat/medium_seed2026/parity_result.json",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 1057,
+      "sha256": "7f6f970473a2578a6aaf90f3b98b60ad614a60744e09f76b8cd676ff9df61fa9",
+      "hash_status": "verified"
+    },
+    {
+      "path": "failed_attempts/legacy_t8_parity_cpu_numeric_drift/vnat/medium_seed2026/validation_predictions.npz",
+      "scope": "bundle",
+      "role": "predictions",
+      "size_bytes": 130069,
+      "sha256": "26ab7b3bbcaca256bb7a7e60993ea3abed883e94d442f94b8ea424b7873d7f52",
+      "hash_status": "verified"
+    },
+    {
+      "path": "failed_attempts/sequence_cache_ustc_direction_reconstruction_v1/FAILURE_NOTE.txt",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 277,
+      "sha256": "43cda9ec40f1fcfc28815fbc68d4906de60e1d9d60d801fd245d358a91438d67",
+      "hash_status": "verified"
+    },
+    {
+      "path": "failed_attempts/sequence_cache_ustc_direction_reconstruction_v1/cache_audit.json",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 882,
+      "sha256": "1b7c2bda0df2a66f8ebe1f6c5c1e1aa95d66f277db4ddfe5cf3fcf91fef2312c",
+      "hash_status": "verified"
+    },
+    {
+      "path": "failed_attempts/sequence_cache_ustc_direction_reconstruction_v1/flow_uids.npy",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 124794368,
+      "sha256": "adaf21c167d3fc06cc6b12b778df287cb530b1db15dee1137fb57bade7b5ac9f",
+      "hash_status": "verified"
+    },
+    {
+      "path": "failed_attempts/sequence_cache_ustc_direction_reconstruction_v1/packet_counts.npy",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 1560056,
+      "sha256": "b38457f31d388f35f9f166359cad52d48187a3c7cfa18c665b589bb1a80acbdb",
+      "hash_status": "verified"
+    },
+    {
+      "path": "failed_attempts/sequence_cache_ustc_direction_reconstruction_v1/packet_directions.npy",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 12479552,
+      "sha256": "6cb44da111c58ed697da3498b88fbacc70a6efe5c500b2df86c0ba4dee8711c4",
+      "hash_status": "verified"
+    },
+    {
+      "path": "failed_attempts/sequence_cache_ustc_direction_reconstruction_v1/packet_iat_seconds.npy",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 49917824,
+      "sha256": "d26a075ce0230fd1b07941067a2fad18737727f1f21f278a22c71f7c36315c28",
+      "hash_status": "verified"
+    },
+    {
+      "path": "failed_attempts/sequence_cache_ustc_direction_reconstruction_v1/packet_lengths.npy",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 49917824,
+      "sha256": "93105ec43779561d3d36a7fd9bb85afead4d3700a9dbf97ea0b1cd13b3e4089f",
+      "hash_status": "verified"
+    },
+    {
+      "path": "failed_attempts/sequence_cache_ustc_direction_reconstruction_v1/packet_mask.npy",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 12479552,
+      "sha256": "c722821b03d3d5bc1fbfbdac70413f5e66ac188f1fd1fc9c9141de4d743c09bd",
+      "hash_status": "verified"
+    },
+    {
+      "path": "failed_attempts/sequence_cache_ustc_direction_reconstruction_v1/source_audit.csv",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 4790,
+      "sha256": "d29c34b9befc3c1e0e8ba2ae45b8f78ac187601b481f9935a0898d912bcb0d85",
+      "hash_status": "verified"
+    },
+    {
+      "path": "frozen_asset_hashes_after.json",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 68929,
+      "sha256": "37b1fcd9a7f2ac5b112b249012d03461ea95e74f047a8db200c833ed94dd6ef1",
+      "hash_status": "verified"
+    },
+    {
+      "path": "frozen_asset_hashes_before.json",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 68939,
+      "sha256": "1d20d01d1f7de40f47fcb118796cf052205f5b87f3ca71e3a17f034b5ab89400",
+      "hash_status": "verified"
+    },
+    {
+      "path": "gate_evaluation.json",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 2225,
+      "sha256": "c69069d34dc7aec4badd168d782241449c1d6bdc8b68201422c183f8876a94cb",
+      "hash_status": "verified"
+    },
+    {
+      "path": "grid_status.json",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 5561,
+      "sha256": "4724c991f6d01025c84f4e76a17103dba743ebd09cd6089b28d3e2772c805eda",
+      "hash_status": "verified"
+    },
+    {
+      "path": "legacy_t8_parity/iscx_tor/medium_seed2022/parity_result.json",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 1099,
+      "sha256": "337d9e88ee992c4d2553d6a56f13126398d1c6b9b72905f0f7746d8e0c3cf5a0",
+      "hash_status": "verified"
+    },
+    {
+      "path": "legacy_t8_parity/iscx_tor/medium_seed2022/validation_predictions.npz",
+      "scope": "bundle",
+      "role": "predictions",
+      "size_bytes": 73411,
+      "sha256": "31f13846493aee38485d983fc5b5ac255c90f318f02b68d8486a5d3c1965cbd5",
+      "hash_status": "verified"
+    },
+    {
+      "path": "legacy_t8_parity/iscx_vpn/medium_seed2022/parity_result.json",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 1100,
+      "sha256": "d1510653e2ebdc71ef27f2c3d27ea4fd02f7b32fb592654a69d506f33ad1ca77",
+      "hash_status": "verified"
+    },
+    {
+      "path": "legacy_t8_parity/iscx_vpn/medium_seed2022/validation_predictions.npz",
+      "scope": "bundle",
+      "role": "predictions",
+      "size_bytes": 136820,
+      "sha256": "f22f2e6086602d37dc6c3749837febe78554616cd1fe292dbfcc900566abfb34",
+      "hash_status": "verified"
+    },
+    {
+      "path": "legacy_t8_parity/parity_summary.json",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 6029,
+      "sha256": "dfab3da2ca582f1c60fbd9889f206e4522fd520af0ad6cfd9708ccb75d422b67",
+      "hash_status": "verified"
+    },
+    {
+      "path": "legacy_t8_parity/ustc/A-2/parity_result.json",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 1070,
+      "sha256": "03e192203fd65f7c2d64f099c9791dbdbb32496d5e9759ce1c4adc5ccf5b0f5d",
+      "hash_status": "verified"
+    },
+    {
+      "path": "legacy_t8_parity/ustc/A-2/validation_predictions.npz",
+      "scope": "bundle",
+      "role": "predictions",
+      "size_bytes": 2171250,
+      "sha256": "97711e945d9b3c62ea58bf249da441bb5482d4d35912f64fdff1f80ce2c90882",
+      "hash_status": "verified"
+    },
+    {
+      "path": "legacy_t8_parity/vnat/medium_seed2025/parity_result.json",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 1090,
+      "sha256": "79930fb7283103407512de7199363064cbd230b5197d1f2f70c9142c579892c6",
+      "hash_status": "verified"
+    },
+    {
+      "path": "legacy_t8_parity/vnat/medium_seed2025/validation_predictions.npz",
+      "scope": "bundle",
+      "role": "predictions",
+      "size_bytes": 134252,
+      "sha256": "473a0ea6b554459914509fb5e7ab5bde4c142876b82bb173e6ed19fd26a2001b",
+      "hash_status": "verified"
+    },
+    {
+      "path": "legacy_t8_parity/vnat/medium_seed2026/parity_result.json",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 1086,
+      "sha256": "7bc61071bb7f1867cc4c4302fe91e9d7bddd1dbbae9fe88226cfdcef0d13e6a9",
+      "hash_status": "verified"
+    },
+    {
+      "path": "legacy_t8_parity/vnat/medium_seed2026/validation_predictions.npz",
+      "scope": "bundle",
+      "role": "predictions",
+      "size_bytes": 129947,
+      "sha256": "b0490807d4f38d9381ef78989de1f2c7c97b8a8589815d20c7d58558f58c4e39",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/T16/iscx_tor/medium_seed2022/history.csv",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 14729,
+      "sha256": "7c792ae70d72d72856754ce5d52e6827fb3703815c72095908a1b0585be41fca",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/T16/iscx_tor/medium_seed2022/model_best.pt",
+      "scope": "bundle",
+      "role": "checkpoint",
+      "size_bytes": 114165,
+      "sha256": "5b8c3f1ae01f02a411e39ed23a93fe8d8e3ad6cdc880277a54ea112166254aac",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/T16/iscx_tor/medium_seed2022/per_class_results.csv",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 765,
+      "sha256": "d35efb4e05622da1766e38d4a0eb78a38bb2da43183c0c0f9a09c72083b02346",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/T16/iscx_tor/medium_seed2022/result.json",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 1342,
+      "sha256": "12f8ab4d64ff83908c9f95745d0e13967fae16284363909b94b9dbb20c9d551d",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/T16/iscx_tor/medium_seed2022/run_config.json",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 3941,
+      "sha256": "50960139cc5e1be44069d9f6f8b9d6107acdf83439e01bc63f6dee36066fcbeb",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/T16/iscx_tor/medium_seed2022/validation_confusion_matrix.npy",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 640,
+      "sha256": "1102d4a94110455ca395c70025e6fb5b282044832f5d877a25f870d1f3cdd92a",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/T16/iscx_tor/medium_seed2022/validation_predictions.npz",
+      "scope": "bundle",
+      "role": "predictions",
+      "size_bytes": 73395,
+      "sha256": "cb07a0aab4df909c93c1c0829d0aa87f5f2bc14cb4b6e823fb57fa2af54ca6d3",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/T16/iscx_tor/medium_seed2022.T16.launcher.log",
+      "scope": "bundle",
+      "role": "log",
+      "size_bytes": 43101,
+      "sha256": "a6cb27a00b69809ef05fafa197d91aa27baab67696880f9295bf9e302ff24eca",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/T16/iscx_vpn/medium_seed2022/history.csv",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 14697,
+      "sha256": "949fc6ef2a93f7528e34b826ad247c6a060491734c58f03bd82671c3f19e340a",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/T16/iscx_vpn/medium_seed2022/model_best.pt",
+      "scope": "bundle",
+      "role": "checkpoint",
+      "size_bytes": 116725,
+      "sha256": "63d173ba8ff51dc4df26f018fd1a112dff053180bf14abcc2a3f6ecb8bebd330",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/T16/iscx_vpn/medium_seed2022/per_class_results.csv",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 1198,
+      "sha256": "e3b9b37b164cb258c4e562dd76fdaf94a8b7c48170f4b4279bf601f44a207226",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/T16/iscx_vpn/medium_seed2022/result.json",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 1404,
+      "sha256": "d6f4b6408e68a471bd32de5148f366bcb3b2d14240443a2bc82df7f17d4948c7",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/T16/iscx_vpn/medium_seed2022/run_config.json",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 3941,
+      "sha256": "75491fd949ce8c1f8c003c0f2acea97b16b18a484ee085cd460b79c8b5a2d861",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/T16/iscx_vpn/medium_seed2022/validation_confusion_matrix.npy",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 1480,
+      "sha256": "839a0b2f0d2ed9001c808bc2ce0ab5280eee222bed9afa354f203ff9947408e7",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/T16/iscx_vpn/medium_seed2022/validation_predictions.npz",
+      "scope": "bundle",
+      "role": "predictions",
+      "size_bytes": 133460,
+      "sha256": "3b9f503cfd2618525b2ac2e3a79267d5d7f6b2ae4bced557af0613f9be8a61b3",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/T16/iscx_vpn/medium_seed2022.T16.launcher.log",
+      "scope": "bundle",
+      "role": "log",
+      "size_bytes": 43111,
+      "sha256": "fd1259022d087b837031070bb63ca67ba915cff8623d567df53a8c66a1ea6701",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/T16/ustc/A-2/history.csv",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 14645,
+      "sha256": "f0503ecc49c9fc52311d457347d0e32e605cc0652dd8a0193dc5c7552c9108b0",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/T16/ustc/A-2/model_best.pt",
+      "scope": "bundle",
+      "role": "checkpoint",
+      "size_bytes": 118901,
+      "sha256": "a93bf9159f630c23a778d2dbe195cb11a9cc4c76fb882eee58de56566e8672dc",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/T16/ustc/A-2/per_class_results.csv",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 1362,
+      "sha256": "b3ce3ebb79c106db4c6392029efedb9f5e64fb926aeab0f9d6cccdf8de9d5109",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/T16/ustc/A-2/result.json",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 1441,
+      "sha256": "698ca606a7599b7cccfd750fc4f905acb8cf9dcbf8ee4dcb0767d28dbf7584a3",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/T16/ustc/A-2/run_config.json",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 3925,
+      "sha256": "670350bbcefead538a8dc20c788fc47d29cae8e17b8711b3d05c84557b28168b",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/T16/ustc/A-2/validation_confusion_matrix.npy",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 2440,
+      "sha256": "941afaa6113b8c95eb5b3052eeb98996faeae8800ba9ce710ad6013b390477f1",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/T16/ustc/A-2/validation_predictions.npz",
+      "scope": "bundle",
+      "role": "predictions",
+      "size_bytes": 2191780,
+      "sha256": "a053ca07b691eb0baf45a5b25f6e895969be51e755c4901328d519e56425defc",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/T16/ustc/A-2.T16.launcher.log",
+      "scope": "bundle",
+      "role": "log",
+      "size_bytes": 41481,
+      "sha256": "14c17daf5b8d595a9f5003ac53c341132621b975b785b6c3767601bd60c1f406",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/T16/vnat/medium_seed2025/history.csv",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 14584,
+      "sha256": "e9387006cac99422797d64dc621ebf4aa6153e28bfc2df662889833ee8131327",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/T16/vnat/medium_seed2025/model_best.pt",
+      "scope": "bundle",
+      "role": "checkpoint",
+      "size_bytes": 113589,
+      "sha256": "bab635cffc5a31ca43b85150af572e8e4cf321fe6010d3f6812849900d30a5d1",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/T16/vnat/medium_seed2025/per_class_results.csv",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 602,
+      "sha256": "d2f8862f481999524a6c699c32cb770dbfdeff340b38e21747bff95609a728b4",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/T16/vnat/medium_seed2025/result.json",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 1308,
+      "sha256": "77d4d7de884ccaa42123524f6b2093b5e325848f15ad2f688391f2c53b8317ff",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/T16/vnat/medium_seed2025/run_config.json",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 3937,
+      "sha256": "f3ccfac5e13f5052142ddbc67844d8ef4e99513d868876f2cd3614419740eda3",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/T16/vnat/medium_seed2025/validation_confusion_matrix.npy",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 520,
+      "sha256": "bdc9bd3756eba440d6830abdbd7783fcc841724c4248d20d51f3d5b24ab7eef0",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/T16/vnat/medium_seed2025/validation_predictions.npz",
+      "scope": "bundle",
+      "role": "predictions",
+      "size_bytes": 134034,
+      "sha256": "9d1fd13eb871493e114d152149bb5c23496ed674d1827b4b9e085b7001453709",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/T16/vnat/medium_seed2025.T16.launcher.log",
+      "scope": "bundle",
+      "role": "log",
+      "size_bytes": 42526,
+      "sha256": "abcaf5fd01648057f47ff26afbbffcf40ca38a467a3f38a42e6befa1c912189e",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/T16/vnat/medium_seed2026/history.csv",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 14664,
+      "sha256": "1536be962ea6dab848c40eb1d649265936bae069c23520eb76b98d694df82a51",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/T16/vnat/medium_seed2026/model_best.pt",
+      "scope": "bundle",
+      "role": "checkpoint",
+      "size_bytes": 113589,
+      "sha256": "036c2c1956c4b8c7e6e8b14a59ce60447a839a99bc4e425d3c5256e10f94de9d",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/T16/vnat/medium_seed2026/per_class_results.csv",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 643,
+      "sha256": "bf32da384bca526e64fac2b70643b20fff3e90d5590be3ba1dbf473f4a3913fb",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/T16/vnat/medium_seed2026/result.json",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 1307,
+      "sha256": "726a04d312b7bd8624bf47c6b813353eb33d9129b12398c6aefaa1e1dab0a5db",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/T16/vnat/medium_seed2026/run_config.json",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 3937,
+      "sha256": "f29e5519561f847d0251c12299730e287cc62a36bb386892260347c64e303f41",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/T16/vnat/medium_seed2026/validation_confusion_matrix.npy",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 520,
+      "sha256": "129d9af7ed86a2f5c7e2243bc0b3dc22065a12415a6eebc8f00139ee01161c23",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/T16/vnat/medium_seed2026/validation_predictions.npz",
+      "scope": "bundle",
+      "role": "predictions",
+      "size_bytes": 129447,
+      "sha256": "62c6ff3ac1f488ae029dd86d95484109ebaa07887fdc1edb8cf8183e0567a23d",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/T16/vnat/medium_seed2026.T16.launcher.log",
+      "scope": "bundle",
+      "role": "log",
+      "size_bytes": 42601,
+      "sha256": "c414d2f21c8180dfb5e9d68f9bdff00976a7f130526dcf9895758bc690f1fe8d",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/T32/iscx_tor/medium_seed2022/history.csv",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 14726,
+      "sha256": "df3f36622925281334b506585f3537abf92c7066fcec7e9a0cef712deacaac6e",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/T32/iscx_tor/medium_seed2022/model_best.pt",
+      "scope": "bundle",
+      "role": "checkpoint",
+      "size_bytes": 114165,
+      "sha256": "dd9d0334595c3af1128060021e1574327d77cb2d519ce8f2854639db719fcd14",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/T32/iscx_tor/medium_seed2022/per_class_results.csv",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 796,
+      "sha256": "1ee9c2b9fb8e787af73e0735ed83ae74fdaa07dbd54ea604b1161208d5f24224",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/T32/iscx_tor/medium_seed2022/result.json",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 1340,
+      "sha256": "77338ff56291aba259a637e7cdff87a5ec85a49231221fd46035e558520593d4",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/T32/iscx_tor/medium_seed2022/run_config.json",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 3941,
+      "sha256": "d219c2a60ea0ad8040f5f19b0e4f0730e35e33ac45ba94a30cae1fb3953fb2ef",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/T32/iscx_tor/medium_seed2022/validation_confusion_matrix.npy",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 640,
+      "sha256": "85ba058590cd2982c3f64424d1039ff438ca4da8d9f6ed9e928c1673ea08349e",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/T32/iscx_tor/medium_seed2022/validation_predictions.npz",
+      "scope": "bundle",
+      "role": "predictions",
+      "size_bytes": 73356,
+      "sha256": "398813a47f0a14bb20e671b9c5bb17d54e637f28ace881e63fa7beb062d79db6",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/T32/iscx_tor/medium_seed2022.T32.launcher.log",
+      "scope": "bundle",
+      "role": "log",
+      "size_bytes": 43098,
+      "sha256": "bab5911cac1080cff82727402b9a6cf76422cd488700de3fd7d88f593d2dac95",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/T32/iscx_vpn/medium_seed2022/history.csv",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 14692,
+      "sha256": "f9f0bb521369fad22507aec47578ff31477b0a4215e2e164a32615016d87a95d",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/T32/iscx_vpn/medium_seed2022/model_best.pt",
+      "scope": "bundle",
+      "role": "checkpoint",
+      "size_bytes": 116725,
+      "sha256": "6daf96d68417cdb3b123081556120c3df25c9129407e2ad08d2fffbd7bc49c62",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/T32/iscx_vpn/medium_seed2022/per_class_results.csv",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 1211,
+      "sha256": "217084c1fdccde798a592f3414560f428bd4fbef307a043d47bb3e18806c4c29",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/T32/iscx_vpn/medium_seed2022/result.json",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 1403,
+      "sha256": "c9fe08fb4779ec8b9802a2b012970e69b2f9b0f094ed7dd9f44059ab4f32d97b",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/T32/iscx_vpn/medium_seed2022/run_config.json",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 3941,
+      "sha256": "72c027a59f0443d6352e04dbaaffcfa1974d44de102727849408d6e19dba4713",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/T32/iscx_vpn/medium_seed2022/validation_confusion_matrix.npy",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 1480,
+      "sha256": "f40bad3b2722f882acf6bd774c5e632bbb9d6bcb6a375861b8f794ec5173bb3f",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/T32/iscx_vpn/medium_seed2022/validation_predictions.npz",
+      "scope": "bundle",
+      "role": "predictions",
+      "size_bytes": 133885,
+      "sha256": "ea1b62914e5f44c6b2721bff2825899c2ee9b613c8b9f8ce1c105558d1e5564e",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/T32/iscx_vpn/medium_seed2022.T32.launcher.log",
+      "scope": "bundle",
+      "role": "log",
+      "size_bytes": 43106,
+      "sha256": "382695b0432221b29bdb4df3c8b42718271e5fb12fd2646758acc57b8936f780",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/T32/ustc/A-2/history.csv",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 14635,
+      "sha256": "b76dd3187b26f6a016a48e8f78ee6ad7bc0140eb8c91e3a758570596709bb41d",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/T32/ustc/A-2/model_best.pt",
+      "scope": "bundle",
+      "role": "checkpoint",
+      "size_bytes": 118901,
+      "sha256": "40c01aedaa88cd259705f217e2c7d8d4a9bb7160a0351a8b41ff0271a89bd4b2",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/T32/ustc/A-2/per_class_results.csv",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 1359,
+      "sha256": "a73a2a6c54b8c6fb63a795b1b21543d70826d2fd7a42469becc60e593a517ef8",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/T32/ustc/A-2/result.json",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 1441,
+      "sha256": "c753d1b8b9dfe0a1430f588c885bcb98499492cdad1a7bfd1fc2119ed241b6fa",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/T32/ustc/A-2/run_config.json",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 3925,
+      "sha256": "8146f44938ade8a5707be1e0f48a85f6dd9d8ef39f734fb72635fa6fa2ea468f",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/T32/ustc/A-2/validation_confusion_matrix.npy",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 2440,
+      "sha256": "b794227e0caeb7f761b8de3357e78859391ba1e5c0236fb977dab1d904dd987b",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/T32/ustc/A-2/validation_predictions.npz",
+      "scope": "bundle",
+      "role": "predictions",
+      "size_bytes": 2040902,
+      "sha256": "912bc4d8d6816bab349314eb063d0e70a5e8a2094b846f2cf0e164e3b863be08",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/T32/ustc/A-2.T32.launcher.log",
+      "scope": "bundle",
+      "role": "log",
+      "size_bytes": 41471,
+      "sha256": "f9bf1f5917cb7d3afada7cb8b026d9b95a96a4227a8deb356ffe6d88cab618f0",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/T32/vnat/medium_seed2025/history.csv",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 14567,
+      "sha256": "795266c95cce1c8a48f82039b2f672d24cb3ff123bf68dbb28d56b7a43340596",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/T32/vnat/medium_seed2025/model_best.pt",
+      "scope": "bundle",
+      "role": "checkpoint",
+      "size_bytes": 113589,
+      "sha256": "55b9b762dc554e53c2ac408898f7035227da2aacaeddf437a9231c70193352b3",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/T32/vnat/medium_seed2025/per_class_results.csv",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 649,
+      "sha256": "c8f07d9393e193b4222aa8d9bf15d8ff7123b7708db950f6c00833f0c8c88252",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/T32/vnat/medium_seed2025/result.json",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 1312,
+      "sha256": "1db41cbcdfbebaa039db96743a5e3b9baa62743f7a0146c254f0cba4c2a96ce5",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/T32/vnat/medium_seed2025/run_config.json",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 3937,
+      "sha256": "03abe74d2f57c1503b094d44d8612cd0842b800535de46dc309f66843fdc6573",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/T32/vnat/medium_seed2025/validation_confusion_matrix.npy",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 520,
+      "sha256": "793dea3035c37f93a32ea3359a232ab49d69086ed9a031519490e250836b0fe3",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/T32/vnat/medium_seed2025/validation_predictions.npz",
+      "scope": "bundle",
+      "role": "predictions",
+      "size_bytes": 133924,
+      "sha256": "88052b6c6a2c4c52cf2d80cf3f012cf15287266a266c1dd23c593e3ba340ba92",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/T32/vnat/medium_seed2025.T32.launcher.log",
+      "scope": "bundle",
+      "role": "log",
+      "size_bytes": 42510,
+      "sha256": "83323361279912711fef7b6eb3f5b1f1cab4d2effd646bfd5076e35a0003ec19",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/T32/vnat/medium_seed2026/history.csv",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 14635,
+      "sha256": "cfea9afb6e41b5f372d6d178ac72b4e7b0cccad274f5e23e6568b738f00935b6",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/T32/vnat/medium_seed2026/model_best.pt",
+      "scope": "bundle",
+      "role": "checkpoint",
+      "size_bytes": 113589,
+      "sha256": "2a71ecf1ea02a5fa69a111ac535686a2c6cfaccb8f707c1b2d86357ebfb770bb",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/T32/vnat/medium_seed2026/per_class_results.csv",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 646,
+      "sha256": "7d16f91ce6df6c6bcc9cf351128882a5831388f75d95f982da188144f554de0a",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/T32/vnat/medium_seed2026/result.json",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 1311,
+      "sha256": "cbc5f3ab0107547113160cb42c8bdfb33429a4778b520fbc4a292a39b78b1e46",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/T32/vnat/medium_seed2026/run_config.json",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 3937,
+      "sha256": "28b1fb73f9e2091a8901aefde7bff85eb60ce3fb205df2df2d084f52c13382ac",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/T32/vnat/medium_seed2026/validation_confusion_matrix.npy",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 520,
+      "sha256": "2c07aed73a0353ada1f69fe7d878f6dcc822ed0cf23595032f577894a946cec0",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/T32/vnat/medium_seed2026/validation_predictions.npz",
+      "scope": "bundle",
+      "role": "predictions",
+      "size_bytes": 129359,
+      "sha256": "d5bc02b8babd0ecc840b1b8fefe66c58dc08a81509897af9471bf4e1769ac9f8",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/T32/vnat/medium_seed2026.T32.launcher.log",
+      "scope": "bundle",
+      "role": "log",
+      "size_bytes": 42581,
+      "sha256": "e17c5a10c568f28fc3a335162fa2fa865514ad4cff6758381378589f0ab6fc93",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/T8/iscx_tor/medium_seed2022/history.csv",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 14731,
+      "sha256": "6ce2a137aaf1a135d60359e0da6edf9545d14e9c93d05f0c586353fa2f306cc5",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/T8/iscx_tor/medium_seed2022/model_best.pt",
+      "scope": "bundle",
+      "role": "checkpoint",
+      "size_bytes": 114165,
+      "sha256": "2db3561fc3b6374f0d7b0a4a5b6bf3daad13c3e2f010f30556a242ad98d2dc77",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/T8/iscx_tor/medium_seed2022/per_class_results.csv",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 789,
+      "sha256": "d363eba88c605ef2a086378d34a03e9a1d68bce6191619ac94cb434930dc1ede",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/T8/iscx_tor/medium_seed2022/result.json",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 1339,
+      "sha256": "51c262148ba33b982f55d68ecb8376283d10a09982c9ee81755c022a991b1697",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/T8/iscx_tor/medium_seed2022/run_config.json",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 3940,
+      "sha256": "08543983fa26c76a31c871e1217b83c02845181771868ea7aec6410eee7837f4",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/T8/iscx_tor/medium_seed2022/validation_confusion_matrix.npy",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 640,
+      "sha256": "8fa6408cb5f211f3ffbb4587931316559f64e25fa6d8374b08690353c914b955",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/T8/iscx_tor/medium_seed2022/validation_predictions.npz",
+      "scope": "bundle",
+      "role": "predictions",
+      "size_bytes": 73479,
+      "sha256": "b1760c63caa195c4ab396f5ca95e8664ea07251f12971afe3164237022ee08d6",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/T8/iscx_tor/medium_seed2022.T8.launcher.log",
+      "scope": "bundle",
+      "role": "log",
+      "size_bytes": 43000,
+      "sha256": "32f58660ca866d0a4fb59b1ce720ddbf15e02aae7b7ea48415d36c0dffbace05",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/T8/iscx_vpn/medium_seed2022/history.csv",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 14702,
+      "sha256": "deb6a26aec21d64e24ed43efb803b2351d24123f1e9cc20034cf86ee5122c65d",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/T8/iscx_vpn/medium_seed2022/model_best.pt",
+      "scope": "bundle",
+      "role": "checkpoint",
+      "size_bytes": 116725,
+      "sha256": "41cdaee7cedf28b0c51979793b0233d09d4c1234ed32806972fea9f7fcd1b9eb",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/T8/iscx_vpn/medium_seed2022/per_class_results.csv",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 1187,
+      "sha256": "269fa49f6f385b4e715e549b3c84a1497a7727c8bafbe0a94325ab4170714ae9",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/T8/iscx_vpn/medium_seed2022/result.json",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 1405,
+      "sha256": "d472d709cb29121f5785ab81790a6a23a7d3abde988c591b005bd9a3fd310e26",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/T8/iscx_vpn/medium_seed2022/run_config.json",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 3940,
+      "sha256": "d4f1f4c789ef476cd8bd6be7bf78446db0f7157ff18588f2d328403a52dfa2c4",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/T8/iscx_vpn/medium_seed2022/validation_confusion_matrix.npy",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 1480,
+      "sha256": "fb2364f66b6a509e7f49f7129f034a03f65abdcb03ca4f240b80227e2c065b84",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/T8/iscx_vpn/medium_seed2022/validation_predictions.npz",
+      "scope": "bundle",
+      "role": "predictions",
+      "size_bytes": 134923,
+      "sha256": "c84b42ea85a017d5cf8a87186c8d0350f74246a73342cc82db8457386d2c4160",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/T8/iscx_vpn/medium_seed2022.T8.launcher.log",
+      "scope": "bundle",
+      "role": "log",
+      "size_bytes": 43017,
+      "sha256": "8acfef9ec8f5efb8fb576e143e223428a1d7b9b3ad32f2d4fbc0f1f1b16ac01c",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/T8/ustc/A-2/history.csv",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 14630,
+      "sha256": "ebbb7821e6f629445ae610e7ea23bf65682a3ad144ca0aefdc883b44edb3f9ef",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/T8/ustc/A-2/model_best.pt",
+      "scope": "bundle",
+      "role": "checkpoint",
+      "size_bytes": 118901,
+      "sha256": "2fe23ede38c09f159f5bc78c1fb1d66e878c66f31e8ad59a9053abd02bf54d8b",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/T8/ustc/A-2/per_class_results.csv",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 1343,
+      "sha256": "dfb755a827a953cd33f04af9e74dddd534d86d39726aaee96a6ebca10f828d7f",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/T8/ustc/A-2/result.json",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 1436,
+      "sha256": "e5e94beb04ae31e85369408c0c19270308eb57a100c9cdc6dffff56451263453",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/T8/ustc/A-2/run_config.json",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 3924,
+      "sha256": "8d27e41dc6680b0103b38bbd83ac9ead20b8607921a9a680ada09abc04fb8e58",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/T8/ustc/A-2/validation_confusion_matrix.npy",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 2440,
+      "sha256": "18a7e509634ae1fbe152d9c71dad86fd69de6a05e650ac43da697f6784adeb76",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/T8/ustc/A-2/validation_predictions.npz",
+      "scope": "bundle",
+      "role": "predictions",
+      "size_bytes": 2171999,
+      "sha256": "d77f12051b7a01ed7a5f06507ad6d7def2564cc7b3d4ce27fc2140b8aa995ee9",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/T8/ustc/A-2.T8.launcher.log",
+      "scope": "bundle",
+      "role": "log",
+      "size_bytes": 41360,
+      "sha256": "ea673740532ed98f30ad3efdcd9c2ca4bbe7264d7af6497c695fe8b409a2ad4f",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/T8/vnat/medium_seed2025/history.csv",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 14614,
+      "sha256": "b36c7774a7cdd0a891937b8686eeacc2bc6c1255fe6d8eaf3971d3945d2bbe5a",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/T8/vnat/medium_seed2025/model_best.pt",
+      "scope": "bundle",
+      "role": "checkpoint",
+      "size_bytes": 113589,
+      "sha256": "284c1c5599011846a714616a7256fecbb483b41357ff86c792a2a1930e3227b7",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/T8/vnat/medium_seed2025/per_class_results.csv",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 630,
+      "sha256": "eba492a88ff9f2f920499a7a37e1bde035f1b1e264421078780c3a83a4d06345",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/T8/vnat/medium_seed2025/result.json",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 1308,
+      "sha256": "c5781d3c1b7db92d9e7aaa41b6cac697ef7fb4633a7c53cc9bea255f454c4e59",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/T8/vnat/medium_seed2025/run_config.json",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 3936,
+      "sha256": "299e3af6c004d4817ace4134495339efaa4ba9831ff39654a4ae48f5cd996b27",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/T8/vnat/medium_seed2025/validation_confusion_matrix.npy",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 520,
+      "sha256": "25fb1159b132d1d1cad41efe7db857b29e911277246b7ba72f024a608b5fa1ab",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/T8/vnat/medium_seed2025/validation_predictions.npz",
+      "scope": "bundle",
+      "role": "predictions",
+      "size_bytes": 134027,
+      "sha256": "53a1fcb0aea57026ead277f752bee4fc466ef31a666047a52a11f59b9e1e2432",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/T8/vnat/medium_seed2025.T8.launcher.log",
+      "scope": "bundle",
+      "role": "log",
+      "size_bytes": 42456,
+      "sha256": "4ad297c41ff7a533cfbc387911dce5756683a535d5f1089428d9135f0152ca27",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/T8/vnat/medium_seed2026/history.csv",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 14689,
+      "sha256": "aca07660d5a91f01b17b07d6ccf0231e974c1e7d32e287bf09c37d81ea1b12c9",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/T8/vnat/medium_seed2026/model_best.pt",
+      "scope": "bundle",
+      "role": "checkpoint",
+      "size_bytes": 113589,
+      "sha256": "e028c6c22c22f1fea8058401aba3363d6189e6f6a5de17cdeb51ffe07fec5879",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/T8/vnat/medium_seed2026/per_class_results.csv",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 627,
+      "sha256": "4d0c8fabd9003cd3d222ff360c5701e60533b3cb43715d5d32325d0638bf0279",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/T8/vnat/medium_seed2026/result.json",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 1308,
+      "sha256": "0ca559c5ecc482eca733038f683131699ded0d4fa43c1119c0f0f2188116467c",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/T8/vnat/medium_seed2026/run_config.json",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 3936,
+      "sha256": "68729d4f2e79d7670ffae8a82b098f7ba9f786b99fe3697fda13cec16d7cbecb",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/T8/vnat/medium_seed2026/validation_confusion_matrix.npy",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 520,
+      "sha256": "7842407e06623a91c5700cb60f87b07f13473a459abe07da8f0b6df9c137ee75",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/T8/vnat/medium_seed2026/validation_predictions.npz",
+      "scope": "bundle",
+      "role": "predictions",
+      "size_bytes": 129758,
+      "sha256": "0647e966a03022084341f8a0dd8f95e3453b9c3b99393d357d9858eb9a24a35d",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/T8/vnat/medium_seed2026.T8.launcher.log",
+      "scope": "bundle",
+      "role": "log",
+      "size_bytes": 42531,
+      "sha256": "9c113d71e25466fa018c522069e05f19fe551df85c3978ff81575175f2288fb2",
+      "hash_status": "verified"
+    },
+    {
+      "path": "scripts/__pycache__/aggregate_results.cpython-310.pyc",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 23489,
+      "sha256": "3e101808abee06abd1198b94af1288b6e60dc1aaab1bde17eb6ab4b038642121",
+      "hash_status": "verified"
+    },
+    {
+      "path": "scripts/__pycache__/build_sequence_cache.cpython-310.pyc",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 13386,
+      "sha256": "9baa9185279bf0888cecc186ce1df161299ead29dbd6c49870719e9bf9747a1b",
+      "hash_status": "verified"
+    },
+    {
+      "path": "scripts/__pycache__/common.cpython-310.pyc",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 5979,
+      "sha256": "ba902ab1a16af0df64b8897554a44d8ffc4612f10c68d201f9bb5ebd76d5ccf9",
+      "hash_status": "verified"
+    },
+    {
+      "path": "scripts/__pycache__/finalize_bundle.cpython-310.pyc",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 4739,
+      "sha256": "f40291ecbd7c395f5d5fd1457aca2e78d0b159962fed9fde5876da9717d18c6e",
+      "hash_status": "verified"
+    },
+    {
+      "path": "scripts/__pycache__/hash_frozen_assets.cpython-310.pyc",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 2980,
+      "sha256": "68eafad78d94c0c81996bf91e769b41db70e97dd213311244d9dedeb0e30a22d",
+      "hash_status": "verified"
+    },
+    {
+      "path": "scripts/__pycache__/model.cpython-310.pyc",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 3312,
+      "sha256": "9e8c0c2d3c86343e91b8feff6ca3f34b5b71294897feb0933d648b17d2cab6d2",
+      "hash_status": "verified"
+    },
+    {
+      "path": "scripts/__pycache__/run_grid.cpython-310.pyc",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 3160,
+      "sha256": "c9fd6cfe1ea237c31cf9540b4ac91b69fe595c98dba39620412347bac5be5514",
+      "hash_status": "verified"
+    },
+    {
+      "path": "scripts/__pycache__/run_window_pilot.cpython-310.pyc",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 9925,
+      "sha256": "c2bc18c3ffffadfe59999f308ae2696f812fddc4f8840c08555297bf8e9da6ee",
+      "hash_status": "verified"
+    },
+    {
+      "path": "scripts/__pycache__/validate_legacy_t8.cpython-310.pyc",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 4394,
+      "sha256": "877a39df07f457a4ddb4418375658514fd8c4d72308625f0b74afa580279e8be",
+      "hash_status": "verified"
+    },
+    {
+      "path": "scripts/__pycache__/verify_completion.cpython-310.pyc",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 4546,
+      "sha256": "4dbde0a25e93053fd2faa15e6c9acbe96a793a48b6df18fcc7790e6213250e34",
+      "hash_status": "verified"
+    },
+    {
+      "path": "scripts/aggregate_results.py",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 32261,
+      "sha256": "4ceb046d8c1db02d5fcdf81d9f8909aee6363f8192685eb4b9dd9fee7a1e7bd4",
+      "hash_status": "verified"
+    },
+    {
+      "path": "scripts/build_sequence_cache.py",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 16298,
+      "sha256": "44d4570d42585b57a9e1cfa18d98b2dbfa0422e87f2b69e277f4eeaf49a02fb2",
+      "hash_status": "verified"
+    },
+    {
+      "path": "scripts/common.py",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 4621,
+      "sha256": "fa0747ca070c3b9056938c6c2ad9720f001e798bb6f2a7d01758a7dd72d85697",
+      "hash_status": "verified"
+    },
+    {
+      "path": "scripts/finalize_bundle.py",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 5392,
+      "sha256": "e94a0139ef4c0397f7e221d6c606ebc4632984e70a1d126dc778a12106c6f05f",
+      "hash_status": "verified"
+    },
+    {
+      "path": "scripts/hash_frozen_assets.py",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 2959,
+      "sha256": "cec857663eb314edb4d109e702d71712ac8becc71c8ee952491275a20111e889",
+      "hash_status": "verified"
+    },
+    {
+      "path": "scripts/model.py",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 2710,
+      "sha256": "ecfa2a80fe7715738458442ac5092e936dec93aecf09ea54df89c13716acfdae",
+      "hash_status": "verified"
+    },
+    {
+      "path": "scripts/run_grid.py",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 3680,
+      "sha256": "d4895228d03b0931f66fe444dcc98f88938abed1d531f5413444c349514b15d0",
+      "hash_status": "verified"
+    },
+    {
+      "path": "scripts/run_window_pilot.py",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 9945,
+      "sha256": "b408c633dbd52384319cacdf51d79d29f2a1ff68b140994598627b7b054da5fa",
+      "hash_status": "verified"
+    },
+    {
+      "path": "scripts/validate_legacy_t8.py",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 4789,
+      "sha256": "e7a968cd046a253af903072e7fbda6e30d3865dbbd73d2f1250a2737bc97097a",
+      "hash_status": "verified"
+    },
+    {
+      "path": "scripts/verify_completion.py",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 4958,
+      "sha256": "927bd404663defa0db0d322c23228028b6c4df364d2b8a5d405e03321d94cdf8",
+      "hash_status": "verified"
+    },
+    {
+      "path": "sequence_cache/iscx_tor/cache_audit.json",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 876,
+      "sha256": "e46460de1372afbb7dc14c0a3475666d7bf8c7b8943b571108fff77a6dcb629f",
+      "hash_status": "verified"
+    },
+    {
+      "path": "sequence_cache/iscx_tor/flow_uids.npy",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 3194688,
+      "sha256": "fb054fa9428f0ae471ad47e50f6d8e91a74f38f623eb1ef54f78ef0c5b846e17",
+      "hash_status": "verified"
+    },
+    {
+      "path": "sequence_cache/iscx_tor/packet_counts.npy",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 40060,
+      "sha256": "c43b7aeb8133cf7435c59575c90013169062187456e555e890ed4ca01f0a01b5",
+      "hash_status": "verified"
+    },
+    {
+      "path": "sequence_cache/iscx_tor/packet_directions.npy",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 319584,
+      "sha256": "18baab2c7778da8dfffa9df447b438b53c32c5211c4ce59150db16ed1c593f9a",
+      "hash_status": "verified"
+    },
+    {
+      "path": "sequence_cache/iscx_tor/packet_iat_seconds.npy",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 1277952,
+      "sha256": "1ca4a387d3325ced13b31e5914f2cf57adbf73c92b47de05e8d246c66e620c06",
+      "hash_status": "verified"
+    },
+    {
+      "path": "sequence_cache/iscx_tor/packet_lengths.npy",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 1277952,
+      "sha256": "ea5666ded3eb220ddfe2e833ff60dd0b8c98e6a1912118d0d36f02a0d1bca91a",
+      "hash_status": "verified"
+    },
+    {
+      "path": "sequence_cache/iscx_tor/packet_mask.npy",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 319584,
+      "sha256": "1473709ed1a41b3a1160f3bee12c95bd21d439594e95c2c785b76f0ffa3131dd",
+      "hash_status": "verified"
+    },
+    {
+      "path": "sequence_cache/iscx_tor/source_audit.csv",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 17916,
+      "sha256": "6882c388c3d4cdd5a4f6c0a543ae87df6a50a53dc24e80de054011f66b6c20bf",
+      "hash_status": "verified"
+    },
+    {
+      "path": "sequence_cache/iscx_tor/tshark_stderr/Browsing_000_browsing.log",
+      "scope": "bundle",
+      "role": "log",
+      "size_bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "hash_status": "verified"
+    },
+    {
+      "path": "sequence_cache/iscx_tor/tshark_stderr/Browsing_001_browsing2-1.log",
+      "scope": "bundle",
+      "role": "log",
+      "size_bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "hash_status": "verified"
+    },
+    {
+      "path": "sequence_cache/iscx_tor/tshark_stderr/Browsing_002_browsing2-2.log",
+      "scope": "bundle",
+      "role": "log",
+      "size_bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "hash_status": "verified"
+    },
+    {
+      "path": "sequence_cache/iscx_tor/tshark_stderr/Browsing_003_browsing2.log",
+      "scope": "bundle",
+      "role": "log",
+      "size_bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "hash_status": "verified"
+    },
+    {
+      "path": "sequence_cache/iscx_tor/tshark_stderr/Browsing_004_browsing_ara.log",
+      "scope": "bundle",
+      "role": "log",
+      "size_bytes": 332,
+      "sha256": "aec29b8b6b28aa3b92e3b2ca578c3a7719bd21a27bcf6cfef3770b1cbbbbd251",
+      "hash_status": "verified"
+    },
+    {
+      "path": "sequence_cache/iscx_tor/tshark_stderr/Browsing_005_browsing_ara2.log",
+      "scope": "bundle",
+      "role": "log",
+      "size_bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "hash_status": "verified"
+    },
+    {
+      "path": "sequence_cache/iscx_tor/tshark_stderr/Browsing_006_browsing_ger.log",
+      "scope": "bundle",
+      "role": "log",
+      "size_bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "hash_status": "verified"
+    },
+    {
+      "path": "sequence_cache/iscx_tor/tshark_stderr/Browsing_009_BROWSING_tor_browsing_ger.log",
+      "scope": "bundle",
+      "role": "log",
+      "size_bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "hash_status": "verified"
+    },
+    {
+      "path": "sequence_cache/iscx_tor/tshark_stderr/Browsing_010_BROWSING_tor_browsing_mam.log",
+      "scope": "bundle",
+      "role": "log",
+      "size_bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "hash_status": "verified"
+    },
+    {
+      "path": "sequence_cache/iscx_tor/tshark_stderr/Email_000_Email_IMAP_filetransfer.log",
+      "scope": "bundle",
+      "role": "log",
+      "size_bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "hash_status": "verified"
+    },
+    {
+      "path": "sequence_cache/iscx_tor/tshark_stderr/Email_001_POP_filetransfer.log",
+      "scope": "bundle",
+      "role": "log",
+      "size_bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "hash_status": "verified"
+    },
+    {
+      "path": "sequence_cache/iscx_tor/tshark_stderr/Email_002_Workstation_Thunderbird_POP.log",
+      "scope": "bundle",
+      "role": "log",
+      "size_bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "hash_status": "verified"
+    },
+    {
+      "path": "sequence_cache/iscx_tor/tshark_stderr/Email_003_MAIL_Gateway_Thunderbird_Imap.log",
+      "scope": "bundle",
+      "role": "log",
+      "size_bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "hash_status": "verified"
+    },
+    {
+      "path": "sequence_cache/iscx_tor/tshark_stderr/Email_004_MAIL_gate_Email_IMAP_filetransfer.log",
+      "scope": "bundle",
+      "role": "log",
+      "size_bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "hash_status": "verified"
+    },
+    {
+      "path": "sequence_cache/iscx_tor/tshark_stderr/Email_005_MAIL_gate_POP_filetransfer.log",
+      "scope": "bundle",
+      "role": "log",
+      "size_bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "hash_status": "verified"
+    },
+    {
+      "path": "sequence_cache/iscx_tor/tshark_stderr/FTP_000_FTP_filetransfer.log",
+      "scope": "bundle",
+      "role": "log",
+      "size_bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "hash_status": "verified"
+    },
+    {
+      "path": "sequence_cache/iscx_tor/tshark_stderr/FTP_001_FILE-TRANSFER_gate_FTP_transfer.log",
+      "scope": "bundle",
+      "role": "log",
+      "size_bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "hash_status": "verified"
+    },
+    {
+      "path": "sequence_cache/iscx_tor/tshark_stderr/Facebook_000_Facebook_Voice_Workstation.log",
+      "scope": "bundle",
+      "role": "log",
+      "size_bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "hash_status": "verified"
+    },
+    {
+      "path": "sequence_cache/iscx_tor/tshark_stderr/Facebook_001_facebook_Audio.log",
+      "scope": "bundle",
+      "role": "log",
+      "size_bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "hash_status": "verified"
+    },
+    {
+      "path": "sequence_cache/iscx_tor/tshark_stderr/Facebook_002_facebook_chat.log",
+      "scope": "bundle",
+      "role": "log",
+      "size_bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "hash_status": "verified"
+    },
+    {
+      "path": "sequence_cache/iscx_tor/tshark_stderr/Facebook_003_facebookchat.log",
+      "scope": "bundle",
+      "role": "log",
+      "size_bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "hash_status": "verified"
+    },
+    {
+      "path": "sequence_cache/iscx_tor/tshark_stderr/Facebook_004_CHAT_facebookchatgateway.log",
+      "scope": "bundle",
+      "role": "log",
+      "size_bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "hash_status": "verified"
+    },
+    {
+      "path": "sequence_cache/iscx_tor/tshark_stderr/Facebook_005_CHAT_gate_facebook_chat.log",
+      "scope": "bundle",
+      "role": "log",
+      "size_bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "hash_status": "verified"
+    },
+    {
+      "path": "sequence_cache/iscx_tor/tshark_stderr/Facebook_006_VOIP_Facebook_Voice_Gateway.log",
+      "scope": "bundle",
+      "role": "log",
+      "size_bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "hash_status": "verified"
+    },
+    {
+      "path": "sequence_cache/iscx_tor/tshark_stderr/Facebook_007_VOIP_gate_facebook_Audio.log",
+      "scope": "bundle",
+      "role": "log",
+      "size_bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "hash_status": "verified"
+    },
+    {
+      "path": "sequence_cache/iscx_tor/tshark_stderr/Facebook_008_torFacebook.log",
+      "scope": "bundle",
+      "role": "log",
+      "size_bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "hash_status": "verified"
+    },
+    {
+      "path": "sequence_cache/iscx_tor/tshark_stderr/Hangouts_000_Hangout_Audio.log",
+      "scope": "bundle",
+      "role": "log",
+      "size_bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "hash_status": "verified"
+    },
+    {
+      "path": "sequence_cache/iscx_tor/tshark_stderr/Hangouts_001_Hangouts_voice_Workstation.log",
+      "scope": "bundle",
+      "role": "log",
+      "size_bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "hash_status": "verified"
+    },
+    {
+      "path": "sequence_cache/iscx_tor/tshark_stderr/Hangouts_002_hangout_chat.log",
+      "scope": "bundle",
+      "role": "log",
+      "size_bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "hash_status": "verified"
+    },
+    {
+      "path": "sequence_cache/iscx_tor/tshark_stderr/Hangouts_003_hangoutschat.log",
+      "scope": "bundle",
+      "role": "log",
+      "size_bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "hash_status": "verified"
+    },
+    {
+      "path": "sequence_cache/iscx_tor/tshark_stderr/Hangouts_004_CHAT_gate_hangout_chat.log",
+      "scope": "bundle",
+      "role": "log",
+      "size_bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "hash_status": "verified"
+    },
+    {
+      "path": "sequence_cache/iscx_tor/tshark_stderr/Hangouts_005_CHAT_hangoutschatgateway.log",
+      "scope": "bundle",
+      "role": "log",
+      "size_bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "hash_status": "verified"
+    },
+    {
+      "path": "sequence_cache/iscx_tor/tshark_stderr/Hangouts_006_VOIP_Hangouts_voice_Gateway.log",
+      "scope": "bundle",
+      "role": "log",
+      "size_bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "hash_status": "verified"
+    },
+    {
+      "path": "sequence_cache/iscx_tor/tshark_stderr/Hangouts_007_VOIP_gate_hangout_audio.log",
+      "scope": "bundle",
+      "role": "log",
+      "size_bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "hash_status": "verified"
+    },
+    {
+      "path": "sequence_cache/iscx_tor/tshark_stderr/Spotify_000_spotify2-2.log",
+      "scope": "bundle",
+      "role": "log",
+      "size_bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "hash_status": "verified"
+    },
+    {
+      "path": "sequence_cache/iscx_tor/tshark_stderr/Spotify_001_spotify2.log",
+      "scope": "bundle",
+      "role": "log",
+      "size_bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "hash_status": "verified"
+    },
+    {
+      "path": "sequence_cache/iscx_tor/tshark_stderr/Spotify_002_AUDIO_spotifygateway.log",
+      "scope": "bundle",
+      "role": "log",
+      "size_bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "hash_status": "verified"
+    },
+    {
+      "path": "sequence_cache/iscx_tor/tshark_stderr/Spotify_003_AUDIO_tor_spotify2.log",
+      "scope": "bundle",
+      "role": "log",
+      "size_bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "hash_status": "verified"
+    },
+    {
+      "path": "sequence_cache/iscx_tor/tshark_stderr/Spotify_004_tor_spotify2-2.log",
+      "scope": "bundle",
+      "role": "log",
+      "size_bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "hash_status": "verified"
+    },
+    {
+      "path": "sequence_cache/iscx_tor/tshark_stderr/Vimeo_000_Vimeo_Workstation.log",
+      "scope": "bundle",
+      "role": "log",
+      "size_bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "hash_status": "verified"
+    },
+    {
+      "path": "sequence_cache/iscx_tor/tshark_stderr/Vimeo_001_VIDEO_Vimeo_Gateway.log",
+      "scope": "bundle",
+      "role": "log",
+      "size_bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "hash_status": "verified"
+    },
+    {
+      "path": "sequence_cache/iscx_tor/tshark_stderr/Vimeo_002_torVimeo1.log",
+      "scope": "bundle",
+      "role": "log",
+      "size_bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "hash_status": "verified"
+    },
+    {
+      "path": "sequence_cache/iscx_tor/tshark_stderr/Vimeo_003_torVimeo2.log",
+      "scope": "bundle",
+      "role": "log",
+      "size_bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "hash_status": "verified"
+    },
+    {
+      "path": "sequence_cache/iscx_tor/tshark_stderr/Vimeo_004_torVimeo3.log",
+      "scope": "bundle",
+      "role": "log",
+      "size_bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "hash_status": "verified"
+    },
+    {
+      "path": "sequence_cache/iscx_tor/tshark_stderr/YouTube_000_Youtube_Flash_Workstation.log",
+      "scope": "bundle",
+      "role": "log",
+      "size_bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "hash_status": "verified"
+    },
+    {
+      "path": "sequence_cache/iscx_tor/tshark_stderr/YouTube_001_Youtube_HTML5_Workstation.log",
+      "scope": "bundle",
+      "role": "log",
+      "size_bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "hash_status": "verified"
+    },
+    {
+      "path": "sequence_cache/iscx_tor/tshark_stderr/YouTube_002_VIDEO_Youtube_Flash_Gateway.log",
+      "scope": "bundle",
+      "role": "log",
+      "size_bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "hash_status": "verified"
+    },
+    {
+      "path": "sequence_cache/iscx_tor/tshark_stderr/YouTube_003_VIDEO_Youtube_HTML5_Gateway.log",
+      "scope": "bundle",
+      "role": "log",
+      "size_bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "hash_status": "verified"
+    },
+    {
+      "path": "sequence_cache/iscx_tor/tshark_stderr/YouTube_004_torYoutube1.log",
+      "scope": "bundle",
+      "role": "log",
+      "size_bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "hash_status": "verified"
+    },
+    {
+      "path": "sequence_cache/iscx_tor/tshark_stderr/YouTube_005_torYoutube2.log",
+      "scope": "bundle",
+      "role": "log",
+      "size_bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "hash_status": "verified"
+    },
+    {
+      "path": "sequence_cache/iscx_tor/tshark_stderr/YouTube_006_torYoutube3.log",
+      "scope": "bundle",
+      "role": "log",
+      "size_bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "hash_status": "verified"
+    },
+    {
+      "path": "sequence_cache/iscx_vpn/cache_audit.json",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 878,
+      "sha256": "e185489caa910f73367a8cddb6444c9be49cfebf768ae94798d8b9d42b9e885f",
+      "hash_status": "verified"
+    },
+    {
+      "path": "sequence_cache/iscx_vpn/flow_uids.npy",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 4646848,
+      "sha256": "ffa4859d2c7ecd02d689223d525cb5d0161c2e207e5f9f715296faae4773d29b",
+      "hash_status": "verified"
+    },
+    {
+      "path": "sequence_cache/iscx_vpn/packet_counts.npy",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 58212,
+      "sha256": "11a053f83811927dfca446285299383df776b8aae43e34deecd05c752abb6f81",
+      "hash_status": "verified"
+    },
+    {
+      "path": "sequence_cache/iscx_vpn/packet_directions.npy",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 464800,
+      "sha256": "8dec5325d0a25321173c6630d22e5589e40c089c123e539ab4e49545ef7ab43a",
+      "hash_status": "verified"
+    },
+    {
+      "path": "sequence_cache/iscx_vpn/packet_iat_seconds.npy",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 1858816,
+      "sha256": "c01aeef250591f8b11c56fc66aa4b7164f5d421039f012fb16e788e4a55ae5f2",
+      "hash_status": "verified"
+    },
+    {
+      "path": "sequence_cache/iscx_vpn/packet_lengths.npy",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 1858816,
+      "sha256": "d7d67e06e8ee3fc449213092ab6c1b2ea9065f4f50dfc3a55b7fc6ad8e4f776d",
+      "hash_status": "verified"
+    },
+    {
+      "path": "sequence_cache/iscx_vpn/packet_mask.npy",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 464800,
+      "sha256": "27452ee219baf5c04f1cb6c58bfd549d0dc6a7e37935e4ffed0d35a259c39215",
+      "hash_status": "verified"
+    },
+    {
+      "path": "sequence_cache/iscx_vpn/source_audit.csv",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 28370,
+      "sha256": "c491e5b4779a14c6f2f8365ba570bb08c9b56ce0b8410d219fdcfa808509f606",
+      "hash_status": "verified"
+    },
+    {
+      "path": "sequence_cache/iscx_vpn/tshark_stderr/AIM_000_AIMchat1.log",
+      "scope": "bundle",
+      "role": "log",
+      "size_bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "hash_status": "verified"
+    },
+    {
+      "path": "sequence_cache/iscx_vpn/tshark_stderr/AIM_001_AIMchat2.log",
+      "scope": "bundle",
+      "role": "log",
+      "size_bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "hash_status": "verified"
+    },
+    {
+      "path": "sequence_cache/iscx_vpn/tshark_stderr/AIM_002_aim_chat_3a.log",
+      "scope": "bundle",
+      "role": "log",
+      "size_bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "hash_status": "verified"
+    },
+    {
+      "path": "sequence_cache/iscx_vpn/tshark_stderr/AIM_003_aim_chat_3b.log",
+      "scope": "bundle",
+      "role": "log",
+      "size_bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "hash_status": "verified"
+    },
+    {
+      "path": "sequence_cache/iscx_vpn/tshark_stderr/AIM_004_vpn_aim_chat1a.log",
+      "scope": "bundle",
+      "role": "log",
+      "size_bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "hash_status": "verified"
+    },
+    {
+      "path": "sequence_cache/iscx_vpn/tshark_stderr/AIM_005_vpn_aim_chat1b.log",
+      "scope": "bundle",
+      "role": "log",
+      "size_bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "hash_status": "verified"
+    },
+    {
+      "path": "sequence_cache/iscx_vpn/tshark_stderr/BitTorrent_000_vpn_bittorrent.log",
+      "scope": "bundle",
+      "role": "log",
+      "size_bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "hash_status": "verified"
+    },
+    {
+      "path": "sequence_cache/iscx_vpn/tshark_stderr/Email_000_email1a.log",
+      "scope": "bundle",
+      "role": "log",
+      "size_bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "hash_status": "verified"
+    },
+    {
+      "path": "sequence_cache/iscx_vpn/tshark_stderr/Email_001_email1b.log",
+      "scope": "bundle",
+      "role": "log",
+      "size_bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "hash_status": "verified"
+    },
+    {
+      "path": "sequence_cache/iscx_vpn/tshark_stderr/Email_002_email2a.log",
+      "scope": "bundle",
+      "role": "log",
+      "size_bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "hash_status": "verified"
+    },
+    {
+      "path": "sequence_cache/iscx_vpn/tshark_stderr/Email_003_email2b.log",
+      "scope": "bundle",
+      "role": "log",
+      "size_bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "hash_status": "verified"
+    },
+    {
+      "path": "sequence_cache/iscx_vpn/tshark_stderr/Email_004_vpn_email2a.log",
+      "scope": "bundle",
+      "role": "log",
+      "size_bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "hash_status": "verified"
+    },
+    {
+      "path": "sequence_cache/iscx_vpn/tshark_stderr/Email_005_vpn_email2b.log",
+      "scope": "bundle",
+      "role": "log",
+      "size_bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "hash_status": "verified"
+    },
+    {
+      "path": "sequence_cache/iscx_vpn/tshark_stderr/FTPS_000_ftps_down_1a.log",
+      "scope": "bundle",
+      "role": "log",
+      "size_bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "hash_status": "verified"
+    },
+    {
+      "path": "sequence_cache/iscx_vpn/tshark_stderr/FTPS_001_ftps_down_1b.log",
+      "scope": "bundle",
+      "role": "log",
+      "size_bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "hash_status": "verified"
+    },
+    {
+      "path": "sequence_cache/iscx_vpn/tshark_stderr/FTPS_002_ftps_up_2a.log",
+      "scope": "bundle",
+      "role": "log",
+      "size_bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "hash_status": "verified"
+    },
+    {
+      "path": "sequence_cache/iscx_vpn/tshark_stderr/FTPS_003_ftps_up_2b.log",
+      "scope": "bundle",
+      "role": "log",
+      "size_bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "hash_status": "verified"
+    },
+    {
+      "path": "sequence_cache/iscx_vpn/tshark_stderr/FTPS_004_vpn_ftps_A.log",
+      "scope": "bundle",
+      "role": "log",
+      "size_bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "hash_status": "verified"
+    },
+    {
+      "path": "sequence_cache/iscx_vpn/tshark_stderr/FTPS_005_vpn_ftps_B.log",
+      "scope": "bundle",
+      "role": "log",
+      "size_bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "hash_status": "verified"
+    },
+    {
+      "path": "sequence_cache/iscx_vpn/tshark_stderr/Facebook_000_facebook_audio1a.log",
+      "scope": "bundle",
+      "role": "log",
+      "size_bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "hash_status": "verified"
+    },
+    {
+      "path": "sequence_cache/iscx_vpn/tshark_stderr/Facebook_001_facebook_audio1b.log",
+      "scope": "bundle",
+      "role": "log",
+      "size_bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "hash_status": "verified"
+    },
+    {
+      "path": "sequence_cache/iscx_vpn/tshark_stderr/Facebook_002_facebook_audio2a.log",
+      "scope": "bundle",
+      "role": "log",
+      "size_bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "hash_status": "verified"
+    },
+    {
+      "path": "sequence_cache/iscx_vpn/tshark_stderr/Facebook_003_facebook_audio2b.log",
+      "scope": "bundle",
+      "role": "log",
+      "size_bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "hash_status": "verified"
+    },
+    {
+      "path": "sequence_cache/iscx_vpn/tshark_stderr/Facebook_004_facebook_audio3.log",
+      "scope": "bundle",
+      "role": "log",
+      "size_bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "hash_status": "verified"
+    },
+    {
+      "path": "sequence_cache/iscx_vpn/tshark_stderr/Facebook_005_facebook_audio4.log",
+      "scope": "bundle",
+      "role": "log",
+      "size_bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "hash_status": "verified"
+    },
+    {
+      "path": "sequence_cache/iscx_vpn/tshark_stderr/Facebook_006_facebook_chat_4a.log",
+      "scope": "bundle",
+      "role": "log",
+      "size_bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "hash_status": "verified"
+    },
+    {
+      "path": "sequence_cache/iscx_vpn/tshark_stderr/Facebook_007_facebook_chat_4b.log",
+      "scope": "bundle",
+      "role": "log",
+      "size_bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "hash_status": "verified"
+    },
+    {
+      "path": "sequence_cache/iscx_vpn/tshark_stderr/Facebook_008_facebook_video1a.log",
+      "scope": "bundle",
+      "role": "log",
+      "size_bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "hash_status": "verified"
+    },
+    {
+      "path": "sequence_cache/iscx_vpn/tshark_stderr/Facebook_009_facebook_video1b.log",
+      "scope": "bundle",
+      "role": "log",
+      "size_bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "hash_status": "verified"
+    },
+    {
+      "path": "sequence_cache/iscx_vpn/tshark_stderr/Facebook_010_facebook_video2a.log",
+      "scope": "bundle",
+      "role": "log",
+      "size_bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "hash_status": "verified"
+    },
+    {
+      "path": "sequence_cache/iscx_vpn/tshark_stderr/Facebook_011_facebook_video2b.log",
+      "scope": "bundle",
+      "role": "log",
+      "size_bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "hash_status": "verified"
+    },
+    {
+      "path": "sequence_cache/iscx_vpn/tshark_stderr/Facebook_012_facebookchat1.log",
+      "scope": "bundle",
+      "role": "log",
+      "size_bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "hash_status": "verified"
+    },
+    {
+      "path": "sequence_cache/iscx_vpn/tshark_stderr/Facebook_013_facebookchat2.log",
+      "scope": "bundle",
+      "role": "log",
+      "size_bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "hash_status": "verified"
+    },
+    {
+      "path": "sequence_cache/iscx_vpn/tshark_stderr/Facebook_014_facebookchat3.log",
+      "scope": "bundle",
+      "role": "log",
+      "size_bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "hash_status": "verified"
+    },
+    {
+      "path": "sequence_cache/iscx_vpn/tshark_stderr/Facebook_015_vpn_facebook_audio2.log",
+      "scope": "bundle",
+      "role": "log",
+      "size_bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "hash_status": "verified"
+    },
+    {
+      "path": "sequence_cache/iscx_vpn/tshark_stderr/Facebook_016_vpn_facebook_chat1a.log",
+      "scope": "bundle",
+      "role": "log",
+      "size_bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "hash_status": "verified"
+    },
+    {
+      "path": "sequence_cache/iscx_vpn/tshark_stderr/Facebook_017_vpn_facebook_chat1b.log",
+      "scope": "bundle",
+      "role": "log",
+      "size_bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "hash_status": "verified"
+    },
+    {
+      "path": "sequence_cache/iscx_vpn/tshark_stderr/Gmail_000_gmailchat1.log",
+      "scope": "bundle",
+      "role": "log",
+      "size_bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "hash_status": "verified"
+    },
+    {
+      "path": "sequence_cache/iscx_vpn/tshark_stderr/Gmail_001_gmailchat2.log",
+      "scope": "bundle",
+      "role": "log",
+      "size_bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "hash_status": "verified"
+    },
+    {
+      "path": "sequence_cache/iscx_vpn/tshark_stderr/Gmail_002_gmailchat3.log",
+      "scope": "bundle",
+      "role": "log",
+      "size_bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "hash_status": "verified"
+    },
+    {
+      "path": "sequence_cache/iscx_vpn/tshark_stderr/ICQ_000_ICQchat1.log",
+      "scope": "bundle",
+      "role": "log",
+      "size_bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "hash_status": "verified"
+    },
+    {
+      "path": "sequence_cache/iscx_vpn/tshark_stderr/ICQ_001_ICQchat2.log",
+      "scope": "bundle",
+      "role": "log",
+      "size_bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "hash_status": "verified"
+    },
+    {
+      "path": "sequence_cache/iscx_vpn/tshark_stderr/ICQ_002_icq_chat_3a.log",
+      "scope": "bundle",
+      "role": "log",
+      "size_bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "hash_status": "verified"
+    },
+    {
+      "path": "sequence_cache/iscx_vpn/tshark_stderr/ICQ_003_icq_chat_3b.log",
+      "scope": "bundle",
+      "role": "log",
+      "size_bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "hash_status": "verified"
+    },
+    {
+      "path": "sequence_cache/iscx_vpn/tshark_stderr/ICQ_004_vpn_icq_chat1a.log",
+      "scope": "bundle",
+      "role": "log",
+      "size_bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "hash_status": "verified"
+    },
+    {
+      "path": "sequence_cache/iscx_vpn/tshark_stderr/ICQ_005_vpn_icq_chat1b.log",
+      "scope": "bundle",
+      "role": "log",
+      "size_bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "hash_status": "verified"
+    },
+    {
+      "path": "sequence_cache/iscx_vpn/tshark_stderr/Netflix_000_netflix1.log",
+      "scope": "bundle",
+      "role": "log",
+      "size_bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "hash_status": "verified"
+    },
+    {
+      "path": "sequence_cache/iscx_vpn/tshark_stderr/Netflix_001_netflix2.log",
+      "scope": "bundle",
+      "role": "log",
+      "size_bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "hash_status": "verified"
+    },
+    {
+      "path": "sequence_cache/iscx_vpn/tshark_stderr/Netflix_002_netflix3.log",
+      "scope": "bundle",
+      "role": "log",
+      "size_bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "hash_status": "verified"
+    },
+    {
+      "path": "sequence_cache/iscx_vpn/tshark_stderr/Netflix_003_netflix4.log",
+      "scope": "bundle",
+      "role": "log",
+      "size_bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "hash_status": "verified"
+    },
+    {
+      "path": "sequence_cache/iscx_vpn/tshark_stderr/Netflix_004_vpn_netflix_A.log",
+      "scope": "bundle",
+      "role": "log",
+      "size_bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "hash_status": "verified"
+    },
+    {
+      "path": "sequence_cache/iscx_vpn/tshark_stderr/SCP_000_scp1.log",
+      "scope": "bundle",
+      "role": "log",
+      "size_bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "hash_status": "verified"
+    },
+    {
+      "path": "sequence_cache/iscx_vpn/tshark_stderr/SCP_001_scpDown1.log",
+      "scope": "bundle",
+      "role": "log",
+      "size_bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "hash_status": "verified"
+    },
+    {
+      "path": "sequence_cache/iscx_vpn/tshark_stderr/SCP_002_scpDown2.log",
+      "scope": "bundle",
+      "role": "log",
+      "size_bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "hash_status": "verified"
+    },
+    {
+      "path": "sequence_cache/iscx_vpn/tshark_stderr/SCP_003_scpDown3.log",
+      "scope": "bundle",
+      "role": "log",
+      "size_bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "hash_status": "verified"
+    },
+    {
+      "path": "sequence_cache/iscx_vpn/tshark_stderr/SCP_004_scpDown4.log",
+      "scope": "bundle",
+      "role": "log",
+      "size_bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "hash_status": "verified"
+    },
+    {
+      "path": "sequence_cache/iscx_vpn/tshark_stderr/SCP_005_scpDown5.log",
+      "scope": "bundle",
+      "role": "log",
+      "size_bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "hash_status": "verified"
+    },
+    {
+      "path": "sequence_cache/iscx_vpn/tshark_stderr/SCP_006_scpDown6.log",
+      "scope": "bundle",
+      "role": "log",
+      "size_bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "hash_status": "verified"
+    },
+    {
+      "path": "sequence_cache/iscx_vpn/tshark_stderr/SCP_007_scpUp1.log",
+      "scope": "bundle",
+      "role": "log",
+      "size_bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "hash_status": "verified"
+    },
+    {
+      "path": "sequence_cache/iscx_vpn/tshark_stderr/SCP_009_scpUp3.log",
+      "scope": "bundle",
+      "role": "log",
+      "size_bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "hash_status": "verified"
+    },
+    {
+      "path": "sequence_cache/iscx_vpn/tshark_stderr/SCP_010_scpUp5.log",
+      "scope": "bundle",
+      "role": "log",
+      "size_bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "hash_status": "verified"
+    },
+    {
+      "path": "sequence_cache/iscx_vpn/tshark_stderr/SCP_011_scpUp6.log",
+      "scope": "bundle",
+      "role": "log",
+      "size_bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "hash_status": "verified"
+    },
+    {
+      "path": "sequence_cache/iscx_vpn/tshark_stderr/SFTP_000_sftp1.log",
+      "scope": "bundle",
+      "role": "log",
+      "size_bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "hash_status": "verified"
+    },
+    {
+      "path": "sequence_cache/iscx_vpn/tshark_stderr/SFTP_001_sftpDown1.log",
+      "scope": "bundle",
+      "role": "log",
+      "size_bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "hash_status": "verified"
+    },
+    {
+      "path": "sequence_cache/iscx_vpn/tshark_stderr/SFTP_002_sftpDown2.log",
+      "scope": "bundle",
+      "role": "log",
+      "size_bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "hash_status": "verified"
+    },
+    {
+      "path": "sequence_cache/iscx_vpn/tshark_stderr/SFTP_003_sftpUp1.log",
+      "scope": "bundle",
+      "role": "log",
+      "size_bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "hash_status": "verified"
+    },
+    {
+      "path": "sequence_cache/iscx_vpn/tshark_stderr/SFTP_004_sftp_down_3a.log",
+      "scope": "bundle",
+      "role": "log",
+      "size_bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "hash_status": "verified"
+    },
+    {
+      "path": "sequence_cache/iscx_vpn/tshark_stderr/SFTP_005_sftp_down_3b.log",
+      "scope": "bundle",
+      "role": "log",
+      "size_bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "hash_status": "verified"
+    },
+    {
+      "path": "sequence_cache/iscx_vpn/tshark_stderr/SFTP_006_sftp_up_2a.log",
+      "scope": "bundle",
+      "role": "log",
+      "size_bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "hash_status": "verified"
+    },
+    {
+      "path": "sequence_cache/iscx_vpn/tshark_stderr/SFTP_007_sftp_up_2b.log",
+      "scope": "bundle",
+      "role": "log",
+      "size_bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "hash_status": "verified"
+    },
+    {
+      "path": "sequence_cache/iscx_vpn/tshark_stderr/SFTP_008_vpn_sftp_A.log",
+      "scope": "bundle",
+      "role": "log",
+      "size_bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "hash_status": "verified"
+    },
+    {
+      "path": "sequence_cache/iscx_vpn/tshark_stderr/SFTP_009_vpn_sftp_B.log",
+      "scope": "bundle",
+      "role": "log",
+      "size_bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "hash_status": "verified"
+    },
+    {
+      "path": "sequence_cache/iscx_vpn/tshark_stderr/Spotify_000_spotify1.log",
+      "scope": "bundle",
+      "role": "log",
+      "size_bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "hash_status": "verified"
+    },
+    {
+      "path": "sequence_cache/iscx_vpn/tshark_stderr/Spotify_001_spotify2.log",
+      "scope": "bundle",
+      "role": "log",
+      "size_bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "hash_status": "verified"
+    },
+    {
+      "path": "sequence_cache/iscx_vpn/tshark_stderr/Spotify_002_spotify3.log",
+      "scope": "bundle",
+      "role": "log",
+      "size_bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "hash_status": "verified"
+    },
+    {
+      "path": "sequence_cache/iscx_vpn/tshark_stderr/Spotify_003_spotify4.log",
+      "scope": "bundle",
+      "role": "log",
+      "size_bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "hash_status": "verified"
+    },
+    {
+      "path": "sequence_cache/iscx_vpn/tshark_stderr/Spotify_004_vpn_spotify_A.log",
+      "scope": "bundle",
+      "role": "log",
+      "size_bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "hash_status": "verified"
+    },
+    {
+      "path": "sequence_cache/iscx_vpn/tshark_stderr/Vimeo_000_vimeo1.log",
+      "scope": "bundle",
+      "role": "log",
+      "size_bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "hash_status": "verified"
+    },
+    {
+      "path": "sequence_cache/iscx_vpn/tshark_stderr/Vimeo_001_vimeo2.log",
+      "scope": "bundle",
+      "role": "log",
+      "size_bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "hash_status": "verified"
+    },
+    {
+      "path": "sequence_cache/iscx_vpn/tshark_stderr/Vimeo_002_vimeo3.log",
+      "scope": "bundle",
+      "role": "log",
+      "size_bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "hash_status": "verified"
+    },
+    {
+      "path": "sequence_cache/iscx_vpn/tshark_stderr/Vimeo_003_vimeo4.log",
+      "scope": "bundle",
+      "role": "log",
+      "size_bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "hash_status": "verified"
+    },
+    {
+      "path": "sequence_cache/iscx_vpn/tshark_stderr/Vimeo_004_vpn_vimeo_A.log",
+      "scope": "bundle",
+      "role": "log",
+      "size_bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "hash_status": "verified"
+    },
+    {
+      "path": "sequence_cache/iscx_vpn/tshark_stderr/Vimeo_005_vpn_vimeo_B.log",
+      "scope": "bundle",
+      "role": "log",
+      "size_bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "hash_status": "verified"
+    },
+    {
+      "path": "sequence_cache/iscx_vpn/tshark_stderr/VoIPBuster_000_voipbuster1b.log",
+      "scope": "bundle",
+      "role": "log",
+      "size_bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "hash_status": "verified"
+    },
+    {
+      "path": "sequence_cache/iscx_vpn/tshark_stderr/VoIPBuster_001_voipbuster2b.log",
+      "scope": "bundle",
+      "role": "log",
+      "size_bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "hash_status": "verified"
+    },
+    {
+      "path": "sequence_cache/iscx_vpn/tshark_stderr/VoIPBuster_002_voipbuster3b.log",
+      "scope": "bundle",
+      "role": "log",
+      "size_bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "hash_status": "verified"
+    },
+    {
+      "path": "sequence_cache/iscx_vpn/tshark_stderr/VoIPBuster_003_voipbuster_4a.log",
+      "scope": "bundle",
+      "role": "log",
+      "size_bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "hash_status": "verified"
+    },
+    {
+      "path": "sequence_cache/iscx_vpn/tshark_stderr/VoIPBuster_004_voipbuster_4b.log",
+      "scope": "bundle",
+      "role": "log",
+      "size_bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "hash_status": "verified"
+    },
+    {
+      "path": "sequence_cache/iscx_vpn/tshark_stderr/VoIPBuster_005_vpn_voipbuster1a.log",
+      "scope": "bundle",
+      "role": "log",
+      "size_bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "hash_status": "verified"
+    },
+    {
+      "path": "sequence_cache/iscx_vpn/tshark_stderr/VoIPBuster_006_vpn_voipbuster1b.log",
+      "scope": "bundle",
+      "role": "log",
+      "size_bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "hash_status": "verified"
+    },
+    {
+      "path": "sequence_cache/ustc/cache_audit.json",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 876,
+      "sha256": "b1c74c527e9b4531ccfbcf1fe0d523ddbd2211e28aa7e9c1ed48d9859c53319d",
+      "hash_status": "verified"
+    },
+    {
+      "path": "sequence_cache/ustc/flow_uids.npy",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 124794368,
+      "sha256": "adaf21c167d3fc06cc6b12b778df287cb530b1db15dee1137fb57bade7b5ac9f",
+      "hash_status": "verified"
+    },
+    {
+      "path": "sequence_cache/ustc/packet_counts.npy",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 1560056,
+      "sha256": "b38457f31d388f35f9f166359cad52d48187a3c7cfa18c665b589bb1a80acbdb",
+      "hash_status": "verified"
+    },
+    {
+      "path": "sequence_cache/ustc/packet_directions.npy",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 12479552,
+      "sha256": "c1352f3c49f7ede892d569027faea91f172a4ffefe04fcf9c938d3ca9f48ad51",
+      "hash_status": "verified"
+    },
+    {
+      "path": "sequence_cache/ustc/packet_iat_seconds.npy",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 49917824,
+      "sha256": "d26a075ce0230fd1b07941067a2fad18737727f1f21f278a22c71f7c36315c28",
+      "hash_status": "verified"
+    },
+    {
+      "path": "sequence_cache/ustc/packet_lengths.npy",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 49917824,
+      "sha256": "93105ec43779561d3d36a7fd9bb85afead4d3700a9dbf97ea0b1cd13b3e4089f",
+      "hash_status": "verified"
+    },
+    {
+      "path": "sequence_cache/ustc/packet_mask.npy",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 12479552,
+      "sha256": "c722821b03d3d5bc1fbfbdac70413f5e66ac188f1fd1fc9c9141de4d743c09bd",
+      "hash_status": "verified"
+    },
+    {
+      "path": "sequence_cache/ustc/source_audit.csv",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 4790,
+      "sha256": "d29c34b9befc3c1e0e8ba2ae45b8f78ac187601b481f9935a0898d912bcb0d85",
+      "hash_status": "verified"
+    },
+    {
+      "path": "sequence_cache/vnat/cache_audit.json",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 874,
+      "sha256": "37ae85c6136cd4aa46690eae0ce98e5fa97dbda0af62b6066d44a64cc5db5a45",
+      "hash_status": "verified"
+    },
+    {
+      "path": "sequence_cache/vnat/flow_uids.npy",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 6763328,
+      "sha256": "ba8df4fdb88805e673395af2abdaad1c9b11e8319d25b371e0d4811e21540149",
+      "hash_status": "verified"
+    },
+    {
+      "path": "sequence_cache/vnat/packet_counts.npy",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 84668,
+      "sha256": "87534e1999a8e0a2523fd81d4c7d0308518de7c7342271f5dca999e386dbc9ae",
+      "hash_status": "verified"
+    },
+    {
+      "path": "sequence_cache/vnat/packet_directions.npy",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 676448,
+      "sha256": "ac8dd7f483533a8a75fea0fa4b376fbff6982d211f31c147dab83c28697af7ee",
+      "hash_status": "verified"
+    },
+    {
+      "path": "sequence_cache/vnat/packet_iat_seconds.npy",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 2705408,
+      "sha256": "c0b1f415335e13521ed7fb494b7b70193c06e92d206a9265d672d7f82872fced",
+      "hash_status": "verified"
+    },
+    {
+      "path": "sequence_cache/vnat/packet_lengths.npy",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 2705408,
+      "sha256": "46dbeb68f08dd0c4a5df6d08178b0960482ee5fd72989447af1d7adb627f177a",
+      "hash_status": "verified"
+    },
+    {
+      "path": "sequence_cache/vnat/packet_mask.npy",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 676448,
+      "sha256": "ef9d17dbb82a650b02a46d64f35acb837e9fa3b57f8d31f9769e70bb06736f25",
+      "hash_status": "verified"
+    },
+    {
+      "path": "sequence_cache/vnat/source_audit.csv",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 52275,
+      "sha256": "24b694226fef65d9aa547afdaa7065b7890929677b8a0b4d8008d69b2d79d48c",
+      "hash_status": "verified"
+    },
+    {
+      "path": "sequence_cache/vnat/tshark_stderr/nonvpn_netflix_capture1.log",
+      "scope": "bundle",
+      "role": "log",
+      "size_bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "hash_status": "verified"
+    },
+    {
+      "path": "sequence_cache/vnat/tshark_stderr/nonvpn_netflix_capture2.log",
+      "scope": "bundle",
+      "role": "log",
+      "size_bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "hash_status": "verified"
+    },
+    {
+      "path": "sequence_cache/vnat/tshark_stderr/nonvpn_rdp_capture1.log",
+      "scope": "bundle",
+      "role": "log",
+      "size_bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "hash_status": "verified"
+    },
+    {
+      "path": "sequence_cache/vnat/tshark_stderr/nonvpn_rdp_capture2.log",
+      "scope": "bundle",
+      "role": "log",
+      "size_bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "hash_status": "verified"
+    },
+    {
+      "path": "sequence_cache/vnat/tshark_stderr/nonvpn_rdp_capture3.log",
+      "scope": "bundle",
+      "role": "log",
+      "size_bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "hash_status": "verified"
+    },
+    {
+      "path": "sequence_cache/vnat/tshark_stderr/nonvpn_rdp_capture4.log",
+      "scope": "bundle",
+      "role": "log",
+      "size_bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "hash_status": "verified"
+    },
+    {
+      "path": "sequence_cache/vnat/tshark_stderr/nonvpn_rdp_capture_5.log",
+      "scope": "bundle",
+      "role": "log",
+      "size_bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "hash_status": "verified"
+    },
+    {
+      "path": "sequence_cache/vnat/tshark_stderr/nonvpn_rsync_capture1.log",
+      "scope": "bundle",
+      "role": "log",
+      "size_bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "hash_status": "verified"
+    },
+    {
+      "path": "sequence_cache/vnat/tshark_stderr/nonvpn_rsync_newcapture1.log",
+      "scope": "bundle",
+      "role": "log",
+      "size_bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "hash_status": "verified"
+    },
+    {
+      "path": "sequence_cache/vnat/tshark_stderr/nonvpn_scp_capture1.log",
+      "scope": "bundle",
+      "role": "log",
+      "size_bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "hash_status": "verified"
+    },
+    {
+      "path": "sequence_cache/vnat/tshark_stderr/nonvpn_scp_newcapture1.log",
+      "scope": "bundle",
+      "role": "log",
+      "size_bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "hash_status": "verified"
+    },
+    {
+      "path": "sequence_cache/vnat/tshark_stderr/nonvpn_skype-chat_capture1.log",
+      "scope": "bundle",
+      "role": "log",
+      "size_bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "hash_status": "verified"
+    },
+    {
+      "path": "sequence_cache/vnat/tshark_stderr/nonvpn_skype-chat_capture10.log",
+      "scope": "bundle",
+      "role": "log",
+      "size_bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "hash_status": "verified"
+    },
+    {
+      "path": "sequence_cache/vnat/tshark_stderr/nonvpn_skype-chat_capture11.log",
+      "scope": "bundle",
+      "role": "log",
+      "size_bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "hash_status": "verified"
+    },
+    {
+      "path": "sequence_cache/vnat/tshark_stderr/nonvpn_skype-chat_capture12.log",
+      "scope": "bundle",
+      "role": "log",
+      "size_bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "hash_status": "verified"
+    },
+    {
+      "path": "sequence_cache/vnat/tshark_stderr/nonvpn_skype-chat_capture13.log",
+      "scope": "bundle",
+      "role": "log",
+      "size_bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "hash_status": "verified"
+    },
+    {
+      "path": "sequence_cache/vnat/tshark_stderr/nonvpn_skype-chat_capture14.log",
+      "scope": "bundle",
+      "role": "log",
+      "size_bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "hash_status": "verified"
+    },
+    {
+      "path": "sequence_cache/vnat/tshark_stderr/nonvpn_skype-chat_capture15.log",
+      "scope": "bundle",
+      "role": "log",
+      "size_bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "hash_status": "verified"
+    },
+    {
+      "path": "sequence_cache/vnat/tshark_stderr/nonvpn_skype-chat_capture16.log",
+      "scope": "bundle",
+      "role": "log",
+      "size_bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "hash_status": "verified"
+    },
+    {
+      "path": "sequence_cache/vnat/tshark_stderr/nonvpn_skype-chat_capture17.log",
+      "scope": "bundle",
+      "role": "log",
+      "size_bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "hash_status": "verified"
+    },
+    {
+      "path": "sequence_cache/vnat/tshark_stderr/nonvpn_skype-chat_capture18.log",
+      "scope": "bundle",
+      "role": "log",
+      "size_bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "hash_status": "verified"
+    },
+    {
+      "path": "sequence_cache/vnat/tshark_stderr/nonvpn_skype-chat_capture19.log",
+      "scope": "bundle",
+      "role": "log",
+      "size_bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "hash_status": "verified"
+    },
+    {
+      "path": "sequence_cache/vnat/tshark_stderr/nonvpn_skype-chat_capture2.log",
+      "scope": "bundle",
+      "role": "log",
+      "size_bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "hash_status": "verified"
+    },
+    {
+      "path": "sequence_cache/vnat/tshark_stderr/nonvpn_skype-chat_capture20.log",
+      "scope": "bundle",
+      "role": "log",
+      "size_bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "hash_status": "verified"
+    },
+    {
+      "path": "sequence_cache/vnat/tshark_stderr/nonvpn_skype-chat_capture21.log",
+      "scope": "bundle",
+      "role": "log",
+      "size_bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "hash_status": "verified"
+    },
+    {
+      "path": "sequence_cache/vnat/tshark_stderr/nonvpn_skype-chat_capture22.log",
+      "scope": "bundle",
+      "role": "log",
+      "size_bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "hash_status": "verified"
+    },
+    {
+      "path": "sequence_cache/vnat/tshark_stderr/nonvpn_skype-chat_capture23.log",
+      "scope": "bundle",
+      "role": "log",
+      "size_bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "hash_status": "verified"
+    },
+    {
+      "path": "sequence_cache/vnat/tshark_stderr/nonvpn_skype-chat_capture24.log",
+      "scope": "bundle",
+      "role": "log",
+      "size_bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "hash_status": "verified"
+    },
+    {
+      "path": "sequence_cache/vnat/tshark_stderr/nonvpn_skype-chat_capture25.log",
+      "scope": "bundle",
+      "role": "log",
+      "size_bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "hash_status": "verified"
+    },
+    {
+      "path": "sequence_cache/vnat/tshark_stderr/nonvpn_skype-chat_capture26.log",
+      "scope": "bundle",
+      "role": "log",
+      "size_bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "hash_status": "verified"
+    },
+    {
+      "path": "sequence_cache/vnat/tshark_stderr/nonvpn_skype-chat_capture27.log",
+      "scope": "bundle",
+      "role": "log",
+      "size_bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "hash_status": "verified"
+    },
+    {
+      "path": "sequence_cache/vnat/tshark_stderr/nonvpn_skype-chat_capture28.log",
+      "scope": "bundle",
+      "role": "log",
+      "size_bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "hash_status": "verified"
+    },
+    {
+      "path": "sequence_cache/vnat/tshark_stderr/nonvpn_skype-chat_capture29.log",
+      "scope": "bundle",
+      "role": "log",
+      "size_bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "hash_status": "verified"
+    },
+    {
+      "path": "sequence_cache/vnat/tshark_stderr/nonvpn_skype-chat_capture3.log",
+      "scope": "bundle",
+      "role": "log",
+      "size_bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "hash_status": "verified"
+    },
+    {
+      "path": "sequence_cache/vnat/tshark_stderr/nonvpn_skype-chat_capture30.log",
+      "scope": "bundle",
+      "role": "log",
+      "size_bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "hash_status": "verified"
+    },
+    {
+      "path": "sequence_cache/vnat/tshark_stderr/nonvpn_skype-chat_capture31.log",
+      "scope": "bundle",
+      "role": "log",
+      "size_bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "hash_status": "verified"
+    },
+    {
+      "path": "sequence_cache/vnat/tshark_stderr/nonvpn_skype-chat_capture32.log",
+      "scope": "bundle",
+      "role": "log",
+      "size_bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "hash_status": "verified"
+    },
+    {
+      "path": "sequence_cache/vnat/tshark_stderr/nonvpn_skype-chat_capture33.log",
+      "scope": "bundle",
+      "role": "log",
+      "size_bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "hash_status": "verified"
+    },
+    {
+      "path": "sequence_cache/vnat/tshark_stderr/nonvpn_skype-chat_capture34.log",
+      "scope": "bundle",
+      "role": "log",
+      "size_bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "hash_status": "verified"
+    },
+    {
+      "path": "sequence_cache/vnat/tshark_stderr/nonvpn_skype-chat_capture35.log",
+      "scope": "bundle",
+      "role": "log",
+      "size_bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "hash_status": "verified"
+    },
+    {
+      "path": "sequence_cache/vnat/tshark_stderr/nonvpn_skype-chat_capture36.log",
+      "scope": "bundle",
+      "role": "log",
+      "size_bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "hash_status": "verified"
+    },
+    {
+      "path": "sequence_cache/vnat/tshark_stderr/nonvpn_skype-chat_capture37.log",
+      "scope": "bundle",
+      "role": "log",
+      "size_bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "hash_status": "verified"
+    },
+    {
+      "path": "sequence_cache/vnat/tshark_stderr/nonvpn_skype-chat_capture38.log",
+      "scope": "bundle",
+      "role": "log",
+      "size_bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "hash_status": "verified"
+    },
+    {
+      "path": "sequence_cache/vnat/tshark_stderr/nonvpn_skype-chat_capture39.log",
+      "scope": "bundle",
+      "role": "log",
+      "size_bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "hash_status": "verified"
+    },
+    {
+      "path": "sequence_cache/vnat/tshark_stderr/nonvpn_skype-chat_capture40.log",
+      "scope": "bundle",
+      "role": "log",
+      "size_bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "hash_status": "verified"
+    },
+    {
+      "path": "sequence_cache/vnat/tshark_stderr/nonvpn_skype-chat_capture41.log",
+      "scope": "bundle",
+      "role": "log",
+      "size_bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "hash_status": "verified"
+    },
+    {
+      "path": "sequence_cache/vnat/tshark_stderr/nonvpn_skype-chat_capture42.log",
+      "scope": "bundle",
+      "role": "log",
+      "size_bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "hash_status": "verified"
+    },
+    {
+      "path": "sequence_cache/vnat/tshark_stderr/nonvpn_skype-chat_capture43.log",
+      "scope": "bundle",
+      "role": "log",
+      "size_bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "hash_status": "verified"
+    },
+    {
+      "path": "sequence_cache/vnat/tshark_stderr/nonvpn_skype-chat_capture44.log",
+      "scope": "bundle",
+      "role": "log",
+      "size_bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "hash_status": "verified"
+    },
+    {
+      "path": "sequence_cache/vnat/tshark_stderr/nonvpn_skype-chat_capture45.log",
+      "scope": "bundle",
+      "role": "log",
+      "size_bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "hash_status": "verified"
+    },
+    {
+      "path": "sequence_cache/vnat/tshark_stderr/nonvpn_skype-chat_capture46.log",
+      "scope": "bundle",
+      "role": "log",
+      "size_bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "hash_status": "verified"
+    },
+    {
+      "path": "sequence_cache/vnat/tshark_stderr/nonvpn_skype-chat_capture47.log",
+      "scope": "bundle",
+      "role": "log",
+      "size_bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "hash_status": "verified"
+    },
+    {
+      "path": "sequence_cache/vnat/tshark_stderr/nonvpn_skype-chat_capture48.log",
+      "scope": "bundle",
+      "role": "log",
+      "size_bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "hash_status": "verified"
+    },
+    {
+      "path": "sequence_cache/vnat/tshark_stderr/nonvpn_skype-chat_capture49.log",
+      "scope": "bundle",
+      "role": "log",
+      "size_bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "hash_status": "verified"
+    },
+    {
+      "path": "sequence_cache/vnat/tshark_stderr/nonvpn_skype-chat_capture5.log",
+      "scope": "bundle",
+      "role": "log",
+      "size_bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "hash_status": "verified"
+    },
+    {
+      "path": "sequence_cache/vnat/tshark_stderr/nonvpn_skype-chat_capture50.log",
+      "scope": "bundle",
+      "role": "log",
+      "size_bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "hash_status": "verified"
+    },
+    {
+      "path": "sequence_cache/vnat/tshark_stderr/nonvpn_skype-chat_capture51.log",
+      "scope": "bundle",
+      "role": "log",
+      "size_bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "hash_status": "verified"
+    },
+    {
+      "path": "sequence_cache/vnat/tshark_stderr/nonvpn_skype-chat_capture52.log",
+      "scope": "bundle",
+      "role": "log",
+      "size_bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "hash_status": "verified"
+    },
+    {
+      "path": "sequence_cache/vnat/tshark_stderr/nonvpn_skype-chat_capture53.log",
+      "scope": "bundle",
+      "role": "log",
+      "size_bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "hash_status": "verified"
+    },
+    {
+      "path": "sequence_cache/vnat/tshark_stderr/nonvpn_skype-chat_capture54.log",
+      "scope": "bundle",
+      "role": "log",
+      "size_bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "hash_status": "verified"
+    },
+    {
+      "path": "sequence_cache/vnat/tshark_stderr/nonvpn_skype-chat_capture6.log",
+      "scope": "bundle",
+      "role": "log",
+      "size_bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "hash_status": "verified"
+    },
+    {
+      "path": "sequence_cache/vnat/tshark_stderr/nonvpn_skype-chat_capture7.log",
+      "scope": "bundle",
+      "role": "log",
+      "size_bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "hash_status": "verified"
+    },
+    {
+      "path": "sequence_cache/vnat/tshark_stderr/nonvpn_skype-chat_capture8.log",
+      "scope": "bundle",
+      "role": "log",
+      "size_bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "hash_status": "verified"
+    },
+    {
+      "path": "sequence_cache/vnat/tshark_stderr/nonvpn_skype-chat_capture9.log",
+      "scope": "bundle",
+      "role": "log",
+      "size_bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "hash_status": "verified"
+    },
+    {
+      "path": "sequence_cache/vnat/tshark_stderr/nonvpn_ssh_capture1.log",
+      "scope": "bundle",
+      "role": "log",
+      "size_bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "hash_status": "verified"
+    },
+    {
+      "path": "sequence_cache/vnat/tshark_stderr/nonvpn_ssh_capture2.log",
+      "scope": "bundle",
+      "role": "log",
+      "size_bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "hash_status": "verified"
+    },
+    {
+      "path": "sequence_cache/vnat/tshark_stderr/nonvpn_ssh_capture3.log",
+      "scope": "bundle",
+      "role": "log",
+      "size_bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "hash_status": "verified"
+    },
+    {
+      "path": "sequence_cache/vnat/tshark_stderr/nonvpn_ssh_capture4.log",
+      "scope": "bundle",
+      "role": "log",
+      "size_bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "hash_status": "verified"
+    },
+    {
+      "path": "sequence_cache/vnat/tshark_stderr/nonvpn_ssh_capture5.log",
+      "scope": "bundle",
+      "role": "log",
+      "size_bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "hash_status": "verified"
+    },
+    {
+      "path": "sequence_cache/vnat/tshark_stderr/nonvpn_vimeo_capture1.log",
+      "scope": "bundle",
+      "role": "log",
+      "size_bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "hash_status": "verified"
+    },
+    {
+      "path": "sequence_cache/vnat/tshark_stderr/nonvpn_voip_capture1.log",
+      "scope": "bundle",
+      "role": "log",
+      "size_bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "hash_status": "verified"
+    },
+    {
+      "path": "sequence_cache/vnat/tshark_stderr/nonvpn_voip_capture2.log",
+      "scope": "bundle",
+      "role": "log",
+      "size_bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "hash_status": "verified"
+    },
+    {
+      "path": "sequence_cache/vnat/tshark_stderr/nonvpn_voip_capture3.log",
+      "scope": "bundle",
+      "role": "log",
+      "size_bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "hash_status": "verified"
+    },
+    {
+      "path": "sequence_cache/vnat/tshark_stderr/nonvpn_youtube_capture1.log",
+      "scope": "bundle",
+      "role": "log",
+      "size_bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "hash_status": "verified"
+    },
+    {
+      "path": "sequence_cache/vnat/tshark_stderr/nonvpn_youtube_capture2.log",
+      "scope": "bundle",
+      "role": "log",
+      "size_bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "hash_status": "verified"
+    },
+    {
+      "path": "sequence_cache/vnat/tshark_stderr/nonvpn_youtube_capture3.log",
+      "scope": "bundle",
+      "role": "log",
+      "size_bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "hash_status": "verified"
+    },
+    {
+      "path": "sequence_cache/vnat/tshark_stderr/nonvpn_youtube_capture4.log",
+      "scope": "bundle",
+      "role": "log",
+      "size_bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "hash_status": "verified"
+    },
+    {
+      "path": "sequence_cache/vnat/tshark_stderr/vpn_netflix_capture2.log",
+      "scope": "bundle",
+      "role": "log",
+      "size_bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "hash_status": "verified"
+    },
+    {
+      "path": "sequence_cache/vnat/tshark_stderr/vpn_rdp_capture1.log",
+      "scope": "bundle",
+      "role": "log",
+      "size_bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "hash_status": "verified"
+    },
+    {
+      "path": "sequence_cache/vnat/tshark_stderr/vpn_rdp_capture2.log",
+      "scope": "bundle",
+      "role": "log",
+      "size_bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "hash_status": "verified"
+    },
+    {
+      "path": "sequence_cache/vnat/tshark_stderr/vpn_rdp_capture_3.log",
+      "scope": "bundle",
+      "role": "log",
+      "size_bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "hash_status": "verified"
+    },
+    {
+      "path": "sequence_cache/vnat/tshark_stderr/vpn_rsync_capture1.log",
+      "scope": "bundle",
+      "role": "log",
+      "size_bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "hash_status": "verified"
+    },
+    {
+      "path": "sequence_cache/vnat/tshark_stderr/vpn_rsync_capture2.log",
+      "scope": "bundle",
+      "role": "log",
+      "size_bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "hash_status": "verified"
+    },
+    {
+      "path": "sequence_cache/vnat/tshark_stderr/vpn_rsync_capture3.log",
+      "scope": "bundle",
+      "role": "log",
+      "size_bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "hash_status": "verified"
+    },
+    {
+      "path": "sequence_cache/vnat/tshark_stderr/vpn_scp_capture1.log",
+      "scope": "bundle",
+      "role": "log",
+      "size_bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "hash_status": "verified"
+    },
+    {
+      "path": "sequence_cache/vnat/tshark_stderr/vpn_scp_capture2.log",
+      "scope": "bundle",
+      "role": "log",
+      "size_bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "hash_status": "verified"
+    },
+    {
+      "path": "sequence_cache/vnat/tshark_stderr/vpn_skype-chat_capture1.log",
+      "scope": "bundle",
+      "role": "log",
+      "size_bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "hash_status": "verified"
+    },
+    {
+      "path": "sequence_cache/vnat/tshark_stderr/vpn_skype-chat_capture10.log",
+      "scope": "bundle",
+      "role": "log",
+      "size_bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "hash_status": "verified"
+    },
+    {
+      "path": "sequence_cache/vnat/tshark_stderr/vpn_skype-chat_capture11.log",
+      "scope": "bundle",
+      "role": "log",
+      "size_bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "hash_status": "verified"
+    },
+    {
+      "path": "sequence_cache/vnat/tshark_stderr/vpn_skype-chat_capture12.log",
+      "scope": "bundle",
+      "role": "log",
+      "size_bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "hash_status": "verified"
+    },
+    {
+      "path": "sequence_cache/vnat/tshark_stderr/vpn_skype-chat_capture13.log",
+      "scope": "bundle",
+      "role": "log",
+      "size_bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "hash_status": "verified"
+    },
+    {
+      "path": "sequence_cache/vnat/tshark_stderr/vpn_skype-chat_capture14.log",
+      "scope": "bundle",
+      "role": "log",
+      "size_bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "hash_status": "verified"
+    },
+    {
+      "path": "sequence_cache/vnat/tshark_stderr/vpn_skype-chat_capture15.log",
+      "scope": "bundle",
+      "role": "log",
+      "size_bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "hash_status": "verified"
+    },
+    {
+      "path": "sequence_cache/vnat/tshark_stderr/vpn_skype-chat_capture16.log",
+      "scope": "bundle",
+      "role": "log",
+      "size_bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "hash_status": "verified"
+    },
+    {
+      "path": "sequence_cache/vnat/tshark_stderr/vpn_skype-chat_capture17.log",
+      "scope": "bundle",
+      "role": "log",
+      "size_bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "hash_status": "verified"
+    },
+    {
+      "path": "sequence_cache/vnat/tshark_stderr/vpn_skype-chat_capture18.log",
+      "scope": "bundle",
+      "role": "log",
+      "size_bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "hash_status": "verified"
+    },
+    {
+      "path": "sequence_cache/vnat/tshark_stderr/vpn_skype-chat_capture19.log",
+      "scope": "bundle",
+      "role": "log",
+      "size_bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "hash_status": "verified"
+    },
+    {
+      "path": "sequence_cache/vnat/tshark_stderr/vpn_skype-chat_capture2.log",
+      "scope": "bundle",
+      "role": "log",
+      "size_bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "hash_status": "verified"
+    },
+    {
+      "path": "sequence_cache/vnat/tshark_stderr/vpn_skype-chat_capture20.log",
+      "scope": "bundle",
+      "role": "log",
+      "size_bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "hash_status": "verified"
+    },
+    {
+      "path": "sequence_cache/vnat/tshark_stderr/vpn_skype-chat_capture21.log",
+      "scope": "bundle",
+      "role": "log",
+      "size_bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "hash_status": "verified"
+    },
+    {
+      "path": "sequence_cache/vnat/tshark_stderr/vpn_skype-chat_capture22.log",
+      "scope": "bundle",
+      "role": "log",
+      "size_bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "hash_status": "verified"
+    },
+    {
+      "path": "sequence_cache/vnat/tshark_stderr/vpn_skype-chat_capture23.log",
+      "scope": "bundle",
+      "role": "log",
+      "size_bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "hash_status": "verified"
+    },
+    {
+      "path": "sequence_cache/vnat/tshark_stderr/vpn_skype-chat_capture24.log",
+      "scope": "bundle",
+      "role": "log",
+      "size_bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "hash_status": "verified"
+    },
+    {
+      "path": "sequence_cache/vnat/tshark_stderr/vpn_skype-chat_capture25.log",
+      "scope": "bundle",
+      "role": "log",
+      "size_bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "hash_status": "verified"
+    },
+    {
+      "path": "sequence_cache/vnat/tshark_stderr/vpn_skype-chat_capture26.log",
+      "scope": "bundle",
+      "role": "log",
+      "size_bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "hash_status": "verified"
+    },
+    {
+      "path": "sequence_cache/vnat/tshark_stderr/vpn_skype-chat_capture27.log",
+      "scope": "bundle",
+      "role": "log",
+      "size_bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "hash_status": "verified"
+    },
+    {
+      "path": "sequence_cache/vnat/tshark_stderr/vpn_skype-chat_capture28.log",
+      "scope": "bundle",
+      "role": "log",
+      "size_bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "hash_status": "verified"
+    },
+    {
+      "path": "sequence_cache/vnat/tshark_stderr/vpn_skype-chat_capture29.log",
+      "scope": "bundle",
+      "role": "log",
+      "size_bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "hash_status": "verified"
+    },
+    {
+      "path": "sequence_cache/vnat/tshark_stderr/vpn_skype-chat_capture3.log",
+      "scope": "bundle",
+      "role": "log",
+      "size_bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "hash_status": "verified"
+    },
+    {
+      "path": "sequence_cache/vnat/tshark_stderr/vpn_skype-chat_capture30.log",
+      "scope": "bundle",
+      "role": "log",
+      "size_bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "hash_status": "verified"
+    },
+    {
+      "path": "sequence_cache/vnat/tshark_stderr/vpn_skype-chat_capture31.log",
+      "scope": "bundle",
+      "role": "log",
+      "size_bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "hash_status": "verified"
+    },
+    {
+      "path": "sequence_cache/vnat/tshark_stderr/vpn_skype-chat_capture32.log",
+      "scope": "bundle",
+      "role": "log",
+      "size_bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "hash_status": "verified"
+    },
+    {
+      "path": "sequence_cache/vnat/tshark_stderr/vpn_skype-chat_capture33.log",
+      "scope": "bundle",
+      "role": "log",
+      "size_bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "hash_status": "verified"
+    },
+    {
+      "path": "sequence_cache/vnat/tshark_stderr/vpn_skype-chat_capture34.log",
+      "scope": "bundle",
+      "role": "log",
+      "size_bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "hash_status": "verified"
+    },
+    {
+      "path": "sequence_cache/vnat/tshark_stderr/vpn_skype-chat_capture35.log",
+      "scope": "bundle",
+      "role": "log",
+      "size_bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "hash_status": "verified"
+    },
+    {
+      "path": "sequence_cache/vnat/tshark_stderr/vpn_skype-chat_capture36.log",
+      "scope": "bundle",
+      "role": "log",
+      "size_bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "hash_status": "verified"
+    },
+    {
+      "path": "sequence_cache/vnat/tshark_stderr/vpn_skype-chat_capture37.log",
+      "scope": "bundle",
+      "role": "log",
+      "size_bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "hash_status": "verified"
+    },
+    {
+      "path": "sequence_cache/vnat/tshark_stderr/vpn_skype-chat_capture38.log",
+      "scope": "bundle",
+      "role": "log",
+      "size_bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "hash_status": "verified"
+    },
+    {
+      "path": "sequence_cache/vnat/tshark_stderr/vpn_skype-chat_capture39.log",
+      "scope": "bundle",
+      "role": "log",
+      "size_bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "hash_status": "verified"
+    },
+    {
+      "path": "sequence_cache/vnat/tshark_stderr/vpn_skype-chat_capture40.log",
+      "scope": "bundle",
+      "role": "log",
+      "size_bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "hash_status": "verified"
+    },
+    {
+      "path": "sequence_cache/vnat/tshark_stderr/vpn_skype-chat_capture41.log",
+      "scope": "bundle",
+      "role": "log",
+      "size_bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "hash_status": "verified"
+    },
+    {
+      "path": "sequence_cache/vnat/tshark_stderr/vpn_skype-chat_capture42.log",
+      "scope": "bundle",
+      "role": "log",
+      "size_bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "hash_status": "verified"
+    },
+    {
+      "path": "sequence_cache/vnat/tshark_stderr/vpn_skype-chat_capture43.log",
+      "scope": "bundle",
+      "role": "log",
+      "size_bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "hash_status": "verified"
+    },
+    {
+      "path": "sequence_cache/vnat/tshark_stderr/vpn_skype-chat_capture44.log",
+      "scope": "bundle",
+      "role": "log",
+      "size_bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "hash_status": "verified"
+    },
+    {
+      "path": "sequence_cache/vnat/tshark_stderr/vpn_skype-chat_capture45.log",
+      "scope": "bundle",
+      "role": "log",
+      "size_bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "hash_status": "verified"
+    },
+    {
+      "path": "sequence_cache/vnat/tshark_stderr/vpn_skype-chat_capture46.log",
+      "scope": "bundle",
+      "role": "log",
+      "size_bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "hash_status": "verified"
+    },
+    {
+      "path": "sequence_cache/vnat/tshark_stderr/vpn_skype-chat_capture47.log",
+      "scope": "bundle",
+      "role": "log",
+      "size_bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "hash_status": "verified"
+    },
+    {
+      "path": "sequence_cache/vnat/tshark_stderr/vpn_skype-chat_capture48.log",
+      "scope": "bundle",
+      "role": "log",
+      "size_bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "hash_status": "verified"
+    },
+    {
+      "path": "sequence_cache/vnat/tshark_stderr/vpn_skype-chat_capture49.log",
+      "scope": "bundle",
+      "role": "log",
+      "size_bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "hash_status": "verified"
+    },
+    {
+      "path": "sequence_cache/vnat/tshark_stderr/vpn_skype-chat_capture5.log",
+      "scope": "bundle",
+      "role": "log",
+      "size_bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "hash_status": "verified"
+    },
+    {
+      "path": "sequence_cache/vnat/tshark_stderr/vpn_skype-chat_capture50.log",
+      "scope": "bundle",
+      "role": "log",
+      "size_bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "hash_status": "verified"
+    },
+    {
+      "path": "sequence_cache/vnat/tshark_stderr/vpn_skype-chat_capture51.log",
+      "scope": "bundle",
+      "role": "log",
+      "size_bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "hash_status": "verified"
+    },
+    {
+      "path": "sequence_cache/vnat/tshark_stderr/vpn_skype-chat_capture52.log",
+      "scope": "bundle",
+      "role": "log",
+      "size_bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "hash_status": "verified"
+    },
+    {
+      "path": "sequence_cache/vnat/tshark_stderr/vpn_skype-chat_capture53.log",
+      "scope": "bundle",
+      "role": "log",
+      "size_bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "hash_status": "verified"
+    },
+    {
+      "path": "sequence_cache/vnat/tshark_stderr/vpn_skype-chat_capture54.log",
+      "scope": "bundle",
+      "role": "log",
+      "size_bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "hash_status": "verified"
+    },
+    {
+      "path": "sequence_cache/vnat/tshark_stderr/vpn_skype-chat_capture55.log",
+      "scope": "bundle",
+      "role": "log",
+      "size_bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "hash_status": "verified"
+    },
+    {
+      "path": "sequence_cache/vnat/tshark_stderr/vpn_skype-chat_capture56.log",
+      "scope": "bundle",
+      "role": "log",
+      "size_bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "hash_status": "verified"
+    },
+    {
+      "path": "sequence_cache/vnat/tshark_stderr/vpn_skype-chat_capture57.log",
+      "scope": "bundle",
+      "role": "log",
+      "size_bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "hash_status": "verified"
+    },
+    {
+      "path": "sequence_cache/vnat/tshark_stderr/vpn_skype-chat_capture7.log",
+      "scope": "bundle",
+      "role": "log",
+      "size_bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "hash_status": "verified"
+    },
+    {
+      "path": "sequence_cache/vnat/tshark_stderr/vpn_skype-chat_capture8.log",
+      "scope": "bundle",
+      "role": "log",
+      "size_bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "hash_status": "verified"
+    },
+    {
+      "path": "sequence_cache/vnat/tshark_stderr/vpn_skype-chat_capture9.log",
+      "scope": "bundle",
+      "role": "log",
+      "size_bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "hash_status": "verified"
+    },
+    {
+      "path": "sequence_cache/vnat/tshark_stderr/vpn_ssh_capture1.log",
+      "scope": "bundle",
+      "role": "log",
+      "size_bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "hash_status": "verified"
+    },
+    {
+      "path": "sequence_cache/vnat/tshark_stderr/vpn_ssh_capture2.log",
+      "scope": "bundle",
+      "role": "log",
+      "size_bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "hash_status": "verified"
+    },
+    {
+      "path": "sequence_cache/vnat/tshark_stderr/vpn_ssh_capture3.log",
+      "scope": "bundle",
+      "role": "log",
+      "size_bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "hash_status": "verified"
+    },
+    {
+      "path": "sequence_cache/vnat/tshark_stderr/vpn_ssh_capture4.log",
+      "scope": "bundle",
+      "role": "log",
+      "size_bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "hash_status": "verified"
+    },
+    {
+      "path": "sequence_cache/vnat/tshark_stderr/vpn_ssh_capture5.log",
+      "scope": "bundle",
+      "role": "log",
+      "size_bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "hash_status": "verified"
+    },
+    {
+      "path": "sequence_cache/vnat/tshark_stderr/vpn_vimeo_capture1.log",
+      "scope": "bundle",
+      "role": "log",
+      "size_bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "hash_status": "verified"
+    },
+    {
+      "path": "sequence_cache/vnat/tshark_stderr/vpn_voip_capture1.log",
+      "scope": "bundle",
+      "role": "log",
+      "size_bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "hash_status": "verified"
+    },
+    {
+      "path": "sequence_cache/vnat/tshark_stderr/vpn_voip_capture2.log",
+      "scope": "bundle",
+      "role": "log",
+      "size_bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "hash_status": "verified"
+    },
+    {
+      "path": "sequence_cache/vnat/tshark_stderr/vpn_voip_capture3.log",
+      "scope": "bundle",
+      "role": "log",
+      "size_bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "hash_status": "verified"
+    },
+    {
+      "path": "sequence_cache/vnat/tshark_stderr/vpn_youtube_capture1.log",
+      "scope": "bundle",
+      "role": "log",
+      "size_bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "hash_status": "verified"
+    },
+    {
+      "path": "sequence_cache/vnat/tshark_stderr/vpn_youtube_capture2.log",
+      "scope": "bundle",
+      "role": "log",
+      "size_bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "hash_status": "verified"
+    },
+    {
+      "path": "sequence_cache/vnat/tshark_stderr/vpn_youtube_capture3.log",
+      "scope": "bundle",
+      "role": "log",
+      "size_bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "hash_status": "verified"
+    },
+    {
+      "path": "stage15f1a_report.md",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 10254,
+      "sha256": "f44f21c804158f92dd68e6ee389be4e1dd9fcfea203bf4f1ecb1a1b95b3374b6",
+      "hash_status": "verified"
+    },
+    {
+      "path": "tests/__pycache__/test_mask_and_window.cpython-310-pytest-8.4.2.pyc",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 3871,
+      "sha256": "2034daeda4f8bdea03ac472615070ac022d95024f98c85977427160c3834b6c7",
+      "hash_status": "verified"
+    },
+    {
+      "path": "tests/test_mask_and_window.py",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 2369,
+      "sha256": "b4d4b2a95762fa5e56b84d3aeddd4cc580942e1e5962fab2ee3aeb8738927409",
+      "hash_status": "verified"
+    },
+    {
+      "path": "window_confusion_analysis.csv",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 127260,
+      "sha256": "4ee3286a7a4ef4ad81a8afa94997b26500e9f4509e1c1a23e26ead71dc30e736",
+      "hash_status": "verified"
+    },
+    {
+      "path": "window_coverage_vs_performance.csv",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 71226,
+      "sha256": "ee3785d8d1769f2b6602301f6f8603fda4ceb56cba139e47ea01be419fad86b3",
+      "hash_status": "verified"
+    },
+    {
+      "path": "window_error_complementarity.csv",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 18758,
+      "sha256": "cd56a77b1c55badc1a47af0e3e6d7eee39832d27cd14b886e8dcd561a637991f",
+      "hash_status": "verified"
+    },
+    {
+      "path": "window_paired_comparison.csv",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 3976,
+      "sha256": "546c175ab195bc3a15cc358f01398a9a07c3647ccfc38ff1315d3efb1bacfeec",
+      "hash_status": "verified"
+    },
+    {
+      "path": "window_per_class_results.csv",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 13451,
+      "sha256": "7bf0aba391c0c71e2b3772d19b9da015dc4236bb306844ffb76072720eadca74",
+      "hash_status": "verified"
+    },
+    {
+      "path": "window_pilot_results.csv",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 11119,
+      "sha256": "834d441e70181eca1e6f8f563dda383b817325bfaaf1eea377de58abda445372",
+      "hash_status": "verified"
+    }
+  ],
+  "claim_scope": "diagnostic",
+  "code": {
+    "changes": [
+      "Added Stage15F-1A cache builder, mask-safe sequence CNN, controlled grid, aggregation, hash audit, tests, and completion verifier.",
+      "Preserved the failed USTC direction re-inference cache attempt; corrected builder retains frozen PKL direction verbatim."
+    ],
+    "dirty": null,
+    "revision": null
+  },
+  "configuration": {
+    "files": [
+      {
+        "path": "/home/birkenwald/data/SEU-WXY/WXY-SEU/TrafficClassifier/Projects/unknown_traffic_project/stage15f1a_packet_window_benchmark/config.json",
+        "sha256": "6e7e252b1aab2c429f0d1470732ba49b59dddc4e80358c5a96a3ca82be2500eb"
+      }
+    ],
+    "parameters": {
+      "features": {
+        "iat": "log1p(max(0, delta_timestamp_seconds) * 1000000)",
+        "length": "sign(direction) * log1p(captured_frame_length)",
+        "mask": "1 for observed packet, 0 for structural padding",
+        "missing_rule": "padding is structural and excluded from normalization",
+        "normalization": "per-window Known-Train median/IQR, clip to [-4,4], then explicit mask"
+      },
+      "forbidden_actions": [
+        "modify frozen protocol",
+        "change feature formula",
+        "change network depth/loss by window",
+        "open-set evaluation",
+        "DES/H1 execution",
+        "multiview training"
+      ],
+      "forbidden_roles": [
+        "known_test",
+        "unknown_test"
+      ],
+      "gate": {
+        "class_conditional_window_benefit": "global gate fails, but >=2 preregistered focus class-protocol units gain >=0.05 F1 with net positive rescue and no paired focus class loses >0.05 F1",
+        "insufficient_evidence": "any formal run, strict Unknown-Free check, cache parity, legacy T8 inference parity, or protected hash check fails",
+        "no_useful_window_benefit": "all 15 formal runs complete but neither global nor class-conditional gate passes",
+        "window_bottleneck_confirmed": "best of T16/T32 has mean delta Macro-F1 >= 0.015 vs T8, >=4/5 positive protocols, and worst protocol delta >= -0.02"
+      },
+      "model": {
+        "architecture": "two Conv1d blocks: 3->64->128, kernel=3, padding=1; mask-aware BatchNorm; ReLU; masked mean pooling; linear classifier",
+        "legacy_boundary": "Stage15R T8 used ordinary BatchNorm1d, so its checkpoint is inference-parity checked but formal T8/T16/T32 all use the frozen mask-safe implementation",
+        "mask_fix": "masked positions are zeroed before convolution and excluded from both BatchNorm moments and pooling"
+      },
+      "pilot_protocols": [
+        {
+          "dataset": "iscx_vpn",
+          "protocol_id": "medium_seed2022",
+          "setting": "medium"
+        },
+        {
+          "dataset": "iscx_tor",
+          "protocol_id": "medium_seed2022",
+          "setting": "medium"
+        },
+        {
+          "dataset": "vnat",
+          "protocol_id": "medium_seed2025",
+          "setting": "Medium"
+        },
+        {
+          "dataset": "vnat",
+          "protocol_id": "medium_seed2026",
+          "setting": "Medium"
+        },
+        {
+          "dataset": "ustc",
+          "protocol_id": "A-2",
+          "setting": "A-2"
+        }
+      ],
+      "stage": "Stage 15F-1A",
+      "status": "FROZEN_BEFORE_TRAINING",
+      "strict_unknown_free": true,
+      "t64_gate": {
+        "budget_if_entered": "same model, seed, optimizer, epochs, batch sizes, checkpoint rule; only window=64 changes",
+        "condition": "T32-T16 mean Macro-F1 >=0.01 with >=3/5 positive protocols, and either dataset-level N32 truncation >=0.10 or a focus class has N32 truncation >=0.25 and F1 gain >=0.05",
+        "status": "PREREGISTERED_NOT_RUN"
+      },
+      "training": {
+        "batch_size": 128,
+        "betas": [
+          0.9,
+          0.999
+        ],
+        "checkpoint_criterion": "maximum Known Validation Accuracy; first epoch wins ties",
+        "early_stopping": false,
+        "epochs": 100,
+        "eval_batch_size": 256,
+        "learning_rate": 0.001,
+        "objective": "CrossEntropyLoss",
+        "optimizer": "Adam",
+        "scheduler": "MultiStepLR",
+        "scheduler_gamma": 0.1,
+        "scheduler_milestones": [
+          50,
+          80
+        ],
+        "seed": 2022,
+        "weight_decay": 0.0
+      },
+      "windows": [
+        8,
+        16,
+        32
+      ]
+    },
+    "seeds": [
+      2022
+    ]
+  },
+  "core_results": [
+    {
+      "name": "final_gate",
+      "value": "CLASS_CONDITIONAL_WINDOW_BENEFIT"
+    },
+    {
+      "name": "best_longer_window",
+      "value": "T16"
+    },
+    {
+      "name": "best_mean_delta_macro_f1_vs_t8",
+      "value": {
+        "deltas": [
+          0.007812818494202067,
+          0.01599487645194453,
+          0.01117224990478527,
+          0.03611682446406406,
+          0.005718091584211216
+        ],
+        "mean_delta_macro_f1": 0.015362972179841427,
+        "positive_protocols": 5,
+        "worst_delta_macro_f1": 0.005718091584211216
+      }
+    },
+    {
+      "name": "formal_runs",
+      "unit": "runs",
+      "value": 15
+    },
+    {
+      "name": "known_test_samples_used",
+      "value": 0
+    },
+    {
+      "name": "unknown_test_samples_used",
+      "value": 0
+    },
+    {
+      "name": "t64_started",
+      "value": false
+    }
+  ],
+  "created_at_utc": "2026-09-19T15:33:44Z",
+  "execution": {
+    "command": "python scripts/run_grid.py --gpu-ids <live-selected-physical-ids>",
+    "environment": "/home/birkenwald/data/SEU-WXY/conda_envs/2025-10-8-WXY-dgl_py310",
+    "exit_code": 0,
+    "physical_gpu_ids": [
+      "0",
+      "4",
+      "6",
+      "7"
+    ],
+    "tmux_session": "stage15f1a_grid_20260919_001"
+  },
+  "experiment_id": "stage15f1a-packet-window-benchmark-20260919-v1",
+  "experiment_type": "ablation",
+  "inputs": [
+    {
+      "path": "/home/birkenwald/data/SEU-WXY/WXY-SEU/TrafficClassifier/Projects/unknown_traffic_project/stage15r_representation_bottleneck_audit",
+      "role": "frozen E2 and Native Known-Validation lineage"
+    },
+    {
+      "path": "/home/birkenwald/data/SEU-WXY/WXY-SEU/TrafficClassifier/Projects/unknown_traffic_project/stage15f_literature_guided_feature_benchmark",
+      "role": "frozen literature registry and packet-window coverage"
+    },
+    {
+      "path": "/home/birkenwald/data/SEU-WXY/WXY-SEU/TrafficClassifier/Projects/unknown_traffic_project/stage15f1a_packet_window_benchmark/sequence_cache",
+      "role": "Known Train/Validation-only first-32 packet cache"
+    }
+  ],
+  "limitations": [
+    "Five preregistered pilot protocols only; this is a Known-Validation diagnostic, not an open-set or final-Test claim.",
+    "Historical Stage15R E2 used ordinary BatchNorm; formal T8/T16/T32 use one mask-safe correction, so historical-to-formal T8 changes are not window effects.",
+    "One fixed training seed is used, matching the preregistered Stage15R pilot design."
+  ],
+  "next_step": "Stop after Stage15F-1A; use the frozen gate to decide whether a later statistical, burst, or structured-byte benchmark should be preregistered.",
+  "objective": "T8/T16/T32 signed-length+IAT window sufficiency benchmark on five frozen Known-only pilots",
+  "schema_version": 1,
+  "status": "success",
+  "updated_at_utc": "2026-09-19T16:59:10Z"
+}

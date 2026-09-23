@@ -1,0 +1,17 @@
+{
+  "status": "PASS",
+  "result": {
+    "capture_id": "nonvpn_skype-chat_capture1",
+    "pcap_path": "/home/birkenwald/data/SEU-WXY/WXY-SEU/TrafficClassifier/Dataset/VNAT/VNAT/VNAT_release_1/nonvpn_skype-chat_capture1.pcap",
+    "target_flows": 2,
+    "packet_rows": 177,
+    "tshark_stderr": "/home/birkenwald/data/SEU-WXY/WXY-SEU/TrafficClassifier/Projects/unknown_traffic_project/stage14c_vnat_encoder_training/smoke_flow_cache/tshark.log"
+  },
+  "flows": 2,
+  "failures": [],
+  "mismatches": [],
+  "packets_used": [
+    8,
+    8
+  ]
+}

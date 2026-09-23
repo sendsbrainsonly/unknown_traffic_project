@@ -1,0 +1,50 @@
+{
+  "best_epoch": 91,
+  "checkpoint_path": "/home/birkenwald/data/SEU-WXY/WXY-SEU/TrafficClassifier/Projects/unknown_traffic_project/stage15r_representation_bottleneck_audit/pilot_runs/e2/iscx_vpn/medium_seed2022/model_best.pt",
+  "checkpoint_sha256": "496f48fbae83331d49c8d27a40541c8872c3bdacad299a9e194edcf49eeb304f",
+  "class_names": [
+    "AIM",
+    "BitTorrent",
+    "Email",
+    "FTPS",
+    "Facebook",
+    "Gmail",
+    "ICQ",
+    "Netflix",
+    "SCP",
+    "SFTP",
+    "Spotify",
+    "Vimeo",
+    "VoIPBuster"
+  ],
+  "dataset": "iscx_vpn",
+  "epochs_completed": 100,
+  "experiment": "E2",
+  "known_test_samples_used": 0,
+  "known_train_samples": 12910,
+  "known_validation_samples": 1611,
+  "normalization": {
+    "channels": {
+      "log1p_iat_microseconds": {
+        "iqr": 12.23594045639038,
+        "median": 5.090851783752441
+      },
+      "signed_log1p_length": {
+        "iqr": 8.174984693527222,
+        "median": 4.174387454986572
+      }
+    },
+    "fit_role": "Known Train only"
+  },
+  "peak_gpu_memory_bytes": 20878848,
+  "physical_gpu": "4",
+  "protocol_id": "medium_seed2022",
+  "runtime_seconds": 23.12851643562317,
+  "setting": "medium",
+  "status": "PASS",
+  "unknown_test_samples_used": 0,
+  "validation_accuracy": 0.42520173805090006,
+  "validation_loss": 1.535317776367429,
+  "validation_macro_f1": 0.3848102051995582,
+  "validation_weighted_f1": 0.4019870700349839
+}

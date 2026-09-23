@@ -1,0 +1,64 @@
+{
+  "manifest_sha256": "4947d66c44a04d7b52e155f98c5f71fcb5b1239174d87ddc41ebad41584d76cf",
+  "protocols": [
+    {
+      "cache_flows": 22142,
+      "dataset": "iscx_vpn",
+      "known_test": 1621,
+      "known_train": 12910,
+      "known_validation": 1611,
+      "protocol_id": "medium_seed2022",
+      "status": "PASS",
+      "unknown_test": 6000,
+      "views_sha256": "3ab24391387d04cc8636d1dfc60ad43e5d306d7066bb76c24950403a82b223f2"
+    },
+    {
+      "cache_flows": 15096,
+      "dataset": "iscx_tor",
+      "known_test": 1113,
+      "known_train": 8876,
+      "known_validation": 1107,
+      "protocol_id": "medium_seed2022",
+      "status": "PASS",
+      "unknown_test": 4000,
+      "views_sha256": "2a4ec4be2bd8fcbbac0c7a76ea0c90117eb0b1bd410b90a41c8ad1c9022cd1a2"
+    },
+    {
+      "cache_flows": 23449,
+      "dataset": "vnat",
+      "known_test": 1960,
+      "known_train": 15704,
+      "known_validation": 1960,
+      "protocol_id": "medium_seed2025",
+      "status": "PASS",
+      "unknown_test": 3825,
+      "views_sha256": "926459ccc9a600a44544a39c4cbd91be750c409178515d1abef67d2d79156466"
+    },
+    {
+      "cache_flows": 23449,
+      "dataset": "vnat",
+      "known_test": 1911,
+      "known_train": 15328,
+      "known_validation": 1911,
+      "protocol_id": "medium_seed2026",
+      "status": "PASS",
+      "unknown_test": 4299,
+      "views_sha256": "926459ccc9a600a44544a39c4cbd91be750c409178515d1abef67d2d79156466"
+    },
+    {
+      "cache_flows": 438893,
+      "dataset": "ustc",
+      "known_test": 43332,
+      "known_train": 346651,
+      "known_validation": 43331,
+      "protocol_id": "A-2",
+      "status": "PASS",
+      "unknown_test": 5579,
+      "views_sha256": "c7c7180e089cdf05f898fe1b7eb84ed05ed436b1a8c61dadc4dc81bc2e5a8177"
+    }
+  ],
+  "status": "PASS",
+  "test_used_for_tuning": false,
+  "unknown_train_rows": 0,
+  "unknown_validation_rows": 0
+}

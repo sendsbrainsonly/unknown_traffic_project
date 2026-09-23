@@ -1,0 +1,38 @@
+{
+  "available_e0_protocols": 5,
+  "candidates": {
+    "E1": {
+      "clear_gate": false,
+      "complete": true,
+      "diagnostic_signal": false,
+      "mean_delta_macro_f1": -0.07231998141762301,
+      "negative_protocols": 4,
+      "positive_protocols": 1,
+      "protocols": 5,
+      "worst_delta_macro_f1": -0.14822130695012314
+    },
+    "E2": {
+      "clear_gate": false,
+      "complete": true,
+      "diagnostic_signal": false,
+      "mean_delta_macro_f1": -0.16623910919604498,
+      "negative_protocols": 4,
+      "positive_protocols": 1,
+      "protocols": 5,
+      "worst_delta_macro_f1": -0.38435858675077417
+    },
+    "E3": {
+      "clear_gate": false,
+      "complete": true,
+      "diagnostic_signal": false,
+      "mean_delta_macro_f1": -0.1289710388196771,
+      "negative_protocols": 4,
+      "positive_protocols": 1,
+      "protocols": 5,
+      "worst_delta_macro_f1": -0.30244527631781076
+    }
+  },
+  "expected_protocols": 5,
+  "full15_candidates": [],
+  "full15_status": "NOT_RUN_GATE_FAILED"
+}

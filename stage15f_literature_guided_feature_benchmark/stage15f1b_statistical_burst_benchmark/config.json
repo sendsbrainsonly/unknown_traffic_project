@@ -1,0 +1,79 @@
+{
+  "status": "FROZEN_BEFORE_FORMAL_TRAINING",
+  "stage": "Stage 15F-1B",
+  "seed": 2022,
+  "pilot_protocols": [
+    {"dataset": "iscx_vpn", "protocol_id": "medium_seed2022", "setting": "medium"},
+    {"dataset": "iscx_tor", "protocol_id": "medium_seed2022", "setting": "medium"},
+    {"dataset": "vnat", "protocol_id": "medium_seed2025", "setting": "Medium"},
+    {"dataset": "vnat", "protocol_id": "medium_seed2026", "setting": "Medium"},
+    {"dataset": "ustc", "protocol_id": "A-2", "setting": "A-2"}
+  ],
+  "observation_scenarios": {
+    "FULL_FLOW": ["S12", "S-A", "S-AB", "S-ABC", "S-ABCD", "S-Burst"],
+    "EARLY_16": ["S12", "S-ABCD", "S-Burst"]
+  },
+  "model": {
+    "implementation": "LightGBM 4.6.0 from the preserved Stage 15R project-local vendor directory",
+    "objective": "multiclass",
+    "n_estimators": 500,
+    "learning_rate": 0.05,
+    "num_leaves": 31,
+    "max_depth": -1,
+    "min_child_samples": 20,
+    "subsample": 1.0,
+    "colsample_bytree": 1.0,
+    "reg_alpha": 0.0,
+    "reg_lambda": 0.0,
+    "n_jobs": 4,
+    "random_state": 2022,
+    "deterministic": true,
+    "force_col_wise": true,
+    "early_stopping_rounds": 50,
+    "checkpoint_criterion": "Known Validation multiclass_logloss"
+  },
+  "missing_value_policy": {
+    "undefined_statistics": "NaN retained and handled natively by LightGBM",
+    "zero_duration_rates": "NaN",
+    "single_packet_iat_distribution": "NaN",
+    "missing_direction_distribution": "NaN",
+    "single_burst_inter_burst_iat": "NaN",
+    "single_packet_burst_duration": 0.0,
+    "population_standard_deviation_ddof": 0,
+    "ratio_smoothing": "(forward + 1) / (reverse + 1), matching Stage 15R E3"
+  },
+  "gates": {
+    "statistical_feature_benefit": {
+      "comparison": "FULL_FLOW S-ABCD - S12",
+      "minimum_mean_delta_macro_f1": 0.015,
+      "minimum_positive_protocols": 3,
+      "maximum_allowed_worst_delta_macro_f1": -0.02
+    },
+    "burst_complementarity": {
+      "comparison": "FULL_FLOW S-Burst - S-ABCD",
+      "minimum_mean_delta_macro_f1": 0.005,
+      "minimum_positive_protocols": 3,
+      "maximum_allowed_worst_delta_macro_f1": -0.02,
+      "minimum_focus_class_units_with_delta_f1_0_05_and_positive_rescue": 1
+    },
+    "class_conditional_behavior_benefit": {
+      "minimum_focus_class_units_with_delta_f1_0_05_and_positive_rescue": 2,
+      "maximum_focus_class_units_below_minus_0_05": 2
+    },
+    "full15_expansion": {
+      "minimum_mean_delta_macro_f1": 0.03,
+      "minimum_positive_protocols": 4,
+      "maximum_allowed_worst_delta_macro_f1": -0.02,
+      "execution_in_this_stage": "NOT_RUN"
+    }
+  },
+  "forbidden": {
+    "known_test_feature_values": true,
+    "unknown_test_feature_values": true,
+    "protocol_changes": true,
+    "open_set_evaluation": true,
+    "des_or_h1_changes": true,
+    "full15_automatic_launch": true,
+    "byte_behavior_model_development": true
+  }
+}

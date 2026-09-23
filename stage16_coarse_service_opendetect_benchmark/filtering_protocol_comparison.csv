@@ -1,0 +1,7 @@
+model,training_subset,evaluation_subset,seed,samples,accuracy,macro_f1,weighted_f1,errors,actual_method_identity,comparison_scope,two_method_stage16_status
+M-A,A,A,2022,335,0.9104477611940298,0.8980736342373171,0.9098766860882752,30,CorrectedOpenDetectNet_DQ3F_DQ4,historical A-vs-C selection effect within one Open-Detect reproduction family,NOT_RUN_IDENTITY_GATE
+M-A,A,A,2023,335,0.8328358208955224,0.7653386684141061,0.8256916432136324,56,CorrectedOpenDetectNet_DQ3F_DQ4,historical A-vs-C selection effect within one Open-Detect reproduction family,NOT_RUN_IDENTITY_GATE
+M-A,A,A,2024,335,0.9283582089552239,0.9047377804405302,0.9285410984579364,24,CorrectedOpenDetectNet_DQ3F_DQ4,historical A-vs-C selection effect within one Open-Detect reproduction family,NOT_RUN_IDENTITY_GATE
+M-C,C_FINAL,C_FINAL,2022,184,0.9347826086956522,0.9306065186346877,0.9351233593425876,12,CorrectedOpenDetectNet_DQ3F_DQ4,historical A-vs-C selection effect within one Open-Detect reproduction family,NOT_RUN_IDENTITY_GATE
+M-C,C_FINAL,C_FINAL,2023,184,0.8478260869565217,0.8367125980190151,0.8401174630005556,28,CorrectedOpenDetectNet_DQ3F_DQ4,historical A-vs-C selection effect within one Open-Detect reproduction family,NOT_RUN_IDENTITY_GATE
+M-C,C_FINAL,C_FINAL,2024,184,0.907608695652174,0.895827220155421,0.9078788916237975,17,CorrectedOpenDetectNet_DQ3F_DQ4,historical A-vs-C selection effect within one Open-Detect reproduction family,NOT_RUN_IDENTITY_GATE

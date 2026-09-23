@@ -1,0 +1,22 @@
+{
+  "cache_sha256": "1b7f67b23393bc107b4060ae6bd27b40af0826a255a2cde6e623b634487b31cb",
+  "dataset": "iscx_vpn",
+  "flows": 10955,
+  "input_definition": {
+    "fig_packets": 8,
+    "ip_addresses": "zeroed",
+    "seq_length": 320,
+    "trafficformer_packets": 5
+  },
+  "raw_recovery_captures": 0,
+  "recovered_stage20_only_flows": 0,
+  "recovery_audit": [],
+  "reused_stage19_flows": 10955,
+  "source_hashes": {
+    "stage19_flow_uids": "41e6bf1717765acbb0a4f4e17b343b9467e6b3650a1c6ce1e4bdc389a06c54e8",
+    "stage19_views": "3ab24391387d04cc8636d1dfc60ad43e5d306d7066bb76c24950403a82b223f2",
+    "stage20_closed_manifest": "6404d496f50a6f7f6f397d125ad0cd653c9df152d8db1b9ed2ad2310967950bb"
+  },
+  "stage20_membership_missing": 0,
+  "status": "PASS"
+}

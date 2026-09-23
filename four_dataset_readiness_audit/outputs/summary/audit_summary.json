@@ -1,0 +1,393 @@
+{
+  "all_cipher_pcap_suffix_files": 164207,
+  "cipher_unmanifested_resource_forks": [
+    "aes-128-gcm/__MACOSX/aes-128-gcm/yahoo.co.jp/._traffic_2024-01-22_yahoo.co.jp_aes-128_firefox_1.pcap.TCP_10-0-2-15_38184_183-79-248-252_443.pcap",
+    "chacha20-poly1305/__MACOSX/chacha20-poly1305/hubspot.com/._traffic_2024-01-13_adtelligent.com_chacha20_chromium_2.pcap.TCP_10-0-2-15_34206_104-19-154-83_443.pcap"
+  ],
+  "matrix": [
+    {
+      "dataset": "USTC-TFC2016",
+      "role": "Development / Mechanism",
+      "raw_pcap_available": "YES",
+      "label_quality": "20-class logical mapping verified; SMB-1/2 merged",
+      "class_count": 20,
+      "usable_class_count": 20,
+      "sample_count": 489101,
+      "group_id_available": "NO authoritative session group",
+      "group_split_ready": "EXISTING FLOW SPLIT FOUND",
+      "direct_domain_leakage": "NOT RE-AUDITED",
+      "endpoint_port_risk": "NOT RE-AUDITED",
+      "calibration_capacity": "existing development split available",
+      "component_p05_feasibility": "class-dependent; not reassessed",
+      "unknown_split_status": "existing frozen development folds",
+      "independent_validation_status": "DEVELOPMENT_ONLY",
+      "blocking_issue": "Unknown test informed development",
+      "final_readiness": "READY"
+    },
+    {
+      "dataset": "CipherSpectrum",
+      "role": "Primary Independent External Validation",
+      "raw_pcap_available": "YES",
+      "label_quality": "official40 directory-label manifest; getpocket excluded",
+      "class_count": 40,
+      "usable_class_count": 40,
+      "sample_count": 120000,
+      "group_id_available": "YES: split_group_id",
+      "group_split_ready": "FEASIBLE; not frozen",
+      "direct_domain_leakage": "LOW",
+      "endpoint_port_risk": "PORT_VISIBLE; group control required",
+      "calibration_capacity": "300/class (80/10/10) or 450/class (70/15/15)",
+      "component_p05_feasibility": "15 or 22/class; below n=30 fallback threshold",
+      "unknown_split_status": "NOT FROZEN",
+      "independent_validation_status": "INDEPENDENT_CANDIDATE",
+      "blocking_issue": "MIX=PARTIALLY_OVERLAPPING; exclude MIX and freeze group-aware split",
+      "final_readiness": "READY"
+    },
+    {
+      "dataset": "CSTNET-TLS1.3",
+      "role": "Secondary Sparse-Calibration Stress Test",
+      "raw_pcap_available": "YES",
+      "label_quality": "directory labels; 119 eligible of 120",
+      "class_count": 120,
+      "usable_class_count": 119,
+      "sample_count": 46372,
+      "group_id_available": "YES: frozen one-minute proxy",
+      "group_split_ready": "YES: hashes PASS",
+      "direct_domain_leakage": "LOW (0/600)",
+      "endpoint_port_risk": "PORT_VISIBLE; endpoint novelty unresolved",
+      "calibration_capacity": "sparse: validation medians 44/42/39",
+      "component_p05_feasibility": "fallback expected for all classes",
+      "unknown_split_status": "FROZEN Low/Medium/High",
+      "independent_validation_status": "INDEPENDENT_CANDIDATE",
+      "blocking_issue": "component calibration sparse; protocol v2 needed before method run",
+      "final_readiness": "CONDITIONALLY_READY"
+    },
+    {
+      "dataset": "CIC-IDS-2017",
+      "role": "Independent NIDS / Unknown-Attack Validation",
+      "raw_pcap_available": "YES",
+      "label_quality": "strict official flow-CSV matches; 3 schedule sanity-risk labels",
+      "class_count": 15,
+      "usable_class_count": 3,
+      "sample_count": 2087440,
+      "group_id_available": "candidate five-minute capture block",
+      "group_split_ready": "FEASIBLE; not frozen",
+      "direct_domain_leakage": "NOT A DOMAIN-LABEL DATASET",
+      "endpoint_port_risk": "HIGH for multiple attack classes",
+      "calibration_capacity": "large overall; only 3 PRIMARY_ELIGIBLE",
+      "component_p05_feasibility": "not evaluated before class policy freeze",
+      "unknown_split_status": "NOT FROZEN",
+      "independent_validation_status": "INDEPENDENT_BUT_CONFOUNDED",
+      "blocking_issue": "one-day/PCAP attack binding, endpoint shortcuts, class policy and Unknown split unfrozen",
+      "final_readiness": "CONDITIONALLY_READY"
+    }
+  ],
+  "mix": {
+    "mix_status": "PARTIALLY_OVERLAPPING",
+    "mix_pcap_count": 40200,
+    "exact_duplicate_mix_count": 0,
+    "normalized_fingerprint_overlap_mix_count": 0,
+    "mix_unique_split_groups": 18260,
+    "shared_split_groups_with_canonical": 16596,
+    "shared_split_group_rate": 0.9088718510405257,
+    "canonical_primary_candidate_pcap_count": 120000,
+    "recommend_exclude_mix_from_primary": true
+  },
+  "cipher_leak_counts": {
+    "domain": 17,
+    "sni": 0,
+    "token": 18,
+    "union": 18,
+    "valid": 400
+  },
+  "cipher_leak_level": "LOW",
+  "cicids": {
+    "strict_matched_flows": 2087440,
+    "label_count": 15,
+    "class_day_nmi": 0.27416434511339943,
+    "class_pcap_nmi": 0.27416434511339943,
+    "primary_eligible": [
+      "BENIGN",
+      "DoS Slowhttptest",
+      "PortScan"
+    ],
+    "group_aware_split_feasible": true,
+    "group_definition": "source_pcap + five-minute UTC flow-start block"
+  },
+  "cicids_input_valid": 200,
+  "cicids_input_total": 200,
+  "cicids_endpoint_rank": [
+    {
+      "label": "Web Attack - Brute Force",
+      "dst_ip_top1": 1.0,
+      "dst_port_top1": 1.0,
+      "combined_min": 1.0
+    },
+    {
+      "label": "Web Attack - Sql Injection",
+      "dst_ip_top1": 1.0,
+      "dst_port_top1": 1.0,
+      "combined_min": 1.0
+    },
+    {
+      "label": "Web Attack - XSS",
+      "dst_ip_top1": 1.0,
+      "dst_port_top1": 1.0,
+      "combined_min": 1.0
+    },
+    {
+      "label": "DoS slowloris",
+      "dst_ip_top1": 0.999649675950254,
+      "dst_port_top1": 0.999649675950254,
+      "combined_min": 0.999649675950254
+    },
+    {
+      "label": "Bot",
+      "dst_ip_top1": 0.998371335504886,
+      "dst_port_top1": 1.0,
+      "combined_min": 0.998371335504886
+    },
+    {
+      "label": "SSH-Patator",
+      "dst_ip_top1": 0.9973217274857716,
+      "dst_port_top1": 0.9973217274857716,
+      "combined_min": 0.9973217274857716
+    },
+    {
+      "label": "FTP-Patator",
+      "dst_ip_top1": 0.9972396486825597,
+      "dst_port_top1": 0.9969887076537014,
+      "combined_min": 0.9969887076537014
+    },
+    {
+      "label": "DDoS",
+      "dst_ip_top1": 0.9925339041677,
+      "dst_port_top1": 0.9925339041677,
+      "combined_min": 0.9925339041677
+    },
+    {
+      "label": "DoS GoldenEye",
+      "dst_ip_top1": 0.9866953366483,
+      "dst_port_top1": 0.9866953366483,
+      "combined_min": 0.9866953366483
+    },
+    {
+      "label": "DoS Hulk",
+      "dst_ip_top1": 0.9839915446483811,
+      "dst_port_top1": 0.9839915446483811,
+      "combined_min": 0.9839915446483811
+    },
+    {
+      "label": "DoS Slowhttptest",
+      "dst_ip_top1": 0.9456436420722135,
+      "dst_port_top1": 0.9456436420722135,
+      "combined_min": 0.9456436420722135
+    },
+    {
+      "label": "Heartbleed",
+      "dst_ip_top1": 0.9090909090909091,
+      "dst_port_top1": 0.9090909090909091,
+      "combined_min": 0.9090909090909091
+    },
+    {
+      "label": "Infiltration",
+      "dst_ip_top1": 0.7941176470588235,
+      "dst_port_top1": 0.7941176470588235,
+      "combined_min": 0.7941176470588235
+    },
+    {
+      "label": "BENIGN",
+      "dst_ip_top1": 0.4081424204279806,
+      "dst_port_top1": 0.5741293532338309,
+      "combined_min": 0.4081424204279806
+    },
+    {
+      "label": "PortScan",
+      "dst_ip_top1": 1.0,
+      "dst_port_top1": 0.0019639563649182,
+      "combined_min": 0.0019639563649182
+    }
+  ],
+  "cicids_eligibility": [
+    {
+      "label": "BENIGN",
+      "strict_flow_count": "1668300",
+      "eligibility": "PRIMARY_ELIGIBLE",
+      "reason": "passes fixed count, mapping, time-group, and severe endpoint gates",
+      "day_count": "5",
+      "pcap_count": "5",
+      "capture_window_5m_count": "496",
+      "dst_ip_top1_share": "0.4081424204279806",
+      "dst_port_top1_share": "0.5741293532338309",
+      "schedule_sanity": "PASS_OR_NOT_APPLICABLE"
+    },
+    {
+      "label": "Bot",
+      "strict_flow_count": "1228",
+      "eligibility": "MAPPING_RISK",
+      "reason": "existing official-schedule sanity check FAIL; official per-flow label retained",
+      "day_count": "1",
+      "pcap_count": "1",
+      "capture_window_5m_count": "37",
+      "dst_ip_top1_share": "0.998371335504886",
+      "dst_port_top1_share": "1.0",
+      "schedule_sanity": "FAIL"
+    },
+    {
+      "label": "DDoS",
+      "strict_flow_count": "76613",
+      "eligibility": "SEVERE_ENDPOINT_SHORTCUT",
+      "reason": "dst_ip and dst_port top1 shares both >= 0.95",
+      "day_count": "1",
+      "pcap_count": "1",
+      "capture_window_5m_count": "5",
+      "dst_ip_top1_share": "0.9925339041677",
+      "dst_port_top1_share": "0.9925339041677",
+      "schedule_sanity": "PASS_OR_NOT_APPLICABLE"
+    },
+    {
+      "label": "DoS GoldenEye",
+      "strict_flow_count": "7441",
+      "eligibility": "SEVERE_CAPTURE_CONFOUNDING",
+      "reason": "fewer than 3 distinct five-minute capture groups",
+      "day_count": "1",
+      "pcap_count": "1",
+      "capture_window_5m_count": "2",
+      "dst_ip_top1_share": "0.9866953366483",
+      "dst_port_top1_share": "0.9866953366483",
+      "schedule_sanity": "PASS_OR_NOT_APPLICABLE"
+    },
+    {
+      "label": "DoS Hulk",
+      "strict_flow_count": "155168",
+      "eligibility": "SEVERE_ENDPOINT_SHORTCUT",
+      "reason": "dst_ip and dst_port top1 shares both >= 0.95",
+      "day_count": "1",
+      "pcap_count": "1",
+      "capture_window_5m_count": "6",
+      "dst_ip_top1_share": "0.9839915446483811",
+      "dst_port_top1_share": "0.9839915446483811",
+      "schedule_sanity": "PASS_OR_NOT_APPLICABLE"
+    },
+    {
+      "label": "DoS Slowhttptest",
+      "strict_flow_count": "5096",
+      "eligibility": "PRIMARY_ELIGIBLE",
+      "reason": "passes fixed count, mapping, time-group, and severe endpoint gates",
+      "day_count": "1",
+      "pcap_count": "1",
+      "capture_window_5m_count": "5",
+      "dst_ip_top1_share": "0.9456436420722135",
+      "dst_port_top1_share": "0.9456436420722135",
+      "schedule_sanity": "PASS_OR_NOT_APPLICABLE"
+    },
+    {
+      "label": "DoS slowloris",
+      "strict_flow_count": "5709",
+      "eligibility": "SEVERE_ENDPOINT_SHORTCUT",
+      "reason": "dst_ip and dst_port top1 shares both >= 0.95",
+      "day_count": "1",
+      "pcap_count": "1",
+      "capture_window_5m_count": "8",
+      "dst_ip_top1_share": "0.999649675950254",
+      "dst_port_top1_share": "0.999649675950254",
+      "schedule_sanity": "PASS_OR_NOT_APPLICABLE"
+    },
+    {
+      "label": "FTP-Patator",
+      "strict_flow_count": "3985",
+      "eligibility": "SEVERE_ENDPOINT_SHORTCUT",
+      "reason": "dst_ip and dst_port top1 shares both >= 0.95",
+      "day_count": "1",
+      "pcap_count": "1",
+      "capture_window_5m_count": "15",
+      "dst_ip_top1_share": "0.9972396486825597",
+      "dst_port_top1_share": "0.9969887076537014",
+      "schedule_sanity": "PASS_OR_NOT_APPLICABLE"
+    },
+    {
+      "label": "Heartbleed",
+      "strict_flow_count": "11",
+      "eligibility": "TOO_SMALL",
+      "reason": "strict_flow_count<100",
+      "day_count": "1",
+      "pcap_count": "1",
+      "capture_window_5m_count": "5",
+      "dst_ip_top1_share": "0.9090909090909091",
+      "dst_port_top1_share": "0.9090909090909091",
+      "schedule_sanity": "PASS_OR_NOT_APPLICABLE"
+    },
+    {
+      "label": "Infiltration",
+      "strict_flow_count": "34",
+      "eligibility": "TOO_SMALL",
+      "reason": "strict_flow_count<100",
+      "day_count": "1",
+      "pcap_count": "1",
+      "capture_window_5m_count": "14",
+      "dst_ip_top1_share": "0.7941176470588235",
+      "dst_port_top1_share": "0.7941176470588235",
+      "schedule_sanity": "FAIL"
+    },
+    {
+      "label": "PortScan",
+      "strict_flow_count": "158863",
+      "eligibility": "PRIMARY_ELIGIBLE",
+      "reason": "passes fixed count, mapping, time-group, and severe endpoint gates",
+      "day_count": "1",
+      "pcap_count": "1",
+      "capture_window_5m_count": "12",
+      "dst_ip_top1_share": "1.0",
+      "dst_port_top1_share": "0.0019639563649182",
+      "schedule_sanity": "PASS_OR_NOT_APPLICABLE"
+    },
+    {
+      "label": "SSH-Patator",
+      "strict_flow_count": "2987",
+      "eligibility": "MAPPING_RISK",
+      "reason": "existing official-schedule sanity check FAIL; official per-flow label retained",
+      "day_count": "1",
+      "pcap_count": "1",
+      "capture_window_5m_count": "14",
+      "dst_ip_top1_share": "0.9973217274857716",
+      "dst_port_top1_share": "0.9973217274857716",
+      "schedule_sanity": "FAIL"
+    },
+    {
+      "label": "Web Attack - Brute Force",
+      "strict_flow_count": "1364",
+      "eligibility": "SEVERE_ENDPOINT_SHORTCUT",
+      "reason": "dst_ip and dst_port top1 shares both >= 0.95",
+      "day_count": "1",
+      "pcap_count": "1",
+      "capture_window_5m_count": "10",
+      "dst_ip_top1_share": "1.0",
+      "dst_port_top1_share": "1.0",
+      "schedule_sanity": "PASS_OR_NOT_APPLICABLE"
+    },
+    {
+      "label": "Web Attack - Sql Injection",
+      "strict_flow_count": "12",
+      "eligibility": "TOO_SMALL",
+      "reason": "strict_flow_count<100",
+      "day_count": "1",
+      "pcap_count": "1",
+      "capture_window_5m_count": "1",
+      "dst_ip_top1_share": "1.0",
+      "dst_port_top1_share": "1.0",
+      "schedule_sanity": "PASS_OR_NOT_APPLICABLE"
+    },
+    {
+      "label": "Web Attack - XSS",
+      "strict_flow_count": "629",
+      "eligibility": "SEVERE_ENDPOINT_SHORTCUT",
+      "reason": "dst_ip and dst_port top1 shares both >= 0.95",
+      "day_count": "1",
+      "pcap_count": "1",
+      "capture_window_5m_count": "5",
+      "dst_ip_top1_share": "1.0",
+      "dst_port_top1_share": "1.0",
+      "schedule_sanity": "PASS_OR_NOT_APPLICABLE"
+    }
+  ]
+}

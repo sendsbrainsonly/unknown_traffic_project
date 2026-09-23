@@ -1,0 +1,27 @@
+{
+  "bootstrap_iterations": 1000,
+  "bootstrap_seed": 0,
+  "gate": "B",
+  "methods_frozen": [
+    "Native",
+    "Single-Full-K1",
+    "Multi-Global-K2",
+    "Class-P05-K2",
+    "Component-P05-K2",
+    "DGSB-v2"
+  ],
+  "methods_modified_after_test_open": false,
+  "name": "OPERATING-POINT TRADEOFF",
+  "post_test_tuning_performed": false,
+  "setting_conclusions": {
+    "high": "TRADEOFF",
+    "low": "TRADEOFF",
+    "medium": "TRADEOFF"
+  },
+  "settings_complete": [
+    "low",
+    "medium",
+    "high"
+  ],
+  "test_open_started_at": "2026-09-13T14:30:55.571231+00:00"
+}

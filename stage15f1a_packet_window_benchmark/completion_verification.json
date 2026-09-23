@@ -1,0 +1,250 @@
+{
+  "checks": [
+    {
+      "check": "config_remains_frozen_before_training",
+      "detail": "FROZEN_BEFORE_TRAINING",
+      "status": "PASS"
+    },
+    {
+      "check": "all_sequence_caches_pass",
+      "detail": [
+        {
+          "dataset": "ustc",
+          "flows": 389982,
+          "status": "PASS"
+        },
+        {
+          "dataset": "iscx_vpn",
+          "flows": 14521,
+          "status": "PASS"
+        },
+        {
+          "dataset": "iscx_tor",
+          "flows": 9983,
+          "status": "PASS"
+        },
+        {
+          "dataset": "vnat",
+          "flows": 21135,
+          "status": "PASS"
+        }
+      ],
+      "status": "PASS"
+    },
+    {
+      "check": "legacy_t8_inference_parity",
+      "detail": "PASS",
+      "status": "PASS"
+    },
+    {
+      "check": "formal_runs_15_of_15",
+      "detail": [
+        {
+          "checkpoint_ok": true,
+          "dataset": "iscx_vpn",
+          "prediction_ok": true,
+          "protocol_id": "medium_seed2022",
+          "status": "PASS",
+          "train": 12910,
+          "validation": 1611,
+          "window": 8
+        },
+        {
+          "checkpoint_ok": true,
+          "dataset": "iscx_tor",
+          "prediction_ok": true,
+          "protocol_id": "medium_seed2022",
+          "status": "PASS",
+          "train": 8876,
+          "validation": 1107,
+          "window": 8
+        },
+        {
+          "checkpoint_ok": true,
+          "dataset": "vnat",
+          "prediction_ok": true,
+          "protocol_id": "medium_seed2025",
+          "status": "PASS",
+          "train": 15704,
+          "validation": 1960,
+          "window": 8
+        },
+        {
+          "checkpoint_ok": true,
+          "dataset": "vnat",
+          "prediction_ok": true,
+          "protocol_id": "medium_seed2026",
+          "status": "PASS",
+          "train": 15328,
+          "validation": 1911,
+          "window": 8
+        },
+        {
+          "checkpoint_ok": true,
+          "dataset": "ustc",
+          "prediction_ok": true,
+          "protocol_id": "A-2",
+          "status": "PASS",
+          "train": 346651,
+          "validation": 43331,
+          "window": 8
+        },
+        {
+          "checkpoint_ok": true,
+          "dataset": "iscx_vpn",
+          "prediction_ok": true,
+          "protocol_id": "medium_seed2022",
+          "status": "PASS",
+          "train": 12910,
+          "validation": 1611,
+          "window": 16
+        },
+        {
+          "checkpoint_ok": true,
+          "dataset": "iscx_tor",
+          "prediction_ok": true,
+          "protocol_id": "medium_seed2022",
+          "status": "PASS",
+          "train": 8876,
+          "validation": 1107,
+          "window": 16
+        },
+        {
+          "checkpoint_ok": true,
+          "dataset": "vnat",
+          "prediction_ok": true,
+          "protocol_id": "medium_seed2025",
+          "status": "PASS",
+          "train": 15704,
+          "validation": 1960,
+          "window": 16
+        },
+        {
+          "checkpoint_ok": true,
+          "dataset": "vnat",
+          "prediction_ok": true,
+          "protocol_id": "medium_seed2026",
+          "status": "PASS",
+          "train": 15328,
+          "validation": 1911,
+          "window": 16
+        },
+        {
+          "checkpoint_ok": true,
+          "dataset": "ustc",
+          "prediction_ok": true,
+          "protocol_id": "A-2",
+          "status": "PASS",
+          "train": 346651,
+          "validation": 43331,
+          "window": 16
+        },
+        {
+          "checkpoint_ok": true,
+          "dataset": "iscx_vpn",
+          "prediction_ok": true,
+          "protocol_id": "medium_seed2022",
+          "status": "PASS",
+          "train": 12910,
+          "validation": 1611,
+          "window": 32
+        },
+        {
+          "checkpoint_ok": true,
+          "dataset": "iscx_tor",
+          "prediction_ok": true,
+          "protocol_id": "medium_seed2022",
+          "status": "PASS",
+          "train": 8876,
+          "validation": 1107,
+          "window": 32
+        },
+        {
+          "checkpoint_ok": true,
+          "dataset": "vnat",
+          "prediction_ok": true,
+          "protocol_id": "medium_seed2025",
+          "status": "PASS",
+          "train": 15704,
+          "validation": 1960,
+          "window": 32
+        },
+        {
+          "checkpoint_ok": true,
+          "dataset": "vnat",
+          "prediction_ok": true,
+          "protocol_id": "medium_seed2026",
+          "status": "PASS",
+          "train": 15328,
+          "validation": 1911,
+          "window": 32
+        },
+        {
+          "checkpoint_ok": true,
+          "dataset": "ustc",
+          "prediction_ok": true,
+          "protocol_id": "A-2",
+          "status": "PASS",
+          "train": 346651,
+          "validation": 43331,
+          "window": 32
+        }
+      ],
+      "status": "PASS"
+    },
+    {
+      "check": "known_test_and_unknown_test_usage_zero",
+      "detail": {
+        "known_test": 0,
+        "unknown_test": 0
+      },
+      "status": "PASS"
+    },
+    {
+      "check": "checkpoint_hashes_valid",
+      "detail": "15 formal best checkpoints",
+      "status": "PASS"
+    },
+    {
+      "check": "validation_prediction_counts_valid",
+      "detail": "15 formal prediction files",
+      "status": "PASS"
+    },
+    {
+      "check": "required_outputs_present",
+      "detail": [
+        "window_pilot_results.csv",
+        "window_paired_comparison.csv",
+        "window_per_class_results.csv",
+        "window_confusion_analysis.csv",
+        "window_error_complementarity.csv",
+        "window_coverage_vs_performance.csv",
+        "stage15f1a_report.md",
+        "RESULTS.md"
+      ],
+      "status": "PASS"
+    },
+    {
+      "check": "t64_not_run",
+      "detail": "T64 directory absent",
+      "status": "PASS"
+    },
+    {
+      "check": "protected_assets_unchanged",
+      "detail": {
+        "added": [],
+        "changed": [],
+        "removed": [],
+        "requested": true,
+        "status": "PASS"
+      },
+      "status": "PASS"
+    }
+  ],
+  "formal_runs_expected": 15,
+  "formal_runs_observed": 15,
+  "known_test_samples_used": 0,
+  "stage": "Stage 15F-1A",
+  "status": "PASS",
+  "unknown_test_samples_used": 0
+}

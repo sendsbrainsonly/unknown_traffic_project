@@ -1,0 +1,14 @@
+aspect,paper,official_code,ustc_reproduction,cipherspectrum,alignment
+packet count,first 8,first 8,first 8,first 8,MATCH
+bytes per packet,80 header + 48 payload,80 + 48,80 + 48,80 + 48,MATCH
+direction,capture order; no canonical direction stated,PCAP order; no canonical direction,directional local sessions in capture order,single-flow PCAP order,PARTIAL_MATCH
+padding,zero pad,zero pad packets/segments,zero pad,zero pad,MATCH
+truncation,fixed k/k1/k2,first 8 and slice segments,same,same,MATCH
+image construction,1024 bytes -> 32x32 grayscale,uint8 reshape 32x32,NumPy uint8 32x32,NumPy uint8 32x32,MATCH
+IP handling,mask IP addresses,IPv4 src/dst -> 0.0.0.0,zero IPv4 addresses,zero IPv4 addresses,MATCH
+port handling,not stated,transport ports retained,ports retained,ports retained,UNKNOWN_PAPER; CODE_MATCH
+header/payload,separate fixed slices,IP bytes minus Raw payload; Raw payload separate,same,same,MATCH
+normalization,not stated,ToTensor scale only; no mean/std,same model input scale,same model input scale,PARTIAL_MATCH
+augmentation,random crop/flip,RandomCrop padding4 + horizontal flip,same,same Stage7 training transforms,MATCH
+invalid/non-IP handling,non-IP excluded,exceptions/non-IP silently become zero segments,strict on-packet-error failure; non-TCP/UDP IPv4 and undecoded later fragments excluded,strict failure gate,PARTIAL_MATCH
+flow construction,details beyond fixed packet layout not fully specified,expects pre-split single-flow PCAPs/NPZ,directional 5-tuple sessions; no timeout/SYN-FIN-RST boundaries; local source-fragment selection partly inferred,dataset-provided single-flow PCAPs,PARTIAL_MATCH

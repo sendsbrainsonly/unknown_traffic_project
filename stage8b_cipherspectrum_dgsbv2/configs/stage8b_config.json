@@ -1,0 +1,76 @@
+{
+  "stage": "Stage 8B - CipherSpectrum DGSB-v2 Known-Only Rule Freeze",
+  "created_before_any_test_access": true,
+  "allowed_data_roles": [
+    "KNOWN_TRAIN",
+    "KNOWN_VALIDATION"
+  ],
+  "forbidden_data_roles": [
+    "KNOWN_TEST",
+    "UNKNOWN_TEST"
+  ],
+  "settings": [
+    "low",
+    "medium",
+    "high"
+  ],
+  "frozen_density": {
+    "components": 2,
+    "covariance_type": "full",
+    "reg_covar": 0.001,
+    "pca_dimension": 64
+  },
+  "dgsbv2": {
+    "global_quantile": 0.025,
+    "global_target_acceptance": 0.975,
+    "local_quantile": 0.025,
+    "local_target_acceptance": 0.975,
+    "fallback_min_validation_n": 30,
+    "gate_logic": "AND",
+    "prediction": "argmax class mixture score",
+    "local_component": "argmax component within predicted class",
+    "post_local_global_recalibration": "FORBIDDEN",
+    "unknown_calibration": "FORBIDDEN",
+    "quantile_search": "FORBIDDEN"
+  },
+  "primary_comparison": {
+    "candidate": "DGSB-v2",
+    "reference": "Multi-Global-K2"
+  },
+  "final_test_metrics": {
+    "known_test": [
+      "Accuracy",
+      "Macro-F1",
+      "Known acceptance",
+      "Known FRR",
+      "Known per-class FRR"
+    ],
+    "unknown_test": [
+      "UFAR",
+      "Unknown rejection rate",
+      "per-Unknown-class UFAR",
+      "Unknown-to-Known absorption matrix"
+    ],
+    "combined": [
+      "AUROC",
+      "AUPRC",
+      "decision transition matrix"
+    ],
+    "confidence_interval": 0.95,
+    "paired_bootstrap_iterations": 1000,
+    "paired_bootstrap_seed": 0
+  },
+  "expected_stage8a": {
+    "evaluation_config_sha256": "ac39cb6b1a4a1d1fc5616462bcc4a72906ed0a8acb77be6131a8714a5370c082",
+    "bundle_hash_file_sha256": {
+      "low": "a3ef3f83acd2eee58b667943e53e6b5a83317239262f91565e420f1cda45dcb0",
+      "medium": "66f369332de0620da1a8fe69ff020064695858b3cb1e58d5ccb902dae0093c58",
+      "high": "574360c4e1c0ac6b39d02dfe2aac5d9ddbfc347e85b968d1c53ef853af0dcf68"
+    },
+    "bundle_manifest_sha256": {
+      "low": "60262a041d20066cc678811535968d295cb32cb747260444a3270572614e56c8",
+      "medium": "7fa178714335a1915b43d67e0e9ba2b610f04c0198c91907bd906b6167adfa36",
+      "high": "a836b278bd189bca07745cd7345205985e8433c756fa73068b22e638303b651c"
+    }
+  }
+}

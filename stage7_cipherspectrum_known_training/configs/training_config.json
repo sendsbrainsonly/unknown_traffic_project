@@ -1,0 +1,43 @@
+{
+  "protocol_stage": "stage6_cipherspectrum_protocol",
+  "settings": [
+    "low",
+    "medium",
+    "high"
+  ],
+  "execution_order": [
+    "low",
+    "medium",
+    "high"
+  ],
+  "independent_training": true,
+  "warm_start": false,
+  "initialization": "released_weight_init from scratch",
+  "seed": 2022,
+  "epochs": 100,
+  "batch_size": 512,
+  "workers": 0,
+  "learning_rate": 0.001,
+  "optimizer": "Adam(beta1=0.9,beta2=0.999)",
+  "scheduler": "MultiStepLR(milestones=[50,80],gamma=0.1)",
+  "lambda": 0.005,
+  "latent_dimension": 128,
+  "temp_inter": 1.0,
+  "temp_intra": 1.0,
+  "checkpoint_selection": "highest harmonic mean of Known Validation Accuracy and Macro-F1",
+  "early_stopping_monitor": "harmonic mean of Known Validation Accuracy and Macro-F1",
+  "early_stopping_patience": 5,
+  "early_stopping_min_delta": 0.0,
+  "prototype_reset_epochs_zero_based": [
+    50,
+    80
+  ],
+  "numerical_stability_guard": "clamp only raw logvar upper tail to 20",
+  "allowed_input_roles": [
+    "KNOWN_TRAIN",
+    "KNOWN_VALIDATION"
+  ],
+  "unknown_pcap_access": false,
+  "known_test_access": false,
+  "unknown_inference": false
+}

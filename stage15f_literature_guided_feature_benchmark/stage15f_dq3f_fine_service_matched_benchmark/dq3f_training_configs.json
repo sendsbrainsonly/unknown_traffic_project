@@ -1,0 +1,101 @@
+{
+  "status": "FROZEN_BEFORE_TRAINING",
+  "dataset": "iscx_vpn_shared31_vpn_only",
+  "claim_scope": "Known-only matched-sample weak-capture-label diagnostic",
+  "tasks": {
+    "F1": "Fine Application direct training and full Validation evaluation",
+    "F2_PARTIAL": "F1 prediction deterministic singleton Application-to-Service mapping only",
+    "F3": "Service direct training and full Validation evaluation"
+  },
+  "seeds": [
+    2022,
+    2023,
+    2024
+  ],
+  "repeat_rule": "DQ-3R fixed seed 2022 but no repeat_count; task default freezes three paired seeds before outcomes",
+  "train_samples": 2730,
+  "validation_samples": 335,
+  "fine_classes": [
+    "AIM",
+    "BitTorrent",
+    "Email",
+    "FTPS",
+    "Facebook",
+    "ICQ",
+    "Netflix",
+    "SFTP",
+    "Spotify",
+    "Vimeo",
+    "VoIPBuster"
+  ],
+  "service_classes": [
+    "Chat",
+    "Email",
+    "File-Transfer",
+    "P2P",
+    "Streaming",
+    "VoIP"
+  ],
+  "training": {
+    "architecture": "resnet18",
+    "channels": 1,
+    "latent_dim": 128,
+    "epochs": 100,
+    "batch_size": 128,
+    "eval_batch_size": 256,
+    "workers": 0,
+    "optimizer": "Adam",
+    "learning_rate": 0.001,
+    "betas": [
+      0.9,
+      0.999
+    ],
+    "lambda": 0.005,
+    "scheduler_milestones": [
+      50,
+      80
+    ],
+    "scheduler_gamma": 0.1,
+    "prototype_reset_zero_based_epochs": [
+      50,
+      80
+    ],
+    "checkpoint_criterion": "Known Validation accuracy",
+    "early_stop_patience": 10,
+    "early_stop_min_epoch": 82,
+    "early_stop_min_delta": 0.0001,
+    "training_protocol": "corrected-paper"
+  },
+  "same_inputs_membership_budget_f1_f3": true,
+  "only_allowed_difference": "supervision labels and output class count",
+  "known_test_feature_values_used": 0,
+  "unknown_test_feature_values_used": 0,
+  "metadata_as_model_input": false,
+  "capture_id_as_model_input": false,
+  "service_label_as_model_input": false,
+  "f2_singleton_application_service_map": {
+    "AIM": "Chat",
+    "BitTorrent": "P2P",
+    "Email": "Email",
+    "FTPS": "File-Transfer",
+    "ICQ": "Chat",
+    "Netflix": "Streaming",
+    "SFTP": "File-Transfer",
+    "Spotify": "Streaming",
+    "Vimeo": "Streaming",
+    "VoIPBuster": "VoIP"
+  },
+  "f2_ambiguous_applications": {
+    "Facebook": [
+      "Chat",
+      "VoIP"
+    ]
+  },
+  "source_hashes": {
+    "provenance": "3cd5b481a900d90e26ba38c5f564861c11b72ecf9ce20307bed9febac24c98ec"
+  },
+  "stage12_subset_array_digests": {
+    "known_train": "f964b48e88e57e47e38e5a5041a69b42fc7c943c1b656a4d6aa5844c7cb94647",
+    "known_validation": "e97315b9c125194d5475af557b145491f7082450b280776e608d651170408693"
+  }
+}

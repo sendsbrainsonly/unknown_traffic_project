@@ -1,0 +1,12 @@
+capture_group_directory,directory_label_raw,canonical_label,observed_cipher,flow_count
+aes-256-gcm,chacha20,getpocket.com,chacha20,1000
+aes-256-gcm,gmx.net,gmx.net,aes-128,207
+aes-256-gcm,naver.com,naver.com,aes-128,265
+aes-256-gcm,steamstatic.com,steamstatic.com,aes-128,1000
+aes-256-gcm,typekit.net,typekit.net,aes-128,391
+aes-256-gcm,ubuntu.com,ubuntu.com,aes-128,649
+aes-256-gcm,web.de,web.de,aes-128,179
+aes-256-gcm,xnxx-cdn.com,xnxx-cdn.com,aes-128,1000
+chacha20-poly1305,getpocket.com,getpocket.com,aes-256,1000
+chacha20-poly1305,yahoo.co.jp,yahoo.co.jp,aes-256,55
+chacha20-poly1305,yimg.jp,yimg.jp,aes-256,173

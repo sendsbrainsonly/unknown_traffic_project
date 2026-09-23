@@ -1,0 +1,22 @@
+{
+  "dataset": "iscx_vpn",
+  "flow_uids_sha256": "ffa4859d2c7ecd02d689223d525cb5d0161c2e207e5f9f715296faae4773d29b",
+  "known_test_values_stored": 0,
+  "legacy_first8_exact_parity": true,
+  "legacy_first8_mismatch_elements": {
+    "direction": 0,
+    "iat": 0,
+    "length": 0,
+    "mask": 0
+  },
+  "max_packets": 32,
+  "packet_directions_sha256": "8dec5325d0a25321173c6630d22e5589e40c089c123e539ab4e49545ef7ab43a",
+  "packet_iat_sha256": "c01aeef250591f8b11c56fc66aa4b7164f5d421039f012fb16e788e4a55ae5f2",
+  "packet_lengths_sha256": "d7d67e06e8ee3fc449213092ab6c1b2ea9065f4f50dfc3a55b7fc6ad8e4f776d",
+  "packet_mask_sha256": "27452ee219baf5c04f1cb6c58bfd549d0dc6a7e37935e4ffed0d35a259c39215",
+  "recovered_flows": 14521,
+  "scope": "union of frozen pilot Known Train/Validation sample IDs only",
+  "status": "PASS",
+  "target_flows": 14521,
+  "unknown_test_values_stored": 0
+}

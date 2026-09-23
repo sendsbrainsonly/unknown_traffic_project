@@ -1,0 +1,25 @@
+{
+  "analysis_scope": "POST_HOC_DIAGNOSTIC_ONLY",
+  "bootstrap_iterations": 1000,
+  "bootstrap_seed": 0,
+  "centroid_fit_data": "Known Train only",
+  "frozen_model_refit_performed": false,
+  "model_training_performed": false,
+  "native_identity": "PASS",
+  "pca_transform_parity": {
+    "known_max_abs_error": 0.0,
+    "status": "PASS",
+    "unknown_max_abs_error": 0.0
+  },
+  "sample_order": "PASS",
+  "score_chain_complete": true,
+  "setting": "high",
+  "stage9_AUROC_reproduction": {
+    "S0": 0.47213310379055773,
+    "S5": 0.8044775808052609,
+    "S6": 0.821250051181835
+  },
+  "status": "PASS",
+  "test_usage": "evaluation only",
+  "threshold_tuning_performed": false
+}

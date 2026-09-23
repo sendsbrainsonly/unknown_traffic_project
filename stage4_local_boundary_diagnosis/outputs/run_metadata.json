@@ -1,0 +1,162 @@
+{
+  "adaptive_k": false,
+  "command": "stage4_local_boundary_diagnosis/scripts/run_boundary_diagnosis.py --output-dir stage4_local_boundary_diagnosis/outputs",
+  "diagnosis": "C \u2014 LOCAL BOUNDARY NECESSARY",
+  "diagnosis_known_only_metrics": {
+    "class_test_gain_over_global": -0.056402545349541006,
+    "class_val_gain_over_global": -0.06499538508324038,
+    "local_test_increment_over_class": 0.1579021215120046,
+    "local_val_increment_over_class": 0.16214598319101714,
+    "test_class_mean_component_gap": 0.22830850060739258,
+    "test_global_mean_component_gap": 0.17190595525785157,
+    "test_local_mean_component_gap": 0.07040637909538797,
+    "val_class_mean_component_gap": 0.23416979999772952,
+    "val_global_max_component_gap": 0.8891190539746666,
+    "val_global_mean_component_gap": 0.16917441491448915,
+    "val_local_mean_component_gap": 0.07202381680671237
+  },
+  "diagnosis_rule": {
+    "class_sufficient": "Global-to-Class reduction >=0.02 validation and >=0.01 Known Test, Local Known-Test increment <0.01",
+    "global_mismatch": "maximum global validation component gap >=0.10 and positive Class gain on validation/test",
+    "local_necessary": "Class-to-Local mean component-gap reduction >=0.02 validation and >=0.01 Known Test",
+    "otherwise": "boundary not main issue"
+  },
+  "environment": {
+    "numpy": "1.26.4",
+    "pandas": "2.3.3",
+    "platform": "Linux-5.15.0-161-generic-x86_64-with-glibc2.35",
+    "prefix": "/home/birkenwald/data/SEU-WXY/conda_envs/2025-10-8-WXY-dgl_py310",
+    "python": "3.10.18",
+    "scikit_learn": "1.7.2",
+    "scipy": "1.15.3"
+  },
+  "execution_order": [
+    "all Known Validation calibration/coverage",
+    "all Known Test generalization",
+    "post-hoc Unknown Test mechanism"
+  ],
+  "execution_type": "post_hoc_mechanism_diagnosis",
+  "external_training_executed": false,
+  "fallback": "class P05",
+  "finished_at_utc": "2026-09-13T00:38:14Z",
+  "fit_operations_performed": [],
+  "frozen_operations": [
+    "transform",
+    "score_samples",
+    "_estimate_weighted_log_prob"
+  ],
+  "git_head": "ffcb0dfcaebe3b04b6d3bd42964d5a705303d2cc",
+  "k_modified": false,
+  "minimum_local_validation_samples": 30,
+  "next_external_benchmark": "CSTNET-TLS1.3",
+  "posthoc_unknown_validity": "POST_HOC_DIAGNOSTIC_ONLY",
+  "prediction_replay": [
+    {
+      "class_and_binary_parity": true,
+      "multi_score_max_abs_error": 0.0,
+      "native_score_max_abs_error": 0.0,
+      "population": "Known",
+      "rows": 48061,
+      "setting": "A-1",
+      "single_score_max_abs_error": 0.0
+    },
+    {
+      "class_and_binary_parity": true,
+      "multi_score_max_abs_error": 0.0,
+      "native_score_max_abs_error": 0.0,
+      "population": "Known",
+      "rows": 43332,
+      "setting": "A-2",
+      "single_score_max_abs_error": 0.0
+    },
+    {
+      "class_and_binary_parity": true,
+      "multi_score_max_abs_error": 0.0,
+      "native_score_max_abs_error": 0.0,
+      "population": "Known",
+      "rows": 38605,
+      "setting": "A-3",
+      "single_score_max_abs_error": 0.0
+    },
+    {
+      "class_and_binary_parity": true,
+      "multi_score_max_abs_error": 0.0,
+      "native_score_max_abs_error": 0.0,
+      "population": "Unknown",
+      "rows": 850,
+      "setting": "A-1",
+      "single_score_max_abs_error": 0.0
+    },
+    {
+      "class_and_binary_parity": true,
+      "multi_score_max_abs_error": 0.0,
+      "native_score_max_abs_error": 0.0,
+      "population": "Unknown",
+      "rows": 5579,
+      "setting": "A-2",
+      "single_score_max_abs_error": 0.0
+    },
+    {
+      "class_and_binary_parity": true,
+      "multi_score_max_abs_error": 0.0,
+      "native_score_max_abs_error": 0.0,
+      "population": "Unknown",
+      "rows": 10306,
+      "setting": "A-3",
+      "single_score_max_abs_error": 0.0
+    }
+  ],
+  "prediction_replay_all_pass": true,
+  "quantiles_executed": [
+    0.05
+  ],
+  "row_counts": {
+    "boundary_factor_correlations": 56,
+    "boundary_heterogeneity": 51,
+    "class_thresholds": 51,
+    "fallback_summary": 3,
+    "global_class_coverage": 51,
+    "global_component_coverage": 102,
+    "htbot_tinba_case_study": 850,
+    "known_test_boundary_generalization": 468,
+    "known_validation_boundary_comparison": 468,
+    "local_component_thresholds": 102,
+    "posthoc_unknown_boundary_results": 36,
+    "virut_neris_case_study": 236
+  },
+  "run_id": "stage4_local_boundary_diagnosis_v1",
+  "snapshot_commit": "ffcb0dfcaebe3b04b6d3bd42964d5a705303d2cc",
+  "stage3_package_hashes_after": {
+    "A-1": {
+      "files": 26,
+      "sha256": "0f8908d8602f704ba17db1f9cc4b1349bfd7b0dcc5babf5703680788fdad1be9"
+    },
+    "A-2": {
+      "files": 37,
+      "sha256": "5e0aa24845c391b2c71099df0f17db35bb6041f97af72290b5f773ad3242dfa6"
+    },
+    "A-3": {
+      "files": 26,
+      "sha256": "1328d3b3e81f9f6fe079d1d47a09859d0596c11f12e2835eecdc76475a3c22be"
+    }
+  },
+  "stage3_package_hashes_before": {
+    "A-1": {
+      "files": 26,
+      "sha256": "0f8908d8602f704ba17db1f9cc4b1349bfd7b0dcc5babf5703680788fdad1be9"
+    },
+    "A-2": {
+      "files": 37,
+      "sha256": "5e0aa24845c391b2c71099df0f17db35bb6041f97af72290b5f773ad3242dfa6"
+    },
+    "A-3": {
+      "files": 26,
+      "sha256": "1328d3b3e81f9f6fe079d1d47a09859d0596c11f12e2835eecdc76475a3c22be"
+    }
+  },
+  "stage3_threshold_modified": false,
+  "started_at_utc": "2026-09-13T00:38:00Z",
+  "status": "completed",
+  "unknown_calibration_samples": 0,
+  "unknown_test_observed_before_stage4": true
+}

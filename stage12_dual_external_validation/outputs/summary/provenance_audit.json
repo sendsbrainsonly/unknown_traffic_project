@@ -1,0 +1,84 @@
+{
+  "status": "PASS",
+  "open_detect_v6": {
+    "root": "/home/birkenwald/data/SEU-WXY/WXY-SEU/TrafficClassifier/Projects/Open-Detect/artifacts/paper-reproduction/v6-local-pcap-fivefold-corrected-v1",
+    "campaign_success": true,
+    "successful_runs": 15,
+    "expected_runs": 15,
+    "git": {
+      "commit": "f26ac911be4324110a6632912388cd19413353bd",
+      "status": ""
+    }
+  },
+  "frozen_stages": {
+    "stage10a": {
+      "root": "/home/birkenwald/data/SEU-WXY/WXY-SEU/TrafficClassifier/Projects/unknown_traffic_project/stage10a_opendetect_protocol_audit",
+      "required_present": true,
+      "required": [
+        "/home/birkenwald/data/SEU-WXY/WXY-SEU/TrafficClassifier/Projects/unknown_traffic_project/stage10a_opendetect_protocol_audit/README.md"
+      ],
+      "sha256": {
+        "README.md": "e8d84e7957103fe46168a782af2be083ef3d48c61d51bffbe89d81a2ccc602bf"
+      }
+    },
+    "stage10b": {
+      "root": "/home/birkenwald/data/SEU-WXY/WXY-SEU/TrafficClassifier/Projects/unknown_traffic_project/stage10b_opendetect_score_decomposition",
+      "required_present": true,
+      "required": [
+        "/home/birkenwald/data/SEU-WXY/WXY-SEU/TrafficClassifier/Projects/unknown_traffic_project/stage10b_opendetect_score_decomposition/README.md",
+        "/home/birkenwald/data/SEU-WXY/WXY-SEU/TrafficClassifier/Projects/unknown_traffic_project/stage10b_opendetect_score_decomposition/RESULTS.md",
+        "/home/birkenwald/data/SEU-WXY/WXY-SEU/TrafficClassifier/Projects/unknown_traffic_project/stage10b_opendetect_score_decomposition/manifest.json"
+      ],
+      "sha256": {
+        "README.md": "530ef6dc5367d9861568a5cff04abcd4780b97580f2259456d387cffa4e5c75c",
+        "RESULTS.md": "30ee4aade1f094c165386e9a4af8347b8369bfd9a1934d3ea6f398b30ce48262",
+        "manifest.json": "9243b5dd743168c7a3aaf86dde34fcffeacbcbcdece6ac90575e98c608f1a6e0"
+      }
+    },
+    "stage11a": {
+      "root": "/home/birkenwald/data/SEU-WXY/WXY-SEU/TrafficClassifier/Projects/unknown_traffic_project/stage11a_data_anchored_prototype",
+      "required_present": true,
+      "required": [
+        "/home/birkenwald/data/SEU-WXY/WXY-SEU/TrafficClassifier/Projects/unknown_traffic_project/stage11a_data_anchored_prototype/README.md",
+        "/home/birkenwald/data/SEU-WXY/WXY-SEU/TrafficClassifier/Projects/unknown_traffic_project/stage11a_data_anchored_prototype/RESULTS.md",
+        "/home/birkenwald/data/SEU-WXY/WXY-SEU/TrafficClassifier/Projects/unknown_traffic_project/stage11a_data_anchored_prototype/manifest.json"
+      ],
+      "sha256": {
+        "README.md": "16a71ca86a145ee5a37f658d4f815e421b9d4ed24e94de9a6e909b8777c370f1",
+        "RESULTS.md": "cae5c0c0fbc622abae1b420395293bbda0ae3823c2524c6a1469891817c6f40a",
+        "manifest.json": "0de84ea6636daeb668d38249a5ef220bb5caa6ae6e97a8c1bdc846af87d072c1"
+      }
+    },
+    "stage11b": {
+      "root": "/home/birkenwald/data/SEU-WXY/WXY-SEU/TrafficClassifier/Projects/unknown_traffic_project/stage11b_decoupled_support_readout",
+      "required_present": true,
+      "required": [
+        "/home/birkenwald/data/SEU-WXY/WXY-SEU/TrafficClassifier/Projects/unknown_traffic_project/stage11b_decoupled_support_readout/README.md",
+        "/home/birkenwald/data/SEU-WXY/WXY-SEU/TrafficClassifier/Projects/unknown_traffic_project/stage11b_decoupled_support_readout/RESULTS.md",
+        "/home/birkenwald/data/SEU-WXY/WXY-SEU/TrafficClassifier/Projects/unknown_traffic_project/stage11b_decoupled_support_readout/manifest.json"
+      ],
+      "sha256": {
+        "README.md": "6145431ed7af8e78a2bd13a1dbb02c28fb6ac65b8211c73cb6e5af9aa4c4c2d0",
+        "RESULTS.md": "40d3b0292f190c65e27265c084a43975e739ece2894bbef11bc315e77438446f",
+        "manifest.json": "f047512bc29cbfd26fb0bd0aa0b68dc09e737a3908a15698f36ca6bb073b4474"
+      }
+    },
+    "stage11c": {
+      "root": "/home/birkenwald/data/SEU-WXY/WXY-SEU/TrafficClassifier/Projects/unknown_traffic_project/stage11c_known_only_support_complexity",
+      "required_present": true,
+      "required": [
+        "/home/birkenwald/data/SEU-WXY/WXY-SEU/TrafficClassifier/Projects/unknown_traffic_project/stage11c_known_only_support_complexity/README.md",
+        "/home/birkenwald/data/SEU-WXY/WXY-SEU/TrafficClassifier/Projects/unknown_traffic_project/stage11c_known_only_support_complexity/RESULTS.md",
+        "/home/birkenwald/data/SEU-WXY/WXY-SEU/TrafficClassifier/Projects/unknown_traffic_project/stage11c_known_only_support_complexity/manifest.json"
+      ],
+      "sha256": {
+        "README.md": "658eaae12aff375a22b4a4657e2f25148c966988599e147472d78c3346b4c9dd",
+        "RESULTS.md": "adc44a4173a5771386edace52c1720f274f2fb67c4f9d9e24453937b70a6384b",
+        "manifest.json": "a554c440f2dcd193d90f310be2afbc6bdd7143c083f74147218a4653534aabc2"
+      }
+    }
+  },
+  "iscx_mentions_in_frozen_stage_readmes_or_results": [],
+  "independent_status": "METHOD_UNTOUCHED",
+  "config_sha256": "b5066d1ddfd38cad8136a76ba16f5342abc28729a342f3cefd51b2296f3053d2"
+}

@@ -1,0 +1,17 @@
+{
+  "conclusion": "PIPELINE_READY_WITH_KNOWN_TRANSIENT",
+  "des_executed": false,
+  "difficulty_attribution": "Known-class composition is the dominant cause; rsync/scp coexist only in Medium-2025.",
+  "dip_attribution": "Large drops are transient optimization dynamics and are not synchronized with scheduler/reset epochs.",
+  "fixed2022_medium2026_minus_medium2025_macro_f1": 0.21485840099432818,
+  "freeze_hash": "c904daef04d2c8e79469191121325c0a6ceeaeb3e595ef9c4c7d7a62c980ae2f",
+  "known_test_samples_used": 0,
+  "maximum_replay_absolute_difference": 1.1102230246251565e-16,
+  "observational_replays_parity_pass": true,
+  "primary_medium2026_minus_medium2025_macro_f1": 0.2534209085754615,
+  "reset_interpretation": "Resets cause prototype-norm discontinuities, but reset-epoch validation effects are small/mixed and recover.",
+  "same_seed_gap_fraction_of_primary_gap": 0.8478321784974167,
+  "status": "PASS",
+  "training_code_modified": false,
+  "unknown_test_samples_used": 0
+}

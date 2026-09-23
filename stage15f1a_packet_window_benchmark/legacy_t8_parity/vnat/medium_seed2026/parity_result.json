@@ -1,0 +1,27 @@
+{
+  "checkpoint_path": "/home/birkenwald/data/SEU-WXY/WXY-SEU/TrafficClassifier/Projects/unknown_traffic_project/stage15r_representation_bottleneck_audit/pilot_runs/e2/vnat/medium_seed2026/model_best.pt",
+  "checkpoint_sha256": "eb8f59304550cbe11fe4f2b94df80fcdf57c2c895475c72c6d55125c390343d2",
+  "classification_metrics_within_1e_12_and_loss_within_1e_6": true,
+  "confusion_exact_match": true,
+  "dataset": "vnat",
+  "known_test_samples_used": 0,
+  "known_train_samples": 15328,
+  "known_validation_samples": 1911,
+  "normalization_exact_match": true,
+  "parity_device": "cuda:0",
+  "protocol_id": "medium_seed2026",
+  "recomputed": {
+    "validation_accuracy": 0.97854526425955,
+    "validation_loss": 0.11250945514780511,
+    "validation_macro_f1": 0.856864843906067,
+    "validation_weighted_f1": 0.976706435869786
+  },
+  "reference": {
+    "validation_accuracy": 0.97854526425955,
+    "validation_loss": 0.11250945514780511,
+    "validation_macro_f1": 0.856864843906067,
+    "validation_weighted_f1": 0.976706435869786
+  },
+  "status": "PASS",
+  "unknown_test_samples_used": 0
+}

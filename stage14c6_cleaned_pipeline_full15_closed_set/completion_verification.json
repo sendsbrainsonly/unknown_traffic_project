@@ -1,0 +1,13 @@
+{
+  "checkpoints_sha256_verified": 15,
+  "conclusion": "CLOSED_SET_PASS_WITH_HARD_PROTOCOLS",
+  "des_executed": false,
+  "epochs_verified": 1500,
+  "freeze_hash": "c904daef04d2c8e79469191121325c0a6ceeaeb3e595ef9c4c7d7a62c980ae2f",
+  "frozen_input_hashes_unchanged": true,
+  "known_test_samples_used": 0,
+  "runs_completed": 15,
+  "stage14c4_metric_parity": true,
+  "status": "PASS",
+  "unknown_test_samples_used": 0
+}

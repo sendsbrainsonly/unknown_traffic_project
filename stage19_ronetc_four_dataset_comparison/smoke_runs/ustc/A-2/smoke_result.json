@@ -1,0 +1,24 @@
+{
+  "batch_size": 128,
+  "data_parallel": false,
+  "dataset": "ustc",
+  "finite_fused": true,
+  "finite_uncertainty": true,
+  "loss": 13.224876403808594,
+  "mode": "smoke",
+  "parity": {
+    "max_abs_differences_evidence_uncertainty_loss": [
+      0.0,
+      0.0,
+      0.0
+    ],
+    "status": "PASS"
+  },
+  "peak_gpu_memory_bytes": {
+    "0": 34887070720
+  },
+  "project_local_tmp_alias": "/proc/self/fd/3",
+  "protocol_id": "A-2",
+  "status": "PASS",
+  "visible_gpu_count": 1
+}

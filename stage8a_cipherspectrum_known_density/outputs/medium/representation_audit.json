@@ -1,0 +1,462 @@
+{
+  "checkpoint_best_epoch": 22,
+  "checkpoint_path": "/home/birkenwald/data/SEU-WXY/WXY-SEU/TrafficClassifier/Projects/unknown_traffic_project/stage7_cipherspectrum_known_training/runs/formal-medium-20260913/artifacts/training_best_checkpoint.pt",
+  "checkpoint_sha256": "59858ee8d9dcc0d36e64a8a396fcf0f401b720dbed8d2aa2f783761be352ac48",
+  "latent_dimension": 128,
+  "representation": "deterministic mu_x",
+  "setting": "medium",
+  "train": {
+    "all_zero_dimension_count": 0,
+    "all_zero_dimensions": [],
+    "collapse_detected": false,
+    "dtype": "float32",
+    "duplicate_rows": 0,
+    "inf_count": 0,
+    "max": 6.061473846435547,
+    "mean": 0.006205769175612352,
+    "min": -5.538177490234375,
+    "nan_count": 0,
+    "near_zero_variance_dimension_count": 0,
+    "near_zero_variance_dimensions": [],
+    "near_zero_variance_threshold": 1e-12,
+    "per_class": [
+      {
+        "centroid_norm": 5.9353713571871705,
+        "class_name": "adblockplus.org",
+        "support": 2099,
+        "within_class_variance": 0.09664188237416031
+      },
+      {
+        "centroid_norm": 5.627623677463535,
+        "class_name": "arin.net",
+        "support": 2098,
+        "within_class_variance": 0.11967045653938688
+      },
+      {
+        "centroid_norm": 5.577257124461859,
+        "class_name": "cloudfront.net",
+        "support": 1434,
+        "within_class_variance": 0.08303518972783197
+      },
+      {
+        "centroid_norm": 5.301983892865973,
+        "class_name": "coinbase.com",
+        "support": 2097,
+        "within_class_variance": 0.11734221019355413
+      },
+      {
+        "centroid_norm": 7.158353132630809,
+        "class_name": "cookielaw.org",
+        "support": 673,
+        "within_class_variance": 0.07591021456551794
+      },
+      {
+        "centroid_norm": 4.487740896310995,
+        "class_name": "ctfassets.net",
+        "support": 1984,
+        "within_class_variance": 0.12110683628494531
+      },
+      {
+        "centroid_norm": 3.729424734175958,
+        "class_name": "flipboard.com",
+        "support": 1277,
+        "within_class_variance": 0.1798318416773652
+      },
+      {
+        "centroid_norm": 5.830974385076502,
+        "class_name": "garmin.com",
+        "support": 1339,
+        "within_class_variance": 0.17054139798072904
+      },
+      {
+        "centroid_norm": 5.26592500918568,
+        "class_name": "gmx.net",
+        "support": 2100,
+        "within_class_variance": 0.11512830037678413
+      },
+      {
+        "centroid_norm": 6.016298306214126,
+        "class_name": "google-analytics.com",
+        "support": 1092,
+        "within_class_variance": 0.11342153490260246
+      },
+      {
+        "centroid_norm": 4.540111412827933,
+        "class_name": "google.com",
+        "support": 1654,
+        "within_class_variance": 0.1886369293293904
+      },
+      {
+        "centroid_norm": 5.408754770018785,
+        "class_name": "googleapis.com",
+        "support": 1125,
+        "within_class_variance": 0.12392126188926836
+      },
+      {
+        "centroid_norm": 5.331763111137062,
+        "class_name": "googletagmanager.com",
+        "support": 1159,
+        "within_class_variance": 0.15434860707997636
+      },
+      {
+        "centroid_norm": 4.996373039044262,
+        "class_name": "gstatic.com",
+        "support": 1012,
+        "within_class_variance": 0.13839866176675591
+      },
+      {
+        "centroid_norm": 6.648611619961522,
+        "class_name": "hsadspixel.net",
+        "support": 1022,
+        "within_class_variance": 0.09309334255013707
+      },
+      {
+        "centroid_norm": 6.503192596542905,
+        "class_name": "hubspot.com",
+        "support": 608,
+        "within_class_variance": 0.03173005396094705
+      },
+      {
+        "centroid_norm": 5.15062847116342,
+        "class_name": "joinhoney.com",
+        "support": 2096,
+        "within_class_variance": 0.15164793021531905
+      },
+      {
+        "centroid_norm": 5.231181911361342,
+        "class_name": "like-video.com",
+        "support": 2100,
+        "within_class_variance": 0.10289927220746525
+      },
+      {
+        "centroid_norm": 3.4717859244985037,
+        "class_name": "logitech.com",
+        "support": 1657,
+        "within_class_variance": 0.20778097817304303
+      },
+      {
+        "centroid_norm": 5.6659466373829455,
+        "class_name": "mozilla.net",
+        "support": 1937,
+        "within_class_variance": 0.030251705442435863
+      },
+      {
+        "centroid_norm": 5.065930533444956,
+        "class_name": "qualified.com",
+        "support": 1944,
+        "within_class_variance": 0.1646182837679378
+      },
+      {
+        "centroid_norm": 4.53486954915963,
+        "class_name": "robinhood.com",
+        "support": 2099,
+        "within_class_variance": 0.18317060185170647
+      },
+      {
+        "centroid_norm": 5.829465504247598,
+        "class_name": "segment.com",
+        "support": 1713,
+        "within_class_variance": 0.12957994060706196
+      },
+      {
+        "centroid_norm": 4.38716560904464,
+        "class_name": "sharethis.com",
+        "support": 2098,
+        "within_class_variance": 0.18750093801842896
+      },
+      {
+        "centroid_norm": 5.2327283214795255,
+        "class_name": "steamstatic.com",
+        "support": 2100,
+        "within_class_variance": 0.1437784715639463
+      },
+      {
+        "centroid_norm": 3.8693744136645627,
+        "class_name": "trustarc.com",
+        "support": 1814,
+        "within_class_variance": 0.1962909851688423
+      },
+      {
+        "centroid_norm": 5.52766321866724,
+        "class_name": "twitter.com",
+        "support": 1819,
+        "within_class_variance": 0.16205006290516916
+      },
+      {
+        "centroid_norm": 5.201932313831507,
+        "class_name": "typekit.net",
+        "support": 1295,
+        "within_class_variance": 0.11137770489800572
+      },
+      {
+        "centroid_norm": 4.761563818942804,
+        "class_name": "waze.com",
+        "support": 2096,
+        "within_class_variance": 0.13993275772845062
+      },
+      {
+        "centroid_norm": 5.214440053921338,
+        "class_name": "web.de",
+        "support": 2098,
+        "within_class_variance": 0.10115635093381069
+      },
+      {
+        "centroid_norm": 4.060731011770091,
+        "class_name": "wistia.com",
+        "support": 722,
+        "within_class_variance": 0.19772807295009537
+      },
+      {
+        "centroid_norm": 7.029379419713492,
+        "class_name": "xnxx-cdn.com",
+        "support": 2100,
+        "within_class_variance": 0.1298872399300037
+      },
+      {
+        "centroid_norm": 5.652232806494575,
+        "class_name": "yahoo.co.jp",
+        "support": 2081,
+        "within_class_variance": 0.138290069440056
+      },
+      {
+        "centroid_norm": 5.245579060144431,
+        "class_name": "yimg.jp",
+        "support": 2099,
+        "within_class_variance": 0.16007349963746004
+      }
+    ],
+    "shape": [
+      56641,
+      128
+    ],
+    "std": 0.5953499007937539,
+    "unique_rows": 56641
+  },
+  "validation": {
+    "all_zero_dimension_count": 0,
+    "all_zero_dimensions": [],
+    "collapse_detected": false,
+    "dtype": "float32",
+    "duplicate_rows": 0,
+    "inf_count": 0,
+    "max": 6.153481483459473,
+    "mean": 0.0052480582142927674,
+    "min": -5.649721145629883,
+    "nan_count": 0,
+    "near_zero_variance_dimension_count": 0,
+    "near_zero_variance_dimensions": [],
+    "near_zero_variance_threshold": 1e-12,
+    "per_class": [
+      {
+        "centroid_norm": 5.844985473288077,
+        "class_name": "adblockplus.org",
+        "support": 450,
+        "within_class_variance": 0.07559891196352815
+      },
+      {
+        "centroid_norm": 5.651194400141535,
+        "class_name": "arin.net",
+        "support": 451,
+        "within_class_variance": 0.11739902076912795
+      },
+      {
+        "centroid_norm": 5.8640110643630186,
+        "class_name": "cloudfront.net",
+        "support": 307,
+        "within_class_variance": 0.055532510301959305
+      },
+      {
+        "centroid_norm": 4.7764109898516685,
+        "class_name": "coinbase.com",
+        "support": 452,
+        "within_class_variance": 0.14904806832990414
+      },
+      {
+        "centroid_norm": 7.404975238141733,
+        "class_name": "cookielaw.org",
+        "support": 145,
+        "within_class_variance": 0.05963947258042804
+      },
+      {
+        "centroid_norm": 4.47655576898491,
+        "class_name": "ctfassets.net",
+        "support": 425,
+        "within_class_variance": 0.11625636317473917
+      },
+      {
+        "centroid_norm": 3.3872039072554023,
+        "class_name": "flipboard.com",
+        "support": 276,
+        "within_class_variance": 0.1923373668509631
+      },
+      {
+        "centroid_norm": 5.748803516903143,
+        "class_name": "garmin.com",
+        "support": 286,
+        "within_class_variance": 0.18139848032390954
+      },
+      {
+        "centroid_norm": 5.128401968870235,
+        "class_name": "gmx.net",
+        "support": 450,
+        "within_class_variance": 0.12078289207078552
+      },
+      {
+        "centroid_norm": 5.938076806571457,
+        "class_name": "google-analytics.com",
+        "support": 234,
+        "within_class_variance": 0.11949225421948398
+      },
+      {
+        "centroid_norm": 4.4378460357167615,
+        "class_name": "google.com",
+        "support": 355,
+        "within_class_variance": 0.1840011547171297
+      },
+      {
+        "centroid_norm": 5.15081520778241,
+        "class_name": "googleapis.com",
+        "support": 241,
+        "within_class_variance": 0.13092202475960082
+      },
+      {
+        "centroid_norm": 5.0788513860128734,
+        "class_name": "googletagmanager.com",
+        "support": 248,
+        "within_class_variance": 0.1691898534077022
+      },
+      {
+        "centroid_norm": 4.595534630036061,
+        "class_name": "gstatic.com",
+        "support": 217,
+        "within_class_variance": 0.1558311086629851
+      },
+      {
+        "centroid_norm": 6.939881947565173,
+        "class_name": "hsadspixel.net",
+        "support": 219,
+        "within_class_variance": 0.08164021376333574
+      },
+      {
+        "centroid_norm": 6.342149332633885,
+        "class_name": "hubspot.com",
+        "support": 130,
+        "within_class_variance": 0.03889462527548217
+      },
+      {
+        "centroid_norm": 5.492422608836512,
+        "class_name": "joinhoney.com",
+        "support": 452,
+        "within_class_variance": 0.15849280571274516
+      },
+      {
+        "centroid_norm": 5.3108671740418405,
+        "class_name": "like-video.com",
+        "support": 450,
+        "within_class_variance": 0.07996485631544709
+      },
+      {
+        "centroid_norm": 3.2761640927484224,
+        "class_name": "logitech.com",
+        "support": 354,
+        "within_class_variance": 0.213684995789652
+      },
+      {
+        "centroid_norm": 5.627219556093352,
+        "class_name": "mozilla.net",
+        "support": 415,
+        "within_class_variance": 0.03215315679575962
+      },
+      {
+        "centroid_norm": 4.898133149214712,
+        "class_name": "qualified.com",
+        "support": 416,
+        "within_class_variance": 0.16689372088995624
+      },
+      {
+        "centroid_norm": 4.665305720091958,
+        "class_name": "robinhood.com",
+        "support": 450,
+        "within_class_variance": 0.1850902227981936
+      },
+      {
+        "centroid_norm": 5.546491973886668,
+        "class_name": "segment.com",
+        "support": 367,
+        "within_class_variance": 0.1446407996851503
+      },
+      {
+        "centroid_norm": 4.05827772565211,
+        "class_name": "sharethis.com",
+        "support": 451,
+        "within_class_variance": 0.20848968940458854
+      },
+      {
+        "centroid_norm": 4.941442602938861,
+        "class_name": "steamstatic.com",
+        "support": 451,
+        "within_class_variance": 0.1617156156257382
+      },
+      {
+        "centroid_norm": 3.964217070685092,
+        "class_name": "trustarc.com",
+        "support": 388,
+        "within_class_variance": 0.18987775332105908
+      },
+      {
+        "centroid_norm": 5.380234073432858,
+        "class_name": "twitter.com",
+        "support": 390,
+        "within_class_variance": 0.15541378294540314
+      },
+      {
+        "centroid_norm": 5.0112027941169535,
+        "class_name": "typekit.net",
+        "support": 277,
+        "within_class_variance": 0.1209468061318781
+      },
+      {
+        "centroid_norm": 5.1310229459356025,
+        "class_name": "waze.com",
+        "support": 453,
+        "within_class_variance": 0.12492095752388721
+      },
+      {
+        "centroid_norm": 5.319546266873451,
+        "class_name": "web.de",
+        "support": 452,
+        "within_class_variance": 0.09154805138689563
+      },
+      {
+        "centroid_norm": 4.04841516150217,
+        "class_name": "wistia.com",
+        "support": 156,
+        "within_class_variance": 0.21480324163594766
+      },
+      {
+        "centroid_norm": 6.584432165145373,
+        "class_name": "xnxx-cdn.com",
+        "support": 449,
+        "within_class_variance": 0.1458135710941572
+      },
+      {
+        "centroid_norm": 5.570370813396258,
+        "class_name": "yahoo.co.jp",
+        "support": 461,
+        "within_class_variance": 0.13336474494896253
+      },
+      {
+        "centroid_norm": 5.562271174767411,
+        "class_name": "yimg.jp",
+        "support": 450,
+        "within_class_variance": 0.14018736713610994
+      }
+    ],
+    "shape": [
+      12168,
+      128
+    ],
+    "std": 0.5920197437677347,
+    "unique_rows": 12168
+  }
+}

@@ -1,0 +1,15 @@
+{
+  "conclusion": "PIPELINE_READY_WITH_KNOWN_TRANSIENT",
+  "des_executed": false,
+  "drop_events_after_epoch_50": 0,
+  "drop_events_at_reset": 0,
+  "external_input_hashes_unchanged": true,
+  "freeze_hash": "c904daef04d2c8e79469191121325c0a6ceeaeb3e595ef9c4c7d7a62c980ae2f",
+  "historical_drop_events": 24,
+  "known_test_samples_used": 0,
+  "maximum_replay_absolute_difference": 1.1102230246251565e-16,
+  "replay_parity_pass": true,
+  "required_artifacts_nonempty": true,
+  "status": "PASS",
+  "unknown_test_samples_used": 0
+}

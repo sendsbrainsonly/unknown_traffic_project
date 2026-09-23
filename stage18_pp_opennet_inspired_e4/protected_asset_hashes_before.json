@@ -1,0 +1,25 @@
+{
+  "files": 19,
+  "hashes": {
+    "stage16s_service_open_set_benchmark/manifest.json": "85bc79f1fb5ea03bf73ac3d2d0135e33b2d1f5e3ed9890bd75b35c090231d047",
+    "stage16s_service_open_set_benchmark/runs/loso_email/seed2022/checkpoint.sha256": "48c77e5e223f14a53d5bdd031a86c8630032f1c1ea043622c61231ffe3652398",
+    "stage16s_service_open_set_benchmark/runs/loso_email/seed2023/checkpoint.sha256": "b6ef841cc734ffe57cbf77cffe22d3ea2a5fe882a9bd26faa72e33df200e2030",
+    "stage16s_service_open_set_benchmark/runs/loso_email/seed2024/checkpoint.sha256": "1f1d45550985bad45b4b35a2fce907854b265db655800498c50b94fbbecd32d7",
+    "stage16s_service_open_set_benchmark/runs/loso_streaming/seed2022/checkpoint.sha256": "0672f9fee3281dea2e7c15ed459fbcfe18b7a7abadc8e8402a2572a32c4892d5",
+    "stage16s_service_open_set_benchmark/runs/loso_streaming/seed2024/checkpoint.sha256": "d2ff67533de74e3be5e5a66f5bd521b48ca798c931a40c6a7c2be935c3b6cf87",
+    "stage16s_service_open_set_benchmark/service_open_set_six_metrics.csv": "fbe5367450b7b6d5d2b62875cbc38faa511a21a7eede8b9c9600da8658f8e24d",
+    "stage16s_service_open_set_benchmark/service_unknown_protocol_manifest.csv": "498b78efae22638c80ec203974052d95cda81a04ac064d7266d2956a3f1556a5",
+    "stage17_encoder_recovery_and_open_set_pilot/completion_verification.json": "62abc32466af7c056c005f85ff34309cbf0bb648b37a39b5294f07c85c9c7cb0",
+    "stage17_encoder_recovery_and_open_set_pilot/encoder_pilot_predictions.csv": "c652c64dde73bcf04804291997e62bb807ab0e1a14a79f53571b092455cdd7e0",
+    "stage17_encoder_recovery_and_open_set_pilot/encoder_pilot_results.csv": "a54fb4d01a0a93d64e205754c6e63bc8f7ea8bea287f6845d3036e8916266f4d",
+    "stage17_encoder_recovery_and_open_set_pilot/feature_cache/service3065_historical_inputs.npz": "aff17d4b3271107852c0f30556627ab5daf693fba6a0a7b18df5f3785f260cff",
+    "stage17_encoder_recovery_and_open_set_pilot/runs/loso_email/seed2022/E3_model_best.pt": "92959f884a088383d2f0febc5ecfd4f30cb394e4921047f1677d3a9a90081e9c",
+    "stage17_encoder_recovery_and_open_set_pilot/runs/loso_email/seed2023/E3_model_best.pt": "030469973cd47f1a488266cf79638ded3e4f52ae9b46b40e44e655d837ce4a76",
+    "stage17_encoder_recovery_and_open_set_pilot/runs/loso_email/seed2024/E3_model_best.pt": "992b590c78031c536afe470568da601f5f0675dd9d2b6a5c3b06b05efddd8213",
+    "stage17_encoder_recovery_and_open_set_pilot/runs/loso_streaming/seed2022/E3_model_best.pt": "f48cd3f01040b3a341eb6a2cbd372d2976835805fc0ec2f174468e1ff3dfe441",
+    "stage17_encoder_recovery_and_open_set_pilot/runs/loso_streaming/seed2023/E3_model_best.pt": "6f6b3759edf036523bcfa320f4b53998f85ce4d0bfc40aacdc218ae730fe8ec7",
+    "stage17_encoder_recovery_and_open_set_pilot/runs/loso_streaming/seed2024/E3_model_best.pt": "f1353e1b412c42a7c5c4a4d499b84b3fff29c767b52d17e888d4f832c1bdfb90",
+    "stage17_encoder_recovery_and_open_set_pilot/service_loso_pilot_configs.json": "7e930ddd5f6a86c314706618f8e4dce08bdf98f069aee6e9334645284dc2a168"
+  },
+  "status": "PASS"
+}

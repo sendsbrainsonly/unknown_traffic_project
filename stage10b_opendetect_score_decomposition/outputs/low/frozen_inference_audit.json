@@ -1,0 +1,57 @@
+{
+  "analysis_scope": "POST_HOC_DIAGNOSTIC_ONLY",
+  "batch_size": 1024,
+  "checkpoint_path": "/home/birkenwald/data/SEU-WXY/WXY-SEU/TrafficClassifier/Projects/unknown_traffic_project/stage7_cipherspectrum_known_training/runs/formal-low-20260913/artifacts/training_best_checkpoint.pt",
+  "checkpoint_sha256": "78e23b0d9795a7829c03d740c67c5a823ca9f6ea36bda4cd0e24338a168b4d92",
+  "cuda_device_name": "NVIDIA L20",
+  "mu_alignment_tolerances": {
+    "max_abs_error": 5e-05,
+    "mean_abs_error": 1e-06
+  },
+  "operation": "DIAGNOSTIC-ONLY FROZEN INFERENCE; eval mode; mu/logvar only",
+  "physical_gpu": "0",
+  "preprocessing": "exact Stage9 FrozenImageDataset: uint8 [32,32] -> [1,32,32] float32 / 255",
+  "roles": {
+    "known_test": {
+      "alignment_status": "PASS",
+      "finite_logvar": true,
+      "finite_mu": true,
+      "logvar_shape": [
+        16246,
+        128
+      ],
+      "max_abs_error": 0.0,
+      "mean_abs_error": 0.0,
+      "sample_count": 16246,
+      "sample_id_order": "PASS",
+      "shape": [
+        16246,
+        128
+      ]
+    },
+    "unknown_test": {
+      "alignment_status": "PASS",
+      "finite_logvar": true,
+      "finite_mu": true,
+      "logvar_shape": [
+        6000,
+        128
+      ],
+      "max_abs_error": 0.0,
+      "mean_abs_error": 0.0,
+      "sample_count": 6000,
+      "sample_id_order": "PASS",
+      "shape": [
+        6000,
+        128
+      ]
+    }
+  },
+  "sample_order_source": "Stage9 frozen manifests and sample_id arrays",
+  "setting": "low",
+  "stability_guard_activations": 0,
+  "status": "PASS",
+  "threshold_tuning_performed": false,
+  "training_performed": false,
+  "workers": 0
+}

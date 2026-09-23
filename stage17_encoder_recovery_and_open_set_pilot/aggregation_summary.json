@@ -1,0 +1,11 @@
+{
+  "e3_gt_e1_runs": 6,
+  "formal_runs": 6,
+  "mean_e3_minus_e0_auroc": 0.0645936392806531,
+  "prediction_rows": 20028,
+  "promotion_supported": false,
+  "results_rows": 30,
+  "reused_e0_runs": 6,
+  "status": "PASS",
+  "trained_checkpoints": 18
+}

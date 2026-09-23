@@ -1,0 +1,27 @@
+{
+  "checkpoint_path": "/home/birkenwald/data/SEU-WXY/WXY-SEU/TrafficClassifier/Projects/unknown_traffic_project/stage15r_representation_bottleneck_audit/pilot_runs/e2/iscx_tor/medium_seed2022/model_best.pt",
+  "checkpoint_sha256": "a8377c438a9d658e31bed094ee3a98eaf7e21e4cd3a9c5267dfefe8dd85b79df",
+  "classification_metrics_within_1e_12_and_loss_within_1e_6": true,
+  "confusion_exact_match": true,
+  "dataset": "iscx_tor",
+  "known_test_samples_used": 0,
+  "known_train_samples": 8876,
+  "known_validation_samples": 1107,
+  "normalization_exact_match": true,
+  "parity_device": "cuda:0",
+  "protocol_id": "medium_seed2022",
+  "recomputed": {
+    "validation_accuracy": 0.4715447154471545,
+    "validation_loss": 1.3546540751151384,
+    "validation_macro_f1": 0.425009660822321,
+    "validation_weighted_f1": 0.45769839418655806
+  },
+  "reference": {
+    "validation_accuracy": 0.4715447154471545,
+    "validation_loss": 1.3546540751151384,
+    "validation_macro_f1": 0.425009660822321,
+    "validation_weighted_f1": 0.45769839418655806
+  },
+  "status": "PASS",
+  "unknown_test_samples_used": 0
+}

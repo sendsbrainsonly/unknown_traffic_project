@@ -1,0 +1,47 @@
+{
+  "created_before_any_test_result": true,
+  "evaluation_config_v2_path": "/home/birkenwald/data/SEU-WXY/WXY-SEU/TrafficClassifier/Projects/unknown_traffic_project/stage8b_cipherspectrum_dgsbv2/configs/evaluation_config_v2.json",
+  "evaluation_config_v2_sha256": "2eadc7c7ce5cba91d5d164ee541aae7d1f6f600cdfe995046ddbf0d7b0f49b60",
+  "first_test_open": true,
+  "git_commit": "ffcb0dfcaebe3b04b6d3bd42964d5a705303d2cc",
+  "git_status": " M EXPERIMENT_RESULTS.md\n M README.md\n M configs/dataset/ustc_tfc2016.yaml\n M \"\\346\\234\\252\\347\\237\\245\\346\\265\\201\\351\\207\\217_\\346\\234\\252\\347\\237\\245\\346\\224\\273\\345\\207\\273\\346\\243\\200\\346\\265\\213_\\344\\270\\211\\346\\240\\270\\345\\277\\203\\351\\227\\256\\351\\242\\230_\\345\\255\\246\\347\\224\\237\\350\\257\\246\\347\\273\\206\\345\\256\\236\\351\\252\\214\\350\\256\\241\\345\\210\\222_\\345\\205\\254\\345\\274\\217\\344\\274\\230\\345\\214\\226\\347\\211\\210.md\"\n?? .agents/\n?? .artifacts/\n?? .tmux-task/\n?? AGENTS.md\n?? cipherspectrum_labeling/\n?? dataset_suitability_audit/\n?? docs/SMB_20CLASS_FINETUNE_REPAIR.md\n?? docs/TRAFFICFORMER_RUNTIME_SOURCE.md\n?? four_dataset_readiness_audit/\n?? opendetect_ustc_encoder_audit/\n?? scripts/task00_build_ustc20_view.py\n?? scripts/task08a_export_model_a_zt_repo.py\n?? scripts/task10f_covariance_diagnosis.py\n?? scripts/task10g_component_shortcut_audit.py\n?? scripts/task11_cicids2017_prepare.py\n?? scripts/task12_cicids2017_trafficformer.py\n?? scripts/task13_cicids2017_gaussian_audit.py\n?? scripts/task14_cicids2017_component_shortcut_audit.py\n?? scripts/task_cicids2017_existing_mapping_audit.py\n?? src/preprocessing/ustc20_view.py\n?? stage3_failure_diagnosis/\n?? stage3_unknown_utility/artifacts/\n?? stage4_local_boundary_diagnosis/\n?? stage5_5_cstnet_preflight/\n?? stage5_dual_gate_boundary/\n?? stage6_cipherspectrum_protocol/\n?? stage7_cipherspectrum_known_training/\n?? stage8a_cipherspectrum_known_density/\n?? stage8b_cipherspectrum_dgsbv2/\n?? stage9_cipherspectrum_final_test/\n?? tests/test_cicids2017_component_shortcut_audit.py\n?? tests/test_cicids2017_gaussian_audit.py\n?? tests/test_component_shortcut_audit.py\n?? tests/test_covariance_diagnosis.py\n?? tests/test_ustc20_view.py\n?? tf_runtime/\n?? \"\\345\\256\\236\\351\\252\\214\\350\\277\\233\\345\\272\\246\\346\\212\\245\\345\\221\\212_2026-09-08.docx\"\n?? \"\\346\\234\\252\\347\\237\\245\\346\\265\\201\\351\\207\\217_\\346\\234\\252\\347\\237\\245\\346\\224\\273\\345\\207\\273\\346\\243\\200\\346\\265\\213_\\344\\270\\211\\346\\240\\270\\345\\277\\203\\351\\227\\256\\351\\242\\230_\\345\\255\\246\\347\\224\\237\\350\\257\\246\\347\\273\\206\\345\\256\\236\\351\\252\\214\\350\\256\\241\\345\\210\\222_\\345\\205\\254\\345\\274\\217\\344\\274\\230\\345\\214\\226\\347\\211\\210_before_stage3_revision.md\"",
+  "methods_frozen_before_test": true,
+  "post_test_tuning_performed": false,
+  "stage8b_setting_rule_sha256": {
+    "high": "fa8e5eb2ef7449d2675ac8ae4c3d552fa4f63752e049dc49cdef04244eb3d250",
+    "low": "111a32d40498c6c7c9cfefedeb1dcbb2f4d3b8d2e3fb27a72d77fdb609baad1c",
+    "medium": "b42bcb0919376f5734de34340b40e892f4a89d7a52f61dca3e3a90ba6a689519"
+  },
+  "stage8b_unified_rule_sha256": "4cadbc55766e6d07b944422a65e26c52ac140b48fa0c4d88c24635cf9146c271",
+  "stage9_frozen_implementation": [
+    {
+      "path": "/home/birkenwald/data/SEU-WXY/WXY-SEU/TrafficClassifier/Projects/unknown_traffic_project/stage9_cipherspectrum_final_test/configs/stage9_config.json",
+      "sha256": "8a347d0cdde35c1410a79ab1db427babdfde0ffca120e9349aac3d2228e5a232"
+    },
+    {
+      "path": "/home/birkenwald/data/SEU-WXY/WXY-SEU/TrafficClassifier/Projects/unknown_traffic_project/stage8b_cipherspectrum_dgsbv2/configs/evaluation_config_v2.json",
+      "sha256": "2eadc7c7ce5cba91d5d164ee541aae7d1f6f600cdfe995046ddbf0d7b0f49b60"
+    },
+    {
+      "path": "/home/birkenwald/data/SEU-WXY/WXY-SEU/TrafficClassifier/Projects/unknown_traffic_project/stage9_cipherspectrum_final_test/scripts/stage9_common.py",
+      "sha256": "6fb9f86ebbedcf0f5e00ebc2e1004d5e4e3171d727210e6cda54c922ff0fd214"
+    },
+    {
+      "path": "/home/birkenwald/data/SEU-WXY/WXY-SEU/TrafficClassifier/Projects/unknown_traffic_project/stage9_cipherspectrum_final_test/scripts/prepare_test_inputs.py",
+      "sha256": "79f3c467168671b75e301d8d04b24ec0d4ae72afbd0beb9252af24a143996dbe"
+    },
+    {
+      "path": "/home/birkenwald/data/SEU-WXY/WXY-SEU/TrafficClassifier/Projects/unknown_traffic_project/stage9_cipherspectrum_final_test/scripts/extract_test_representations.py",
+      "sha256": "e40719e93e8b6fddc1b9408ba0a5d64f6e79851754049ec1b6681d7d2c410cff"
+    },
+    {
+      "path": "/home/birkenwald/data/SEU-WXY/WXY-SEU/TrafficClassifier/Projects/unknown_traffic_project/stage9_cipherspectrum_final_test/scripts/evaluate_setting.py",
+      "sha256": "83a297b0e97540fed26c2836867beb2776088ae0536015241cac8e5d1c9b9ace"
+    },
+    {
+      "path": "/home/birkenwald/data/SEU-WXY/WXY-SEU/TrafficClassifier/Projects/unknown_traffic_project/stage9_cipherspectrum_final_test/scripts/finalize_stage9.py",
+      "sha256": "3485f6b7093ac1876337009fbf34d02181a8e9e82b9dcef6a8dfd5995e32a985"
+    }
+  ],
+  "test_open_started_at": "2026-09-13T14:30:55.571231+00:00"
+}

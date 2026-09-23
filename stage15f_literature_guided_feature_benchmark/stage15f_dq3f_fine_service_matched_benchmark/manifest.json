@@ -1,0 +1,834 @@
+{
+  "schema_version": 1,
+  "experiment_id": "stage15f-dq3f-fine-service-matched-benchmark-20260920-v1",
+  "created_at_utc": "2026-09-20T06:40:09Z",
+  "updated_at_utc": "2026-09-20T07:14:36Z",
+  "status": "success",
+  "experiment_type": "controlled_training_benchmark",
+  "claim_scope": "diagnostic",
+  "objective": "Matched-sample Fine Application versus direct Service Known-only training on DQ-3R frozen flows",
+  "inputs": [
+    {
+      "path": "../stage15f_dq3r_service_label_reconstruction/service_label_provenance.csv",
+      "role": "frozen weak Service label provenance",
+      "samples": 3065
+    },
+    {
+      "path": "../../stage12_dual_external_validation/artifacts/iscx_vpn/protocol/medium/known_train.npz",
+      "role": "source Known Train traffic images; only 2730 frozen matched rows loaded"
+    },
+    {
+      "path": "../../stage12_dual_external_validation/artifacts/iscx_vpn/protocol/medium/known_validation.npz",
+      "role": "source Known Validation traffic images; only 335 frozen matched rows loaded"
+    }
+  ],
+  "code": {
+    "revision": null,
+    "dirty": true,
+    "changes": [
+      "new isolated DQ-3F scripts and outputs only; historical experiment assets unchanged"
+    ]
+  },
+  "execution": {
+    "tmux_session": "s15fdq3f_train_v3_20260920",
+    "command": "select_gpu.py --min-free-gb 8 -- python scripts/run_training_queue.py",
+    "exit_code": 0,
+    "environment": "/home/birkenwald/data/SEU-WXY/conda_envs/2025-10-8-WXY-dgl_py310",
+    "physical_gpu_ids": [
+      6
+    ],
+    "log": "../../.tmux-task/s15fdq3f_train_v3_20260920/output.log",
+    "exit_status": "../../.tmux-task/s15fdq3f_train_v3_20260920/exit.status"
+  },
+  "configuration": {
+    "files": [
+      "dq3f_training_configs.json",
+      "../stage15f_dq3r_service_label_reconstruction/dq3f_preregistered_config.json"
+    ],
+    "parameters": {
+      "tasks": [
+        "F1 Fine",
+        "F2 Partial",
+        "F3 Service"
+      ],
+      "train_samples": 2730,
+      "validation_samples": 335,
+      "fine_classes": 11,
+      "service_classes": 6,
+      "checkpoint_selection": "Known Validation Accuracy"
+    },
+    "seeds": [
+      2022,
+      2023,
+      2024
+    ]
+  },
+  "core_results": [
+    {
+      "metric": "F1 Fine Accuracy/Macro-F1/Weighted-F1 mean",
+      "value": "0.784080/0.635049/0.775730"
+    },
+    {
+      "metric": "F2 Partial Accuracy/Macro-F1 mean",
+      "value": "0.913223/0.871102"
+    },
+    {
+      "metric": "F3 Service Accuracy/Macro-F1/Weighted-F1 mean",
+      "value": "0.890547/0.856050/0.888036"
+    },
+    {
+      "metric": "primary_gate",
+      "value": "COARSE_TRAINING_BENEFIT"
+    },
+    {
+      "metric": "capture_gate",
+      "value": "CAPTURE_GENERALIZATION_NOT_IDENTIFIABLE"
+    }
+  ],
+  "artifacts": [
+    {
+      "path": "capture_dependency_audit.md",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 962,
+      "sha256": "5a7e4c1facb5822500822ed31351ffdc72cef77ae759f8c3a7b542c7edd86f82",
+      "hash_status": "verified"
+    },
+    {
+      "path": "capture_level_results.csv",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 15051,
+      "sha256": "0fc4bf57a8e541c1fba24d2d773bf50a7594bae267d936a04dad08a70a009293",
+      "hash_status": "verified"
+    },
+    {
+      "path": "checkpoint_hashes.csv",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 1835,
+      "sha256": "e54f4f566697d24099283d51e59b4909c3a3aa5633091ee27e0c97cc195d6661",
+      "hash_status": "verified"
+    },
+    {
+      "path": "coarse_f2_partial_predictions.csv",
+      "scope": "bundle",
+      "role": "predictions",
+      "size_bytes": 165612,
+      "sha256": "979876b2355d350a76ad8e71f2b0f7bc2f116d917df8046d69ed46f206a761b9",
+      "hash_status": "verified"
+    },
+    {
+      "path": "coarse_f2_partial_results.csv",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 373,
+      "sha256": "d6ce9a79eec7e4888af1f88b3d3ecb25dfe6748ee78a18b82f3c321e7889973d",
+      "hash_status": "verified"
+    },
+    {
+      "path": "completion_verification.json",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 1662,
+      "sha256": "7d4f31b3da0e1b5f29e26065a3223ebaba05a5faca5da5d0f237a96cd7ca6d71",
+      "hash_status": "verified"
+    },
+    {
+      "path": "dq3f_label_audit.md",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 1268,
+      "sha256": "3b3659d7b5e374fd05ae4bef029cc1538399e608373b161586b1549750047d13",
+      "hash_status": "verified"
+    },
+    {
+      "path": "dq3f_manifest_parity.csv",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 328,
+      "sha256": "11333a4686f493a24198433f2032a89869a8a8b819be77e768976e6d07eb6222",
+      "hash_status": "verified"
+    },
+    {
+      "path": "dq3f_report.md",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 5679,
+      "sha256": "f53cb5b1edd0234781d7ad29ccdb9133bc390e89a2969d427b935d1397fd70a0",
+      "hash_status": "verified"
+    },
+    {
+      "path": "dq3f_training_configs.json",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 2616,
+      "sha256": "3bf034967457f770c3dac15b78ada4f5c84f57983a5a18dc33d1ce122ca8f8d6",
+      "hash_status": "verified"
+    },
+    {
+      "path": "failed_attempts/README.md",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 722,
+      "sha256": "8d8d1a81fec602590e670b90671f79a8cf79319100016b0739b3576219b72546",
+      "hash_status": "verified"
+    },
+    {
+      "path": "fine_confusion_matrix.csv",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 9140,
+      "sha256": "7d1086726d93eee3b2416b3ad5395f8dfe4d28319a7c5dac074f1484ccb73d54",
+      "hash_status": "verified"
+    },
+    {
+      "path": "fine_f1_predictions.csv",
+      "scope": "bundle",
+      "role": "predictions",
+      "size_bytes": 201163,
+      "sha256": "66e0b68e446177e01041db3602746229d72df3f690df485e97d3001b0c6810b6",
+      "hash_status": "verified"
+    },
+    {
+      "path": "fine_f1_results.csv",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 1549,
+      "sha256": "44542b1e70d85caae5c8ae1571c6878f6932793556674c0a406165d1c17c4344",
+      "hash_status": "verified"
+    },
+    {
+      "path": "fine_to_service_error_decomposition.csv",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 439,
+      "sha256": "35bdd5b9a1649c9a667eee2c72014f8a6584c836648596d0558829bae7ac3d8c",
+      "hash_status": "verified"
+    },
+    {
+      "path": "matched_subset_comparison.csv",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 1720,
+      "sha256": "48e436beb5ee39bb082c9c4bcf4a25be599f2ce6d436da45a7838681afd6db06",
+      "hash_status": "verified"
+    },
+    {
+      "path": "paired_error_analysis.csv",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 681,
+      "sha256": "8abaae2c152aaed6743ba53cf4140e7033ada9902270746b535535449c0e7ad5",
+      "hash_status": "verified"
+    },
+    {
+      "path": "per_class_metrics.csv",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 2360,
+      "sha256": "87ba4bc27326b3fb57a72ab5cecdebbb3ab89b6f594a7ef0d57f9d1f87af1c4d",
+      "hash_status": "verified"
+    },
+    {
+      "path": "per_service_metrics.csv",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 2901,
+      "sha256": "d0b8d25d9bdb3466080495c93972e33e912f1188451d92bea08f8fad34a28124",
+      "hash_status": "verified"
+    },
+    {
+      "path": "preflight_status.json",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 276,
+      "sha256": "5a7f1ae71ca6b0b00a039c77e037bb46ea0668b289e9a9f61b293573a0205899",
+      "hash_status": "verified"
+    },
+    {
+      "path": "protected_asset_hashes_after.json",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 5001,
+      "sha256": "31126cf40055e8e080ffa45c16c862292de5a5a0651e173236bc26db32ef6c1c",
+      "hash_status": "verified"
+    },
+    {
+      "path": "protected_asset_hashes_before.json",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 5001,
+      "sha256": "31126cf40055e8e080ffa45c16c862292de5a5a0651e173236bc26db32ef6c1c",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/fine/seed2022/SUCCESS",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 8,
+      "sha256": "1f513d4ecec4e91ddd48da1a59b6d96f1b76c374dc1da641980782a34f43b102",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/fine/seed2022/checkpoint.sha256",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 80,
+      "sha256": "3d4ba9a7b614eb2cd0e5ff97f00d91262193fe748a4aab9f4d1c8d86b1469651",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/fine/seed2022/classification_metrics.json",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 2554,
+      "sha256": "13cac0f211a67a2e750b8f38d86a7acb65dfb0839b74d5d3ce6a45d85e7e9941",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/fine/seed2022/config.json",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 1599,
+      "sha256": "00b92207ed8d284000d931026a6182b8a3975ec190dea33458c39dcac7add63d",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/fine/seed2022/model_best.pt",
+      "scope": "bundle",
+      "role": "checkpoint",
+      "size_bytes": 108334802,
+      "sha256": "e9266b4b2a4366b138f11aa2202562a8f393598ea2ac974f7a23c0ae1842746d",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/fine/seed2022/result.json",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 1110,
+      "sha256": "4da0be35028f3a013a3fbe4238b5cfe39b9fbf8fe092dea358e50201ff94f4f6",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/fine/seed2022/training_log.csv",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 23671,
+      "sha256": "7dba35bb8d1beeea6304ec65a23b9b3701cb856aba45ef1fc1a2176a145f9db7",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/fine/seed2022/training_log.jsonl",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 47881,
+      "sha256": "c2590393dc02c61d922687551a6acb199d87395d4796fea3be83065941b27feb",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/fine/seed2022/validation_predictions.csv",
+      "scope": "bundle",
+      "role": "predictions",
+      "size_bytes": 67116,
+      "sha256": "7816f91adb5bd74c5d2c5a1462d756d1afb9cc776f46528336512d22ea8ff0d4",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/fine/seed2023/SUCCESS",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 8,
+      "sha256": "1f513d4ecec4e91ddd48da1a59b6d96f1b76c374dc1da641980782a34f43b102",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/fine/seed2023/checkpoint.sha256",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 80,
+      "sha256": "efb11548040a24d4cd2b0100d0ddbfb85e2989872305b0e2befe511c03c5cf75",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/fine/seed2023/classification_metrics.json",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 2559,
+      "sha256": "0b4bc24984bb4ae03dbd51302a23114556a3c94a31f378dfb60d94a62ff991f0",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/fine/seed2023/config.json",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 1599,
+      "sha256": "649f38dbee4426c1c2f7e05546d3863dba12d47deb0e6abab447951cec8eeaa5",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/fine/seed2023/model_best.pt",
+      "scope": "bundle",
+      "role": "checkpoint",
+      "size_bytes": 108334802,
+      "sha256": "52d419e6f0cd2954cf24bc2edf9d9ed37ab9a32866f493eaab12e90639ce85d7",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/fine/seed2023/result.json",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 1110,
+      "sha256": "e800284ddaeef0203474bd77daf82af563d465ad8c02500b7f1c02b81f621f77",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/fine/seed2023/training_log.csv",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 26050,
+      "sha256": "c36be6c0f1201f72806a7cd7eb462cab0aa5deb27d759e907485ea11e380c826",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/fine/seed2023/training_log.jsonl",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 52681,
+      "sha256": "010497a8b6853a9bfe5ad4e7b8c5f46ff44c26e8ec9242321121c6510a918912",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/fine/seed2023/validation_predictions.csv",
+      "scope": "bundle",
+      "role": "predictions",
+      "size_bytes": 67183,
+      "sha256": "57a6fc04089301681bddfbd3d5b84ca971d7c7362cc0426c1654c0ee13d87c72",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/fine/seed2024/SUCCESS",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 8,
+      "sha256": "1f513d4ecec4e91ddd48da1a59b6d96f1b76c374dc1da641980782a34f43b102",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/fine/seed2024/checkpoint.sha256",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 80,
+      "sha256": "e800a6817938b830286163ab9851bd49c353544c2d665efb557d543e1300d7a7",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/fine/seed2024/classification_metrics.json",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 2524,
+      "sha256": "eb960c8cdcb6fb58072157f005516f1f2297c563819968e00f5a3fcceadaed17",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/fine/seed2024/config.json",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 1599,
+      "sha256": "4c13f3d2157606ab049262eaf00cfe70e9bd9dfeb984749f33704597f267ea21",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/fine/seed2024/model_best.pt",
+      "scope": "bundle",
+      "role": "checkpoint",
+      "size_bytes": 108334802,
+      "sha256": "458558bd715d28f955b821fc97a1bad649888e15ef607516cdba88d0d918f7fb",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/fine/seed2024/result.json",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 1078,
+      "sha256": "751424af8bc28995fc856a371453413718cfbfcdd5758b45d1aa8c069454374e",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/fine/seed2024/training_log.csv",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 23452,
+      "sha256": "2966b8aea500d05371e1a9c5808907397aff9bbceec360f3c0763053f1ec2035",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/fine/seed2024/training_log.jsonl",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 47931,
+      "sha256": "46455434a077164b3988ad2455246710379b489299d664440689764654e257c8",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/fine/seed2024/validation_predictions.csv",
+      "scope": "bundle",
+      "role": "predictions",
+      "size_bytes": 67156,
+      "sha256": "835a1ac176dcfa4039c072cf2b9386ecee8e2d52a40da37a6518ae3ce7438bc1",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/service/seed2022/SUCCESS",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 8,
+      "sha256": "1f513d4ecec4e91ddd48da1a59b6d96f1b76c374dc1da641980782a34f43b102",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/service/seed2022/checkpoint.sha256",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 80,
+      "sha256": "3cdd1efd7d24c8859ff64030ae098ff7926c660a52e36de6c7e3eae4db2616c7",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/service/seed2022/classification_metrics.json",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 1469,
+      "sha256": "219940638f3d4b42d3d12ca296b99b576929bab8d898c9b67adca43c74782824",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/service/seed2022/config.json",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 1450,
+      "sha256": "ec36b5410ec2ecfc56f3ce935b510bf7ed15fbdae2b96afd60999aa7f7071583",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/service/seed2022/model_best.pt",
+      "scope": "bundle",
+      "role": "checkpoint",
+      "size_bytes": 108332178,
+      "sha256": "a385c27dcd8a5426a75fbadb2ada0449ebf24c7ffdc6c727c4a34de2e966108a",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/service/seed2022/result.json",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 1051,
+      "sha256": "7dbf301b0e378466fdd62d64841cc094b12a9b25bdb590f79d931e09dcbd7859",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/service/seed2022/training_log.csv",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 26250,
+      "sha256": "c5d9c134b2c6019e173a29a8e1c16dddd5d7c6b8c573f0899ff1a50cce9d5df4",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/service/seed2022/training_log.jsonl",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 52881,
+      "sha256": "140d6ef301af5cdf3af8e15d038539d45e929e7242d60414e2d1c0b9b9b7ae93",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/service/seed2022/validation_predictions.csv",
+      "scope": "bundle",
+      "role": "predictions",
+      "size_bytes": 67344,
+      "sha256": "2d8e710e0f707dcfb7c2994f8a9badf5ef0e817792283e579ed1d131c5978eac",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/service/seed2023/SUCCESS",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 8,
+      "sha256": "1f513d4ecec4e91ddd48da1a59b6d96f1b76c374dc1da641980782a34f43b102",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/service/seed2023/checkpoint.sha256",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 80,
+      "sha256": "41101ea3f7f9b2bcdcfcffa38a3a89a9fc79537ab5d4fdb83facccd54f6b7fa5",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/service/seed2023/classification_metrics.json",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 1470,
+      "sha256": "c1bc2cc3c3e6778b1fd3b04fef0e868a2ddb9223cfaacd319f418529cdfb35ac",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/service/seed2023/config.json",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 1450,
+      "sha256": "6f9a53a510a25f1567df392f139312385a0d69b6b5920ff0a9b132820417c7ae",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/service/seed2023/model_best.pt",
+      "scope": "bundle",
+      "role": "checkpoint",
+      "size_bytes": 108332178,
+      "sha256": "1406898d027c38c2f6a22abcf364db7912057e524eab2d9a33276c191ff9a9f1",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/service/seed2023/result.json",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 1049,
+      "sha256": "7870b748533eb3148a640bd03a4185d74b17cbaa8784d9223a34ce0e387fc907",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/service/seed2023/training_log.csv",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 24559,
+      "sha256": "80326430120ecddb7b269bcff232f2012093048b07690048f92494758acba40b",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/service/seed2023/training_log.jsonl",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 49576,
+      "sha256": "8ec0c3a5fdcf9699fea050fa2381970d9de78e03a6a30e9b41eb5eebfbf300b2",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/service/seed2023/validation_predictions.csv",
+      "scope": "bundle",
+      "role": "predictions",
+      "size_bytes": 67197,
+      "sha256": "da7fded46174ff8a3cb78344210b5247560344649a4daf1e1d6cdec0ecbcd840",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/service/seed2024/SUCCESS",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 8,
+      "sha256": "1f513d4ecec4e91ddd48da1a59b6d96f1b76c374dc1da641980782a34f43b102",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/service/seed2024/checkpoint.sha256",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 80,
+      "sha256": "243501aa1e8b8ec7c1cd662d57012001374e520b9227d4334a277fcff5ed19ad",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/service/seed2024/classification_metrics.json",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 1522,
+      "sha256": "28165afab455012ea41ba5ee8be396dc678588bb6125371c4ffe7d77099ac621",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/service/seed2024/config.json",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 1450,
+      "sha256": "f764f0b480d816156b0688a991d1e9c61d986ab27177ffc000f14d5d2dfb4dc6",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/service/seed2024/model_best.pt",
+      "scope": "bundle",
+      "role": "checkpoint",
+      "size_bytes": 108332178,
+      "sha256": "de4bda29206989215c816f3828af994e0c73f1f80a564b116c6c130d6c74bf37",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/service/seed2024/result.json",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 1049,
+      "sha256": "a8505e6865e72d903d84036f28c9437b311c70a6365b2dc8a11538fad6381c84",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/service/seed2024/training_log.csv",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 24661,
+      "sha256": "dc7cda288636fa8c51952d094b39994e15b24ad3f1321459937835b966685f6a",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/service/seed2024/training_log.jsonl",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 49678,
+      "sha256": "73f6daaf7d7dfa66d8e2731b6ca134cef4de47e828a0c9dd75dfb1292b8b716d",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/service/seed2024/validation_predictions.csv",
+      "scope": "bundle",
+      "role": "predictions",
+      "size_bytes": 67370,
+      "sha256": "5404f65658069d3e10c03c9c2f44107dfb3800620193fa2bd288f38bcf8762d5",
+      "hash_status": "verified"
+    },
+    {
+      "path": "scripts/__pycache__/dq3f_common.cpython-310.pyc",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 11080,
+      "sha256": "06235fe1e7dcb9bcd6fa6af4bfa34ddf62a536d5213e600a1988ea0ef184adc0",
+      "hash_status": "verified"
+    },
+    {
+      "path": "scripts/__pycache__/finalize_dq3f.cpython-310.pyc",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 19570,
+      "sha256": "18fd7297feb3aba8889befc0e8aa7b8c1d6792d0a27f3e65c89c21afc1fb8553",
+      "hash_status": "verified"
+    },
+    {
+      "path": "scripts/__pycache__/preflight_dq3f.cpython-310.pyc",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 6884,
+      "sha256": "9929b98796bda9904527ba858c3d321e44c46a99816ef0814cc31952e1f0bebf",
+      "hash_status": "verified"
+    },
+    {
+      "path": "scripts/__pycache__/run_training_queue.cpython-310.pyc",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 889,
+      "sha256": "4097b52b2e695770657cde343cd91563592178b425a2249ad2052caf54a474c1",
+      "hash_status": "verified"
+    },
+    {
+      "path": "scripts/__pycache__/train_dq3f.cpython-310.pyc",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 11353,
+      "sha256": "7e6074f815111fabba4e54c618e55e7814ef86c2e4d599b67e826ced8c009f92",
+      "hash_status": "verified"
+    },
+    {
+      "path": "scripts/__pycache__/verify_dq3f.cpython-310.pyc",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 3169,
+      "sha256": "1b005681a5c3940f6ee3f416155d2851257e093474486d57f2894ae80dfe32a2",
+      "hash_status": "verified"
+    },
+    {
+      "path": "scripts/dq3f_common.py",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 8834,
+      "sha256": "b44d9a68055b8ec6bf8182774528df927515d354302b9aaacb0cc42286ad7797",
+      "hash_status": "verified"
+    },
+    {
+      "path": "scripts/finalize_dq3f.py",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 25995,
+      "sha256": "6e7546dffcd51c6ac6ad9246784794d1613be8a96ea71e62365418a7ab4efae3",
+      "hash_status": "verified"
+    },
+    {
+      "path": "scripts/preflight_dq3f.py",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 7365,
+      "sha256": "c777b3da23997ceea7aac877f29aaeb879fbac5b917deafcea0a1bd1b331ca28",
+      "hash_status": "verified"
+    },
+    {
+      "path": "scripts/run_training_queue.py",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 602,
+      "sha256": "a47d5d77981168b16c9a181e20b1c92b0b9026d855fda801213ccc3dc402bdc1",
+      "hash_status": "verified"
+    },
+    {
+      "path": "scripts/train_dq3f.py",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 14421,
+      "sha256": "cc0efd8107fa8010415d4f64e6779c2f238c87a835db445b5d5fe55e5ccef89e",
+      "hash_status": "verified"
+    },
+    {
+      "path": "scripts/verify_dq3f.py",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 3159,
+      "sha256": "4e9040183c2e15cc3e35883c165d5db5b8bc139a03b0df1e376412a403f33ff1",
+      "hash_status": "verified"
+    },
+    {
+      "path": "seed_stability.csv",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 1044,
+      "sha256": "ec8976fa9e418ce59501d34b07be6145726d21115f4b8539599d59880bffe9e8",
+      "hash_status": "verified"
+    },
+    {
+      "path": "service_confusion_matrix.csv",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 2835,
+      "sha256": "6e8f349c0acacb3b2195c636731c44fa8c545d5233854f268bec2288ddda4e3b",
+      "hash_status": "verified"
+    },
+    {
+      "path": "service_f3_predictions.csv",
+      "scope": "bundle",
+      "role": "predictions",
+      "size_bytes": 201619,
+      "sha256": "5fc2abc9df6241926bcc9393821b9f744075e3df54bedd9529b67a1b4cef6d00",
+      "hash_status": "verified"
+    },
+    {
+      "path": "service_f3_results.csv",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 1586,
+      "sha256": "97ef87724d1a2ca74200b3dc799f73838bb75e1af64dc30990e95d53ee8b1b13",
+      "hash_status": "verified"
+    }
+  ],
+  "limitations": [
+    "all Service targets are weak capture-derived labels rather than authoritative per-flow truth",
+    "P2P has one capture, so six-Service capture-disjoint generalization is not identifiable",
+    "F1 and F3 have different label spaces; their metric difference is a task-granularity result, not a same-task model gain",
+    "F2 is partial and excludes ambiguous Application mappings",
+    "cross-paper PCAP, flow, filtering, label, split and metric protocols remain unaligned"
+  ],
+  "next_step": "DQ-4 may audit target-flow selection/filtering; DQ-7 requires a separately frozen unified Service protocol and is not yet authorized"
+}

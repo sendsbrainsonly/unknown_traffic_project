@@ -1,0 +1,102 @@
+{
+  "protocol_name": "Stage 6 — CipherSpectrum Strict Unknown-Free Open-Set Protocol Freeze",
+  "source_manifest": "cipherspectrum_labeling/outputs/cipherspectrum_official40_manifest.csv",
+  "dataset_root": "/home/birkenwald/data/SEU-WXY/WXY-SEU/TrafficClassifier/Dataset/ipherSpectrum(sok)/ipherSpectrum(sok)",
+  "canonical_sources": [
+    "aes-128-gcm",
+    "aes-256-gcm",
+    "chacha20-poly1305"
+  ],
+  "excluded_sources": [
+    "mix"
+  ],
+  "excluded_classes": [
+    "getpocket.com"
+  ],
+  "expected_class_count": 40,
+  "expected_samples_per_class_source": 1000,
+  "expected_samples_per_class": 3000,
+  "expected_sample_count": 120000,
+  "settings": {
+    "low": {
+      "seed": 42,
+      "unknown_class_count": 2
+    },
+    "medium": {
+      "seed": 43,
+      "unknown_class_count": 6
+    },
+    "high": {
+      "seed": 44,
+      "unknown_class_count": 10
+    }
+  },
+  "unknown_candidate_rng": "numpy.random.default_rng (PCG64) over lexicographically sorted class names",
+  "known_split_ratios": {
+    "KNOWN_TRAIN": 0.70,
+    "KNOWN_VALIDATION": 0.15,
+    "KNOWN_TEST": 0.15
+  },
+  "group_assignment": {
+    "algorithm": "deterministic greedy group assignment plus fixed local move refinement",
+    "objective_terms": [
+      "total sample ratio squared error",
+      "per-class ratio squared error",
+      "per-class-by-cipher-source ratio squared error"
+    ],
+    "objective_weights": {
+      "total": 2.0,
+      "per_class": 5.0,
+      "per_class_cipher_source": 2.0
+    },
+    "max_local_refinement_passes": 3,
+    "maximum_absolute_split_ratio_error": 0.02
+  },
+  "hard_constraints": {
+    "minimum_known_train_per_class": 500,
+    "minimum_known_validation_per_class": 100,
+    "minimum_known_test_per_class": 100,
+    "minimum_train_cipher_sources_per_class": 2,
+    "minimum_validation_cipher_sources_per_class": 2,
+    "minimum_test_cipher_sources_per_class": 2,
+    "known_unknown_group_overlap": 0,
+    "train_validation_test_group_overlap": 0
+  },
+  "component_fallback_min_validation_n": 30,
+  "component_stress_weights": {
+    "50/50": 0.50,
+    "80/20": 0.20,
+    "90/10": 0.10,
+    "95/5": 0.05
+  },
+  "preprocessing": {
+    "implementation": "opendetect_ustc_encoder_audit/adapters/opendetect_preprocessing.py",
+    "packet_selection": "first packets in flow order",
+    "packets_per_flow": 8,
+    "header_bytes_per_packet": 80,
+    "payload_bytes_per_packet": 48,
+    "bytes_per_packet": 128,
+    "flow_bytes": 1024,
+    "image_shape": [32, 32],
+    "ip_masking": "IPv4 source and destination set to 0.0.0.0 before serialization",
+    "padding_truncation": "each header/payload region right-zero-padded or truncated; missing packets zero-padded",
+    "port_policy": "retained; KNOWN_SHORTCUT_RISK"
+  },
+  "allowed_roles": [
+    "KNOWN_TRAIN",
+    "KNOWN_VALIDATION",
+    "KNOWN_TEST",
+    "UNKNOWN_TEST",
+    "PURGED_GROUP_OVERLAP",
+    "NOT_ACTIVE_FOR_SETTING"
+  ],
+  "future_baselines": [
+    "Open-Detect Native",
+    "Single-Full K1",
+    "Multi-Global K2",
+    "Class-P05 K2",
+    "Component-P05 K2"
+  ],
+  "dgsb_v1_status": "NOT YET CLEARED FOR EXTERNAL EVALUATION",
+  "created_before_unknown_evaluation": true
+}

@@ -1,0 +1,61 @@
+{
+  "accuracy": 0.715318869165023,
+  "hardest_five_by_f1": [
+    {
+      "accuracy": 0.17231638418079095,
+      "class_name": "logitech.com",
+      "f1": 0.25738396624472576,
+      "local_class_id": 18,
+      "precision": 0.5083333333333333,
+      "recall": 0.17231638418079095,
+      "setting": "medium",
+      "support": 354
+    },
+    {
+      "accuracy": 0.34057971014492755,
+      "class_name": "flipboard.com",
+      "f1": 0.3657587548638132,
+      "local_class_id": 6,
+      "precision": 0.3949579831932773,
+      "recall": 0.34057971014492755,
+      "setting": "medium",
+      "support": 276
+    },
+    {
+      "accuracy": 0.37371134020618557,
+      "class_name": "trustarc.com",
+      "f1": 0.4496124031007752,
+      "local_class_id": 25,
+      "precision": 0.5642023346303502,
+      "recall": 0.37371134020618557,
+      "setting": "medium",
+      "support": 388
+    },
+    {
+      "accuracy": 0.5311203319502075,
+      "class_name": "googleapis.com",
+      "f1": 0.4830188679245283,
+      "local_class_id": 11,
+      "precision": 0.4429065743944637,
+      "recall": 0.5311203319502075,
+      "setting": "medium",
+      "support": 241
+    },
+    {
+      "accuracy": 0.38461538461538464,
+      "class_name": "wistia.com",
+      "f1": 0.502092050209205,
+      "local_class_id": 30,
+      "precision": 0.7228915662650602,
+      "recall": 0.38461538461538464,
+      "setting": "medium",
+      "support": 156
+    }
+  ],
+  "macro_f1": 0.7045093139986812,
+  "parity": "PASS",
+  "setting": "medium",
+  "stage7_accuracy": 0.715318869165023,
+  "stage7_macro_f1": 0.7045093139986812,
+  "validation_samples": 12168
+}

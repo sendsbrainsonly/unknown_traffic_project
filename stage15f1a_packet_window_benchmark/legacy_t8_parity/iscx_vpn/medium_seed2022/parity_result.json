@@ -1,0 +1,27 @@
+{
+  "checkpoint_path": "/home/birkenwald/data/SEU-WXY/WXY-SEU/TrafficClassifier/Projects/unknown_traffic_project/stage15r_representation_bottleneck_audit/pilot_runs/e2/iscx_vpn/medium_seed2022/model_best.pt",
+  "checkpoint_sha256": "496f48fbae83331d49c8d27a40541c8872c3bdacad299a9e194edcf49eeb304f",
+  "classification_metrics_within_1e_12_and_loss_within_1e_6": true,
+  "confusion_exact_match": true,
+  "dataset": "iscx_vpn",
+  "known_test_samples_used": 0,
+  "known_train_samples": 12910,
+  "known_validation_samples": 1611,
+  "normalization_exact_match": true,
+  "parity_device": "cuda:0",
+  "protocol_id": "medium_seed2022",
+  "recomputed": {
+    "validation_accuracy": 0.42520173805090006,
+    "validation_loss": 1.535317776367429,
+    "validation_macro_f1": 0.3848102051995582,
+    "validation_weighted_f1": 0.4019870700349839
+  },
+  "reference": {
+    "validation_accuracy": 0.42520173805090006,
+    "validation_loss": 1.535317776367429,
+    "validation_macro_f1": 0.3848102051995582,
+    "validation_weighted_f1": 0.4019870700349839
+  },
+  "status": "PASS",
+  "unknown_test_samples_used": 0
+}

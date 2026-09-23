@@ -1,0 +1,43 @@
+{
+  "completion_gate": "PASS_BLOCKED_AUDIT_COMPLETE",
+  "confusion_matrices_present": true,
+  "data_parity_gate": "PASS",
+  "des_h1_modified": false,
+  "gpu_used": false,
+  "known_test_feature_values_used": 0,
+  "method_identity_gate": "FAIL",
+  "new_training_runs": 0,
+  "open_set_experiment": "NOT_RUN",
+  "opendetect_service6": "NOT_RUN_IDENTITY_GATE",
+  "paired_method_comparison": "NOT_IDENTIFIABLE",
+  "protected_asset_count": 19,
+  "protected_assets_unchanged": true,
+  "protocol_A_counts": {
+    "train": 2730,
+    "validation": 335
+  },
+  "protocol_C_counts": {
+    "train": 1367,
+    "validation": 184
+  },
+  "required_files": [
+    "method_identity_audit.md",
+    "matched_service_manifest.csv",
+    "dataset_parity_audit.md",
+    "dataset_parity_audit.csv",
+    "ours_service_results.csv",
+    "opendetect_service_results.csv",
+    "paired_service_comparison.csv",
+    "per_service_results.csv",
+    "paired_error_analysis.csv",
+    "capture_dependency_audit.md",
+    "filtering_protocol_comparison.csv",
+    "training_cost_comparison.csv",
+    "service_open_set_feasibility.md",
+    "stage16_report.md",
+    "RESULTS.md"
+  ],
+  "required_files_present": true,
+  "status": "BLOCKED_METHOD_IDENTITY_NOT_DISTINCT",
+  "unknown_test_feature_values_used": 0
+}

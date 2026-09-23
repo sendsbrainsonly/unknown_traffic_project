@@ -1,0 +1,34 @@
+{
+  "embedding_shape": [
+    2,
+    768
+  ],
+  "expected_sha256": "be9dcc1e0c6b68db005e506adf13a2d937a2f3982539a2c8a58f78c55af0d5ce",
+  "finite_embedding": true,
+  "finite_logits": true,
+  "logits_shape": [
+    2,
+    6
+  ],
+  "missing_keys": [
+    "output_layer_1.weight",
+    "output_layer_1.bias",
+    "output_layer_2.weight",
+    "output_layer_2.bias"
+  ],
+  "peak_gpu_memory_bytes": 694323712,
+  "pretrained_sha256": "be9dcc1e0c6b68db005e506adf13a2d937a2f3982539a2c8a58f78c55af0d5ce",
+  "status": "PASS",
+  "unexpected_keys": [
+    "target.mlm_linear_1.weight",
+    "target.mlm_linear_1.bias",
+    "target.layer_norm.gamma",
+    "target.layer_norm.beta",
+    "target.mlm_linear_2.weight",
+    "target.mlm_linear_2.bias",
+    "target.msp_linear_1.weight",
+    "target.msp_linear_1.bias",
+    "target.msp_linear_2.weight",
+    "target.msp_linear_2.bias"
+  ]
+}

@@ -1,0 +1,12 @@
+{
+  "checked_feature_protocol_inputs": 45,
+  "expected": 45,
+  "failures": [],
+  "known_test_rows_loaded": 0,
+  "packet_count_mismatches": 0,
+  "raw_cache_status": "PASS",
+  "raw_cache_unique_flows": 23447,
+  "stage14b_freeze_hash": "c904daef04d2c8e79469191121325c0a6ceeaeb3e595ef9c4c7d7a62c980ae2f",
+  "status": "PASS",
+  "unknown_test_rows_loaded": 0
+}

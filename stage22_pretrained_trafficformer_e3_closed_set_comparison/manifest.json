@@ -1,0 +1,36 @@
+{
+  "schema_version": 1,
+  "experiment_id": "stage22-pretrained-trafficformer-e3-closed-set-20260923-v1",
+  "created_at_utc": "2026-09-23T02:49:05Z",
+  "updated_at_utc": "2026-09-23T02:49:05Z",
+  "status": "running",
+  "experiment_type": "benchmark",
+  "claim_scope": "diagnostic",
+  "objective": "On the frozen Stage20 ISCX-VPN and ISCXTor closed-Service splits, compare official-pretrained TrafficFormer fine-tuned for 20 epochs with the same pretrained TrafficFormer plus the frozen TAGCN and linear E3 fusion pipeline.",
+  "inputs": [],
+  "code": {
+    "revision": null,
+    "dirty": null,
+    "changes": []
+  },
+  "execution": {
+    "tmux_session": "stage22-pretrained-e3-grid-20260923",
+    "command": "select_gpu.py --min-free-gb 36 --count 3 -- python stage22.../scripts/run_queue.py --device-indices 0,1,2",
+    "exit_code": null,
+    "environment": null,
+    "physical_gpu_ids": []
+  },
+  "configuration": {
+    "files": ["config.json"],
+    "parameters": {
+      "trafficformer": "official pretrained, 20 epochs, batch 64, lr 6e-5",
+      "tagcn": "50 epochs, batch 64, lr 1e-3, hidden 128, K=2",
+      "fusion": "Known-Train z-score, concat 768+128, 30 epochs"
+    },
+    "seeds": [2022, 2023]
+  },
+  "core_results": [],
+  "artifacts": [],
+  "limitations": [],
+  "next_step": null
+}

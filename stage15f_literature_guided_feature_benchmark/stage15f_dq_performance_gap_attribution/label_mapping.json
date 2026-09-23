@@ -1,0 +1,140 @@
+{
+  "application_mapping": {
+    "AIM": {
+      "evidence": "Stage12 frozen split manifest official_category derived from capture/activity filename",
+      "possible_capture_level_services": [
+        "Chat"
+      ],
+      "service": "Chat",
+      "status": "MAPPED"
+    },
+    "BitTorrent": {
+      "evidence": "Stage12 frozen split manifest official_category derived from capture/activity filename",
+      "possible_capture_level_services": [
+        "P2P"
+      ],
+      "service": "P2P",
+      "status": "MAPPED"
+    },
+    "Email": {
+      "evidence": "Stage12 frozen split manifest official_category derived from capture/activity filename",
+      "possible_capture_level_services": [
+        "Email"
+      ],
+      "service": "Email",
+      "status": "MAPPED"
+    },
+    "FTPS": {
+      "evidence": "Stage12 frozen split manifest official_category derived from capture/activity filename",
+      "possible_capture_level_services": [
+        "File-Transfer"
+      ],
+      "service": "File-Transfer",
+      "status": "MAPPED"
+    },
+    "Facebook": {
+      "evidence": "Stage12 frozen split manifest official_category derived from capture/activity filename",
+      "possible_capture_level_services": [
+        "Chat",
+        "VoIP"
+      ],
+      "service": "UNMAPPED",
+      "status": "UNMAPPED_AMBIGUOUS"
+    },
+    "Gmail": {
+      "evidence": "Stage12 frozen split manifest official_category derived from capture/activity filename",
+      "possible_capture_level_services": [
+        "Chat"
+      ],
+      "service": "Chat",
+      "status": "MAPPED"
+    },
+    "Hangouts": {
+      "evidence": "Stage12 frozen split manifest official_category derived from capture/activity filename",
+      "possible_capture_level_services": [
+        "Chat",
+        "VoIP"
+      ],
+      "service": "UNMAPPED",
+      "status": "UNMAPPED_AMBIGUOUS"
+    },
+    "ICQ": {
+      "evidence": "Stage12 frozen split manifest official_category derived from capture/activity filename",
+      "possible_capture_level_services": [
+        "Chat"
+      ],
+      "service": "Chat",
+      "status": "MAPPED"
+    },
+    "Netflix": {
+      "evidence": "Stage12 frozen split manifest official_category derived from capture/activity filename",
+      "possible_capture_level_services": [
+        "Streaming"
+      ],
+      "service": "Streaming",
+      "status": "MAPPED"
+    },
+    "SCP": {
+      "evidence": "Stage12 frozen split manifest official_category derived from capture/activity filename",
+      "possible_capture_level_services": [
+        "File-Transfer"
+      ],
+      "service": "File-Transfer",
+      "status": "MAPPED"
+    },
+    "SFTP": {
+      "evidence": "Stage12 frozen split manifest official_category derived from capture/activity filename",
+      "possible_capture_level_services": [
+        "File-Transfer"
+      ],
+      "service": "File-Transfer",
+      "status": "MAPPED"
+    },
+    "Skype": {
+      "evidence": "Stage12 frozen split manifest official_category derived from capture/activity filename",
+      "possible_capture_level_services": [
+        "Chat",
+        "File-Transfer",
+        "VoIP"
+      ],
+      "service": "UNMAPPED",
+      "status": "UNMAPPED_AMBIGUOUS"
+    },
+    "Spotify": {
+      "evidence": "Stage12 frozen split manifest official_category derived from capture/activity filename",
+      "possible_capture_level_services": [
+        "Streaming"
+      ],
+      "service": "Streaming",
+      "status": "MAPPED"
+    },
+    "Vimeo": {
+      "evidence": "Stage12 frozen split manifest official_category derived from capture/activity filename",
+      "possible_capture_level_services": [
+        "Streaming"
+      ],
+      "service": "Streaming",
+      "status": "MAPPED"
+    },
+    "VoIPBuster": {
+      "evidence": "Stage12 frozen split manifest official_category derived from capture/activity filename",
+      "possible_capture_level_services": [
+        "VoIP"
+      ],
+      "service": "VoIP",
+      "status": "MAPPED"
+    },
+    "YouTube": {
+      "evidence": "Stage12 frozen split manifest official_category derived from capture/activity filename",
+      "possible_capture_level_services": [
+        "Streaming"
+      ],
+      "service": "Streaming",
+      "status": "MAPPED"
+    }
+  },
+  "capture_level_service_is_available": true,
+  "dataset": "ISCX-VPN",
+  "mapping_scope": "fixed application to service audit; no validation-driven merging",
+  "warning": "Facebook, Hangouts and Skype are multi-service applications; predicted application cannot be deterministically mapped to one service without an extra rule."
+}

@@ -1,0 +1,110 @@
+{
+  "final_gate": "NO_GO",
+  "mechanism": "D5",
+  "r1_stable_over_r0": false,
+  "r2_stable_over_r0": false,
+  "covariance_verdict": "COVARIANCE_BENEFIT_CONTEXT_DEPENDENT",
+  "multicomponent_verdict": "MULTICOMPONENT_SECONDARY",
+  "mean_delta_auroc": {
+    "R1-R0": {
+      "a1": -5.499999999998284e-05,
+      "a2": 0.07396944444444449,
+      "a3": 0.02044765241466138
+    },
+    "R2-R0": {
+      "a1": -0.02409999999999999,
+      "a2": 0.10879055555555557,
+      "a3": 0.02304788068713992
+    },
+    "R2-R1": {
+      "a1": -0.024045000000000004,
+      "a2": 0.03482111111111108,
+      "a3": 0.002600228272478544
+    },
+    "R3-R2": {
+      "a1": -0.023189999999999954,
+      "a2": -0.0007599999999999385,
+      "a3": -0.0030219364656881133
+    }
+  },
+  "better_seed_counts": {
+    "R1-R0": {
+      "a1": 2,
+      "a2": 5,
+      "a3": 5
+    },
+    "R2-R0": {
+      "a1": 0,
+      "a2": 5,
+      "a3": 5
+    },
+    "R2-R1": {
+      "a1": 0,
+      "a2": 5,
+      "a3": 4
+    },
+    "R3-R2": {
+      "a1": 0,
+      "a2": 3,
+      "a3": 0
+    }
+  },
+  "r2_minus_r0_known_macro_f1": {
+    "a1": 0.01430804328892552,
+    "a2": 0.001214615817162712,
+    "a3": -0.0011023146224121926
+  },
+  "r2_minus_r0_known_frr": {
+    "a1": 0.010999999999999998,
+    "a2": -0.000666666666666664,
+    "a3": -1.3877787807814458e-18
+  },
+  "gate_conditions": {
+    "r2_nonnegative_all_scenarios": false,
+    "r2_material_scenario_count": 2,
+    "no_clear_auroc_harm": false,
+    "no_known_macro_f1_harm": true,
+    "no_known_frr_cost": true,
+    "majority_r2_better_each_scenario": false
+  },
+  "absorption_hub_change_vs_r0": {
+    "R1": {
+      "a1": {
+        "accepted_unknown_delta": -0.2,
+        "top_hub_count_delta": -0.2,
+        "top_hub_share_delta": -0.2
+      },
+      "a2": {
+        "accepted_unknown_delta": -50.79999999999998,
+        "top_hub_count_delta": -35.39999999999999,
+        "top_hub_share_delta": 0.0622295105846149
+      },
+      "a3": {
+        "accepted_unknown_delta": -70.0,
+        "top_hub_count_delta": -45.8,
+        "top_hub_share_delta": -0.010898203050565769
+      }
+    },
+    "R2": {
+      "a1": {
+        "accepted_unknown_delta": 26.6,
+        "top_hub_count_delta": 26.0,
+        "top_hub_share_delta": 0.19294117647058828
+      },
+      "a2": {
+        "accepted_unknown_delta": -69.99999999999999,
+        "top_hub_count_delta": -49.39999999999999,
+        "top_hub_share_delta": 0.11435969246879751
+      },
+      "a3": {
+        "accepted_unknown_delta": -80.8,
+        "top_hub_count_delta": -51.0,
+        "top_hub_share_delta": 0.07925909063613978
+      }
+    }
+  },
+  "new_encoder_training": false,
+  "cipherspectrum_stage9_sample_level_test_used": false,
+  "frozen_experiment_modified": false,
+  "next_stage_started": false
+}

@@ -1,0 +1,32 @@
+{
+  "best_epoch": 58,
+  "checkpoint_sha256": "5e0dc8845b3f91f18a6568936db2ddc604bf4302944cba22813becf94a5d8d44",
+  "class_names": [
+    "netflix",
+    "rdp",
+    "rsync",
+    "skype",
+    "ssh",
+    "vimeo",
+    "zoiper"
+  ],
+  "dataset": "vnat",
+  "epochs_completed": 100,
+  "experiment": "E0",
+  "known_test_samples_used": 0,
+  "known_train_samples": 15328,
+  "known_validation_samples": 1911,
+  "objective": "native Open-Detect joint loss",
+  "peak_gpu_memory_bytes": "NOT_RECORDED",
+  "protocol_id": "medium_seed2026",
+  "runtime_seconds": 674.2855582237244,
+  "source_path": "/home/birkenwald/data/SEU-WXY/WXY-SEU/TrafficClassifier/Projects/unknown_traffic_project/stage14c_native_opendetect_vnat/runs/medium_seed2026/result.json",
+  "source_sha256": "2f5680f1b0912a79d3d0c0f7c30273b24d0ca00f51f04748b9e090b9b7b456bb",
+  "status": "PASS_REUSED_FROZEN",
+  "train_loss": 0.04595534403911463,
+  "unknown_test_samples_used": 0,
+  "validation_accuracy": 0.9952904238618524,
+  "validation_loss": 0.060341537684935165,
+  "validation_macro_f1": 0.9833179712297598,
+  "validation_weighted_f1": 0.9952233415098174
+}

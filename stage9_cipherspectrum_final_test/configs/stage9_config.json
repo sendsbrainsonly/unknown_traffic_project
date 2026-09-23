@@ -1,0 +1,80 @@
+{
+  "stage": "Stage 9 - CipherSpectrum One-Shot Final Test",
+  "claim_scope": "strict frozen external evaluation on a locally frozen non-author-equivalent CipherSpectrum split",
+  "created_before_any_test_access": true,
+  "setting_order": [
+    "low",
+    "medium",
+    "high"
+  ],
+  "method_order": [
+    "Native",
+    "Single-Full-K1",
+    "Multi-Global-K2",
+    "Class-P05-K2",
+    "Component-P05-K2",
+    "DGSB-v2"
+  ],
+  "representation": {
+    "encoder_output": "deterministic mu_x",
+    "latent_dimension": 128,
+    "sampled_z_forbidden": true,
+    "scaler_operation": "transform_only",
+    "pca_operation": "transform_only",
+    "pca_dimension": 64
+  },
+  "ranking_orientation": {
+    "positive_class": "Known",
+    "higher_score": "more Known"
+  },
+  "dgsbv2_detection_score": "min(global_score-global_threshold, local_score-local_threshold)",
+  "bootstrap": {
+    "iterations": 1000,
+    "seed": 0,
+    "confidence": 0.95,
+    "sampling": "paired class-stratified resampling with replacement; identical sampled rows for both methods"
+  },
+  "primary_comparison": {
+    "candidate": "DGSB-v2",
+    "reference": "Multi-Global-K2",
+    "delta_orientation": "candidate_minus_reference",
+    "setting_rule": {
+      "WIN": "DeltaUFAR < 0 with 95% CI upper bound < 0, unless Delta Known FRR has 95% CI lower bound > 0",
+      "TRADEOFF": "UFAR point estimate improves but Delta Known FRR has 95% CI lower bound > 0, or Known FRR improves while UFAR worsens",
+      "NO GAIN": "DeltaUFAR improvement is not supported because its 95% CI crosses zero",
+      "HARM": "DeltaUFAR > 0 with 95% CI lower bound > 0 and Known FRR lacks statistically supported compensation"
+    },
+    "cross_setting_rule": {
+      "A": "at least two WIN settings, no positive DeltaUFAR point estimate, and no setting with statistically supported Known-FRR harm",
+      "B": "UFAR improvement is primarily accompanied by statistically supported Known-FRR increase, or the converse operating-point exchange",
+      "C": "no setting has statistically supported UFAR improvement and there is no statistically supported harm pattern",
+      "D": "at least two settings have statistically supported UFAR harm without statistically supported Known-FRR compensation",
+      "E": "the sign of DeltaUFAR differs across Low, Medium, and High or remaining outcomes are materially mixed"
+    }
+  },
+  "frozen_upstream": {
+    "evaluation_config_v2_sha256": "2eadc7c7ce5cba91d5d164ee541aae7d1f6f600cdfe995046ddbf0d7b0f49b60",
+    "dgsbv2_unified_rule_sha256": "4cadbc55766e6d07b944422a65e26c52ac140b48fa0c4d88c24635cf9146c271",
+    "dgsbv2_setting_rule_sha256": {
+      "low": "111a32d40498c6c7c9cfefedeb1dcbb2f4d3b8d2e3fb27a72d77fdb609baad1c",
+      "medium": "b42bcb0919376f5734de34340b40e892f4a89d7a52f61dca3e3a90ba6a689519",
+      "high": "fa8e5eb2ef7449d2675ac8ae4c3d552fa4f63752e049dc49cdef04244eb3d250"
+    },
+    "dgsbv2_setting_bundle_hash_file_sha256": {
+      "low": "44ba638ea4b3957ac77568de8ac372d589ff6cab55ced42a0a710b2846076dc8",
+      "medium": "3839eb31111bbf17450ae43be1c6abe0f623991a31aa08bd59894074d931a50a",
+      "high": "36520817bd0f0da9a7ffcbe9f731788b8f468c71c8998fe7f2c23427b1aff056"
+    }
+  },
+  "forbidden": [
+    "training",
+    "fit_scaler",
+    "fit_pca",
+    "fit_gmm",
+    "threshold_recalibration",
+    "test_tuning",
+    "quantile_search",
+    "K_search",
+    "method_modification_after_test_open"
+  ]
+}

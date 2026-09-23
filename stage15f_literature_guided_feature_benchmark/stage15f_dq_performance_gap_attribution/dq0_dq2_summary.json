@@ -1,0 +1,79 @@
+{
+  "gate": {
+    "ambiguous_known_applications": [
+      "Facebook"
+    ],
+    "application_to_service_full_mapping": "FAIL",
+    "capture_group_split_status": "NOT_RUN_DQ6",
+    "cate_status_counts": {
+      "MATCHED": 2720,
+      "UNMATCHED": 1504
+    },
+    "dq3_training_status": "NOT_RUN_GATE_FAILED_MAPPING_AMBIGUITY",
+    "fine_to_coarse_full_same_flow_comparison": "BLOCKED",
+    "flow_reconstruction": "PASS",
+    "known_test_samples_used": 0,
+    "native_selected_shared_flow_count": 4224,
+    "prediction_mapping_coverage": 0.9582089552238806,
+    "shared_pcap_count": 31,
+    "support": {
+      "fine_train": {
+        "AIM": 46,
+        "BitTorrent": 804,
+        "Email": 145,
+        "FTPS": 301,
+        "Facebook": 79,
+        "ICQ": 54,
+        "Netflix": 371,
+        "SFTP": 31,
+        "Spotify": 234,
+        "Vimeo": 249,
+        "VoIPBuster": 416
+      },
+      "fine_validation": {
+        "AIM": 9,
+        "BitTorrent": 100,
+        "Email": 23,
+        "FTPS": 36,
+        "Facebook": 11,
+        "ICQ": 2,
+        "Netflix": 48,
+        "SFTP": 7,
+        "Spotify": 30,
+        "Vimeo": 26,
+        "VoIPBuster": 43
+      },
+      "service_train": {
+        "Chat": 132,
+        "Email": 145,
+        "File-Transfer": 332,
+        "P2P": 804,
+        "Streaming": 854,
+        "VoIP": 463
+      },
+      "service_validation": {
+        "Chat": 17,
+        "Email": 23,
+        "File-Transfer": 43,
+        "P2P": 100,
+        "Streaming": 104,
+        "VoIP": 48
+      }
+    },
+    "trafficformer_exact_parity_captures": 31,
+    "unknown_test_samples_used": 0,
+    "dq3_feasibility_decision": "BLOCKED_MAPPING_AMBIGUITY"
+  },
+  "prediction": {
+    "fine_accuracy_shared31": 0.8029850746268656,
+    "fine_errors": 66,
+    "fine_macro_f1_shared31": 0.7708026129003042,
+    "fine_wrong_coarse_correct": 22,
+    "fine_wrong_coarse_unmapped": 5,
+    "known_test_samples_used": 0,
+    "known_validation_shared31": 335,
+    "known_validation_total_full_medium": 1611,
+    "mapping_coverage": 0.9582089552238806,
+    "unknown_test_samples_used": 0
+  }
+}

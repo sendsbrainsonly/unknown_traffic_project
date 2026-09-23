@@ -1,0 +1,28 @@
+{
+  "cache_flow_counts": {
+    "iscx_tor": 11783,
+    "iscx_vpn": 18121,
+    "ustc": 432537,
+    "vnat": 23447
+  },
+  "coverage_row_count": 2928,
+  "dataset_feature_availability_sha256": "3bf77829ac7c52d00f8eea374bbd13b0151db59ce0071d6ad9f493c8b726054f",
+  "encryption_row_count": 636,
+  "encryption_visibility_audit_sha256": "4aa85d793063b712defbf8df48a3052d3d04cafbcf3bbbd0f6a40001f2224ace",
+  "known_test_feature_values_used": 0,
+  "packet_window_coverage_sha256": "1ad7704946909046beea2f5689475bfa25296dfe85f876453a704419e3e0b3b3",
+  "protocol_counts": {
+    "iscx_tor": 3,
+    "iscx_vpn": 3,
+    "ustc": 3,
+    "vnat": 15
+  },
+  "status": "PASS",
+  "unknown_test_feature_values_used": 0,
+  "unmatched_membership_counts": {
+    "iscx_tor": 0,
+    "iscx_vpn": 0,
+    "ustc": 0,
+    "vnat": 0
+  }
+}

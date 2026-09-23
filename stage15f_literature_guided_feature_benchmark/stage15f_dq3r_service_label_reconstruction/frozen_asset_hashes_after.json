@@ -1,0 +1,75 @@
+{
+  "phase": "after",
+  "scope": "Stage15F-DQ-3R bounded inputs; Known Train/Validation metadata only; no Test feature arrays",
+  "file_count": 17,
+  "files": {
+    "/home/birkenwald/data/SEU-WXY/WXY-SEU/TrafficClassifier/Projects/TFE-GNN/artifacts/paper-reproduction-v2/iscx-vpn/flows/prepare_manifest.json": {
+      "bytes": 1008987,
+      "sha256": "2dd348b3f147651169e9ee946d06f84106861ec1dfcbd89bd64d4770f9ad862f"
+    },
+    "/home/birkenwald/data/SEU-WXY/WXY-SEU/TrafficClassifier/Projects/TFE-GNN/artifacts/paper-reproduction-v2/iscx-vpn/paper_text_split_seed32/dataset_manifest.json": {
+      "bytes": 50152,
+      "sha256": "c766ef33970516087f253b14a06f09bf80299edac9fb6960fa441b89200fc62e"
+    },
+    "/home/birkenwald/data/SEU-WXY/WXY-SEU/TrafficClassifier/Projects/TFE-GNN/reproduction/protocols.py": {
+      "bytes": 5005,
+      "sha256": "220c111941ed7d479ffff3d26b5ffaaaf206677698265a6867c8015e212c772f"
+    },
+    "/home/birkenwald/data/SEU-WXY/WXY-SEU/TrafficClassifier/Projects/TrafficFormer/reproduction/datasets/iscxvpn_trafficformer/dataset_stats.json": {
+      "bytes": 2792,
+      "sha256": "a3bd26fed2f28817ec34a1445cd6e8250c2fd9d01c0fa31cbee74c62b9e77849"
+    },
+    "/home/birkenwald/data/SEU-WXY/WXY-SEU/TrafficClassifier/Projects/TrafficFormer/reproduction/datasets/iscxvpn_trafficformer/processing_audit.tsv": {
+      "bytes": 2853433,
+      "sha256": "2d6984fa3773bc91335a5cc2a44c312c7196d5632e460ade38835bb7e3c06f99"
+    },
+    "/home/birkenwald/data/SEU-WXY/WXY-SEU/TrafficClassifier/Projects/TrafficFormer/reproduction/scripts/prepare_iscxvpn.py": {
+      "bytes": 15131,
+      "sha256": "d4718ff9c70372f5f0387eb8ee4e1ac1a1e8fe6ca1490fce589c0a707201474a"
+    },
+    "/home/birkenwald/data/SEU-WXY/WXY-SEU/TrafficClassifier/Projects/unknown_traffic_project/stage12_dual_external_validation/artifacts/iscx_vpn/protocol/high/protocol.json": {
+      "bytes": 4091,
+      "sha256": "00ff6ebe88912ce745a6ba68c98e80fe54ab4f1c8bee47a4d8e4fa187b11245d"
+    },
+    "/home/birkenwald/data/SEU-WXY/WXY-SEU/TrafficClassifier/Projects/unknown_traffic_project/stage12_dual_external_validation/artifacts/iscx_vpn/protocol/low/protocol.json": {
+      "bytes": 4090,
+      "sha256": "0723ca751172c38570ad54087414404e7fc742070993ad678667389b6671be46"
+    },
+    "/home/birkenwald/data/SEU-WXY/WXY-SEU/TrafficClassifier/Projects/unknown_traffic_project/stage12_dual_external_validation/artifacts/iscx_vpn/protocol/medium/protocol.json": {
+      "bytes": 4093,
+      "sha256": "49831398c02f6123465c4c424a1a2e9814e63dbaeaa50f2b13e9873ea1b56ec8"
+    },
+    "/home/birkenwald/data/SEU-WXY/WXY-SEU/TrafficClassifier/Projects/unknown_traffic_project/stage12_dual_external_validation/protocol/iscx_vpn/DATASET_AUDIT.md": {
+      "bytes": 2197,
+      "sha256": "0197242a5a98c5d25d5efbcbb38149db38cf43106bb3dbe43b97436b3ac15078"
+    },
+    "/home/birkenwald/data/SEU-WXY/WXY-SEU/TrafficClassifier/Projects/unknown_traffic_project/stage12_dual_external_validation/protocol/iscx_vpn/split_manifest.csv": {
+      "bytes": 14693685,
+      "sha256": "618670af28797d9ceffc7138dcb9d2622552cdfc4712c38bd5da0886ec95c793"
+    },
+    "/home/birkenwald/data/SEU-WXY/WXY-SEU/TrafficClassifier/Projects/unknown_traffic_project/stage12_dual_external_validation/runs/iscx_vpn/medium/seed2022/config.json": {
+      "bytes": 4510,
+      "sha256": "1d6a7173887037676b049e75d5b772a9a297911c31ef4af49deee8070742722e"
+    },
+    "/home/birkenwald/data/SEU-WXY/WXY-SEU/TrafficClassifier/Projects/unknown_traffic_project/stage12_dual_external_validation/scripts/stage12_common.py": {
+      "bytes": 10452,
+      "sha256": "bb3dca979eac0e419876f2f4cc8f542576851533e04988ab410a06da8fd888fc"
+    },
+    "/home/birkenwald/data/SEU-WXY/WXY-SEU/TrafficClassifier/Projects/unknown_traffic_project/stage15f_literature_guided_feature_benchmark/stage15f_dq_performance_gap_attribution/cross_project_flow_manifest.csv": {
+      "bytes": 20833779,
+      "sha256": "3bcdcfda05c8a11c610930fb7c96b32c4c31ae6a4aedc4de08e3e5c21f1c7adf"
+    },
+    "/home/birkenwald/data/SEU-WXY/WXY-SEU/TrafficClassifier/Projects/unknown_traffic_project/stage15f_literature_guided_feature_benchmark/stage15f_dq_performance_gap_attribution/cross_project_pcap_manifest.csv": {
+      "bytes": 90202,
+      "sha256": "37e393fe44bf2df0057cbebeefcbc0e2c9f0ffec3e1902f770e8c5c2f92cf0e5"
+    },
+    "/home/birkenwald/data/SEU-WXY/WXY-SEU/TrafficClassifier/Projects/unknown_traffic_project/stage15f_literature_guided_feature_benchmark/stage15f_dq_performance_gap_attribution/frozen_asset_hashes_after.json": {
+      "bytes": 39846,
+      "sha256": "d147246132a01f86eff168a4014a14e4416e95ecd1654788a337bb6214ec580f"
+    },
+    "/home/birkenwald/data/SEU-WXY/WXY-SEU/TrafficClassifier/Projects/unknown_traffic_project/stage15f_literature_guided_feature_benchmark/stage15f_dq_performance_gap_attribution/label_mapping.json": {
+      "bytes": 4545,
+      "sha256": "040bbf1b81144b73db87950d7bc3ba8183eb7f0ae2b3caf95b3f11cb5d92666b"
+    }
+  }
+}

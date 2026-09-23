@@ -1,0 +1,116 @@
+{
+  "counts_by_role_and_type": {
+    "FROZEN_STAGE7_CHECKPOINT:pt": 1,
+    "FROZEN_STAGE7_METADATA:json": 1,
+    "KNOWN_TRAIN:csv": 1,
+    "KNOWN_TRAIN:npy": 5,
+    "KNOWN_TRAIN_AND_VALIDATION_METADATA:csv": 1,
+    "KNOWN_VALIDATION:csv": 1,
+    "KNOWN_VALIDATION:npy": 7
+  },
+  "known_test_mu_generated": false,
+  "known_test_opened": 0,
+  "pcap_files_opened": 0,
+  "read_events": 17,
+  "reads": [
+    {
+      "file_type": "csv",
+      "path": "/home/birkenwald/data/SEU-WXY/WXY-SEU/TrafficClassifier/Projects/unknown_traffic_project/stage7_cipherspectrum_known_training/runs/formal-low-20260913/inputs/input_manifest.csv",
+      "role": "KNOWN_TRAIN_AND_VALIDATION_METADATA"
+    },
+    {
+      "file_type": "npy",
+      "path": "/home/birkenwald/data/SEU-WXY/WXY-SEU/TrafficClassifier/Projects/unknown_traffic_project/stage7_cipherspectrum_known_training/runs/formal-low-20260913/inputs/train_images.npy",
+      "records": 75692,
+      "role": "KNOWN_TRAIN"
+    },
+    {
+      "file_type": "npy",
+      "path": "/home/birkenwald/data/SEU-WXY/WXY-SEU/TrafficClassifier/Projects/unknown_traffic_project/stage7_cipherspectrum_known_training/runs/formal-low-20260913/inputs/train_labels.npy",
+      "records": 75692,
+      "role": "KNOWN_TRAIN"
+    },
+    {
+      "file_type": "npy",
+      "path": "/home/birkenwald/data/SEU-WXY/WXY-SEU/TrafficClassifier/Projects/unknown_traffic_project/stage7_cipherspectrum_known_training/runs/formal-low-20260913/inputs/train_sample_ids.npy",
+      "records": 75692,
+      "role": "KNOWN_TRAIN"
+    },
+    {
+      "file_type": "npy",
+      "path": "/home/birkenwald/data/SEU-WXY/WXY-SEU/TrafficClassifier/Projects/unknown_traffic_project/stage7_cipherspectrum_known_training/runs/formal-low-20260913/inputs/validation_images.npy",
+      "records": 16242,
+      "role": "KNOWN_VALIDATION"
+    },
+    {
+      "file_type": "npy",
+      "path": "/home/birkenwald/data/SEU-WXY/WXY-SEU/TrafficClassifier/Projects/unknown_traffic_project/stage7_cipherspectrum_known_training/runs/formal-low-20260913/inputs/validation_labels.npy",
+      "records": 16242,
+      "role": "KNOWN_VALIDATION"
+    },
+    {
+      "file_type": "npy",
+      "path": "/home/birkenwald/data/SEU-WXY/WXY-SEU/TrafficClassifier/Projects/unknown_traffic_project/stage7_cipherspectrum_known_training/runs/formal-low-20260913/inputs/validation_sample_ids.npy",
+      "records": 16242,
+      "role": "KNOWN_VALIDATION"
+    },
+    {
+      "file_type": "pt",
+      "path": "/home/birkenwald/data/SEU-WXY/WXY-SEU/TrafficClassifier/Projects/unknown_traffic_project/stage7_cipherspectrum_known_training/runs/formal-low-20260913/artifacts/training_best_checkpoint.pt",
+      "role": "FROZEN_STAGE7_CHECKPOINT"
+    },
+    {
+      "file_type": "json",
+      "path": "/home/birkenwald/data/SEU-WXY/WXY-SEU/TrafficClassifier/Projects/unknown_traffic_project/stage7_cipherspectrum_known_training/runs/formal-low-20260913/training_checkpoint_selection.json",
+      "role": "FROZEN_STAGE7_METADATA"
+    },
+    {
+      "file_type": "csv",
+      "path": "/home/birkenwald/data/SEU-WXY/WXY-SEU/TrafficClassifier/Projects/unknown_traffic_project/stage8a_cipherspectrum_known_density/artifacts/low/train_manifest.csv",
+      "role": "KNOWN_TRAIN"
+    },
+    {
+      "file_type": "csv",
+      "path": "/home/birkenwald/data/SEU-WXY/WXY-SEU/TrafficClassifier/Projects/unknown_traffic_project/stage8a_cipherspectrum_known_density/artifacts/low/val_manifest.csv",
+      "role": "KNOWN_VALIDATION"
+    },
+    {
+      "file_type": "npy",
+      "path": "/home/birkenwald/data/SEU-WXY/WXY-SEU/TrafficClassifier/Projects/unknown_traffic_project/stage8a_cipherspectrum_known_density/artifacts/low/mu_train.npy",
+      "role": "KNOWN_TRAIN"
+    },
+    {
+      "file_type": "npy",
+      "path": "/home/birkenwald/data/SEU-WXY/WXY-SEU/TrafficClassifier/Projects/unknown_traffic_project/stage8a_cipherspectrum_known_density/artifacts/low/mu_val.npy",
+      "role": "KNOWN_VALIDATION"
+    },
+    {
+      "file_type": "npy",
+      "path": "/home/birkenwald/data/SEU-WXY/WXY-SEU/TrafficClassifier/Projects/unknown_traffic_project/stage8a_cipherspectrum_known_density/artifacts/low/native_val_known_scores.npy",
+      "role": "KNOWN_VALIDATION"
+    },
+    {
+      "file_type": "npy",
+      "path": "/home/birkenwald/data/SEU-WXY/WXY-SEU/TrafficClassifier/Projects/unknown_traffic_project/stage8a_cipherspectrum_known_density/artifacts/low/mu_train.npy",
+      "records": 75692,
+      "role": "KNOWN_TRAIN"
+    },
+    {
+      "file_type": "npy",
+      "path": "/home/birkenwald/data/SEU-WXY/WXY-SEU/TrafficClassifier/Projects/unknown_traffic_project/stage8a_cipherspectrum_known_density/artifacts/low/mu_val.npy",
+      "records": 16242,
+      "role": "KNOWN_VALIDATION"
+    },
+    {
+      "file_type": "npy",
+      "path": "/home/birkenwald/data/SEU-WXY/WXY-SEU/TrafficClassifier/Projects/unknown_traffic_project/stage8a_cipherspectrum_known_density/artifacts/low/native_val_known_scores.npy",
+      "records": 16242,
+      "role": "KNOWN_VALIDATION"
+    }
+  ],
+  "setting": "low",
+  "status": "PASS",
+  "unknown_inference_executed": false,
+  "unknown_mu_generated": false,
+  "unknown_test_opened": 0
+}

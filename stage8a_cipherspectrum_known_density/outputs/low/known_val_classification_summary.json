@@ -1,0 +1,61 @@
+{
+  "accuracy": 0.7691786725772688,
+  "hardest_five_by_f1": [
+    {
+      "accuracy": 0.35167464114832536,
+      "class_name": "trustarc.com",
+      "f1": 0.4206008583690987,
+      "local_class_id": 28,
+      "precision": 0.5231316725978647,
+      "recall": 0.35167464114832536,
+      "setting": "low",
+      "support": 418
+    },
+    {
+      "accuracy": 0.5529715762273901,
+      "class_name": "doubleclick.net",
+      "f1": 0.42209072978303747,
+      "local_class_id": 5,
+      "precision": 0.3413078149920255,
+      "recall": 0.5529715762273901,
+      "setting": "low",
+      "support": 387
+    },
+    {
+      "accuracy": 0.3624161073825503,
+      "class_name": "flipboard.com",
+      "f1": 0.46418338108882523,
+      "local_class_id": 6,
+      "precision": 0.6454183266932271,
+      "recall": 0.3624161073825503,
+      "setting": "low",
+      "support": 447
+    },
+    {
+      "accuracy": 0.6333333333333333,
+      "class_name": "hotjar.com",
+      "f1": 0.57,
+      "local_class_id": 14,
+      "precision": 0.5181818181818182,
+      "recall": 0.6333333333333333,
+      "setting": "low",
+      "support": 450
+    },
+    {
+      "accuracy": 0.5033407572383074,
+      "class_name": "gmx.net",
+      "f1": 0.5794871794871795,
+      "local_class_id": 8,
+      "precision": 0.6827794561933535,
+      "recall": 0.5033407572383074,
+      "setting": "low",
+      "support": 449
+    }
+  ],
+  "macro_f1": 0.769144274806704,
+  "parity": "PASS",
+  "setting": "low",
+  "stage7_accuracy": 0.7691786725772688,
+  "stage7_macro_f1": 0.769144274806704,
+  "validation_samples": 16242
+}

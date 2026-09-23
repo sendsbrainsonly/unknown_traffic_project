@@ -1,0 +1,98 @@
+{
+  "schema_version": 1,
+  "experiment_id": "stage14a-vnat-data-audit-20260917-v1",
+  "created_at_utc": "2026-09-17T05:46:33Z",
+  "updated_at_utc": "2026-09-17T08:13:00Z",
+  "status": "success_with_quality_issues",
+  "experiment_type": "dataset-audit",
+  "claim_scope": "diagnostic",
+  "objective": "Audit the read-only VNAT dataset for a strict group-aware Unknown-Free open-set protocol without model execution",
+  "inputs": [
+    {
+      "path": "/home/birkenwald/data/SEU-WXY/WXY-SEU/TrafficClassifier/Dataset/VNAT/VNAT",
+      "role": "read_only_dataset",
+      "file_count": 172,
+      "size_bytes": 37191939701
+    },
+    {
+      "path": "/home/birkenwald/data/SEU-WXY/WXY-SEU/TrafficClassifier/Dataset/VNAT/VNAT/labels/labels_manifest.csv",
+      "role": "source_filename_labels",
+      "rows": 165
+    }
+  ],
+  "code": {
+    "revision": null,
+    "dirty": null,
+    "changes": [
+      "stage14a_vnat_data_audit/scripts/audit_vnat.py",
+      "stage14a_vnat_data_audit/scripts/inspect_hdf_schema.py",
+      "stage14a_vnat_data_audit/scripts/verify_stage14a.py",
+      "stage14a_vnat_data_audit/tests/test_audit_vnat.py"
+    ]
+  },
+  "execution": {
+    "tmux_sessions": [
+      "s14a-vnat-audit-20260917",
+      "stage14a-final-generate3",
+      "stage14a-verification1"
+    ],
+    "commands": [
+      "python stage14a_vnat_data_audit/scripts/audit_vnat.py",
+      "python -m pytest stage14a_vnat_data_audit/tests/test_audit_vnat.py -q",
+      "python stage14a_vnat_data_audit/scripts/verify_stage14a.py"
+    ],
+    "exit_code": 0,
+    "environment": "/home/birkenwald/data/SEU-WXY/conda_envs/2025-10-8-WXY-dgl_py310",
+    "physical_gpu_ids": []
+  },
+  "configuration": {
+    "files": [
+      "stage14a_vnat_data_audit/scripts/audit_vnat.py",
+      "stage14a_vnat_data_audit/scripts/inspect_hdf_schema.py"
+    ],
+    "parameters": {
+      "pcap_count": 165,
+      "full_packet_traversal": true,
+      "pcap_hash": "sha256",
+      "flow_duplicate_hash": "sha256_of_ordered_frame_md5_hashes",
+      "grouping": "vpn_nonvpn_conservative_base_plus_exact_pcap_duplicate_union",
+      "eligibility_rule": "at_least_three_nonempty_usable_groups",
+      "unknown_selection": false,
+      "split_generation": false
+    },
+    "seeds": []
+  },
+  "core_results": [
+    {"metric": "dataset_files", "value": 172},
+    {"metric": "pcaps_total", "value": 165},
+    {"metric": "pcaps_fully_readable", "value": 163},
+    {"metric": "parsed_flows", "value": 23454},
+    {"metric": "applications", "value": 10},
+    {"metric": "eligible_applications", "value": 8},
+    {"metric": "excluded_applications", "value": 2},
+    {"metric": "exact_duplicate_pcap_groups", "value": 1},
+    {"metric": "cross_application_duplicate_flow_rows", "value": 4},
+    {"metric": "stage14b_readiness", "value": "CONDITIONAL_YES"}
+  ],
+  "artifacts": [
+    {"path": "vnat_manifest.csv", "sha256": "5d6827baf37c6893028637779765e7289ff83c56f8eb84fdecb52650a6334c5b", "rows": 172},
+    {"path": "vnat_class_statistics.csv", "sha256": "07e5fd6dcd172d1a8217af98e4564cdeecd994beb7b3484ceca0c71380f33380", "rows": 10},
+    {"path": "eligible_classes.json", "sha256": "e3a178dc0bb694b4544ff62ada2a85161470a1292cb990dad3ec33e160da26dd"},
+    {"path": "excluded_classes.json", "sha256": "c244639f490da51bc62c42f3df38309dc02b0e2d75d54f47ff605b4d37b61dd8"},
+    {"path": "stage14a_vnat_audit.md", "sha256": "86285314a3c5e8a53ea6a1b8c1bc78031a532bea4f915cce8cbf0c6224f4d074"},
+    {"path": "outputs/audit_details.json", "sha256": "57b8bf948d82f3ebcba5d50c05232f9267457a19a3820765ea8e81bfea7e2c16"},
+    {"path": "outputs/duplicate_files.csv", "sha256": "c05cf493163a11e8d60a20ca5c6c65fa45bc6e91b728d906825061de73182036"},
+    {"path": "outputs/duplicate_flows.csv", "sha256": "45c09e0653d0c4b08fe6dfdd1b89c071e66f20dcf8036fe4c0421864889f38e1"},
+    {"path": "artifacts/pcap_scans/", "json_records": 165, "role": "per_pcap_full_scan_evidence"},
+    {"path": "RESULTS.md", "role": "human_readable_core_results"}
+  ],
+  "limitations": [
+    "Two source PCAPs are truncated and excluded.",
+    "Labels are filename-derived capture labels rather than authoritative per-flow labels.",
+    "Two exact packet sequences occur across rsync and sftp and must be quarantined before protocol freeze.",
+    "The feature HDF has only coarse labels and no capture/group identifier.",
+    "The VPN/non-VPN same-number group linkage is deliberately conservative because authoritative session metadata is absent.",
+    "Class flow and capture counts are strongly imbalanced."
+  ],
+  "next_step": "Do not proceed automatically. Stage 14B is conditionally feasible for eight eligible applications after the documented quarantine and grouping safeguards."
+}

@@ -1,0 +1,21 @@
+{
+  "freeze_after": {
+    "freeze_hash": "c904daef04d2c8e79469191121325c0a6ceeaeb3e595ef9c4c7d7a62c980ae2f",
+    "protocol_sha256": "5177bf7276812bbb417f085043f8518c8573ea1851de2f1d733deb77c9939ced",
+    "split_manifest_sha256": "66bf155e6906231b316c384a52f4b46dabd9d3aee76d5f66d86a3941eb172c4e"
+  },
+  "freeze_before": {
+    "freeze_hash": "c904daef04d2c8e79469191121325c0a6ceeaeb3e595ef9c4c7d7a62c980ae2f",
+    "protocol_sha256": "5177bf7276812bbb417f085043f8518c8573ea1851de2f1d733deb77c9939ced",
+    "split_manifest_sha256": "66bf155e6906231b316c384a52f4b46dabd9d3aee76d5f66d86a3941eb172c4e"
+  },
+  "generated_at_utc": "2026-09-17T14:33:32.798141+00:00",
+  "known_test_samples_used": 0,
+  "runs": 15,
+  "status": "PASS",
+  "successful_runs": 15,
+  "unique_checkpoint_hashes": 15,
+  "unknown_inference_executed": false,
+  "unknown_train_samples_used": 0,
+  "unknown_validation_samples_used": 0
+}

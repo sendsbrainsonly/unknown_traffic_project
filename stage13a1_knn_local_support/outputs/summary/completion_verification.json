@@ -1,0 +1,16 @@
+{
+  "status": "PASS",
+  "formal_runs": 15,
+  "unique_checkpoint_hashes": 15,
+  "method_rows": 45,
+  "scenario_rows": 9,
+  "knn10_comparison_rows": 15,
+  "knn5_comparison_rows": 15,
+  "new_encoder_training": false,
+  "external_test_datasets_read": [],
+  "cipherspectrum_test_read": false,
+  "frozen_experiment_modified": false,
+  "next_stage_started": false,
+  "final_gate": "CONDITIONAL_GO",
+  "failures": []
+}

@@ -1,0 +1,82 @@
+{
+  "protocol_seed": 42,
+  "eligible_classes_canonical_sorted": [
+    "Browsing",
+    "Email",
+    "FTP",
+    "Facebook",
+    "Hangouts",
+    "P2P",
+    "Skype",
+    "Spotify",
+    "Vimeo",
+    "YouTube"
+  ],
+  "permutation": [
+    "P2P",
+    "Skype",
+    "Browsing",
+    "Spotify",
+    "Facebook",
+    "FTP",
+    "Hangouts",
+    "YouTube",
+    "Email",
+    "Vimeo"
+  ],
+  "settings": {
+    "low": {
+      "unknown_count": 1,
+      "unknown_classes": [
+        "P2P"
+      ],
+      "known_classes": [
+        "Browsing",
+        "Email",
+        "FTP",
+        "Facebook",
+        "Hangouts",
+        "Skype",
+        "Spotify",
+        "Vimeo",
+        "YouTube"
+      ]
+    },
+    "medium": {
+      "unknown_count": 2,
+      "unknown_classes": [
+        "P2P",
+        "Skype"
+      ],
+      "known_classes": [
+        "Browsing",
+        "Email",
+        "FTP",
+        "Facebook",
+        "Hangouts",
+        "Spotify",
+        "Vimeo",
+        "YouTube"
+      ]
+    },
+    "high": {
+      "unknown_count": 3,
+      "unknown_classes": [
+        "P2P",
+        "Skype",
+        "Browsing"
+      ],
+      "known_classes": [
+        "Email",
+        "FTP",
+        "Facebook",
+        "Hangouts",
+        "Spotify",
+        "Vimeo",
+        "YouTube"
+      ]
+    }
+  },
+  "nested": true,
+  "setting_reduced_due_to_class_count": false
+}

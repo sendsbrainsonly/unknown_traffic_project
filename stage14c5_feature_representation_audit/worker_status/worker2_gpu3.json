@@ -1,0 +1,13 @@
+{
+  "completed_tasks": 1,
+  "failed_tasks": 0,
+  "records": [
+    {
+      "returncode": 0,
+      "status": "success",
+      "task": "f3:low_seed2023"
+    }
+  ],
+  "total_tasks": 15,
+  "worker_id": "worker2_gpu3"
+}

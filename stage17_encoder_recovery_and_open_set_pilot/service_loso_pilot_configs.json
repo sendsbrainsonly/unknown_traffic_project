@@ -1,0 +1,48 @@
+{
+  "DES-v1": {
+    "k": 10,
+    "normalization": "Known Validation median/MAD",
+    "threshold": "Known Validation P95 higher",
+    "weights": [
+      0.5,
+      0.5
+    ]
+  },
+  "E1": {
+    "architecture": "exact recovered TrafficFormer",
+    "batch_size": 16,
+    "epochs": 3,
+    "initialization": "random normal 0.02",
+    "lr": 6e-05,
+    "pretraining": "none for strict main track"
+  },
+  "E2": {
+    "architecture": "exact recovered FIG/TAGCN",
+    "batch_size": 64,
+    "epochs": 50,
+    "lr": 0.001,
+    "optimizer": "Adam"
+  },
+  "E3": {
+    "batch_size": 256,
+    "epochs": 30,
+    "fusion": "per-branch Known-Train zscore then concat 768+128",
+    "head": "linear",
+    "lr": 0.001
+  },
+  "known_test_for_selection": 0,
+  "protocols": [
+    "loso_email",
+    "loso_streaming"
+  ],
+  "seeds": [
+    2022,
+    2023,
+    2024
+  ],
+  "unknown_services": [
+    "Email",
+    "Streaming"
+  ],
+  "unknown_test_for_selection": 0
+}

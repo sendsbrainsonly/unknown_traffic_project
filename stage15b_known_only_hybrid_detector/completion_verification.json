@@ -1,0 +1,117 @@
+{
+  "config": {
+    "candidate_gate": {
+      "auprc": "mean delta versus H0 >= -0.005 on both primary datasets",
+      "calibration": "no Unknown/Test normalization, threshold, or learned weight",
+      "dataset_mean_auroc": "mean delta versus H0 >= 0 on both VNAT and USTC-TFC2016",
+      "hard_regime": "for VNAT rsync and scp separately: mean delta versus H0 >= -0.02 and no protocol-class delta < -0.10",
+      "negative_protocol_reduction": "at least two fewer negative primary protocols than DES0 versus H0",
+      "overall_paired_auroc": "pooled primary mean delta versus H0 > 0",
+      "ufar": "mean delta versus H0 <= +0.01 on both primary datasets"
+    },
+    "candidate_selection": {
+      "eligible_set": "candidates satisfying every candidate_gate condition",
+      "final_tiebreaker": "largest pooled primary mean delta AUROC",
+      "simplicity_tolerance": "among candidates within one negative protocol of the minimum and within 0.01 AUROC of the best worst-case delta, choose H1 before H2 before H3",
+      "single_formula_for_all_datasets": true,
+      "stability_order": [
+        "fewest negative primary protocols",
+        "largest worst primary protocol delta AUROC"
+      ]
+    },
+    "claim_scope": "development",
+    "empirical_cdf": {
+      "definition": "count(Known-Val score <= x) / n_validation",
+      "implementation": "numpy.searchsorted(sorted_validation, x, side=right) / n_validation",
+      "larger_is_more_anomalous": true,
+      "range": [
+        0.0,
+        1.0
+      ]
+    },
+    "evaluation": {
+      "bootstrap_unit": "protocol",
+      "large_failure_definition": "protocol-class AUROC delta versus H0 < -0.10",
+      "metrics": [
+        "AUROC",
+        "AUPRC",
+        "UFAR",
+        "Known FRR"
+      ],
+      "negative_protocol_definition": "candidate AUROC - H0 AUROC < 0",
+      "paired_bootstrap_repetitions": 10000,
+      "paired_bootstrap_seed": 0,
+      "unknown_positive": true
+    },
+    "experiment_id": "stage15b-known-only-hybrid-detector-20260918-v1",
+    "final_gate": {
+      "HYBRID_CONFIRMED": "at least one candidate satisfies every candidate_gate condition",
+      "HYBRID_FAILED": "no candidate satisfies the partial condition",
+      "HYBRID_PARTIAL": "no full candidate, but one candidate has nonnegative mean AUROC on both primary datasets, positive pooled mean AUROC, no systematic AUPRC degradation, and Known-only calibration"
+    },
+    "forbidden": [
+      "encoder training or fine-tuning",
+      "Unknown/Test percentile fitting or threshold calibration",
+      "continuous fusion-weight search",
+      "new signals",
+      "gating model training",
+      "dataset-specific formula selection",
+      "modification of frozen upstream artifacts"
+    ],
+    "frozen_inputs": {
+      "encoder_training": false,
+      "normalization_fit_split": "Known Validation only",
+      "signals": [
+        "Open-Detect Native",
+        "DES-v0",
+        "DES-v1 where frozen",
+        "prototype-distance component",
+        "V_post"
+      ],
+      "test_calibration_samples": 0,
+      "threshold_fit_split": "Known Validation only",
+      "unknown_calibration_samples": 0
+    },
+    "methods": {
+      "DES0": "frozen DES-v0 raw score reference",
+      "DES1": "frozen DES-v1 raw score reference where available",
+      "H0": "Open-Detect Native raw score baseline; A_OD is also saved for Hybrid construction",
+      "H1": "max(A_OD, A_DES0)",
+      "H2": "max(A_OD, A_DES1)",
+      "H3": "max(A_proto, A_DES0, A_Vpost)"
+    },
+    "primary_development_datasets": [
+      "VNAT",
+      "USTC-TFC2016"
+    ],
+    "stage": "15B",
+    "supplementary_retrospective_datasets": [
+      "ISCX-VPN",
+      "ISCXTor2016"
+    ],
+    "threshold": {
+      "numpy_method": "higher",
+      "rule": "Known-Validation P95 independently for every method",
+      "unknown_if": "score >= threshold"
+    }
+  },
+  "config_sha256": "86c963c0e884a3790e6cf34b434ae7a9436ff5a38a89250bdad3a63d2e7e81eb",
+  "analysis_code_sha256": "9787bad49b88ca730a10d139ab2f2565627e4011739f8284ce2d64add72ddf95",
+  "encoder_inference": false,
+  "failure_rows": 938,
+  "final_gate": "HYBRID_PARTIAL",
+  "gating_model_training": false,
+  "max_m0_decomposition_error": 1.7458050267649128e-05,
+  "metric_rows": 300,
+  "new_encoder_training": false,
+  "new_signal_search": false,
+  "protocols": 60,
+  "recommended_hybrid": "H1",
+  "score_artifact_protocols": 60,
+  "source_hashes": 255,
+  "source_hashes_unchanged": true,
+  "status": "PASS",
+  "test_calibration_samples": 0,
+  "unknown_calibration_samples": 0,
+  "weight_search": false
+}

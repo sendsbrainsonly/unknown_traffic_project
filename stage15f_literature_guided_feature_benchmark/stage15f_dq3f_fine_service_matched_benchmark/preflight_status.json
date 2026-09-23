@@ -1,0 +1,12 @@
+{
+  "status": "PASS",
+  "rows": 3065,
+  "train": 2730,
+  "validation": 335,
+  "fine_classes": 11,
+  "service_classes": 6,
+  "cross_split_flow_overlap": 0,
+  "cross_split_exact_image_overlap": 0,
+  "known_test_feature_values_used": 0,
+  "unknown_test_feature_values_used": 0
+}

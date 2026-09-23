@@ -1,0 +1,7 @@
+{
+  "freeze_hash": "c904daef04d2c8e79469191121325c0a6ceeaeb3e595ef9c4c7d7a62c980ae2f",
+  "vnat_open_set_protocol_sha256": "5177bf7276812bbb417f085043f8518c8573ea1851de2f1d733deb77c9939ced",
+  "vnat_split_manifest_sha256": "66bf155e6906231b316c384a52f4b46dabd9d3aee76d5f66d86a3941eb172c4e",
+  "vnat_final_class_audit_sha256": "f9bddc087bdb0432dc4e209181259b82aeeed426c99ed2be4ee4370e6aa2fab3",
+  "stage14b_protocol_freeze_sha256": "4952d8912a3abbb65c17e486e489c7040aa3f3d6679a2064c3e0caf3643ed340"
+}

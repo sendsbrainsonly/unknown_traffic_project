@@ -1,0 +1,13 @@
+{
+  "best_non_f0": "f2",
+  "feature_count": 4,
+  "known_test_samples_used": 0,
+  "most_stable": "f2",
+  "primary_feature_bottleneck": false,
+  "recommend_new_feature_freeze": false,
+  "run_count": 60,
+  "stage14c5_feature_ablation_sha256": "d11c787734753b3120323d6b7ae3dd5968d96b75d5f7c0207c85c62f99ea3b76",
+  "stage14c5_report_sha256": "c64e827698bd625fc4f13d8ca1c727563e32de10626a29a7b8b31b1146e24e12",
+  "status": "PASS",
+  "unknown_test_samples_used": 0
+}

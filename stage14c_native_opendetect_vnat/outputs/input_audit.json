@@ -1,0 +1,576 @@
+{
+  "explicitly_not_loaded": [
+    "known:test",
+    "unknown:test"
+  ],
+  "freeze": {
+    "freeze_hash": "c904daef04d2c8e79469191121325c0a6ceeaeb3e595ef9c4c7d7a62c980ae2f",
+    "protocol_sha256": "5177bf7276812bbb417f085043f8518c8573ea1851de2f1d733deb77c9939ced",
+    "split_manifest_sha256": "66bf155e6906231b316c384a52f4b46dabd9d3aee76d5f66d86a3941eb172c4e"
+  },
+  "model_visible_roles": [
+    "known:train",
+    "known:validation"
+  ],
+  "native_config": {
+    "arch": "resnet18",
+    "betas": [
+      0.9,
+      0.999
+    ],
+    "channels": 1,
+    "checkpoint_selection": "maximum Known Validation Accuracy",
+    "dataloader_temp_path_addressing": "project-local directory via /proc/self/fd dirfd alias",
+    "dataloader_tensor_sharing_strategy": "default_file_descriptor",
+    "early_stopping": false,
+    "epochs": 100,
+    "lambda": 0.005,
+    "latent_dim": 128,
+    "learning_rate": 0.001,
+    "lr_gamma": 0.1,
+    "lr_milestones": [
+      50,
+      80
+    ],
+    "optimizer": "Adam",
+    "prototype_reset_zero_based_epochs": [
+      50,
+      80
+    ],
+    "temp_inter": 1.0,
+    "temp_intra": 1.0,
+    "train_batch_size": 128,
+    "training_protocol": "released-code",
+    "training_seed": 2022,
+    "validation_batch_size": 64,
+    "workers": 4
+  },
+  "runs": [
+    {
+      "failures": [],
+      "known_classes": [
+        "rsync",
+        "sftp",
+        "ssh",
+        "vimeo",
+        "youtube",
+        "zoiper"
+      ],
+      "known_test_samples_used": 0,
+      "model_visible_files": {
+        "input_audit.json": "d3d8d55e1594609c7e3a420f7a6dadb968909ca9b5c7461ddc63829c16c984b5",
+        "input_manifest.csv": "c0a6832e8c44fd1d1401cbcfeef0173d4026241f681ba168f488fa12fe004ad4",
+        "label_map.json": "b21782a89f3623a366a0286e6e0b8b5eb7aa3d177bc82a16d27010282efeb152",
+        "train_images.npy": "415b2e347559526d7b9a6a4bab82f1f047f9812ad011dbc145da52f084204a93",
+        "train_labels.npy": "d2e0e8b8649c7af657672fbafe928d8f921a7c9a5bb00033227c860e8ca395e6",
+        "validation_images.npy": "c2a47ca6e47842e5e9d407114dfcef11af93e2f45f9daae08835bb2de6ea98d4",
+        "validation_labels.npy": "ba18d49f11135e996cffe458638df08a202c11ddb36b3b290e33e1050e0ad766"
+      },
+      "protocol_id": "high_seed2022",
+      "protocol_seed": 2022,
+      "setting": "High",
+      "status": "PASS",
+      "train_samples": 15719,
+      "unknown_classes": [
+        "scp",
+        "rdp",
+        "skype",
+        "netflix"
+      ],
+      "unknown_samples_used_in_training": 0,
+      "unknown_samples_used_in_validation": 0,
+      "validation_samples": 1961
+    },
+    {
+      "failures": [],
+      "known_classes": [
+        "rdp",
+        "scp",
+        "sftp",
+        "vimeo",
+        "youtube",
+        "zoiper"
+      ],
+      "known_test_samples_used": 0,
+      "model_visible_files": {
+        "input_audit.json": "7d97068ba8852e5f871d82866fea72057ad824ea7a6438b89a9239b7ab059a51",
+        "input_manifest.csv": "ab44b901863f18039f3b8c8444b4885a7b5a1225c06a2605269c28ea91d73ede",
+        "label_map.json": "a80d25ce8357fbb92e10d5baca6568342c5be750e063340d08d0ab5f82c951c7",
+        "train_images.npy": "23d4bf15dc5f3e5976f4b1fbd0c80924ce07789fe491625a27fbac5b204d6604",
+        "train_labels.npy": "9dfa8d91e6cb9e2ccea98132f55fb188afa77379a41665c2f1b849fe3ffef42f",
+        "validation_images.npy": "d0bceffeeaf4a4a22ad80ca1f8db3717d4f62e3672162ef9562b41fb463e7f64",
+        "validation_labels.npy": "cfdb982085e2ba375be077df88d3369769d8368a45d9b5f3bc338b54c4178b65"
+      },
+      "protocol_id": "high_seed2023",
+      "protocol_seed": 2023,
+      "setting": "High",
+      "status": "PASS",
+      "train_samples": 5206,
+      "unknown_classes": [
+        "skype",
+        "netflix",
+        "ssh",
+        "rsync"
+      ],
+      "unknown_samples_used_in_training": 0,
+      "unknown_samples_used_in_validation": 0,
+      "validation_samples": 647
+    },
+    {
+      "failures": [],
+      "known_classes": [
+        "netflix",
+        "rdp",
+        "scp",
+        "sftp",
+        "skype",
+        "youtube"
+      ],
+      "known_test_samples_used": 0,
+      "model_visible_files": {
+        "input_audit.json": "a5e5a8daf172b68fb27b0b224c41db9e4f320343c40f9ce95c53c9478ed9d810",
+        "input_manifest.csv": "a4c6d2729d5ee358c43b6f040350e340563ddc42f01a920496808b43c4418776",
+        "label_map.json": "5f0cbade1a52095ab670568d64eb4311184f2a0be65c49b70ec6b4c532b63825",
+        "train_images.npy": "4d718af3873c73b7501c4a4d7ffe1707a741b78b2d3f8520fe755ea4e73fe96c",
+        "train_labels.npy": "c48344d8f41d1f3b8de041bf95c700e7bc3eedd143a37579e114b71c7f107615",
+        "validation_images.npy": "6406231de77491a28f8bf08041f3422a45e1bfe8d639afa8a111d9ee36a6d39b",
+        "validation_labels.npy": "e9fc9c26b242382ff84c124cb5f268a77a24daade2f1e228d7249d757647feab"
+      },
+      "protocol_id": "high_seed2024",
+      "protocol_seed": 2024,
+      "setting": "High",
+      "status": "PASS",
+      "train_samples": 4659,
+      "unknown_classes": [
+        "ssh",
+        "rsync",
+        "zoiper",
+        "vimeo"
+      ],
+      "unknown_samples_used_in_training": 0,
+      "unknown_samples_used_in_validation": 0,
+      "validation_samples": 579
+    },
+    {
+      "failures": [],
+      "known_classes": [
+        "netflix",
+        "rdp",
+        "rsync",
+        "scp",
+        "skype",
+        "ssh"
+      ],
+      "known_test_samples_used": 0,
+      "model_visible_files": {
+        "input_audit.json": "3d064697544d3c7bfe79bee22d9fef48b33c25756f2403b7d569d3b2fe39cb25",
+        "input_manifest.csv": "e893104f2490ee650a50246de243409665766126f8ccb825f32940a7b754cd76",
+        "label_map.json": "89b4b1826c1fccb2044bc05c65bad36e6076397110cf89a45d8ddbd3bc5141e8",
+        "train_images.npy": "9e8ebd7deea8571b65828ec66ecac89ee210b8830262e7d385140e4fd8b413fb",
+        "train_labels.npy": "7e4cf62be90c82dcef87a9cf1f55bd07d735c0f374d6652fd5c7b75d028a0ecc",
+        "validation_images.npy": "554b044aa10b83b20194ca676d5138da5567451433a0bff026e65ed9d7cdbf2e",
+        "validation_labels.npy": "a4935025a1be3b83cd88d542a3b2ca0add10b5b79916393bdb596e409e228a35"
+      },
+      "protocol_id": "high_seed2025",
+      "protocol_seed": 2025,
+      "setting": "High",
+      "status": "PASS",
+      "train_samples": 15431,
+      "unknown_classes": [
+        "zoiper",
+        "vimeo",
+        "sftp",
+        "youtube"
+      ],
+      "unknown_samples_used_in_training": 0,
+      "unknown_samples_used_in_validation": 0,
+      "validation_samples": 1926
+    },
+    {
+      "failures": [],
+      "known_classes": [
+        "netflix",
+        "rsync",
+        "skype",
+        "ssh",
+        "vimeo",
+        "zoiper"
+      ],
+      "known_test_samples_used": 0,
+      "model_visible_files": {
+        "input_audit.json": "3ecd2453eea4450c45b43c38b263d1982c6ed0b22b39a8c0073f989709ccbda0",
+        "input_manifest.csv": "76e4fd5ba95e6143a407550a80f5e161c86d0daf0c5819ba2d729d3a2f8630c1",
+        "label_map.json": "8e8203db00071a5321a09d853ec99469a48aea10db5030bbe6531b07de2bd8cd",
+        "train_images.npy": "2645515b5a301a54aaba09a8c2db9f52c21ae85ed67bd847eab5486d40df8b72",
+        "train_labels.npy": "bcbd562c91cd2d3a938721325dff5e7e3c0f0c214ca9bc9208340db82de3f2d3",
+        "validation_images.npy": "c12e93aab114c96573cf852832bced9f73e3d602d64d134f14374bbb5461f919",
+        "validation_labels.npy": "3dbaaf4088eae5ecd5cec4613349888202c1bd3813351a3c2a9f0e9458c8c7e2"
+      },
+      "protocol_id": "high_seed2026",
+      "protocol_seed": 2026,
+      "setting": "High",
+      "status": "PASS",
+      "train_samples": 15292,
+      "unknown_classes": [
+        "sftp",
+        "youtube",
+        "scp",
+        "rdp"
+      ],
+      "unknown_samples_used_in_training": 0,
+      "unknown_samples_used_in_validation": 0,
+      "validation_samples": 1907
+    },
+    {
+      "failures": [],
+      "known_classes": [
+        "netflix",
+        "rsync",
+        "sftp",
+        "skype",
+        "ssh",
+        "vimeo",
+        "youtube",
+        "zoiper"
+      ],
+      "known_test_samples_used": 0,
+      "model_visible_files": {
+        "input_audit.json": "026b033a42dcdc7d2d92de86f4d2fb011796c274bfe3853d0f9d7d4a5c5a2eff",
+        "input_manifest.csv": "d1dade0942195af36fc5e084b7b4ed51918e9e18844eb6f9c673a8cae278608f",
+        "label_map.json": "a46344eeeea3ff295cbaca463139e2b867cd8bcb7072a07c7121efdafc2fb745",
+        "train_images.npy": "7b98c377c273086c7ed339c31b9bbc3bfa966ccbd6e7e8f16c03ece55c39d954",
+        "train_labels.npy": "7ff178113e89876ba47a7cec74cc51a765b4be726052bfd8a90b435d45c7662a",
+        "validation_images.npy": "b1599eca6324c6c0add6bf1e508fe7238053709e7e6dbe7662cbe35d034d9943",
+        "validation_labels.npy": "911e99dd44119b96795ed5e6b2dfe5db64e602322a2db4153e850f3b76f6213f"
+      },
+      "protocol_id": "low_seed2022",
+      "protocol_seed": 2022,
+      "setting": "Low",
+      "status": "PASS",
+      "train_samples": 16901,
+      "unknown_classes": [
+        "scp",
+        "rdp"
+      ],
+      "unknown_samples_used_in_training": 0,
+      "unknown_samples_used_in_validation": 0,
+      "validation_samples": 2107
+    },
+    {
+      "failures": [],
+      "known_classes": [
+        "rdp",
+        "rsync",
+        "scp",
+        "sftp",
+        "ssh",
+        "vimeo",
+        "youtube",
+        "zoiper"
+      ],
+      "known_test_samples_used": 0,
+      "model_visible_files": {
+        "input_audit.json": "565c014d43632c3d84f559830a246e53908d80cd5de532e0b5c1cc4863c824b5",
+        "input_manifest.csv": "4868bad40bff955bbd93fc070c5e19034d6bba2aafbed999932a5cbfb0a30222",
+        "label_map.json": "77a3d78ed2823e769586309dd58092de24b916776da9fdabf7e151f5b25ea7e0",
+        "train_images.npy": "51d18a7da15c28228f8a76e2a36daa233d6efac62b849203728775e641fa44ad",
+        "train_labels.npy": "a5e005d96c16cb0ab5fc161006e354b57c6629134b47e931ffa4e8708a9a60ab",
+        "validation_images.npy": "8a6c39569fb356b5c3eefa70a8b14179957978b84f632fb80410666eb2d59e6e",
+        "validation_labels.npy": "6e6a61e482aaabcf8d418b388fe715f27fad7e4f8bbc4af88cc00f014f652bf3"
+      },
+      "protocol_id": "low_seed2023",
+      "protocol_seed": 2023,
+      "setting": "Low",
+      "status": "PASS",
+      "train_samples": 17587,
+      "unknown_classes": [
+        "skype",
+        "netflix"
+      ],
+      "unknown_samples_used_in_training": 0,
+      "unknown_samples_used_in_validation": 0,
+      "validation_samples": 2194
+    },
+    {
+      "failures": [],
+      "known_classes": [
+        "netflix",
+        "rdp",
+        "scp",
+        "sftp",
+        "skype",
+        "vimeo",
+        "youtube",
+        "zoiper"
+      ],
+      "known_test_samples_used": 0,
+      "model_visible_files": {
+        "input_audit.json": "8b337a4004aa3c6c9c70cfa65b5a6212168f846acd5e28cc55bc98264dce2f33",
+        "input_manifest.csv": "e18d94eaead839bfb1a004c496048b307cc0f2882029039b03983103678487a9",
+        "label_map.json": "01bee2d524dd6d7ea2aa8932f7b14140a2b2ff0c0b821ab0b6152a42c01e4033",
+        "train_images.npy": "3c56ef2e18b2fda13a014fc98bfc4e8b63277976e1b09b70c0dfc0051abd2b7d",
+        "train_labels.npy": "7622e7195b0d3778b216a13714c00bbdbb858074912540ee99b759bd1c773fb8",
+        "validation_images.npy": "788108e80303480cf70457f1ebb1f4c8731b2f45eefd13a60eaf1add7d7fd5d3",
+        "validation_labels.npy": "205c8724d158cc7f506f4e82cf2a37b4327695cc45df273fa2f6bffacf1b73fa"
+      },
+      "protocol_id": "low_seed2024",
+      "protocol_seed": 2024,
+      "setting": "Low",
+      "status": "PASS",
+      "train_samples": 6388,
+      "unknown_classes": [
+        "ssh",
+        "rsync"
+      ],
+      "unknown_samples_used_in_training": 0,
+      "unknown_samples_used_in_validation": 0,
+      "validation_samples": 793
+    },
+    {
+      "failures": [],
+      "known_classes": [
+        "netflix",
+        "rdp",
+        "rsync",
+        "scp",
+        "sftp",
+        "skype",
+        "ssh",
+        "youtube"
+      ],
+      "known_test_samples_used": 0,
+      "model_visible_files": {
+        "input_audit.json": "e5ca307b4d2cf4ab3de9ebd65d0fd8fdaa456c3fffcd0dfff3b0457efe5baae4",
+        "input_manifest.csv": "020ea6ea7b0e916a2ea47a02952f87e492381b4766dfaba7d9a155e43bba8d5c",
+        "label_map.json": "3cb6a6b34c51cee9afca897b9ff974e935dda06f198ebc2aee9eda3edb528a36",
+        "train_images.npy": "83e8307490777418c2506c3eae41b418978b69593cd47efb854d38760070fecd",
+        "train_labels.npy": "eebc7882c2414f74515a6b4c3aaf6d06e0b5e19c1d500cac58cf3208756f5a43",
+        "validation_images.npy": "8460c563ecf5617769d5df4ab20ccf3c7669fef0ff5adcf72eacb230350b1f68",
+        "validation_labels.npy": "8c0fb396fa81487e747f22edea7a13ad05e1756e44d1d182ed1a6bfe60a994f8"
+      },
+      "protocol_id": "low_seed2025",
+      "protocol_seed": 2025,
+      "setting": "Low",
+      "status": "PASS",
+      "train_samples": 17040,
+      "unknown_classes": [
+        "zoiper",
+        "vimeo"
+      ],
+      "unknown_samples_used_in_training": 0,
+      "unknown_samples_used_in_validation": 0,
+      "validation_samples": 2126
+    },
+    {
+      "failures": [],
+      "known_classes": [
+        "netflix",
+        "rdp",
+        "rsync",
+        "scp",
+        "skype",
+        "ssh",
+        "vimeo",
+        "zoiper"
+      ],
+      "known_test_samples_used": 0,
+      "model_visible_files": {
+        "input_audit.json": "54bf1fc2b067df08bd7fd79a297321df960bb16208d2ed2c5a48f376136eeb4d",
+        "input_manifest.csv": "1d0929cb95107becba6340041ef659893b38b363b12f3a9f2bcf5e35976ec265",
+        "label_map.json": "4376646f6b888ea466568c59d6ba09920fa1af378026ba2fea46e8acac51cead",
+        "train_images.npy": "6bbdddbc2b582f44503f29fab654ee71e0d9a7bba9e234dc84e5e69710036470",
+        "train_labels.npy": "35ceec5b70882b250768d9073e2539b286d76574e1f7e3fb4a2a9dd9b937c1ee",
+        "validation_images.npy": "5197511be361b98b219e877f165dc2e7582b21ac35269b797cfa18dc3b587a82",
+        "validation_labels.npy": "a2fae5f61d64e97d38fdffae29dbba9078aefe834da87f83a4774513f4b121be"
+      },
+      "protocol_id": "low_seed2026",
+      "protocol_seed": 2026,
+      "setting": "Low",
+      "status": "PASS",
+      "train_samples": 17160,
+      "unknown_classes": [
+        "sftp",
+        "youtube"
+      ],
+      "unknown_samples_used_in_training": 0,
+      "unknown_samples_used_in_validation": 0,
+      "validation_samples": 2140
+    },
+    {
+      "failures": [],
+      "known_classes": [
+        "netflix",
+        "rsync",
+        "sftp",
+        "ssh",
+        "vimeo",
+        "youtube",
+        "zoiper"
+      ],
+      "known_test_samples_used": 0,
+      "model_visible_files": {
+        "input_audit.json": "789750166351d50d440d2510b31a3840e02e7dc9784e66204020a4e1ee288621",
+        "input_manifest.csv": "e838be8bc6754f6a30aa7087201b394e43cfbbe9e561fa039a39ce46bfdf4066",
+        "label_map.json": "6443f7601e94f6477b1212d8f6174630852b43b02679c6b4d570c7b678d7f49b",
+        "train_images.npy": "6c6d34f8e7f78e533f97b5c00dff15f454da6f48fad8f76409a66ee607e16dc8",
+        "train_labels.npy": "1da66df9f7429651a310e198090e659fbdd9bae70e0f97a297434a7f216e6833",
+        "validation_images.npy": "a5f0926513bdfef785d82720f5a43d9788c7ad045655514d37958c992fdf142e",
+        "validation_labels.npy": "e423ca7394c077421c352ebb25e3f041945fd11814fd945a2400a32c96087b31"
+      },
+      "protocol_id": "medium_seed2022",
+      "protocol_seed": 2022,
+      "setting": "Medium",
+      "status": "PASS",
+      "train_samples": 15884,
+      "unknown_classes": [
+        "scp",
+        "rdp",
+        "skype"
+      ],
+      "unknown_samples_used_in_training": 0,
+      "unknown_samples_used_in_validation": 0,
+      "validation_samples": 1981
+    },
+    {
+      "failures": [],
+      "known_classes": [
+        "rdp",
+        "rsync",
+        "scp",
+        "sftp",
+        "vimeo",
+        "youtube",
+        "zoiper"
+      ],
+      "known_test_samples_used": 0,
+      "model_visible_files": {
+        "input_audit.json": "6e532ef79b4e4dbd5bf9513c4fd0172995331d70cb424064571f5d11383806c0",
+        "input_manifest.csv": "e909627a0d0c42174ca8fab045a21f2c64b3831dbdd9d626b34243c1c58c016a",
+        "label_map.json": "6352539ee9c5fd65e4e0a88f672e8bb86f5ae9bcbbca81b08eb993d5d09478fd",
+        "train_images.npy": "b09e7e96d0326c5f8b4e4279098c2e08c784cf7cd717db6f479c5053370929ae",
+        "train_labels.npy": "cf3ea705c84150fc83b8d7d608aef174c8416b4b6b923f3912ba77f7306fe5de",
+        "validation_images.npy": "ea6be2342bd45847c5e9e88af14c4759997b680acc84f7442794838f19163914",
+        "validation_labels.npy": "11958d43e18b4d63029056cf7fdcf47d0ac1c5ce3884c6e7c0ce160d171875c4"
+      },
+      "protocol_id": "medium_seed2023",
+      "protocol_seed": 2023,
+      "setting": "Medium",
+      "status": "PASS",
+      "train_samples": 6736,
+      "unknown_classes": [
+        "skype",
+        "netflix",
+        "ssh"
+      ],
+      "unknown_samples_used_in_training": 0,
+      "unknown_samples_used_in_validation": 0,
+      "validation_samples": 838
+    },
+    {
+      "failures": [],
+      "known_classes": [
+        "netflix",
+        "rdp",
+        "scp",
+        "sftp",
+        "skype",
+        "vimeo",
+        "youtube"
+      ],
+      "known_test_samples_used": 0,
+      "model_visible_files": {
+        "input_audit.json": "19a135c634c48f0f4857c46137074e6b78464001e381cd0f96ce7e38b8cd2df8",
+        "input_manifest.csv": "968152ca33442b98276e9d720dbc1f8e0100088f6e77e7379974eed0bf1e64cb",
+        "label_map.json": "ad0dc8ef22250f539daceff9ae961b60d73039263e358d25576d9dc7fbb24d5c",
+        "train_images.npy": "faf21345acf9cf0018700ac4ba4df8127c9bf508b0cc0625c4a77cf98d411e2c",
+        "train_labels.npy": "2d1d5840e4e6026014bf9b6c4e1151da9f2dabe53a12ba505345843494368b0d",
+        "validation_images.npy": "ea47cf10be41b3dac04f31a306c6bb13f9656cd0f98a0e1c9610b8debecab5c7",
+        "validation_labels.npy": "fa55751d5472d303114c8bef0ac45f5bc801975800f326373995b3f89d676084"
+      },
+      "protocol_id": "medium_seed2024",
+      "protocol_seed": 2024,
+      "setting": "Medium",
+      "status": "PASS",
+      "train_samples": 5635,
+      "unknown_classes": [
+        "ssh",
+        "rsync",
+        "zoiper"
+      ],
+      "unknown_samples_used_in_training": 0,
+      "unknown_samples_used_in_validation": 0,
+      "validation_samples": 700
+    },
+    {
+      "failures": [],
+      "known_classes": [
+        "netflix",
+        "rdp",
+        "rsync",
+        "scp",
+        "skype",
+        "ssh",
+        "youtube"
+      ],
+      "known_test_samples_used": 0,
+      "model_visible_files": {
+        "input_audit.json": "cf07fbb381bb8956702ac9670d3f62e28ce75a1c36684906fd0c8eee8c539964",
+        "input_manifest.csv": "885c671e67563baeeb29cbeaa13b7db0e5e230434bbee80e7636b5394a66f8a8",
+        "label_map.json": "511341ce9923b862e0da2a93c550a687bdf0880e3f68e6c6c34d94ff5b06e762",
+        "train_images.npy": "934e4580add0757a59c9800f3d9f4c61f373abbf2882b1ff9ae10df948b8547f",
+        "train_labels.npy": "11e2717275f12822d04e04584397ecc2840a93c9484341ffa9bd49b881ac2191",
+        "validation_images.npy": "3cd70c57713baec099ac2f17208f23faa3d2eea99749f84ca2ae29a2cb6957d8",
+        "validation_labels.npy": "28342329bd255fe2e2e5f6282f0da3845c58098f007b8c315e9c27178b3f3fd2"
+      },
+      "protocol_id": "medium_seed2025",
+      "protocol_seed": 2025,
+      "setting": "Medium",
+      "status": "PASS",
+      "train_samples": 15704,
+      "unknown_classes": [
+        "zoiper",
+        "vimeo",
+        "sftp"
+      ],
+      "unknown_samples_used_in_training": 0,
+      "unknown_samples_used_in_validation": 0,
+      "validation_samples": 1960
+    },
+    {
+      "failures": [],
+      "known_classes": [
+        "netflix",
+        "rdp",
+        "rsync",
+        "skype",
+        "ssh",
+        "vimeo",
+        "zoiper"
+      ],
+      "known_test_samples_used": 0,
+      "model_visible_files": {
+        "input_audit.json": "78e9edee680e5a58f1b7f2bb039dc21b6538043d5268777aaade9319cee80c14",
+        "input_manifest.csv": "c6b8dff695658fcc6e7f266f15413e7d5ccb35c2a9f3a2c25a6cc52c02e3d827",
+        "label_map.json": "7163ae80a5f5edbb40a49840784e7e82fec13fcd876b003fe9a4384c3562f42d",
+        "train_images.npy": "9dccd762ace4c45de0a89a92d59c7fb9f60b2362b970b82bef697fa4f5126f64",
+        "train_labels.npy": "07b55030a682761967f778da17004365535fdf4f2166f8d84a49db339edf032e",
+        "validation_images.npy": "c6d1473f657026174fc5b65f8f1b82d291b2b0396926ec624d05af363384b2f7",
+        "validation_labels.npy": "b8869b5ebddfa2d49512bffdd1a5ce95bdc9326ee379299c56074623d12c6f22"
+      },
+      "protocol_id": "medium_seed2026",
+      "protocol_seed": 2026,
+      "setting": "Medium",
+      "status": "PASS",
+      "train_samples": 15328,
+      "unknown_classes": [
+        "sftp",
+        "youtube",
+        "scp"
+      ],
+      "unknown_samples_used_in_training": 0,
+      "unknown_samples_used_in_validation": 0,
+      "validation_samples": 1911
+    }
+  ],
+  "status": "PASS"
+}

@@ -1,0 +1,22 @@
+{
+  "generated_at_utc": "2026-09-17T08:11:20.683637+00:00",
+  "dataset_root": "/home/birkenwald/data/SEU-WXY/WXY-SEU/TrafficClassifier/Dataset/VNAT/VNAT",
+  "dataset_file_count": 172,
+  "pcap_count": 165,
+  "successful_pcap_count": 163,
+  "failed_pcap_count": 2,
+  "flow_count": 23454,
+  "application_count": 10,
+  "metadata_failures": [],
+  "duplicate_file_groups": 1,
+  "duplicate_flow_rows": 6,
+  "raw_hdf_rows": 33711,
+  "feature_hdf_rows": 15093,
+  "feature_hdf_label_granularity": "five coarse categories; no capture/group column",
+  "unknown_class_selected": false,
+  "settings_generated": false,
+  "model_training": false,
+  "open_detect_run": false,
+  "des_run": false,
+  "unknown_detection_results_read": false
+}

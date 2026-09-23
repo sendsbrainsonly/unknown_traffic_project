@@ -1,0 +1,44 @@
+{
+  "best_epoch": 77,
+  "checkpoint_path": "/home/birkenwald/data/SEU-WXY/WXY-SEU/TrafficClassifier/Projects/unknown_traffic_project/stage15r_representation_bottleneck_audit/pilot_runs/e2/vnat/medium_seed2026/model_best.pt",
+  "checkpoint_sha256": "eb8f59304550cbe11fe4f2b94df80fcdf57c2c895475c72c6d55125c390343d2",
+  "class_names": [
+    "netflix",
+    "rdp",
+    "rsync",
+    "skype",
+    "ssh",
+    "vimeo",
+    "zoiper"
+  ],
+  "dataset": "vnat",
+  "epochs_completed": 100,
+  "experiment": "E2",
+  "known_test_samples_used": 0,
+  "known_train_samples": 15328,
+  "known_validation_samples": 1911,
+  "normalization": {
+    "channels": {
+      "log1p_iat_microseconds": {
+        "iqr": 6.049626350402832,
+        "median": 5.623476982116699
+      },
+      "signed_log1p_length": {
+        "iqr": 8.764053344726562,
+        "median": 3.97029185295105
+      }
+    },
+    "fit_role": "Known Train only"
+  },
+  "peak_gpu_memory_bytes": 20863488,
+  "physical_gpu": "4",
+  "protocol_id": "medium_seed2026",
+  "runtime_seconds": 26.956462621688843,
+  "setting": "Medium",
+  "status": "PASS",
+  "unknown_test_samples_used": 0,
+  "validation_accuracy": 0.97854526425955,
+  "validation_loss": 0.11250945514780511,
+  "validation_macro_f1": 0.856864843906067,
+  "validation_weighted_f1": 0.976706435869786
+}

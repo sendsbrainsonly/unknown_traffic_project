@@ -1,0 +1,19 @@
+{
+  "des_executed": false,
+  "failures": [],
+  "final_diagnosis": "ROOT_CAUSE_IDENTIFIED",
+  "formal_ablation_runs": 10,
+  "freeze_hash": "c904daef04d2c8e79469191121325c0a6ceeaeb3e595ef9c4c7d7a62c980ae2f",
+  "known_test_samples_used": 0,
+  "required_files": 10,
+  "status": "PASS",
+  "table_rows": {
+    "component_ablation.csv": 20,
+    "data_alignment_audit.csv": 30,
+    "feature_distribution_audit.csv": 90,
+    "input_gradient_audit.csv": 6,
+    "per_class_comparison.csv": 315,
+    "training_dynamics.csv": 2026
+  },
+  "unknown_test_samples_used": 0
+}

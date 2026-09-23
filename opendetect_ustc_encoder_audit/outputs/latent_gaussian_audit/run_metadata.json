@@ -1,0 +1,105 @@
+{
+  "actual_commands": [
+    "/home/birkenwald/data/SEU-WXY/WXY-SEU/TrafficClassifier/.agents/skills/tmux-task-execution/scripts/tmux_task.sh start od_formal_composite_earlystop_gpu3 /home/birkenwald/data/SEU-WXY/WXY-SEU/TrafficClassifier/Projects/unknown_traffic_project -- python /home/birkenwald/data/SEU-WXY/WXY-SEU/TrafficClassifier/.agents/skills/using-superpowers/scripts/select_gpu.py --min-free-gb 20 --count 1 --max-utilization 30 --allowed 3 -- python /home/birkenwald/data/SEU-WXY/WXY-SEU/TrafficClassifier/Projects/unknown_traffic_project/opendetect_ustc_encoder_audit/scripts/train_opendetect.py --mode formal --epochs 100 --batch-size 512 --workers 0 --early-stopping-patience 5 --resume /home/birkenwald/data/SEU-WXY/WXY-SEU/TrafficClassifier/Projects/unknown_traffic_project/opendetect_ustc_encoder_audit/artifacts/latest_checkpoint.pt --checkpoint /home/birkenwald/data/SEU-WXY/WXY-SEU/TrafficClassifier/Projects/unknown_traffic_project/opendetect_ustc_encoder_audit/artifacts/best_checkpoint.pt --latest-checkpoint /home/birkenwald/data/SEU-WXY/WXY-SEU/TrafficClassifier/Projects/unknown_traffic_project/opendetect_ustc_encoder_audit/artifacts/latest_checkpoint.pt",
+    "/home/birkenwald/data/SEU-WXY/WXY-SEU/TrafficClassifier/.agents/skills/tmux-task-execution/scripts/tmux_task.sh start od_latent_gaussian_audit_v2 /home/birkenwald/data/SEU-WXY/WXY-SEU/TrafficClassifier/Projects/unknown_traffic_project/opendetect_ustc_encoder_audit -- bash /home/birkenwald/data/SEU-WXY/WXY-SEU/TrafficClassifier/Projects/unknown_traffic_project/opendetect_ustc_encoder_audit/scripts/run_latent_gaussian_audit.sh",
+    "python /home/birkenwald/data/SEU-WXY/WXY-SEU/TrafficClassifier/Projects/unknown_traffic_project/opendetect_ustc_encoder_audit/scripts/freeze_best_checkpoint.py --patience 5 --max-epochs 100",
+    "python /home/birkenwald/data/SEU-WXY/WXY-SEU/TrafficClassifier/.agents/skills/using-superpowers/scripts/select_gpu.py --min-free-gb 4 --count 1 --max-utilization 30 --allowed 0,3,4 -- python /home/birkenwald/data/SEU-WXY/WXY-SEU/TrafficClassifier/Projects/unknown_traffic_project/opendetect_ustc_encoder_audit/scripts/extract_mu_and_compactness.py --batch-size 512 --workers 0",
+    "python /home/birkenwald/data/SEU-WXY/WXY-SEU/TrafficClassifier/Projects/unknown_traffic_project/opendetect_ustc_encoder_audit/scripts/run_gaussian_audit.py --reg-covar 1e-3 --n-init 3 --max-iter 300",
+    "python /home/birkenwald/data/SEU-WXY/WXY-SEU/TrafficClassifier/Projects/unknown_traffic_project/opendetect_ustc_encoder_audit/scripts/build_encoder_comparison.py",
+    "python /home/birkenwald/data/SEU-WXY/WXY-SEU/TrafficClassifier/Projects/unknown_traffic_project/opendetect_ustc_encoder_audit/scripts/verify_latent_gaussian_audit.py"
+  ],
+  "audit_root": "/home/birkenwald/data/SEU-WXY/WXY-SEU/TrafficClassifier/Projects/unknown_traffic_project/opendetect_ustc_encoder_audit",
+  "author_code_commit": "b50a18515a01799468c10f6c9b60c01f8a6a4e7c",
+  "checkpoint_selection": {
+    "best_combined_score": 0.9867643501296203,
+    "best_epoch": 32,
+    "best_val_accuracy": 0.9861582498466572,
+    "best_val_macro_f1": 0.9873711958983564,
+    "checkpoint_path": "/home/birkenwald/data/SEU-WXY/WXY-SEU/TrafficClassifier/Projects/unknown_traffic_project/opendetect_ustc_encoder_audit/artifacts/latent_gaussian_audit/best_checkpoint.pt",
+    "checkpoint_sha256": "f8e53d36bd6dc8333451b2f159300bc5a2cd875fccaff01a2c6dc43356951b36",
+    "consecutive_non_improving_epochs_at_stop": 5,
+    "early_stop_reason": "validation combined score did not improve for 5 consecutive epochs",
+    "early_stopping_patience": 5,
+    "training_stop_epoch": 37
+  },
+  "experiment": "Open-Detect USTC Latent Gaussian Audit",
+  "explicit_encoder_dependence": false,
+  "flow_id_assertions": "8/8 representative class-split sets exact",
+  "gaussian": {
+    "K": [
+      1,
+      2,
+      3
+    ],
+    "classes": [
+      "FTP",
+      "Cridex",
+      "Miuref",
+      "Outlook"
+    ],
+    "covariance_type": "full",
+    "float_dtype": "float64",
+    "gmm_evaluation": "matching held-out validation only",
+    "gmm_fit": "class-specific train only",
+    "loaded_splits": [
+      "train",
+      "val"
+    ],
+    "max_iter": 300,
+    "multi_rule": "at least one of K=2/3 has DeltaNLL>1 nat/sample in all seeds, all fits converged/warning-free/Cholesky-valid, minimum train component ratio >=1%, validation component count >0, and max train/validation component-weight TV <=0.10",
+    "n_init": 3,
+    "pca_dim_actual": 64,
+    "pca_dim_requested": 64,
+    "pca_explained_variance_ratio_sum": 0.9989572473584225,
+    "pca_fit": "all 20-class train mu_x only",
+    "pca_random_state": 0,
+    "reg_covar": 0.001,
+    "reg_covar_sensitivity_run": false,
+    "seeds": [
+      0,
+      1,
+      2
+    ],
+    "standard_scaler_fit": "all 20-class train mu_x only",
+    "test_loaded": false,
+    "tiny_component_threshold": "assigned train ratio < 0.01",
+    "very_tiny_component_threshold": "assigned train ratio < 0.005"
+  },
+  "generated_utc": "2026-09-12T05:53:48.815468+00:00",
+  "latent_artifacts": {
+    "train": "/home/birkenwald/data/SEU-WXY/WXY-SEU/TrafficClassifier/Projects/unknown_traffic_project/opendetect_ustc_encoder_audit/artifacts/latent_gaussian_audit/train_mu.parquet",
+    "validation": "/home/birkenwald/data/SEU-WXY/WXY-SEU/TrafficClassifier/Projects/unknown_traffic_project/opendetect_ustc_encoder_audit/artifacts/latent_gaussian_audit/val_mu.parquet"
+  },
+  "main_project": "/home/birkenwald/data/SEU-WXY/WXY-SEU/TrafficClassifier/Projects/unknown_traffic_project",
+  "output_files": [
+    "audit_summary.md",
+    "checkpoint_selection.json",
+    "checkpoint_selection.md",
+    "class_compactness.csv",
+    "component_weights.csv",
+    "covariance_diagnostics.csv",
+    "encoder_comparison.csv",
+    "flow_id_equality_assertions.csv",
+    "gaussian_metadata.json",
+    "gaussian_results.csv",
+    "gaussian_summary_by_class.csv",
+    "gaussian_warnings.csv",
+    "latent_class_quality.csv",
+    "latent_dimension_statistics.csv",
+    "latent_extraction_manifest.csv",
+    "latent_quality_report.md",
+    "run_metadata.json"
+  ],
+  "overall_gate": "A. CROSS-ENCODER PERSISTENCE",
+  "test_loaded_or_used": false,
+  "trafficformer_recomputed": false,
+  "trafficformer_source": "/home/birkenwald/data/SEU-WXY/WXY-SEU/TrafficClassifier/Projects/unknown_traffic_project/outputs/stage2_5_covariance_diagnosis/covariance_diagnosis.csv",
+  "upstream_read_only": "/home/birkenwald/data/SEU-WXY/WXY-SEU/TrafficClassifier/Projects/Open-Detect",
+  "versions": {
+    "numpy": "1.26.4",
+    "pandas": "2.3.3",
+    "python": "3.10.18",
+    "scikit_learn": "1.7.2",
+    "torch": "2.8.0+cu128"
+  }
+}

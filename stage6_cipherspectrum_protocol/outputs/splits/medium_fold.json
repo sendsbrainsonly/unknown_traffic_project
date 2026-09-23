@@ -1,0 +1,311 @@
+{
+  "setting": "medium",
+  "seed": 43,
+  "candidate_index": 15,
+  "known_classes": [
+    "adblockplus.org",
+    "arin.net",
+    "cloudfront.net",
+    "coinbase.com",
+    "cookielaw.org",
+    "ctfassets.net",
+    "flipboard.com",
+    "garmin.com",
+    "gmx.net",
+    "google-analytics.com",
+    "google.com",
+    "googleapis.com",
+    "googletagmanager.com",
+    "gstatic.com",
+    "hsadspixel.net",
+    "hubspot.com",
+    "joinhoney.com",
+    "like-video.com",
+    "logitech.com",
+    "mozilla.net",
+    "qualified.com",
+    "robinhood.com",
+    "segment.com",
+    "sharethis.com",
+    "steamstatic.com",
+    "trustarc.com",
+    "twitter.com",
+    "typekit.net",
+    "waze.com",
+    "web.de",
+    "wistia.com",
+    "xnxx-cdn.com",
+    "yahoo.co.jp",
+    "yimg.jp"
+  ],
+  "unknown_classes": [
+    "doubleclick.net",
+    "hotjar.com",
+    "hs-scripts.com",
+    "naver.com",
+    "onetrust.com",
+    "ubuntu.com"
+  ],
+  "known_train_count": 56641,
+  "known_validation_count": 12168,
+  "known_test_count": 12162,
+  "unknown_test_count": 18000,
+  "purged_known_count": 21029,
+  "unknown_touched_group_count": 8899,
+  "group_counts": {
+    "KNOWN_TRAIN": 13872,
+    "KNOWN_VALIDATION": 1930,
+    "KNOWN_TEST": 1947
+  },
+  "known_group_overlap": {
+    "train_validation": 0,
+    "train_test": 0,
+    "validation_test": 0
+  },
+  "known_unknown_group_overlap": 0,
+  "actual_known_split_ratios": {
+    "KNOWN_TRAIN": 0.6995220511047165,
+    "KNOWN_VALIDATION": 0.15027602474960172,
+    "KNOWN_TEST": 0.1502019241456818
+  },
+  "cipher_source_distribution": {
+    "KNOWN_TRAIN": {
+      "aes-128-gcm": 18926,
+      "aes-256-gcm": 18814,
+      "chacha20-poly1305": 18901
+    },
+    "KNOWN_VALIDATION": {
+      "aes-128-gcm": 4060,
+      "aes-256-gcm": 4051,
+      "chacha20-poly1305": 4057
+    },
+    "KNOWN_TEST": {
+      "aes-128-gcm": 4063,
+      "aes-256-gcm": 4042,
+      "chacha20-poly1305": 4057
+    }
+  },
+  "all_class_counts": {
+    "adblockplus.org": {
+      "KNOWN_TRAIN": 2099,
+      "KNOWN_VALIDATION": 450,
+      "KNOWN_TEST": 451
+    },
+    "arin.net": {
+      "KNOWN_VALIDATION": 451,
+      "KNOWN_TRAIN": 2098,
+      "KNOWN_TEST": 451
+    },
+    "cloudfront.net": {
+      "KNOWN_TRAIN": 1434,
+      "KNOWN_VALIDATION": 307,
+      "KNOWN_TEST": 309,
+      "PURGED_GROUP_OVERLAP": 950
+    },
+    "coinbase.com": {
+      "KNOWN_TRAIN": 2097,
+      "KNOWN_TEST": 451,
+      "KNOWN_VALIDATION": 452
+    },
+    "cookielaw.org": {
+      "KNOWN_TEST": 145,
+      "KNOWN_TRAIN": 673,
+      "KNOWN_VALIDATION": 145,
+      "PURGED_GROUP_OVERLAP": 2037
+    },
+    "ctfassets.net": {
+      "KNOWN_TRAIN": 1984,
+      "KNOWN_TEST": 425,
+      "KNOWN_VALIDATION": 425,
+      "PURGED_GROUP_OVERLAP": 166
+    },
+    "doubleclick.net": {
+      "UNKNOWN_TEST": 3000
+    },
+    "flipboard.com": {
+      "KNOWN_TRAIN": 1277,
+      "KNOWN_VALIDATION": 276,
+      "KNOWN_TEST": 273,
+      "PURGED_GROUP_OVERLAP": 1174
+    },
+    "garmin.com": {
+      "KNOWN_VALIDATION": 286,
+      "KNOWN_TRAIN": 1339,
+      "KNOWN_TEST": 288,
+      "PURGED_GROUP_OVERLAP": 1087
+    },
+    "gmx.net": {
+      "KNOWN_VALIDATION": 450,
+      "KNOWN_TRAIN": 2100,
+      "KNOWN_TEST": 450
+    },
+    "google-analytics.com": {
+      "KNOWN_TEST": 234,
+      "KNOWN_VALIDATION": 234,
+      "KNOWN_TRAIN": 1092,
+      "PURGED_GROUP_OVERLAP": 1440
+    },
+    "google.com": {
+      "KNOWN_TRAIN": 1654,
+      "KNOWN_TEST": 355,
+      "KNOWN_VALIDATION": 355,
+      "PURGED_GROUP_OVERLAP": 636
+    },
+    "googleapis.com": {
+      "KNOWN_TRAIN": 1125,
+      "KNOWN_TEST": 241,
+      "KNOWN_VALIDATION": 241,
+      "PURGED_GROUP_OVERLAP": 1393
+    },
+    "googletagmanager.com": {
+      "KNOWN_VALIDATION": 248,
+      "KNOWN_TEST": 248,
+      "KNOWN_TRAIN": 1159,
+      "PURGED_GROUP_OVERLAP": 1345
+    },
+    "gstatic.com": {
+      "KNOWN_TRAIN": 1012,
+      "KNOWN_TEST": 217,
+      "KNOWN_VALIDATION": 217,
+      "PURGED_GROUP_OVERLAP": 1554
+    },
+    "hotjar.com": {
+      "UNKNOWN_TEST": 3000
+    },
+    "hs-scripts.com": {
+      "UNKNOWN_TEST": 3000
+    },
+    "hsadspixel.net": {
+      "KNOWN_TRAIN": 1022,
+      "KNOWN_TEST": 219,
+      "KNOWN_VALIDATION": 219,
+      "PURGED_GROUP_OVERLAP": 1540
+    },
+    "hubspot.com": {
+      "KNOWN_TRAIN": 608,
+      "KNOWN_TEST": 130,
+      "KNOWN_VALIDATION": 130,
+      "PURGED_GROUP_OVERLAP": 2132
+    },
+    "joinhoney.com": {
+      "KNOWN_TRAIN": 2096,
+      "KNOWN_TEST": 452,
+      "KNOWN_VALIDATION": 452
+    },
+    "like-video.com": {
+      "KNOWN_TRAIN": 2100,
+      "KNOWN_VALIDATION": 450,
+      "KNOWN_TEST": 450
+    },
+    "logitech.com": {
+      "KNOWN_VALIDATION": 354,
+      "KNOWN_TRAIN": 1657,
+      "KNOWN_TEST": 354,
+      "PURGED_GROUP_OVERLAP": 635
+    },
+    "mozilla.net": {
+      "KNOWN_TRAIN": 1937,
+      "KNOWN_TEST": 415,
+      "KNOWN_VALIDATION": 415,
+      "PURGED_GROUP_OVERLAP": 233
+    },
+    "naver.com": {
+      "UNKNOWN_TEST": 3000
+    },
+    "onetrust.com": {
+      "UNKNOWN_TEST": 3000
+    },
+    "qualified.com": {
+      "KNOWN_TRAIN": 1944,
+      "KNOWN_TEST": 416,
+      "KNOWN_VALIDATION": 416,
+      "PURGED_GROUP_OVERLAP": 224
+    },
+    "robinhood.com": {
+      "KNOWN_VALIDATION": 450,
+      "KNOWN_TRAIN": 2099,
+      "KNOWN_TEST": 451
+    },
+    "segment.com": {
+      "KNOWN_TRAIN": 1713,
+      "KNOWN_TEST": 367,
+      "KNOWN_VALIDATION": 367,
+      "PURGED_GROUP_OVERLAP": 553
+    },
+    "sharethis.com": {
+      "KNOWN_TRAIN": 2098,
+      "KNOWN_VALIDATION": 451,
+      "KNOWN_TEST": 451
+    },
+    "steamstatic.com": {
+      "KNOWN_TRAIN": 2100,
+      "KNOWN_VALIDATION": 451,
+      "KNOWN_TEST": 449
+    },
+    "trustarc.com": {
+      "KNOWN_VALIDATION": 388,
+      "KNOWN_TRAIN": 1814,
+      "KNOWN_TEST": 389,
+      "PURGED_GROUP_OVERLAP": 409
+    },
+    "twitter.com": {
+      "KNOWN_TRAIN": 1819,
+      "KNOWN_TEST": 390,
+      "KNOWN_VALIDATION": 390,
+      "PURGED_GROUP_OVERLAP": 401
+    },
+    "typekit.net": {
+      "KNOWN_TRAIN": 1295,
+      "KNOWN_TEST": 277,
+      "KNOWN_VALIDATION": 277,
+      "PURGED_GROUP_OVERLAP": 1151
+    },
+    "ubuntu.com": {
+      "UNKNOWN_TEST": 3000
+    },
+    "waze.com": {
+      "KNOWN_TRAIN": 2096,
+      "KNOWN_TEST": 451,
+      "KNOWN_VALIDATION": 453
+    },
+    "web.de": {
+      "KNOWN_TEST": 450,
+      "KNOWN_TRAIN": 2098,
+      "KNOWN_VALIDATION": 452
+    },
+    "wistia.com": {
+      "KNOWN_VALIDATION": 156,
+      "KNOWN_TRAIN": 722,
+      "KNOWN_TEST": 153,
+      "PURGED_GROUP_OVERLAP": 1969
+    },
+    "xnxx-cdn.com": {
+      "KNOWN_VALIDATION": 449,
+      "KNOWN_TRAIN": 2100,
+      "KNOWN_TEST": 451
+    },
+    "yahoo.co.jp": {
+      "KNOWN_TRAIN": 2081,
+      "KNOWN_TEST": 458,
+      "KNOWN_VALIDATION": 461
+    },
+    "yimg.jp": {
+      "KNOWN_TRAIN": 2099,
+      "KNOWN_TEST": 451,
+      "KNOWN_VALIDATION": 450
+    }
+  },
+  "assignment_metadata": {
+    "group_count": 17749,
+    "sample_counts": {
+      "KNOWN_TEST": 12162,
+      "KNOWN_VALIDATION": 12168,
+      "KNOWN_TRAIN": 56641
+    },
+    "moves": 964,
+    "objective": "2*total + 5*per-class + 2*per-class-by-source normalized squared ratio error"
+  },
+  "created_before_unknown_evaluation": true,
+  "unknown_access_policy": "FINAL TEST ONLY",
+  "future_encoder_policy": "train independently from legal architecture initialization; no full-40 or cross-setting checkpoint"
+}

@@ -1,0 +1,35 @@
+{
+  "gates": [
+    "EVALUATION_POPULATION_EFFECT",
+    "FILTERING_EFFECT",
+    "CLASS_CONDITIONAL_SELECTION_EFFECT"
+  ],
+  "persistent_limitations": [
+    "WEAK_CAPTURE_LABEL",
+    "CAPTURE_GENERALIZATION_NOT_IDENTIFIABLE"
+  ],
+  "subset_counts": {
+    "A": 3065,
+    "B": 2101,
+    "C_PARENT": 1551,
+    "C_FINAL": 1551,
+    "D": 1440
+  },
+  "matched_D_macro_f1_delta_vs_M_A": {
+    "M-B": -0.19185937290000213,
+    "M-C": 0.03287505337935792,
+    "M-D": -0.19060606271090022
+  },
+  "matched_D_positive_seeds": {
+    "M-B": 1,
+    "M-C": 2,
+    "M-D": 1
+  },
+  "evaluation_population_macro_f1_delta_vs_A": {
+    "B": -0.019417204683047973,
+    "C_FINAL": 0.003781883955520926,
+    "D": 0.009612288665265756
+  },
+  "known_test_feature_values_used": 0,
+  "unknown_test_feature_values_used": 0
+}

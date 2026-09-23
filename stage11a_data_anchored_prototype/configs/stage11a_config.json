@@ -1,0 +1,70 @@
+{
+  "stage": "Stage 11A",
+  "experiment": "Data-Anchored Prototype Feasibility Study",
+  "status_label": "DEVELOPMENT_RESULT",
+  "external_validation_label": "NOT_INDEPENDENT_EXTERNAL_VALIDATION",
+  "seeds": [2022, 2023, 2024, 2025, 2026],
+  "scenarios": {
+    "a1": {"split": 0, "known_count": 19, "unknown_count": 1},
+    "a2": {"split": 1, "known_count": 17, "unknown_count": 3},
+    "a3": {"split": 2, "known_count": 15, "unknown_count": 5}
+  },
+  "v6_frozen_root": "/home/birkenwald/data/SEU-WXY/WXY-SEU/TrafficClassifier/Projects/Open-Detect/artifacts/paper-reproduction/v6-local-pcap-fivefold-corrected-v1",
+  "v6_split_root": "/home/birkenwald/data/SEU-WXY/WXY-SEU/TrafficClassifier/Projects/Open-Detect/artifacts/v6-local-pcap-fivefold-splits-v1",
+  "training": {
+    "architecture": "resnet18",
+    "channels": 1,
+    "latent_dim": 128,
+    "epochs": 100,
+    "batch_size": 128,
+    "eval_batch_size": 256,
+    "workers": 0,
+    "optimizer": "Adam",
+    "learning_rate": 0.001,
+    "adam_betas": [0.9, 0.999],
+    "scheduler": "MultiStepLR",
+    "scheduler_milestones": [50, 80],
+    "scheduler_gamma": 0.1,
+    "lambda": 0.005,
+    "early_stop_patience": 10,
+    "early_stop_min_epoch": 82,
+    "early_stop_min_delta": 0.0001,
+    "checkpoint_metric": "Known Validation Accuracy",
+    "checkpoint_direction": "max",
+    "eval_seed": 2021,
+    "prototype_update": "ANCHOR_EVERY_EPOCH",
+    "prototype_source": "Known Train deterministic mu only",
+    "prototype_optimizer_parameter": false
+  },
+  "density_diagnostics": {
+    "representation": "deterministic mu -> train-only StandardScaler -> train-only randomized PCA64",
+    "pca_dim": 64,
+    "pca_solver": "randomized",
+    "pca_random_state": 0,
+    "covariance_type": "full",
+    "components": [1, 2],
+    "reg_covar": 0.001,
+    "n_init": 3,
+    "max_iter": 300,
+    "random_state": 0
+  },
+  "native_threshold": {
+    "source": "Known Validation only",
+    "rule": "P95",
+    "numpy_method": "higher"
+  },
+  "primary_evaluation": "symmetric balanced 1:1, matching v6 corrected reproduction",
+  "material_auroc_delta": 0.02,
+  "covariance_required_delta": 0.05,
+  "multicomponent_secondary_delta": 0.02,
+  "forbidden": [
+    "CipherSpectrum Stage9 sample-level Test access",
+    "Unknown-aware training or checkpoint selection",
+    "threshold search",
+    "Test Youden-J",
+    "new loss",
+    "anchoring-frequency search",
+    "K search or K greater than 2",
+    "modification of Stage6-10B or Open-Detect"
+  ]
+}

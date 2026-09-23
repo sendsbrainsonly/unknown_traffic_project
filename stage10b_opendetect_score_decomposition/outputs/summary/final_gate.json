@@ -1,0 +1,22 @@
+{
+  "analysis_scope": "POST_HOC_DIAGNOSTIC_ONLY",
+  "checks": {
+    "S0_S6_complete": true,
+    "S0_reproduces_stage9": true,
+    "S5_reproduces_stage9": true,
+    "S6_reproduces_stage9": true,
+    "failure_mechanism_classified": true,
+    "native_identity_all_settings_pass": true,
+    "no_frozen_experiment_modified": true,
+    "no_model_training": true,
+    "no_threshold_tuning": true,
+    "stage10a_provenance_pass": true,
+    "stage6_9_hashes_pass": true
+  },
+  "final_gate": "DIAGNOSIS_COMPLETE",
+  "primary_failure_mechanism": "M2 \u2014 LEARNED_PROTOTYPE_MISMATCH",
+  "recommended_next_branch": "Branch P",
+  "secondary_mechanism": [
+    "M5 \u2014 COVARIANCE_MISMATCH"
+  ]
+}

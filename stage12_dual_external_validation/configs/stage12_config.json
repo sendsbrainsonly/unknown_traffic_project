@@ -1,0 +1,89 @@
+{
+  "stage": "Stage 12 — Dual Independent External Validation",
+  "claim_scope": "INDEPENDENT_EXTERNAL_CONFIRMATION",
+  "project_root": "/home/birkenwald/data/SEU-WXY/WXY-SEU/TrafficClassifier/Projects/unknown_traffic_project",
+  "open_detect_root": "/home/birkenwald/data/SEU-WXY/WXY-SEU/TrafficClassifier/Projects/Open-Detect",
+  "datasets": {
+    "iscx_vpn": {
+      "root": "/home/birkenwald/data/SEU-WXY/WXY-SEU/TrafficClassifier/Dataset/ISCX-VPN",
+      "pcap_root": "/home/birkenwald/data/SEU-WXY/WXY-SEU/TrafficClassifier/Dataset/ISCX-VPN/ISCX-VPN"
+    },
+    "iscx_tor": {
+      "root": "/home/birkenwald/data/SEU-WXY/WXY-SEU/TrafficClassifier/Dataset/ISCXTor2016",
+      "pcap_root": "/home/birkenwald/data/SEU-WXY/WXY-SEU/TrafficClassifier/Dataset/ISCXTor2016/ISCXTor2016（whole）/raw/pcap",
+      "scenario_a_csv": "/home/birkenwald/data/SEU-WXY/WXY-SEU/TrafficClassifier/Dataset/ISCXTor2016/ISCXTor2016（whole）/raw/Scenario-A-merged_5s.csv",
+      "scenario_b_csv": "/home/birkenwald/data/SEU-WXY/WXY-SEU/TrafficClassifier/Dataset/ISCXTor2016/ISCXTor2016（whole）/raw/Scenario-B-merged_5s.csv"
+    }
+  },
+  "protocol_seed": 42,
+  "training_seeds": [2022, 2023, 2024, 2025, 2026],
+  "eligibility": {
+    "minimum_readable_source_groups": 1,
+    "minimum_groups_for_group_aware_split": 3,
+    "minimum_selected_flows": 200,
+    "target_selected_flows_per_class": 2000
+  },
+  "preprocessing": {
+    "flow_direction": "bidirectional",
+    "session_timeout_seconds": 60.0,
+    "tcp_syn_fin_rst_boundaries": true,
+    "sampling": "stable_hash",
+    "sampling_seed": 42,
+    "class_parallel_workers": 12,
+    "packets_per_flow": 8,
+    "header_bytes_per_packet": 80,
+    "payload_bytes_per_packet": 48,
+    "image_shape": [32, 32],
+    "ipv4_addresses_zeroed": true,
+    "packet_representation_error_policy": "fail"
+  },
+  "training": {
+    "architecture": "resnet18",
+    "channels": 1,
+    "latent_dim": 128,
+    "epochs": 100,
+    "batch_size": 128,
+    "eval_batch_size": 256,
+    "workers": 0,
+    "optimizer": "Adam",
+    "learning_rate": 0.001,
+    "betas": [0.9, 0.999],
+    "lambda": 0.005,
+    "scheduler_milestones": [50, 80],
+    "scheduler_gamma": 0.1,
+    "prototype_reset_zero_based_epochs": [50, 80],
+    "checkpoint_criterion": "Known Validation accuracy",
+    "early_stop_patience": 10,
+    "early_stop_min_epoch": 82,
+    "early_stop_min_delta": 0.0001,
+    "training_protocol": "corrected-paper"
+  },
+  "threshold": {
+    "source": "Known Validation only",
+    "quantile": 0.95,
+    "numpy_method": "higher"
+  },
+  "bootstrap": {
+    "iterations": 1000,
+    "seed": 0,
+    "confidence": 0.95
+  },
+  "methods": ["M0_OPEN_DETECT_NATIVE", "M1_DES_V0"],
+  "forbidden": [
+    "K1", "K2", "GMM", "DGSB", "DAP", "Class-P05", "Component-P05",
+    "adaptive covariance", "adaptive K", "new selector", "new loss", "new encoder",
+    "scaler", "PCA", "per-class threshold", "unknown calibration", "test threshold search"
+  ],
+  "gate": {
+    "dataset_level_mean_delta_auroc_positive": true,
+    "each_dataset_has_setting_delta_auroc_at_least": 0.02,
+    "no_setting_delta_auroc_at_or_below": -0.02,
+    "paired_seed_majority_required": true,
+    "max_allowed_delta_known_frr": 0.02,
+    "min_allowed_mean_delta_known_macro_f1": -0.01,
+    "partial_min_positive_datasets": 1,
+    "partial_min_positive_setting_fraction": 0.5,
+    "partial_requires_no_large_negative_setting": true,
+    "partial_requires_safe_known_costs": true
+  }
+}

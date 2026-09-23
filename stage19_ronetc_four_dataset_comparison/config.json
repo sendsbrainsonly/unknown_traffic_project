@@ -1,0 +1,41 @@
+{
+  "stage": "Stage 19 — RoNeTC Four-Dataset Fair Comparison",
+  "claim_scope": "approximate runnable reconstruction on frozen project protocols",
+  "protocols": [
+    {"dataset": "iscx_vpn", "protocol_id": "medium_seed2022", "setting": "medium", "seed": 2022},
+    {"dataset": "iscx_tor", "protocol_id": "medium_seed2022", "setting": "medium", "seed": 2022},
+    {"dataset": "vnat", "protocol_id": "medium_seed2025", "setting": "Medium", "seed": 2025},
+    {"dataset": "vnat", "protocol_id": "medium_seed2026", "setting": "Medium", "seed": 2026},
+    {"dataset": "ustc", "protocol_id": "A-2", "setting": "A-2", "seed": 2022}
+  ],
+  "input": {
+    "packet_num": 8,
+    "byte_num_per_view": 64,
+    "views": ["ip_header", "transport_header", "transport_payload"],
+    "ipv4_ipv6_addresses_zeroed": true,
+    "padding_value": 0
+  },
+  "training": {
+    "epochs": 100,
+    "batch_size": 128,
+    "eval_batch_size": 256,
+    "workers": 2,
+    "optimizer": "Adam",
+    "learning_rate": 0.0001,
+    "betas": [0.9, 0.999],
+    "weight_decay": 0.00001,
+    "lambda_epochs": 10,
+    "scheduler": "MultiStepLR",
+    "scheduler_milestones": [50, 80],
+    "scheduler_gamma": 0.1,
+    "checkpoint_criterion": "Known Validation accuracy",
+    "early_stopping": false
+  },
+  "threshold": {
+    "score": "RoNeTC fused Dirichlet uncertainty",
+    "fit_role": "Known Validation only",
+    "quantile": 0.95,
+    "numpy_method": "higher"
+  },
+  "selection_note": "64-byte/8-packet and lr=1e-4/lambda_epochs=10 were fixed from the separate CIC-IDS-2017 development run before opening four-dataset Test results; no Stage19 Test/Unknown score is used for tuning. Training budget and scheduler follow the controlled Stage15R benchmark."
+}

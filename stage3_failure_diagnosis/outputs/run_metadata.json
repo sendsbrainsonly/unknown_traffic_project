@@ -1,0 +1,95 @@
+{
+  "adaptive_detector_executed": false,
+  "command": "stage3_failure_diagnosis/scripts/analyze_failure.py --output-dir stage3_failure_diagnosis/outputs",
+  "environment": {
+    "conda_prefix": "/home/birkenwald/data/SEU-WXY/conda_envs/2025-10-8-WXY-dgl_py310",
+    "numpy": "1.26.4",
+    "pandas": "2.3.3",
+    "platform": "Linux-5.15.0-161-generic-x86_64-with-glibc2.35",
+    "python": "3.10.18",
+    "scikit_learn": "1.7.2",
+    "scipy": "1.15.3"
+  },
+  "epsilon_squared_formula": "max(0,(H-k+1)/(n-k))",
+  "execution_type": "post_hoc_diagnostic",
+  "final_diagnosis": "A \u2014 DENSITY-UTILITY MISMATCH",
+  "final_test_rerun": false,
+  "finished_at_utc": "2026-09-12T23:59:59Z",
+  "fit_operations_performed": [],
+  "frozen_model_operations": [
+    "transform",
+    "score_samples",
+    "predict"
+  ],
+  "git_head_at_run": "ffcb0dfcaebe3b04b6d3bd42964d5a705303d2cc",
+  "k_changed": false,
+  "known_data_usage": "Known Train and Known Validation diagnostics only",
+  "output_dir": "/home/birkenwald/data/SEU-WXY/WXY-SEU/TrafficClassifier/Projects/unknown_traffic_project/stage3_failure_diagnosis/outputs",
+  "pooled_covariance_definition": "K2 weight-weighted within-component covariance",
+  "post_hoc_only": true,
+  "project_root": "/home/birkenwald/data/SEU-WXY/WXY-SEU/TrafficClassifier/Projects/unknown_traffic_project",
+  "protocol_canonical_sha256": "1fff4ed33211de0b123cf4c0ec6b203cc33be683ac315b610ffd8f0194550ae1",
+  "random_processes": [],
+  "row_counts": {
+    "class_unknown_absorption_delta": 51,
+    "failure_case_summary": 4,
+    "known_only_support_diagnostics": 51,
+    "known_signal_correlations": 44,
+    "simple_statistics_followup": 60,
+    "unknown_to_known_absorption_matrix": 145,
+    "unknown_transition_details": 16735
+  },
+  "run_id": "stage3_failure_diagnosis_v1",
+  "simple_statistics_method": "existing Stage 0 flow_index join; no raw PCAP reparsing",
+  "simple_statistics_source": "/home/birkenwald/data/SEU-WXY/WXY-SEU/TrafficClassifier/Projects/unknown_traffic_project/outputs/stage0_data/flow_index.csv",
+  "stage3_output_trees_after": {
+    "A-1": {
+      "audit_run_tree_sha256_after": "0f8908d8602f704ba17db1f9cc4b1349bfd7b0dcc5babf5703680788fdad1be9",
+      "file_count": 26
+    },
+    "A-2": {
+      "audit_run_tree_sha256_after": "5e0aa24845c391b2c71099df0f17db35bb6041f97af72290b5f773ad3242dfa6",
+      "file_count": 37
+    },
+    "A-3": {
+      "audit_run_tree_sha256_after": "1328d3b3e81f9f6fe079d1d47a09859d0596c11f12e2835eecdc76475a3c22be",
+      "file_count": 26
+    }
+  },
+  "stage3_output_trees_before": {
+    "A-1": {
+      "audit_run_tree_sha256_before": "0f8908d8602f704ba17db1f9cc4b1349bfd7b0dcc5babf5703680788fdad1be9",
+      "file_count": 26,
+      "snapshot_package_sha256": "0f8908d8602f704ba17db1f9cc4b1349bfd7b0dcc5babf5703680788fdad1be9"
+    },
+    "A-2": {
+      "audit_run_tree_sha256_before": "5e0aa24845c391b2c71099df0f17db35bb6041f97af72290b5f773ad3242dfa6",
+      "file_count": 37,
+      "snapshot_package_sha256": "5e0aa24845c391b2c71099df0f17db35bb6041f97af72290b5f773ad3242dfa6"
+    },
+    "A-3": {
+      "audit_run_tree_sha256_before": "1328d3b3e81f9f6fe079d1d47a09859d0596c11f12e2835eecdc76475a3c22be",
+      "file_count": 26,
+      "snapshot_package_sha256": "1328d3b3e81f9f6fe079d1d47a09859d0596c11f12e2835eecdc76475a3c22be"
+    }
+  },
+  "stage3_snapshot_commit": "ffcb0dfcaebe3b04b6d3bd42964d5a705303d2cc",
+  "stage3_snapshot_package_sha256": {
+    "A-1": "0f8908d8602f704ba17db1f9cc4b1349bfd7b0dcc5babf5703680788fdad1be9",
+    "A-2": "5e0aa24845c391b2c71099df0f17db35bb6041f97af72290b5f773ad3242dfa6",
+    "A-3": "1328d3b3e81f9f6fe079d1d47a09859d0596c11f12e2835eecdc76475a3c22be"
+  },
+  "started_at_utc": "2026-09-12T23:59:50Z",
+  "status": "completed",
+  "test_embedding_files_loaded": [
+    "/home/birkenwald/data/SEU-WXY/WXY-SEU/TrafficClassifier/Projects/unknown_traffic_project/stage3_unknown_utility/artifacts/A-1/test_unknown_mu.parquet",
+    "/home/birkenwald/data/SEU-WXY/WXY-SEU/TrafficClassifier/Projects/unknown_traffic_project/stage3_unknown_utility/artifacts/A-2/test_unknown_mu.parquet",
+    "/home/birkenwald/data/SEU-WXY/WXY-SEU/TrafficClassifier/Projects/unknown_traffic_project/stage3_unknown_utility/artifacts/A-3/test_unknown_mu.parquet"
+  ],
+  "threshold_changed": false,
+  "unknown_data_usage": "frozen_final_predictions attribution plus frozen test_unknown_mu component replay; no fitting or metric rerun",
+  "unknown_latent_hashes_verified": true,
+  "unknown_replayed_scores_match_frozen": true,
+  "unknown_test_observed": true,
+  "verified_frozen_file_count": 33
+}

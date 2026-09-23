@@ -1,0 +1,13 @@
+{
+  "strict_matched_flows": 2087440,
+  "label_count": 15,
+  "class_day_nmi": 0.27416434511339943,
+  "class_pcap_nmi": 0.27416434511339943,
+  "primary_eligible": [
+    "BENIGN",
+    "DoS Slowhttptest",
+    "PortScan"
+  ],
+  "group_aware_split_feasible": true,
+  "group_definition": "source_pcap + five-minute UTC flow-start block"
+}

@@ -1,0 +1,841 @@
+{
+  "settings": {
+    "high": {
+      "best_unknown_classes_dgsbv2": [
+        {
+          "UFAR": 0.1223333333333333,
+          "unknown_class": "onetrust.com"
+        },
+        {
+          "UFAR": 0.147,
+          "unknown_class": "hsadspixel.net"
+        },
+        {
+          "UFAR": 0.4056666666666667,
+          "unknown_class": "twitter.com"
+        }
+      ],
+      "coverage_consistency_vs_utility": [
+        {
+          "consistency_improved_but_utility_worsened": true,
+          "coverage_consistency_improved": true,
+          "method": "Class-P05-K2",
+          "method_test_UFAR": 0.606,
+          "method_validation_per_class_FRR_std": 0.011547271544490043,
+          "multi_test_UFAR": 0.4961,
+          "multi_validation_per_class_FRR_std": 0.027955134635444086,
+          "setting": "high",
+          "unknown_utility_worsened": true
+        },
+        {
+          "consistency_improved_but_utility_worsened": true,
+          "coverage_consistency_improved": true,
+          "method": "Component-P05-K2",
+          "method_test_UFAR": 0.6580333333333334,
+          "method_validation_per_class_FRR_std": 0.011728492632890412,
+          "multi_test_UFAR": 0.4961,
+          "multi_validation_per_class_FRR_std": 0.027955134635444086,
+          "setting": "high",
+          "unknown_utility_worsened": true
+        },
+        {
+          "consistency_improved_but_utility_worsened": true,
+          "coverage_consistency_improved": true,
+          "method": "DGSB-v2",
+          "method_test_UFAR": 0.5833666666666667,
+          "method_validation_per_class_FRR_std": 0.013818635808390312,
+          "multi_test_UFAR": 0.4961,
+          "multi_validation_per_class_FRR_std": 0.027955134635444086,
+          "setting": "high",
+          "unknown_utility_worsened": true
+        }
+      ],
+      "density_vs_unknown_utility": {
+        "DGSB-v2 vs Multi-Global-K2": {
+          "p": 0.107451037531466,
+          "rho": -0.2998331015169852
+        },
+        "Multi-Global-K2 vs Single-Full-K1": {
+          "p": 0.5767664329775268,
+          "rho": 0.1061179087875417
+        }
+      },
+      "dgsbv2_known_accuracy_vs_absorption_rho": -0.4750250335323811,
+      "dgsbv2_known_f1_vs_absorption_rho": -0.4224694104560622,
+      "dgsbv2_known_gate_attribution": [
+        {
+          "category": "Global FAIL / Local PASS",
+          "count": 116,
+          "interpretation": "Global-exclusive reject",
+          "rate": 0.0107947143123022,
+          "role": "KNOWN_TEST",
+          "setting": "high"
+        },
+        {
+          "category": "Global PASS / Local FAIL",
+          "count": 86,
+          "interpretation": "Local-exclusive reject",
+          "rate": 0.008002977852224,
+          "role": "KNOWN_TEST",
+          "setting": "high"
+        },
+        {
+          "category": "Both FAIL",
+          "count": 133,
+          "interpretation": "Both gates reject",
+          "rate": 0.0123766983063465,
+          "role": "KNOWN_TEST",
+          "setting": "high"
+        },
+        {
+          "category": "Both PASS",
+          "count": 10411,
+          "interpretation": "Both gates accept",
+          "rate": 0.9688256095291272,
+          "role": "KNOWN_TEST",
+          "setting": "high"
+        }
+      ],
+      "dgsbv2_unknown_gate_attribution": [
+        {
+          "category": "Global FAIL / Local PASS",
+          "count": 4808,
+          "interpretation": "Global-exclusive reject",
+          "rate": 0.1602666666666666,
+          "role": "UNKNOWN_TEST",
+          "setting": "high"
+        },
+        {
+          "category": "Global PASS / Local FAIL",
+          "count": 576,
+          "interpretation": "Local-exclusive reject",
+          "rate": 0.0192,
+          "role": "UNKNOWN_TEST",
+          "setting": "high"
+        },
+        {
+          "category": "Both FAIL",
+          "count": 7115,
+          "interpretation": "Both gates reject",
+          "rate": 0.2371666666666666,
+          "role": "UNKNOWN_TEST",
+          "setting": "high"
+        },
+        {
+          "category": "Both PASS",
+          "count": 17501,
+          "interpretation": "Both gates accept",
+          "rate": 0.5833666666666667,
+          "role": "UNKNOWN_TEST",
+          "setting": "high"
+        }
+      ],
+      "top_absorption_hubs": {
+        "Class-P05-K2": [
+          {
+            "count": 2671,
+            "predicted_known_class": "logitech.com"
+          },
+          {
+            "count": 2239,
+            "predicted_known_class": "qualified.com"
+          },
+          {
+            "count": 2198,
+            "predicted_known_class": "web.de"
+          },
+          {
+            "count": 2184,
+            "predicted_known_class": "googleapis.com"
+          },
+          {
+            "count": 1733,
+            "predicted_known_class": "steamstatic.com"
+          }
+        ],
+        "Component-P05-K2": [
+          {
+            "count": 4962,
+            "predicted_known_class": "qualified.com"
+          },
+          {
+            "count": 1866,
+            "predicted_known_class": "gstatic.com"
+          },
+          {
+            "count": 1617,
+            "predicted_known_class": "yahoo.co.jp"
+          },
+          {
+            "count": 1458,
+            "predicted_known_class": "google.com"
+          },
+          {
+            "count": 1333,
+            "predicted_known_class": "segment.com"
+          }
+        ],
+        "DGSB-v2": [
+          {
+            "count": 2334,
+            "predicted_known_class": "web.de"
+          },
+          {
+            "count": 1624,
+            "predicted_known_class": "google.com"
+          },
+          {
+            "count": 1180,
+            "predicted_known_class": "qualified.com"
+          },
+          {
+            "count": 1165,
+            "predicted_known_class": "hotjar.com"
+          },
+          {
+            "count": 1139,
+            "predicted_known_class": "yimg.jp"
+          }
+        ],
+        "Multi-Global-K2": [
+          {
+            "count": 2304,
+            "predicted_known_class": "web.de"
+          },
+          {
+            "count": 1095,
+            "predicted_known_class": "yimg.jp"
+          },
+          {
+            "count": 1068,
+            "predicted_known_class": "hotjar.com"
+          },
+          {
+            "count": 992,
+            "predicted_known_class": "googletagmanager.com"
+          },
+          {
+            "count": 973,
+            "predicted_known_class": "googleapis.com"
+          }
+        ],
+        "Native": [
+          {
+            "count": 4068,
+            "predicted_known_class": "google-analytics.com"
+          },
+          {
+            "count": 3072,
+            "predicted_known_class": "yimg.jp"
+          },
+          {
+            "count": 2433,
+            "predicted_known_class": "web.de"
+          },
+          {
+            "count": 2370,
+            "predicted_known_class": "google.com"
+          },
+          {
+            "count": 1554,
+            "predicted_known_class": "robinhood.com"
+          }
+        ],
+        "Single-Full-K1": [
+          {
+            "count": 2362,
+            "predicted_known_class": "web.de"
+          },
+          {
+            "count": 1508,
+            "predicted_known_class": "yimg.jp"
+          },
+          {
+            "count": 1147,
+            "predicted_known_class": "googleapis.com"
+          },
+          {
+            "count": 1145,
+            "predicted_known_class": "joinhoney.com"
+          },
+          {
+            "count": 1127,
+            "predicted_known_class": "google.com"
+          }
+        ]
+      },
+      "unknown_class_ufar_ge_0_95": [],
+      "worst_unknown_classes_dgsbv2": [
+        {
+          "UFAR": 0.8833333333333333,
+          "unknown_class": "doubleclick.net"
+        },
+        {
+          "UFAR": 0.883,
+          "unknown_class": "gmx.net"
+        },
+        {
+          "UFAR": 0.842,
+          "unknown_class": "cookielaw.org"
+        }
+      ]
+    },
+    "low": {
+      "best_unknown_classes_dgsbv2": [
+        {
+          "UFAR": 0.215,
+          "unknown_class": "coinbase.com"
+        },
+        {
+          "UFAR": 0.857,
+          "unknown_class": "segment.com"
+        }
+      ],
+      "coverage_consistency_vs_utility": [
+        {
+          "consistency_improved_but_utility_worsened": true,
+          "coverage_consistency_improved": true,
+          "method": "Class-P05-K2",
+          "method_test_UFAR": 0.59,
+          "method_validation_per_class_FRR_std": 0.01243022811792585,
+          "multi_test_UFAR": 0.397,
+          "multi_validation_per_class_FRR_std": 0.03644854991558697,
+          "setting": "low",
+          "unknown_utility_worsened": true
+        },
+        {
+          "consistency_improved_but_utility_worsened": true,
+          "coverage_consistency_improved": true,
+          "method": "Component-P05-K2",
+          "method_test_UFAR": 0.6473333333333333,
+          "method_validation_per_class_FRR_std": 0.011666396296930545,
+          "multi_test_UFAR": 0.397,
+          "multi_validation_per_class_FRR_std": 0.03644854991558697,
+          "setting": "low",
+          "unknown_utility_worsened": true
+        },
+        {
+          "consistency_improved_but_utility_worsened": true,
+          "coverage_consistency_improved": true,
+          "method": "DGSB-v2",
+          "method_test_UFAR": 0.536,
+          "method_validation_per_class_FRR_std": 0.020546915057484762,
+          "multi_test_UFAR": 0.397,
+          "multi_validation_per_class_FRR_std": 0.03644854991558697,
+          "setting": "low",
+          "unknown_utility_worsened": true
+        }
+      ],
+      "density_vs_unknown_utility": {
+        "DGSB-v2 vs Multi-Global-K2": {
+          "p": 0.6283986410308734,
+          "rho": -0.0810916058698233
+        },
+        "Multi-Global-K2 vs Single-Full-K1": {
+          "p": 0.5890748660594061,
+          "rho": -0.0904704405858604
+        }
+      },
+      "dgsbv2_known_accuracy_vs_absorption_rho": -0.1135032909794687,
+      "dgsbv2_known_f1_vs_absorption_rho": -0.2167214334598475,
+      "dgsbv2_known_gate_attribution": [
+        {
+          "category": "Global FAIL / Local PASS",
+          "count": 242,
+          "interpretation": "Global-exclusive reject",
+          "rate": 0.0148959743936969,
+          "role": "KNOWN_TEST",
+          "setting": "low"
+        },
+        {
+          "category": "Global PASS / Local FAIL",
+          "count": 139,
+          "interpretation": "Local-exclusive reject",
+          "rate": 0.0085559522343961,
+          "role": "KNOWN_TEST",
+          "setting": "low"
+        },
+        {
+          "category": "Both FAIL",
+          "count": 142,
+          "interpretation": "Both gates reject",
+          "rate": 0.0087406130739874,
+          "role": "KNOWN_TEST",
+          "setting": "low"
+        },
+        {
+          "category": "Both PASS",
+          "count": 15723,
+          "interpretation": "Both gates accept",
+          "rate": 0.9678074602979196,
+          "role": "KNOWN_TEST",
+          "setting": "low"
+        }
+      ],
+      "dgsbv2_unknown_gate_attribution": [
+        {
+          "category": "Global FAIL / Local PASS",
+          "count": 816,
+          "interpretation": "Global-exclusive reject",
+          "rate": 0.136,
+          "role": "UNKNOWN_TEST",
+          "setting": "low"
+        },
+        {
+          "category": "Global PASS / Local FAIL",
+          "count": 75,
+          "interpretation": "Local-exclusive reject",
+          "rate": 0.0125,
+          "role": "UNKNOWN_TEST",
+          "setting": "low"
+        },
+        {
+          "category": "Both FAIL",
+          "count": 1893,
+          "interpretation": "Both gates reject",
+          "rate": 0.3155,
+          "role": "UNKNOWN_TEST",
+          "setting": "low"
+        },
+        {
+          "category": "Both PASS",
+          "count": 3216,
+          "interpretation": "Both gates accept",
+          "rate": 0.536,
+          "role": "UNKNOWN_TEST",
+          "setting": "low"
+        }
+      ],
+      "top_absorption_hubs": {
+        "Class-P05-K2": [
+          {
+            "count": 1388,
+            "predicted_known_class": "logitech.com"
+          },
+          {
+            "count": 1135,
+            "predicted_known_class": "flipboard.com"
+          },
+          {
+            "count": 376,
+            "predicted_known_class": "naver.com"
+          },
+          {
+            "count": 195,
+            "predicted_known_class": "doubleclick.net"
+          },
+          {
+            "count": 153,
+            "predicted_known_class": "hotjar.com"
+          }
+        ],
+        "Component-P05-K2": [
+          {
+            "count": 1896,
+            "predicted_known_class": "logitech.com"
+          },
+          {
+            "count": 531,
+            "predicted_known_class": "qualified.com"
+          },
+          {
+            "count": 435,
+            "predicted_known_class": "naver.com"
+          },
+          {
+            "count": 323,
+            "predicted_known_class": "doubleclick.net"
+          },
+          {
+            "count": 268,
+            "predicted_known_class": "flipboard.com"
+          }
+        ],
+        "DGSB-v2": [
+          {
+            "count": 1609,
+            "predicted_known_class": "hotjar.com"
+          },
+          {
+            "count": 378,
+            "predicted_known_class": "naver.com"
+          },
+          {
+            "count": 287,
+            "predicted_known_class": "logitech.com"
+          },
+          {
+            "count": 246,
+            "predicted_known_class": "waze.com"
+          },
+          {
+            "count": 143,
+            "predicted_known_class": "joinhoney.com"
+          }
+        ],
+        "Multi-Global-K2": [
+          {
+            "count": 1066,
+            "predicted_known_class": "hotjar.com"
+          },
+          {
+            "count": 364,
+            "predicted_known_class": "naver.com"
+          },
+          {
+            "count": 242,
+            "predicted_known_class": "waze.com"
+          },
+          {
+            "count": 173,
+            "predicted_known_class": "logitech.com"
+          },
+          {
+            "count": 141,
+            "predicted_known_class": "joinhoney.com"
+          }
+        ],
+        "Native": [
+          {
+            "count": 1664,
+            "predicted_known_class": "hotjar.com"
+          },
+          {
+            "count": 1290,
+            "predicted_known_class": "garmin.com"
+          },
+          {
+            "count": 392,
+            "predicted_known_class": "naver.com"
+          },
+          {
+            "count": 373,
+            "predicted_known_class": "waze.com"
+          },
+          {
+            "count": 336,
+            "predicted_known_class": "twitter.com"
+          }
+        ],
+        "Single-Full-K1": [
+          {
+            "count": 1356,
+            "predicted_known_class": "hotjar.com"
+          },
+          {
+            "count": 376,
+            "predicted_known_class": "naver.com"
+          },
+          {
+            "count": 192,
+            "predicted_known_class": "waze.com"
+          },
+          {
+            "count": 184,
+            "predicted_known_class": "logitech.com"
+          },
+          {
+            "count": 182,
+            "predicted_known_class": "trustarc.com"
+          }
+        ]
+      },
+      "unknown_class_ufar_ge_0_95": [],
+      "worst_unknown_classes_dgsbv2": [
+        {
+          "UFAR": 0.857,
+          "unknown_class": "segment.com"
+        },
+        {
+          "UFAR": 0.215,
+          "unknown_class": "coinbase.com"
+        }
+      ]
+    },
+    "medium": {
+      "best_unknown_classes_dgsbv2": [
+        {
+          "UFAR": 0.073,
+          "unknown_class": "onetrust.com"
+        },
+        {
+          "UFAR": 0.455,
+          "unknown_class": "naver.com"
+        },
+        {
+          "UFAR": 0.557,
+          "unknown_class": "ubuntu.com"
+        }
+      ],
+      "coverage_consistency_vs_utility": [
+        {
+          "consistency_improved_but_utility_worsened": true,
+          "coverage_consistency_improved": true,
+          "method": "Class-P05-K2",
+          "method_test_UFAR": 0.6535555555555556,
+          "method_validation_per_class_FRR_std": 0.012650048322800644,
+          "multi_test_UFAR": 0.5438333333333333,
+          "multi_validation_per_class_FRR_std": 0.03146392256087619,
+          "setting": "medium",
+          "unknown_utility_worsened": true
+        },
+        {
+          "consistency_improved_but_utility_worsened": true,
+          "coverage_consistency_improved": true,
+          "method": "Component-P05-K2",
+          "method_test_UFAR": 0.6893888888888889,
+          "method_validation_per_class_FRR_std": 0.013938848359101265,
+          "multi_test_UFAR": 0.5438333333333333,
+          "multi_validation_per_class_FRR_std": 0.03146392256087619,
+          "setting": "medium",
+          "unknown_utility_worsened": true
+        },
+        {
+          "consistency_improved_but_utility_worsened": true,
+          "coverage_consistency_improved": true,
+          "method": "DGSB-v2",
+          "method_test_UFAR": 0.5915,
+          "method_validation_per_class_FRR_std": 0.013821172773891886,
+          "multi_test_UFAR": 0.5438333333333333,
+          "multi_validation_per_class_FRR_std": 0.03146392256087619,
+          "setting": "medium",
+          "unknown_utility_worsened": true
+        }
+      ],
+      "density_vs_unknown_utility": {
+        "DGSB-v2 vs Multi-Global-K2": {
+          "p": 0.4730011235790567,
+          "rho": -0.1273285052603809
+        },
+        "Multi-Global-K2 vs Single-Full-K1": {
+          "p": 0.4547890536575201,
+          "rho": -0.1325789902343837
+        }
+      },
+      "dgsbv2_known_accuracy_vs_absorption_rho": -0.2846665146973997,
+      "dgsbv2_known_f1_vs_absorption_rho": -0.282505729564553,
+      "dgsbv2_known_gate_attribution": [
+        {
+          "category": "Global FAIL / Local PASS",
+          "count": 223,
+          "interpretation": "Global-exclusive reject",
+          "rate": 0.0183358000328893,
+          "role": "KNOWN_TEST",
+          "setting": "medium"
+        },
+        {
+          "category": "Global PASS / Local FAIL",
+          "count": 77,
+          "interpretation": "Local-exclusive reject",
+          "rate": 0.0063311955270514,
+          "role": "KNOWN_TEST",
+          "setting": "medium"
+        },
+        {
+          "category": "Both FAIL",
+          "count": 88,
+          "interpretation": "Both gates reject",
+          "rate": 0.0072356520309159,
+          "role": "KNOWN_TEST",
+          "setting": "medium"
+        },
+        {
+          "category": "Both PASS",
+          "count": 11774,
+          "interpretation": "Both gates accept",
+          "rate": 0.9680973524091432,
+          "role": "KNOWN_TEST",
+          "setting": "medium"
+        }
+      ],
+      "dgsbv2_unknown_gate_attribution": [
+        {
+          "category": "Global FAIL / Local PASS",
+          "count": 2880,
+          "interpretation": "Global-exclusive reject",
+          "rate": 0.16,
+          "role": "UNKNOWN_TEST",
+          "setting": "medium"
+        },
+        {
+          "category": "Global PASS / Local FAIL",
+          "count": 423,
+          "interpretation": "Local-exclusive reject",
+          "rate": 0.0235,
+          "role": "UNKNOWN_TEST",
+          "setting": "medium"
+        },
+        {
+          "category": "Both FAIL",
+          "count": 4050,
+          "interpretation": "Both gates reject",
+          "rate": 0.225,
+          "role": "UNKNOWN_TEST",
+          "setting": "medium"
+        },
+        {
+          "category": "Both PASS",
+          "count": 10647,
+          "interpretation": "Both gates accept",
+          "rate": 0.5915,
+          "role": "UNKNOWN_TEST",
+          "setting": "medium"
+        }
+      ],
+      "top_absorption_hubs": {
+        "Class-P05-K2": [
+          {
+            "count": 2578,
+            "predicted_known_class": "logitech.com"
+          },
+          {
+            "count": 1671,
+            "predicted_known_class": "flipboard.com"
+          },
+          {
+            "count": 1462,
+            "predicted_known_class": "qualified.com"
+          },
+          {
+            "count": 1431,
+            "predicted_known_class": "google.com"
+          },
+          {
+            "count": 1064,
+            "predicted_known_class": "googleapis.com"
+          }
+        ],
+        "Component-P05-K2": [
+          {
+            "count": 2757,
+            "predicted_known_class": "ctfassets.net"
+          },
+          {
+            "count": 2331,
+            "predicted_known_class": "flipboard.com"
+          },
+          {
+            "count": 1593,
+            "predicted_known_class": "qualified.com"
+          },
+          {
+            "count": 1504,
+            "predicted_known_class": "logitech.com"
+          },
+          {
+            "count": 948,
+            "predicted_known_class": "google-analytics.com"
+          }
+        ],
+        "DGSB-v2": [
+          {
+            "count": 1622,
+            "predicted_known_class": "trustarc.com"
+          },
+          {
+            "count": 1512,
+            "predicted_known_class": "qualified.com"
+          },
+          {
+            "count": 1392,
+            "predicted_known_class": "googleapis.com"
+          },
+          {
+            "count": 759,
+            "predicted_known_class": "robinhood.com"
+          },
+          {
+            "count": 685,
+            "predicted_known_class": "segment.com"
+          }
+        ],
+        "Multi-Global-K2": [
+          {
+            "count": 1614,
+            "predicted_known_class": "trustarc.com"
+          },
+          {
+            "count": 1392,
+            "predicted_known_class": "googleapis.com"
+          },
+          {
+            "count": 1213,
+            "predicted_known_class": "qualified.com"
+          },
+          {
+            "count": 637,
+            "predicted_known_class": "segment.com"
+          },
+          {
+            "count": 483,
+            "predicted_known_class": "googletagmanager.com"
+          }
+        ],
+        "Native": [
+          {
+            "count": 1923,
+            "predicted_known_class": "google.com"
+          },
+          {
+            "count": 1800,
+            "predicted_known_class": "robinhood.com"
+          },
+          {
+            "count": 1559,
+            "predicted_known_class": "hubspot.com"
+          },
+          {
+            "count": 1265,
+            "predicted_known_class": "segment.com"
+          },
+          {
+            "count": 1253,
+            "predicted_known_class": "adblockplus.org"
+          }
+        ],
+        "Single-Full-K1": [
+          {
+            "count": 1419,
+            "predicted_known_class": "trustarc.com"
+          },
+          {
+            "count": 1109,
+            "predicted_known_class": "qualified.com"
+          },
+          {
+            "count": 1096,
+            "predicted_known_class": "googleapis.com"
+          },
+          {
+            "count": 922,
+            "predicted_known_class": "google-analytics.com"
+          },
+          {
+            "count": 863,
+            "predicted_known_class": "segment.com"
+          }
+        ]
+      },
+      "unknown_class_ufar_ge_0_95": [
+        {
+          "UFAR": 0.9773333333333334,
+          "unknown_class": "hotjar.com"
+        }
+      ],
+      "worst_unknown_classes_dgsbv2": [
+        {
+          "UFAR": 0.9773333333333334,
+          "unknown_class": "hotjar.com"
+        },
+        {
+          "UFAR": 0.8933333333333333,
+          "unknown_class": "doubleclick.net"
+        },
+        {
+          "UFAR": 0.5933333333333334,
+          "unknown_class": "hs-scripts.com"
+        }
+      ]
+    }
+  }
+}

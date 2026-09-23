@@ -1,0 +1,238 @@
+{
+  "schema_version": 1,
+  "experiment_id": "stage4-local-boundary-diagnosis-20260913",
+  "created_at_utc": "2026-09-13T00:37:01Z",
+  "updated_at_utc": "2026-09-13T00:43:55Z",
+  "status": "success",
+  "experiment_type": "post-hoc-mechanism-diagnosis",
+  "claim_scope": "diagnostic",
+  "objective": "Diagnose global/class/component boundary coverage using frozen Stage 3 assets and freeze a CSTNET external-validation candidate",
+  "inputs": [
+    {
+      "path": "../../stage3_unknown_utility/outputs",
+      "role": "frozen Stage 3 packages",
+      "package_sha256": {
+        "A-1": "0f8908d8602f704ba17db1f9cc4b1349bfd7b0dcc5babf5703680788fdad1be9",
+        "A-2": "5e0aa24845c391b2c71099df0f17db35bb6041f97af72290b5f773ad3242dfa6",
+        "A-3": "1328d3b3e81f9f6fe079d1d47a09859d0596c11f12e2835eecdc76475a3c22be"
+      }
+    },
+    {
+      "path": "../../stage3_unknown_utility/artifacts",
+      "role": "frozen mu_x, scaler, PCA64, K1/K2 models, and final predictions",
+      "hash_source": "Stage 3 frozen_model_hashes.json and latent_export_manifest.json"
+    }
+  ],
+  "code": {
+    "revision": "ffcb0dfcaebe3b04b6d3bd42964d5a705303d2cc",
+    "dirty": true,
+    "changes": [
+      "stage4_local_boundary_diagnosis/",
+      "README.md",
+      "EXPERIMENT_RESULTS.md"
+    ]
+  },
+  "execution": {
+    "tmux_session": "stage4_boundary_formal_v3",
+    "command": "python stage4_local_boundary_diagnosis/scripts/run_boundary_diagnosis.py --output-dir stage4_local_boundary_diagnosis/outputs",
+    "exit_code": 0,
+    "environment": "/home/birkenwald/data/SEU-WXY/conda_envs/2025-10-8-WXY-dgl_py310",
+    "physical_gpu_ids": []
+  },
+  "configuration": {
+    "files": [
+      "../scripts/run_boundary_diagnosis.py",
+      "../../stage3_protocol/stage3_protocol.json"
+    ],
+    "parameters": {
+      "rules": [
+        "Global",
+        "Class-P05",
+        "Component-P05"
+      ],
+      "quantile": 0.05,
+      "minimum_component_validation_samples": 30,
+      "fallback": "class P05",
+      "K": 2,
+      "representation": "frozen mu_x -> frozen scaler -> frozen PCA64"
+    },
+    "seeds": []
+  },
+  "core_results": [
+    {
+      "metric": "largest global validation component acceptance gap",
+      "value": 0.889119,
+      "cell": "A-3/Virut",
+      "evidence": "boundary_heterogeneity.csv"
+    },
+    {
+      "metric": "mean validation component gap Global/Class/Local",
+      "value": [
+        0.169174,
+        0.23417,
+        0.072024
+      ],
+      "evidence": "known_validation_boundary_comparison.csv"
+    },
+    {
+      "metric": "mean Known Test component gap Global/Class/Local",
+      "value": [
+        0.171906,
+        0.228309,
+        0.070406
+      ],
+      "evidence": "known_test_boundary_generalization.csv"
+    },
+    {
+      "metric": "final diagnosis",
+      "value": "C — LOCAL BOUNDARY NECESSARY",
+      "scope": "Known component-coverage consistency only",
+      "evidence": "audit_summary.md"
+    }
+  ],
+  "artifacts": [
+    {
+      "path": "audit_summary.md",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 3500,
+      "sha256": "477988bcecbb8b0d8a24ea8fe0bd360c9adb7b321c17168544e739c15ff28b90",
+      "hash_status": "verified"
+    },
+    {
+      "path": "boundary_factor_correlations.csv",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 11383,
+      "sha256": "b04ee2d96645de2d13256681de50cbfc9bd78af0f3556d23925c50dfae84d76c",
+      "hash_status": "verified"
+    },
+    {
+      "path": "boundary_heterogeneity.csv",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 18177,
+      "sha256": "aa06ef76a000588429f37f8fcfc5ecab76e00769bbea8634b64317b78df79e04",
+      "hash_status": "verified"
+    },
+    {
+      "path": "boundary_leakage_audit.md",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 779,
+      "sha256": "8a68cf0da0af1f6a46b355b632f1334de7771d18dffc6ba1a1cc649127f8a0a9",
+      "hash_status": "verified"
+    },
+    {
+      "path": "class_thresholds.csv",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 7261,
+      "sha256": "3915eba460fe4a1e4ee0a6a99ee3587f940450fdb7f7984f519aed84bcd9cdf4",
+      "hash_status": "verified"
+    },
+    {
+      "path": "external_validation_protocol_candidate.md",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 1326,
+      "sha256": "6d0a8d00580740d5c6ab758dc592a3ed847db334945e577ef9793cf4a48a1943",
+      "hash_status": "verified"
+    },
+    {
+      "path": "fallback_summary.csv",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 260,
+      "sha256": "c6e7793422b2f467849fa183eae6d4cb8f4870a4d9d84280e802416ab83e696c",
+      "hash_status": "verified"
+    },
+    {
+      "path": "global_class_coverage.csv",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 15403,
+      "sha256": "bed186c042a78a97b9c97d5a75e35521ae0ff9cae14649eb51085cfbe8ad0fc4",
+      "hash_status": "verified"
+    },
+    {
+      "path": "global_component_coverage.csv",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 31091,
+      "sha256": "f07bf2e3060afca8b9ed0fa23a2145582d98b113b82e16e4e0e29ea08c5743e0",
+      "hash_status": "verified"
+    },
+    {
+      "path": "htbot_tinba_case_study.csv",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 286580,
+      "sha256": "26f0e40cfd2f9d2c8190da27074144ba608951c1ea6efbcfe6c6f37da388a5dd",
+      "hash_status": "verified"
+    },
+    {
+      "path": "known_test_boundary_generalization.csv",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 61124,
+      "sha256": "12bec9cc1f3a6bb7d13f1921bb363ea7d7dc3e6704b3f109f035a4a5a4991379",
+      "hash_status": "verified"
+    },
+    {
+      "path": "known_validation_boundary_comparison.csv",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 64228,
+      "sha256": "6e671d7122c7217a10a9aa6340324b1a4b2d1d981f83b585925e6aac04efdcbf",
+      "hash_status": "verified"
+    },
+    {
+      "path": "local_component_thresholds.csv",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 31374,
+      "sha256": "40612231f134ea4f502e3334837e8383b28c6bcdd6640da8bac83b55f1a19f56",
+      "hash_status": "verified"
+    },
+    {
+      "path": "posthoc_unknown_boundary_results.csv",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 3326,
+      "sha256": "6b3e0921831b02dfb690d6896d2636a4e976c03613b3bbe2072101cf6caa3618",
+      "hash_status": "verified"
+    },
+    {
+      "path": "provenance_snapshot.md",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 974,
+      "sha256": "fde7ee6c8ad6fcaf6077aca1244277756fed14e8726c1a73a64790129ee3383c",
+      "hash_status": "verified"
+    },
+    {
+      "path": "run_metadata.json",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 5462,
+      "sha256": "9189fc5318805b7dbebde6888fa560b473bc5a28d8f8de97513659ed807ebb1d",
+      "hash_status": "verified"
+    },
+    {
+      "path": "virut_neris_case_study.csv",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 80788,
+      "sha256": "847b82e839fefcb95d6fccc4cd4cf9761d792f96a495a49d6ef57b4278af7351",
+      "hash_status": "verified"
+    }
+  ],
+  "limitations": [
+    "USTC Unknown Test was already observed; Unknown-side results are post-hoc mechanism diagnosis only.",
+    "Component-P05 validation equalization is partly calibration-by-construction.",
+    "Fixed fallback components remain imbalanced.",
+    "USTC post-hoc UFAR cannot be used to optimize, promote, or reject the frozen candidate as independently validated."
+  ],
+  "next_step": "No execution in this task. Freeze the generated protocol before first independent evaluation on untouched CSTNET-TLS1.3."
+}

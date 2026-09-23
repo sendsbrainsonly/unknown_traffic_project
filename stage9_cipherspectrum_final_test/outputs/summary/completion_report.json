@@ -1,0 +1,69 @@
+{
+  "final_gate": {
+    "bootstrap_iterations": 1000,
+    "bootstrap_seed": 0,
+    "gate": "B",
+    "methods_frozen": [
+      "Native",
+      "Single-Full-K1",
+      "Multi-Global-K2",
+      "Class-P05-K2",
+      "Component-P05-K2",
+      "DGSB-v2"
+    ],
+    "methods_modified_after_test_open": false,
+    "name": "OPERATING-POINT TRADEOFF",
+    "post_test_tuning_performed": false,
+    "setting_conclusions": {
+      "high": "TRADEOFF",
+      "low": "TRADEOFF",
+      "medium": "TRADEOFF"
+    },
+    "settings_complete": [
+      "low",
+      "medium",
+      "high"
+    ],
+    "test_open_started_at": "2026-09-13T14:30:55.571231+00:00"
+  },
+  "methods": [
+    "Native",
+    "Single-Full-K1",
+    "Multi-Global-K2",
+    "Class-P05-K2",
+    "Component-P05-K2",
+    "DGSB-v2"
+  ],
+  "post_test_tuning_performed": false,
+  "setting_bundles": [
+    {
+      "files_in_manifest": 42,
+      "setting": "low",
+      "status": "PASS",
+      "test_bundle_hash_file_sha256": "d09d2a21d30cb71f7c428a9090a0c56ff050e6449a5c0416a8510b80045a4687",
+      "test_bundle_manifest_sha256": "9e87262dc54824d09b2c74e16c3f6d0a0f96d1899e38f74620c5db5cf39bdbb6"
+    },
+    {
+      "files_in_manifest": 39,
+      "setting": "medium",
+      "status": "PASS",
+      "test_bundle_hash_file_sha256": "e4310e80cb4fb441fde2b090db3d8f21a3f4671243d9371371f5c96c358e63f2",
+      "test_bundle_manifest_sha256": "f2d08626b81f57c412ee9062bdceb8b753b9a270ce50a04f60a59acd8c5195ce"
+    },
+    {
+      "files_in_manifest": 39,
+      "setting": "high",
+      "status": "PASS",
+      "test_bundle_hash_file_sha256": "6f2c6d7663db9177673d6a7155165eb2985097e47659f3b66d40df6087ca15b7",
+      "test_bundle_manifest_sha256": "dd1bc9d02e2bc70fd51531a5a2ededa536b97a3a7a43829408c629adfe85ea6e"
+    }
+  ],
+  "settings": [
+    "low",
+    "medium",
+    "high"
+  ],
+  "stage6_stage7_stage8a_stage8b_hashes": "PASS",
+  "status": "COMPLETE",
+  "test_open_started_at": "2026-09-13T14:30:55.571231+00:00"
+}

@@ -1,0 +1,2 @@
+setting,components_total,components_val_n_lt_30,fallback_count,fallback_rate,fallback_rule,rule_frozen_before_test
+low,76,2,2,0.02631578947368421,component validation n < 30 -> class P05 threshold,True

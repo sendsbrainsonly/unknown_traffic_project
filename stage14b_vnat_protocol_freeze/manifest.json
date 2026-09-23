@@ -1,0 +1,214 @@
+{
+  "schema_version": 1,
+  "experiment_id": "stage14b-vnat-open-set-protocol-freeze-20260917-v1",
+  "created_at_utc": "2026-09-17T10:11:41Z",
+  "updated_at_utc": "2026-09-17T10:21:57Z",
+  "status": "success",
+  "experiment_type": "protocol-freeze",
+  "claim_scope": "diagnostic",
+  "objective": "Freeze a model-independent VNAT application-held-out open-set protocol with permanent data-integrity exclusions and deterministic flow-level 8:1:1 Known splits",
+  "inputs": [
+    {
+      "path": "stage14a_vnat_data_audit/vnat_manifest.csv",
+      "role": "frozen_pcap_and_group_manifest",
+      "sha256": "5d6827baf37c6893028637779765e7289ff83c56f8eb84fdecb52650a6334c5b"
+    },
+    {
+      "path": "stage14a_vnat_data_audit/outputs/duplicate_flows.csv",
+      "role": "frozen_duplicate_flow_evidence",
+      "sha256": "45c09e0653d0c4b08fe6dfdd1b89c071e66f20dcf8036fe4c0421864889f38e1"
+    },
+    {
+      "path": "stage14a_vnat_data_audit/outputs/duplicate_files.csv",
+      "role": "frozen_duplicate_pcap_evidence",
+      "sha256": "c05cf493163a11e8d60a20ca5c6c65fa45bc6e91b728d906825061de73182036"
+    },
+    {
+      "path": "stage14a_vnat_data_audit/artifacts/pcap_scans/",
+      "role": "frozen_flow_records",
+      "json_records": 165
+    }
+  ],
+  "code": {
+    "revision": null,
+    "dirty": null,
+    "changes": [
+      "stage14b_vnat_protocol_freeze/scripts/freeze_vnat_protocol.py",
+      "stage14b_vnat_protocol_freeze/scripts/verify_stage14b.py",
+      "stage14b_vnat_protocol_freeze/tests/test_protocol_freeze.py"
+    ]
+  },
+  "execution": {
+    "tmux_session": "stage14b-run-final",
+    "validation_session": "stage14b-verify-results",
+    "command": "python stage14b_vnat_protocol_freeze/scripts/freeze_vnat_protocol.py",
+    "exit_code": 0,
+    "environment": "/home/birkenwald/data/SEU-WXY/conda_envs/2025-10-8-WXY-dgl_py310",
+    "physical_gpu_ids": []
+  },
+  "configuration": {
+    "files": [
+      "stage14b_vnat_protocol_freeze/scripts/freeze_vnat_protocol.py"
+    ],
+    "parameters": {
+      "semantic_class": "application",
+      "known_split_ratio": "8:1:1",
+      "known_split_unit": "flow",
+      "capture_group_hard_constraint": false,
+      "low_unknown_classes": 2,
+      "medium_unknown_classes": 3,
+      "high_unknown_classes": 4,
+      "unknown_schedule": "balanced nested cyclic",
+      "master_unknown_seed": 2022,
+      "threshold_rule": "global Known Validation P95 only",
+      "freeze_hash": "c904daef04d2c8e79469191121325c0a6ceeaeb3e595ef9c4c7d7a62c980ae2f"
+    },
+    "seeds": [
+      2022,
+      2023,
+      2024,
+      2025,
+      2026
+    ]
+  },
+  "core_results": [
+    {
+      "metric": "retained_applications",
+      "value": 10
+    },
+    {
+      "metric": "excluded_applications",
+      "value": 0
+    },
+    {
+      "metric": "clean_flows",
+      "value": 23449
+    },
+    {
+      "metric": "protocols",
+      "value": 15
+    },
+    {
+      "metric": "split_manifest_rows",
+      "value": 351735
+    },
+    {
+      "metric": "strict_unknown_free",
+      "value": "PASS"
+    },
+    {
+      "metric": "capture_disjoint_known_split",
+      "value": false
+    },
+    {
+      "metric": "stage14c_readiness",
+      "value": "READY"
+    }
+  ],
+  "artifacts": [
+    {
+      "path": "outputs/freeze_hashes.json",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 499,
+      "sha256": "7785f7b0d78ad70828c3e11ca60c3ad13aad7cefaeb806dfb8cb0c3aef21447e",
+      "hash_status": "verified"
+    },
+    {
+      "path": "outputs/integrity_exclusions.csv",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 832,
+      "sha256": "5d2e4531d4252051968bcb0298a9561fcd072380ad8fb01f1c9dca9551f62b46",
+      "hash_status": "verified"
+    },
+    {
+      "path": "scripts/__pycache__/freeze_vnat_protocol.cpython-310.pyc",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 26581,
+      "sha256": "0b56894a452e447f72aec07900d937f62edd865ee80369198dd856bb009d59b0",
+      "hash_status": "verified"
+    },
+    {
+      "path": "scripts/__pycache__/verify_stage14b.cpython-310.pyc",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 6322,
+      "sha256": "48b8fcfef607e1f2c972bdfe036d6c2ffe9d9ab10e7114bf6f8a707896f2b4ff",
+      "hash_status": "verified"
+    },
+    {
+      "path": "scripts/freeze_vnat_protocol.py",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 31750,
+      "sha256": "e5e53741ab92f2943082e014c23aafa27db41a08d9c9414df819cfd9726370c4",
+      "hash_status": "verified"
+    },
+    {
+      "path": "scripts/verify_stage14b.py",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 7153,
+      "sha256": "1e77f712c56bec5ce66d51f1c2d82daacda305b54a853bce7b853bbf4694b2d0",
+      "hash_status": "verified"
+    },
+    {
+      "path": "stage14b_protocol_freeze.md",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 6299,
+      "sha256": "4952d8912a3abbb65c17e486e489c7040aa3f3d6679a2064c3e0caf3643ed340",
+      "hash_status": "verified"
+    },
+    {
+      "path": "tests/__pycache__/test_protocol_freeze.cpython-310-pytest-8.4.2.pyc",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 3995,
+      "sha256": "ee185f0bc08ff2136fc50ce9680567966888aaecbc6a0648089548fd5aea09c4",
+      "hash_status": "verified"
+    },
+    {
+      "path": "tests/test_protocol_freeze.py",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 1446,
+      "sha256": "4713e9b1b0ca1f4541be7787078a055a263fc02dea083c0a01e98a66080121ca",
+      "hash_status": "verified"
+    },
+    {
+      "path": "vnat_final_class_audit.csv",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 2173,
+      "sha256": "f9bddc087bdb0432dc4e209181259b82aeeed426c99ed2be4ee4370e6aa2fab3",
+      "hash_status": "verified"
+    },
+    {
+      "path": "vnat_open_set_protocol.json",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 54668,
+      "sha256": "5177bf7276812bbb417f085043f8518c8573ea1851de2f1d733deb77c9939ced",
+      "hash_status": "verified"
+    },
+    {
+      "path": "vnat_split_manifest.csv",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 171395777,
+      "sha256": "66bf155e6906231b316c384a52f4b46dabd9d3aee76d5f66d86a3941eb172c4e",
+      "hash_status": "verified"
+    }
+  ],
+  "limitations": [
+    "Known flow-random splits are not capture/group-disjoint and cannot support a capture-generalization claim.",
+    "RDP has only 36/4/4 Known Train/Validation/Test flows.",
+    "Vimeo has one conservative group shared across all Known splits.",
+    "Class sizes and VPN/non-VPN domains are strongly imbalanced.",
+    "Application labels remain filename-derived capture labels."
+  ],
+  "next_step": "Stage 14C may train only after verifying freeze hash c904daef04d2c8e79469191121325c0a6ceeaeb3e595ef9c4c7d7a62c980ae2f; no frozen field may change based on VNAT Test results."
+}

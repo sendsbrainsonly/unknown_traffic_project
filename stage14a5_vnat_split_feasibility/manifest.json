@@ -1,0 +1,216 @@
+{
+  "schema_version": 1,
+  "experiment_id": "stage14a5-vnat-split-feasibility-20260917-v1",
+  "created_at_utc": "2026-09-17T09:37:48Z",
+  "updated_at_utc": "2026-09-17T09:49:58Z",
+  "status": "success",
+  "experiment_type": "dataset-audit",
+  "claim_scope": "diagnostic",
+  "objective": "Audit VNAT duplicate-quarantined group-disjoint Train/Validation/Test split feasibility without model execution or Unknown-setting generation",
+  "inputs": [
+    {
+      "path": "stage14a_vnat_data_audit/vnat_manifest.csv",
+      "role": "frozen_stage14a_manifest",
+      "sha256": "5d6827baf37c6893028637779765e7289ff83c56f8eb84fdecb52650a6334c5b"
+    },
+    {
+      "path": "stage14a_vnat_data_audit/outputs/duplicate_flows.csv",
+      "role": "frozen_duplicate_flow_evidence",
+      "sha256": "45c09e0653d0c4b08fe6dfdd1b89c071e66f20dcf8036fe4c0421864889f38e1"
+    },
+    {
+      "path": "stage14a_vnat_data_audit/artifacts/pcap_scans/",
+      "role": "frozen_per_pcap_flow_records",
+      "json_records": 165
+    }
+  ],
+  "code": {
+    "revision": null,
+    "dirty": null,
+    "changes": [
+      "stage14a5_vnat_split_feasibility/scripts/run_stage14a5.py",
+      "stage14a5_vnat_split_feasibility/scripts/verify_stage14a5.py",
+      "stage14a5_vnat_split_feasibility/tests/test_stage14a5.py"
+    ]
+  },
+  "execution": {
+    "tmux_session": "stage14a5-run",
+    "validation_session": "stage14a5-verify-results",
+    "command": "python stage14a5_vnat_split_feasibility/scripts/run_stage14a5.py",
+    "exit_code": 0,
+    "environment": "/home/birkenwald/data/SEU-WXY/conda_envs/2025-10-8-WXY-dgl_py310",
+    "physical_gpu_ids": []
+  },
+  "configuration": {
+    "files": [
+      "stage14a5_vnat_split_feasibility/scripts/run_stage14a5.py"
+    ],
+    "parameters": {
+      "cross_application_duplicate_quarantine_rows": 4,
+      "partition_objective": "maximize minimum Train/Validation/Test flow count, then minimize range",
+      "exact_enumeration_max_groups": 10,
+      "large_class_method": "deterministic LPT plus local moves/swaps",
+      "exclusion_min_usable_groups": 3,
+      "exclusion_min_maximin_split_flows": 10,
+      "borderline_total_flows_below": 100,
+      "borderline_usable_groups_at_most": 4,
+      "borderline_largest_group_share_at_least": 0.8,
+      "unknown_setting_generated": false,
+      "model_execution": false
+    },
+    "seeds": []
+  },
+  "core_results": [
+    {
+      "metric": "flows_before_quarantine",
+      "value": 23454
+    },
+    {
+      "metric": "quarantined_cross_application_flow_rows",
+      "value": 4
+    },
+    {
+      "metric": "flows_after_quarantine",
+      "value": 23450
+    },
+    {
+      "metric": "eligible",
+      "value": [
+        "sftp",
+        "skype"
+      ]
+    },
+    {
+      "metric": "borderline",
+      "value": [
+        "rdp",
+        "ssh",
+        "youtube",
+        "zoiper"
+      ]
+    },
+    {
+      "metric": "excluded",
+      "value": [
+        "netflix",
+        "rsync",
+        "scp",
+        "vimeo"
+      ]
+    },
+    {
+      "metric": "retained_global_validation_flows",
+      "value": 3125
+    },
+    {
+      "metric": "stage14b_readiness",
+      "value": "CONDITIONAL_YES"
+    }
+  ],
+  "artifacts": [
+    {
+      "path": "outputs/audit_details.json",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 500,
+      "sha256": "d67cbc4930ad4fe96b452b9178285b179a0a0e94c7a5edc9a360bd71dd57f5b8",
+      "hash_status": "verified"
+    },
+    {
+      "path": "outputs/input_hashes.json",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 325,
+      "sha256": "294203fea21d910ed8ab4b942ba5a9e36487d876b1b904b3682a1d3df8961854",
+      "hash_status": "verified"
+    },
+    {
+      "path": "outputs/quarantined_duplicate_flows.csv",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 1092,
+      "sha256": "f7855daf8a5a85705e5b4f85f5c55ac6a2d7e1819b49ffad31e53c4361ffbd8b",
+      "hash_status": "verified"
+    },
+    {
+      "path": "scripts/__pycache__/run_stage14a5.cpython-310.pyc",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 22683,
+      "sha256": "a161b1121e37ede4bd59d563bb474649a7f33547b3e0b285b0c43eee75deac21",
+      "hash_status": "verified"
+    },
+    {
+      "path": "scripts/__pycache__/verify_stage14a5.cpython-310.pyc",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 4420,
+      "sha256": "a9950474075a1dc59e1b9be29adac35934492459c4649f59efb30c0678c41349",
+      "hash_status": "verified"
+    },
+    {
+      "path": "scripts/run_stage14a5.py",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 24102,
+      "sha256": "633288509bef82597792a48e442a744262ad880070abadc6400c35e37f5db0ab",
+      "hash_status": "verified"
+    },
+    {
+      "path": "scripts/verify_stage14a5.py",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 3864,
+      "sha256": "d2c7f1bd67da20d02b008b3a1a0902bbb40ec0deac268fc36da2dbf6f2bb6ff3",
+      "hash_status": "verified"
+    },
+    {
+      "path": "stage14a5_split_audit.md",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 6394,
+      "sha256": "e604711992ac2918bbab6f6a030b39740e9264594af5f71ebff4db1bc35db611",
+      "hash_status": "verified"
+    },
+    {
+      "path": "tests/__pycache__/test_stage14a5.cpython-310-pytest-8.4.2.pyc",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 3355,
+      "sha256": "fb051953b723d9eac1e5d5c68f04f4b07dabb6344830fab889e2377c2451d2b1",
+      "hash_status": "verified"
+    },
+    {
+      "path": "tests/test_stage14a5.py",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 987,
+      "sha256": "f18de9c4ed511a2fd495e3d82599ae9d36be907099c7da86df1769ba6b24d59f",
+      "hash_status": "verified"
+    },
+    {
+      "path": "vnat_group_statistics.csv",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 17750,
+      "sha256": "3e5e756bff9c3fcd1086113452eff2f82144fc43519edeafe46899693d9744fd",
+      "hash_status": "verified"
+    },
+    {
+      "path": "vnat_split_feasibility.csv",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 5394,
+      "sha256": "76accb818ab499d746a5a5f30091475f187f4f694609fd4f7922073c76c76587",
+      "hash_status": "verified"
+    }
+  ],
+  "limitations": [
+    "The maximin witness is a feasibility allocation, not a frozen final split ratio.",
+    "Skype uses a deterministic heuristic, so global optimality is not proven.",
+    "P95 stability is assessed from sample counts only because validation scores were intentionally not generated.",
+    "Filename-derived labels and conservative Stage 14A group assumptions remain inherited limitations.",
+    "Flow counts overstate effective independence when multiple flows belong to one capture group."
+  ],
+  "next_step": "Do not proceed automatically. Stage 14B may conditionally freeze a protocol using eligible and explicitly flagged borderline classes while preserving the duplicate quarantine and exclusions."
+}

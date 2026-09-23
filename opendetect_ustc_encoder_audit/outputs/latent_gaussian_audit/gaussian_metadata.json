@@ -1,0 +1,40 @@
+{
+  "K": [
+    1,
+    2,
+    3
+  ],
+  "classes": [
+    "FTP",
+    "Cridex",
+    "Miuref",
+    "Outlook"
+  ],
+  "covariance_type": "full",
+  "float_dtype": "float64",
+  "gmm_evaluation": "matching held-out validation only",
+  "gmm_fit": "class-specific train only",
+  "loaded_splits": [
+    "train",
+    "val"
+  ],
+  "max_iter": 300,
+  "multi_rule": "at least one of K=2/3 has DeltaNLL>1 nat/sample in all seeds, all fits converged/warning-free/Cholesky-valid, minimum train component ratio >=1%, validation component count >0, and max train/validation component-weight TV <=0.10",
+  "n_init": 3,
+  "pca_dim_actual": 64,
+  "pca_dim_requested": 64,
+  "pca_explained_variance_ratio_sum": 0.9989572473584225,
+  "pca_fit": "all 20-class train mu_x only",
+  "pca_random_state": 0,
+  "reg_covar": 0.001,
+  "reg_covar_sensitivity_run": false,
+  "seeds": [
+    0,
+    1,
+    2
+  ],
+  "standard_scaler_fit": "all 20-class train mu_x only",
+  "test_loaded": false,
+  "tiny_component_threshold": "assigned train ratio < 0.01",
+  "very_tiny_component_threshold": "assigned train ratio < 0.005"
+}

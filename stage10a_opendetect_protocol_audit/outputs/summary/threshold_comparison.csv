@@ -1,0 +1,7 @@
+layer,scope,fit_data,method,per_class,leakage_risk
+Paper,global,Known validation,accept 95% of validation samples,False,NOT_SUPPORTED
+Official code,global,labeled Known+Unknown test,Youden J argmax(TPR-FPR),False,SUPPORTED_TEST_ORACLE
+Sibling Open-Detect USTC v6 reproduction,global per scenario/repeat,Known validation only,P95 of KL distance with numpy quantile method=higher,False,NOT_SUPPORTED
+CipherSpectrum low,global,KNOWN_VALIDATION_ONLY,Stage3 linear P05 quantile,False,NOT_SUPPORTED
+CipherSpectrum medium,global,KNOWN_VALIDATION_ONLY,Stage3 linear P05 quantile,False,NOT_SUPPORTED
+CipherSpectrum high,global,KNOWN_VALIDATION_ONLY,Stage3 linear P05 quantile,False,NOT_SUPPORTED

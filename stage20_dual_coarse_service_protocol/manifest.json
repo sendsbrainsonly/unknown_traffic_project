@@ -1,0 +1,220 @@
+{
+  "schema_version": 1,
+  "experiment_id": "stage20-dual-coarse-service-protocol-20260921-v1",
+  "created_at_utc": "2026-09-21T14:37:31Z",
+  "updated_at_utc": "2026-09-21T14:44:29Z",
+  "status": "success",
+  "experiment_type": "protocol-freeze",
+  "claim_scope": "diagnostic",
+  "objective": "Freeze a coarse Service-level closed/open-set task for ISCX-VPN and ISCXTor2016 without overwriting fine-grained experiments",
+  "inputs": [
+    {
+      "name": "Stage12 ISCX-VPN flow-image pool provenance",
+      "path": "../stage12_dual_external_validation/artifacts/iscx_vpn/preprocessing_pool/raw_prepared_parallel_v1",
+      "role": "immutable source reference"
+    },
+    {
+      "name": "Stage12 ISCXTor2016 flow-image pool provenance",
+      "path": "../stage12_dual_external_validation/artifacts/iscx_tor/preprocessing_pool/raw_prepared_parallel_v2",
+      "role": "immutable source reference"
+    },
+    {
+      "name": "Stage12 capture inventory and official categories",
+      "path": "../stage12_dual_external_validation/protocol",
+      "role": "label provenance"
+    }
+  ],
+  "code": {
+    "revision": null,
+    "dirty": true,
+    "changes": [
+      "Added deterministic dual-dataset coarse Service protocol builder and verifier",
+      "Preserved historical fine-grained protocols and rejected first attempt"
+    ]
+  },
+  "execution": {
+    "tmux_session": "codex-coarse-protocol-build-retry-20260921",
+    "command": "python scripts/build_protocol.py && python scripts/verify_stage20.py",
+    "exit_code": 0,
+    "environment": "/home/birkenwald/data/SEU-WXY/conda_envs/2025-10-8-WXY-dgl_py310",
+    "physical_gpu_ids": []
+  },
+  "configuration": {
+    "files": [
+      "config.json"
+    ],
+    "parameters": {
+      "task": "coarse Service classification and LOSO unknown detection",
+      "vpn_classes": 6,
+      "tor_classes": 7,
+      "max_flows_per_service": 2000,
+      "split": "80/10/10 exact-image-group deterministic",
+      "unknown_protocol": "leave-one-service-out"
+    },
+    "seeds": [
+      20260921
+    ]
+  },
+  "core_results": [
+    {
+      "name": "selected_flows",
+      "value": 22136,
+      "unit": "flows"
+    },
+    {
+      "name": "loso_protocols",
+      "value": 13,
+      "unit": "protocols"
+    },
+    {
+      "name": "loso_manifest_rows",
+      "value": 143997,
+      "unit": "rows"
+    },
+    {
+      "name": "flow_role_overlap",
+      "value": 0,
+      "unit": "pairs"
+    },
+    {
+      "name": "exact_image_role_overlap",
+      "value": 0,
+      "unit": "pairs"
+    },
+    {
+      "name": "unknown_fitting_samples",
+      "value": 0,
+      "unit": "flows"
+    }
+  ],
+  "artifacts": [
+    {
+      "path": "SUCCESS",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 28,
+      "sha256": "0cceed7171b7dc4750ee48607701ff2556c337196bd3567ae3c63d54a2481946",
+      "hash_status": "verified"
+    },
+    {
+      "path": "closed_service_manifest.csv",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 9706981,
+      "sha256": "6404d496f50a6f7f6f397d125ad0cd653c9df152d8db1b9ed2ad2310967950bb",
+      "hash_status": "verified"
+    },
+    {
+      "path": "completion_verification.json",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 188,
+      "sha256": "99c5bddbb0d010d315ad4d62e3491b91320e30120d9e71d2b98f0d6c2b2de3ac",
+      "hash_status": "verified"
+    },
+    {
+      "path": "config.json",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 1787,
+      "sha256": "b85aeecba527b1e7faa85035005b46562c8ceef53c1733328826a7781f815ad8",
+      "hash_status": "verified"
+    },
+    {
+      "path": "failed_attempts/cross_service_duplicate_gate_v1/FAILURE.txt",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 222,
+      "sha256": "69b57d6a890311722e8427dd91b5a5dde27c5ed4b9fb5dae1bd22f52e1548098",
+      "hash_status": "verified"
+    },
+    {
+      "path": "failed_attempts/cross_service_duplicate_gate_v1/closed_service_manifest.csv",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 9707001,
+      "sha256": "26923d288a0ea476234e6612fcb339a135ae37f02f8386fc970ae666eb4af157",
+      "hash_status": "verified"
+    },
+    {
+      "path": "failed_attempts/cross_service_duplicate_gate_v1/loso_service_protocol_manifest.csv",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 84788535,
+      "sha256": "6fbe7bc80dc92fdcc7b14054f71635f344ec8c51e2a470d6d51cf19b6c25fcc1",
+      "hash_status": "verified"
+    },
+    {
+      "path": "failed_attempts/cross_service_duplicate_gate_v1/protocol_audit.json",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 14087,
+      "sha256": "15bfcd351325037c0ec6a6b29ac013263338ed90f4069ce712925c4e3626b5fd",
+      "hash_status": "verified"
+    },
+    {
+      "path": "loso_service_protocol_manifest.csv",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 84788415,
+      "sha256": "08ecafe0bbe87328ad7193235856e1d448221579d96e7dffda56ac2f78785949",
+      "hash_status": "verified"
+    },
+    {
+      "path": "protocol_audit.json",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 14024,
+      "sha256": "f976a2cd5223677140eed051b4c760b757fe02da01c8bb1deab4b986b5cfc608",
+      "hash_status": "verified"
+    },
+    {
+      "path": "protocol_summary.json",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 5803,
+      "sha256": "00b880806730ad558a17ce392785ea0da5a6cf324e769fe2311bd4e690cf5504",
+      "hash_status": "verified"
+    },
+    {
+      "path": "scripts/__pycache__/build_protocol.cpython-310.pyc",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 13703,
+      "sha256": "cbcc2933dbf9551fefaf1772e3bd05ca71e9572a9bf82ee71702428a2a5264d6",
+      "hash_status": "verified"
+    },
+    {
+      "path": "scripts/__pycache__/verify_stage20.cpython-310.pyc",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 3305,
+      "sha256": "87f2ca693622601aae052ba4a2d309d8275aeb7ea905737526c50985fc1bdba5",
+      "hash_status": "verified"
+    },
+    {
+      "path": "scripts/build_protocol.py",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 15184,
+      "sha256": "553e7745757373a003e041a2d1f9e33ad932069381edd0f0a75dd5d181f98981",
+      "hash_status": "verified"
+    },
+    {
+      "path": "scripts/verify_stage20.py",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 2972,
+      "sha256": "e8926e8236fae2943f59c80b6ffa3587f14d9b8d0ac0b2ff346db1ce72a8c580",
+      "hash_status": "verified"
+    }
+  ],
+  "limitations": [
+    "Capture-derived weak Service labels",
+    "Flow- and exact-image-disjoint, not uniformly capture-disjoint",
+    "VPN P2P has one capture",
+    "Historical source pool was capped per fine Application",
+    "No model training or performance claim in this stage"
+  ],
+  "next_step": "Train and evaluate the chosen method on the frozen 13 LOSO protocols without changing membership or using Unknown samples for fitting."
+}

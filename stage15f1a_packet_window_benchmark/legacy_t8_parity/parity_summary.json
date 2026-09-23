@@ -1,0 +1,140 @@
+{
+  "runs": [
+    {
+      "checkpoint_path": "/home/birkenwald/data/SEU-WXY/WXY-SEU/TrafficClassifier/Projects/unknown_traffic_project/stage15r_representation_bottleneck_audit/pilot_runs/e2/iscx_vpn/medium_seed2022/model_best.pt",
+      "checkpoint_sha256": "496f48fbae83331d49c8d27a40541c8872c3bdacad299a9e194edcf49eeb304f",
+      "classification_metrics_within_1e_12_and_loss_within_1e_6": true,
+      "confusion_exact_match": true,
+      "dataset": "iscx_vpn",
+      "known_test_samples_used": 0,
+      "known_train_samples": 12910,
+      "known_validation_samples": 1611,
+      "normalization_exact_match": true,
+      "parity_device": "cuda:0",
+      "protocol_id": "medium_seed2022",
+      "recomputed": {
+        "validation_accuracy": 0.42520173805090006,
+        "validation_loss": 1.535317776367429,
+        "validation_macro_f1": 0.3848102051995582,
+        "validation_weighted_f1": 0.4019870700349839
+      },
+      "reference": {
+        "validation_accuracy": 0.42520173805090006,
+        "validation_loss": 1.535317776367429,
+        "validation_macro_f1": 0.3848102051995582,
+        "validation_weighted_f1": 0.4019870700349839
+      },
+      "status": "PASS",
+      "unknown_test_samples_used": 0
+    },
+    {
+      "checkpoint_path": "/home/birkenwald/data/SEU-WXY/WXY-SEU/TrafficClassifier/Projects/unknown_traffic_project/stage15r_representation_bottleneck_audit/pilot_runs/e2/iscx_tor/medium_seed2022/model_best.pt",
+      "checkpoint_sha256": "a8377c438a9d658e31bed094ee3a98eaf7e21e4cd3a9c5267dfefe8dd85b79df",
+      "classification_metrics_within_1e_12_and_loss_within_1e_6": true,
+      "confusion_exact_match": true,
+      "dataset": "iscx_tor",
+      "known_test_samples_used": 0,
+      "known_train_samples": 8876,
+      "known_validation_samples": 1107,
+      "normalization_exact_match": true,
+      "parity_device": "cuda:0",
+      "protocol_id": "medium_seed2022",
+      "recomputed": {
+        "validation_accuracy": 0.4715447154471545,
+        "validation_loss": 1.3546540751151384,
+        "validation_macro_f1": 0.425009660822321,
+        "validation_weighted_f1": 0.45769839418655806
+      },
+      "reference": {
+        "validation_accuracy": 0.4715447154471545,
+        "validation_loss": 1.3546540751151384,
+        "validation_macro_f1": 0.425009660822321,
+        "validation_weighted_f1": 0.45769839418655806
+      },
+      "status": "PASS",
+      "unknown_test_samples_used": 0
+    },
+    {
+      "checkpoint_path": "/home/birkenwald/data/SEU-WXY/WXY-SEU/TrafficClassifier/Projects/unknown_traffic_project/stage15r_representation_bottleneck_audit/pilot_runs/e2/vnat/medium_seed2025/model_best.pt",
+      "checkpoint_sha256": "54966d7c2e10cb0313418f6a8b9ec5d19d0dc132e00098780a40773b5cb5f2ea",
+      "classification_metrics_within_1e_12_and_loss_within_1e_6": true,
+      "confusion_exact_match": true,
+      "dataset": "vnat",
+      "known_test_samples_used": 0,
+      "known_train_samples": 15704,
+      "known_validation_samples": 1960,
+      "normalization_exact_match": true,
+      "parity_device": "cuda:0",
+      "protocol_id": "medium_seed2025",
+      "recomputed": {
+        "validation_accuracy": 0.8877551020408163,
+        "validation_loss": 0.2320607450847723,
+        "validation_macro_f1": 0.7614274101654838,
+        "validation_weighted_f1": 0.880956666925963
+      },
+      "reference": {
+        "validation_accuracy": 0.8877551020408163,
+        "validation_loss": 0.2320607450847723,
+        "validation_macro_f1": 0.7614274101654838,
+        "validation_weighted_f1": 0.880956666925963
+      },
+      "status": "PASS",
+      "unknown_test_samples_used": 0
+    },
+    {
+      "checkpoint_path": "/home/birkenwald/data/SEU-WXY/WXY-SEU/TrafficClassifier/Projects/unknown_traffic_project/stage15r_representation_bottleneck_audit/pilot_runs/e2/vnat/medium_seed2026/model_best.pt",
+      "checkpoint_sha256": "eb8f59304550cbe11fe4f2b94df80fcdf57c2c895475c72c6d55125c390343d2",
+      "classification_metrics_within_1e_12_and_loss_within_1e_6": true,
+      "confusion_exact_match": true,
+      "dataset": "vnat",
+      "known_test_samples_used": 0,
+      "known_train_samples": 15328,
+      "known_validation_samples": 1911,
+      "normalization_exact_match": true,
+      "parity_device": "cuda:0",
+      "protocol_id": "medium_seed2026",
+      "recomputed": {
+        "validation_accuracy": 0.97854526425955,
+        "validation_loss": 0.11250945514780511,
+        "validation_macro_f1": 0.856864843906067,
+        "validation_weighted_f1": 0.976706435869786
+      },
+      "reference": {
+        "validation_accuracy": 0.97854526425955,
+        "validation_loss": 0.11250945514780511,
+        "validation_macro_f1": 0.856864843906067,
+        "validation_weighted_f1": 0.976706435869786
+      },
+      "status": "PASS",
+      "unknown_test_samples_used": 0
+    },
+    {
+      "checkpoint_path": "/home/birkenwald/data/SEU-WXY/WXY-SEU/TrafficClassifier/Projects/unknown_traffic_project/stage15r_representation_bottleneck_audit/pilot_runs/e2/ustc/A-2/model_best.pt",
+      "checkpoint_sha256": "dc4c6690493acb594092eccb96aa37cee4bf3834946909269ac6d853f4537805",
+      "classification_metrics_within_1e_12_and_loss_within_1e_6": true,
+      "confusion_exact_match": true,
+      "dataset": "ustc",
+      "known_test_samples_used": 0,
+      "known_train_samples": 346651,
+      "known_validation_samples": 43331,
+      "normalization_exact_match": true,
+      "parity_device": "cuda:0",
+      "protocol_id": "A-2",
+      "recomputed": {
+        "validation_accuracy": 0.8645311670628418,
+        "validation_loss": 0.29737635205153745,
+        "validation_macro_f1": 0.887379347068556,
+        "validation_weighted_f1": 0.8629799023926398
+      },
+      "reference": {
+        "validation_accuracy": 0.8645311670628418,
+        "validation_loss": 0.29737635205153745,
+        "validation_macro_f1": 0.887379347068556,
+        "validation_weighted_f1": 0.8629799023926398
+      },
+      "status": "PASS",
+      "unknown_test_samples_used": 0
+    }
+  ],
+  "status": "PASS"
+}

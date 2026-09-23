@@ -1,0 +1,32 @@
+{
+  "formal_runs": 4,
+  "primary_method": "OURS-E3-T8",
+  "primary_results": [
+    {
+      "dataset": "iscx_tor",
+      "encoder": "E3",
+      "mean_test_accuracy": 0.6222023276633841,
+      "mean_test_macro_f1": 0.5911243794949889,
+      "mean_test_weighted_f1": 0.6176433442573146,
+      "method": "OURS-E3-T8",
+      "runs": 2,
+      "std_test_accuracy": 0.0134288272157565,
+      "std_test_macro_f1": 0.014552519444146261,
+      "std_test_weighted_f1": 0.012695234580820947
+    },
+    {
+      "dataset": "iscx_vpn",
+      "encoder": "E3",
+      "mean_test_accuracy": 0.520128087831656,
+      "mean_test_macro_f1": 0.5249345042909267,
+      "mean_test_weighted_f1": 0.512889026336405,
+      "method": "OURS-E3-T8",
+      "runs": 2,
+      "std_test_accuracy": 0.03888380603842634,
+      "std_test_macro_f1": 0.04791679462009599,
+      "std_test_weighted_f1": 0.04507485308921194
+    }
+  ],
+  "result_rows": 12,
+  "status": "SUCCESS"
+}

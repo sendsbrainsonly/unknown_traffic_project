@@ -1,0 +1,26 @@
+{
+  "cache_sha256": "aff17d4b3271107852c0f30556627ab5daf693fba6a0a7b18df5f3785f260cff",
+  "captures": 20,
+  "fig": {
+    "edges": "historical direction-burst rule",
+    "max_packets": 30,
+    "node_features": 7
+  },
+  "flows": 3065,
+  "known_test_and_unknown_test_opened": true,
+  "manifest_sha256": "498b78efae22638c80ec203974052d95cda81a04ac064d7266d2956a3f1556a5",
+  "missing": 0,
+  "opening_reason": "post-freeze Stage17 evaluation; no values used for fitting during cache creation",
+  "sessionization": {
+    "bidirectional": true,
+    "tcp_syn_fin_rst_boundaries": true,
+    "timeout_seconds": 60.0
+  },
+  "status": "PASS",
+  "trafficformer": {
+    "bytes_per_packet": 64,
+    "ethernet_offset": 14,
+    "max_packets": 5,
+    "seq_length": 320
+  }
+}

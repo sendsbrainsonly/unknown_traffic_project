@@ -1,0 +1,155 @@
+{
+  "failed": 1,
+  "selected_physical_gpu_ids": [
+    "0",
+    "5",
+    "6",
+    "7"
+  ],
+  "successful_or_skipped": 17,
+  "tasks": [
+    {
+      "exit_code": 0,
+      "gpu": "0",
+      "protocol_id": "loso_chat",
+      "seed": 2022,
+      "status": "SKIP_SUCCESS"
+    },
+    {
+      "exit_code": 0,
+      "gpu": "5",
+      "log_path": "/home/birkenwald/data/SEU-WXY/WXY-SEU/TrafficClassifier/Projects/unknown_traffic_project/stage16s_service_open_set_benchmark/launcher_logs/loso_chat_seed2023.log",
+      "protocol_id": "loso_chat",
+      "seed": 2023,
+      "status": "SUCCESS"
+    },
+    {
+      "exit_code": 0,
+      "gpu": "6",
+      "log_path": "/home/birkenwald/data/SEU-WXY/WXY-SEU/TrafficClassifier/Projects/unknown_traffic_project/stage16s_service_open_set_benchmark/launcher_logs/loso_chat_seed2024.log",
+      "protocol_id": "loso_chat",
+      "seed": 2024,
+      "status": "SUCCESS"
+    },
+    {
+      "exit_code": 0,
+      "gpu": "7",
+      "log_path": "/home/birkenwald/data/SEU-WXY/WXY-SEU/TrafficClassifier/Projects/unknown_traffic_project/stage16s_service_open_set_benchmark/launcher_logs/loso_email_seed2022.log",
+      "protocol_id": "loso_email",
+      "seed": 2022,
+      "status": "SUCCESS"
+    },
+    {
+      "exit_code": 0,
+      "gpu": "0",
+      "log_path": "/home/birkenwald/data/SEU-WXY/WXY-SEU/TrafficClassifier/Projects/unknown_traffic_project/stage16s_service_open_set_benchmark/launcher_logs/loso_email_seed2023.log",
+      "protocol_id": "loso_email",
+      "seed": 2023,
+      "status": "SUCCESS"
+    },
+    {
+      "exit_code": 0,
+      "gpu": "5",
+      "log_path": "/home/birkenwald/data/SEU-WXY/WXY-SEU/TrafficClassifier/Projects/unknown_traffic_project/stage16s_service_open_set_benchmark/launcher_logs/loso_email_seed2024.log",
+      "protocol_id": "loso_email",
+      "seed": 2024,
+      "status": "SUCCESS"
+    },
+    {
+      "exit_code": 0,
+      "gpu": "6",
+      "log_path": "/home/birkenwald/data/SEU-WXY/WXY-SEU/TrafficClassifier/Projects/unknown_traffic_project/stage16s_service_open_set_benchmark/launcher_logs/loso_file_transfer_seed2022.log",
+      "protocol_id": "loso_file_transfer",
+      "seed": 2022,
+      "status": "SUCCESS"
+    },
+    {
+      "exit_code": 0,
+      "gpu": "7",
+      "log_path": "/home/birkenwald/data/SEU-WXY/WXY-SEU/TrafficClassifier/Projects/unknown_traffic_project/stage16s_service_open_set_benchmark/launcher_logs/loso_file_transfer_seed2023.log",
+      "protocol_id": "loso_file_transfer",
+      "seed": 2023,
+      "status": "SUCCESS"
+    },
+    {
+      "exit_code": 0,
+      "gpu": "0",
+      "log_path": "/home/birkenwald/data/SEU-WXY/WXY-SEU/TrafficClassifier/Projects/unknown_traffic_project/stage16s_service_open_set_benchmark/launcher_logs/loso_file_transfer_seed2024.log",
+      "protocol_id": "loso_file_transfer",
+      "seed": 2024,
+      "status": "SUCCESS"
+    },
+    {
+      "exit_code": 0,
+      "gpu": "5",
+      "log_path": "/home/birkenwald/data/SEU-WXY/WXY-SEU/TrafficClassifier/Projects/unknown_traffic_project/stage16s_service_open_set_benchmark/launcher_logs/loso_p2p_seed2022.log",
+      "protocol_id": "loso_p2p",
+      "seed": 2022,
+      "status": "SUCCESS"
+    },
+    {
+      "exit_code": 0,
+      "gpu": "6",
+      "log_path": "/home/birkenwald/data/SEU-WXY/WXY-SEU/TrafficClassifier/Projects/unknown_traffic_project/stage16s_service_open_set_benchmark/launcher_logs/loso_p2p_seed2023.log",
+      "protocol_id": "loso_p2p",
+      "seed": 2023,
+      "status": "SUCCESS"
+    },
+    {
+      "exit_code": 0,
+      "gpu": "7",
+      "log_path": "/home/birkenwald/data/SEU-WXY/WXY-SEU/TrafficClassifier/Projects/unknown_traffic_project/stage16s_service_open_set_benchmark/launcher_logs/loso_p2p_seed2024.log",
+      "protocol_id": "loso_p2p",
+      "seed": 2024,
+      "status": "SUCCESS"
+    },
+    {
+      "exit_code": 0,
+      "gpu": "0",
+      "log_path": "/home/birkenwald/data/SEU-WXY/WXY-SEU/TrafficClassifier/Projects/unknown_traffic_project/stage16s_service_open_set_benchmark/launcher_logs/loso_streaming_seed2022.log",
+      "protocol_id": "loso_streaming",
+      "seed": 2022,
+      "status": "SUCCESS"
+    },
+    {
+      "exit_code": 1,
+      "gpu": "5",
+      "log_path": "/home/birkenwald/data/SEU-WXY/WXY-SEU/TrafficClassifier/Projects/unknown_traffic_project/stage16s_service_open_set_benchmark/launcher_logs/loso_streaming_seed2023.log",
+      "protocol_id": "loso_streaming",
+      "seed": 2023,
+      "status": "FAILED"
+    },
+    {
+      "exit_code": 0,
+      "gpu": "6",
+      "log_path": "/home/birkenwald/data/SEU-WXY/WXY-SEU/TrafficClassifier/Projects/unknown_traffic_project/stage16s_service_open_set_benchmark/launcher_logs/loso_streaming_seed2024.log",
+      "protocol_id": "loso_streaming",
+      "seed": 2024,
+      "status": "SUCCESS"
+    },
+    {
+      "exit_code": 0,
+      "gpu": "7",
+      "log_path": "/home/birkenwald/data/SEU-WXY/WXY-SEU/TrafficClassifier/Projects/unknown_traffic_project/stage16s_service_open_set_benchmark/launcher_logs/loso_voip_seed2022.log",
+      "protocol_id": "loso_voip",
+      "seed": 2022,
+      "status": "SUCCESS"
+    },
+    {
+      "exit_code": 0,
+      "gpu": "0",
+      "log_path": "/home/birkenwald/data/SEU-WXY/WXY-SEU/TrafficClassifier/Projects/unknown_traffic_project/stage16s_service_open_set_benchmark/launcher_logs/loso_voip_seed2023.log",
+      "protocol_id": "loso_voip",
+      "seed": 2023,
+      "status": "SUCCESS"
+    },
+    {
+      "exit_code": 0,
+      "gpu": "5",
+      "log_path": "/home/birkenwald/data/SEU-WXY/WXY-SEU/TrafficClassifier/Projects/unknown_traffic_project/stage16s_service_open_set_benchmark/launcher_logs/loso_voip_seed2024.log",
+      "protocol_id": "loso_voip",
+      "seed": 2024,
+      "status": "SUCCESS"
+    }
+  ]
+}

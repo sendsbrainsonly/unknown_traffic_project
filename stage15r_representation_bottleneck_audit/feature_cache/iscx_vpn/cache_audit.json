@@ -1,0 +1,17 @@
+{
+  "dataset": "iscx_vpn",
+  "flow_statistics_sha256": "47a04183a1da7074f117bc9e53beb3fc177494296b05ca9e0f85c64ddf6998ca",
+  "flow_uids_sha256": "375b430d54346ed6d16e12ec96080ec12257fb4f3be3a8ae6c2c92337ad2a520",
+  "known_test_or_unknown_test_values_used_for_selection": false,
+  "recovered_flows": 22142,
+  "sequence_packets": 8,
+  "sessionization": {
+    "direction": "bidirectional",
+    "tcp_syn_fin_rst_boundaries": true,
+    "timeout_seconds": 60.0
+  },
+  "source_split_manifest": "/home/birkenwald/data/SEU-WXY/WXY-SEU/TrafficClassifier/Projects/unknown_traffic_project/stage12_dual_external_validation/protocol/iscx_vpn/split_manifest.csv",
+  "source_split_manifest_sha256": "618670af28797d9ceffc7138dcb9d2622552cdfc4712c38bd5da0886ec95c793",
+  "status": "PASS",
+  "target_flows": 22142
+}

@@ -1,0 +1,233 @@
+{
+  "schema_version": 1,
+  "experiment_id": "stage5_5_cstnet_preflight_20260913_v1",
+  "created_at_utc": "2026-09-13T02:51:04Z",
+  "updated_at_utc": "2026-09-13T03:05:45Z",
+  "status": "success",
+  "experiment_type": "preflight-diagnostic",
+  "claim_scope": "diagnostic",
+  "objective": "Audit frozen DGSB gate contribution, CSTNET Open-Detect input leakage, and calibration sample sufficiency without training or Unknown inference.",
+  "inputs": [
+    {
+      "name": "frozen Stage 5 DGSB rule and CSTNET protocol",
+      "path": "../stage5_dual_gate_boundary/outputs",
+      "integrity": "26/26 rule, protocol, and frozen Known-asset checks PASS"
+    },
+    {
+      "name": "CSTNET-TLS1.3 bounded raw-PCAP audit sample",
+      "path": "/home/birkenwald/data/SEU-WXY/WXY-SEU/TrafficClassifier/Dataset/CSTNET-TLS1.3",
+      "sample": "seed 20260913; 30 classes; 20 PCAP/class; 600 total"
+    }
+  ],
+  "code": {
+    "revision": "ffcb0dfcaebe3b04b6d3bd42964d5a705303d2cc",
+    "dirty": true,
+    "changes": [
+      "new stage5_5_cstnet_preflight implementation, tests, outputs, and README",
+      "project README Stage 5.5 status update"
+    ]
+  },
+  "execution": {
+    "tmux_session": "s55_run_preflight_v2",
+    "command": "python stage5_5_cstnet_preflight/scripts/run_preflight_audit.py",
+    "exit_code": 0,
+    "environment": "/home/birkenwald/data/SEU-WXY/conda_envs/2025-10-8-WXY-dgl_py310",
+    "physical_gpu_ids": []
+  },
+  "configuration": {
+    "files": [
+      "stage5_dual_gate_boundary/outputs/rule_freeze/dgsb_rule.json",
+      "stage5_dual_gate_boundary/outputs/cstnet_protocol/cstnet_open_set_protocol.json"
+    ],
+    "parameters": {
+      "sample_max_classes": 30,
+      "sample_max_pcaps_per_class": 20,
+      "mass_unreliable_rate": 0.25,
+      "fit_operations": 0
+    },
+    "seeds": [
+      20260913
+    ]
+  },
+  "core_results": [
+    {
+      "name": "frozen_hash_checks",
+      "value": "26/26 PASS"
+    },
+    {
+      "name": "global_exclusive_A3_validation_test",
+      "value": "0/0",
+      "unit": "percent"
+    },
+    {
+      "name": "global_local_class_mismatch",
+      "value": 0.0,
+      "unit": "rate"
+    },
+    {
+      "name": "valid_actual_inputs",
+      "value": "600/600"
+    },
+    {
+      "name": "actual_input_direct_domain_rate",
+      "value": 0.0,
+      "unit": "rate"
+    },
+    {
+      "name": "final_gate",
+      "value": "NOT_READY"
+    }
+  ],
+  "artifacts": [
+    {
+      "path": "calibration_sample_audit/audit_summary.md",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 1444,
+      "sha256": "4b584eeb226c2cc42807037dc2032429371ea060b663193b7dc4c751919a2959",
+      "hash_status": "verified"
+    },
+    {
+      "path": "calibration_sample_audit/class_calibration_reliability.csv",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 13116,
+      "sha256": "c3444b908eda7d0c57bafa918db581733a34e511e228e7b697d8388613c6dd32",
+      "hash_status": "verified"
+    },
+    {
+      "path": "calibration_sample_audit/class_split_counts.csv",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 9687,
+      "sha256": "01341710c41239ba48471d6fcba10b01937a23c755b946ad88802ba5250763c2",
+      "hash_status": "verified"
+    },
+    {
+      "path": "calibration_sample_audit/component_count_stress_table.csv",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 53629,
+      "sha256": "f1b7ce30a9befc82aa1eafe1fc7389863d5180aaa15c326ea9ee83c25ba02a4a",
+      "hash_status": "verified"
+    },
+    {
+      "path": "calibration_sample_audit/fallback_risk_summary.csv",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 1265,
+      "sha256": "f851b99dee8f3e364e1a33a6301f6a7cdbc81123277a1ae930db888faed2d44d",
+      "hash_status": "verified"
+    },
+    {
+      "path": "cstnet_input_audit/domain_leakage_audit.csv",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 153324,
+      "sha256": "45dfae01c85b2895586ebbbc5f7af6c205aa4dcda9743390794da5414fa9e189",
+      "hash_status": "verified"
+    },
+    {
+      "path": "cstnet_input_audit/endpoint_input_audit.md",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 737,
+      "sha256": "488775d1624dec7352cb008cfa9ef61bb21c800d2f6d45e33cf20fdac1264b1d",
+      "hash_status": "verified"
+    },
+    {
+      "path": "cstnet_input_audit/input_byte_source_mapping.csv",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 780758,
+      "sha256": "bfa68812384f9856e7e0eb5b715c14da3bfbf9fbbc42490c78e660b6d778680d",
+      "hash_status": "verified"
+    },
+    {
+      "path": "cstnet_input_audit/raw_input_manifest.csv",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 1438839,
+      "sha256": "8dc83da351045cafdcedfbef3b855364d6d6c2e019177fa241f1ef6a6690bfd5",
+      "hash_status": "verified"
+    },
+    {
+      "path": "cstnet_input_audit/sampled_open_detect_inputs.npz",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 259850,
+      "sha256": "a14d54924de665fd582b8380a2aaa9aa1c9e3d4caff8d4abe34f30283adb48c3",
+      "hash_status": "verified"
+    },
+    {
+      "path": "cstnet_input_audit/token_leakage_summary.csv",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 1892,
+      "sha256": "f50ea12b7423e80ee5ae9462417158a6a83e2db51e3b986614d11bd19c6e009e",
+      "hash_status": "verified"
+    },
+    {
+      "path": "dgsb_gate_audit/audit_summary.md",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 1404,
+      "sha256": "2c0ae80386c8b7850eb6e37a6ee8ce85d98bda23d417c0cd21cda14a2099176f",
+      "hash_status": "verified"
+    },
+    {
+      "path": "dgsb_gate_audit/class_consistency.csv",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 443,
+      "sha256": "8beaa9b7dd522f96750d1605c4fbee5415788cfa2b5df14465cf0c525bd2af7e",
+      "hash_status": "verified"
+    },
+    {
+      "path": "dgsb_gate_audit/gate_transition_counts.csv",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 890,
+      "sha256": "80131c5d783fdd51f7d0e8bbd99c92c6f2c2d6e38f5cb38a4dd94d2712133d39",
+      "hash_status": "verified"
+    },
+    {
+      "path": "dgsb_gate_audit/global_gate_effectiveness.csv",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 810,
+      "sha256": "23455b58fb957638344076094968dd0c45160b6af635f78c50ff6e4a4e37e0f4",
+      "hash_status": "verified"
+    },
+    {
+      "path": "dgsb_gate_audit/global_local_class_confusion.csv",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 6492,
+      "sha256": "02db91561c407def6a5208105da82303ba954b978f3732eff3fe9d6a8cfd155c",
+      "hash_status": "verified"
+    },
+    {
+      "path": "final_preflight_summary.md",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 1354,
+      "sha256": "cf82aa4ebb510f6a1d82e1be91858aedd78a86693659e9303b3012f3d06ce96d",
+      "hash_status": "verified"
+    },
+    {
+      "path": "run_metadata.json",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 118892,
+      "sha256": "eddc9da2ffb2cfbfa06f8ed763ef30472d701ea2609ba6f27ffab94cb906fbfc",
+      "hash_status": "verified"
+    }
+  ],
+  "limitations": [
+    "bounded deterministic CSTNET input sample, not a full-dataset prevalence estimate",
+    "component counts are sample-size stress projections, not observed GMM assignments",
+    "no CSTNET training, estimator fitting, Unknown inference, or open-set metrics"
+  ],
+  "next_step": "Stop; separately consider and freeze a protocol v2 before any training."
+}

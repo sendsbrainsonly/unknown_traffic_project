@@ -1,16 +1,78 @@
-# 数据与产物（体积大，本地在 D:\unknown_traffic_project，不入仓库）
-data/
-outputs/
-*.pkl
-*.npy
-*.pt
-*.bin
-*.tsv
-*.csv
-*.log
+# Local datasets and monolithic outputs. Keep these project-local; do not
+# publish them through ordinary Git.
+/data/
+/outputs/
 
-# Python
-__pycache__/
+# Runtime and temporary state
+/.tmux-task/
+**/.tmux-task/
+/.artifacts/
+/.agents/
+/AGENTS.md
+/.pytest_cache/
+**/__pycache__/
 *.pyc
+*.status
 .idea/
 .vscode/
+
+# Generated experiment trees. Root-level RESULTS.md, manifest.json and small
+# summaries are curated and force-added when they are suitable for publication.
+**/runs/
+**/artifacts/
+**/checkpoints/
+**/failed_attempts/
+**/interrupted_attempts/
+**/launcher_logs/
+**/logs/
+**/byte_cache/
+**/window_cache/
+**/cache/
+**/vendor/
+**/figures/
+**/tshark_stderr/
+**/run_logs/
+**/queue_logs/
+**/feature_cache/
+**/flow_image_cache/
+**/sequence_cache/
+**/behavior_cache/
+**/raw_feature_cache/
+**/smoke_flow_cache/
+**/ablation_runs/
+**/canonical_evaluation/
+
+# Model weights, embeddings, caches and dataset tables
+*.pkl
+*.npy
+*.npz
+*.pt
+*.pth
+*.ckpt
+*.bin
+*.parquet
+*.joblib
+*.jsonl
+*.tsv
+*.csv
+*.pcap
+*.pcapng
+*.so
+*.gz
+*.zip
+*.tar
+*.tar.gz
+
+# Some third-party trainers serialize large models with a text extension.
+**/model_best.txt
+
+# Live queue/progress files are mutable runtime state.
+progress.txt
+queue_status.json
+SUCCESS
+COMPLETED
+STOP_QUEUE
+**/execution_commands.txt
+**/*_inventory.txt
+**/open_detect_paper.txt
+/tf_runtime/code/uer/test.txt

@@ -1,0 +1,112 @@
+{
+  "checks": [
+    {
+      "evidence": {
+        "missing": []
+      },
+      "name": "required_artifacts_exist",
+      "passed": true
+    },
+    {
+      "evidence": {
+        "cache_ready": {
+          "iscx_tor": true,
+          "iscx_vpn": true,
+          "ustc": true,
+          "vnat": true
+        },
+        "dataset_protocol_rows": 600,
+        "encryption_rows": 119,
+        "known_test_used_for_feature_or_model_selection": false,
+        "lightgbm_available": true,
+        "lineage_rows": 32,
+        "packet_stat_rows": 245,
+        "status": "PASS",
+        "unknown_test_used_for_feature_or_model_selection": false,
+        "vnat_development_cache_scope": {
+          "cache_flow_count": 23447,
+          "clean_pool_flow_count": 23449,
+          "explanation": "Stage14C5 cache is the union of Known Train/Validation flow IDs; rows visible only as Known Test are intentionally not loaded",
+          "extra_in_development_cache": [],
+          "known_or_unknown_test_feature_values_loaded": false,
+          "missing_from_development_cache": [
+            "49c6239214799dfc2ad36b0d101cf1d95d143384561931ba66b7ef4222e82047",
+            "4f9e530da01d1dde25c598bfd8b7f024f2e549f68e638ed64efbd953ce2afd58"
+          ],
+          "missing_roles": [
+            [
+              "known",
+              "test"
+            ]
+          ]
+        }
+      },
+      "name": "stage15r0_audit_pass",
+      "passed": true
+    },
+    {
+      "evidence": {
+        "known_test_used": false,
+        "unknown_test_used": false
+      },
+      "name": "audit_is_test_free",
+      "passed": true
+    },
+    {
+      "evidence": {
+        "expected": 20,
+        "extra": [],
+        "missing": [],
+        "observed": 20
+      },
+      "name": "all_20_preregistered_pilots_exist",
+      "passed": true
+    },
+    {
+      "evidence": {
+        "violations": []
+      },
+      "name": "all_pilots_strict_unknown_free",
+      "passed": true
+    },
+    {
+      "evidence": {
+        "failed": []
+      },
+      "name": "all_pilot_results_pass",
+      "passed": true
+    },
+    {
+      "evidence": {
+        "after_file_count": 1797,
+        "before_file_count": 1797,
+        "identical": true
+      },
+      "name": "protected_frozen_assets_unchanged",
+      "passed": true
+    },
+    {
+      "evidence": {
+        "clear_candidates": [],
+        "full15_file_exists": false,
+        "gate_status": "NOT_RUN_GATE_FAILED"
+      },
+      "name": "full15_output_matches_preregistered_gate",
+      "passed": true
+    },
+    {
+      "evidence": {
+        "violations": []
+      },
+      "name": "new_checkpoint_hashes_verify",
+      "passed": true
+    }
+  ],
+  "checks_passed": 9,
+  "checks_total": 9,
+  "des_or_hybrid_modified": false,
+  "known_test_samples_used_for_selection": 0,
+  "stage": "Stage 15R — Representation Bottleneck Audit",
+  "status": "PASS",
+  "unknown_test_samples_used": 0
+}

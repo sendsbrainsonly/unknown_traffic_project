@@ -1,0 +1,17 @@
+{
+  "dataset": "iscx_tor",
+  "canonical_class_to_label": {
+    "Browsing": 0,
+    "Email": 1,
+    "FTP": 2,
+    "Facebook": 3,
+    "Hangouts": 4,
+    "P2P": 5,
+    "Skype": 6,
+    "Spotify": 7,
+    "Vimeo": 8,
+    "YouTube": 9
+  },
+  "domain_state_is_metadata": true,
+  "semantic_leakage_rule": "all domain states of one canonical class share Known/Unknown status"
+}

@@ -1,0 +1,17 @@
+{
+  "implementation": "/home/birkenwald/data/SEU-WXY/WXY-SEU/TrafficClassifier/Projects/unknown_traffic_project/opendetect_ustc_encoder_audit/adapters/opendetect_preprocessing.py",
+  "implementation_sha256": "ff58c0c64b12e68d189e0fbd85b620cb9a3ee1edd6706110811bfcf403dfd8e3",
+  "constants": {
+    "PACKETS_PER_FLOW": 8,
+    "HEADER_BYTES": 80,
+    "PAYLOAD_BYTES": 48,
+    "BYTES_PER_PACKET": 128,
+    "FLOW_BYTES": 1024,
+    "IMAGE_SIDE": 32
+  },
+  "packet_selection": "first packets in flow order",
+  "ip_masking": "IPv4 source and destination set to 0.0.0.0 before serialization",
+  "padding_truncation": "each header/payload region right-zero-padded or truncated; missing packets zero-padded",
+  "port_policy": "retained; KNOWN_SHORTCUT_RISK",
+  "frozen": true
+}

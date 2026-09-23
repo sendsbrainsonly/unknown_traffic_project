@@ -1,0 +1,55 @@
+{
+  "des_v1_global": {
+    "denominator": 0.3963300051613884,
+    "epsilon": 1e-12,
+    "mad": 0.3963300051603884,
+    "median": 0.7368141924015236
+  },
+  "des_v1_local": {
+    "denominator": 0.273147857568577,
+    "epsilon": 1e-12,
+    "mad": 0.27314785756757703,
+    "median": 0.5521589364518138
+  },
+  "h1_percentile_fit": "Known Validation only; searchsorted side=right",
+  "methods": {
+    "DES-v0": {
+      "numpy_method": "higher",
+      "score_direction": "larger_is_more_unknown",
+      "source": "Known Validation P95 only",
+      "threshold": 10.061033985508784,
+      "unknown_if": "score >= threshold",
+      "validation_rejection_rate": 0.05161290322580645,
+      "validation_samples": 155
+    },
+    "DES-v1": {
+      "numpy_method": "higher",
+      "score_direction": "larger_is_more_unknown",
+      "source": "Known Validation P95 only",
+      "threshold": 15.946699681607024,
+      "unknown_if": "score >= threshold",
+      "validation_rejection_rate": 0.05161290322580645,
+      "validation_samples": 155
+    },
+    "H1": {
+      "numpy_method": "higher",
+      "score_direction": "larger_is_more_unknown",
+      "source": "Known Validation P95 only",
+      "threshold": 0.9612903225806452,
+      "unknown_if": "score >= threshold",
+      "validation_rejection_rate": 0.05161290322580645,
+      "validation_samples": 155
+    },
+    "OD-Native": {
+      "numpy_method": "higher",
+      "score_direction": "larger_is_more_unknown",
+      "source": "Known Validation P95 only",
+      "threshold": 16.536449432373047,
+      "unknown_if": "score >= threshold",
+      "validation_rejection_rate": 0.05161290322580645,
+      "validation_samples": 155
+    }
+  },
+  "test_calibration_samples": 0,
+  "unknown_calibration_samples": 0
+}

@@ -1,0 +1,81 @@
+{
+  "updated_at_utc": "2026-09-21T10:14:30.121569+00:00",
+  "queue_state": "RUNNING_FIRST_WAVE",
+  "max_concurrent_physical_gpus": 3,
+  "completed_epochs": 356,
+  "planned_epochs": 500,
+  "progress_fraction": 0.712,
+  "tasks": [
+    {
+      "name": "iscx_tor_medium2022",
+      "dataset": "iscx_tor",
+      "protocol": "medium_seed2022",
+      "state": "SUCCESS",
+      "epoch": 100,
+      "planned_epochs": 100,
+      "physical_gpu": "0",
+      "pid": 109921,
+      "returncode": 0,
+      "started_at_utc": "2026-09-21T08:16:45.218053+00:00",
+      "finished_at_utc": "2026-09-21T09:14:44.347012+00:00",
+      "log": "queue_logs/iscx_tor_medium2022.log"
+    },
+    {
+      "name": "iscx_vpn_medium2022",
+      "dataset": "iscx_vpn",
+      "protocol": "medium_seed2022",
+      "state": "SUCCESS",
+      "epoch": 100,
+      "planned_epochs": 100,
+      "physical_gpu": "4",
+      "pid": 113469,
+      "returncode": 0,
+      "started_at_utc": "2026-09-21T08:16:53.227730+00:00",
+      "finished_at_utc": "2026-09-21T09:43:42.915524+00:00",
+      "log": "queue_logs/iscx_vpn_medium2022.log"
+    },
+    {
+      "name": "vnat_medium2025",
+      "dataset": "vnat",
+      "protocol": "medium_seed2025",
+      "state": "SUCCESS",
+      "epoch": 100,
+      "planned_epochs": 100,
+      "physical_gpu": "5",
+      "pid": 117477,
+      "returncode": 0,
+      "started_at_utc": "2026-09-21T08:17:01.237502+00:00",
+      "finished_at_utc": "2026-09-21T10:01:44.199128+00:00",
+      "log": "queue_logs/vnat_medium2025.log"
+    },
+    {
+      "name": "vnat_medium2026",
+      "dataset": "vnat",
+      "protocol": "medium_seed2026",
+      "state": "RUNNING",
+      "epoch": 56,
+      "planned_epochs": 100,
+      "physical_gpu": "0",
+      "pid": 1760786,
+      "returncode": null,
+      "started_at_utc": "2026-09-21T09:14:44.348916+00:00",
+      "finished_at_utc": null,
+      "log": "queue_logs/vnat_medium2026.log"
+    },
+    {
+      "name": "ustc_A2",
+      "dataset": "ustc",
+      "protocol": "A-2",
+      "state": "PENDING",
+      "epoch": 0,
+      "planned_epochs": 100,
+      "physical_gpu": "0,4,5",
+      "pid": null,
+      "returncode": null,
+      "started_at_utc": null,
+      "finished_at_utc": null,
+      "log": null
+    }
+  ],
+  "automatic_retry": false
+}

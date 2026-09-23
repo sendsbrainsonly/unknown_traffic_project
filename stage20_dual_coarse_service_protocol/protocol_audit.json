@@ -1,0 +1,482 @@
+{
+  "status": "PASS",
+  "protocol_count": 13,
+  "failed_protocols": [],
+  "protocols": [
+    {
+      "protocol_id": "iscx_tor_loso_browsing",
+      "dataset": "iscx_tor",
+      "unknown_service": "Browsing",
+      "role_counts": {
+        "known_train": 7346,
+        "known_validation": 918,
+        "known_test": 917,
+        "unknown_test": 2000
+      },
+      "known_service_counts": {
+        "Chat": 641,
+        "Email": 540,
+        "File-Transfer": 2000,
+        "P2P": 2000,
+        "Streaming": 2000,
+        "VoIP": 2000
+      },
+      "unknown_count": 2000,
+      "unknown_in_fitting": 0,
+      "flow_overlaps": {
+        "known_train__known_validation": 0,
+        "known_train__known_test": 0,
+        "known_train__unknown_test": 0,
+        "known_validation__known_test": 0,
+        "known_validation__unknown_test": 0,
+        "known_test__unknown_test": 0
+      },
+      "image_overlaps": {
+        "known_train__known_validation": 0,
+        "known_train__known_test": 0,
+        "known_train__unknown_test": 0,
+        "known_validation__known_test": 0,
+        "known_validation__unknown_test": 0,
+        "known_test__unknown_test": 0
+      }
+    },
+    {
+      "protocol_id": "iscx_tor_loso_chat",
+      "dataset": "iscx_tor",
+      "unknown_service": "Chat",
+      "role_counts": {
+        "known_train": 8433,
+        "known_validation": 1054,
+        "known_test": 1053,
+        "unknown_test": 641
+      },
+      "known_service_counts": {
+        "Browsing": 2000,
+        "Email": 540,
+        "File-Transfer": 2000,
+        "P2P": 2000,
+        "Streaming": 2000,
+        "VoIP": 2000
+      },
+      "unknown_count": 641,
+      "unknown_in_fitting": 0,
+      "flow_overlaps": {
+        "known_train__known_validation": 0,
+        "known_train__known_test": 0,
+        "known_train__unknown_test": 0,
+        "known_validation__known_test": 0,
+        "known_validation__unknown_test": 0,
+        "known_test__unknown_test": 0
+      },
+      "image_overlaps": {
+        "known_train__known_validation": 0,
+        "known_train__known_test": 0,
+        "known_train__unknown_test": 0,
+        "known_validation__known_test": 0,
+        "known_validation__unknown_test": 0,
+        "known_test__unknown_test": 0
+      }
+    },
+    {
+      "protocol_id": "iscx_tor_loso_email",
+      "dataset": "iscx_tor",
+      "unknown_service": "Email",
+      "role_counts": {
+        "known_train": 8514,
+        "known_validation": 1064,
+        "known_test": 1063,
+        "unknown_test": 540
+      },
+      "known_service_counts": {
+        "Browsing": 2000,
+        "Chat": 641,
+        "File-Transfer": 2000,
+        "P2P": 2000,
+        "Streaming": 2000,
+        "VoIP": 2000
+      },
+      "unknown_count": 540,
+      "unknown_in_fitting": 0,
+      "flow_overlaps": {
+        "known_train__known_validation": 0,
+        "known_train__known_test": 0,
+        "known_train__unknown_test": 0,
+        "known_validation__known_test": 0,
+        "known_validation__unknown_test": 0,
+        "known_test__unknown_test": 0
+      },
+      "image_overlaps": {
+        "known_train__known_validation": 0,
+        "known_train__known_test": 0,
+        "known_train__unknown_test": 0,
+        "known_validation__known_test": 0,
+        "known_validation__unknown_test": 0,
+        "known_test__unknown_test": 0
+      }
+    },
+    {
+      "protocol_id": "iscx_tor_loso_file_transfer",
+      "dataset": "iscx_tor",
+      "unknown_service": "File-Transfer",
+      "role_counts": {
+        "known_train": 7346,
+        "known_validation": 918,
+        "known_test": 917,
+        "unknown_test": 2000
+      },
+      "known_service_counts": {
+        "Browsing": 2000,
+        "Chat": 641,
+        "Email": 540,
+        "P2P": 2000,
+        "Streaming": 2000,
+        "VoIP": 2000
+      },
+      "unknown_count": 2000,
+      "unknown_in_fitting": 0,
+      "flow_overlaps": {
+        "known_train__known_validation": 0,
+        "known_train__known_test": 0,
+        "known_train__unknown_test": 0,
+        "known_validation__known_test": 0,
+        "known_validation__unknown_test": 0,
+        "known_test__unknown_test": 0
+      },
+      "image_overlaps": {
+        "known_train__known_validation": 0,
+        "known_train__known_test": 0,
+        "known_train__unknown_test": 0,
+        "known_validation__known_test": 0,
+        "known_validation__unknown_test": 0,
+        "known_test__unknown_test": 0
+      }
+    },
+    {
+      "protocol_id": "iscx_tor_loso_p2p",
+      "dataset": "iscx_tor",
+      "unknown_service": "P2P",
+      "role_counts": {
+        "known_train": 7346,
+        "known_validation": 918,
+        "known_test": 917,
+        "unknown_test": 2000
+      },
+      "known_service_counts": {
+        "Browsing": 2000,
+        "Chat": 641,
+        "Email": 540,
+        "File-Transfer": 2000,
+        "Streaming": 2000,
+        "VoIP": 2000
+      },
+      "unknown_count": 2000,
+      "unknown_in_fitting": 0,
+      "flow_overlaps": {
+        "known_train__known_validation": 0,
+        "known_train__known_test": 0,
+        "known_train__unknown_test": 0,
+        "known_validation__known_test": 0,
+        "known_validation__unknown_test": 0,
+        "known_test__unknown_test": 0
+      },
+      "image_overlaps": {
+        "known_train__known_validation": 0,
+        "known_train__known_test": 0,
+        "known_train__unknown_test": 0,
+        "known_validation__known_test": 0,
+        "known_validation__unknown_test": 0,
+        "known_test__unknown_test": 0
+      }
+    },
+    {
+      "protocol_id": "iscx_tor_loso_streaming",
+      "dataset": "iscx_tor",
+      "unknown_service": "Streaming",
+      "role_counts": {
+        "known_train": 7345,
+        "known_validation": 918,
+        "known_test": 918,
+        "unknown_test": 2000
+      },
+      "known_service_counts": {
+        "Browsing": 2000,
+        "Chat": 641,
+        "Email": 540,
+        "File-Transfer": 2000,
+        "P2P": 2000,
+        "VoIP": 2000
+      },
+      "unknown_count": 2000,
+      "unknown_in_fitting": 0,
+      "flow_overlaps": {
+        "known_train__known_validation": 0,
+        "known_train__known_test": 0,
+        "known_train__unknown_test": 0,
+        "known_validation__known_test": 0,
+        "known_validation__unknown_test": 0,
+        "known_test__unknown_test": 0
+      },
+      "image_overlaps": {
+        "known_train__known_validation": 0,
+        "known_train__known_test": 0,
+        "known_train__unknown_test": 0,
+        "known_validation__known_test": 0,
+        "known_validation__unknown_test": 0,
+        "known_test__unknown_test": 0
+      }
+    },
+    {
+      "protocol_id": "iscx_tor_loso_voip",
+      "dataset": "iscx_tor",
+      "unknown_service": "VoIP",
+      "role_counts": {
+        "known_train": 7346,
+        "known_validation": 918,
+        "known_test": 917,
+        "unknown_test": 2000
+      },
+      "known_service_counts": {
+        "Browsing": 2000,
+        "Chat": 641,
+        "Email": 540,
+        "File-Transfer": 2000,
+        "P2P": 2000,
+        "Streaming": 2000
+      },
+      "unknown_count": 2000,
+      "unknown_in_fitting": 0,
+      "flow_overlaps": {
+        "known_train__known_validation": 0,
+        "known_train__known_test": 0,
+        "known_train__unknown_test": 0,
+        "known_validation__known_test": 0,
+        "known_validation__unknown_test": 0,
+        "known_test__unknown_test": 0
+      },
+      "image_overlaps": {
+        "known_train__known_validation": 0,
+        "known_train__known_test": 0,
+        "known_train__unknown_test": 0,
+        "known_validation__known_test": 0,
+        "known_validation__unknown_test": 0,
+        "known_test__unknown_test": 0
+      }
+    },
+    {
+      "protocol_id": "iscx_vpn_loso_chat",
+      "dataset": "iscx_vpn",
+      "unknown_service": "Chat",
+      "role_counts": {
+        "known_train": 7205,
+        "known_validation": 903,
+        "known_test": 898,
+        "unknown_test": 1949
+      },
+      "known_service_counts": {
+        "Email": 2000,
+        "File-Transfer": 2000,
+        "P2P": 1006,
+        "Streaming": 2000,
+        "VoIP": 2000
+      },
+      "unknown_count": 1949,
+      "unknown_in_fitting": 0,
+      "flow_overlaps": {
+        "known_train__known_validation": 0,
+        "known_train__known_test": 0,
+        "known_train__unknown_test": 0,
+        "known_validation__known_test": 0,
+        "known_validation__unknown_test": 0,
+        "known_test__unknown_test": 0
+      },
+      "image_overlaps": {
+        "known_train__known_validation": 0,
+        "known_train__known_test": 0,
+        "known_train__unknown_test": 0,
+        "known_validation__known_test": 0,
+        "known_validation__unknown_test": 0,
+        "known_test__unknown_test": 0
+      }
+    },
+    {
+      "protocol_id": "iscx_vpn_loso_email",
+      "dataset": "iscx_vpn",
+      "unknown_service": "Email",
+      "role_counts": {
+        "known_train": 7164,
+        "known_validation": 898,
+        "known_test": 893,
+        "unknown_test": 2000
+      },
+      "known_service_counts": {
+        "Chat": 1949,
+        "File-Transfer": 2000,
+        "P2P": 1006,
+        "Streaming": 2000,
+        "VoIP": 2000
+      },
+      "unknown_count": 2000,
+      "unknown_in_fitting": 0,
+      "flow_overlaps": {
+        "known_train__known_validation": 0,
+        "known_train__known_test": 0,
+        "known_train__unknown_test": 0,
+        "known_validation__known_test": 0,
+        "known_validation__unknown_test": 0,
+        "known_test__unknown_test": 0
+      },
+      "image_overlaps": {
+        "known_train__known_validation": 0,
+        "known_train__known_test": 0,
+        "known_train__unknown_test": 0,
+        "known_validation__known_test": 0,
+        "known_validation__unknown_test": 0,
+        "known_test__unknown_test": 0
+      }
+    },
+    {
+      "protocol_id": "iscx_vpn_loso_file_transfer",
+      "dataset": "iscx_vpn",
+      "unknown_service": "File-Transfer",
+      "role_counts": {
+        "known_train": 7164,
+        "known_validation": 898,
+        "known_test": 893,
+        "unknown_test": 2000
+      },
+      "known_service_counts": {
+        "Chat": 1949,
+        "Email": 2000,
+        "P2P": 1006,
+        "Streaming": 2000,
+        "VoIP": 2000
+      },
+      "unknown_count": 2000,
+      "unknown_in_fitting": 0,
+      "flow_overlaps": {
+        "known_train__known_validation": 0,
+        "known_train__known_test": 0,
+        "known_train__unknown_test": 0,
+        "known_validation__known_test": 0,
+        "known_validation__unknown_test": 0,
+        "known_test__unknown_test": 0
+      },
+      "image_overlaps": {
+        "known_train__known_validation": 0,
+        "known_train__known_test": 0,
+        "known_train__unknown_test": 0,
+        "known_validation__known_test": 0,
+        "known_validation__unknown_test": 0,
+        "known_test__unknown_test": 0
+      }
+    },
+    {
+      "protocol_id": "iscx_vpn_loso_p2p",
+      "dataset": "iscx_vpn",
+      "unknown_service": "P2P",
+      "role_counts": {
+        "known_train": 7959,
+        "known_validation": 997,
+        "known_test": 993,
+        "unknown_test": 1006
+      },
+      "known_service_counts": {
+        "Chat": 1949,
+        "Email": 2000,
+        "File-Transfer": 2000,
+        "Streaming": 2000,
+        "VoIP": 2000
+      },
+      "unknown_count": 1006,
+      "unknown_in_fitting": 0,
+      "flow_overlaps": {
+        "known_train__known_validation": 0,
+        "known_train__known_test": 0,
+        "known_train__unknown_test": 0,
+        "known_validation__known_test": 0,
+        "known_validation__unknown_test": 0,
+        "known_test__unknown_test": 0
+      },
+      "image_overlaps": {
+        "known_train__known_validation": 0,
+        "known_train__known_test": 0,
+        "known_train__unknown_test": 0,
+        "known_validation__known_test": 0,
+        "known_validation__unknown_test": 0,
+        "known_test__unknown_test": 0
+      }
+    },
+    {
+      "protocol_id": "iscx_vpn_loso_streaming",
+      "dataset": "iscx_vpn",
+      "unknown_service": "Streaming",
+      "role_counts": {
+        "known_train": 7164,
+        "known_validation": 896,
+        "known_test": 895,
+        "unknown_test": 2000
+      },
+      "known_service_counts": {
+        "Chat": 1949,
+        "Email": 2000,
+        "File-Transfer": 2000,
+        "P2P": 1006,
+        "VoIP": 2000
+      },
+      "unknown_count": 2000,
+      "unknown_in_fitting": 0,
+      "flow_overlaps": {
+        "known_train__known_validation": 0,
+        "known_train__known_test": 0,
+        "known_train__unknown_test": 0,
+        "known_validation__known_test": 0,
+        "known_validation__unknown_test": 0,
+        "known_test__unknown_test": 0
+      },
+      "image_overlaps": {
+        "known_train__known_validation": 0,
+        "known_train__known_test": 0,
+        "known_train__unknown_test": 0,
+        "known_validation__known_test": 0,
+        "known_validation__unknown_test": 0,
+        "known_test__unknown_test": 0
+      }
+    },
+    {
+      "protocol_id": "iscx_vpn_loso_voip",
+      "dataset": "iscx_vpn",
+      "unknown_service": "VoIP",
+      "role_counts": {
+        "known_train": 7164,
+        "known_validation": 898,
+        "known_test": 893,
+        "unknown_test": 2000
+      },
+      "known_service_counts": {
+        "Chat": 1949,
+        "Email": 2000,
+        "File-Transfer": 2000,
+        "P2P": 1006,
+        "Streaming": 2000
+      },
+      "unknown_count": 2000,
+      "unknown_in_fitting": 0,
+      "flow_overlaps": {
+        "known_train__known_validation": 0,
+        "known_train__known_test": 0,
+        "known_train__unknown_test": 0,
+        "known_validation__known_test": 0,
+        "known_validation__unknown_test": 0,
+        "known_test__unknown_test": 0
+      },
+      "image_overlaps": {
+        "known_train__known_validation": 0,
+        "known_train__known_test": 0,
+        "known_train__unknown_test": 0,
+        "known_validation__known_test": 0,
+        "known_validation__unknown_test": 0,
+        "known_test__unknown_test": 0
+      }
+    }
+  ]
+}

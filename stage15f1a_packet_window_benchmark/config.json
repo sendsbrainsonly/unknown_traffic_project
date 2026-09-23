@@ -1,0 +1,54 @@
+{
+  "stage": "Stage 15F-1A",
+  "status": "FROZEN_BEFORE_TRAINING",
+  "strict_unknown_free": true,
+  "windows": [8, 16, 32],
+  "pilot_protocols": [
+    {"dataset": "iscx_vpn", "protocol_id": "medium_seed2022", "setting": "medium"},
+    {"dataset": "iscx_tor", "protocol_id": "medium_seed2022", "setting": "medium"},
+    {"dataset": "vnat", "protocol_id": "medium_seed2025", "setting": "Medium"},
+    {"dataset": "vnat", "protocol_id": "medium_seed2026", "setting": "Medium"},
+    {"dataset": "ustc", "protocol_id": "A-2", "setting": "A-2"}
+  ],
+  "features": {
+    "length": "sign(direction) * log1p(captured_frame_length)",
+    "iat": "log1p(max(0, delta_timestamp_seconds) * 1000000)",
+    "mask": "1 for observed packet, 0 for structural padding",
+    "normalization": "per-window Known-Train median/IQR, clip to [-4,4], then explicit mask",
+    "missing_rule": "padding is structural and excluded from normalization"
+  },
+  "model": {
+    "architecture": "two Conv1d blocks: 3->64->128, kernel=3, padding=1; mask-aware BatchNorm; ReLU; masked mean pooling; linear classifier",
+    "mask_fix": "masked positions are zeroed before convolution and excluded from both BatchNorm moments and pooling",
+    "legacy_boundary": "Stage15R T8 used ordinary BatchNorm1d, so its checkpoint is inference-parity checked but formal T8/T16/T32 all use the frozen mask-safe implementation"
+  },
+  "training": {
+    "seed": 2022,
+    "epochs": 100,
+    "batch_size": 128,
+    "eval_batch_size": 256,
+    "optimizer": "Adam",
+    "learning_rate": 0.001,
+    "betas": [0.9, 0.999],
+    "weight_decay": 0.0,
+    "scheduler": "MultiStepLR",
+    "scheduler_milestones": [50, 80],
+    "scheduler_gamma": 0.1,
+    "objective": "CrossEntropyLoss",
+    "early_stopping": false,
+    "checkpoint_criterion": "maximum Known Validation Accuracy; first epoch wins ties"
+  },
+  "gate": {
+    "window_bottleneck_confirmed": "best of T16/T32 has mean delta Macro-F1 >= 0.015 vs T8, >=4/5 positive protocols, and worst protocol delta >= -0.02",
+    "class_conditional_window_benefit": "global gate fails, but >=2 preregistered focus class-protocol units gain >=0.05 F1 with net positive rescue and no paired focus class loses >0.05 F1",
+    "no_useful_window_benefit": "all 15 formal runs complete but neither global nor class-conditional gate passes",
+    "insufficient_evidence": "any formal run, strict Unknown-Free check, cache parity, legacy T8 inference parity, or protected hash check fails"
+  },
+  "t64_gate": {
+    "status": "PREREGISTERED_NOT_RUN",
+    "condition": "T32-T16 mean Macro-F1 >=0.01 with >=3/5 positive protocols, and either dataset-level N32 truncation >=0.10 or a focus class has N32 truncation >=0.25 and F1 gain >=0.05",
+    "budget_if_entered": "same model, seed, optimizer, epochs, batch sizes, checkpoint rule; only window=64 changes"
+  },
+  "forbidden_roles": ["known_test", "unknown_test"],
+  "forbidden_actions": ["modify frozen protocol", "change feature formula", "change network depth/loss by window", "open-set evaluation", "DES/H1 execution", "multiview training"]
+}

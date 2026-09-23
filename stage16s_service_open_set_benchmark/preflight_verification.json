@@ -1,0 +1,12 @@
+{
+  "all_services_feasible_flow_level": true,
+  "exact_image_cross_role_overlap": 0,
+  "flow_id_cross_role_overlap": 0,
+  "known_test_used_for_selection": 0,
+  "manifest_rows": 18390,
+  "manifest_sha256": "498b78efae22638c80ec203974052d95cda81a04ac064d7266d2956a3f1556a5",
+  "p2p": "PROTOCOL_LIMITED_SINGLE_CAPTURE",
+  "protocols": 6,
+  "status": "PASS",
+  "unknown_fit_samples": 0
+}

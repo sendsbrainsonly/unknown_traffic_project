@@ -1,0 +1,11 @@
+{
+  "flow_statistics_sha256": "82248538cb30d89ca4f574a211f77c33b7b0563f1f50617cd3870cbce1661cc6",
+  "known_test_or_unknown_test_values_used_for_selection": false,
+  "payload_bytes_status": "NOT_AVAILABLE_AS_SEPARATELY_AUDITED_STAGE0_FIELD",
+  "recovered_flows": 489101,
+  "sequence_packets": 8,
+  "source_alignment_manifest": "/home/birkenwald/data/SEU-WXY/WXY-SEU/TrafficClassifier/Projects/unknown_traffic_project/opendetect_ustc_encoder_audit/outputs/input_alignment_manifest.csv",
+  "source_alignment_sha256": "6e5f4964af78a45811bc74cafa5f20e9e59199e5377f3d5366ae45bfeac83dd7",
+  "status": "PASS",
+  "target_flows": 489101
+}

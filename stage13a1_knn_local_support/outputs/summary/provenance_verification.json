@@ -1,0 +1,1259 @@
+{
+  "status": "PASS",
+  "phase": "after",
+  "verified_at_utc": "2026-09-16T02:14:32.146906+00:00",
+  "frozen_runs_verified": 15,
+  "unique_checkpoint_hashes": 15,
+  "stage11b_provenance_status": "PASS",
+  "frozen_hashes_before": {
+    "stage11b_root_manifest_sha256": "f047512bc29cbfd26fb0bd0aa0b68dc09e737a3908a15698f36ca6bb073b4474",
+    "stage11b_provenance_sha256": "5062e13729c81d3a997226651c0080bc5149951311faa5ee6ed4812c59c290a1",
+    "stage11b_provenance_status": "PASS",
+    "runs": {
+      "a1/fold0_seed2022": {
+        "stage11b_run_dir": "/home/birkenwald/data/SEU-WXY/WXY-SEU/TrafficClassifier/Projects/unknown_traffic_project/stage11b_decoupled_support_readout/artifacts/a1/fold0_seed2022",
+        "stage11b_manifest_sha256": "37c6f71f6b4fe44c14aa38aa276d4a18d2940ed2faae6009cd790cc099721e5f",
+        "artifacts": {
+          "SUCCESS": "e237b2d0d37d71b82104ed351472e879041342a96a1ef3693ddc8b1f8f3c441e",
+          "config.json": "0c234c8db3223a990a5a3c9a83b4a7df41a882c1260384a47a632280f2118fdf",
+          "results.json": "c50f42147a27cf58f85177e5782dcefe3dab9d32dfe39a728f3ad11a49a56856",
+          "sample_outputs.npz": "b8296375c75cc51719778a274ff8e4f34f49181851b7182356a0064921c576b2"
+        },
+        "checkpoint_path": "/home/birkenwald/data/SEU-WXY/WXY-SEU/TrafficClassifier/Projects/Open-Detect/artifacts/paper-reproduction/v6-local-pcap-fivefold-corrected-v1/a1/fold0_seed2022/model_best.pt",
+        "checkpoint_sha256": "66e4000124740f8e51227f20fa3ca326558d67d3bd708abcb8ea33fd408e9df7",
+        "split_array_sha256": {
+          "train": "8856da8eb188e10f2fc80591157cad1b3c2f3cb5793b993f665a72e7b68dee83",
+          "validation": "5d050b0d8d03c6695b88b733ee13865ea9a4d78878812a5309343f627968c263",
+          "test": "d8406255ae50ff2af0e9ac9f512c1abd4f800b03a9b1bfcee0a55d43447fb4e1"
+        },
+        "known_classes": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15,
+          17,
+          18,
+          19
+        ],
+        "unknown_classes": [
+          16
+        ]
+      },
+      "a1/fold1_seed2023": {
+        "stage11b_run_dir": "/home/birkenwald/data/SEU-WXY/WXY-SEU/TrafficClassifier/Projects/unknown_traffic_project/stage11b_decoupled_support_readout/artifacts/a1/fold1_seed2023",
+        "stage11b_manifest_sha256": "a3b22aa11525992d02af9cadafd6a293a07c8cf9d0d12cd23e251992253c8ea1",
+        "artifacts": {
+          "SUCCESS": "e237b2d0d37d71b82104ed351472e879041342a96a1ef3693ddc8b1f8f3c441e",
+          "config.json": "a621242c5d2659ec23b363e6478e46d02d3d692047db37bd9151cc22ef2e8b8b",
+          "results.json": "a9cb8fbcad87938d0a435874cc85100a9224e83e5b9a8335cc5f5d88cf8463d8",
+          "sample_outputs.npz": "880af8e3bc357135a62e19d6bb2fc00d9f5ccdba8e441412d47d08b8d592cda4"
+        },
+        "checkpoint_path": "/home/birkenwald/data/SEU-WXY/WXY-SEU/TrafficClassifier/Projects/Open-Detect/artifacts/paper-reproduction/v6-local-pcap-fivefold-corrected-v1/a1/fold1_seed2023/model_best.pt",
+        "checkpoint_sha256": "40d2fd2b5f56285d01501cfe2b794d670e485a100ee2edf2268f67ef7d89c7c6",
+        "split_array_sha256": {
+          "train": "23dd6ec77fe58bec6a9984e4aa6a33c9863473d733068a960b911458970dc075",
+          "validation": "40be3cedcbcb6a0bcc48c03aa8d8d5e4db78b1f42388001be3c807003dbfe3e4",
+          "test": "76f01dda0690d35fe40accd76901b8d6becaf28a3f8315eb9f07e6ce2d0e551c"
+        },
+        "known_classes": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15,
+          17,
+          18,
+          19
+        ],
+        "unknown_classes": [
+          16
+        ]
+      },
+      "a1/fold2_seed2024": {
+        "stage11b_run_dir": "/home/birkenwald/data/SEU-WXY/WXY-SEU/TrafficClassifier/Projects/unknown_traffic_project/stage11b_decoupled_support_readout/artifacts/a1/fold2_seed2024",
+        "stage11b_manifest_sha256": "6ca93f5f409ee49eefb543ea8f5b834655365cd0bdf0ef3e5ff09fa388d745a4",
+        "artifacts": {
+          "SUCCESS": "e237b2d0d37d71b82104ed351472e879041342a96a1ef3693ddc8b1f8f3c441e",
+          "config.json": "ca888a74ec071e7dab8ac714c3f4b5050dc941fc620d3c71808db8df5fe0e83f",
+          "results.json": "2f948a64e320ebf887c8dd4ae42653841be432ecedae976abb63917bcd04341e",
+          "sample_outputs.npz": "025aa43eacb6f90675003eb2dc4f79a6ad8f733bc9be2f3aa14c81a4ae6a0122"
+        },
+        "checkpoint_path": "/home/birkenwald/data/SEU-WXY/WXY-SEU/TrafficClassifier/Projects/Open-Detect/artifacts/paper-reproduction/v6-local-pcap-fivefold-corrected-v1/a1/fold2_seed2024/model_best.pt",
+        "checkpoint_sha256": "b5d484ac8197f03e86facbff8f282734fd1e87567baa2ce2af731b9ed3a0285e",
+        "split_array_sha256": {
+          "train": "cf91d999e065729c3d13ed093c670cd43b31ff95e14f93edc39d8ca6b537d4c0",
+          "validation": "b34142653e2bc7b0ef27d61545003fb6b5141ce7921e493246ace8dbe20527c3",
+          "test": "e4e394213ac4a459cc948d43e070f591b8c842bfbcbdf70b1de20c7d330f8da0"
+        },
+        "known_classes": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15,
+          17,
+          18,
+          19
+        ],
+        "unknown_classes": [
+          16
+        ]
+      },
+      "a1/fold3_seed2025": {
+        "stage11b_run_dir": "/home/birkenwald/data/SEU-WXY/WXY-SEU/TrafficClassifier/Projects/unknown_traffic_project/stage11b_decoupled_support_readout/artifacts/a1/fold3_seed2025",
+        "stage11b_manifest_sha256": "fba6c4a9c8a41b1df11349dfe8d38b33fa983ecb19814975f5e33f93422201f2",
+        "artifacts": {
+          "SUCCESS": "e237b2d0d37d71b82104ed351472e879041342a96a1ef3693ddc8b1f8f3c441e",
+          "config.json": "f2846a3b5cb531d70dc167ae8957b420cae072663fdfc4622aed9239ef1a834f",
+          "results.json": "21eb6fb92d562b8369665ad23522c5264a3b851c7fc2f9e270db986ed843e230",
+          "sample_outputs.npz": "e02b78ef65667e272bafeadc0bb7b5d088f8f97e7da6fa18b7a3fe8732aa723d"
+        },
+        "checkpoint_path": "/home/birkenwald/data/SEU-WXY/WXY-SEU/TrafficClassifier/Projects/Open-Detect/artifacts/paper-reproduction/v6-local-pcap-fivefold-corrected-v1/a1/fold3_seed2025/model_best.pt",
+        "checkpoint_sha256": "8d5044b8c93d27ebefbd7d5ad031ea91c28da618ba876ebc9e8d83b2c6eeb668",
+        "split_array_sha256": {
+          "train": "0804f623142a18d3e07f9a8234f8d99b077e28c0a87e926032b9a4bbb8d1fc6f",
+          "validation": "4736b9030df4b75527872a2545495fb029879f173458e8a9c86b9bedf6c0e2dd",
+          "test": "ec9c58ba83ba55c63cedc684b299e419ce9bc4362f80f0ce040e1de7f013e640"
+        },
+        "known_classes": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15,
+          17,
+          18,
+          19
+        ],
+        "unknown_classes": [
+          16
+        ]
+      },
+      "a1/fold4_seed2026": {
+        "stage11b_run_dir": "/home/birkenwald/data/SEU-WXY/WXY-SEU/TrafficClassifier/Projects/unknown_traffic_project/stage11b_decoupled_support_readout/artifacts/a1/fold4_seed2026",
+        "stage11b_manifest_sha256": "8e757699101cd68230a187121cc7185f4a73c4c2b105d6ef18bef6e9f5a70050",
+        "artifacts": {
+          "SUCCESS": "e237b2d0d37d71b82104ed351472e879041342a96a1ef3693ddc8b1f8f3c441e",
+          "config.json": "fc48b56235e2db9eaa17a6514b0080a7884adf6212aefe823b55b64c3d15020a",
+          "results.json": "89723bf8be45cf7a2eea40e790df97df1f83d359da46059b0094dbb766b9b834",
+          "sample_outputs.npz": "d663cbdb6540b19ff6628c9ca8ee40ab17059133db166d038095aadacdf5a913"
+        },
+        "checkpoint_path": "/home/birkenwald/data/SEU-WXY/WXY-SEU/TrafficClassifier/Projects/Open-Detect/artifacts/paper-reproduction/v6-local-pcap-fivefold-corrected-v1/a1/fold4_seed2026/model_best.pt",
+        "checkpoint_sha256": "ed1c5051ea7e01d0e06e94fa8bc0f76f7e001ef194a1cdf378fd7082da710fac",
+        "split_array_sha256": {
+          "train": "7860e1e1c5fc2774a4075214ea1664f33cfd7c40609f700b04244543ffdeac50",
+          "validation": "4e09e7d021304e46260b3c9e8fb859641ad3d4e1ebca4c1ae953e7907245e496",
+          "test": "396b8805a37a85976b59c1549ae9a1ae8502176373e20f175d8c23749e43c897"
+        },
+        "known_classes": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15,
+          17,
+          18,
+          19
+        ],
+        "unknown_classes": [
+          16
+        ]
+      },
+      "a2/fold0_seed2022": {
+        "stage11b_run_dir": "/home/birkenwald/data/SEU-WXY/WXY-SEU/TrafficClassifier/Projects/unknown_traffic_project/stage11b_decoupled_support_readout/artifacts/a2/fold0_seed2022",
+        "stage11b_manifest_sha256": "fdd479c7d6c6a014739dba961e218e564fdb1e6c5a58462987c8a4da56677845",
+        "artifacts": {
+          "SUCCESS": "e237b2d0d37d71b82104ed351472e879041342a96a1ef3693ddc8b1f8f3c441e",
+          "config.json": "2757cb6960528ff3c0fc1de2f9f93c479fcc9b89a48b3f3622b6f279f5dd4186",
+          "results.json": "57114d12dda3bec4605de05ce87e0f5f1f873fbc13b630f4790b02bdc8eb2672",
+          "sample_outputs.npz": "589e5259a1e029dfaecd7adb1d28a5d830e3e2c0d5a8fca38a4a3d63427d914e"
+        },
+        "checkpoint_path": "/home/birkenwald/data/SEU-WXY/WXY-SEU/TrafficClassifier/Projects/Open-Detect/artifacts/paper-reproduction/v6-local-pcap-fivefold-corrected-v1/a2/fold0_seed2022/model_best.pt",
+        "checkpoint_sha256": "6604b3e1e03824cd4d47f0fee985a6bd911b800730e7ebd93ece8d2679d4e762",
+        "split_array_sha256": {
+          "train": "8856da8eb188e10f2fc80591157cad1b3c2f3cb5793b993f665a72e7b68dee83",
+          "validation": "5d050b0d8d03c6695b88b733ee13865ea9a4d78878812a5309343f627968c263",
+          "test": "d8406255ae50ff2af0e9ac9f512c1abd4f800b03a9b1bfcee0a55d43447fb4e1"
+        },
+        "known_classes": [
+          0,
+          1,
+          3,
+          4,
+          7,
+          8,
+          9,
+          11,
+          14,
+          17,
+          2,
+          5,
+          6,
+          10,
+          12,
+          18,
+          19
+        ],
+        "unknown_classes": [
+          13,
+          15,
+          16
+        ]
+      },
+      "a2/fold1_seed2023": {
+        "stage11b_run_dir": "/home/birkenwald/data/SEU-WXY/WXY-SEU/TrafficClassifier/Projects/unknown_traffic_project/stage11b_decoupled_support_readout/artifacts/a2/fold1_seed2023",
+        "stage11b_manifest_sha256": "8c50fad7f0611a1cefc0210af6d95e4b32d2f1cfa051139a9993cd8c0dfdf548",
+        "artifacts": {
+          "SUCCESS": "e237b2d0d37d71b82104ed351472e879041342a96a1ef3693ddc8b1f8f3c441e",
+          "config.json": "32153c365bcbb986594d1bb652fd83872ffcec600e0605637c892fe0baf85e25",
+          "results.json": "e0953057debcee458f10294ae9c1e18103b1d00494d6366a24e186ed7ee96ddd",
+          "sample_outputs.npz": "bcfb942b4e6be290815a2928327421b0b8ff89eb6b05c29da1896e2f96162082"
+        },
+        "checkpoint_path": "/home/birkenwald/data/SEU-WXY/WXY-SEU/TrafficClassifier/Projects/Open-Detect/artifacts/paper-reproduction/v6-local-pcap-fivefold-corrected-v1/a2/fold1_seed2023/model_best.pt",
+        "checkpoint_sha256": "e061b1d763ab0ad6aed8d8ff5733fb32f8af3c3e21641d91f4fa41ae6ab40b9b",
+        "split_array_sha256": {
+          "train": "23dd6ec77fe58bec6a9984e4aa6a33c9863473d733068a960b911458970dc075",
+          "validation": "40be3cedcbcb6a0bcc48c03aa8d8d5e4db78b1f42388001be3c807003dbfe3e4",
+          "test": "76f01dda0690d35fe40accd76901b8d6becaf28a3f8315eb9f07e6ce2d0e551c"
+        },
+        "known_classes": [
+          0,
+          1,
+          3,
+          4,
+          7,
+          8,
+          9,
+          11,
+          14,
+          17,
+          2,
+          5,
+          6,
+          10,
+          12,
+          18,
+          19
+        ],
+        "unknown_classes": [
+          13,
+          15,
+          16
+        ]
+      },
+      "a2/fold2_seed2024": {
+        "stage11b_run_dir": "/home/birkenwald/data/SEU-WXY/WXY-SEU/TrafficClassifier/Projects/unknown_traffic_project/stage11b_decoupled_support_readout/artifacts/a2/fold2_seed2024",
+        "stage11b_manifest_sha256": "517eb7255c914796853e3699246a5cf805b7a3de82eb6682ca4e69b48e2f336b",
+        "artifacts": {
+          "SUCCESS": "e237b2d0d37d71b82104ed351472e879041342a96a1ef3693ddc8b1f8f3c441e",
+          "config.json": "473a33e414a8275d20f9ebb2a514fa93d870f4fd7e6e31c02c3bb3422ba0dd37",
+          "results.json": "25dcabfbdb627819d830bb1400d98bf0e2bd0532ff0fbca75458a33604f18641",
+          "sample_outputs.npz": "662f1e602e43af76c8c8a227434a005ad7d996ecad4163caafa1861c15ee78d5"
+        },
+        "checkpoint_path": "/home/birkenwald/data/SEU-WXY/WXY-SEU/TrafficClassifier/Projects/Open-Detect/artifacts/paper-reproduction/v6-local-pcap-fivefold-corrected-v1/a2/fold2_seed2024/model_best.pt",
+        "checkpoint_sha256": "c9643b3bb2c90b0e52bff69c68d25a7f3640de6bfc2ea301a9000e23862dbd81",
+        "split_array_sha256": {
+          "train": "cf91d999e065729c3d13ed093c670cd43b31ff95e14f93edc39d8ca6b537d4c0",
+          "validation": "b34142653e2bc7b0ef27d61545003fb6b5141ce7921e493246ace8dbe20527c3",
+          "test": "e4e394213ac4a459cc948d43e070f591b8c842bfbcbdf70b1de20c7d330f8da0"
+        },
+        "known_classes": [
+          0,
+          1,
+          3,
+          4,
+          7,
+          8,
+          9,
+          11,
+          14,
+          17,
+          2,
+          5,
+          6,
+          10,
+          12,
+          18,
+          19
+        ],
+        "unknown_classes": [
+          13,
+          15,
+          16
+        ]
+      },
+      "a2/fold3_seed2025": {
+        "stage11b_run_dir": "/home/birkenwald/data/SEU-WXY/WXY-SEU/TrafficClassifier/Projects/unknown_traffic_project/stage11b_decoupled_support_readout/artifacts/a2/fold3_seed2025",
+        "stage11b_manifest_sha256": "9f75adb121e99876362f103eab50743bc69ab9a9f0506234a292498260905ac2",
+        "artifacts": {
+          "SUCCESS": "e237b2d0d37d71b82104ed351472e879041342a96a1ef3693ddc8b1f8f3c441e",
+          "config.json": "2d59d81a5ae4093548ee2d33e2e8f1871e16667ec929822f9c3c7c55ccc2fd8c",
+          "results.json": "3e3ad74381de903fbc9768be2377d13fce8065551975313de5c4091932a3ada8",
+          "sample_outputs.npz": "60424a00c07c995c24627a2602c6035417b1a53f404baa753dd8ada36b7a53ce"
+        },
+        "checkpoint_path": "/home/birkenwald/data/SEU-WXY/WXY-SEU/TrafficClassifier/Projects/Open-Detect/artifacts/paper-reproduction/v6-local-pcap-fivefold-corrected-v1/a2/fold3_seed2025/model_best.pt",
+        "checkpoint_sha256": "cee8cd348138dab15e0587720db71394577541118e2a6dcee9cf708cc982c297",
+        "split_array_sha256": {
+          "train": "0804f623142a18d3e07f9a8234f8d99b077e28c0a87e926032b9a4bbb8d1fc6f",
+          "validation": "4736b9030df4b75527872a2545495fb029879f173458e8a9c86b9bedf6c0e2dd",
+          "test": "ec9c58ba83ba55c63cedc684b299e419ce9bc4362f80f0ce040e1de7f013e640"
+        },
+        "known_classes": [
+          0,
+          1,
+          3,
+          4,
+          7,
+          8,
+          9,
+          11,
+          14,
+          17,
+          2,
+          5,
+          6,
+          10,
+          12,
+          18,
+          19
+        ],
+        "unknown_classes": [
+          13,
+          15,
+          16
+        ]
+      },
+      "a2/fold4_seed2026": {
+        "stage11b_run_dir": "/home/birkenwald/data/SEU-WXY/WXY-SEU/TrafficClassifier/Projects/unknown_traffic_project/stage11b_decoupled_support_readout/artifacts/a2/fold4_seed2026",
+        "stage11b_manifest_sha256": "a9d213465e3eae76bed9b8120854c68e9c02c3b53e1f9251f9b98b66b43db18f",
+        "artifacts": {
+          "SUCCESS": "e237b2d0d37d71b82104ed351472e879041342a96a1ef3693ddc8b1f8f3c441e",
+          "config.json": "47c57a16426ca94744adf6ac8efddd3d3d39fd49e1b21195aae85a5a7a986f51",
+          "results.json": "80bc78bc14f40bc670f99416b181aefcbf49a63a268b4b7b03b89ec4a94d8e1f",
+          "sample_outputs.npz": "aaed573449f5a92ed611beb585e179c14e18d954f7748ad1bddffaa14d153e59"
+        },
+        "checkpoint_path": "/home/birkenwald/data/SEU-WXY/WXY-SEU/TrafficClassifier/Projects/Open-Detect/artifacts/paper-reproduction/v6-local-pcap-fivefold-corrected-v1/a2/fold4_seed2026/model_best.pt",
+        "checkpoint_sha256": "18a220d4de5372031f582abd38514b89442cef985fe91661ae331a99bb79a96b",
+        "split_array_sha256": {
+          "train": "7860e1e1c5fc2774a4075214ea1664f33cfd7c40609f700b04244543ffdeac50",
+          "validation": "4e09e7d021304e46260b3c9e8fb859641ad3d4e1ebca4c1ae953e7907245e496",
+          "test": "396b8805a37a85976b59c1549ae9a1ae8502176373e20f175d8c23749e43c897"
+        },
+        "known_classes": [
+          0,
+          1,
+          3,
+          4,
+          7,
+          8,
+          9,
+          11,
+          14,
+          17,
+          2,
+          5,
+          6,
+          10,
+          12,
+          18,
+          19
+        ],
+        "unknown_classes": [
+          13,
+          15,
+          16
+        ]
+      },
+      "a3/fold0_seed2022": {
+        "stage11b_run_dir": "/home/birkenwald/data/SEU-WXY/WXY-SEU/TrafficClassifier/Projects/unknown_traffic_project/stage11b_decoupled_support_readout/artifacts/a3/fold0_seed2022",
+        "stage11b_manifest_sha256": "395898837e4d570c82e53d8bf193186037e8a036349775af6abb2ecf02e59587",
+        "artifacts": {
+          "SUCCESS": "e237b2d0d37d71b82104ed351472e879041342a96a1ef3693ddc8b1f8f3c441e",
+          "config.json": "6f64c1f1df05d0a8fb8b7f0c1284df255da054af0204d9410afdbf221d53fa65",
+          "results.json": "a882c6d930552b7c53f4220dbab1e423bd44f3eb84cbb73218c2e61a7ddf1072",
+          "sample_outputs.npz": "529607e42f0dfc77a1cbbbc17a56e3f1e0a87e98e446a5b0284eb58ec677afd0"
+        },
+        "checkpoint_path": "/home/birkenwald/data/SEU-WXY/WXY-SEU/TrafficClassifier/Projects/Open-Detect/artifacts/paper-reproduction/v6-local-pcap-fivefold-corrected-v1/a3/fold0_seed2022/model_best.pt",
+        "checkpoint_sha256": "92e86ad6d562a8be9998107ba95172b854d7c868f9be59dba4c39d1fca768880",
+        "split_array_sha256": {
+          "train": "8856da8eb188e10f2fc80591157cad1b3c2f3cb5793b993f665a72e7b68dee83",
+          "validation": "5d050b0d8d03c6695b88b733ee13865ea9a4d78878812a5309343f627968c263",
+          "test": "d8406255ae50ff2af0e9ac9f512c1abd4f800b03a9b1bfcee0a55d43447fb4e1"
+        },
+        "known_classes": [
+          0,
+          1,
+          3,
+          4,
+          7,
+          8,
+          9,
+          11,
+          14,
+          17,
+          2,
+          5,
+          6,
+          10,
+          12
+        ],
+        "unknown_classes": [
+          13,
+          15,
+          16,
+          18,
+          19
+        ]
+      },
+      "a3/fold1_seed2023": {
+        "stage11b_run_dir": "/home/birkenwald/data/SEU-WXY/WXY-SEU/TrafficClassifier/Projects/unknown_traffic_project/stage11b_decoupled_support_readout/artifacts/a3/fold1_seed2023",
+        "stage11b_manifest_sha256": "061f32f2f6cabc5086120f5aeef78aa28f3c8579aa1b2f754b020624a85a650b",
+        "artifacts": {
+          "SUCCESS": "e237b2d0d37d71b82104ed351472e879041342a96a1ef3693ddc8b1f8f3c441e",
+          "config.json": "f00bb157480e587afabbe2ffd4a96856c930e5e24b66ee923f2832f60215431c",
+          "results.json": "b0d74d46f9c88a64c293e8346d66f384ec02eba144626b80d43c6de83fadc313",
+          "sample_outputs.npz": "8f86a5616871618da9cd8b4c826a3063148bf0da4f0c0fd961a91b1ab3ee4974"
+        },
+        "checkpoint_path": "/home/birkenwald/data/SEU-WXY/WXY-SEU/TrafficClassifier/Projects/Open-Detect/artifacts/paper-reproduction/v6-local-pcap-fivefold-corrected-v1/a3/fold1_seed2023/model_best.pt",
+        "checkpoint_sha256": "352eb14b57b5dc18d31b7b624f1496fca9cf7b04cc8de8f9ada9d687b5a90648",
+        "split_array_sha256": {
+          "train": "23dd6ec77fe58bec6a9984e4aa6a33c9863473d733068a960b911458970dc075",
+          "validation": "40be3cedcbcb6a0bcc48c03aa8d8d5e4db78b1f42388001be3c807003dbfe3e4",
+          "test": "76f01dda0690d35fe40accd76901b8d6becaf28a3f8315eb9f07e6ce2d0e551c"
+        },
+        "known_classes": [
+          0,
+          1,
+          3,
+          4,
+          7,
+          8,
+          9,
+          11,
+          14,
+          17,
+          2,
+          5,
+          6,
+          10,
+          12
+        ],
+        "unknown_classes": [
+          13,
+          15,
+          16,
+          18,
+          19
+        ]
+      },
+      "a3/fold2_seed2024": {
+        "stage11b_run_dir": "/home/birkenwald/data/SEU-WXY/WXY-SEU/TrafficClassifier/Projects/unknown_traffic_project/stage11b_decoupled_support_readout/artifacts/a3/fold2_seed2024",
+        "stage11b_manifest_sha256": "40dbd0666a8cbaec86b7234f1bef5f8f200e5074f24b9b61aa1cf4e78be63272",
+        "artifacts": {
+          "SUCCESS": "e237b2d0d37d71b82104ed351472e879041342a96a1ef3693ddc8b1f8f3c441e",
+          "config.json": "8910b63b1ee9ed5eac137f72c38ecd52f75c82a535102395f1a336de2d57e3f4",
+          "results.json": "2e41634ee1e73848fcd7dcf879e3025d245672e960319b56a6d2f0b7adcc4979",
+          "sample_outputs.npz": "7b2aa4b330bf307b9eaed571c0b44cde14aecf9ea719d1f4946ef7f5bf9f9296"
+        },
+        "checkpoint_path": "/home/birkenwald/data/SEU-WXY/WXY-SEU/TrafficClassifier/Projects/Open-Detect/artifacts/paper-reproduction/v6-local-pcap-fivefold-corrected-v1/a3/fold2_seed2024/model_best.pt",
+        "checkpoint_sha256": "8e85df3014ec14874912fc2e3e349b110dbc86fcb26bb2c3a39061a44d56b96a",
+        "split_array_sha256": {
+          "train": "cf91d999e065729c3d13ed093c670cd43b31ff95e14f93edc39d8ca6b537d4c0",
+          "validation": "b34142653e2bc7b0ef27d61545003fb6b5141ce7921e493246ace8dbe20527c3",
+          "test": "e4e394213ac4a459cc948d43e070f591b8c842bfbcbdf70b1de20c7d330f8da0"
+        },
+        "known_classes": [
+          0,
+          1,
+          3,
+          4,
+          7,
+          8,
+          9,
+          11,
+          14,
+          17,
+          2,
+          5,
+          6,
+          10,
+          12
+        ],
+        "unknown_classes": [
+          13,
+          15,
+          16,
+          18,
+          19
+        ]
+      },
+      "a3/fold3_seed2025": {
+        "stage11b_run_dir": "/home/birkenwald/data/SEU-WXY/WXY-SEU/TrafficClassifier/Projects/unknown_traffic_project/stage11b_decoupled_support_readout/artifacts/a3/fold3_seed2025",
+        "stage11b_manifest_sha256": "ab628c7af7d0d22dda88095cbc7e4e3b619c712f306c519a6d172845bb4ee5c5",
+        "artifacts": {
+          "SUCCESS": "e237b2d0d37d71b82104ed351472e879041342a96a1ef3693ddc8b1f8f3c441e",
+          "config.json": "cbe1b76d25d8f22c4018180e2503cd698d8620b58ebad4bb3652149ecaf4d206",
+          "results.json": "73cd239be28f0bf134f2c8f8bfa8094961ce917a611baab3cd1567e8ff6f5d63",
+          "sample_outputs.npz": "4f5639e3f53f3225de529f6dc0e51d1c3ef57de8ad294dd2f657672f97420d0a"
+        },
+        "checkpoint_path": "/home/birkenwald/data/SEU-WXY/WXY-SEU/TrafficClassifier/Projects/Open-Detect/artifacts/paper-reproduction/v6-local-pcap-fivefold-corrected-v1/a3/fold3_seed2025/model_best.pt",
+        "checkpoint_sha256": "e098e137b2f4f173fb9e4248f86a19bf65a8f94cd6a19257032e5855ad5dbf2d",
+        "split_array_sha256": {
+          "train": "0804f623142a18d3e07f9a8234f8d99b077e28c0a87e926032b9a4bbb8d1fc6f",
+          "validation": "4736b9030df4b75527872a2545495fb029879f173458e8a9c86b9bedf6c0e2dd",
+          "test": "ec9c58ba83ba55c63cedc684b299e419ce9bc4362f80f0ce040e1de7f013e640"
+        },
+        "known_classes": [
+          0,
+          1,
+          3,
+          4,
+          7,
+          8,
+          9,
+          11,
+          14,
+          17,
+          2,
+          5,
+          6,
+          10,
+          12
+        ],
+        "unknown_classes": [
+          13,
+          15,
+          16,
+          18,
+          19
+        ]
+      },
+      "a3/fold4_seed2026": {
+        "stage11b_run_dir": "/home/birkenwald/data/SEU-WXY/WXY-SEU/TrafficClassifier/Projects/unknown_traffic_project/stage11b_decoupled_support_readout/artifacts/a3/fold4_seed2026",
+        "stage11b_manifest_sha256": "1274900b5874389892c9877ab90d941d69ae548f51910a9e90899058375bfaea",
+        "artifacts": {
+          "SUCCESS": "e237b2d0d37d71b82104ed351472e879041342a96a1ef3693ddc8b1f8f3c441e",
+          "config.json": "525ec8a491b923d3af8387c5ba84430f2e6a7ed7a10739995239c0596638d96f",
+          "results.json": "462aa42c311e041f56387aa0e634a7f3e493c3c81d8970ae259b034f7fb53a79",
+          "sample_outputs.npz": "8f50c93d36435e81f6173bd0930ecf1cbd2385ad0613a9ae17c1b4128abf9886"
+        },
+        "checkpoint_path": "/home/birkenwald/data/SEU-WXY/WXY-SEU/TrafficClassifier/Projects/Open-Detect/artifacts/paper-reproduction/v6-local-pcap-fivefold-corrected-v1/a3/fold4_seed2026/model_best.pt",
+        "checkpoint_sha256": "ac06b766d4667c427e070a08886f697a4740ed12d5a92b2bc9b6ad9a84c04a87",
+        "split_array_sha256": {
+          "train": "7860e1e1c5fc2774a4075214ea1664f33cfd7c40609f700b04244543ffdeac50",
+          "validation": "4e09e7d021304e46260b3c9e8fb859641ad3d4e1ebca4c1ae953e7907245e496",
+          "test": "396b8805a37a85976b59c1549ae9a1ae8502176373e20f175d8c23749e43c897"
+        },
+        "known_classes": [
+          0,
+          1,
+          3,
+          4,
+          7,
+          8,
+          9,
+          11,
+          14,
+          17,
+          2,
+          5,
+          6,
+          10,
+          12
+        ],
+        "unknown_classes": [
+          13,
+          15,
+          16,
+          18,
+          19
+        ]
+      }
+    },
+    "unique_checkpoint_hashes": 15
+  },
+  "frozen_hashes_after": {
+    "stage11b_root_manifest_sha256": "f047512bc29cbfd26fb0bd0aa0b68dc09e737a3908a15698f36ca6bb073b4474",
+    "stage11b_provenance_sha256": "5062e13729c81d3a997226651c0080bc5149951311faa5ee6ed4812c59c290a1",
+    "stage11b_provenance_status": "PASS",
+    "runs": {
+      "a1/fold0_seed2022": {
+        "stage11b_run_dir": "/home/birkenwald/data/SEU-WXY/WXY-SEU/TrafficClassifier/Projects/unknown_traffic_project/stage11b_decoupled_support_readout/artifacts/a1/fold0_seed2022",
+        "stage11b_manifest_sha256": "37c6f71f6b4fe44c14aa38aa276d4a18d2940ed2faae6009cd790cc099721e5f",
+        "artifacts": {
+          "SUCCESS": "e237b2d0d37d71b82104ed351472e879041342a96a1ef3693ddc8b1f8f3c441e",
+          "config.json": "0c234c8db3223a990a5a3c9a83b4a7df41a882c1260384a47a632280f2118fdf",
+          "results.json": "c50f42147a27cf58f85177e5782dcefe3dab9d32dfe39a728f3ad11a49a56856",
+          "sample_outputs.npz": "b8296375c75cc51719778a274ff8e4f34f49181851b7182356a0064921c576b2"
+        },
+        "checkpoint_path": "/home/birkenwald/data/SEU-WXY/WXY-SEU/TrafficClassifier/Projects/Open-Detect/artifacts/paper-reproduction/v6-local-pcap-fivefold-corrected-v1/a1/fold0_seed2022/model_best.pt",
+        "checkpoint_sha256": "66e4000124740f8e51227f20fa3ca326558d67d3bd708abcb8ea33fd408e9df7",
+        "split_array_sha256": {
+          "train": "8856da8eb188e10f2fc80591157cad1b3c2f3cb5793b993f665a72e7b68dee83",
+          "validation": "5d050b0d8d03c6695b88b733ee13865ea9a4d78878812a5309343f627968c263",
+          "test": "d8406255ae50ff2af0e9ac9f512c1abd4f800b03a9b1bfcee0a55d43447fb4e1"
+        },
+        "known_classes": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15,
+          17,
+          18,
+          19
+        ],
+        "unknown_classes": [
+          16
+        ]
+      },
+      "a1/fold1_seed2023": {
+        "stage11b_run_dir": "/home/birkenwald/data/SEU-WXY/WXY-SEU/TrafficClassifier/Projects/unknown_traffic_project/stage11b_decoupled_support_readout/artifacts/a1/fold1_seed2023",
+        "stage11b_manifest_sha256": "a3b22aa11525992d02af9cadafd6a293a07c8cf9d0d12cd23e251992253c8ea1",
+        "artifacts": {
+          "SUCCESS": "e237b2d0d37d71b82104ed351472e879041342a96a1ef3693ddc8b1f8f3c441e",
+          "config.json": "a621242c5d2659ec23b363e6478e46d02d3d692047db37bd9151cc22ef2e8b8b",
+          "results.json": "a9cb8fbcad87938d0a435874cc85100a9224e83e5b9a8335cc5f5d88cf8463d8",
+          "sample_outputs.npz": "880af8e3bc357135a62e19d6bb2fc00d9f5ccdba8e441412d47d08b8d592cda4"
+        },
+        "checkpoint_path": "/home/birkenwald/data/SEU-WXY/WXY-SEU/TrafficClassifier/Projects/Open-Detect/artifacts/paper-reproduction/v6-local-pcap-fivefold-corrected-v1/a1/fold1_seed2023/model_best.pt",
+        "checkpoint_sha256": "40d2fd2b5f56285d01501cfe2b794d670e485a100ee2edf2268f67ef7d89c7c6",
+        "split_array_sha256": {
+          "train": "23dd6ec77fe58bec6a9984e4aa6a33c9863473d733068a960b911458970dc075",
+          "validation": "40be3cedcbcb6a0bcc48c03aa8d8d5e4db78b1f42388001be3c807003dbfe3e4",
+          "test": "76f01dda0690d35fe40accd76901b8d6becaf28a3f8315eb9f07e6ce2d0e551c"
+        },
+        "known_classes": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15,
+          17,
+          18,
+          19
+        ],
+        "unknown_classes": [
+          16
+        ]
+      },
+      "a1/fold2_seed2024": {
+        "stage11b_run_dir": "/home/birkenwald/data/SEU-WXY/WXY-SEU/TrafficClassifier/Projects/unknown_traffic_project/stage11b_decoupled_support_readout/artifacts/a1/fold2_seed2024",
+        "stage11b_manifest_sha256": "6ca93f5f409ee49eefb543ea8f5b834655365cd0bdf0ef3e5ff09fa388d745a4",
+        "artifacts": {
+          "SUCCESS": "e237b2d0d37d71b82104ed351472e879041342a96a1ef3693ddc8b1f8f3c441e",
+          "config.json": "ca888a74ec071e7dab8ac714c3f4b5050dc941fc620d3c71808db8df5fe0e83f",
+          "results.json": "2f948a64e320ebf887c8dd4ae42653841be432ecedae976abb63917bcd04341e",
+          "sample_outputs.npz": "025aa43eacb6f90675003eb2dc4f79a6ad8f733bc9be2f3aa14c81a4ae6a0122"
+        },
+        "checkpoint_path": "/home/birkenwald/data/SEU-WXY/WXY-SEU/TrafficClassifier/Projects/Open-Detect/artifacts/paper-reproduction/v6-local-pcap-fivefold-corrected-v1/a1/fold2_seed2024/model_best.pt",
+        "checkpoint_sha256": "b5d484ac8197f03e86facbff8f282734fd1e87567baa2ce2af731b9ed3a0285e",
+        "split_array_sha256": {
+          "train": "cf91d999e065729c3d13ed093c670cd43b31ff95e14f93edc39d8ca6b537d4c0",
+          "validation": "b34142653e2bc7b0ef27d61545003fb6b5141ce7921e493246ace8dbe20527c3",
+          "test": "e4e394213ac4a459cc948d43e070f591b8c842bfbcbdf70b1de20c7d330f8da0"
+        },
+        "known_classes": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15,
+          17,
+          18,
+          19
+        ],
+        "unknown_classes": [
+          16
+        ]
+      },
+      "a1/fold3_seed2025": {
+        "stage11b_run_dir": "/home/birkenwald/data/SEU-WXY/WXY-SEU/TrafficClassifier/Projects/unknown_traffic_project/stage11b_decoupled_support_readout/artifacts/a1/fold3_seed2025",
+        "stage11b_manifest_sha256": "fba6c4a9c8a41b1df11349dfe8d38b33fa983ecb19814975f5e33f93422201f2",
+        "artifacts": {
+          "SUCCESS": "e237b2d0d37d71b82104ed351472e879041342a96a1ef3693ddc8b1f8f3c441e",
+          "config.json": "f2846a3b5cb531d70dc167ae8957b420cae072663fdfc4622aed9239ef1a834f",
+          "results.json": "21eb6fb92d562b8369665ad23522c5264a3b851c7fc2f9e270db986ed843e230",
+          "sample_outputs.npz": "e02b78ef65667e272bafeadc0bb7b5d088f8f97e7da6fa18b7a3fe8732aa723d"
+        },
+        "checkpoint_path": "/home/birkenwald/data/SEU-WXY/WXY-SEU/TrafficClassifier/Projects/Open-Detect/artifacts/paper-reproduction/v6-local-pcap-fivefold-corrected-v1/a1/fold3_seed2025/model_best.pt",
+        "checkpoint_sha256": "8d5044b8c93d27ebefbd7d5ad031ea91c28da618ba876ebc9e8d83b2c6eeb668",
+        "split_array_sha256": {
+          "train": "0804f623142a18d3e07f9a8234f8d99b077e28c0a87e926032b9a4bbb8d1fc6f",
+          "validation": "4736b9030df4b75527872a2545495fb029879f173458e8a9c86b9bedf6c0e2dd",
+          "test": "ec9c58ba83ba55c63cedc684b299e419ce9bc4362f80f0ce040e1de7f013e640"
+        },
+        "known_classes": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15,
+          17,
+          18,
+          19
+        ],
+        "unknown_classes": [
+          16
+        ]
+      },
+      "a1/fold4_seed2026": {
+        "stage11b_run_dir": "/home/birkenwald/data/SEU-WXY/WXY-SEU/TrafficClassifier/Projects/unknown_traffic_project/stage11b_decoupled_support_readout/artifacts/a1/fold4_seed2026",
+        "stage11b_manifest_sha256": "8e757699101cd68230a187121cc7185f4a73c4c2b105d6ef18bef6e9f5a70050",
+        "artifacts": {
+          "SUCCESS": "e237b2d0d37d71b82104ed351472e879041342a96a1ef3693ddc8b1f8f3c441e",
+          "config.json": "fc48b56235e2db9eaa17a6514b0080a7884adf6212aefe823b55b64c3d15020a",
+          "results.json": "89723bf8be45cf7a2eea40e790df97df1f83d359da46059b0094dbb766b9b834",
+          "sample_outputs.npz": "d663cbdb6540b19ff6628c9ca8ee40ab17059133db166d038095aadacdf5a913"
+        },
+        "checkpoint_path": "/home/birkenwald/data/SEU-WXY/WXY-SEU/TrafficClassifier/Projects/Open-Detect/artifacts/paper-reproduction/v6-local-pcap-fivefold-corrected-v1/a1/fold4_seed2026/model_best.pt",
+        "checkpoint_sha256": "ed1c5051ea7e01d0e06e94fa8bc0f76f7e001ef194a1cdf378fd7082da710fac",
+        "split_array_sha256": {
+          "train": "7860e1e1c5fc2774a4075214ea1664f33cfd7c40609f700b04244543ffdeac50",
+          "validation": "4e09e7d021304e46260b3c9e8fb859641ad3d4e1ebca4c1ae953e7907245e496",
+          "test": "396b8805a37a85976b59c1549ae9a1ae8502176373e20f175d8c23749e43c897"
+        },
+        "known_classes": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15,
+          17,
+          18,
+          19
+        ],
+        "unknown_classes": [
+          16
+        ]
+      },
+      "a2/fold0_seed2022": {
+        "stage11b_run_dir": "/home/birkenwald/data/SEU-WXY/WXY-SEU/TrafficClassifier/Projects/unknown_traffic_project/stage11b_decoupled_support_readout/artifacts/a2/fold0_seed2022",
+        "stage11b_manifest_sha256": "fdd479c7d6c6a014739dba961e218e564fdb1e6c5a58462987c8a4da56677845",
+        "artifacts": {
+          "SUCCESS": "e237b2d0d37d71b82104ed351472e879041342a96a1ef3693ddc8b1f8f3c441e",
+          "config.json": "2757cb6960528ff3c0fc1de2f9f93c479fcc9b89a48b3f3622b6f279f5dd4186",
+          "results.json": "57114d12dda3bec4605de05ce87e0f5f1f873fbc13b630f4790b02bdc8eb2672",
+          "sample_outputs.npz": "589e5259a1e029dfaecd7adb1d28a5d830e3e2c0d5a8fca38a4a3d63427d914e"
+        },
+        "checkpoint_path": "/home/birkenwald/data/SEU-WXY/WXY-SEU/TrafficClassifier/Projects/Open-Detect/artifacts/paper-reproduction/v6-local-pcap-fivefold-corrected-v1/a2/fold0_seed2022/model_best.pt",
+        "checkpoint_sha256": "6604b3e1e03824cd4d47f0fee985a6bd911b800730e7ebd93ece8d2679d4e762",
+        "split_array_sha256": {
+          "train": "8856da8eb188e10f2fc80591157cad1b3c2f3cb5793b993f665a72e7b68dee83",
+          "validation": "5d050b0d8d03c6695b88b733ee13865ea9a4d78878812a5309343f627968c263",
+          "test": "d8406255ae50ff2af0e9ac9f512c1abd4f800b03a9b1bfcee0a55d43447fb4e1"
+        },
+        "known_classes": [
+          0,
+          1,
+          3,
+          4,
+          7,
+          8,
+          9,
+          11,
+          14,
+          17,
+          2,
+          5,
+          6,
+          10,
+          12,
+          18,
+          19
+        ],
+        "unknown_classes": [
+          13,
+          15,
+          16
+        ]
+      },
+      "a2/fold1_seed2023": {
+        "stage11b_run_dir": "/home/birkenwald/data/SEU-WXY/WXY-SEU/TrafficClassifier/Projects/unknown_traffic_project/stage11b_decoupled_support_readout/artifacts/a2/fold1_seed2023",
+        "stage11b_manifest_sha256": "8c50fad7f0611a1cefc0210af6d95e4b32d2f1cfa051139a9993cd8c0dfdf548",
+        "artifacts": {
+          "SUCCESS": "e237b2d0d37d71b82104ed351472e879041342a96a1ef3693ddc8b1f8f3c441e",
+          "config.json": "32153c365bcbb986594d1bb652fd83872ffcec600e0605637c892fe0baf85e25",
+          "results.json": "e0953057debcee458f10294ae9c1e18103b1d00494d6366a24e186ed7ee96ddd",
+          "sample_outputs.npz": "bcfb942b4e6be290815a2928327421b0b8ff89eb6b05c29da1896e2f96162082"
+        },
+        "checkpoint_path": "/home/birkenwald/data/SEU-WXY/WXY-SEU/TrafficClassifier/Projects/Open-Detect/artifacts/paper-reproduction/v6-local-pcap-fivefold-corrected-v1/a2/fold1_seed2023/model_best.pt",
+        "checkpoint_sha256": "e061b1d763ab0ad6aed8d8ff5733fb32f8af3c3e21641d91f4fa41ae6ab40b9b",
+        "split_array_sha256": {
+          "train": "23dd6ec77fe58bec6a9984e4aa6a33c9863473d733068a960b911458970dc075",
+          "validation": "40be3cedcbcb6a0bcc48c03aa8d8d5e4db78b1f42388001be3c807003dbfe3e4",
+          "test": "76f01dda0690d35fe40accd76901b8d6becaf28a3f8315eb9f07e6ce2d0e551c"
+        },
+        "known_classes": [
+          0,
+          1,
+          3,
+          4,
+          7,
+          8,
+          9,
+          11,
+          14,
+          17,
+          2,
+          5,
+          6,
+          10,
+          12,
+          18,
+          19
+        ],
+        "unknown_classes": [
+          13,
+          15,
+          16
+        ]
+      },
+      "a2/fold2_seed2024": {
+        "stage11b_run_dir": "/home/birkenwald/data/SEU-WXY/WXY-SEU/TrafficClassifier/Projects/unknown_traffic_project/stage11b_decoupled_support_readout/artifacts/a2/fold2_seed2024",
+        "stage11b_manifest_sha256": "517eb7255c914796853e3699246a5cf805b7a3de82eb6682ca4e69b48e2f336b",
+        "artifacts": {
+          "SUCCESS": "e237b2d0d37d71b82104ed351472e879041342a96a1ef3693ddc8b1f8f3c441e",
+          "config.json": "473a33e414a8275d20f9ebb2a514fa93d870f4fd7e6e31c02c3bb3422ba0dd37",
+          "results.json": "25dcabfbdb627819d830bb1400d98bf0e2bd0532ff0fbca75458a33604f18641",
+          "sample_outputs.npz": "662f1e602e43af76c8c8a227434a005ad7d996ecad4163caafa1861c15ee78d5"
+        },
+        "checkpoint_path": "/home/birkenwald/data/SEU-WXY/WXY-SEU/TrafficClassifier/Projects/Open-Detect/artifacts/paper-reproduction/v6-local-pcap-fivefold-corrected-v1/a2/fold2_seed2024/model_best.pt",
+        "checkpoint_sha256": "c9643b3bb2c90b0e52bff69c68d25a7f3640de6bfc2ea301a9000e23862dbd81",
+        "split_array_sha256": {
+          "train": "cf91d999e065729c3d13ed093c670cd43b31ff95e14f93edc39d8ca6b537d4c0",
+          "validation": "b34142653e2bc7b0ef27d61545003fb6b5141ce7921e493246ace8dbe20527c3",
+          "test": "e4e394213ac4a459cc948d43e070f591b8c842bfbcbdf70b1de20c7d330f8da0"
+        },
+        "known_classes": [
+          0,
+          1,
+          3,
+          4,
+          7,
+          8,
+          9,
+          11,
+          14,
+          17,
+          2,
+          5,
+          6,
+          10,
+          12,
+          18,
+          19
+        ],
+        "unknown_classes": [
+          13,
+          15,
+          16
+        ]
+      },
+      "a2/fold3_seed2025": {
+        "stage11b_run_dir": "/home/birkenwald/data/SEU-WXY/WXY-SEU/TrafficClassifier/Projects/unknown_traffic_project/stage11b_decoupled_support_readout/artifacts/a2/fold3_seed2025",
+        "stage11b_manifest_sha256": "9f75adb121e99876362f103eab50743bc69ab9a9f0506234a292498260905ac2",
+        "artifacts": {
+          "SUCCESS": "e237b2d0d37d71b82104ed351472e879041342a96a1ef3693ddc8b1f8f3c441e",
+          "config.json": "2d59d81a5ae4093548ee2d33e2e8f1871e16667ec929822f9c3c7c55ccc2fd8c",
+          "results.json": "3e3ad74381de903fbc9768be2377d13fce8065551975313de5c4091932a3ada8",
+          "sample_outputs.npz": "60424a00c07c995c24627a2602c6035417b1a53f404baa753dd8ada36b7a53ce"
+        },
+        "checkpoint_path": "/home/birkenwald/data/SEU-WXY/WXY-SEU/TrafficClassifier/Projects/Open-Detect/artifacts/paper-reproduction/v6-local-pcap-fivefold-corrected-v1/a2/fold3_seed2025/model_best.pt",
+        "checkpoint_sha256": "cee8cd348138dab15e0587720db71394577541118e2a6dcee9cf708cc982c297",
+        "split_array_sha256": {
+          "train": "0804f623142a18d3e07f9a8234f8d99b077e28c0a87e926032b9a4bbb8d1fc6f",
+          "validation": "4736b9030df4b75527872a2545495fb029879f173458e8a9c86b9bedf6c0e2dd",
+          "test": "ec9c58ba83ba55c63cedc684b299e419ce9bc4362f80f0ce040e1de7f013e640"
+        },
+        "known_classes": [
+          0,
+          1,
+          3,
+          4,
+          7,
+          8,
+          9,
+          11,
+          14,
+          17,
+          2,
+          5,
+          6,
+          10,
+          12,
+          18,
+          19
+        ],
+        "unknown_classes": [
+          13,
+          15,
+          16
+        ]
+      },
+      "a2/fold4_seed2026": {
+        "stage11b_run_dir": "/home/birkenwald/data/SEU-WXY/WXY-SEU/TrafficClassifier/Projects/unknown_traffic_project/stage11b_decoupled_support_readout/artifacts/a2/fold4_seed2026",
+        "stage11b_manifest_sha256": "a9d213465e3eae76bed9b8120854c68e9c02c3b53e1f9251f9b98b66b43db18f",
+        "artifacts": {
+          "SUCCESS": "e237b2d0d37d71b82104ed351472e879041342a96a1ef3693ddc8b1f8f3c441e",
+          "config.json": "47c57a16426ca94744adf6ac8efddd3d3d39fd49e1b21195aae85a5a7a986f51",
+          "results.json": "80bc78bc14f40bc670f99416b181aefcbf49a63a268b4b7b03b89ec4a94d8e1f",
+          "sample_outputs.npz": "aaed573449f5a92ed611beb585e179c14e18d954f7748ad1bddffaa14d153e59"
+        },
+        "checkpoint_path": "/home/birkenwald/data/SEU-WXY/WXY-SEU/TrafficClassifier/Projects/Open-Detect/artifacts/paper-reproduction/v6-local-pcap-fivefold-corrected-v1/a2/fold4_seed2026/model_best.pt",
+        "checkpoint_sha256": "18a220d4de5372031f582abd38514b89442cef985fe91661ae331a99bb79a96b",
+        "split_array_sha256": {
+          "train": "7860e1e1c5fc2774a4075214ea1664f33cfd7c40609f700b04244543ffdeac50",
+          "validation": "4e09e7d021304e46260b3c9e8fb859641ad3d4e1ebca4c1ae953e7907245e496",
+          "test": "396b8805a37a85976b59c1549ae9a1ae8502176373e20f175d8c23749e43c897"
+        },
+        "known_classes": [
+          0,
+          1,
+          3,
+          4,
+          7,
+          8,
+          9,
+          11,
+          14,
+          17,
+          2,
+          5,
+          6,
+          10,
+          12,
+          18,
+          19
+        ],
+        "unknown_classes": [
+          13,
+          15,
+          16
+        ]
+      },
+      "a3/fold0_seed2022": {
+        "stage11b_run_dir": "/home/birkenwald/data/SEU-WXY/WXY-SEU/TrafficClassifier/Projects/unknown_traffic_project/stage11b_decoupled_support_readout/artifacts/a3/fold0_seed2022",
+        "stage11b_manifest_sha256": "395898837e4d570c82e53d8bf193186037e8a036349775af6abb2ecf02e59587",
+        "artifacts": {
+          "SUCCESS": "e237b2d0d37d71b82104ed351472e879041342a96a1ef3693ddc8b1f8f3c441e",
+          "config.json": "6f64c1f1df05d0a8fb8b7f0c1284df255da054af0204d9410afdbf221d53fa65",
+          "results.json": "a882c6d930552b7c53f4220dbab1e423bd44f3eb84cbb73218c2e61a7ddf1072",
+          "sample_outputs.npz": "529607e42f0dfc77a1cbbbc17a56e3f1e0a87e98e446a5b0284eb58ec677afd0"
+        },
+        "checkpoint_path": "/home/birkenwald/data/SEU-WXY/WXY-SEU/TrafficClassifier/Projects/Open-Detect/artifacts/paper-reproduction/v6-local-pcap-fivefold-corrected-v1/a3/fold0_seed2022/model_best.pt",
+        "checkpoint_sha256": "92e86ad6d562a8be9998107ba95172b854d7c868f9be59dba4c39d1fca768880",
+        "split_array_sha256": {
+          "train": "8856da8eb188e10f2fc80591157cad1b3c2f3cb5793b993f665a72e7b68dee83",
+          "validation": "5d050b0d8d03c6695b88b733ee13865ea9a4d78878812a5309343f627968c263",
+          "test": "d8406255ae50ff2af0e9ac9f512c1abd4f800b03a9b1bfcee0a55d43447fb4e1"
+        },
+        "known_classes": [
+          0,
+          1,
+          3,
+          4,
+          7,
+          8,
+          9,
+          11,
+          14,
+          17,
+          2,
+          5,
+          6,
+          10,
+          12
+        ],
+        "unknown_classes": [
+          13,
+          15,
+          16,
+          18,
+          19
+        ]
+      },
+      "a3/fold1_seed2023": {
+        "stage11b_run_dir": "/home/birkenwald/data/SEU-WXY/WXY-SEU/TrafficClassifier/Projects/unknown_traffic_project/stage11b_decoupled_support_readout/artifacts/a3/fold1_seed2023",
+        "stage11b_manifest_sha256": "061f32f2f6cabc5086120f5aeef78aa28f3c8579aa1b2f754b020624a85a650b",
+        "artifacts": {
+          "SUCCESS": "e237b2d0d37d71b82104ed351472e879041342a96a1ef3693ddc8b1f8f3c441e",
+          "config.json": "f00bb157480e587afabbe2ffd4a96856c930e5e24b66ee923f2832f60215431c",
+          "results.json": "b0d74d46f9c88a64c293e8346d66f384ec02eba144626b80d43c6de83fadc313",
+          "sample_outputs.npz": "8f86a5616871618da9cd8b4c826a3063148bf0da4f0c0fd961a91b1ab3ee4974"
+        },
+        "checkpoint_path": "/home/birkenwald/data/SEU-WXY/WXY-SEU/TrafficClassifier/Projects/Open-Detect/artifacts/paper-reproduction/v6-local-pcap-fivefold-corrected-v1/a3/fold1_seed2023/model_best.pt",
+        "checkpoint_sha256": "352eb14b57b5dc18d31b7b624f1496fca9cf7b04cc8de8f9ada9d687b5a90648",
+        "split_array_sha256": {
+          "train": "23dd6ec77fe58bec6a9984e4aa6a33c9863473d733068a960b911458970dc075",
+          "validation": "40be3cedcbcb6a0bcc48c03aa8d8d5e4db78b1f42388001be3c807003dbfe3e4",
+          "test": "76f01dda0690d35fe40accd76901b8d6becaf28a3f8315eb9f07e6ce2d0e551c"
+        },
+        "known_classes": [
+          0,
+          1,
+          3,
+          4,
+          7,
+          8,
+          9,
+          11,
+          14,
+          17,
+          2,
+          5,
+          6,
+          10,
+          12
+        ],
+        "unknown_classes": [
+          13,
+          15,
+          16,
+          18,
+          19
+        ]
+      },
+      "a3/fold2_seed2024": {
+        "stage11b_run_dir": "/home/birkenwald/data/SEU-WXY/WXY-SEU/TrafficClassifier/Projects/unknown_traffic_project/stage11b_decoupled_support_readout/artifacts/a3/fold2_seed2024",
+        "stage11b_manifest_sha256": "40dbd0666a8cbaec86b7234f1bef5f8f200e5074f24b9b61aa1cf4e78be63272",
+        "artifacts": {
+          "SUCCESS": "e237b2d0d37d71b82104ed351472e879041342a96a1ef3693ddc8b1f8f3c441e",
+          "config.json": "8910b63b1ee9ed5eac137f72c38ecd52f75c82a535102395f1a336de2d57e3f4",
+          "results.json": "2e41634ee1e73848fcd7dcf879e3025d245672e960319b56a6d2f0b7adcc4979",
+          "sample_outputs.npz": "7b2aa4b330bf307b9eaed571c0b44cde14aecf9ea719d1f4946ef7f5bf9f9296"
+        },
+        "checkpoint_path": "/home/birkenwald/data/SEU-WXY/WXY-SEU/TrafficClassifier/Projects/Open-Detect/artifacts/paper-reproduction/v6-local-pcap-fivefold-corrected-v1/a3/fold2_seed2024/model_best.pt",
+        "checkpoint_sha256": "8e85df3014ec14874912fc2e3e349b110dbc86fcb26bb2c3a39061a44d56b96a",
+        "split_array_sha256": {
+          "train": "cf91d999e065729c3d13ed093c670cd43b31ff95e14f93edc39d8ca6b537d4c0",
+          "validation": "b34142653e2bc7b0ef27d61545003fb6b5141ce7921e493246ace8dbe20527c3",
+          "test": "e4e394213ac4a459cc948d43e070f591b8c842bfbcbdf70b1de20c7d330f8da0"
+        },
+        "known_classes": [
+          0,
+          1,
+          3,
+          4,
+          7,
+          8,
+          9,
+          11,
+          14,
+          17,
+          2,
+          5,
+          6,
+          10,
+          12
+        ],
+        "unknown_classes": [
+          13,
+          15,
+          16,
+          18,
+          19
+        ]
+      },
+      "a3/fold3_seed2025": {
+        "stage11b_run_dir": "/home/birkenwald/data/SEU-WXY/WXY-SEU/TrafficClassifier/Projects/unknown_traffic_project/stage11b_decoupled_support_readout/artifacts/a3/fold3_seed2025",
+        "stage11b_manifest_sha256": "ab628c7af7d0d22dda88095cbc7e4e3b619c712f306c519a6d172845bb4ee5c5",
+        "artifacts": {
+          "SUCCESS": "e237b2d0d37d71b82104ed351472e879041342a96a1ef3693ddc8b1f8f3c441e",
+          "config.json": "cbe1b76d25d8f22c4018180e2503cd698d8620b58ebad4bb3652149ecaf4d206",
+          "results.json": "73cd239be28f0bf134f2c8f8bfa8094961ce917a611baab3cd1567e8ff6f5d63",
+          "sample_outputs.npz": "4f5639e3f53f3225de529f6dc0e51d1c3ef57de8ad294dd2f657672f97420d0a"
+        },
+        "checkpoint_path": "/home/birkenwald/data/SEU-WXY/WXY-SEU/TrafficClassifier/Projects/Open-Detect/artifacts/paper-reproduction/v6-local-pcap-fivefold-corrected-v1/a3/fold3_seed2025/model_best.pt",
+        "checkpoint_sha256": "e098e137b2f4f173fb9e4248f86a19bf65a8f94cd6a19257032e5855ad5dbf2d",
+        "split_array_sha256": {
+          "train": "0804f623142a18d3e07f9a8234f8d99b077e28c0a87e926032b9a4bbb8d1fc6f",
+          "validation": "4736b9030df4b75527872a2545495fb029879f173458e8a9c86b9bedf6c0e2dd",
+          "test": "ec9c58ba83ba55c63cedc684b299e419ce9bc4362f80f0ce040e1de7f013e640"
+        },
+        "known_classes": [
+          0,
+          1,
+          3,
+          4,
+          7,
+          8,
+          9,
+          11,
+          14,
+          17,
+          2,
+          5,
+          6,
+          10,
+          12
+        ],
+        "unknown_classes": [
+          13,
+          15,
+          16,
+          18,
+          19
+        ]
+      },
+      "a3/fold4_seed2026": {
+        "stage11b_run_dir": "/home/birkenwald/data/SEU-WXY/WXY-SEU/TrafficClassifier/Projects/unknown_traffic_project/stage11b_decoupled_support_readout/artifacts/a3/fold4_seed2026",
+        "stage11b_manifest_sha256": "1274900b5874389892c9877ab90d941d69ae548f51910a9e90899058375bfaea",
+        "artifacts": {
+          "SUCCESS": "e237b2d0d37d71b82104ed351472e879041342a96a1ef3693ddc8b1f8f3c441e",
+          "config.json": "525ec8a491b923d3af8387c5ba84430f2e6a7ed7a10739995239c0596638d96f",
+          "results.json": "462aa42c311e041f56387aa0e634a7f3e493c3c81d8970ae259b034f7fb53a79",
+          "sample_outputs.npz": "8f50c93d36435e81f6173bd0930ecf1cbd2385ad0613a9ae17c1b4128abf9886"
+        },
+        "checkpoint_path": "/home/birkenwald/data/SEU-WXY/WXY-SEU/TrafficClassifier/Projects/Open-Detect/artifacts/paper-reproduction/v6-local-pcap-fivefold-corrected-v1/a3/fold4_seed2026/model_best.pt",
+        "checkpoint_sha256": "ac06b766d4667c427e070a08886f697a4740ed12d5a92b2bc9b6ad9a84c04a87",
+        "split_array_sha256": {
+          "train": "7860e1e1c5fc2774a4075214ea1664f33cfd7c40609f700b04244543ffdeac50",
+          "validation": "4e09e7d021304e46260b3c9e8fb859641ad3d4e1ebca4c1ae953e7907245e496",
+          "test": "396b8805a37a85976b59c1549ae9a1ae8502176373e20f175d8c23749e43c897"
+        },
+        "known_classes": [
+          0,
+          1,
+          3,
+          4,
+          7,
+          8,
+          9,
+          11,
+          14,
+          17,
+          2,
+          5,
+          6,
+          10,
+          12
+        ],
+        "unknown_classes": [
+          13,
+          15,
+          16,
+          18,
+          19
+        ]
+      }
+    },
+    "unique_checkpoint_hashes": 15
+  },
+  "new_encoder_training": false,
+  "external_test_datasets_read": [],
+  "cipherspectrum_test_read": false,
+  "frozen_experiment_modified": false,
+  "failures": []
+}

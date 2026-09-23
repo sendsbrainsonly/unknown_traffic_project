@@ -1,0 +1,7 @@
+setting,method,positive_class,score_orientation,AUROC,AUPRC
+medium,Native,Known,higher_is_more_known,0.49796968243527195,0.40687604527250254
+medium,Single-Full-K1,Known,higher_is_more_known,0.7797532546730253,0.6434646852466653
+medium,Multi-Global-K2,Known,higher_is_more_known,0.7953853989658134,0.6949777876868547
+medium,Class-P05-K2,Known,higher_is_more_known,0.7266677035940726,0.5886796105595804
+medium,Component-P05-K2,Known,higher_is_more_known,0.5970738753677209,0.4457020439719528
+medium,DGSB-v2,Known,higher_is_more_known,0.7817150185459262,0.6485697366228149

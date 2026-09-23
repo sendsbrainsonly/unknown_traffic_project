@@ -1,0 +1,14 @@
+{
+  "batch_size": 64,
+  "embedding_shape": [
+    64,
+    768
+  ],
+  "logits_shape": [
+    64,
+    6
+  ],
+  "loss": 1.7891782522201538,
+  "peak_gpu_memory_bytes": 31718369280,
+  "status": "PASS"
+}

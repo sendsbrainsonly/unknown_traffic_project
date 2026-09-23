@@ -1,0 +1,78 @@
+{
+  "config": {
+    "claim_scope": "diagnostic",
+    "evaluation": {
+      "auroc_ties": "sklearn roc_auc_score",
+      "correlation_scope": "exploratory because protocol-class rows are not independent",
+      "p95_method": "higher",
+      "sample_ranking_chunk": 512,
+      "spearman": "two-sided scipy.stats.spearmanr",
+      "threshold": "existing method-specific Known-Validation P95; recomputed only for parity",
+      "unknown_positive": true
+    },
+    "experiment_id": "stage15a-failure-regime-complementarity-20260918-v1",
+    "forbidden": [
+      "encoder training or fine-tuning",
+      "new detector design",
+      "fusion weight search",
+      "k search",
+      "threshold tuning on Test or Unknown",
+      "modification of frozen Stage 14B/14C/14D artifacts"
+    ],
+    "gate": {
+      "COMPLEMENTARITY_CONFIRMED": "VNAT has both positive and negative M1-vs-M0 class-protocol deltas in at least 20% of units each; both methods contribute at least 10% of discordant exact ranking decisions and operating-point rescues; at least one preregistered mechanism variable has |Spearman rho| >= 0.30 with p < 0.05 in the predicted direction; directionally similar gain/loss regimes occur in at least one supplementary dataset.",
+      "NO_USEFUL_COMPLEMENTARITY": "Rescue is effectively one-sided, or one method dominates without repeatable opposing failure regimes.",
+      "PARTIAL_COMPLEMENTARITY": "Bidirectional rescue and both gain/loss regimes exist, but one or more stability, mechanism-correlation, or cross-dataset conditions for confirmation is absent."
+    },
+    "primary_dataset": "VNAT",
+    "score_definitions": {
+      "D_proto": "0.5 * minimum squared Euclidean distance from mu to learned prototype",
+      "M0": "min learned-prototype forward Gaussian KL",
+      "M1": "minimum squared Euclidean distance from mu to Known-Train empirical centroid",
+      "M2": "existing frozen 0.5 * robust_z(M1) + 0.5 * robust_z(class-conditional kNN-10)",
+      "V_post": "0.5 * sum(exp(logvar) - logvar - 1)",
+      "closed_confusion_strength": "Known-Validation native off-diagonal rate for the unknown sample's nearest empirical-centroid class",
+      "normalized_prototype_gap": "prototype_gap / (median Known-Train within-class radius + 1e-12)",
+      "prototype_gap": "Euclidean learned-prototype to matching empirical-centroid distance",
+      "ranking_complementarity": "exact unknown-known pair ordering; correct iff unknown score > paired Known-Test score",
+      "support_d1_d2": "first and second Euclidean distances to Known-Train empirical centroids",
+      "support_margin": "d2 - d1",
+      "support_overlap": "unknown d1 <= Known-Validation d1 P95",
+      "support_ratio": "d1 / (d2 + 1e-12)"
+    },
+    "stage": "15A",
+    "supplementary_datasets": {
+      "ISCX-VPN": "M0/M1 frozen external scores available; no frozen M2",
+      "ISCXTor2016": "M0/M1 frozen external scores available; no frozen M2",
+      "USTC-TFC2016": "M0/M1/M2 frozen development scores available"
+    }
+  },
+  "config_sha256": "8dc56fe86fd799b25e0e2c3462c3d8e7aca162e50b299d1eebec82fbc624ffb6",
+  "datasets": [
+    "ISCX-VPN",
+    "ISCXTor2016",
+    "USTC-TFC2016",
+    "VNAT"
+  ],
+  "gate": "COMPLEMENTARITY_CONFIRMED",
+  "gate_evidence": {
+    "gate": "COMPLEMENTARITY_CONFIRMED",
+    "predicted_direction_significant_mechanism_count": 2,
+    "supplementary_gain_and_loss_dataset_present": true,
+    "vnat_negative_class_protocol_fraction": 0.4666666666666667,
+    "vnat_operating_des_share_of_discordant": 0.4336677397619226,
+    "vnat_operating_od_share_of_discordant": 0.5663322602380774,
+    "vnat_positive_class_protocol_fraction": 0.5333333333333333,
+    "vnat_ranking_des_share_of_discordant": 0.5551566267185655,
+    "vnat_ranking_od_share_of_discordant": 0.4448433732814346
+  },
+  "hybrid_design": false,
+  "new_detector_fitting": false,
+  "new_encoder_training": false,
+  "protocols": 60,
+  "sample_comparison_rows": 481190,
+  "source_hashes_unchanged": true,
+  "status": "PASS",
+  "threshold_search": false,
+  "unknown_class_units": 160
+}

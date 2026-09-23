@@ -1,0 +1,634 @@
+{
+  "artifacts": [
+    {
+      "path": "README.md",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 2444,
+      "sha256": "ef69621478aad7da81d486005e73c3d9cfd9bd2edccdb42f266e7d73b37a3e3c",
+      "hash_status": "verified"
+    },
+    {
+      "path": "artifacts/dgsbv2_global_spec.json",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 931,
+      "sha256": "4cadbc55766e6d07b944422a65e26c52ac140b48fa0c4d88c24635cf9146c271",
+      "hash_status": "verified"
+    },
+    {
+      "path": "artifacts/dgsbv2_global_spec.md",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 811,
+      "sha256": "671ca66a8fa36761aa318b9159a7325bb4b3cc4362850e348c95334f65ed5981",
+      "hash_status": "verified"
+    },
+    {
+      "path": "artifacts/high/dgsbv2_fallback_map.csv",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 3672,
+      "sha256": "b776bb65529ade4618d1adab1056b96b0d0a57e920e483f0565380968ad5b91d",
+      "hash_status": "verified"
+    },
+    {
+      "path": "artifacts/high/dgsbv2_global_threshold.json",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 468,
+      "sha256": "7cdeb900d282ae7dfe6bc09d6cfcef485b06b1f91ebced738261e6f71a62a742",
+      "hash_status": "verified"
+    },
+    {
+      "path": "artifacts/high/dgsbv2_hashes.sha256",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 443,
+      "sha256": "36520817bd0f0da9a7ffcbe9f731788b8f468c71c8998fe7f2c23427b1aff056",
+      "hash_status": "verified"
+    },
+    {
+      "path": "artifacts/high/dgsbv2_local_thresholds.csv",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 11838,
+      "sha256": "4a4999ef4110ae56e85c99fbaa1cc15f8dccbad71d4dfe9433c8708139a73d22",
+      "hash_status": "verified"
+    },
+    {
+      "path": "artifacts/high/dgsbv2_rule.json",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 1182,
+      "sha256": "fa8e5eb2ef7449d2675ac8ae4c3d552fa4f63752e049dc49cdef04244eb3d250",
+      "hash_status": "verified"
+    },
+    {
+      "path": "artifacts/high/dgsbv2_rule.md",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 652,
+      "sha256": "3c06d3e6006658e4e842e9e18202b82967960d17fc5c18cf9398e9ae87b31af2",
+      "hash_status": "verified"
+    },
+    {
+      "path": "artifacts/low/dgsbv2_fallback_map.csv",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 4339,
+      "sha256": "1041b32c5197c6a5c4edc77ec42bbf5a68dffca5ba5133e93aa550341756fced",
+      "hash_status": "verified"
+    },
+    {
+      "path": "artifacts/low/dgsbv2_global_threshold.json",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 468,
+      "sha256": "cb06b661f46856b38973a1e9dc09d853e487f82a6fea96b24bb2062db438b2b0",
+      "hash_status": "verified"
+    },
+    {
+      "path": "artifacts/low/dgsbv2_hashes.sha256",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 443,
+      "sha256": "44ba638ea4b3957ac77568de8ac372d589ff6cab55ced42a0a710b2846076dc8",
+      "hash_status": "verified"
+    },
+    {
+      "path": "artifacts/low/dgsbv2_local_thresholds.csv",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 14795,
+      "sha256": "ac53d2427ace02f7ba177f839c42f86056d432c8654372f0f56fea23b312ffc8",
+      "hash_status": "verified"
+    },
+    {
+      "path": "artifacts/low/dgsbv2_rule.json",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 1182,
+      "sha256": "111a32d40498c6c7c9cfefedeb1dcbb2f4d3b8d2e3fb27a72d77fdb609baad1c",
+      "hash_status": "verified"
+    },
+    {
+      "path": "artifacts/low/dgsbv2_rule.md",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 652,
+      "sha256": "33b00dba061df4dc9f675119bb0fd320884cd3390a959a002bca23d98b7666f5",
+      "hash_status": "verified"
+    },
+    {
+      "path": "artifacts/medium/dgsbv2_fallback_map.csv",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 4085,
+      "sha256": "616ff6b1d45d86b2dad8220d27e40d97b00e116c95234abcc1dacbf16afabada",
+      "hash_status": "verified"
+    },
+    {
+      "path": "artifacts/medium/dgsbv2_global_threshold.json",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 469,
+      "sha256": "7a76c1fb97bfbce03ca3085b050325803ad079585b8544a8d27ef5dc0fdd8c1d",
+      "hash_status": "verified"
+    },
+    {
+      "path": "artifacts/medium/dgsbv2_hashes.sha256",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 443,
+      "sha256": "3839eb31111bbf17450ae43be1c6abe0f623991a31aa08bd59894074d931a50a",
+      "hash_status": "verified"
+    },
+    {
+      "path": "artifacts/medium/dgsbv2_local_thresholds.csv",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 13454,
+      "sha256": "00b463875962a6808def3e2aac005be838c691a059407f691ca95ea4fe088cd7",
+      "hash_status": "verified"
+    },
+    {
+      "path": "artifacts/medium/dgsbv2_rule.json",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 1183,
+      "sha256": "b42bcb0919376f5734de34340b40e892f4a89d7a52f61dca3e3a90ba6a689519",
+      "hash_status": "verified"
+    },
+    {
+      "path": "artifacts/medium/dgsbv2_rule.md",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 655,
+      "sha256": "d16c0cbc5f39f27fd16402171c42ed7c9eb955160cd19f3a1f60592fdea765b4",
+      "hash_status": "verified"
+    },
+    {
+      "path": "configs/evaluation_config_v2.json",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 36411,
+      "sha256": "2eadc7c7ce5cba91d5d164ee541aae7d1f6f600cdfe995046ddbf0d7b0f49b60",
+      "hash_status": "verified"
+    },
+    {
+      "path": "configs/stage8b_config.json",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 2206,
+      "sha256": "4371e9659d71a9abff88c4d9ecfa3bf1c34cf25fb1991e3c15cc62dd50b0b9ac",
+      "hash_status": "verified"
+    },
+    {
+      "path": "outputs/high/calibration_summary.json",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 1532,
+      "sha256": "d4b7de94d1c87c89c0f76b2bf07d0b38c013b5f672e865fefa5bca137cb90878",
+      "hash_status": "verified"
+    },
+    {
+      "path": "outputs/high/file_access_audit.json",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 1477,
+      "sha256": "94b01d0f2d1cf061b5300f08524b9e1930c57ebfdf0d94c38907d6f896a3a5db",
+      "hash_status": "verified"
+    },
+    {
+      "path": "outputs/high/gate_contribution.csv",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 352,
+      "sha256": "082b2ac09c203780b84b2fc705294d9238f270368f182c5b499288a4fa431551",
+      "hash_status": "verified"
+    },
+    {
+      "path": "outputs/high/known_only_method_comparison.csv",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 1022,
+      "sha256": "2b74e30b6e26c72a571adff90090e5f31ad8865b2c98e5d49ddfc0d0feba3e02",
+      "hash_status": "verified"
+    },
+    {
+      "path": "outputs/high/per_class_coverage.csv",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 1892,
+      "sha256": "af54ca733523ac9f2a5e55620f96b5d76c1cc192ee8f50fdaf4a5d3c0a279742",
+      "hash_status": "verified"
+    },
+    {
+      "path": "outputs/high/per_component_coverage.csv",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 8286,
+      "sha256": "de1aec17e2748f7a7e83b8e6fa94f2eb06aa0c97fceccb4eb3bd8c839a098b3b",
+      "hash_status": "verified"
+    },
+    {
+      "path": "outputs/low/calibration_summary.json",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 1533,
+      "sha256": "53aa1aac04624b03b4927eb5baa4649df3808e3adb04d4c713c989f99c5a91ea",
+      "hash_status": "verified"
+    },
+    {
+      "path": "outputs/low/file_access_audit.json",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 1472,
+      "sha256": "29de64b1974e49cd6ea90b695563013049fb34d07a6642d3ccbd78b53175d8c2",
+      "hash_status": "verified"
+    },
+    {
+      "path": "outputs/low/gate_contribution.csv",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 350,
+      "sha256": "edaff03cc82480a6f8b0f8de06847a3673ef3111f2228d6564932318221659bd",
+      "hash_status": "verified"
+    },
+    {
+      "path": "outputs/low/known_only_method_comparison.csv",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 1015,
+      "sha256": "5209db406b1f5858a16328ef94d0decb02450301fb6c95eab3faaa00582eaf44",
+      "hash_status": "verified"
+    },
+    {
+      "path": "outputs/low/per_class_coverage.csv",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 2359,
+      "sha256": "973ba23d17f08d62f86c7a0073ac42d08c2465420a5dc90fb57ccc9a8c31d3c4",
+      "hash_status": "verified"
+    },
+    {
+      "path": "outputs/low/per_component_coverage.csv",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 10488,
+      "sha256": "8a262a596573bd83ffcf7b69cca996a0049cf0bbf4564668dce34bbe9faf4b41",
+      "hash_status": "verified"
+    },
+    {
+      "path": "outputs/medium/calibration_summary.json",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 1535,
+      "sha256": "590a86df4dd554207cb1f4386a934a946ae2c66f83e986159d78e53e791ee08d",
+      "hash_status": "verified"
+    },
+    {
+      "path": "outputs/medium/file_access_audit.json",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 1487,
+      "sha256": "6818a39e80e785a462afdf2f65d400f7bae53653502151a77acba9a9e7da549f",
+      "hash_status": "verified"
+    },
+    {
+      "path": "outputs/medium/gate_contribution.csv",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 361,
+      "sha256": "3bdec2785bdd90342c3e4286b8e215d18986eff7be45923fb26f9c5f82f97f2e",
+      "hash_status": "verified"
+    },
+    {
+      "path": "outputs/medium/known_only_method_comparison.csv",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 1016,
+      "sha256": "f6f70c340182c4c6d839062e3767ea64fe01f5378f65bba1f53dc704c84e677c",
+      "hash_status": "verified"
+    },
+    {
+      "path": "outputs/medium/per_class_coverage.csv",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 2234,
+      "sha256": "944c4d1db1a3c2e8741f5967ae333dd459484292d9bb295c2ea11cb4b6990bda",
+      "hash_status": "verified"
+    },
+    {
+      "path": "outputs/medium/per_component_coverage.csv",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 9356,
+      "sha256": "8f097288501c476579307496517a1bfd090b09c58efd0c95e5d80e6102206e40",
+      "hash_status": "verified"
+    },
+    {
+      "path": "outputs/summary/completion_report.json",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 6336,
+      "sha256": "d1c5683b5f94d91e2ae24bf61bb818fbce7e512724458600ce71e20371f60c60",
+      "hash_status": "verified"
+    },
+    {
+      "path": "outputs/summary/cross_setting_summary.csv",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 1516,
+      "sha256": "85b5aa503b89c24a87d52e9c88146424f16c16475642eac879c0cc57672e1919",
+      "hash_status": "verified"
+    },
+    {
+      "path": "outputs/summary/evaluation_config_diff.md",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 382,
+      "sha256": "414491e8794b36591b81a18208cf3689bc3d0b0dc395155d5bae06812084fcfd",
+      "hash_status": "verified"
+    },
+    {
+      "path": "outputs/summary/final_gate.json",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 1727,
+      "sha256": "23e571b94b44dec8574414e2aee3123e68a90250d8e77e1903b0d35d25249538",
+      "hash_status": "verified"
+    },
+    {
+      "path": "outputs/summary/final_gate.md",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 722,
+      "sha256": "af9d350d7bbc9f8350dbe4f1380aa72fd5c9f11eedb8e00695136991c426a8a8",
+      "hash_status": "verified"
+    },
+    {
+      "path": "outputs/summary/provenance_verification.json",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 5685,
+      "sha256": "32f508b73d158188e262c9077b8bb5dec519b06f3bbe263a33db2ba854e53c51",
+      "hash_status": "verified"
+    },
+    {
+      "path": "scripts/__pycache__/calibrate_dgsbv2.cpython-310.pyc",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 12025,
+      "sha256": "9121eb7653ef26715d2af3f23051cd55ae81f82afd3092385a551fc2f2815f03",
+      "hash_status": "verified"
+    },
+    {
+      "path": "scripts/__pycache__/finalize_stage8b.cpython-310.pyc",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 17355,
+      "sha256": "b07a4514d96db1582d704db6709afd7d73ce86fa1fed27524b17e344b81555f7",
+      "hash_status": "verified"
+    },
+    {
+      "path": "scripts/__pycache__/stage8b_common.cpython-310.pyc",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 9814,
+      "sha256": "7084f6f44fb6a88d0134144285b001d76d0b556be21bf3477f372c505b7b0c4d",
+      "hash_status": "verified"
+    },
+    {
+      "path": "scripts/__pycache__/verify_provenance.cpython-310.pyc",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 811,
+      "sha256": "954305fd4a54e9c0fd064b0cd9480713d534af5df2154c2939d51cb8af42bd3f",
+      "hash_status": "verified"
+    },
+    {
+      "path": "scripts/__pycache__/verify_stage8b.cpython-310.pyc",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 5339,
+      "sha256": "7cff1fc176f07fcf304368e5b0ecad160d77bd91175d949d6bf9de2620db2fe8",
+      "hash_status": "verified"
+    },
+    {
+      "path": "scripts/calibrate_dgsbv2.py",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 17464,
+      "sha256": "8ba446aabe8f4e5e92a2f22f25f162457dcc32b52f231880fb53c0b1a6d31ec1",
+      "hash_status": "verified"
+    },
+    {
+      "path": "scripts/finalize_stage8b.py",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 21790,
+      "sha256": "aa5e7655f04eff318f59283671869c825ca61257451384f613a7485b040d8769",
+      "hash_status": "verified"
+    },
+    {
+      "path": "scripts/stage8b_common.py",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 9252,
+      "sha256": "e4997ec54021e7bd0427a6aa15c5a9ceaccc2853df9a4f4dfcf3598e54615a67",
+      "hash_status": "verified"
+    },
+    {
+      "path": "scripts/verify_provenance.py",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 576,
+      "sha256": "fe7747333140c768d4a5b191d047e5f8f1daabc6b8dd31a8486bc4bc58e95a89",
+      "hash_status": "verified"
+    },
+    {
+      "path": "scripts/verify_stage8b.py",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 5756,
+      "sha256": "45943488d31773cb7ad26b748c772bcb17927b0479c01c0d081471a117c6a1d5",
+      "hash_status": "verified"
+    },
+    {
+      "path": "tests/__pycache__/test_stage8b.cpython-310-pytest-8.4.2.pyc",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 4560,
+      "sha256": "62625701e5fc6aa87946672c8199b4f9e7df9a9f4ac902503fc6681e3f5cf4e5",
+      "hash_status": "verified"
+    },
+    {
+      "path": "tests/__pycache__/test_stage8b.cpython-310.pyc",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 2337,
+      "sha256": "7197aaa5771741b75d2cf255a2fdbf3dd05abd5c6ffefe8e2370b343bbb05c5e",
+      "hash_status": "verified"
+    },
+    {
+      "path": "tests/test_stage8b.py",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 1845,
+      "sha256": "7864fe32bf28a50c421d815bb0397321e93d42875c673694102d94351dd86927",
+      "hash_status": "verified"
+    }
+  ],
+  "claim_scope": "diagnostic",
+  "code": {
+    "changes": [
+      "stage8b_cipherspectrum_dgsbv2"
+    ],
+    "dirty": true,
+    "revision": "ffcb0dfcaebe3b04b6d3bd42964d5a705303d2cc"
+  },
+  "configuration": {
+    "files": [
+      "configs/stage8b_config.json",
+      "configs/evaluation_config_v2.json"
+    ],
+    "parameters": {
+      "allowed_data_roles": [
+        "KNOWN_TRAIN",
+        "KNOWN_VALIDATION"
+      ],
+      "created_before_any_test_access": true,
+      "dgsbv2": {
+        "fallback_min_validation_n": 30,
+        "gate_logic": "AND",
+        "global_quantile": 0.025,
+        "global_target_acceptance": 0.975,
+        "local_component": "argmax component within predicted class",
+        "local_quantile": 0.025,
+        "local_target_acceptance": 0.975,
+        "post_local_global_recalibration": "FORBIDDEN",
+        "prediction": "argmax class mixture score",
+        "quantile_search": "FORBIDDEN",
+        "unknown_calibration": "FORBIDDEN"
+      },
+      "expected_stage8a": {
+        "bundle_hash_file_sha256": {
+          "high": "574360c4e1c0ac6b39d02dfe2aac5d9ddbfc347e85b968d1c53ef853af0dcf68",
+          "low": "a3ef3f83acd2eee58b667943e53e6b5a83317239262f91565e420f1cda45dcb0",
+          "medium": "66f369332de0620da1a8fe69ff020064695858b3cb1e58d5ccb902dae0093c58"
+        },
+        "bundle_manifest_sha256": {
+          "high": "a836b278bd189bca07745cd7345205985e8433c756fa73068b22e638303b651c",
+          "low": "60262a041d20066cc678811535968d295cb32cb747260444a3270572614e56c8",
+          "medium": "7fa178714335a1915b43d67e0e9ba2b610f04c0198c91907bd906b6167adfa36"
+        },
+        "evaluation_config_sha256": "ac39cb6b1a4a1d1fc5616462bcc4a72906ed0a8acb77be6131a8714a5370c082"
+      },
+      "final_test_metrics": {
+        "combined": [
+          "AUROC",
+          "AUPRC",
+          "decision transition matrix"
+        ],
+        "confidence_interval": 0.95,
+        "known_test": [
+          "Accuracy",
+          "Macro-F1",
+          "Known acceptance",
+          "Known FRR",
+          "Known per-class FRR"
+        ],
+        "paired_bootstrap_iterations": 1000,
+        "paired_bootstrap_seed": 0,
+        "unknown_test": [
+          "UFAR",
+          "Unknown rejection rate",
+          "per-Unknown-class UFAR",
+          "Unknown-to-Known absorption matrix"
+        ]
+      },
+      "forbidden_data_roles": [
+        "KNOWN_TEST",
+        "UNKNOWN_TEST"
+      ],
+      "frozen_density": {
+        "components": 2,
+        "covariance_type": "full",
+        "pca_dimension": 64,
+        "reg_covar": 0.001
+      },
+      "primary_comparison": {
+        "candidate": "DGSB-v2",
+        "reference": "Multi-Global-K2"
+      },
+      "settings": [
+        "low",
+        "medium",
+        "high"
+      ],
+      "stage": "Stage 8B - CipherSpectrum DGSB-v2 Known-Only Rule Freeze"
+    },
+    "seeds": [
+      0
+    ]
+  },
+  "core_results": [
+    {
+      "metric": "low_dgsbv2_acceptance",
+      "value": 0.9681689447112425
+    },
+    {
+      "metric": "medium_dgsbv2_acceptance",
+      "value": 0.9689349112426036
+    },
+    {
+      "metric": "high_dgsbv2_acceptance",
+      "value": 0.968901303538175
+    }
+  ],
+  "created_at_utc": "2026-09-13T13:35:15Z",
+  "execution": {
+    "command": "python stage8b_cipherspectrum_dgsbv2/scripts/finalize_stage8b.py",
+    "environment": "/home/birkenwald/data/SEU-WXY/conda_envs/2025-10-8-WXY-dgl_py310",
+    "exit_code": 0,
+    "physical_gpu_ids": [],
+    "related_sessions": [
+      "stage8b_provenance_20260913",
+      "stage8b_calibrate_low_20260913",
+      "stage8b_calibrate_medium_20260913",
+      "stage8b_calibrate_high_20260913"
+    ],
+    "tmux_session": "stage8b_finalize_20260913"
+  },
+  "experiment_id": "stage8b-cipherspectrum-dgsbv2-20260913",
+  "experiment_type": "evaluation",
+  "inputs": [
+    {
+      "path": "/home/birkenwald/data/SEU-WXY/WXY-SEU/TrafficClassifier/Projects/unknown_traffic_project/stage8a_cipherspectrum_known_density/configs/evaluation_config.json",
+      "sha256": "ac39cb6b1a4a1d1fc5616462bcc4a72906ed0a8acb77be6131a8714a5370c082"
+    },
+    {
+      "path": "/home/birkenwald/data/SEU-WXY/WXY-SEU/TrafficClassifier/Projects/unknown_traffic_project/stage8a_cipherspectrum_known_density/artifacts/low/bundle_hashes.sha256",
+      "sha256": "a3ef3f83acd2eee58b667943e53e6b5a83317239262f91565e420f1cda45dcb0"
+    },
+    {
+      "path": "/home/birkenwald/data/SEU-WXY/WXY-SEU/TrafficClassifier/Projects/unknown_traffic_project/stage8a_cipherspectrum_known_density/artifacts/medium/bundle_hashes.sha256",
+      "sha256": "66f369332de0620da1a8fe69ff020064695858b3cb1e58d5ccb902dae0093c58"
+    },
+    {
+      "path": "/home/birkenwald/data/SEU-WXY/WXY-SEU/TrafficClassifier/Projects/unknown_traffic_project/stage8a_cipherspectrum_known_density/artifacts/high/bundle_hashes.sha256",
+      "sha256": "574360c4e1c0ac6b39d02dfe2aac5d9ddbfc347e85b968d1c53ef853af0dcf68"
+    }
+  ],
+  "limitations": [
+    "Known Validation calibration only; no Known Test or Unknown Test inference was performed.",
+    "Known-side gate non-redundancy does not establish Unknown utility."
+  ],
+  "next_step": "Stop. Await separate authorization for the one-shot frozen Final Test.",
+  "objective": "Freeze a single Known-only DGSB-v2 rule before any CipherSpectrum Test access",
+  "schema_version": 1,
+  "status": "success",
+  "updated_at_utc": "2026-09-13T13:49:59Z"
+}

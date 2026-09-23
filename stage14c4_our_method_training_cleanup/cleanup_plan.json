@@ -1,0 +1,45 @@
+{
+  "status": "PRE_REGISTERED_BEFORE_TRAINING",
+  "method_identity": "F2 own-method representation with Stage3 model, existing loss and prototype mechanism",
+  "reference_only": "Native Open-Detect closed-set results",
+  "protocols": [
+    "medium_seed2025",
+    "medium_seed2026"
+  ],
+  "primary_training_seed": "frozen protocol seed",
+  "seed_sensitivity_control": 2022,
+  "cleaned_configuration": {
+    "epochs": 100,
+    "early_stopping": "disabled",
+    "batch_size": 128,
+    "optimizer": "Adam(lr=0.001, betas=[0.9,0.999], weight_decay=0)",
+    "scheduler": "MultiStepLR(milestones=[50,80], gamma=0.1)",
+    "checkpoint_selection": "highest harmonic mean of Known Validation Accuracy and Macro-F1",
+    "prototype_reset_epochs": [51, 81],
+    "prototype_reset_implementation": "in-place copy; clear prototype Adam state; preserve optimizer parameter identity",
+    "logvar_clamp": 20,
+    "gradient_clipping": false,
+    "class_weight": null,
+    "weighted_sampler": false,
+    "warmup": false,
+    "extra_regularization": false
+  },
+  "decision_gate": {
+    "cleanup_pass": [
+      "both primary runs complete exactly 100 epochs without NaN or crash",
+      "weak primary Macro-F1 improves by at least 0.10 over original F2",
+      "normal primary Macro-F1 declines by no more than 0.03 from original F2",
+      "absolute seed sensitivity is lower than the corresponding Stage14C3 D0-vs-D6 difference for both protocols"
+    ],
+    "partial_pass": "under-training is removed and weak run improves, but one stability/non-degradation condition fails",
+    "needs_further_diagnosis": "a primary run fails, under-training remains, or weak Macro-F1 improves by less than 0.10"
+  },
+  "forbidden": [
+    "Known Test",
+    "Unknown Test",
+    "DES",
+    "Stage 14B mutation",
+    "hyperparameter search",
+    "using native Open-Detect training code as the cleaned method"
+  ]
+}

@@ -1,0 +1,282 @@
+{
+  "status": "FINAL_TEST_OPENED_ONCE",
+  "opened_unix_time": 1789504884.7102048,
+  "expected_encoders": 30,
+  "ready_runs": [
+    {
+      "dataset": "iscx_vpn",
+      "setting": "low",
+      "seed": 2022,
+      "run": "/home/birkenwald/data/SEU-WXY/WXY-SEU/TrafficClassifier/Projects/unknown_traffic_project/stage12_dual_external_validation/runs/iscx_vpn/low/seed2022",
+      "pretest_freeze_sha256": "7b45abb12aaff71a3c4f933697dfd11dfaf7452ce52510b541fc228a6b1a303a",
+      "checkpoint_sha256": "fd181999750d3b5a06b252d559ebbcbbea0857effe21a5e9146c21479919beea",
+      "des_centroids_sha256": "7e8432be857d6f9056d9605d095b888f84c8fd797a8a46c9795bb832f0e970c5"
+    },
+    {
+      "dataset": "iscx_vpn",
+      "setting": "low",
+      "seed": 2023,
+      "run": "/home/birkenwald/data/SEU-WXY/WXY-SEU/TrafficClassifier/Projects/unknown_traffic_project/stage12_dual_external_validation/runs/iscx_vpn/low/seed2023",
+      "pretest_freeze_sha256": "52b8a4ec398e2c4a8b892fa7ba61d6a407ab698f5a7df1403fed7d32ea656a98",
+      "checkpoint_sha256": "89d278da74bd03d66f7a33f76a3d6d7c25f47f919879390ff16554eafd372154",
+      "des_centroids_sha256": "7e7221aebee81dbdc1f5d3bd99bf9dfa0314064e89ff0af7b3660a008219e5d5"
+    },
+    {
+      "dataset": "iscx_vpn",
+      "setting": "low",
+      "seed": 2024,
+      "run": "/home/birkenwald/data/SEU-WXY/WXY-SEU/TrafficClassifier/Projects/unknown_traffic_project/stage12_dual_external_validation/runs/iscx_vpn/low/seed2024",
+      "pretest_freeze_sha256": "f191df588eabf05e22ee0ffce3c4cf96fbdcd133f45fa0285beb10ee43abc917",
+      "checkpoint_sha256": "60f3a1bcb2964977a96634a50c313f752de6f2ad97dd16e0fd1cd5f7c17e9659",
+      "des_centroids_sha256": "53d1d57e46736600e20f34c3c6bf33ae822e843d8d170da62e04efe26b76a343"
+    },
+    {
+      "dataset": "iscx_vpn",
+      "setting": "low",
+      "seed": 2025,
+      "run": "/home/birkenwald/data/SEU-WXY/WXY-SEU/TrafficClassifier/Projects/unknown_traffic_project/stage12_dual_external_validation/runs/iscx_vpn/low/seed2025",
+      "pretest_freeze_sha256": "cb8121f8dd8e87e8af1b30281171e208b992347e58ffcc23bbcec4437f35d5f1",
+      "checkpoint_sha256": "91a459d1e806ed0442e0cf758b4a7a4645ad7b848bbbdcbb536cfc46d651b31c",
+      "des_centroids_sha256": "4987986eeb35be85f132b306b25c3c6e407e471809b83552c542cabdb4a7e856"
+    },
+    {
+      "dataset": "iscx_vpn",
+      "setting": "low",
+      "seed": 2026,
+      "run": "/home/birkenwald/data/SEU-WXY/WXY-SEU/TrafficClassifier/Projects/unknown_traffic_project/stage12_dual_external_validation/runs/iscx_vpn/low/seed2026",
+      "pretest_freeze_sha256": "d45ffad2cd2b58ce23c1c9cf462a4cef10acaf3b35934484a1a1a21058e0decb",
+      "checkpoint_sha256": "dcff4ed2aff6176fbbec369ee89435cd358f72ee2d7d488fb74f310a5bdc84d0",
+      "des_centroids_sha256": "b70d4c4663931d747be8c269a5b9accb1505909c2eac2ca385ae343ca0ec82b4"
+    },
+    {
+      "dataset": "iscx_vpn",
+      "setting": "medium",
+      "seed": 2022,
+      "run": "/home/birkenwald/data/SEU-WXY/WXY-SEU/TrafficClassifier/Projects/unknown_traffic_project/stage12_dual_external_validation/runs/iscx_vpn/medium/seed2022",
+      "pretest_freeze_sha256": "0174cd7f29998d1d4c11ce795ca47a59f20928e495042b7392ce0f6e5dc23199",
+      "checkpoint_sha256": "42c003080b8d6fd121f1e419dbb8da5cfbeb2f72f7eab4d5c186afb89d6c768c",
+      "des_centroids_sha256": "9e91a0816e7f0b3e4e7b59047891d86b7df3f86c6145f9cb94dc9a6e3b948736"
+    },
+    {
+      "dataset": "iscx_vpn",
+      "setting": "medium",
+      "seed": 2023,
+      "run": "/home/birkenwald/data/SEU-WXY/WXY-SEU/TrafficClassifier/Projects/unknown_traffic_project/stage12_dual_external_validation/runs/iscx_vpn/medium/seed2023",
+      "pretest_freeze_sha256": "b7b7a13982797a896dc0f7b1dbfac839ddfb06d7e7a8795fffaa24d90b5a08c7",
+      "checkpoint_sha256": "0c258a7c9e17b1d7c9974a0ec1aa5b0729571417becb19fd1948c0a1bd9f35b6",
+      "des_centroids_sha256": "50d25b2f8858719a1926326d108e95447282eab19570106418ba7fe4ccc2dca1"
+    },
+    {
+      "dataset": "iscx_vpn",
+      "setting": "medium",
+      "seed": 2024,
+      "run": "/home/birkenwald/data/SEU-WXY/WXY-SEU/TrafficClassifier/Projects/unknown_traffic_project/stage12_dual_external_validation/runs/iscx_vpn/medium/seed2024",
+      "pretest_freeze_sha256": "8b9a300c47847576c4380487f90ad3947c1ad5411e2a678dc28dc0d73efb2468",
+      "checkpoint_sha256": "7e1332b40429350704fb3947973e91543d573bdbc2fdd7ce031e4272e8a796b3",
+      "des_centroids_sha256": "78d0336a4fc2c345ceb0f754f8763fc7720031cab659109274ee2dd1c81951a7"
+    },
+    {
+      "dataset": "iscx_vpn",
+      "setting": "medium",
+      "seed": 2025,
+      "run": "/home/birkenwald/data/SEU-WXY/WXY-SEU/TrafficClassifier/Projects/unknown_traffic_project/stage12_dual_external_validation/runs/iscx_vpn/medium/seed2025",
+      "pretest_freeze_sha256": "c802309ccfd6de10f1f7b2ab1d0c92e3b5ebf59e9d211f1b92a25fc4e006ddb6",
+      "checkpoint_sha256": "b5fe2d7916eb42cbde4510db9b7320016cf9dfeeb4e175489aa0abd9a86732b9",
+      "des_centroids_sha256": "3beeb787191f1d8a143f5505c3f0f2fb2c9f95b72876eaf31dd7a0b174516e94"
+    },
+    {
+      "dataset": "iscx_vpn",
+      "setting": "medium",
+      "seed": 2026,
+      "run": "/home/birkenwald/data/SEU-WXY/WXY-SEU/TrafficClassifier/Projects/unknown_traffic_project/stage12_dual_external_validation/runs/iscx_vpn/medium/seed2026",
+      "pretest_freeze_sha256": "05678ea05c9372d1509a2be92c2289927faa834b5e67e918f5a47a570cba71ee",
+      "checkpoint_sha256": "a3e889a5f2a5ae28b576f8116b3d1ebc65160f39b3e45399aee7e06de89d94d3",
+      "des_centroids_sha256": "42eb0f7bb119da0eb6b6a7353dc5b5fefc9bc61ac6197061e247d09f9ce90406"
+    },
+    {
+      "dataset": "iscx_vpn",
+      "setting": "high",
+      "seed": 2022,
+      "run": "/home/birkenwald/data/SEU-WXY/WXY-SEU/TrafficClassifier/Projects/unknown_traffic_project/stage12_dual_external_validation/runs/iscx_vpn/high/seed2022",
+      "pretest_freeze_sha256": "ae16fc969fc22b3c6cfc3710a45c2e0f5d019b533cd5c0ccf449f495e169f573",
+      "checkpoint_sha256": "daecf9248140f15000a9d4bc5320866126b4e0e8c461ece44442b387cb4e7fd8",
+      "des_centroids_sha256": "514f699485f7b8a4205562d188c0bea0c2a8245b6e2bef6e9c68bc95896428a9"
+    },
+    {
+      "dataset": "iscx_vpn",
+      "setting": "high",
+      "seed": 2023,
+      "run": "/home/birkenwald/data/SEU-WXY/WXY-SEU/TrafficClassifier/Projects/unknown_traffic_project/stage12_dual_external_validation/runs/iscx_vpn/high/seed2023",
+      "pretest_freeze_sha256": "224d602fa3f377f2632dfbe2c4232986394c8fe7721b3b8e744ff9673e9c9b61",
+      "checkpoint_sha256": "2264e20e6a5d886a0cc91dd37a5d585879aaa264b4a0dfe375dc575659c89e31",
+      "des_centroids_sha256": "3e141dc9c8eea92024f7c001c1b3fdadbfb634b096084f56329679bbbcba50c5"
+    },
+    {
+      "dataset": "iscx_vpn",
+      "setting": "high",
+      "seed": 2024,
+      "run": "/home/birkenwald/data/SEU-WXY/WXY-SEU/TrafficClassifier/Projects/unknown_traffic_project/stage12_dual_external_validation/runs/iscx_vpn/high/seed2024",
+      "pretest_freeze_sha256": "1c10b19ba1b888d46af330763e05c5e348ecd27b16bc4a5408a04fc99e9d378a",
+      "checkpoint_sha256": "0bc06a211a2abdfb3fafa129258feaed53873d07f427fc9155c2d4a91e31a9c5",
+      "des_centroids_sha256": "093fd25727663786525c6b0a8f207c34b077ff168c9cd50a8de3aa35d486f958"
+    },
+    {
+      "dataset": "iscx_vpn",
+      "setting": "high",
+      "seed": 2025,
+      "run": "/home/birkenwald/data/SEU-WXY/WXY-SEU/TrafficClassifier/Projects/unknown_traffic_project/stage12_dual_external_validation/runs/iscx_vpn/high/seed2025",
+      "pretest_freeze_sha256": "c6e36e395226f24c955f537b295b67d1cd7fb86cbf5f8833a6d485d913f44b79",
+      "checkpoint_sha256": "29fff8a72e0a33a30189638c6bb7d69b240f4fbfd9267269ab96dbf4eb119406",
+      "des_centroids_sha256": "e97d2c873979868a904ceffb6f1c7e3ff3faea43b911d03c6b804a7bb143252d"
+    },
+    {
+      "dataset": "iscx_vpn",
+      "setting": "high",
+      "seed": 2026,
+      "run": "/home/birkenwald/data/SEU-WXY/WXY-SEU/TrafficClassifier/Projects/unknown_traffic_project/stage12_dual_external_validation/runs/iscx_vpn/high/seed2026",
+      "pretest_freeze_sha256": "7a670eaf3505491d9d0c5f497ebd7102b8dcc4293d11bf1f39565cca7dc175a0",
+      "checkpoint_sha256": "26a750793ee35c8c200f25107488e7ca73226e6d7a6dba488b6abe468cb0c690",
+      "des_centroids_sha256": "c4c6bbf4ac8674c88797d2d3c6f8a9d8054b11430de7910907c8f657d5f9cdce"
+    },
+    {
+      "dataset": "iscx_tor",
+      "setting": "low",
+      "seed": 2022,
+      "run": "/home/birkenwald/data/SEU-WXY/WXY-SEU/TrafficClassifier/Projects/unknown_traffic_project/stage12_dual_external_validation/runs/iscx_tor/low/seed2022",
+      "pretest_freeze_sha256": "df5691d0576ae9b6be5a074112dec99f9501c7b65ab7685932e12a414cd51eb5",
+      "checkpoint_sha256": "409b13e75713e9b7e129a24967794517d150af31f191f36af59c8db168d9e7b9",
+      "des_centroids_sha256": "d3fb44ead60201626d560fd810bf7c982b781e8d0291c3f23ff40f8a4edbde14"
+    },
+    {
+      "dataset": "iscx_tor",
+      "setting": "low",
+      "seed": 2023,
+      "run": "/home/birkenwald/data/SEU-WXY/WXY-SEU/TrafficClassifier/Projects/unknown_traffic_project/stage12_dual_external_validation/runs/iscx_tor/low/seed2023",
+      "pretest_freeze_sha256": "b1a12b7791c6431331934324e92d5cb3c692d997ad922829367929606229f58d",
+      "checkpoint_sha256": "a8e04d7e90197d870f971531c7406b868cbcd31abdf0798eb0ff4c25841e0221",
+      "des_centroids_sha256": "6a731e2dfd8162094179f5fa485c69ab6a8b9677d9cf1cba0e98824038a36e7d"
+    },
+    {
+      "dataset": "iscx_tor",
+      "setting": "low",
+      "seed": 2024,
+      "run": "/home/birkenwald/data/SEU-WXY/WXY-SEU/TrafficClassifier/Projects/unknown_traffic_project/stage12_dual_external_validation/runs/iscx_tor/low/seed2024",
+      "pretest_freeze_sha256": "6d39af8cebacd430b1259de46a05e58e2eb105b8ff26caefb491db84b9d371d3",
+      "checkpoint_sha256": "8a8fb96b37047c021ab3df0dfd539047db33907b3653a72d12594a5b034001f7",
+      "des_centroids_sha256": "313ed327efa0a109fa8f4294f2b86d1448591766e7274ac5d1c3e240bf9b23dc"
+    },
+    {
+      "dataset": "iscx_tor",
+      "setting": "low",
+      "seed": 2025,
+      "run": "/home/birkenwald/data/SEU-WXY/WXY-SEU/TrafficClassifier/Projects/unknown_traffic_project/stage12_dual_external_validation/runs/iscx_tor/low/seed2025",
+      "pretest_freeze_sha256": "e25ff16a47e6f69b8e6f167f6ae702b2f4cf269c30d8c5e379984f6393cf4dad",
+      "checkpoint_sha256": "28ceaa9c64e31cfa8415091f1a63fc837e7b2acfb4f625eb4d5465fc3ccc55bf",
+      "des_centroids_sha256": "269c2682cb812e1b07f9f5e4b6fad6635da213f5b7de44676895911c1898127b"
+    },
+    {
+      "dataset": "iscx_tor",
+      "setting": "low",
+      "seed": 2026,
+      "run": "/home/birkenwald/data/SEU-WXY/WXY-SEU/TrafficClassifier/Projects/unknown_traffic_project/stage12_dual_external_validation/runs/iscx_tor/low/seed2026",
+      "pretest_freeze_sha256": "bab224a48485a092bdc15824472c16eab25efee5e672629fbcb405f39f994fb7",
+      "checkpoint_sha256": "204850710ddf69c9a5db37fa19c4de953838f712437da5f6f50a10032e6344d7",
+      "des_centroids_sha256": "09a7a703ee7ff0080394b4adde1e9c8785bd11cea80c11d24018f7aac566056b"
+    },
+    {
+      "dataset": "iscx_tor",
+      "setting": "medium",
+      "seed": 2022,
+      "run": "/home/birkenwald/data/SEU-WXY/WXY-SEU/TrafficClassifier/Projects/unknown_traffic_project/stage12_dual_external_validation/runs/iscx_tor/medium/seed2022",
+      "pretest_freeze_sha256": "92d913212323e2c8598a5fcb15f5511989b7bbeeaba87ec32f6cbb34ab77791a",
+      "checkpoint_sha256": "2d31e69f766119f3bbee0f88f19126d3f9645164da4e42422d8d6c1c28987683",
+      "des_centroids_sha256": "ff18ed15873ebc1c5af297f8a78f0b58bc7ca3cc2e288684c122a01fe8c17084"
+    },
+    {
+      "dataset": "iscx_tor",
+      "setting": "medium",
+      "seed": 2023,
+      "run": "/home/birkenwald/data/SEU-WXY/WXY-SEU/TrafficClassifier/Projects/unknown_traffic_project/stage12_dual_external_validation/runs/iscx_tor/medium/seed2023",
+      "pretest_freeze_sha256": "59cd49045f9c5d724b723520342d721028cb0eeb703c7256e8e2c2e16fbe546e",
+      "checkpoint_sha256": "57684681a1d9e9fa606af7d4df34a4d8aa66e19f2ecd0a5f0564f18f0cdacec2",
+      "des_centroids_sha256": "e9c7b60d1de7858e95830bceb752f44315602865bd5a108836876623e17b723b"
+    },
+    {
+      "dataset": "iscx_tor",
+      "setting": "medium",
+      "seed": 2024,
+      "run": "/home/birkenwald/data/SEU-WXY/WXY-SEU/TrafficClassifier/Projects/unknown_traffic_project/stage12_dual_external_validation/runs/iscx_tor/medium/seed2024",
+      "pretest_freeze_sha256": "7cc58ee9ec9f68f987c8667de1c73549875e7a09eb21b852623868637842876d",
+      "checkpoint_sha256": "a9eaa6d61a71ed4b3781e28e22caa1f70bfeea0f52f3fb30c5b2ccf906d3b4c7",
+      "des_centroids_sha256": "58a17d96cf8ec8700641c5b9de79c93cf23a0b5b934ded037fbde1016346003d"
+    },
+    {
+      "dataset": "iscx_tor",
+      "setting": "medium",
+      "seed": 2025,
+      "run": "/home/birkenwald/data/SEU-WXY/WXY-SEU/TrafficClassifier/Projects/unknown_traffic_project/stage12_dual_external_validation/runs/iscx_tor/medium/seed2025",
+      "pretest_freeze_sha256": "f19649580830987f13b789fae3d87168353873c9dbfc60db6bdc5faeaa8d2d99",
+      "checkpoint_sha256": "760e41096f42855b9ed8cff406a772d150dbaf6d12984d779e9f7e880b2e87ba",
+      "des_centroids_sha256": "9a7801cb98cad255636efa4626467104e00f1a931f965ebe4867334976d430f7"
+    },
+    {
+      "dataset": "iscx_tor",
+      "setting": "medium",
+      "seed": 2026,
+      "run": "/home/birkenwald/data/SEU-WXY/WXY-SEU/TrafficClassifier/Projects/unknown_traffic_project/stage12_dual_external_validation/runs/iscx_tor/medium/seed2026",
+      "pretest_freeze_sha256": "2ef509ccf994f9552c38a0720078a4673f6f2c26246dd17ef921290095f3ac68",
+      "checkpoint_sha256": "89e32c78ad742357b46228cc32fe552b0a78da781a9679bebfc02fbb6f869d62",
+      "des_centroids_sha256": "320cdb1e111818df696624845d39d957f5cb5e29adbe794c2bb84ae199936cb3"
+    },
+    {
+      "dataset": "iscx_tor",
+      "setting": "high",
+      "seed": 2022,
+      "run": "/home/birkenwald/data/SEU-WXY/WXY-SEU/TrafficClassifier/Projects/unknown_traffic_project/stage12_dual_external_validation/runs/iscx_tor/high/seed2022",
+      "pretest_freeze_sha256": "38bfb489a58f11a656c6ea8986af42dbe6437ebdc37361f0409a963bddbbc07a",
+      "checkpoint_sha256": "55c35fb8cf553c8ea2c36159f316095103aef6412e3f0e531a2d08963f431d97",
+      "des_centroids_sha256": "910394ad7417cfe00ef12fb9572dd567eaf32cd974e922e9dd4b380c2d014ef5"
+    },
+    {
+      "dataset": "iscx_tor",
+      "setting": "high",
+      "seed": 2023,
+      "run": "/home/birkenwald/data/SEU-WXY/WXY-SEU/TrafficClassifier/Projects/unknown_traffic_project/stage12_dual_external_validation/runs/iscx_tor/high/seed2023",
+      "pretest_freeze_sha256": "e0261ee031d61ac22daed400b0bf55342e936dc05bec8689c597067f7643a3e7",
+      "checkpoint_sha256": "caba9fe6e2c6dc9021249e955f4f6a4876cc669985f7ab52894ed5e15b8107ea",
+      "des_centroids_sha256": "db14127c04b747e259c88a3743f791546fcd7c8b6226c681bcfc12da4663df6f"
+    },
+    {
+      "dataset": "iscx_tor",
+      "setting": "high",
+      "seed": 2024,
+      "run": "/home/birkenwald/data/SEU-WXY/WXY-SEU/TrafficClassifier/Projects/unknown_traffic_project/stage12_dual_external_validation/runs/iscx_tor/high/seed2024",
+      "pretest_freeze_sha256": "f4e477b7d44d6b19ca15b55c42becb94ee86b43f68483fb793bb4175190afe41",
+      "checkpoint_sha256": "9ee08bdb07797f2a0fbf55323f2a63176bad845ae13ac484402f9abb8bd8c6d1",
+      "des_centroids_sha256": "872564c32ef106c5eab470c204430c0618df09905090bca74d7c38230e0b6d25"
+    },
+    {
+      "dataset": "iscx_tor",
+      "setting": "high",
+      "seed": 2025,
+      "run": "/home/birkenwald/data/SEU-WXY/WXY-SEU/TrafficClassifier/Projects/unknown_traffic_project/stage12_dual_external_validation/runs/iscx_tor/high/seed2025",
+      "pretest_freeze_sha256": "d3663cb840c266fc22b04df490f118f27d1c89b3717219c7ad38787faa0d3ab0",
+      "checkpoint_sha256": "b6ec370478edeb22c50804b21ab0b82a47af860812e74d13e8f598f47f090165",
+      "des_centroids_sha256": "1ca6f48c1e02cc1be9adbd2caf83ff2563805c2cef8736065a73943ff13a821b"
+    },
+    {
+      "dataset": "iscx_tor",
+      "setting": "high",
+      "seed": 2026,
+      "run": "/home/birkenwald/data/SEU-WXY/WXY-SEU/TrafficClassifier/Projects/unknown_traffic_project/stage12_dual_external_validation/runs/iscx_tor/high/seed2026",
+      "pretest_freeze_sha256": "76447e87ab20632c64eb560c4f7086bf265084b0f7ee9beca8c0aad043922f69",
+      "checkpoint_sha256": "40ee13d6180711932ef2a09bba740c7c98e81aaaac9186371b553287440b2918",
+      "des_centroids_sha256": "4ab848b6bb97c93e4d9a7239b3444ca966efde95fc2bd4b809512950c6046ca3"
+    }
+  ],
+  "evaluation_code_hash": "2814e59364d9f35b92bc05872e9479f0bf15ca23f0684e54f820f315fe45b99f",
+  "config_sha256": "b5066d1ddfd38cad8136a76ba16f5342abc28729a342f3cefd51b2296f3053d2",
+  "method_change_after_opening_allowed": false,
+  "rerun_after_failure_allowed": false,
+  "resume_same_frozen_code_after_interruption_allowed": true
+}

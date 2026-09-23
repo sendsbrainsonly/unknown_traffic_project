@@ -1,0 +1,1660 @@
+{
+  "schema_version": 1,
+  "experiment_id": "stage14d-vnat-frozen-open-set-mechanism-evaluation-20260918-v1",
+  "created_at_utc": "2026-09-18T12:40:17Z",
+  "updated_at_utc": "2026-09-18T13:03:06Z",
+  "status": "success",
+  "experiment_type": "evaluation",
+  "claim_scope": "diagnostic",
+  "objective": "Evaluate Native Open-Detect, DES-v0, and fixed DES-v1 on all 15 frozen VNAT protocols using identical Stage 14C Native checkpoints without retraining or test calibration.",
+  "inputs": [
+    {
+      "name": "Stage 14B frozen protocol",
+      "path": "../stage14b_vnat_protocol_freeze/vnat_open_set_protocol.json",
+      "freeze_hash": "c904daef04d2c8e79469191121325c0a6ceeaeb3e595ef9c4c7d7a62c980ae2f"
+    },
+    {
+      "name": "Stage 14B split manifest",
+      "path": "../stage14b_vnat_protocol_freeze/vnat_split_manifest.csv",
+      "sha256": "66bf155e6906231b316c384a52f4b46dabd9d3aee76d5f66d86a3941eb172c4e"
+    },
+    {
+      "name": "15 Stage 14C Native checkpoints",
+      "path": "checkpoint_freeze.json",
+      "count": 15,
+      "hash_status": "unchanged"
+    },
+    {
+      "name": "VNAT flow image cache",
+      "path": "../stage14c_vnat_encoder_training/flow_image_cache/images.npy",
+      "flow_count": 23449
+    }
+  ],
+  "code": {
+    "revision": null,
+    "dirty": null,
+    "changes": [
+      "stage14d_vnat_frozen_open_set_evaluation/scripts",
+      "stage14d_vnat_frozen_open_set_evaluation/tests/test_stage14d.py"
+    ]
+  },
+  "execution": {
+    "tmux_sessions": [
+      "s14d_formal_gpu0_20260918_1412",
+      "s14d_formal_gpu2_20260918_1412",
+      "s14d_formal_gpu3_20260918_1412",
+      "s14d_formal_gpu4_20260918_1412",
+      "s14d_final_aggregate_20260918_1442"
+    ],
+    "command": "evaluate_protocol.py --protocol-id <frozen-id> --device cuda:0 --batch-size 64; aggregate_results.py; verify_completion.py",
+    "exit_code": 0,
+    "environment": "/home/birkenwald/data/SEU-WXY/conda_envs/2025-10-8-WXY-dgl_py310",
+    "physical_gpu_ids": [
+      0,
+      2,
+      3,
+      4
+    ],
+    "new_encoder_training": false,
+    "optimizer": null,
+    "backward": false
+  },
+  "configuration": {
+    "files": [
+      "config.json",
+      "checkpoint_freeze.json"
+    ],
+    "parameters": {
+      "k": 10,
+      "global_weight": 0.5,
+      "local_weight": 0.5,
+      "threshold": "Known Validation P95",
+      "inference_batch_size": 64,
+      "bootstrap_repetitions": 10000,
+      "bootstrap_seed": 0
+    },
+    "seeds": [
+      2022,
+      2023,
+      2024,
+      2025,
+      2026
+    ]
+  },
+  "core_results": [
+    {
+      "name": "M0 overall AUROC",
+      "value": 0.837535,
+      "std": 0.102664
+    },
+    {
+      "name": "M1 overall AUROC",
+      "value": 0.851706,
+      "std": 0.075966
+    },
+    {
+      "name": "M2 overall AUROC",
+      "value": 0.853085,
+      "std": 0.08678
+    },
+    {
+      "name": "M1-M0 delta AUROC",
+      "value": 0.014171,
+      "ci95": [
+        -0.027038,
+        0.064536
+      ],
+      "positive_protocols": 6
+    },
+    {
+      "name": "M2-M1 delta AUROC",
+      "value": 0.001378,
+      "ci95": [
+        -0.006574,
+        0.009444
+      ],
+      "positive_protocols": 9
+    },
+    {
+      "name": "final conclusion",
+      "value": "DECOUPLING_ONLY_PARTIALLY_CONFIRMED"
+    }
+  ],
+  "artifacts": [
+    {
+      "path": "artifacts/high_seed2022/SUCCESS",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 8,
+      "sha256": "81b2bd4ea98c8db66554fbc8d7637a1a69a130f331feb732b75caab4c4868fd5",
+      "hash_status": "verified"
+    },
+    {
+      "path": "artifacts/high_seed2022/latent_outputs.npz",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 15996740,
+      "sha256": "45061af20c8e2e90bb08e3d13bb78882fcbc64f1d1818f5d426eab4ecbb785ea",
+      "hash_status": "verified"
+    },
+    {
+      "path": "artifacts/high_seed2022/per_class_analysis.csv",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 4917,
+      "sha256": "400aed8166e99034b123cb25c5c28e9dc0e8e9b7fcb6d391f028bd2e06e1c711",
+      "hash_status": "verified"
+    },
+    {
+      "path": "artifacts/high_seed2022/result.json",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 5202,
+      "sha256": "b836cc716c536a0639369836067596025fb01e63e1b45a86036f975380726135",
+      "hash_status": "verified"
+    },
+    {
+      "path": "artifacts/high_seed2022/sample_scores.csv",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 4286770,
+      "sha256": "110e732ba5285089ba427416520cd111add9fd51817a7989cd1fbabc6d184050",
+      "hash_status": "verified"
+    },
+    {
+      "path": "artifacts/high_seed2022/score_arrays.npz",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 268743,
+      "sha256": "78370bfe8858f90f0948d8d9d1e8d53d86a211c08df0f5e7fbcfbc45b51c4266",
+      "hash_status": "verified"
+    },
+    {
+      "path": "artifacts/high_seed2023/SUCCESS",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 8,
+      "sha256": "81b2bd4ea98c8db66554fbc8d7637a1a69a130f331feb732b75caab4c4868fd5",
+      "hash_status": "verified"
+    },
+    {
+      "path": "artifacts/high_seed2023/latent_outputs.npz",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 20729743,
+      "sha256": "94444fc6d6039e214d8e27a2503a722eb92323726c2aed7ce50915f025dc922d",
+      "hash_status": "verified"
+    },
+    {
+      "path": "artifacts/high_seed2023/per_class_analysis.csv",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 4888,
+      "sha256": "aef06787f8ab87f7b0c794d2037395db1ea1efb6132ea42b9c22141cc9462005",
+      "hash_status": "verified"
+    },
+    {
+      "path": "artifacts/high_seed2023/result.json",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 5192,
+      "sha256": "2a5d72d087cbe526c96e72e35ff1576116c67e13464a08c569ea8d1770cce2d6",
+      "hash_status": "verified"
+    },
+    {
+      "path": "artifacts/high_seed2023/sample_scores.csv",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 10031493,
+      "sha256": "c2efbe9697f60fcdb560dc5c47c772eca147e842fd813bac9ffc2dc6e60b3cd4",
+      "hash_status": "verified"
+    },
+    {
+      "path": "artifacts/high_seed2023/score_arrays.npz",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 628580,
+      "sha256": "1efcffc98444b5b404109146c7732a4b5bc12294347c2acf647dad0f247a71b9",
+      "hash_status": "verified"
+    },
+    {
+      "path": "artifacts/high_seed2024/SUCCESS",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 8,
+      "sha256": "81b2bd4ea98c8db66554fbc8d7637a1a69a130f331feb732b75caab4c4868fd5",
+      "hash_status": "verified"
+    },
+    {
+      "path": "artifacts/high_seed2024/latent_outputs.npz",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 20998861,
+      "sha256": "9d32e475b97a03599b538a9f82f01fd70b1f035dd5f2f9206922f8970e7f9d77",
+      "hash_status": "verified"
+    },
+    {
+      "path": "artifacts/high_seed2024/per_class_analysis.csv",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 4761,
+      "sha256": "4864e633fc0d0fd2915080e90cbe9f4e0de39c2384e4027fa5192add28027841",
+      "hash_status": "verified"
+    },
+    {
+      "path": "artifacts/high_seed2024/result.json",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 5191,
+      "sha256": "79f993cfb770d5a24b4de5a14dd041f6b52f1f94253ff64c2fc29b84582c24cf",
+      "hash_status": "verified"
+    },
+    {
+      "path": "artifacts/high_seed2024/sample_scores.csv",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 10316211,
+      "sha256": "1479052913b82eaadf48f24649f91947ceeb6aebb4057451b4dfcae21485af20",
+      "hash_status": "verified"
+    },
+    {
+      "path": "artifacts/high_seed2024/score_arrays.npz",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 647949,
+      "sha256": "ace127429c0c55935bd7e87f459b157cbdd1799d8144f6fdebd029ada12d4c78",
+      "hash_status": "verified"
+    },
+    {
+      "path": "artifacts/high_seed2025/SUCCESS",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 8,
+      "sha256": "81b2bd4ea98c8db66554fbc8d7637a1a69a130f331feb732b75caab4c4868fd5",
+      "hash_status": "verified"
+    },
+    {
+      "path": "artifacts/high_seed2025/latent_outputs.npz",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 16154000,
+      "sha256": "8a76da9c1959a675393f72e02f7f82c79498df47581a89ac15228bbba960ec45",
+      "hash_status": "verified"
+    },
+    {
+      "path": "artifacts/high_seed2025/per_class_analysis.csv",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 4902,
+      "sha256": "29894195be1be1f9da888e366dacce4fd3371e76791092b3e39897cc19c75343",
+      "hash_status": "verified"
+    },
+    {
+      "path": "artifacts/high_seed2025/result.json",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 5199,
+      "sha256": "77700affa2f2f778741332e5e66798df4fbb03ae8ad48d0b26f849093650395c",
+      "hash_status": "verified"
+    },
+    {
+      "path": "artifacts/high_seed2025/sample_scores.csv",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 4445939,
+      "sha256": "ea58e32c6ae52288e073f24d43d3e0410a688faf30a73e78d42e93200bc84b2d",
+      "hash_status": "verified"
+    },
+    {
+      "path": "artifacts/high_seed2025/score_arrays.npz",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 279282,
+      "sha256": "9ae5ac596d78094a48e1c1d0249e5d424190c7fdc47dc969cce21086afd74115",
+      "hash_status": "verified"
+    },
+    {
+      "path": "artifacts/high_seed2026/SUCCESS",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 8,
+      "sha256": "81b2bd4ea98c8db66554fbc8d7637a1a69a130f331feb732b75caab4c4868fd5",
+      "hash_status": "verified"
+    },
+    {
+      "path": "artifacts/high_seed2026/latent_outputs.npz",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 16217702,
+      "sha256": "1a1da643d96beeb9455561fa4309cdd85ad7735fc7aa34308e05ff977f7e7dc9",
+      "hash_status": "verified"
+    },
+    {
+      "path": "artifacts/high_seed2026/per_class_analysis.csv",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 5011,
+      "sha256": "4305df44a4e4dc11cd41f8da3cb28bc68d0da54b54e2bc802392793ed5fd51a0",
+      "hash_status": "verified"
+    },
+    {
+      "path": "artifacts/high_seed2026/result.json",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 5204,
+      "sha256": "00e2b056cbc61023c681d075fcf74e9727a1f9abc95b4fac95c3e2f90d31a5c6",
+      "hash_status": "verified"
+    },
+    {
+      "path": "artifacts/high_seed2026/sample_scores.csv",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 4539038,
+      "sha256": "2064b3393f37e96a7a7f29d4fbc87591e19224e455846114768e932ff2cc4bf3",
+      "hash_status": "verified"
+    },
+    {
+      "path": "artifacts/high_seed2026/score_arrays.npz",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 283840,
+      "sha256": "db3d15caaba5a1d6fb351536c345a21245b5e44c15329bbfafdf9af77a68087b",
+      "hash_status": "verified"
+    },
+    {
+      "path": "artifacts/low_seed2022/SUCCESS",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 8,
+      "sha256": "81b2bd4ea98c8db66554fbc8d7637a1a69a130f331feb732b75caab4c4868fd5",
+      "hash_status": "verified"
+    },
+    {
+      "path": "artifacts/low_seed2022/latent_outputs.npz",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 15430370,
+      "sha256": "702f660b46738103c53cc7e54d0dda921f9bfa665abb77c8d7f0842d61272209",
+      "hash_status": "verified"
+    },
+    {
+      "path": "artifacts/low_seed2022/per_class_analysis.csv",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 4913,
+      "sha256": "c322b7951f6a268efb8bee42bd524b73b527fd598f7ea84daa255d855069f02e",
+      "hash_status": "verified"
+    },
+    {
+      "path": "artifacts/low_seed2022/result.json",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 5195,
+      "sha256": "42fbe99d8bdb218c3fa4209aa722aba00b49ca828575f3027197d77a2ac5935f",
+      "hash_status": "verified"
+    },
+    {
+      "path": "artifacts/low_seed2022/sample_scores.csv",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 3579877,
+      "sha256": "3c8cadce3204a437821e125dda06a5d7fff49b052942d8f38a46c5be0c7979af",
+      "hash_status": "verified"
+    },
+    {
+      "path": "artifacts/low_seed2022/score_arrays.npz",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 229568,
+      "sha256": "7ddec5690ec9bc8358f5e2e39bca7906503d401a74a230f6da9705769344ce9d",
+      "hash_status": "verified"
+    },
+    {
+      "path": "artifacts/low_seed2023/SUCCESS",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 8,
+      "sha256": "81b2bd4ea98c8db66554fbc8d7637a1a69a130f331feb732b75caab4c4868fd5",
+      "hash_status": "verified"
+    },
+    {
+      "path": "artifacts/low_seed2023/latent_outputs.npz",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 15084843,
+      "sha256": "a55ce8334a02c0589694cbe2cca0b4458ab44c0d18ac0a87dd9c152e7b33f670",
+      "hash_status": "verified"
+    },
+    {
+      "path": "artifacts/low_seed2023/per_class_analysis.csv",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 5069,
+      "sha256": "4f1075e303a8a9f336e0f44f79ee5972bac945cb4985bfa1e0af1b044acb0dcf",
+      "hash_status": "verified"
+    },
+    {
+      "path": "artifacts/low_seed2023/result.json",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 5196,
+      "sha256": "da0514bb67f2af91a6d3277b54235726be6623045c3f91bcf810b4a1626df965",
+      "hash_status": "verified"
+    },
+    {
+      "path": "artifacts/low_seed2023/sample_scores.csv",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 3197138,
+      "sha256": "630b644d832778cad567c20ba8fc369858b49913d2410d4b6b0f61719f5cc73e",
+      "hash_status": "verified"
+    },
+    {
+      "path": "artifacts/low_seed2023/score_arrays.npz",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 205286,
+      "sha256": "53f4d59996ff2e2d6418d2b5f77b228d2786453973c55541c269f07901cbfd6e",
+      "hash_status": "verified"
+    },
+    {
+      "path": "artifacts/low_seed2024/SUCCESS",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 8,
+      "sha256": "81b2bd4ea98c8db66554fbc8d7637a1a69a130f331feb732b75caab4c4868fd5",
+      "hash_status": "verified"
+    },
+    {
+      "path": "artifacts/low_seed2024/latent_outputs.npz",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 20191358,
+      "sha256": "0c56a62c293b5dc759341e43e782a11f26dbf9553fd8eab8330a2a03b7bc2393",
+      "hash_status": "verified"
+    },
+    {
+      "path": "artifacts/low_seed2024/per_class_analysis.csv",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 4697,
+      "sha256": "d373f40f90ecc8ac87847d11274424d56a523c932c72332ad07ab8175e29a640",
+      "hash_status": "verified"
+    },
+    {
+      "path": "artifacts/low_seed2024/result.json",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 5188,
+      "sha256": "f5295dcf6275fdfdc43a61009955f0e604cf250a2879ebac267d4297a59492fe",
+      "hash_status": "verified"
+    },
+    {
+      "path": "artifacts/low_seed2024/sample_scores.csv",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 9267910,
+      "sha256": "1577b29ef112a4554673e065f88a47d4d9d705804ad1f99a91b226666463b73f",
+      "hash_status": "verified"
+    },
+    {
+      "path": "artifacts/low_seed2024/score_arrays.npz",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 590215,
+      "sha256": "82ad5e789a5311cb1c1f509c799c81e3cb948fb589fab7c4f74e3e43ec5420d7",
+      "hash_status": "verified"
+    },
+    {
+      "path": "artifacts/low_seed2025/SUCCESS",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 8,
+      "sha256": "81b2bd4ea98c8db66554fbc8d7637a1a69a130f331feb732b75caab4c4868fd5",
+      "hash_status": "verified"
+    },
+    {
+      "path": "artifacts/low_seed2025/latent_outputs.npz",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 15344114,
+      "sha256": "dc715cec43701a828378e20f9d2c55eb3b59123f58672d717bf148175ffa6566",
+      "hash_status": "verified"
+    },
+    {
+      "path": "artifacts/low_seed2025/per_class_analysis.csv",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 5050,
+      "sha256": "2edc83ead43dcc42740c17e53b0f406c952e40989b29c629fe318af28768ea5d",
+      "hash_status": "verified"
+    },
+    {
+      "path": "artifacts/low_seed2025/result.json",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 5193,
+      "sha256": "89e85be9069479da8152a916536c041f31d4adc076a04a5f8d0204eca70ada1d",
+      "hash_status": "verified"
+    },
+    {
+      "path": "artifacts/low_seed2025/sample_scores.csv",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 3522856,
+      "sha256": "bc2b9823fb545e4a229f91343605ea36d18c55fe86c6d4dc2ab54342fcdf65c1",
+      "hash_status": "verified"
+    },
+    {
+      "path": "artifacts/low_seed2025/score_arrays.npz",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 224498,
+      "sha256": "f3adf5aaa0f910835c204c26334a7b94d7d90759f8a7ccd0b935401eca1d415a",
+      "hash_status": "verified"
+    },
+    {
+      "path": "artifacts/low_seed2026/SUCCESS",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 8,
+      "sha256": "81b2bd4ea98c8db66554fbc8d7637a1a69a130f331feb732b75caab4c4868fd5",
+      "hash_status": "verified"
+    },
+    {
+      "path": "artifacts/low_seed2026/latent_outputs.npz",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 15300052,
+      "sha256": "813c8fdd596f8322303148f7c31aab5511f90703afe1b0062bc8e7bf35a2be33",
+      "hash_status": "verified"
+    },
+    {
+      "path": "artifacts/low_seed2026/per_class_analysis.csv",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 4975,
+      "sha256": "d20d78a6211f7eaab003d2ceb6a884c9c32adf041dd5ce16c47b03daea56971a",
+      "hash_status": "verified"
+    },
+    {
+      "path": "artifacts/low_seed2026/result.json",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 5153,
+      "sha256": "5df4ab047e0b28df949ac8481bf787ef19b99c60bd28dde7967f12a4d3a5597f",
+      "hash_status": "verified"
+    },
+    {
+      "path": "artifacts/low_seed2026/sample_scores.csv",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 3432493,
+      "sha256": "d8754a2046a819a2d72ea7b9ad91da66e991eefd7faa4ce3ba78a66959df5274",
+      "hash_status": "verified"
+    },
+    {
+      "path": "artifacts/low_seed2026/score_arrays.npz",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 218982,
+      "sha256": "b8cf7118b1ed8992b9831c326c8c3e72dea90f67d25e18f7c725c879c53c2d17",
+      "hash_status": "verified"
+    },
+    {
+      "path": "artifacts/medium_seed2022/SUCCESS",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 8,
+      "sha256": "81b2bd4ea98c8db66554fbc8d7637a1a69a130f331feb732b75caab4c4868fd5",
+      "hash_status": "verified"
+    },
+    {
+      "path": "artifacts/medium_seed2022/latent_outputs.npz",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 15860060,
+      "sha256": "2817643caa074ae552c392c6793f14d128284f0c969a220b2985f50d565f9bc7",
+      "hash_status": "verified"
+    },
+    {
+      "path": "artifacts/medium_seed2022/per_class_analysis.csv",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 5180,
+      "sha256": "c450a5d5946a866c341133bc8e2e5e5b1659bdebc97b28581633e1b120ee1af2",
+      "hash_status": "verified"
+    },
+    {
+      "path": "artifacts/medium_seed2022/result.json",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 5208,
+      "sha256": "457c0aa0ea2a2b16d12aab54d68f3c738d9f34b4a5608dc4144b065ba4091cd6",
+      "hash_status": "verified"
+    },
+    {
+      "path": "artifacts/medium_seed2022/sample_scores.csv",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 4288525,
+      "sha256": "0249921666285629d2bac6ce485bb939ae17e97cb9c066141a23d272b9b06667",
+      "hash_status": "verified"
+    },
+    {
+      "path": "artifacts/medium_seed2022/score_arrays.npz",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 263073,
+      "sha256": "a04fee471388d4677077d32ee81d75fecf05b7849550e4992ed978a7dfdb23c7",
+      "hash_status": "verified"
+    },
+    {
+      "path": "artifacts/medium_seed2023/SUCCESS",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 8,
+      "sha256": "81b2bd4ea98c8db66554fbc8d7637a1a69a130f331feb732b75caab4c4868fd5",
+      "hash_status": "verified"
+    },
+    {
+      "path": "artifacts/medium_seed2023/latent_outputs.npz",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 20115970,
+      "sha256": "826bcfa3ecd5f7ce74692e574d4dededb919e5faaebe6d9aa54e5e274b2fe237",
+      "hash_status": "verified"
+    },
+    {
+      "path": "artifacts/medium_seed2023/per_class_analysis.csv",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 5101,
+      "sha256": "6142c497f0f1e9a0ade018998973fb619623cafeca7e5fbf1f32ce857fd1dec8",
+      "hash_status": "verified"
+    },
+    {
+      "path": "artifacts/medium_seed2023/result.json",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 5197,
+      "sha256": "24522aeca0ac3d57e0ce59728fb640792bc37ebd329e9054c69f456d002cfd65",
+      "hash_status": "verified"
+    },
+    {
+      "path": "artifacts/medium_seed2023/sample_scores.csv",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 9396665,
+      "sha256": "47c37b10a678a40a33c1611d6d2f95bb469c323803690a847220eccad9f94d40",
+      "hash_status": "verified"
+    },
+    {
+      "path": "artifacts/medium_seed2023/score_arrays.npz",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 578199,
+      "sha256": "fbcdbd8bb604f68bd35afb263a1a1ab824da02f0549e11a775bbb50a16d82fdd",
+      "hash_status": "verified"
+    },
+    {
+      "path": "artifacts/medium_seed2024/SUCCESS",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 8,
+      "sha256": "81b2bd4ea98c8db66554fbc8d7637a1a69a130f331feb732b75caab4c4868fd5",
+      "hash_status": "verified"
+    },
+    {
+      "path": "artifacts/medium_seed2024/latent_outputs.npz",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 20496679,
+      "sha256": "65482d3518e58572984fd7d701dc0d5ca97df7747d1a2b6e0eec9314e8c96588",
+      "hash_status": "verified"
+    },
+    {
+      "path": "artifacts/medium_seed2024/per_class_analysis.csv",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 5001,
+      "sha256": "0547062b19b19b2a86c67818c92d682a42b8b003570aece71428b21d8a2a62ba",
+      "hash_status": "verified"
+    },
+    {
+      "path": "artifacts/medium_seed2024/result.json",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 5138,
+      "sha256": "81d00c50c175e53cdaffee35c100e57381b5cdbd52497f9184a0fa426c6ffa6d",
+      "hash_status": "verified"
+    },
+    {
+      "path": "artifacts/medium_seed2024/sample_scores.csv",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 9955167,
+      "sha256": "a18e44a9d4d25f772169dbcb2154b33aa4c6c8619f7853fa43646e8646c02819",
+      "hash_status": "verified"
+    },
+    {
+      "path": "artifacts/medium_seed2024/score_arrays.npz",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 613668,
+      "sha256": "10677b62ce8eb21f59dfb53b285cf040ff52297668a286202df2f26b0e4afa16",
+      "hash_status": "verified"
+    },
+    {
+      "path": "artifacts/medium_seed2025/SUCCESS",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 8,
+      "sha256": "81b2bd4ea98c8db66554fbc8d7637a1a69a130f331feb732b75caab4c4868fd5",
+      "hash_status": "verified"
+    },
+    {
+      "path": "artifacts/medium_seed2025/latent_outputs.npz",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 15996785,
+      "sha256": "019a0e8d95bfb6cef24020614e8a96554fb75540e6b4b844687bc0efdc390f08",
+      "hash_status": "verified"
+    },
+    {
+      "path": "artifacts/medium_seed2025/per_class_analysis.csv",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 5086,
+      "sha256": "cf1d1a5249b376a1d79c42be0ba30a3c6d6bbf73e10814d976e7265d38731747",
+      "hash_status": "verified"
+    },
+    {
+      "path": "artifacts/medium_seed2025/result.json",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 5166,
+      "sha256": "59857a7295a696b052a87a476027a3fcbe33bf193437775b55ae83f05467704a",
+      "hash_status": "verified"
+    },
+    {
+      "path": "artifacts/medium_seed2025/sample_scores.csv",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 4388287,
+      "sha256": "ea055fbc6a657b23289bb50724cbaf9e3d04a3a801607da67349d4256cd1e10f",
+      "hash_status": "verified"
+    },
+    {
+      "path": "artifacts/medium_seed2025/score_arrays.npz",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 269964,
+      "sha256": "ec18f29dc1fc4ff0c2017c549b1fb35da6f07a8f8345c9580204716f6aedd7d6",
+      "hash_status": "verified"
+    },
+    {
+      "path": "artifacts/medium_seed2026/SUCCESS",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 8,
+      "sha256": "81b2bd4ea98c8db66554fbc8d7637a1a69a130f331feb732b75caab4c4868fd5",
+      "hash_status": "verified"
+    },
+    {
+      "path": "artifacts/medium_seed2026/latent_outputs.npz",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 16178080,
+      "sha256": "f5198dc144aa77f98aeedb9b7235a75409de2cb7b6a19badf4c86f818d90ce0a",
+      "hash_status": "verified"
+    },
+    {
+      "path": "artifacts/medium_seed2026/per_class_analysis.csv",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 5065,
+      "sha256": "2a129acdf32376b57630314bf29b64fec752edea4484438acbb093ed7758a137",
+      "hash_status": "verified"
+    },
+    {
+      "path": "artifacts/medium_seed2026/result.json",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 5214,
+      "sha256": "8e79cc9266684227ccbfaf1b233714c4d10c1c1469d906b9a4e8acc9f0090a38",
+      "hash_status": "verified"
+    },
+    {
+      "path": "artifacts/medium_seed2026/sample_scores.csv",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 4605565,
+      "sha256": "194c3e96d231f85799ff66ca695c9df50df76f21ea5c83a55c77c421bd8ab8ca",
+      "hash_status": "verified"
+    },
+    {
+      "path": "artifacts/medium_seed2026/score_arrays.npz",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 282476,
+      "sha256": "d653477a797e47c9c2daf12aa6361ec94b86404fb4d3718556197eca45ecd8ee",
+      "hash_status": "verified"
+    },
+    {
+      "path": "checkpoint_freeze.json",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 24341,
+      "sha256": "f12c7944650e8864eb522fa5c01eac72f5163e39f7027fbdeda27494bd59e058",
+      "hash_status": "verified"
+    },
+    {
+      "path": "completion_verification.json",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 7692,
+      "sha256": "1c24233119846652fecddd730a8416ec5828ece03cbcf80b9f4d5c8e91a6a92b",
+      "hash_status": "verified"
+    },
+    {
+      "path": "config.json",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 1943,
+      "sha256": "13b19c266dcb7d726c5faca781da171eaba944f4e017b870f1f1a9a5db77f600",
+      "hash_status": "verified"
+    },
+    {
+      "path": "preflight_verification.json",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 24341,
+      "sha256": "f12c7944650e8864eb522fa5c01eac72f5163e39f7027fbdeda27494bd59e058",
+      "hash_status": "verified"
+    },
+    {
+      "path": "preliminary_batch512_artifacts/high_seed2022/SUCCESS",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 8,
+      "sha256": "81b2bd4ea98c8db66554fbc8d7637a1a69a130f331feb732b75caab4c4868fd5",
+      "hash_status": "verified"
+    },
+    {
+      "path": "preliminary_batch512_artifacts/high_seed2022/latent_outputs.npz",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 15910462,
+      "sha256": "c41e49654ccd39d626ac3268e21e8d9416d4ac130863ad11ff5c853d0516bce0",
+      "hash_status": "verified"
+    },
+    {
+      "path": "preliminary_batch512_artifacts/high_seed2022/per_class_analysis.csv",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 4923,
+      "sha256": "35c1fa7bed228315ad6812164a8a7b52a845c351b4a5b0e9436beab446095a63",
+      "hash_status": "verified"
+    },
+    {
+      "path": "preliminary_batch512_artifacts/high_seed2022/result.json",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 5167,
+      "sha256": "d8f121398fc82838e90b3fcd7e8444ac908fae2b6be695902481b64873f527ec",
+      "hash_status": "verified"
+    },
+    {
+      "path": "preliminary_batch512_artifacts/high_seed2022/sample_scores.csv",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 4286759,
+      "sha256": "c135200cc49c156b543bb3d0baa211a10f2f9c8cdbd66f0fb2733a67ef00514f",
+      "hash_status": "verified"
+    },
+    {
+      "path": "preliminary_batch512_artifacts/high_seed2022/score_arrays.npz",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 268700,
+      "sha256": "ae13212eb0ed966cfc5fc5dffc455099a415cc1bd49db0c406e791473b9b725d",
+      "hash_status": "verified"
+    },
+    {
+      "path": "preliminary_batch512_artifacts/high_seed2023/SUCCESS",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 8,
+      "sha256": "81b2bd4ea98c8db66554fbc8d7637a1a69a130f331feb732b75caab4c4868fd5",
+      "hash_status": "verified"
+    },
+    {
+      "path": "preliminary_batch512_artifacts/high_seed2023/latent_outputs.npz",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 20668618,
+      "sha256": "c6f3de5e0cc9cbfa1cebe7f96f17d269f63d6b8c8dffdf4da447621f3e5991e0",
+      "hash_status": "verified"
+    },
+    {
+      "path": "preliminary_batch512_artifacts/high_seed2023/per_class_analysis.csv",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 4887,
+      "sha256": "e2081dd962807c74b164a0da86fc16287d8731f276122337d6b6da0c38da1f77",
+      "hash_status": "verified"
+    },
+    {
+      "path": "preliminary_batch512_artifacts/high_seed2023/result.json",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 5157,
+      "sha256": "2210aa8c2afc9fa628f3093b0db940c9a121c0cbfb9f35dfc120e69525fd3e01",
+      "hash_status": "verified"
+    },
+    {
+      "path": "preliminary_batch512_artifacts/high_seed2023/sample_scores.csv",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 9995036,
+      "sha256": "d615f706a42e02d22d49a674acd1dbb3552dc1c9ac7fd161f073f5f6b30843f0",
+      "hash_status": "verified"
+    },
+    {
+      "path": "preliminary_batch512_artifacts/high_seed2023/score_arrays.npz",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 628633,
+      "sha256": "d431e21d58c3b28d6d35f60a465961762aa33bb25a493b39bf47cabc282ab35e",
+      "hash_status": "verified"
+    },
+    {
+      "path": "preliminary_batch512_artifacts/high_seed2024/SUCCESS",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 8,
+      "sha256": "81b2bd4ea98c8db66554fbc8d7637a1a69a130f331feb732b75caab4c4868fd5",
+      "hash_status": "verified"
+    },
+    {
+      "path": "preliminary_batch512_artifacts/high_seed2024/latent_outputs.npz",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 20937901,
+      "sha256": "b326312bbc62b4a2691020abbdd3e6e71c692da9e56007a1a4280274c5ea45d6",
+      "hash_status": "verified"
+    },
+    {
+      "path": "preliminary_batch512_artifacts/high_seed2024/per_class_analysis.csv",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 4757,
+      "sha256": "7f75f48389b7fa56cca75ca7c144b041154579cd3b7b087354872933bf9f2cde",
+      "hash_status": "verified"
+    },
+    {
+      "path": "preliminary_batch512_artifacts/high_seed2024/result.json",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 5159,
+      "sha256": "eab1b326d2d369833831fe3375041042f2e86aa011941e4b744259e025253a74",
+      "hash_status": "verified"
+    },
+    {
+      "path": "preliminary_batch512_artifacts/high_seed2024/sample_scores.csv",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 10316054,
+      "sha256": "2c64d0c2d4ce5a1c0e7a29b729a2b2d17d9f3e4685b64c48106221af978093c1",
+      "hash_status": "verified"
+    },
+    {
+      "path": "preliminary_batch512_artifacts/high_seed2024/score_arrays.npz",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 647992,
+      "sha256": "310c05fb0b687a9c22db63df1745018ce304e8ca7705e2c7c370a3ba69dde68f",
+      "hash_status": "verified"
+    },
+    {
+      "path": "preliminary_batch512_artifacts/high_seed2025/FAILURE.json",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 559,
+      "sha256": "a600baa1c1252491d05c9d958f0c222e1ddb3e84bc2928c03cd70c54d750ff2f",
+      "hash_status": "verified"
+    },
+    {
+      "path": "preliminary_batch512_artifacts/low_seed2022/SUCCESS",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 8,
+      "sha256": "81b2bd4ea98c8db66554fbc8d7637a1a69a130f331feb732b75caab4c4868fd5",
+      "hash_status": "verified"
+    },
+    {
+      "path": "preliminary_batch512_artifacts/low_seed2022/latent_outputs.npz",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 15367331,
+      "sha256": "285ed622b91bc1563d922fab760296c82ca54b56df7189ddec77ddeeea05576b",
+      "hash_status": "verified"
+    },
+    {
+      "path": "preliminary_batch512_artifacts/low_seed2022/per_class_analysis.csv",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 4913,
+      "sha256": "5713168c55d9bd4fb83e31e193aef8a49e0b14bf1a92595cfefd1ff411dc9ae8",
+      "hash_status": "verified"
+    },
+    {
+      "path": "preliminary_batch512_artifacts/low_seed2022/result.json",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 5163,
+      "sha256": "2aef563de59ca98afb065d35f3c93d509dd180d2f40eb3b7a4ba6ca8e9be4d6c",
+      "hash_status": "verified"
+    },
+    {
+      "path": "preliminary_batch512_artifacts/low_seed2022/sample_scores.csv",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 3586681,
+      "sha256": "51dd83717a2aba9a173ba0e4986be4bf4d0d2bf57ac362d27d4abcffe7bac2b8",
+      "hash_status": "verified"
+    },
+    {
+      "path": "preliminary_batch512_artifacts/low_seed2022/score_arrays.npz",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 229503,
+      "sha256": "fba5ea8d26f9885984b4f1c312d5cedd9447454ff3cc35f7da306b499089ae36",
+      "hash_status": "verified"
+    },
+    {
+      "path": "preliminary_batch512_artifacts/low_seed2023/SUCCESS",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 8,
+      "sha256": "81b2bd4ea98c8db66554fbc8d7637a1a69a130f331feb732b75caab4c4868fd5",
+      "hash_status": "verified"
+    },
+    {
+      "path": "preliminary_batch512_artifacts/low_seed2023/latent_outputs.npz",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 14993731,
+      "sha256": "97f1947f74a547753bd534f6e0235e6e05bcdeaecd8aa13b96c6ff5d5873df03",
+      "hash_status": "verified"
+    },
+    {
+      "path": "preliminary_batch512_artifacts/low_seed2023/per_class_analysis.csv",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 5075,
+      "sha256": "96eddcd97afac8d7ab3f9446406e5b0e10fdc1457e8494c613ddeba32e13d024",
+      "hash_status": "verified"
+    },
+    {
+      "path": "preliminary_batch512_artifacts/low_seed2023/result.json",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 5162,
+      "sha256": "c022a3ec61a00649c378d8df896f403efa2a2a81ea6f37abef27886b21e5d1bd",
+      "hash_status": "verified"
+    },
+    {
+      "path": "preliminary_batch512_artifacts/low_seed2023/sample_scores.csv",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 3196926,
+      "sha256": "1c161243b3cb00a07e4f3694cc1a32ab2a7eae3f0a1a8c8fff5dba786924f7e8",
+      "hash_status": "verified"
+    },
+    {
+      "path": "preliminary_batch512_artifacts/low_seed2023/score_arrays.npz",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 205293,
+      "sha256": "85675b4684378b273ef0c64cb893b8a7770475889965172e87a2d20b6488faef",
+      "hash_status": "verified"
+    },
+    {
+      "path": "preliminary_batch512_artifacts/low_seed2024/SUCCESS",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 8,
+      "sha256": "81b2bd4ea98c8db66554fbc8d7637a1a69a130f331feb732b75caab4c4868fd5",
+      "hash_status": "verified"
+    },
+    {
+      "path": "preliminary_batch512_artifacts/low_seed2024/latent_outputs.npz",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 20135908,
+      "sha256": "d28d68690573556da2a999da65b30930febcb373e94f75c013793bc91710e07a",
+      "hash_status": "verified"
+    },
+    {
+      "path": "preliminary_batch512_artifacts/low_seed2024/per_class_analysis.csv",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 4695,
+      "sha256": "46ac829a9c3a189f8e9cf9fda69694a96e0ff9f7abec567c99f9f401544f0c14",
+      "hash_status": "verified"
+    },
+    {
+      "path": "preliminary_batch512_artifacts/low_seed2024/result.json",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 5154,
+      "sha256": "0375d2992b56e00f015c2f5577a8bf32513bf46b9670c724a2d086f606d525a0",
+      "hash_status": "verified"
+    },
+    {
+      "path": "preliminary_batch512_artifacts/low_seed2024/sample_scores.csv",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 9268128,
+      "sha256": "2d2eb9c74fcfee3eb401857ab6b4b07e9f13d49c799363997fd284cc13e3ae21",
+      "hash_status": "verified"
+    },
+    {
+      "path": "preliminary_batch512_artifacts/low_seed2024/score_arrays.npz",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 590286,
+      "sha256": "afbbbf620d9085d682e05be4ea96870f16818a49a595243d154cac8d4f7c9c24",
+      "hash_status": "verified"
+    },
+    {
+      "path": "preliminary_batch512_artifacts/low_seed2025/SUCCESS",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 8,
+      "sha256": "81b2bd4ea98c8db66554fbc8d7637a1a69a130f331feb732b75caab4c4868fd5",
+      "hash_status": "verified"
+    },
+    {
+      "path": "preliminary_batch512_artifacts/low_seed2025/latent_outputs.npz",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 15280715,
+      "sha256": "90d09a5c91cfdec2b40485522f9ca319d328947218db44bbffd8b330d3a3519d",
+      "hash_status": "verified"
+    },
+    {
+      "path": "preliminary_batch512_artifacts/low_seed2025/per_class_analysis.csv",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 5057,
+      "sha256": "e44984094d590d7df63e4ec1f5332d9db7b1029482aa895ba8b7abb674fd082d",
+      "hash_status": "verified"
+    },
+    {
+      "path": "preliminary_batch512_artifacts/low_seed2025/result.json",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 5160,
+      "sha256": "6c091be8469e17b81249f3cd615ddedde213e2bee5d085244d388897d85c0bd8",
+      "hash_status": "verified"
+    },
+    {
+      "path": "preliminary_batch512_artifacts/low_seed2025/sample_scores.csv",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 3509926,
+      "sha256": "c7e064c5787967433239707d72499522ae361e5a30afe2a0b3585888627a6a2c",
+      "hash_status": "verified"
+    },
+    {
+      "path": "preliminary_batch512_artifacts/low_seed2025/score_arrays.npz",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 224502,
+      "sha256": "75b336dfcb6a81ba9d73735eac04da8c0676f7a586ea2e366311fc1bdf24cdc3",
+      "hash_status": "verified"
+    },
+    {
+      "path": "preliminary_batch512_artifacts/low_seed2026/SUCCESS",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 8,
+      "sha256": "81b2bd4ea98c8db66554fbc8d7637a1a69a130f331feb732b75caab4c4868fd5",
+      "hash_status": "verified"
+    },
+    {
+      "path": "preliminary_batch512_artifacts/low_seed2026/latent_outputs.npz",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 15196801,
+      "sha256": "6e63bdb53d81d5f60665540ff7e069cc1eb87baf030604325587fc430a815dcc",
+      "hash_status": "verified"
+    },
+    {
+      "path": "preliminary_batch512_artifacts/low_seed2026/per_class_analysis.csv",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 4976,
+      "sha256": "c2110cc5bc74fd7b56850db6816490f5b353fc53f4e773e866387c539a7c9d8e",
+      "hash_status": "verified"
+    },
+    {
+      "path": "preliminary_batch512_artifacts/low_seed2026/result.json",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 5123,
+      "sha256": "11e8f89c42f6e57e4f4fc4b02e00ed7acb66d132317355c1b80c9b9031344cae",
+      "hash_status": "verified"
+    },
+    {
+      "path": "preliminary_batch512_artifacts/low_seed2026/sample_scores.csv",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 3445016,
+      "sha256": "1107398fe3d75cbf4c57dfd84513306abeefced875e10c5173218ed5eccc92cd",
+      "hash_status": "verified"
+    },
+    {
+      "path": "preliminary_batch512_artifacts/low_seed2026/score_arrays.npz",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 218914,
+      "sha256": "7ceb84673065e250479871cc81366235e0a2ddbe427ff531a71c2e51e79f4ea3",
+      "hash_status": "verified"
+    },
+    {
+      "path": "preliminary_batch512_artifacts/medium_seed2022/SUCCESS",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 8,
+      "sha256": "81b2bd4ea98c8db66554fbc8d7637a1a69a130f331feb732b75caab4c4868fd5",
+      "hash_status": "verified"
+    },
+    {
+      "path": "preliminary_batch512_artifacts/medium_seed2022/latent_outputs.npz",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 15786984,
+      "sha256": "110247607b2b9c1297c5f7d4ea24b55eb2a3a2a38529a096cc0169633af912d4",
+      "hash_status": "verified"
+    },
+    {
+      "path": "preliminary_batch512_artifacts/medium_seed2022/per_class_analysis.csv",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 5183,
+      "sha256": "68f8930d338bb86d9bdbaadf36b04d755200f54c9cc123a10491350cffc67622",
+      "hash_status": "verified"
+    },
+    {
+      "path": "preliminary_batch512_artifacts/medium_seed2022/result.json",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 5176,
+      "sha256": "9033d25772c771dcf4316c1f549cf2aadf67edddfcef8766aaa8a0086fbe1f89",
+      "hash_status": "verified"
+    },
+    {
+      "path": "preliminary_batch512_artifacts/medium_seed2022/sample_scores.csv",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 4288515,
+      "sha256": "857d25fd093accd5f98418fa077e1ec6fd7dd22733336a441d5ab16092bc040b",
+      "hash_status": "verified"
+    },
+    {
+      "path": "preliminary_batch512_artifacts/medium_seed2022/score_arrays.npz",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 263109,
+      "sha256": "249756db824ddb68b55c9d5ce9ae6de577e6d4aff126735e76178cbd03cb3aaf",
+      "hash_status": "verified"
+    },
+    {
+      "path": "preliminary_batch512_artifacts/medium_seed2023/SUCCESS",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 8,
+      "sha256": "81b2bd4ea98c8db66554fbc8d7637a1a69a130f331feb732b75caab4c4868fd5",
+      "hash_status": "verified"
+    },
+    {
+      "path": "preliminary_batch512_artifacts/medium_seed2023/latent_outputs.npz",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 20044023,
+      "sha256": "6beee53686e278bf5fc4631e99f74ca957dd0f187c47675c74a844f022311947",
+      "hash_status": "verified"
+    },
+    {
+      "path": "preliminary_batch512_artifacts/medium_seed2023/per_class_analysis.csv",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 5093,
+      "sha256": "1b7658cda09a6f236f32422fff8ba6545a213ae8969d721f653e59c7f7af0f4f",
+      "hash_status": "verified"
+    },
+    {
+      "path": "preliminary_batch512_artifacts/medium_seed2023/result.json",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 5162,
+      "sha256": "67d0515e034a6a1dfcf0df2fcdd3145fb1e0e260b7fe5005f5657f19603f713d",
+      "hash_status": "verified"
+    },
+    {
+      "path": "preliminary_batch512_artifacts/medium_seed2023/sample_scores.csv",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 9379702,
+      "sha256": "94dc5ac0616075e1e692bea3869c6245583e6a388c7a860bf44916828308fe9a",
+      "hash_status": "verified"
+    },
+    {
+      "path": "preliminary_batch512_artifacts/medium_seed2023/score_arrays.npz",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 578159,
+      "sha256": "8e454eb0050db4373f20a78fff94b839d417395dd6b3a286be82ae73a89b5247",
+      "hash_status": "verified"
+    },
+    {
+      "path": "preliminary_batch512_artifacts/medium_seed2024/SUCCESS",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 8,
+      "sha256": "81b2bd4ea98c8db66554fbc8d7637a1a69a130f331feb732b75caab4c4868fd5",
+      "hash_status": "verified"
+    },
+    {
+      "path": "preliminary_batch512_artifacts/medium_seed2024/latent_outputs.npz",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 20446165,
+      "sha256": "603211862d37a33830f9471bbe62dabedd65cf477cf5be89a99d86f4e6f97931",
+      "hash_status": "verified"
+    },
+    {
+      "path": "preliminary_batch512_artifacts/medium_seed2024/per_class_analysis.csv",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 5004,
+      "sha256": "f8349b6357aa6c0278b7fc1e51d655c5e1b52934ffb56b789be30e212fbbb2ac",
+      "hash_status": "verified"
+    },
+    {
+      "path": "preliminary_batch512_artifacts/medium_seed2024/result.json",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 5103,
+      "sha256": "b48b4f2787a42b7247063a2b1a9ea4e82717e77c270386c83a4eff0947588419",
+      "hash_status": "verified"
+    },
+    {
+      "path": "preliminary_batch512_artifacts/medium_seed2024/sample_scores.csv",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 9955041,
+      "sha256": "8fc113c3823e29d7b8c4d584208fdbc36629eeda72255478ee9f307c72bec699",
+      "hash_status": "verified"
+    },
+    {
+      "path": "preliminary_batch512_artifacts/medium_seed2024/score_arrays.npz",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 613789,
+      "sha256": "9edaf7429928b86ebd766abb52fd573657367eaaa195be7f19b9787d81574bce",
+      "hash_status": "verified"
+    },
+    {
+      "path": "preliminary_batch512_artifacts/medium_seed2025/SUCCESS",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 8,
+      "sha256": "81b2bd4ea98c8db66554fbc8d7637a1a69a130f331feb732b75caab4c4868fd5",
+      "hash_status": "verified"
+    },
+    {
+      "path": "preliminary_batch512_artifacts/medium_seed2025/latent_outputs.npz",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 15901432,
+      "sha256": "03378c8900746b63a90d06d02dc666f770330c20a1343db74d0207c2fe5613f4",
+      "hash_status": "verified"
+    },
+    {
+      "path": "preliminary_batch512_artifacts/medium_seed2025/per_class_analysis.csv",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 5087,
+      "sha256": "90513109bcb7e69ee3bbad7047a025c94d46de7669c7243ff17934de5125b420",
+      "hash_status": "verified"
+    },
+    {
+      "path": "preliminary_batch512_artifacts/medium_seed2025/result.json",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 5134,
+      "sha256": "3734c9b15a699d1a30b0e8e6c4c9d7cae76091d7940b3aac3065dd2bafd7e4c7",
+      "hash_status": "verified"
+    },
+    {
+      "path": "preliminary_batch512_artifacts/medium_seed2025/sample_scores.csv",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 4387953,
+      "sha256": "eeddb43be35a801fbc6a3f607b22a8e0b068eac77a5f055dbcc1fedfa540cdb1",
+      "hash_status": "verified"
+    },
+    {
+      "path": "preliminary_batch512_artifacts/medium_seed2025/score_arrays.npz",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 269837,
+      "sha256": "af6c4f42397bfe02053416fcc7956e2f5e709b61a699dfe76355929acdc5cb38",
+      "hash_status": "verified"
+    },
+    {
+      "path": "preliminary_batch512_artifacts/medium_seed2026/SUCCESS",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 8,
+      "sha256": "81b2bd4ea98c8db66554fbc8d7637a1a69a130f331feb732b75caab4c4868fd5",
+      "hash_status": "verified"
+    },
+    {
+      "path": "preliminary_batch512_artifacts/medium_seed2026/latent_outputs.npz",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 16105361,
+      "sha256": "50bea9e344d255d0b5cc0d51b25ee7e82d0fb8fb9f3218db0672cecbc5afa26d",
+      "hash_status": "verified"
+    },
+    {
+      "path": "preliminary_batch512_artifacts/medium_seed2026/per_class_analysis.csv",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 5070,
+      "sha256": "1a674aaa89f6a6ff7bd1e690168db2beac996528731e94fd8e0c64a5d6deb8c7",
+      "hash_status": "verified"
+    },
+    {
+      "path": "preliminary_batch512_artifacts/medium_seed2026/result.json",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 5181,
+      "sha256": "639778e8a4b8998a7b6e470a8471b9db6fc1c4641db76d584303de5d90086b83",
+      "hash_status": "verified"
+    },
+    {
+      "path": "preliminary_batch512_artifacts/medium_seed2026/sample_scores.csv",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 4597298,
+      "sha256": "861b01a499a1b8cb80186d7122c5e3dd6c8fa971923deb8af2f5e7f316cd7dba",
+      "hash_status": "verified"
+    },
+    {
+      "path": "preliminary_batch512_artifacts/medium_seed2026/score_arrays.npz",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 282428,
+      "sha256": "ef81e7de52df3695f1d14988cc2e71a95b20b0ddf59086df14714b41756e1bc8",
+      "hash_status": "verified"
+    },
+    {
+      "path": "scripts/__pycache__/aggregate_results.cpython-310.pyc",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 13690,
+      "sha256": "e57002bdc3905acfcb31ca12b2db2ac54b85022f06b8898cc23817a97c75bdc9",
+      "hash_status": "verified"
+    },
+    {
+      "path": "scripts/__pycache__/evaluate_protocol.cpython-310.pyc",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 12906,
+      "sha256": "f0265973a5addbe961d578dcc803676a1a8ce30f3e5e3a2f417cf55ecc30a3fa",
+      "hash_status": "verified"
+    },
+    {
+      "path": "scripts/__pycache__/preflight.cpython-310.pyc",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 3453,
+      "sha256": "eadb7fd83bed7d5e0138c974ccac75ada2b47db94afaa87bdfa6e56610c88a25",
+      "hash_status": "verified"
+    },
+    {
+      "path": "scripts/__pycache__/stage14d_common.cpython-310.pyc",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 12997,
+      "sha256": "eb470c9a53ddcbd5bc23210d72817e786408dc2f708a6e27a9b518c2d75fb674",
+      "hash_status": "verified"
+    },
+    {
+      "path": "scripts/__pycache__/verify_completion.cpython-310.pyc",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 3263,
+      "sha256": "4a063d570d6b22dc53a5ef299ac533cd428aec7302c2b4cc2f87828b5fb4f1d3",
+      "hash_status": "verified"
+    },
+    {
+      "path": "scripts/aggregate_results.py",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 17311,
+      "sha256": "60d62093339755aadaea5b3ffe2723b7382cb9b5c6e7ffa817f600f61b2d2857",
+      "hash_status": "verified"
+    },
+    {
+      "path": "scripts/evaluate_protocol.py",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 19327,
+      "sha256": "3036cecf0448e0d200c1e104d8e313805ef2772e03b59b9d8066e6ac4629b8e7",
+      "hash_status": "verified"
+    },
+    {
+      "path": "scripts/preflight.py",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 3622,
+      "sha256": "9e9450b33a8ce6ff1d4e9b2a83f344131972ba8acf5292d7c2b05e43b6b2d23c",
+      "hash_status": "verified"
+    },
+    {
+      "path": "scripts/stage14d_common.py",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 13111,
+      "sha256": "ef93184dfa9102f24e5b0a97aa2c324dc62c6621b4728cf3e653dbfd251ade25",
+      "hash_status": "verified"
+    },
+    {
+      "path": "scripts/verify_completion.py",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 6165,
+      "sha256": "24369db0248e7046d9ca21456414a96a9e3127defef37c59b7d50aea4c8a2ff8",
+      "hash_status": "verified"
+    },
+    {
+      "path": "stage14d_open_set_report.md",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 5751,
+      "sha256": "541bb0b4f1677cbda5d04fb2edf03b906ef386867220f33cc85ff36935d123b4",
+      "hash_status": "verified"
+    },
+    {
+      "path": "stage14d_paired_comparison.csv",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 6625,
+      "sha256": "95b4e8991c2b18236ce77b815989c5dc1dfd45e1de8d789f9ed4c008fd47c2c8",
+      "hash_status": "verified"
+    },
+    {
+      "path": "stage14d_per_class_analysis.csv",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 71858,
+      "sha256": "912f983ef32f7122c2e72695a21803ba1e620528ec4b47b8294594dee8f43d7c",
+      "hash_status": "verified"
+    },
+    {
+      "path": "stage14d_run_results.csv",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 16394,
+      "sha256": "2a9bc274b711df1efcda2022b71752a5d676a16a9685a81196c830f4af7c21ec",
+      "hash_status": "verified"
+    },
+    {
+      "path": "stage14d_score_distributions.csv",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 89251428,
+      "sha256": "98253eb80b1a4f8f0e949f1e4d93759b09ffd9924d2d583f5cfca23e5c0ffcad",
+      "hash_status": "verified"
+    },
+    {
+      "path": "stage14d_setting_summary.csv",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 5083,
+      "sha256": "8183cfde61638e2653145809e8f1f66218a4a01eb803dadb9063d58f792c81ba",
+      "hash_status": "verified"
+    },
+    {
+      "path": "tests/__pycache__/test_stage14d.cpython-310-pytest-8.4.2.pyc",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 3506,
+      "sha256": "db6e85d39427b377eea6bb963dbe8e6f0fa9543a8a30af548805c92ced1ddba7",
+      "hash_status": "verified"
+    },
+    {
+      "path": "tests/test_stage14d.py",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 1721,
+      "sha256": "1fa67ea2d7362dd11d19294bc134ae8a5c4d733a1a6c00302533d8c393500405",
+      "hash_status": "verified"
+    }
+  ],
+  "limitations": [
+    "Natural frozen class prevalence makes AUPRC composition-dependent.",
+    "The 15 protocols are paired class compositions from one external dataset, not independent datasets.",
+    "Stage 14B Known splits are flow-random and not capture-disjoint.",
+    "Preliminary batch-512 outputs are preserved but excluded after a Native validation parity failure."
+  ],
+  "next_step": "Stop after Stage 14D; do not tune or launch another stage."
+}

@@ -1,0 +1,1025 @@
+{
+  "protocol_name": "Stage 6 — CipherSpectrum Strict Unknown-Free Open-Set Protocol Freeze",
+  "created_utc": "2026-09-13T04:34:22.495559+00:00",
+  "created_before_unknown_evaluation": true,
+  "canonical_corpus": {
+    "source_manifest": "/home/birkenwald/data/SEU-WXY/WXY-SEU/TrafficClassifier/Projects/unknown_traffic_project/cipherspectrum_labeling/outputs/cipherspectrum_official40_manifest.csv",
+    "source_manifest_sha256": "3ec053adcdf3fb39693129bdc53ab45fccd9f5563a1ed47791f01b98267cd5be",
+    "manifest": "/home/birkenwald/data/SEU-WXY/WXY-SEU/TrafficClassifier/Projects/unknown_traffic_project/stage6_cipherspectrum_protocol/outputs/corpus/canonical120k_manifest.csv",
+    "manifest_sha256": "6dbef11e4818de00d70cfaf86187d8d6749db7a16a6eacd9fa0c4cbeef1d5020",
+    "sample_count": 120000,
+    "class_count": 40,
+    "samples_per_class": 3000,
+    "samples_per_class_cipher_source": 1000,
+    "sources": [
+      "aes-128-gcm",
+      "aes-256-gcm",
+      "chacha20-poly1305"
+    ],
+    "mix_samples": 0,
+    "getpocket_samples": 0,
+    "split_group_id_coverage": 1.0
+  },
+  "known_split_ratios": {
+    "KNOWN_TRAIN": 0.7,
+    "KNOWN_VALIDATION": 0.15,
+    "KNOWN_TEST": 0.15
+  },
+  "unknown_candidate_policy": "numpy.random.default_rng (PCG64) over lexicographically sorted class names",
+  "group_assignment": {
+    "algorithm": "deterministic greedy group assignment plus fixed local move refinement",
+    "objective_terms": [
+      "total sample ratio squared error",
+      "per-class ratio squared error",
+      "per-class-by-cipher-source ratio squared error"
+    ],
+    "objective_weights": {
+      "total": 2.0,
+      "per_class": 5.0,
+      "per_class_cipher_source": 2.0
+    },
+    "max_local_refinement_passes": 3,
+    "maximum_absolute_split_ratio_error": 0.02
+  },
+  "hard_constraints": {
+    "minimum_known_train_per_class": 500,
+    "minimum_known_validation_per_class": 100,
+    "minimum_known_test_per_class": 100,
+    "minimum_train_cipher_sources_per_class": 2,
+    "minimum_validation_cipher_sources_per_class": 2,
+    "minimum_test_cipher_sources_per_class": 2,
+    "known_unknown_group_overlap": 0,
+    "train_validation_test_group_overlap": 0
+  },
+  "settings": {
+    "low": {
+      "setting": "low",
+      "seed": 42,
+      "candidate_index": 3,
+      "known_classes": [
+        "adblockplus.org",
+        "arin.net",
+        "cloudfront.net",
+        "cookielaw.org",
+        "ctfassets.net",
+        "doubleclick.net",
+        "flipboard.com",
+        "garmin.com",
+        "gmx.net",
+        "google-analytics.com",
+        "google.com",
+        "googleapis.com",
+        "googletagmanager.com",
+        "gstatic.com",
+        "hotjar.com",
+        "hs-scripts.com",
+        "hsadspixel.net",
+        "hubspot.com",
+        "joinhoney.com",
+        "like-video.com",
+        "logitech.com",
+        "mozilla.net",
+        "naver.com",
+        "onetrust.com",
+        "qualified.com",
+        "robinhood.com",
+        "sharethis.com",
+        "steamstatic.com",
+        "trustarc.com",
+        "twitter.com",
+        "typekit.net",
+        "ubuntu.com",
+        "waze.com",
+        "web.de",
+        "wistia.com",
+        "xnxx-cdn.com",
+        "yahoo.co.jp",
+        "yimg.jp"
+      ],
+      "unknown_classes": [
+        "coinbase.com",
+        "segment.com"
+      ],
+      "known_train_count": 75692,
+      "known_validation_count": 16242,
+      "known_test_count": 16246,
+      "unknown_test_count": 6000,
+      "purged_known_count": 5820,
+      "unknown_touched_group_count": 2480,
+      "group_counts": {
+        "KNOWN_TRAIN": 18907,
+        "KNOWN_VALIDATION": 2618,
+        "KNOWN_TEST": 2643
+      },
+      "known_group_overlap": {
+        "train_validation": 0,
+        "train_test": 0,
+        "validation_test": 0
+      },
+      "known_unknown_group_overlap": 0,
+      "actual_known_split_ratios": {
+        "KNOWN_TRAIN": 0.6996857090035127,
+        "KNOWN_VALIDATION": 0.15013865779256794,
+        "KNOWN_TEST": 0.15017563320391938
+      },
+      "cipher_source_distribution": {
+        "KNOWN_TRAIN": {
+          "aes-128-gcm": 25258,
+          "aes-256-gcm": 25210,
+          "chacha20-poly1305": 25224
+        },
+        "KNOWN_VALIDATION": {
+          "aes-128-gcm": 5424,
+          "aes-256-gcm": 5409,
+          "chacha20-poly1305": 5409
+        },
+        "KNOWN_TEST": {
+          "aes-128-gcm": 5420,
+          "aes-256-gcm": 5408,
+          "chacha20-poly1305": 5418
+        }
+      },
+      "all_class_counts": {
+        "adblockplus.org": {
+          "KNOWN_TRAIN": 2100,
+          "KNOWN_VALIDATION": 451,
+          "KNOWN_TEST": 449
+        },
+        "arin.net": {
+          "KNOWN_VALIDATION": 450,
+          "KNOWN_TRAIN": 2098,
+          "KNOWN_TEST": 452
+        },
+        "cloudfront.net": {
+          "KNOWN_VALIDATION": 300,
+          "KNOWN_TRAIN": 1395,
+          "KNOWN_TEST": 300,
+          "PURGED_GROUP_OVERLAP": 1005
+        },
+        "coinbase.com": {
+          "UNKNOWN_TEST": 3000
+        },
+        "cookielaw.org": {
+          "KNOWN_TRAIN": 2100,
+          "KNOWN_VALIDATION": 450,
+          "KNOWN_TEST": 450
+        },
+        "ctfassets.net": {
+          "KNOWN_TRAIN": 1398,
+          "KNOWN_TEST": 300,
+          "KNOWN_VALIDATION": 300,
+          "PURGED_GROUP_OVERLAP": 1002
+        },
+        "doubleclick.net": {
+          "KNOWN_TRAIN": 1807,
+          "KNOWN_TEST": 388,
+          "KNOWN_VALIDATION": 387,
+          "PURGED_GROUP_OVERLAP": 418
+        },
+        "flipboard.com": {
+          "KNOWN_TEST": 452,
+          "KNOWN_VALIDATION": 447,
+          "KNOWN_TRAIN": 2101
+        },
+        "garmin.com": {
+          "KNOWN_TEST": 450,
+          "KNOWN_TRAIN": 2099,
+          "KNOWN_VALIDATION": 451
+        },
+        "gmx.net": {
+          "KNOWN_VALIDATION": 449,
+          "KNOWN_TRAIN": 2101,
+          "KNOWN_TEST": 450
+        },
+        "google-analytics.com": {
+          "KNOWN_TEST": 447,
+          "KNOWN_VALIDATION": 447,
+          "KNOWN_TRAIN": 2086,
+          "PURGED_GROUP_OVERLAP": 20
+        },
+        "google.com": {
+          "KNOWN_TEST": 432,
+          "KNOWN_VALIDATION": 432,
+          "KNOWN_TRAIN": 2014,
+          "PURGED_GROUP_OVERLAP": 122
+        },
+        "googleapis.com": {
+          "KNOWN_TRAIN": 1873,
+          "KNOWN_TEST": 401,
+          "KNOWN_VALIDATION": 402,
+          "PURGED_GROUP_OVERLAP": 324
+        },
+        "googletagmanager.com": {
+          "KNOWN_VALIDATION": 426,
+          "KNOWN_TRAIN": 1988,
+          "KNOWN_TEST": 426,
+          "PURGED_GROUP_OVERLAP": 160
+        },
+        "gstatic.com": {
+          "KNOWN_TEST": 397,
+          "KNOWN_VALIDATION": 398,
+          "KNOWN_TRAIN": 1851,
+          "PURGED_GROUP_OVERLAP": 354
+        },
+        "hotjar.com": {
+          "KNOWN_TRAIN": 2100,
+          "KNOWN_VALIDATION": 450,
+          "KNOWN_TEST": 450
+        },
+        "hs-scripts.com": {
+          "KNOWN_TRAIN": 2000,
+          "KNOWN_TEST": 428,
+          "KNOWN_VALIDATION": 429,
+          "PURGED_GROUP_OVERLAP": 143
+        },
+        "hsadspixel.net": {
+          "KNOWN_TRAIN": 1967,
+          "KNOWN_TEST": 422,
+          "KNOWN_VALIDATION": 422,
+          "PURGED_GROUP_OVERLAP": 189
+        },
+        "hubspot.com": {
+          "KNOWN_TRAIN": 1859,
+          "KNOWN_TEST": 399,
+          "KNOWN_VALIDATION": 399,
+          "PURGED_GROUP_OVERLAP": 343
+        },
+        "joinhoney.com": {
+          "KNOWN_TRAIN": 2096,
+          "KNOWN_VALIDATION": 451,
+          "KNOWN_TEST": 453
+        },
+        "like-video.com": {
+          "KNOWN_TRAIN": 2100,
+          "KNOWN_VALIDATION": 450,
+          "KNOWN_TEST": 450
+        },
+        "logitech.com": {
+          "KNOWN_TRAIN": 2100,
+          "KNOWN_TEST": 450,
+          "KNOWN_VALIDATION": 450
+        },
+        "mozilla.net": {
+          "KNOWN_TRAIN": 2100,
+          "KNOWN_TEST": 450,
+          "KNOWN_VALIDATION": 450
+        },
+        "naver.com": {
+          "KNOWN_TRAIN": 2101,
+          "KNOWN_VALIDATION": 449,
+          "KNOWN_TEST": 450
+        },
+        "onetrust.com": {
+          "KNOWN_TRAIN": 2100,
+          "KNOWN_TEST": 450,
+          "KNOWN_VALIDATION": 450
+        },
+        "qualified.com": {
+          "KNOWN_TRAIN": 1162,
+          "KNOWN_VALIDATION": 249,
+          "KNOWN_TEST": 250,
+          "PURGED_GROUP_OVERLAP": 1339
+        },
+        "robinhood.com": {
+          "KNOWN_TEST": 450,
+          "KNOWN_TRAIN": 2100,
+          "KNOWN_VALIDATION": 450
+        },
+        "segment.com": {
+          "UNKNOWN_TEST": 3000
+        },
+        "sharethis.com": {
+          "KNOWN_TRAIN": 2099,
+          "KNOWN_TEST": 450,
+          "KNOWN_VALIDATION": 451
+        },
+        "steamstatic.com": {
+          "KNOWN_TRAIN": 2098,
+          "KNOWN_TEST": 451,
+          "KNOWN_VALIDATION": 451
+        },
+        "trustarc.com": {
+          "KNOWN_TEST": 418,
+          "KNOWN_TRAIN": 1950,
+          "KNOWN_VALIDATION": 418,
+          "PURGED_GROUP_OVERLAP": 214
+        },
+        "twitter.com": {
+          "KNOWN_TRAIN": 1969,
+          "KNOWN_VALIDATION": 422,
+          "KNOWN_TEST": 422,
+          "PURGED_GROUP_OVERLAP": 187
+        },
+        "typekit.net": {
+          "KNOWN_TRAIN": 2099,
+          "KNOWN_TEST": 450,
+          "KNOWN_VALIDATION": 451
+        },
+        "ubuntu.com": {
+          "KNOWN_TEST": 452,
+          "KNOWN_TRAIN": 2098,
+          "KNOWN_VALIDATION": 450
+        },
+        "waze.com": {
+          "KNOWN_TRAIN": 2100,
+          "KNOWN_VALIDATION": 450,
+          "KNOWN_TEST": 450
+        },
+        "web.de": {
+          "KNOWN_VALIDATION": 450,
+          "KNOWN_TRAIN": 2100,
+          "KNOWN_TEST": 450
+        },
+        "wistia.com": {
+          "KNOWN_TRAIN": 2100,
+          "KNOWN_VALIDATION": 449,
+          "KNOWN_TEST": 451
+        },
+        "xnxx-cdn.com": {
+          "KNOWN_TEST": 451,
+          "KNOWN_TRAIN": 2098,
+          "KNOWN_VALIDATION": 451
+        },
+        "yahoo.co.jp": {
+          "KNOWN_TRAIN": 2083,
+          "KNOWN_TEST": 457,
+          "KNOWN_VALIDATION": 460
+        },
+        "yimg.jp": {
+          "KNOWN_TRAIN": 2102,
+          "KNOWN_TEST": 448,
+          "KNOWN_VALIDATION": 450
+        }
+      },
+      "assignment_metadata": {
+        "group_count": 24168,
+        "sample_counts": {
+          "KNOWN_TEST": 16246,
+          "KNOWN_VALIDATION": 16242,
+          "KNOWN_TRAIN": 75692
+        },
+        "moves": 1755,
+        "objective": "2*total + 5*per-class + 2*per-class-by-source normalized squared ratio error"
+      },
+      "created_before_unknown_evaluation": true,
+      "unknown_access_policy": "FINAL TEST ONLY",
+      "future_encoder_policy": "train independently from legal architecture initialization; no full-40 or cross-setting checkpoint"
+    },
+    "medium": {
+      "setting": "medium",
+      "seed": 43,
+      "candidate_index": 15,
+      "known_classes": [
+        "adblockplus.org",
+        "arin.net",
+        "cloudfront.net",
+        "coinbase.com",
+        "cookielaw.org",
+        "ctfassets.net",
+        "flipboard.com",
+        "garmin.com",
+        "gmx.net",
+        "google-analytics.com",
+        "google.com",
+        "googleapis.com",
+        "googletagmanager.com",
+        "gstatic.com",
+        "hsadspixel.net",
+        "hubspot.com",
+        "joinhoney.com",
+        "like-video.com",
+        "logitech.com",
+        "mozilla.net",
+        "qualified.com",
+        "robinhood.com",
+        "segment.com",
+        "sharethis.com",
+        "steamstatic.com",
+        "trustarc.com",
+        "twitter.com",
+        "typekit.net",
+        "waze.com",
+        "web.de",
+        "wistia.com",
+        "xnxx-cdn.com",
+        "yahoo.co.jp",
+        "yimg.jp"
+      ],
+      "unknown_classes": [
+        "doubleclick.net",
+        "hotjar.com",
+        "hs-scripts.com",
+        "naver.com",
+        "onetrust.com",
+        "ubuntu.com"
+      ],
+      "known_train_count": 56641,
+      "known_validation_count": 12168,
+      "known_test_count": 12162,
+      "unknown_test_count": 18000,
+      "purged_known_count": 21029,
+      "unknown_touched_group_count": 8899,
+      "group_counts": {
+        "KNOWN_TRAIN": 13872,
+        "KNOWN_VALIDATION": 1930,
+        "KNOWN_TEST": 1947
+      },
+      "known_group_overlap": {
+        "train_validation": 0,
+        "train_test": 0,
+        "validation_test": 0
+      },
+      "known_unknown_group_overlap": 0,
+      "actual_known_split_ratios": {
+        "KNOWN_TRAIN": 0.6995220511047165,
+        "KNOWN_VALIDATION": 0.15027602474960172,
+        "KNOWN_TEST": 0.1502019241456818
+      },
+      "cipher_source_distribution": {
+        "KNOWN_TRAIN": {
+          "aes-128-gcm": 18926,
+          "aes-256-gcm": 18814,
+          "chacha20-poly1305": 18901
+        },
+        "KNOWN_VALIDATION": {
+          "aes-128-gcm": 4060,
+          "aes-256-gcm": 4051,
+          "chacha20-poly1305": 4057
+        },
+        "KNOWN_TEST": {
+          "aes-128-gcm": 4063,
+          "aes-256-gcm": 4042,
+          "chacha20-poly1305": 4057
+        }
+      },
+      "all_class_counts": {
+        "adblockplus.org": {
+          "KNOWN_TRAIN": 2099,
+          "KNOWN_VALIDATION": 450,
+          "KNOWN_TEST": 451
+        },
+        "arin.net": {
+          "KNOWN_VALIDATION": 451,
+          "KNOWN_TRAIN": 2098,
+          "KNOWN_TEST": 451
+        },
+        "cloudfront.net": {
+          "KNOWN_TRAIN": 1434,
+          "KNOWN_VALIDATION": 307,
+          "KNOWN_TEST": 309,
+          "PURGED_GROUP_OVERLAP": 950
+        },
+        "coinbase.com": {
+          "KNOWN_TRAIN": 2097,
+          "KNOWN_TEST": 451,
+          "KNOWN_VALIDATION": 452
+        },
+        "cookielaw.org": {
+          "KNOWN_TEST": 145,
+          "KNOWN_TRAIN": 673,
+          "KNOWN_VALIDATION": 145,
+          "PURGED_GROUP_OVERLAP": 2037
+        },
+        "ctfassets.net": {
+          "KNOWN_TRAIN": 1984,
+          "KNOWN_TEST": 425,
+          "KNOWN_VALIDATION": 425,
+          "PURGED_GROUP_OVERLAP": 166
+        },
+        "doubleclick.net": {
+          "UNKNOWN_TEST": 3000
+        },
+        "flipboard.com": {
+          "KNOWN_TRAIN": 1277,
+          "KNOWN_VALIDATION": 276,
+          "KNOWN_TEST": 273,
+          "PURGED_GROUP_OVERLAP": 1174
+        },
+        "garmin.com": {
+          "KNOWN_VALIDATION": 286,
+          "KNOWN_TRAIN": 1339,
+          "KNOWN_TEST": 288,
+          "PURGED_GROUP_OVERLAP": 1087
+        },
+        "gmx.net": {
+          "KNOWN_VALIDATION": 450,
+          "KNOWN_TRAIN": 2100,
+          "KNOWN_TEST": 450
+        },
+        "google-analytics.com": {
+          "KNOWN_TEST": 234,
+          "KNOWN_VALIDATION": 234,
+          "KNOWN_TRAIN": 1092,
+          "PURGED_GROUP_OVERLAP": 1440
+        },
+        "google.com": {
+          "KNOWN_TRAIN": 1654,
+          "KNOWN_TEST": 355,
+          "KNOWN_VALIDATION": 355,
+          "PURGED_GROUP_OVERLAP": 636
+        },
+        "googleapis.com": {
+          "KNOWN_TRAIN": 1125,
+          "KNOWN_TEST": 241,
+          "KNOWN_VALIDATION": 241,
+          "PURGED_GROUP_OVERLAP": 1393
+        },
+        "googletagmanager.com": {
+          "KNOWN_VALIDATION": 248,
+          "KNOWN_TEST": 248,
+          "KNOWN_TRAIN": 1159,
+          "PURGED_GROUP_OVERLAP": 1345
+        },
+        "gstatic.com": {
+          "KNOWN_TRAIN": 1012,
+          "KNOWN_TEST": 217,
+          "KNOWN_VALIDATION": 217,
+          "PURGED_GROUP_OVERLAP": 1554
+        },
+        "hotjar.com": {
+          "UNKNOWN_TEST": 3000
+        },
+        "hs-scripts.com": {
+          "UNKNOWN_TEST": 3000
+        },
+        "hsadspixel.net": {
+          "KNOWN_TRAIN": 1022,
+          "KNOWN_TEST": 219,
+          "KNOWN_VALIDATION": 219,
+          "PURGED_GROUP_OVERLAP": 1540
+        },
+        "hubspot.com": {
+          "KNOWN_TRAIN": 608,
+          "KNOWN_TEST": 130,
+          "KNOWN_VALIDATION": 130,
+          "PURGED_GROUP_OVERLAP": 2132
+        },
+        "joinhoney.com": {
+          "KNOWN_TRAIN": 2096,
+          "KNOWN_TEST": 452,
+          "KNOWN_VALIDATION": 452
+        },
+        "like-video.com": {
+          "KNOWN_TRAIN": 2100,
+          "KNOWN_VALIDATION": 450,
+          "KNOWN_TEST": 450
+        },
+        "logitech.com": {
+          "KNOWN_VALIDATION": 354,
+          "KNOWN_TRAIN": 1657,
+          "KNOWN_TEST": 354,
+          "PURGED_GROUP_OVERLAP": 635
+        },
+        "mozilla.net": {
+          "KNOWN_TRAIN": 1937,
+          "KNOWN_TEST": 415,
+          "KNOWN_VALIDATION": 415,
+          "PURGED_GROUP_OVERLAP": 233
+        },
+        "naver.com": {
+          "UNKNOWN_TEST": 3000
+        },
+        "onetrust.com": {
+          "UNKNOWN_TEST": 3000
+        },
+        "qualified.com": {
+          "KNOWN_TRAIN": 1944,
+          "KNOWN_TEST": 416,
+          "KNOWN_VALIDATION": 416,
+          "PURGED_GROUP_OVERLAP": 224
+        },
+        "robinhood.com": {
+          "KNOWN_VALIDATION": 450,
+          "KNOWN_TRAIN": 2099,
+          "KNOWN_TEST": 451
+        },
+        "segment.com": {
+          "KNOWN_TRAIN": 1713,
+          "KNOWN_TEST": 367,
+          "KNOWN_VALIDATION": 367,
+          "PURGED_GROUP_OVERLAP": 553
+        },
+        "sharethis.com": {
+          "KNOWN_TRAIN": 2098,
+          "KNOWN_VALIDATION": 451,
+          "KNOWN_TEST": 451
+        },
+        "steamstatic.com": {
+          "KNOWN_TRAIN": 2100,
+          "KNOWN_VALIDATION": 451,
+          "KNOWN_TEST": 449
+        },
+        "trustarc.com": {
+          "KNOWN_VALIDATION": 388,
+          "KNOWN_TRAIN": 1814,
+          "KNOWN_TEST": 389,
+          "PURGED_GROUP_OVERLAP": 409
+        },
+        "twitter.com": {
+          "KNOWN_TRAIN": 1819,
+          "KNOWN_TEST": 390,
+          "KNOWN_VALIDATION": 390,
+          "PURGED_GROUP_OVERLAP": 401
+        },
+        "typekit.net": {
+          "KNOWN_TRAIN": 1295,
+          "KNOWN_TEST": 277,
+          "KNOWN_VALIDATION": 277,
+          "PURGED_GROUP_OVERLAP": 1151
+        },
+        "ubuntu.com": {
+          "UNKNOWN_TEST": 3000
+        },
+        "waze.com": {
+          "KNOWN_TRAIN": 2096,
+          "KNOWN_TEST": 451,
+          "KNOWN_VALIDATION": 453
+        },
+        "web.de": {
+          "KNOWN_TEST": 450,
+          "KNOWN_TRAIN": 2098,
+          "KNOWN_VALIDATION": 452
+        },
+        "wistia.com": {
+          "KNOWN_VALIDATION": 156,
+          "KNOWN_TRAIN": 722,
+          "KNOWN_TEST": 153,
+          "PURGED_GROUP_OVERLAP": 1969
+        },
+        "xnxx-cdn.com": {
+          "KNOWN_VALIDATION": 449,
+          "KNOWN_TRAIN": 2100,
+          "KNOWN_TEST": 451
+        },
+        "yahoo.co.jp": {
+          "KNOWN_TRAIN": 2081,
+          "KNOWN_TEST": 458,
+          "KNOWN_VALIDATION": 461
+        },
+        "yimg.jp": {
+          "KNOWN_TRAIN": 2099,
+          "KNOWN_TEST": 451,
+          "KNOWN_VALIDATION": 450
+        }
+      },
+      "assignment_metadata": {
+        "group_count": 17749,
+        "sample_counts": {
+          "KNOWN_TEST": 12162,
+          "KNOWN_VALIDATION": 12168,
+          "KNOWN_TRAIN": 56641
+        },
+        "moves": 964,
+        "objective": "2*total + 5*per-class + 2*per-class-by-source normalized squared ratio error"
+      },
+      "created_before_unknown_evaluation": true,
+      "unknown_access_policy": "FINAL TEST ONLY",
+      "future_encoder_policy": "train independently from legal architecture initialization; no full-40 or cross-setting checkpoint"
+    },
+    "high": {
+      "setting": "high",
+      "seed": 44,
+      "candidate_index": 15,
+      "known_classes": [
+        "adblockplus.org",
+        "arin.net",
+        "cloudfront.net",
+        "coinbase.com",
+        "ctfassets.net",
+        "flipboard.com",
+        "garmin.com",
+        "google-analytics.com",
+        "google.com",
+        "googleapis.com",
+        "googletagmanager.com",
+        "gstatic.com",
+        "hotjar.com",
+        "hs-scripts.com",
+        "hubspot.com",
+        "joinhoney.com",
+        "like-video.com",
+        "logitech.com",
+        "mozilla.net",
+        "qualified.com",
+        "robinhood.com",
+        "segment.com",
+        "steamstatic.com",
+        "trustarc.com",
+        "typekit.net",
+        "ubuntu.com",
+        "waze.com",
+        "web.de",
+        "yahoo.co.jp",
+        "yimg.jp"
+      ],
+      "unknown_classes": [
+        "cookielaw.org",
+        "doubleclick.net",
+        "gmx.net",
+        "hsadspixel.net",
+        "naver.com",
+        "onetrust.com",
+        "sharethis.com",
+        "twitter.com",
+        "wistia.com",
+        "xnxx-cdn.com"
+      ],
+      "known_train_count": 49976,
+      "known_validation_count": 10740,
+      "known_test_count": 10746,
+      "unknown_test_count": 30000,
+      "purged_known_count": 18538,
+      "unknown_touched_group_count": 10568,
+      "group_counts": {
+        "KNOWN_TRAIN": 12672,
+        "KNOWN_VALIDATION": 1710,
+        "KNOWN_TEST": 1698
+      },
+      "known_group_overlap": {
+        "train_validation": 0,
+        "train_test": 0,
+        "validation_test": 0
+      },
+      "known_unknown_group_overlap": 0,
+      "actual_known_split_ratios": {
+        "KNOWN_TRAIN": 0.6993367104195236,
+        "KNOWN_VALIDATION": 0.15028966443704347,
+        "KNOWN_TEST": 0.15037362514343286
+      },
+      "cipher_source_distribution": {
+        "KNOWN_TRAIN": {
+          "aes-128-gcm": 16797,
+          "aes-256-gcm": 16447,
+          "chacha20-poly1305": 16732
+        },
+        "KNOWN_VALIDATION": {
+          "aes-128-gcm": 3600,
+          "aes-256-gcm": 3531,
+          "chacha20-poly1305": 3609
+        },
+        "KNOWN_TEST": {
+          "aes-128-gcm": 3612,
+          "aes-256-gcm": 3542,
+          "chacha20-poly1305": 3592
+        }
+      },
+      "all_class_counts": {
+        "adblockplus.org": {
+          "KNOWN_VALIDATION": 450,
+          "KNOWN_TRAIN": 2100,
+          "KNOWN_TEST": 450
+        },
+        "arin.net": {
+          "KNOWN_VALIDATION": 451,
+          "KNOWN_TRAIN": 2097,
+          "KNOWN_TEST": 452
+        },
+        "cloudfront.net": {
+          "KNOWN_TRAIN": 1431,
+          "KNOWN_TEST": 309,
+          "KNOWN_VALIDATION": 310,
+          "PURGED_GROUP_OVERLAP": 950
+        },
+        "coinbase.com": {
+          "KNOWN_TRAIN": 2094,
+          "KNOWN_TEST": 453,
+          "KNOWN_VALIDATION": 453
+        },
+        "cookielaw.org": {
+          "UNKNOWN_TEST": 3000
+        },
+        "ctfassets.net": {
+          "KNOWN_TRAIN": 1984,
+          "KNOWN_TEST": 425,
+          "KNOWN_VALIDATION": 425,
+          "PURGED_GROUP_OVERLAP": 166
+        },
+        "doubleclick.net": {
+          "UNKNOWN_TEST": 3000
+        },
+        "flipboard.com": {
+          "KNOWN_TRAIN": 1276,
+          "KNOWN_TEST": 277,
+          "KNOWN_VALIDATION": 273,
+          "PURGED_GROUP_OVERLAP": 1174
+        },
+        "garmin.com": {
+          "KNOWN_TEST": 287,
+          "KNOWN_TRAIN": 1338,
+          "KNOWN_VALIDATION": 288,
+          "PURGED_GROUP_OVERLAP": 1087
+        },
+        "gmx.net": {
+          "UNKNOWN_TEST": 3000
+        },
+        "google-analytics.com": {
+          "KNOWN_TEST": 238,
+          "KNOWN_TRAIN": 1110,
+          "KNOWN_VALIDATION": 238,
+          "PURGED_GROUP_OVERLAP": 1414
+        },
+        "google.com": {
+          "KNOWN_TRAIN": 1593,
+          "KNOWN_TEST": 341,
+          "KNOWN_VALIDATION": 341,
+          "PURGED_GROUP_OVERLAP": 725
+        },
+        "googleapis.com": {
+          "KNOWN_TRAIN": 1038,
+          "KNOWN_TEST": 222,
+          "KNOWN_VALIDATION": 222,
+          "PURGED_GROUP_OVERLAP": 1518
+        },
+        "googletagmanager.com": {
+          "KNOWN_TEST": 236,
+          "KNOWN_TRAIN": 1104,
+          "KNOWN_VALIDATION": 236,
+          "PURGED_GROUP_OVERLAP": 1424
+        },
+        "gstatic.com": {
+          "KNOWN_TRAIN": 946,
+          "KNOWN_VALIDATION": 203,
+          "KNOWN_TEST": 204,
+          "PURGED_GROUP_OVERLAP": 1647
+        },
+        "hotjar.com": {
+          "KNOWN_VALIDATION": 351,
+          "KNOWN_TEST": 350,
+          "KNOWN_TRAIN": 1634,
+          "PURGED_GROUP_OVERLAP": 665
+        },
+        "hs-scripts.com": {
+          "KNOWN_TRAIN": 946,
+          "KNOWN_VALIDATION": 203,
+          "KNOWN_TEST": 203,
+          "PURGED_GROUP_OVERLAP": 1648
+        },
+        "hsadspixel.net": {
+          "UNKNOWN_TEST": 3000
+        },
+        "hubspot.com": {
+          "KNOWN_TRAIN": 867,
+          "KNOWN_VALIDATION": 186,
+          "KNOWN_TEST": 186,
+          "PURGED_GROUP_OVERLAP": 1761
+        },
+        "joinhoney.com": {
+          "KNOWN_TRAIN": 2100,
+          "KNOWN_VALIDATION": 449,
+          "KNOWN_TEST": 451
+        },
+        "like-video.com": {
+          "KNOWN_TRAIN": 2100,
+          "KNOWN_VALIDATION": 450,
+          "KNOWN_TEST": 450
+        },
+        "logitech.com": {
+          "KNOWN_TRAIN": 1561,
+          "KNOWN_VALIDATION": 335,
+          "KNOWN_TEST": 335,
+          "PURGED_GROUP_OVERLAP": 769
+        },
+        "mozilla.net": {
+          "KNOWN_TRAIN": 1765,
+          "KNOWN_TEST": 379,
+          "KNOWN_VALIDATION": 379,
+          "PURGED_GROUP_OVERLAP": 477
+        },
+        "naver.com": {
+          "UNKNOWN_TEST": 3000
+        },
+        "onetrust.com": {
+          "UNKNOWN_TEST": 3000
+        },
+        "qualified.com": {
+          "KNOWN_TRAIN": 1943,
+          "KNOWN_TEST": 417,
+          "KNOWN_VALIDATION": 416,
+          "PURGED_GROUP_OVERLAP": 224
+        },
+        "robinhood.com": {
+          "KNOWN_TEST": 450,
+          "KNOWN_TRAIN": 2100,
+          "KNOWN_VALIDATION": 450
+        },
+        "segment.com": {
+          "KNOWN_TRAIN": 1485,
+          "KNOWN_TEST": 319,
+          "KNOWN_VALIDATION": 319,
+          "PURGED_GROUP_OVERLAP": 877
+        },
+        "sharethis.com": {
+          "UNKNOWN_TEST": 3000
+        },
+        "steamstatic.com": {
+          "KNOWN_TRAIN": 2099,
+          "KNOWN_VALIDATION": 451,
+          "KNOWN_TEST": 450
+        },
+        "trustarc.com": {
+          "KNOWN_TEST": 370,
+          "KNOWN_TRAIN": 1729,
+          "KNOWN_VALIDATION": 370,
+          "PURGED_GROUP_OVERLAP": 531
+        },
+        "twitter.com": {
+          "UNKNOWN_TEST": 3000
+        },
+        "typekit.net": {
+          "KNOWN_TRAIN": 1152,
+          "KNOWN_VALIDATION": 247,
+          "KNOWN_TEST": 247,
+          "PURGED_GROUP_OVERLAP": 1354
+        },
+        "ubuntu.com": {
+          "KNOWN_VALIDATION": 454,
+          "KNOWN_TRAIN": 2095,
+          "KNOWN_TEST": 451
+        },
+        "waze.com": {
+          "KNOWN_TRAIN": 2095,
+          "KNOWN_VALIDATION": 452,
+          "KNOWN_TEST": 453
+        },
+        "web.de": {
+          "KNOWN_TRAIN": 2009,
+          "KNOWN_VALIDATION": 433,
+          "KNOWN_TEST": 431,
+          "PURGED_GROUP_OVERLAP": 127
+        },
+        "wistia.com": {
+          "UNKNOWN_TEST": 3000
+        },
+        "xnxx-cdn.com": {
+          "UNKNOWN_TEST": 3000
+        },
+        "yahoo.co.jp": {
+          "KNOWN_TRAIN": 2084,
+          "KNOWN_VALIDATION": 458,
+          "KNOWN_TEST": 458
+        },
+        "yimg.jp": {
+          "KNOWN_TRAIN": 2101,
+          "KNOWN_VALIDATION": 447,
+          "KNOWN_TEST": 452
+        }
+      },
+      "assignment_metadata": {
+        "group_count": 16080,
+        "sample_counts": {
+          "KNOWN_VALIDATION": 10740,
+          "KNOWN_TEST": 10746,
+          "KNOWN_TRAIN": 49976
+        },
+        "moves": 793,
+        "objective": "2*total + 5*per-class + 2*per-class-by-source normalized squared ratio error"
+      },
+      "created_before_unknown_evaluation": true,
+      "unknown_access_policy": "FINAL TEST ONLY",
+      "future_encoder_policy": "train independently from legal architecture initialization; no full-40 or cross-setting checkpoint"
+    }
+  },
+  "preprocessing": {
+    "implementation": "/home/birkenwald/data/SEU-WXY/WXY-SEU/TrafficClassifier/Projects/unknown_traffic_project/opendetect_ustc_encoder_audit/adapters/opendetect_preprocessing.py",
+    "implementation_sha256": "ff58c0c64b12e68d189e0fbd85b620cb9a3ee1edd6706110811bfcf403dfd8e3",
+    "constants": {
+      "PACKETS_PER_FLOW": 8,
+      "HEADER_BYTES": 80,
+      "PAYLOAD_BYTES": 48,
+      "BYTES_PER_PACKET": 128,
+      "FLOW_BYTES": 1024,
+      "IMAGE_SIDE": 32
+    },
+    "packet_selection": "first packets in flow order",
+    "ip_masking": "IPv4 source and destination set to 0.0.0.0 before serialization",
+    "padding_truncation": "each header/payload region right-zero-padded or truncated; missing packets zero-padded",
+    "port_policy": "retained; KNOWN_SHORTCUT_RISK",
+    "frozen": true
+  },
+  "input_leakage": {
+    "valid": 400,
+    "domain": 17,
+    "sni": 0,
+    "token": 18,
+    "combined": 18,
+    "level": "LOW_DIRECT_DOMAIN_LEAKAGE"
+  },
+  "unknown_free": {
+    "status": "PASS",
+    "unknown_only_allowed_at": "FINAL TEST ONLY",
+    "unknown_inference_executed": false
+  },
+  "future_baselines": [
+    "Open-Detect Native",
+    "Single-Full K1",
+    "Multi-Global K2",
+    "Class-P05 K2",
+    "Component-P05 K2"
+  ],
+  "dgsb_v1_status": "NOT YET CLEARED FOR EXTERNAL EVALUATION",
+  "final_gate": "READY",
+  "training_executed": false,
+  "embedding_or_mu_extracted": false,
+  "density_or_boundary_fit": false,
+  "unknown_inference_executed": false
+}

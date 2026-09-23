@@ -1,0 +1,39 @@
+{
+  "counts_by_role_and_type": {
+    "FROZEN_KNOWN_TRAIN_MODEL:joblib": 1,
+    "KNOWN_VALIDATION:csv": 1,
+    "KNOWN_VALIDATION:npy": 1,
+    "KNOWN_VALIDATION_DIAGNOSTIC:csv": 1
+  },
+  "known_test_mu_generated": false,
+  "known_test_opened": 0,
+  "pcap_files_opened": 0,
+  "read_events": 4,
+  "reads": [
+    {
+      "file_type": "npy",
+      "path": "/home/birkenwald/data/SEU-WXY/WXY-SEU/TrafficClassifier/Projects/unknown_traffic_project/stage8a_cipherspectrum_known_density/artifacts/low/z_val_pca64.npy",
+      "role": "KNOWN_VALIDATION"
+    },
+    {
+      "file_type": "csv",
+      "path": "/home/birkenwald/data/SEU-WXY/WXY-SEU/TrafficClassifier/Projects/unknown_traffic_project/stage8a_cipherspectrum_known_density/artifacts/low/val_manifest.csv",
+      "role": "KNOWN_VALIDATION"
+    },
+    {
+      "file_type": "joblib",
+      "path": "/home/birkenwald/data/SEU-WXY/WXY-SEU/TrafficClassifier/Projects/unknown_traffic_project/stage8a_cipherspectrum_known_density/artifacts/low/multi_k2/models.joblib",
+      "role": "FROZEN_KNOWN_TRAIN_MODEL"
+    },
+    {
+      "file_type": "csv",
+      "path": "/home/birkenwald/data/SEU-WXY/WXY-SEU/TrafficClassifier/Projects/unknown_traffic_project/stage8a_cipherspectrum_known_density/outputs/low/known_val_boundary_summary.csv",
+      "role": "KNOWN_VALIDATION_DIAGNOSTIC"
+    }
+  ],
+  "setting": "low",
+  "status": "PASS",
+  "unknown_inference_executed": false,
+  "unknown_mu_generated": false,
+  "unknown_test_opened": 0
+}

@@ -1,0 +1,23 @@
+{
+  "dataset": "iscx_tor",
+  "features": [
+    "packet_count",
+    "total_bytes",
+    "duration_seconds",
+    "packet_length_mean",
+    "packet_length_std",
+    "iat_mean_seconds",
+    "iat_std_seconds",
+    "forward_packets",
+    "reverse_packets",
+    "forward_reverse_ratio",
+    "direction_changes",
+    "payload_bytes"
+  ],
+  "flows": 9983,
+  "matrix_sha256": "670cad6f781d7eef3db633bff968b3807a69fbda0bdfb8030cfeed98f356dc83",
+  "missing_values": 0,
+  "source": "/home/birkenwald/data/SEU-WXY/WXY-SEU/TrafficClassifier/Projects/unknown_traffic_project/stage15r_representation_bottleneck_audit/feature_cache/iscx_tor/flow_statistics.csv",
+  "source_sha256": "7a855740d9e42b6a4831534663829ae3235b2b19fafbaec739119bb9b8bdd079",
+  "status": "PASS"
+}

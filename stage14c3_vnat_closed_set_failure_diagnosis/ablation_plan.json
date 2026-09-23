@@ -1,0 +1,32 @@
+{
+  "status": "FROZEN_BEFORE_TRAINING",
+  "protocols": {
+    "normal": "medium_seed2026",
+    "weak": "medium_seed2025"
+  },
+  "model_visible_roles": ["known:train", "known:validation"],
+  "known_test_samples_allowed": 0,
+  "unknown_test_samples_allowed": 0,
+  "variants": {
+    "D0": "reuse frozen F0",
+    "D1": "batch_size_128_only",
+    "D2": "not_run_identical_optimizer_lr",
+    "D3": "not_run_identical_scheduler",
+    "D4": "checkpoint_validation_accuracy_only",
+    "D5": "remove_logvar_clamp_only",
+    "D6": "fixed_training_seed_2022_only",
+    "D7": "disable_early_stopping_only",
+    "D8": "reuse_full_native_od_reference"
+  },
+  "fixed": {
+    "input": "F0 train/validation arrays",
+    "architecture": "released ResNet18 VAE, latent 128",
+    "loss_lambda": 0.005,
+    "optimizer": "Adam(lr=0.001, betas=[0.9,0.999], weight_decay=0)",
+    "scheduler": "MultiStepLR(milestones=[50,80], gamma=0.1)",
+    "maximum_epochs": 100,
+    "class_weight": null,
+    "weighted_sampler": false,
+    "gradient_clipping": null
+  }
+}

@@ -1,0 +1,109 @@
+{
+  "checks": [
+    {
+      "detail": "be9dcc1e0c6b68db005e506adf13a2d937a2f3982539a2c8a58f78c55af0d5ce",
+      "name": "official_pretrained_sha256",
+      "passed": true
+    },
+    {
+      "detail": 715546509,
+      "name": "pretrained_nonempty",
+      "passed": true
+    },
+    {
+      "detail": 10955,
+      "name": "iscx_vpn_total",
+      "passed": true
+    },
+    {
+      "detail": 8764,
+      "name": "iscx_vpn_train",
+      "passed": true
+    },
+    {
+      "detail": 1098,
+      "name": "iscx_vpn_validation",
+      "passed": true
+    },
+    {
+      "detail": 1093,
+      "name": "iscx_vpn_test",
+      "passed": true
+    },
+    {
+      "detail": {
+        "cache": 10955,
+        "extra": 0,
+        "manifest": 10955,
+        "missing": 0
+      },
+      "name": "iscx_vpn_cache_membership",
+      "passed": true
+    },
+    {
+      "detail": [
+        10955,
+        8,
+        7
+      ],
+      "name": "iscx_vpn_finite_graph",
+      "passed": true
+    },
+    {
+      "detail": [
+        10955,
+        320
+      ],
+      "name": "iscx_vpn_token_shape",
+      "passed": true
+    },
+    {
+      "detail": 11181,
+      "name": "iscx_tor_total",
+      "passed": true
+    },
+    {
+      "detail": 8946,
+      "name": "iscx_tor_train",
+      "passed": true
+    },
+    {
+      "detail": 1118,
+      "name": "iscx_tor_validation",
+      "passed": true
+    },
+    {
+      "detail": 1117,
+      "name": "iscx_tor_test",
+      "passed": true
+    },
+    {
+      "detail": {
+        "cache": 11181,
+        "extra": 0,
+        "manifest": 11181,
+        "missing": 0
+      },
+      "name": "iscx_tor_cache_membership",
+      "passed": true
+    },
+    {
+      "detail": [
+        11181,
+        8,
+        7
+      ],
+      "name": "iscx_tor_finite_graph",
+      "passed": true
+    },
+    {
+      "detail": [
+        11181,
+        320
+      ],
+      "name": "iscx_tor_token_shape",
+      "passed": true
+    }
+  ],
+  "status": "PASS"
+}

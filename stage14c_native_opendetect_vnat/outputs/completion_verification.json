@@ -1,0 +1,168 @@
+{
+  "failures": [],
+  "formal_failures": 0,
+  "freeze": {
+    "freeze_hash": "c904daef04d2c8e79469191121325c0a6ceeaeb3e595ef9c4c7d7a62c980ae2f",
+    "protocol_sha256": "5177bf7276812bbb417f085043f8518c8573ea1851de2f1d733deb77c9939ced",
+    "split_manifest_sha256": "66bf155e6906231b316c384a52f4b46dabd9d3aee76d5f66d86a3941eb172c4e"
+  },
+  "known_test_samples": 0,
+  "per_class_csv_rows": 105,
+  "protocols_verified": 15,
+  "run_checks": [
+    {
+      "accuracy_reconstructed": 0.9469658337582866,
+      "best_epoch": 75,
+      "checkpoint_sha256_verified": true,
+      "history_epochs": 100,
+      "macro_f1_reconstructed": 0.8916104600245364,
+      "protocol_id": "high_seed2022",
+      "status": "PASS",
+      "weighted_f1_reconstructed": 0.9436887572054414
+    },
+    {
+      "accuracy_reconstructed": 0.7743431221020093,
+      "best_epoch": 92,
+      "checkpoint_sha256_verified": true,
+      "history_epochs": 100,
+      "macro_f1_reconstructed": 0.8674252873563217,
+      "protocol_id": "high_seed2023",
+      "status": "PASS",
+      "weighted_f1_reconstructed": 0.7674800405052496
+    },
+    {
+      "accuracy_reconstructed": 0.8151986183074266,
+      "best_epoch": 85,
+      "checkpoint_sha256_verified": true,
+      "history_epochs": 100,
+      "macro_f1_reconstructed": 0.8546922862712337,
+      "protocol_id": "high_seed2024",
+      "status": "PASS",
+      "weighted_f1_reconstructed": 0.808603546863705
+    },
+    {
+      "accuracy_reconstructed": 0.9034267912772586,
+      "best_epoch": 85,
+      "checkpoint_sha256_verified": true,
+      "history_epochs": 100,
+      "macro_f1_reconstructed": 0.7655346215227185,
+      "protocol_id": "high_seed2025",
+      "status": "PASS",
+      "weighted_f1_reconstructed": 0.8859325751582385
+    },
+    {
+      "accuracy_reconstructed": 0.9958049292081804,
+      "best_epoch": 89,
+      "checkpoint_sha256_verified": true,
+      "history_epochs": 100,
+      "macro_f1_reconstructed": 0.9830008225224129,
+      "protocol_id": "high_seed2026",
+      "status": "PASS",
+      "weighted_f1_reconstructed": 0.9958122370182609
+    },
+    {
+      "accuracy_reconstructed": 0.935453251067869,
+      "best_epoch": 76,
+      "checkpoint_sha256_verified": true,
+      "history_epochs": 100,
+      "macro_f1_reconstructed": 0.8849855857591876,
+      "protocol_id": "low_seed2022",
+      "status": "PASS",
+      "weighted_f1_reconstructed": 0.9349944802333929
+    },
+    {
+      "accuracy_reconstructed": 0.8514129443938013,
+      "best_epoch": 74,
+      "checkpoint_sha256_verified": true,
+      "history_epochs": 100,
+      "macro_f1_reconstructed": 0.7861184795084937,
+      "protocol_id": "low_seed2023",
+      "status": "PASS",
+      "weighted_f1_reconstructed": 0.8500815070956822
+    },
+    {
+      "accuracy_reconstructed": 0.8575031525851198,
+      "best_epoch": 98,
+      "checkpoint_sha256_verified": true,
+      "history_epochs": 100,
+      "macro_f1_reconstructed": 0.8197155325938582,
+      "protocol_id": "low_seed2024",
+      "status": "PASS",
+      "weighted_f1_reconstructed": 0.8493175517747675
+    },
+    {
+      "accuracy_reconstructed": 0.8419567262464722,
+      "best_epoch": 68,
+      "checkpoint_sha256_verified": true,
+      "history_epochs": 100,
+      "macro_f1_reconstructed": 0.6819338792663903,
+      "protocol_id": "low_seed2025",
+      "status": "PASS",
+      "weighted_f1_reconstructed": 0.8364872992678539
+    },
+    {
+      "accuracy_reconstructed": 0.9042056074766355,
+      "best_epoch": 39,
+      "checkpoint_sha256_verified": true,
+      "history_epochs": 100,
+      "macro_f1_reconstructed": 0.780422676658966,
+      "protocol_id": "low_seed2026",
+      "status": "PASS",
+      "weighted_f1_reconstructed": 0.8716936404925882
+    },
+    {
+      "accuracy_reconstructed": 0.933871781928319,
+      "best_epoch": 75,
+      "checkpoint_sha256_verified": true,
+      "history_epochs": 100,
+      "macro_f1_reconstructed": 0.8676531493012136,
+      "protocol_id": "medium_seed2022",
+      "status": "PASS",
+      "weighted_f1_reconstructed": 0.9300690495657464
+    },
+    {
+      "accuracy_reconstructed": 0.5871121718377088,
+      "best_epoch": 57,
+      "checkpoint_sha256_verified": true,
+      "history_epochs": 100,
+      "macro_f1_reconstructed": 0.7042794600171607,
+      "protocol_id": "medium_seed2023",
+      "status": "PASS",
+      "weighted_f1_reconstructed": 0.5877476898431291
+    },
+    {
+      "accuracy_reconstructed": 0.7814285714285715,
+      "best_epoch": 89,
+      "checkpoint_sha256_verified": true,
+      "history_epochs": 100,
+      "macro_f1_reconstructed": 0.8531124899404937,
+      "protocol_id": "medium_seed2024",
+      "status": "PASS",
+      "weighted_f1_reconstructed": 0.7722339353939107
+    },
+    {
+      "accuracy_reconstructed": 0.8969387755102041,
+      "best_epoch": 53,
+      "checkpoint_sha256_verified": true,
+      "history_epochs": 100,
+      "macro_f1_reconstructed": 0.7397546993503976,
+      "protocol_id": "medium_seed2025",
+      "status": "PASS",
+      "weighted_f1_reconstructed": 0.8628017199998353
+    },
+    {
+      "accuracy_reconstructed": 0.9952904238618524,
+      "best_epoch": 58,
+      "checkpoint_sha256_verified": true,
+      "history_epochs": 100,
+      "macro_f1_reconstructed": 0.9833179712297598,
+      "protocol_id": "medium_seed2026",
+      "status": "PASS",
+      "weighted_f1_reconstructed": 0.9952233415098174
+    }
+  ],
+  "setting_summary_rows": 4,
+  "status": "PASS",
+  "unknown_training_samples": 0,
+  "unknown_validation_samples": 0
+}

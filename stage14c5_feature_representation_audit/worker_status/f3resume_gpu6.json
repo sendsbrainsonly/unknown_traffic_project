@@ -1,0 +1,19 @@
+{
+  "completed_tasks": 2,
+  "failed_tasks": 0,
+  "records": [
+    {
+      "returncode": 0,
+      "status": "success",
+      "task": "f3:low_seed2026"
+    },
+    {
+      "returncode": 0,
+      "status": "success",
+      "task": "f3:medium_seed2026"
+    }
+  ],
+  "total_tasks": 2,
+  "worker_complete": true,
+  "worker_id": "f3resume_gpu6"
+}

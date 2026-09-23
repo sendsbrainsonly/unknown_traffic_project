@@ -1,0 +1,9 @@
+{
+  "status": "PASS",
+  "protocols": 13,
+  "manifest_rows": 143997,
+  "strict_unknown_free": true,
+  "flow_role_overlap": 0,
+  "exact_image_role_overlap": 0,
+  "training_started": false
+}

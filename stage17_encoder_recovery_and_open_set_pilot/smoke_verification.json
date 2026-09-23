@@ -1,0 +1,66 @@
+{
+  "cache_sha256": "aff17d4b3271107852c0f30556627ab5daf693fba6a0a7b18df5f3785f260cff",
+  "checks": {
+    "E1": {
+      "finite": true,
+      "forward_backward": "PASS",
+      "input_shape": [
+        2,
+        320
+      ],
+      "loss": 1.6305654048919678,
+      "noncollapsed": true,
+      "output_shape": [
+        2,
+        768
+      ]
+    },
+    "E2": {
+      "deterministic_eval": true,
+      "finite": true,
+      "forward_backward": "PASS",
+      "input_shape": [
+        4,
+        30,
+        7
+      ],
+      "loss": 1.5488201379776,
+      "noncollapsed": true,
+      "output_shape": [
+        4,
+        128
+      ]
+    },
+    "E3": {
+      "finite": true,
+      "forward_backward": "PASS",
+      "input_shape": [
+        4,
+        896
+      ],
+      "loss": 1.7849335670471191,
+      "output_shape": [
+        4,
+        5
+      ]
+    },
+    "historical_E1_checkpoint": {
+      "classifier_output_shape": [
+        20,
+        768
+      ],
+      "load_tensor_state": "PASS",
+      "sha256": "df866633fa15541d1a1325d9a5d683a36d359499c462769d5be0c2a202fdfe52",
+      "tensor_count": 201
+    },
+    "historical_E2_checkpoint": {
+      "epoch": 47,
+      "labels_num": 20,
+      "load_strict": "PASS",
+      "sha256": "be074d3920e10dd57f77e162264bd4ce9c144eda5aa26610956a7142ea8ef9cd"
+    }
+  },
+  "peak_gpu_memory_bytes": 1537665024,
+  "single_batch_single_epoch_smoke": "PASS",
+  "status": "PASS"
+}

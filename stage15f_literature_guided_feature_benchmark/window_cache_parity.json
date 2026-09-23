@@ -1,0 +1,48 @@
+{
+  "datasets": [
+    {
+      "checked_known_train_validation_flows": 432537,
+      "comparison_scope": "integrity-only comparison for Stage15F target UIDs; no legacy Test metric is aggregated or reported",
+      "dataset": "ustc",
+      "duration_mismatches_tolerance_1e-6": 0,
+      "frozen_stage15r_cache_sha256": "82248538cb30d89ca4f574a211f77c33b7b0563f1f50617cd3870cbce1661cc6",
+      "max_duration_absolute_difference_seconds": 0.0,
+      "new_cache_sha256": "1c1d1688b7ec4c77490d0f7db23e41d89fdbb1e053cdd22cc59a1fd3199a6e1b",
+      "packet_count_mismatches": 0,
+      "status": "PASS",
+      "total_frame_byte_mismatches": 0
+    },
+    {
+      "checked_known_train_validation_flows": 18121,
+      "comparison_scope": "integrity-only comparison for Stage15F target UIDs; no legacy Test metric is aggregated or reported",
+      "dataset": "iscx_vpn",
+      "duration_mismatches_tolerance_1e-6": 0,
+      "frozen_stage15r_cache_sha256": "47a04183a1da7074f117bc9e53beb3fc177494296b05ca9e0f85c64ddf6998ca",
+      "max_duration_absolute_difference_seconds": 0.0,
+      "new_cache_sha256": "f8183ba211ccc396debe70392bc3a888d8a0b1a6a8364561dd55d141c7cea7ef",
+      "packet_count_mismatches": 0,
+      "status": "PASS",
+      "total_frame_byte_mismatches": 0
+    },
+    {
+      "checked_known_train_validation_flows": 11783,
+      "comparison_scope": "integrity-only comparison for Stage15F target UIDs; no legacy Test metric is aggregated or reported",
+      "dataset": "iscx_tor",
+      "duration_mismatches_tolerance_1e-6": 0,
+      "frozen_stage15r_cache_sha256": "7a855740d9e42b6a4831534663829ae3235b2b19fafbaec739119bb9b8bdd079",
+      "max_duration_absolute_difference_seconds": 0.0,
+      "new_cache_sha256": "925571f46b7fba54ca33b74c4d807ba5e2092ec1aa9de453d150614617c1529e",
+      "packet_count_mismatches": 0,
+      "status": "PASS",
+      "total_frame_byte_mismatches": 0
+    }
+  ],
+  "known_test_or_unknown_test_values_used_for_scientific_selection": false,
+  "status": "PASS",
+  "vnat": {
+    "checked_known_train_validation_flows": 23447,
+    "comparison": "exact Stage14B packet_count for every Stage15F target UID",
+    "packet_count_mismatches": 0,
+    "status": "PASS"
+  }
+}

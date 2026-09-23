@@ -1,0 +1,10 @@
+setting,method,same_stage7_encoder,same_mu_x,representation_after_mu,known_macro_f1,UFAR,AUROC
+low,Native,True,True,Native uses mu_x+logvar_x KL; K1/K2 use frozen StandardScaler/PCA64(mu_x),0.768938234613032,0.9436666666666668,0.5008302761705445
+low,Single-Full-K1,True,True,Native uses mu_x+logvar_x KL; K1/K2 use frozen StandardScaler/PCA64(mu_x),0.811082686620669,0.4898333333333333,0.8800054372358325
+low,Multi-Global-K2,True,True,Native uses mu_x+logvar_x KL; K1/K2 use frozen StandardScaler/PCA64(mu_x),0.8107131980883413,0.397,0.892480302843777
+medium,Native,True,True,Native uses mu_x+logvar_x KL; K1/K2 use frozen StandardScaler/PCA64(mu_x),0.7100805832430823,0.9754444444444444,0.4979696824352719
+medium,Single-Full-K1,True,True,Native uses mu_x+logvar_x KL; K1/K2 use frozen StandardScaler/PCA64(mu_x),0.7608698994940525,0.5843888888888888,0.7797532546730253
+medium,Multi-Global-K2,True,True,Native uses mu_x+logvar_x KL; K1/K2 use frozen StandardScaler/PCA64(mu_x),0.7676065417202792,0.5438333333333333,0.7953853989658134
+high,Native,True,True,Native uses mu_x+logvar_x KL; K1/K2 use frozen StandardScaler/PCA64(mu_x),0.7212872982625582,0.984,0.4721331037905577
+high,Single-Full-K1,True,True,Native uses mu_x+logvar_x KL; K1/K2 use frozen StandardScaler/PCA64(mu_x),0.7640469419510129,0.5276333333333333,0.8044775808052608
+high,Multi-Global-K2,True,True,Native uses mu_x+logvar_x KL; K1/K2 use frozen StandardScaler/PCA64(mu_x),0.768270285446608,0.4961,0.8212500511818352

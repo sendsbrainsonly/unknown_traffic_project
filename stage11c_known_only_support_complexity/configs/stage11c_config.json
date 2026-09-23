@@ -1,0 +1,26 @@
+{
+  "experiment_id": "stage11c-known-only-support-complexity-20260915-v1",
+  "claim_scope": "EXPLORATORY_ONLY_POST_HOC_DEVELOPMENT_DIAGNOSIS",
+  "scenarios": ["a1", "a2", "a3"],
+  "seeds": [2022, 2023, 2024, 2025, 2026],
+  "spaces": {"raw128": 128, "pca64": 64},
+  "bootstrap": {"iterations": 100, "seed": 0, "subspace_k": [5, 10]},
+  "decision_labels": {"benefit_min_delta_auroc": 0.02, "harm_max_delta_auroc": -0.02},
+  "rules": {
+    "Rule-NLL": "validation_nll_full < validation_nll_spherical",
+    "Rule-NLL-1pct": "relative_validation_nll_gain > 0.01",
+    "Rule-F1": "validation_macro_f1_full > validation_macro_f1_centroid + 0.005",
+    "Rule-Stability": "Rule-NLL and covariance instability below LOSO training-scenario median"
+  },
+  "forbidden_inputs": [
+    "known_test arrays",
+    "unknown_test arrays",
+    "unknown-derived features",
+    "CipherSpectrum Stage9 sample-level Test"
+  ],
+  "new_encoder_training": false,
+  "new_detector_fitting": false,
+  "new_threshold_fitting": false,
+  "stage11b_root": "/home/birkenwald/data/SEU-WXY/WXY-SEU/TrafficClassifier/Projects/unknown_traffic_project/stage11b_decoupled_support_readout",
+  "open_detect_v6_root": "/home/birkenwald/data/SEU-WXY/WXY-SEU/TrafficClassifier/Projects/Open-Detect/artifacts/paper-reproduction/v6-local-pcap-fivefold-corrected-v1"
+}

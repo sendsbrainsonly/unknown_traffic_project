@@ -1,0 +1,23 @@
+{
+  "dataset": "vnat",
+  "features": [
+    "packet_count",
+    "total_bytes",
+    "duration_seconds",
+    "packet_length_mean",
+    "packet_length_std",
+    "iat_mean_seconds",
+    "iat_std_seconds",
+    "forward_packets",
+    "reverse_packets",
+    "forward_reverse_ratio",
+    "direction_changes",
+    "payload_bytes"
+  ],
+  "flows": 21135,
+  "matrix_sha256": "f4e2a6ec0d356a2b1b5e469361f8cc1bc850a9fdf522495601ad02d8c1b44921",
+  "missing_values": 63405,
+  "source": "/home/birkenwald/data/SEU-WXY/WXY-SEU/TrafficClassifier/Projects/unknown_traffic_project/stage14c5_feature_representation_audit/raw_feature_cache",
+  "source_sha256": "a0e00f0c228173dd672c929f92edb9e0c8b3544f074f6f325a70429c4fb380e5",
+  "status": "PASS"
+}

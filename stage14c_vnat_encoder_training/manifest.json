@@ -1,0 +1,218 @@
+{
+  "artifacts": [
+    {
+      "path": "stage14c_training_summary.csv",
+      "sha256": "3def9d5b73c9a890791f3d71f57b11087de4acfea419709c43f555a18c2ed70f",
+      "size_bytes": 6196
+    },
+    {
+      "path": "stage14c_run_manifest.csv",
+      "sha256": "a74e8d1f45d6445c8034cb9b1c245cab9ed17c17f70b55482a753227205b297e",
+      "size_bytes": 3664
+    },
+    {
+      "path": "stage14c_encoder_training.md",
+      "sha256": "f6b949d3366ee97b845e68aac3c9c7d459b6c7283f087b2a6d7bfb0f06856a36",
+      "size_bytes": 3100
+    },
+    {
+      "path": "final_verification.json",
+      "sha256": "e1b3b975f2f879c7e8ff80caaebf5b1563c051ad9ba37e74895b0b0bb69ba612",
+      "size_bytes": 899
+    },
+    {
+      "path": "flow_image_cache/cache_audit.json",
+      "sha256": "e3984e650007f6ed2b514dfc836c3f253c2fcdd4508c19efe73940e98a90f979",
+      "size_bytes": 1043
+    },
+    {
+      "path": "checkpoints/high_seed2022_best.pt",
+      "sha256": "4f172c11428b99c99cf2b223710363c858e3bc674b0a6b809c5d52cbd2fae819",
+      "size_bytes": 323610506
+    },
+    {
+      "path": "checkpoints/high_seed2023_best.pt",
+      "sha256": "cb5259c7471ef20f7e102210d4368908073b7e7d7f9c9b1bc75a4fe6312c4a17",
+      "size_bytes": 323610506
+    },
+    {
+      "path": "checkpoints/high_seed2024_best.pt",
+      "sha256": "504346167a01528b59d174878cd76f13128bd9c31f3157ef103115dbd6e55409",
+      "size_bytes": 323610506
+    },
+    {
+      "path": "checkpoints/high_seed2025_best.pt",
+      "sha256": "d1fccfe3c7f1c52db54b4163804fb0d1aa60ea46d55b254ae0734ce7ddbba65e",
+      "size_bytes": 323610506
+    },
+    {
+      "path": "checkpoints/high_seed2026_best.pt",
+      "sha256": "01983cec073f5b0649ff513b5800d804acc9113117ad2794b96876063fcb2191",
+      "size_bytes": 323610506
+    },
+    {
+      "path": "checkpoints/low_seed2022_best.pt",
+      "sha256": "8da9bf333294b0fdc3028cc170aabc9b0acc2253c69fab54ae5dedd154a69a8d",
+      "size_bytes": 323612931
+    },
+    {
+      "path": "checkpoints/low_seed2023_best.pt",
+      "sha256": "9320e06bb490407c1554d3abaeec4c7478a11117f4d0eb0b33facdd8f005f82a",
+      "size_bytes": 323612931
+    },
+    {
+      "path": "checkpoints/low_seed2024_best.pt",
+      "sha256": "d19a8378892da5941f470e3c51ca55b5c83bd48adada10bd02ea20fca8b6d0bd",
+      "size_bytes": 323612931
+    },
+    {
+      "path": "checkpoints/low_seed2025_best.pt",
+      "sha256": "c1cee25953f64fe681df125d2ca84f3a0693623c16315c7c290b5d3472e05757",
+      "size_bytes": 323612931
+    },
+    {
+      "path": "checkpoints/low_seed2026_best.pt",
+      "sha256": "d58a64e17295be886032ca904e2605ab7bf3849cb9ab31990d0c218b6ee1cd4d",
+      "size_bytes": 323612931
+    },
+    {
+      "path": "checkpoints/medium_seed2022_best.pt",
+      "sha256": "858f002268fe5c643cf97f6ef8477252eaef7d9a3bc23cc371970b41a663eced",
+      "size_bytes": 323613336
+    },
+    {
+      "path": "checkpoints/medium_seed2023_best.pt",
+      "sha256": "50902984f79cbc0fd5f8be340054e822b38a48fde1a9b89d18f3440dc88a9ef0",
+      "size_bytes": 323613336
+    },
+    {
+      "path": "checkpoints/medium_seed2024_best.pt",
+      "sha256": "f39ad4620e74b1c78f1add8f2636b914d9976309a3d28d53446669dd37a2d031",
+      "size_bytes": 323613336
+    },
+    {
+      "path": "checkpoints/medium_seed2025_best.pt",
+      "sha256": "9d4bfc616913f02d1ab8d249c6b93b182e08f2a025e7f8ca2e62aa616baccaa4",
+      "size_bytes": 323613336
+    },
+    {
+      "path": "checkpoints/medium_seed2026_best.pt",
+      "sha256": "df8c9482003f1df6141e609a1416c7c99a0306d48b96d8d1fc2e46fe354b5838",
+      "size_bytes": 323613336
+    }
+  ],
+  "claim_scope": "other",
+  "code": {
+    "changes": [
+      "stage14c_vnat_encoder_training"
+    ],
+    "dirty": true,
+    "revision": "ffcb0dfcaebe3b04b6d3bd42964d5a705303d2cc"
+  },
+  "configuration": {
+    "parameters": {
+      "batch_size": 512,
+      "checkpoint_monitor": "harmonic_mean(Known Validation Accuracy, Known Validation Macro-F1)",
+      "early_stopping_patience": 5,
+      "freeze_hash": "c904daef04d2c8e79469191121325c0a6ceeaeb3e595ef9c4c7d7a62c980ae2f",
+      "known_test_samples_used": 0,
+      "max_epochs": 100,
+      "runs": 15,
+      "unknown_samples_used": 0
+    },
+    "seeds": [
+      2022,
+      2023,
+      2024,
+      2025,
+      2026
+    ]
+  },
+  "core_results": [
+    {
+      "metric": "low_val_accuracy_mean",
+      "value": 0.8177940707008274
+    },
+    {
+      "metric": "medium_val_accuracy_mean",
+      "value": 0.759880264234197
+    },
+    {
+      "metric": "high_val_accuracy_mean",
+      "value": 0.8214546627955814
+    },
+    {
+      "metric": "low_val_macro_f1_mean",
+      "value": 0.5945335090082576
+    },
+    {
+      "metric": "medium_val_macro_f1_mean",
+      "value": 0.559700567213961
+    },
+    {
+      "metric": "high_val_macro_f1_mean",
+      "value": 0.6902673203070903
+    },
+    {
+      "metric": "successful_runs",
+      "value": 15
+    },
+    {
+      "metric": "unknown_samples_used",
+      "value": 0
+    },
+    {
+      "metric": "unique_checkpoint_hashes",
+      "value": 15
+    },
+    {
+      "metric": "weak_macro_f1_runs_lt_0_35",
+      "value": 2
+    }
+  ],
+  "created_at_utc": "2026-09-17T13:16:31Z",
+  "execution": {
+    "command": "select_gpu.py --allowed 0,3,4,5,6,7 --min-free-gb 10 --count 4 -- python -u stage14c_vnat_encoder_training/scripts/run_campaign.py",
+    "environment": "/home/birkenwald/data/SEU-WXY/conda_envs/2025-10-8-WXY-dgl_py310",
+    "exit_code": 0,
+    "physical_gpu_ids": [
+      5,
+      4,
+      3,
+      0
+    ],
+    "related_sessions": [
+      "stage14c-flow-cache-v2",
+      "stage14c-build-inputs",
+      "stage14c-train-low2022",
+      "stage14c-aggregate"
+    ],
+    "tmux_session": "stage14c-campaign"
+  },
+  "experiment_id": "stage14c-vnat-encoder-training-20260917-v1",
+  "experiment_type": "training",
+  "inputs": [
+    {
+      "path": "/home/birkenwald/data/SEU-WXY/WXY-SEU/TrafficClassifier/Projects/unknown_traffic_project/stage14b_vnat_protocol_freeze/vnat_open_set_protocol.json",
+      "sha256": "5177bf7276812bbb417f085043f8518c8573ea1851de2f1d733deb77c9939ced"
+    },
+    {
+      "path": "/home/birkenwald/data/SEU-WXY/WXY-SEU/TrafficClassifier/Projects/unknown_traffic_project/stage14b_vnat_protocol_freeze/vnat_split_manifest.csv",
+      "sha256": "66bf155e6906231b316c384a52f4b46dabd9d3aee76d5f66d86a3941eb172c4e"
+    },
+    {
+      "path": "flow_image_cache/cache_audit.json",
+      "sha256": "e3984e650007f6ed2b514dfc836c3f253c2fcdd4508c19efe73940e98a90f979"
+    }
+  ],
+  "limitations": [
+    "No Known Test or Unknown Test evaluation was performed.",
+    "Medium-2024 and Medium-2025 have weak Known Validation Macro-F1 and were not retuned.",
+    "Sixteen non-IPv4 packets used released-code-compatible zero filling; no flow was removed."
+  ],
+  "next_step": "Eligible for Stage 14D frozen support construction when explicitly requested; do not alter Stage 14B or Stage 14C artifacts.",
+  "objective": "Train 15 independent Known-only Open-Detect encoders on the frozen Stage 14B VNAT protocols without Unknown/Test evaluation or Stage 14D",
+  "schema_version": 1,
+  "status": "success",
+  "updated_at_utc": "2026-09-17T14:38:28Z"
+}

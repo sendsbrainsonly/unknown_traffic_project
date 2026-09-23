@@ -1,0 +1,48 @@
+{
+  "experiment_id": "stage21-coarse-service-ours-e3-t8-20260922-v1",
+  "method_id": "OURS-E3-T8",
+  "method_identity": {
+    "trafficformer_branch": "Recovered TrafficFormer architecture, strict random initialization, first 5 packets",
+    "graph_branch": "Project FIG/TAGCN, first 8 packets",
+    "fusion": "Known-Train per-branch z-score, 768+128 concat, linear classifier",
+    "not_used": ["OpenDetectNet", "Open-Detect prototype loss", "Open-Detect classifier"]
+  },
+  "source_protocol": "../stage20_dual_coarse_service_protocol/closed_service_manifest.csv",
+  "datasets": {
+    "iscx_vpn": {
+      "services": ["Chat", "Email", "File-Transfer", "P2P", "Streaming", "VoIP"],
+      "expected_flows": 10955
+    },
+    "iscx_tor": {
+      "services": ["Browsing", "Chat", "Email", "File-Transfer", "P2P", "Streaming", "VoIP"],
+      "expected_flows": 11181
+    }
+  },
+  "seeds": [2022, 2023],
+  "training": {
+    "trafficformer": {"epochs": 3, "batch_size": 16, "learning_rate": 0.00006, "pretrained": false},
+    "tagcn": {"epochs": 50, "batch_size": 64, "learning_rate": 0.001, "hidden_dim": 128, "k_hops": 2},
+    "fusion_head": {"epochs": 30, "batch_size": 256, "learning_rate": 0.001},
+    "checkpoint_criterion": "Known Validation Macro-F1"
+  },
+  "evaluation": {
+    "primary": ["accuracy", "macro_f1", "balanced_accuracy"],
+    "secondary": [
+      "macro_precision",
+      "macro_recall",
+      "weighted_precision",
+      "weighted_recall",
+      "weighted_f1",
+      "matthews_correlation_coefficient",
+      "cohen_kappa",
+      "worst_class_f1",
+      "per_class_precision_recall_f1_support",
+      "confusion_matrix",
+      "seed_mean_std_min_max",
+      "validation_test_gap",
+      "E3_vs_E1_E2_delta"
+    ],
+    "test_for_checkpoint_selection": 0
+  },
+  "claim_scope": "Stage20 coarse-Service closed-set diagnostic benchmark"
+}

@@ -1,0 +1,72 @@
+{
+  "stage": "Stage 11B",
+  "experiment": "Frozen Open-Detect Encoder Decoupled Empirical Support Readout",
+  "status_label": "DEVELOPMENT_RESULT",
+  "external_validation_label": "NOT_INDEPENDENT_EXTERNAL_VALIDATION",
+  "seeds": [2022, 2023, 2024, 2025, 2026],
+  "scenarios": {
+    "a1": {"split": 0, "known_count": 19, "unknown_count": 1},
+    "a2": {"split": 1, "known_count": 17, "unknown_count": 3},
+    "a3": {"split": 2, "known_count": 15, "unknown_count": 5}
+  },
+  "class_names": {
+    "0": "Gmail", "1": "FTP", "2": "Nsis-ay", "3": "Facetime",
+    "4": "Weibo", "5": "Cridex", "6": "Zeus", "7": "SMB",
+    "8": "BitTorrent", "9": "WorldOfWarcraft", "10": "Shifu",
+    "11": "Outlook", "12": "Virut", "13": "Geodo", "14": "MySQL",
+    "15": "Htbot", "16": "Tinba", "17": "Skype", "18": "Miuref",
+    "19": "Neris"
+  },
+  "v6_frozen_root": "/home/birkenwald/data/SEU-WXY/WXY-SEU/TrafficClassifier/Projects/Open-Detect/artifacts/paper-reproduction/v6-local-pcap-fivefold-corrected-v1",
+  "v6_split_root": "/home/birkenwald/data/SEU-WXY/WXY-SEU/TrafficClassifier/Projects/Open-Detect/artifacts/v6-local-pcap-fivefold-splits-v1",
+  "stage11a_root": "/home/birkenwald/data/SEU-WXY/WXY-SEU/TrafficClassifier/Projects/unknown_traffic_project/stage11a_data_anchored_prototype",
+  "frozen_inference": {
+    "architecture": "resnet18",
+    "channels": 1,
+    "latent_dim": 128,
+    "eval_batch_size": 256,
+    "workers": 0,
+    "eval_seed": 2021,
+    "optimizer": null,
+    "backward": false,
+    "checkpoint_update": false
+  },
+  "detectors": {
+    "R0": {"name": "Native Open-Detect learned-prototype forward KL"},
+    "R1": {"name": "Known-Train empirical centroid squared Euclidean"},
+    "R2": {"name": "Known-Train StandardScaler plus PCA64 plus per-class full Gaussian K1", "components": 1},
+    "R3": {"name": "Known-Train StandardScaler plus PCA64 plus per-class full GMM K2", "components": 2}
+  },
+  "density_protocol": {
+    "source": "read-only Stage11A frozen B0 support models",
+    "fit_data": "Known Train deterministic mu only",
+    "standard_scaler": "fit train only",
+    "pca_dim": 64,
+    "pca_solver": "randomized",
+    "pca_random_state": 0,
+    "covariance_type": "full",
+    "reg_covar": 0.001,
+    "n_init": 3,
+    "max_iter": 300,
+    "random_state": 0,
+    "allowed_components": [1, 2]
+  },
+  "threshold": {"source": "Known Validation only", "rule": "P95", "numpy_method": "higher"},
+  "primary_evaluation": "symmetric balanced 1:1, matching v6 corrected reproduction",
+  "bootstrap": {"iterations": 1000, "seed": 0, "ci_percent": 95},
+  "gate": {
+    "material_auroc_delta": 0.02,
+    "clear_harm_auroc_delta": -0.02,
+    "known_macro_f1_drop": -0.02,
+    "known_frr_increase": 0.02,
+    "majority_seed_count": 3
+  },
+  "forbidden": [
+    "new encoder training", "DAP retraining", "prototype anchoring",
+    "checkpoint or learned-prototype modification", "optimizer", "backward",
+    "Unknown-aware training or checkpoint selection", "threshold search",
+    "Test Youden-J", "K greater than 2", "Adaptive K", "DGSB",
+    "local percentile thresholds", "new loss",
+    "CipherSpectrum Stage9 sample-level Test access", "automatic next stage"
+  ]
+}

@@ -1,0 +1,45 @@
+{
+  "batch_size": 512,
+  "checkpoint_rule": "validation_composite",
+  "complete_100_epochs": true,
+  "early_stop_monitor": "validation_composite",
+  "early_stop_patience": null,
+  "freeze_before": {
+    "freeze_hash": "c904daef04d2c8e79469191121325c0a6ceeaeb3e595ef9c4c7d7a62c980ae2f",
+    "protocol_sha256": "5177bf7276812bbb417f085043f8518c8573ea1851de2f1d733deb77c9939ced",
+    "split_sha256": "66bf155e6906231b316c384a52f4b46dabd9d3aee76d5f66d86a3941eb172c4e"
+  },
+  "guarded_logvar": true,
+  "known_classes": [
+    "netflix",
+    "rdp",
+    "rsync",
+    "skype",
+    "ssh",
+    "vimeo",
+    "zoiper"
+  ],
+  "known_test_samples": 0,
+  "loss_lambda": 0.005,
+  "model": "Stage3OpenDetectNet",
+  "model_visible_roles": [
+    "known:train",
+    "known:validation"
+  ],
+  "optimizer": "Adam(lr=0.001,betas=[0.9,0.999],weight_decay=0)",
+  "physical_gpu": "5",
+  "protocol_id": "medium_seed2026",
+  "scheduler": "MultiStepLR([50,80],gamma=0.1)",
+  "train_samples": 15328,
+  "training_seed": 2026,
+  "unknown_classes_excluded": [
+    "sftp",
+    "youtube",
+    "scp"
+  ],
+  "unknown_training_samples": 0,
+  "unknown_validation_samples": 0,
+  "validation_samples": 1911,
+  "variant": "D7",
+  "workers": 0
+}

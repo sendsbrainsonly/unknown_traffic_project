@@ -1,0 +1,203 @@
+{
+  "augmentation_parity": {
+    "max_absolute_difference": 0.0,
+    "mismatched_samples": 0,
+    "samples_checked": 100,
+    "status": "PASS"
+  },
+  "data_alignment_failures": 0,
+  "data_alignment_rows": 30,
+  "des_executed": false,
+  "diagnoses": {
+    "f0:high_seed2022": {
+      "category": "normal convergence",
+      "reason": "finite metrics; best val Macro-F1=0.849572"
+    },
+    "f0:high_seed2023": {
+      "category": "underfitting",
+      "reason": "stopped at epoch 19 before first prototype reset; best val Macro-F1=0.717431"
+    },
+    "f0:high_seed2024": {
+      "category": "underfitting",
+      "reason": "stopped at epoch 15 before first prototype reset; best val Macro-F1=0.429056"
+    },
+    "f0:high_seed2025": {
+      "category": "underfitting",
+      "reason": "stopped at epoch 21 before first prototype reset; best val Macro-F1=0.675224"
+    },
+    "f0:high_seed2026": {
+      "category": "normal convergence",
+      "reason": "finite metrics; best val Macro-F1=0.780054"
+    },
+    "f0:low_seed2022": {
+      "category": "underfitting",
+      "reason": "stopped at epoch 13 before first prototype reset; best val Macro-F1=0.597320"
+    },
+    "f0:low_seed2023": {
+      "category": "underfitting",
+      "reason": "stopped at epoch 23 before first prototype reset; best val Macro-F1=0.665631"
+    },
+    "f0:low_seed2024": {
+      "category": "underfitting",
+      "reason": "stopped at epoch 15 before first prototype reset; best val Macro-F1=0.468825"
+    },
+    "f0:low_seed2025": {
+      "category": "underfitting",
+      "reason": "stopped at epoch 9 before first prototype reset; best val Macro-F1=0.445140"
+    },
+    "f0:low_seed2026": {
+      "category": "normal convergence",
+      "reason": "finite metrics; best val Macro-F1=0.812139"
+    },
+    "f0:medium_seed2022": {
+      "category": "underfitting",
+      "reason": "stopped at epoch 20 before first prototype reset; best val Macro-F1=0.732211"
+    },
+    "f0:medium_seed2023": {
+      "category": "underfitting",
+      "reason": "stopped at epoch 13 before first prototype reset; best val Macro-F1=0.524399"
+    },
+    "f0:medium_seed2024": {
+      "category": "underfitting",
+      "reason": "stopped at epoch 16 before first prototype reset; best val Macro-F1=0.334134"
+    },
+    "f0:medium_seed2025": {
+      "category": "underfitting",
+      "reason": "stopped at epoch 10 before first prototype reset; best val Macro-F1=0.284444"
+    },
+    "f0:medium_seed2026": {
+      "category": "normal convergence",
+      "reason": "finite metrics; best val Macro-F1=0.923316"
+    },
+    "f2:high_seed2022": {
+      "category": "normal convergence",
+      "reason": "finite metrics; best val Macro-F1=0.834777"
+    },
+    "f2:high_seed2023": {
+      "category": "underfitting",
+      "reason": "stopped at epoch 15 before first prototype reset; best val Macro-F1=0.567665"
+    },
+    "f2:high_seed2024": {
+      "category": "underfitting",
+      "reason": "stopped at epoch 23 before first prototype reset; best val Macro-F1=0.529717"
+    },
+    "f2:high_seed2025": {
+      "category": "underfitting",
+      "reason": "stopped at epoch 10 before first prototype reset; best val Macro-F1=0.582609"
+    },
+    "f2:high_seed2026": {
+      "category": "normal convergence",
+      "reason": "finite metrics; best val Macro-F1=0.935293"
+    },
+    "f2:low_seed2022": {
+      "category": "underfitting",
+      "reason": "stopped at epoch 21 before first prototype reset; best val Macro-F1=0.701187"
+    },
+    "f2:low_seed2023": {
+      "category": "normal convergence",
+      "reason": "finite metrics; best val Macro-F1=0.750940"
+    },
+    "f2:low_seed2024": {
+      "category": "underfitting",
+      "reason": "stopped at epoch 25 before first prototype reset; best val Macro-F1=0.600294"
+    },
+    "f2:low_seed2025": {
+      "category": "underfitting",
+      "reason": "stopped at epoch 14 before first prototype reset; best val Macro-F1=0.444189"
+    },
+    "f2:low_seed2026": {
+      "category": "underfitting",
+      "reason": "stopped at epoch 14 before first prototype reset; best val Macro-F1=0.745234"
+    },
+    "f2:medium_seed2022": {
+      "category": "underfitting",
+      "reason": "stopped at epoch 19 before first prototype reset; best val Macro-F1=0.749297"
+    },
+    "f2:medium_seed2023": {
+      "category": "underfitting",
+      "reason": "stopped at epoch 29 before first prototype reset; best val Macro-F1=0.608706"
+    },
+    "f2:medium_seed2024": {
+      "category": "underfitting",
+      "reason": "stopped at epoch 14 before first prototype reset; best val Macro-F1=0.373376"
+    },
+    "f2:medium_seed2025": {
+      "category": "underfitting",
+      "reason": "stopped at epoch 30 before first prototype reset; best val Macro-F1=0.653313"
+    },
+    "f2:medium_seed2026": {
+      "category": "underfitting",
+      "reason": "stopped at epoch 10 before first prototype reset; best val Macro-F1=0.732555"
+    },
+    "od:high_seed2022": {
+      "category": "normal convergence",
+      "reason": "100 epochs completed; selected Known-Val Accuracy=0.946966"
+    },
+    "od:high_seed2023": {
+      "category": "normal convergence",
+      "reason": "100 epochs completed; selected Known-Val Accuracy=0.774343"
+    },
+    "od:high_seed2024": {
+      "category": "normal convergence",
+      "reason": "100 epochs completed; selected Known-Val Accuracy=0.815199"
+    },
+    "od:high_seed2025": {
+      "category": "normal convergence",
+      "reason": "100 epochs completed; selected Known-Val Accuracy=0.903427"
+    },
+    "od:high_seed2026": {
+      "category": "normal convergence",
+      "reason": "100 epochs completed; selected Known-Val Accuracy=0.995805"
+    },
+    "od:low_seed2022": {
+      "category": "normal convergence",
+      "reason": "100 epochs completed; selected Known-Val Accuracy=0.935453"
+    },
+    "od:low_seed2023": {
+      "category": "normal convergence",
+      "reason": "100 epochs completed; selected Known-Val Accuracy=0.851413"
+    },
+    "od:low_seed2024": {
+      "category": "normal convergence",
+      "reason": "100 epochs completed; selected Known-Val Accuracy=0.857503"
+    },
+    "od:low_seed2025": {
+      "category": "normal convergence",
+      "reason": "100 epochs completed; selected Known-Val Accuracy=0.841957"
+    },
+    "od:low_seed2026": {
+      "category": "normal convergence",
+      "reason": "100 epochs completed; selected Known-Val Accuracy=0.904206"
+    },
+    "od:medium_seed2022": {
+      "category": "normal convergence",
+      "reason": "100 epochs completed; selected Known-Val Accuracy=0.933872"
+    },
+    "od:medium_seed2023": {
+      "category": "underfitting",
+      "reason": "selected Known-Val Accuracy=0.587112"
+    },
+    "od:medium_seed2024": {
+      "category": "normal convergence",
+      "reason": "100 epochs completed; selected Known-Val Accuracy=0.781429"
+    },
+    "od:medium_seed2025": {
+      "category": "normal convergence",
+      "reason": "100 epochs completed; selected Known-Val Accuracy=0.896939"
+    },
+    "od:medium_seed2026": {
+      "category": "normal convergence",
+      "reason": "100 epochs completed; selected Known-Val Accuracy=0.995290"
+    }
+  },
+  "f2_scaler_recompute_failures": 0,
+  "feature_audit_rows": 90,
+  "freeze_hash": "c904daef04d2c8e79469191121325c0a6ceeaeb3e595ef9c4c7d7a62c980ae2f",
+  "known_test_samples_read": 0,
+  "per_class_rows": 315,
+  "protocol_sha256": "5177bf7276812bbb417f085043f8518c8573ea1851de2f1d733deb77c9939ced",
+  "split_sha256": "66bf155e6906231b316c384a52f4b46dabd9d3aee76d5f66d86a3941eb172c4e",
+  "status": "PASS",
+  "training_dynamics_rows": 2026,
+  "unknown_test_samples_read": 0
+}

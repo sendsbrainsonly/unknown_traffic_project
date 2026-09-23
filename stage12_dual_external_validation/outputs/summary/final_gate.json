@@ -1,0 +1,27 @@
+{
+  "decision": "EXTERNAL_CONFIRMED",
+  "conditions": {
+    "both_dataset_level_mean_delta_auroc_gt_0": true,
+    "each_dataset_has_setting_mean_delta_auroc_ge_registered_minimum": true,
+    "no_setting_mean_delta_auroc_at_or_below_registered_floor": true,
+    "majority_paired_seeds_des_gt_od": true,
+    "no_setting_mean_delta_known_frr_above_registered_ceiling": true,
+    "no_setting_mean_delta_known_macro_f1_below_registered_floor": true
+  },
+  "dataset_level_mean_delta_auroc": {
+    "iscx_vpn": 0.023451506193966465,
+    "iscx_tor": 0.06973350476527733
+  },
+  "dataset_split_policies": {
+    "iscx_vpn": [
+      "FLOW_DISJOINT_ONLY"
+    ],
+    "iscx_tor": [
+      "FLOW_DISJOINT_ONLY"
+    ]
+  },
+  "claim_reduction_required_for_flow_disjoint_only": true,
+  "post_test_method_modification": false,
+  "forbidden_methods_run": false,
+  "gate_definition_source": "/home/birkenwald/data/SEU-WXY/WXY-SEU/TrafficClassifier/Projects/unknown_traffic_project/stage12_dual_external_validation/configs/stage12_config.json"
+}

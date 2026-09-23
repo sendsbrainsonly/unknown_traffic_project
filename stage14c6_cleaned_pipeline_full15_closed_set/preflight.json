@@ -1,0 +1,11 @@
+{
+  "des_executed": false,
+  "disk_free_bytes": 426403823616,
+  "f2_input_gates_pass": 15,
+  "freeze_hash": "c904daef04d2c8e79469191121325c0a6ceeaeb3e595ef9c4c7d7a62c980ae2f",
+  "known_test_samples_loaded": 0,
+  "native_paired_results_available": 15,
+  "protocols": 15,
+  "status": "PASS",
+  "unknown_samples_loaded": 0
+}

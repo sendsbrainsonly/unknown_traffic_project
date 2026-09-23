@@ -1,0 +1,44 @@
+{
+  "checks": {
+    "dgsbv2_rule_hash_frozen": true,
+    "evaluation_config_v2_frozen": true,
+    "existing_five_methods_unmodified": true,
+    "final_test_metrics_frozen": true,
+    "global_p025_frozen": true,
+    "known_test_access_zero": true,
+    "local_p025_frozen": true,
+    "no_known_collapse": true,
+    "no_post_local_global_recalibration": true,
+    "no_quantile_search": true,
+    "paired_bootstrap_fixed_1000": true,
+    "stage6_hashes_pass": true,
+    "stage7_hashes_pass": true,
+    "stage8a_hashes_pass": true,
+    "unknown_test_access_zero": true
+  },
+  "evaluation_config_v2_sha256": "2eadc7c7ce5cba91d5d164ee541aae7d1f6f600cdfe995046ddbf0d7b0f49b60",
+  "existing_methods_modified": 0,
+  "gate": "READY_FOR_ONE_SHOT_FINAL_TEST",
+  "gate_redundancy": {
+    "high": "DUAL_GATE_ACTIVE",
+    "low": "DUAL_GATE_ACTIVE",
+    "medium": "DUAL_GATE_ACTIVE"
+  },
+  "known_test_mu_generated": false,
+  "known_test_opened": 0,
+  "primary_comparison": "DGSB-v2 vs Multi-Global-K2",
+  "setting_bundle_hashes": {
+    "high": "36520817bd0f0da9a7ffcbe9f731788b8f468c71c8998fe7f2c23427b1aff056",
+    "low": "44ba638ea4b3957ac77568de8ac372d589ff6cab55ced42a0a710b2846076dc8",
+    "medium": "3839eb31111bbf17450ae43be1c6abe0f623991a31aa08bd59894074d931a50a"
+  },
+  "setting_rule_sha256": {
+    "high": "fa8e5eb2ef7449d2675ac8ae4c3d552fa4f63752e049dc49cdef04244eb3d250",
+    "low": "111a32d40498c6c7c9cfefedeb1dcbb2f4d3b8d2e3fb27a72d77fdb609baad1c",
+    "medium": "b42bcb0919376f5734de34340b40e892f4a89d7a52f61dca3e3a90ba6a689519"
+  },
+  "unified_rule_sha256": "4cadbc55766e6d07b944422a65e26c52ac140b48fa0c4d88c24635cf9146c271",
+  "unknown_inference_executed": false,
+  "unknown_mu_generated": false,
+  "unknown_test_opened": 0
+}

@@ -1,0 +1,84 @@
+{
+  "final_gate": "CONDITIONAL_GO",
+  "primary": "KNN_10-CENTROID",
+  "primary_characterization": {
+    "scenarios": {
+      "a1": {
+        "mean_delta_auroc": -0.011599999999999989,
+        "mean_delta_ufar": 0.014000000000000002,
+        "mean_delta_known_frr": 0.01,
+        "positive_seed_count": 0
+      },
+      "a2": {
+        "mean_delta_auroc": 0.036064444444444455,
+        "mean_delta_ufar": -0.03933333333333333,
+        "mean_delta_known_frr": -0.004000000000000002,
+        "positive_seed_count": 4
+      },
+      "a3": {
+        "mean_delta_auroc": 0.0011383065360186073,
+        "mean_delta_ufar": -0.0034610630407911013,
+        "mean_delta_known_frr": -0.0014833127317676151,
+        "positive_seed_count": 3
+      }
+    },
+    "material_scenario_count": 1,
+    "positive_scenario_count": 2,
+    "clear_harm_scenario_count": 0,
+    "positive_seed_count": 7,
+    "pooled_delta_auroc_std": 0.02787458380049854
+  },
+  "knn5_sensitivity_characterization": {
+    "scenarios": {
+      "a1": {
+        "mean_delta_auroc": -0.013839999999999986,
+        "mean_delta_ufar": 0.033999999999999996,
+        "mean_delta_known_frr": 0.011,
+        "positive_seed_count": 0
+      },
+      "a2": {
+        "mean_delta_auroc": 0.03473777777777778,
+        "mean_delta_ufar": -0.02533333333333333,
+        "mean_delta_known_frr": -0.0010000000000000037,
+        "positive_seed_count": 4
+      },
+      "a3": {
+        "mean_delta_auroc": 0.0008241644906421986,
+        "mean_delta_ufar": -0.0032138442521631658,
+        "mean_delta_known_frr": -0.0019777503090234864,
+        "positive_seed_count": 3
+      }
+    },
+    "material_scenario_count": 1,
+    "positive_scenario_count": 2,
+    "clear_harm_scenario_count": 0,
+    "positive_seed_count": 7,
+    "pooled_delta_auroc_std": 0.028705780090528165
+  },
+  "conditions": {
+    "at_least_two_material_scenarios": false,
+    "no_clear_harm_scenario": true,
+    "overall_majority_positive_seeds": false,
+    "known_frr_safe": true,
+    "ufar_lower_in_each_material_scenario": true
+  },
+  "material_scenarios": [
+    "a2"
+  ],
+  "more_stable_k": "KNN_10",
+  "stability_definition": {
+    "comparison": "lexicographic",
+    "criteria": [
+      "fewer scenarios with mean delta AUROC <= -0.02",
+      "more scenarios with positive mean delta AUROC",
+      "more positive paired seeds",
+      "lower pooled paired-delta AUROC standard deviation"
+    ],
+    "used_for_primary_gate": false
+  },
+  "fusion_study_worthwhile": true,
+  "new_encoder_training": false,
+  "external_test_datasets_read": [],
+  "frozen_experiment_modified": false,
+  "next_stage_started": false
+}

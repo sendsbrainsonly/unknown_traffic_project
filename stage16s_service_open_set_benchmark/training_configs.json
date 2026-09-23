@@ -1,0 +1,220 @@
+{
+  "capture_generalization": "NOT_IDENTIFIABLE",
+  "checkpoint_selection": "Known Validation accuracy only",
+  "des_v0": {
+    "score": "min_y squared_Euclidean(mu, Known-Train empirical centroid_y)"
+  },
+  "des_v1": {
+    "epsilon": 1e-12,
+    "global_weight": 0.5,
+    "k": 10,
+    "local_weight": 0.5,
+    "normalization": "Known Validation median/MAD"
+  },
+  "h1": {
+    "definition": "max(ECDF_KnownVal(OD), ECDF_KnownVal(DES-v0))",
+    "ecdf_ties": "searchsorted side=right"
+  },
+  "known_test_feature_values_used_before_freeze": 0,
+  "manifest_canonical_membership_sha256": "1550f62b81ab3f21cf9a29e3714f350261f04bc40a3b889a2b73e645e387f746",
+  "manifest_sha256": "498b78efae22638c80ec203974052d95cda81a04ac064d7266d2956a3f1556a5",
+  "methods": [
+    "OD-Native",
+    "DES-v0",
+    "DES-v1",
+    "H1"
+  ],
+  "od_native": {
+    "known_classifier": "argmin_y 0.5*squared_Euclidean(mu, learned_prototype_y)",
+    "score": "min_y KL[N(mu,diag(exp(clamped_logvar))) || N(prototype_y,I)]",
+    "score_direction": "larger_is_more_unknown"
+  },
+  "protocol_definition": "old Known Train retained as Known Train; old Known Validation split 1:1 into new Known Validation/Test by deterministic exact-image groups; held-out Service uses all 3065-pool rows as Unknown Test",
+  "protocol_split_seed": 16001,
+  "protocol_version": "stage16s_loso_service_v1",
+  "protocols": [
+    {
+      "counts": {
+        "known_test": 160,
+        "known_train": 2598,
+        "known_validation": 158,
+        "unknown_test": 149
+      },
+      "known_services": [
+        "Email",
+        "File-Transfer",
+        "P2P",
+        "Streaming",
+        "VoIP"
+      ],
+      "minimum_known_test_class_support": 12,
+      "minimum_known_train_class_support": 145,
+      "minimum_known_validation_class_support": 11,
+      "protocol_id": "loso_chat",
+      "status": "FEASIBLE_FLOW_LEVEL",
+      "unknown_capture_count": 6,
+      "unknown_service": "Chat"
+    },
+    {
+      "counts": {
+        "known_test": 157,
+        "known_train": 2585,
+        "known_validation": 155,
+        "unknown_test": 168
+      },
+      "known_services": [
+        "Chat",
+        "File-Transfer",
+        "P2P",
+        "Streaming",
+        "VoIP"
+      ],
+      "minimum_known_test_class_support": 9,
+      "minimum_known_train_class_support": 132,
+      "minimum_known_validation_class_support": 8,
+      "protocol_id": "loso_email",
+      "status": "FEASIBLE_FLOW_LEVEL",
+      "unknown_capture_count": 2,
+      "unknown_service": "Email"
+    },
+    {
+      "counts": {
+        "known_test": 147,
+        "known_train": 2398,
+        "known_validation": 145,
+        "unknown_test": 375
+      },
+      "known_services": [
+        "Chat",
+        "Email",
+        "P2P",
+        "Streaming",
+        "VoIP"
+      ],
+      "minimum_known_test_class_support": 9,
+      "minimum_known_train_class_support": 132,
+      "minimum_known_validation_class_support": 8,
+      "protocol_id": "loso_file_transfer",
+      "status": "FEASIBLE_FLOW_LEVEL",
+      "unknown_capture_count": 4,
+      "unknown_service": "File-Transfer"
+    },
+    {
+      "counts": {
+        "known_test": 119,
+        "known_train": 1926,
+        "known_validation": 116,
+        "unknown_test": 904
+      },
+      "known_services": [
+        "Chat",
+        "Email",
+        "File-Transfer",
+        "Streaming",
+        "VoIP"
+      ],
+      "minimum_known_test_class_support": 9,
+      "minimum_known_train_class_support": 132,
+      "minimum_known_validation_class_support": 8,
+      "protocol_id": "loso_p2p",
+      "status": "PROTOCOL_LIMITED",
+      "unknown_capture_count": 1,
+      "unknown_service": "P2P"
+    },
+    {
+      "counts": {
+        "known_test": 117,
+        "known_train": 1876,
+        "known_validation": 114,
+        "unknown_test": 958
+      },
+      "known_services": [
+        "Chat",
+        "Email",
+        "File-Transfer",
+        "P2P",
+        "VoIP"
+      ],
+      "minimum_known_test_class_support": 9,
+      "minimum_known_train_class_support": 132,
+      "minimum_known_validation_class_support": 8,
+      "protocol_id": "loso_streaming",
+      "status": "FEASIBLE_FLOW_LEVEL",
+      "unknown_capture_count": 4,
+      "unknown_service": "Streaming"
+    },
+    {
+      "counts": {
+        "known_test": 145,
+        "known_train": 2267,
+        "known_validation": 142,
+        "unknown_test": 511
+      },
+      "known_services": [
+        "Chat",
+        "Email",
+        "File-Transfer",
+        "P2P",
+        "Streaming"
+      ],
+      "minimum_known_test_class_support": 9,
+      "minimum_known_train_class_support": 132,
+      "minimum_known_validation_class_support": 8,
+      "protocol_id": "loso_voip",
+      "status": "FEASIBLE_FLOW_LEVEL",
+      "unknown_capture_count": 3,
+      "unknown_service": "VoIP"
+    }
+  ],
+  "seeds": [
+    2022,
+    2023,
+    2024
+  ],
+  "services": [
+    "Chat",
+    "Email",
+    "File-Transfer",
+    "P2P",
+    "Streaming",
+    "VoIP"
+  ],
+  "status": "FROZEN_BEFORE_TRAINING",
+  "threshold": {
+    "numpy_method": "higher",
+    "quantile": 0.95,
+    "split": "Known Validation only",
+    "unknown_if": "score >= threshold"
+  },
+  "training": {
+    "architecture": "resnet18",
+    "batch_size": 128,
+    "betas": [
+      0.9,
+      0.999
+    ],
+    "channels": 1,
+    "checkpoint_criterion": "Known Validation accuracy",
+    "early_stop_min_delta": 0.0001,
+    "early_stop_min_epoch": 82,
+    "early_stop_patience": 10,
+    "epochs": 100,
+    "eval_batch_size": 256,
+    "lambda": 0.005,
+    "latent_dim": 128,
+    "learning_rate": 0.001,
+    "optimizer": "Adam",
+    "prototype_reset_zero_based_epochs": [
+      50,
+      80
+    ],
+    "scheduler_gamma": 0.1,
+    "scheduler_milestones": [
+      50,
+      80
+    ],
+    "training_protocol": "corrected-paper",
+    "workers": 0
+  },
+  "unknown_test_feature_values_used_before_freeze": 0
+}

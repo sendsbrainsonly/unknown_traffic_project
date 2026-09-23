@@ -1,0 +1,27 @@
+{
+  "checkpoint_path": "/home/birkenwald/data/SEU-WXY/WXY-SEU/TrafficClassifier/Projects/unknown_traffic_project/stage15r_representation_bottleneck_audit/pilot_runs/e2/ustc/A-2/model_best.pt",
+  "checkpoint_sha256": "dc4c6690493acb594092eccb96aa37cee4bf3834946909269ac6d853f4537805",
+  "classification_metrics_within_1e_12_and_loss_within_1e_6": true,
+  "confusion_exact_match": true,
+  "dataset": "ustc",
+  "known_test_samples_used": 0,
+  "known_train_samples": 346651,
+  "known_validation_samples": 43331,
+  "normalization_exact_match": true,
+  "parity_device": "cuda:0",
+  "protocol_id": "A-2",
+  "recomputed": {
+    "validation_accuracy": 0.8645311670628418,
+    "validation_loss": 0.29737635205153745,
+    "validation_macro_f1": 0.887379347068556,
+    "validation_weighted_f1": 0.8629799023926398
+  },
+  "reference": {
+    "validation_accuracy": 0.8645311670628418,
+    "validation_loss": 0.29737635205153745,
+    "validation_macro_f1": 0.887379347068556,
+    "validation_weighted_f1": 0.8629799023926398
+  },
+  "status": "PASS",
+  "unknown_test_samples_used": 0
+}

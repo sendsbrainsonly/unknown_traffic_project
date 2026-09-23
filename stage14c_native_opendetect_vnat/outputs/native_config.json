@@ -1,0 +1,33 @@
+{
+  "arch": "resnet18",
+  "betas": [
+    0.9,
+    0.999
+  ],
+  "channels": 1,
+  "checkpoint_selection": "maximum Known Validation Accuracy",
+  "dataloader_temp_path_addressing": "project-local directory via /proc/self/fd dirfd alias",
+  "dataloader_tensor_sharing_strategy": "default_file_descriptor",
+  "early_stopping": false,
+  "epochs": 100,
+  "lambda": 0.005,
+  "latent_dim": 128,
+  "learning_rate": 0.001,
+  "lr_gamma": 0.1,
+  "lr_milestones": [
+    50,
+    80
+  ],
+  "optimizer": "Adam",
+  "prototype_reset_zero_based_epochs": [
+    50,
+    80
+  ],
+  "temp_inter": 1.0,
+  "temp_intra": 1.0,
+  "train_batch_size": 128,
+  "training_protocol": "released-code",
+  "training_seed": 2022,
+  "validation_batch_size": 64,
+  "workers": 4
+}

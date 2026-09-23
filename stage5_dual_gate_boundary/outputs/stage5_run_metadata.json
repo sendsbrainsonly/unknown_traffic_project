@@ -1,0 +1,32 @@
+{
+  "claim_scope": "METHOD_FREEZE_PLUS_PROTOCOL_FREEZE_NO_UNKNOWN_EVALUATION",
+  "created_before_unknown_evaluation": true,
+  "cstnet_training_executed": false,
+  "cstnet_unknown_scores_accessed": false,
+  "dataset_inventory_fingerprint_sha256": "908cd511c40f74e7daaca9829dddd9ba92e652daafa8bedc572702008f65b476",
+  "dgsb_rule_sha256": "959f0a0dba96bb3c8b0519cc2c15f3ca3a9520df4de9d08636924415fe70c6a0",
+  "environment": {
+    "numpy": "1.26.4",
+    "pandas": "2.3.3",
+    "prefix": "/home/birkenwald/data/SEU-WXY/conda_envs/2025-10-8-WXY-dgl_py310",
+    "python": "3.10.18",
+    "scikit_learn": "1.7.2"
+  },
+  "final_gate": "READY",
+  "finished_at_utc": "2026-09-13T02:12:36Z",
+  "git_head": "ffcb0dfcaebe3b04b6d3bd42964d5a705303d2cc",
+  "run_id": "stage5_dual_gate_boundary_freeze_v1",
+  "started_at_utc": "2026-09-13T02:11:47Z",
+  "status": "completed",
+  "ustc_unknown_inputs_accessed": 0,
+  "verification": {
+    "cstnet_training_executed": false,
+    "cstnet_unknown_scores_accessed": false,
+    "dgsb_rule_sha256": "959f0a0dba96bb3c8b0519cc2c15f3ca3a9520df4de9d08636924415fe70c6a0",
+    "eligible_classes": 119,
+    "gate": "READY",
+    "metric_reasons": [],
+    "raw_classes": 120,
+    "split_hashes": "PASS"
+  }
+}

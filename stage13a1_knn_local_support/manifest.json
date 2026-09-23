@@ -1,0 +1,1319 @@
+{
+  "schema_version": 1,
+  "experiment_id": "stage13a1-knn-local-support-20260916-v1",
+  "created_at_utc": "2026-09-16T02:07:59Z",
+  "updated_at_utc": "2026-09-16T02:17:00Z",
+  "status": "success",
+  "experiment_type": "method-development-evaluation",
+  "claim_scope": "diagnostic",
+  "objective": "Diagnose class-conditional kNN local support against DES-v0 centroid on 15 frozen USTC B0 representations",
+  "inputs": [
+    {
+      "path": "/home/birkenwald/data/SEU-WXY/WXY-SEU/TrafficClassifier/Projects/unknown_traffic_project/stage11b_decoupled_support_readout",
+      "role": "15 frozen Stage11B representation bundles",
+      "access": "read_only"
+    }
+  ],
+  "code": {
+    "entrypoint": "scripts/evaluate_run.py",
+    "aggregator": "scripts/aggregate_results.py"
+  },
+  "execution": {
+    "formal_runs": 15,
+    "methods_per_run": 3,
+    "new_encoder_training": false,
+    "external_test_datasets_read": []
+  },
+  "configuration": {
+    "stage": "Stage 13A-1",
+    "experiment": "DES-v1 Local kNN Support Diagnosis",
+    "claim_scope": "DEVELOPMENT_RESULT",
+    "external_validation_label": "NOT_INDEPENDENT_EXTERNAL_VALIDATION",
+    "seeds": [
+      2022,
+      2023,
+      2024,
+      2025,
+      2026
+    ],
+    "scenarios": {
+      "a1": {
+        "known_count": 19,
+        "unknown_count": 1
+      },
+      "a2": {
+        "known_count": 17,
+        "unknown_count": 3
+      },
+      "a3": {
+        "known_count": 15,
+        "unknown_count": 5
+      }
+    },
+    "stage11b_root": "/home/birkenwald/data/SEU-WXY/WXY-SEU/TrafficClassifier/Projects/unknown_traffic_project/stage11b_decoupled_support_readout",
+    "methods": [
+      "CENTROID",
+      "KNN_5",
+      "KNN_10"
+    ],
+    "knn": {
+      "allowed_k": [
+        5,
+        10
+      ],
+      "primary_k": 10,
+      "metric": "euclidean",
+      "aggregation": "mean_distance",
+      "candidate_class": "nearest_empirical_centroid",
+      "support": "Known Train deterministic mu in candidate class only",
+      "train_self_neighbor": "excluded_by_global_train_index",
+      "chunk_size": 512
+    },
+    "threshold": {
+      "source": "Known Validation only",
+      "quantile": 0.95,
+      "numpy_method": "higher",
+      "global_per_method": true
+    },
+    "evaluation": {
+      "eval_seed": 2021,
+      "protocol": "symmetric-balanced-1to1-v2",
+      "unknown_positive": true,
+      "higher_score_more_unknown": true
+    },
+    "gate": {
+      "material_auroc_delta": 0.02,
+      "clear_harm_auroc_delta": -0.02,
+      "majority_positive_seed_count_overall": 8,
+      "max_mean_delta_known_frr": 0.02,
+      "material_scenarios_required_for_go": 2,
+      "material_scenarios_required_for_conditional_go": 1,
+      "require_lower_ufar_in_each_material_scenario": true
+    },
+    "stability_definition": {
+      "comparison": "lexicographic",
+      "criteria": [
+        "fewer scenarios with mean delta AUROC <= -0.02",
+        "more scenarios with positive mean delta AUROC",
+        "more positive paired seeds",
+        "lower pooled paired-delta AUROC standard deviation"
+      ],
+      "used_for_primary_gate": false
+    },
+    "forbidden": [
+      "new encoder training",
+      "checkpoint modification",
+      "k other than 5 or 10",
+      "automatic k selection",
+      "score fusion",
+      "logvar fusion",
+      "margin score",
+      "weighted score",
+      "Unknown calibration",
+      "Test threshold tuning",
+      "per-class threshold",
+      "ISCX-VPN Test access",
+      "ISCXTor2016 Test access",
+      "CipherSpectrum Test access",
+      "automatic next stage"
+    ]
+  },
+  "core_results": [
+    {
+      "name": "final_gate",
+      "value": "CONDITIONAL_GO"
+    },
+    {
+      "name": "more_stable_k",
+      "value": "KNN_10"
+    },
+    {
+      "name": "formal_runs",
+      "value": 15
+    }
+  ],
+  "artifacts": [
+    {
+      "path": "README.md",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 3183,
+      "sha256": "49d54c1a65cec6c25d23d731f04b02c23ee9863afa9d38d6a705bcc9a0b9548f",
+      "hash_status": "verified"
+    },
+    {
+      "path": "artifacts/a1/fold0_seed2022/RESULTS.md",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 1426,
+      "sha256": "3b4e28ad5ccad761c0c373efb418eed172ac9b7e0ec036e917f083dede68cf47",
+      "hash_status": "verified"
+    },
+    {
+      "path": "artifacts/a1/fold0_seed2022/SUCCESS",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 33,
+      "sha256": "5c5ddb24a7528db42e6820f4f5719124cad8954afd429c81ee28bdad475736ba",
+      "hash_status": "verified"
+    },
+    {
+      "path": "artifacts/a1/fold0_seed2022/config.json",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 807,
+      "sha256": "78b6ff6dca91fc796babec895ae3c6beb5d42771bead204813c664a492629c41",
+      "hash_status": "verified"
+    },
+    {
+      "path": "artifacts/a1/fold0_seed2022/input_hashes.json",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 1137,
+      "sha256": "085ee3d542ae40323fe2d14b800aed4b24e4e5f236bbcaaa01c1fabf406a6de0",
+      "hash_status": "verified"
+    },
+    {
+      "path": "artifacts/a1/fold0_seed2022/manifest.json",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 3439,
+      "sha256": "966a87769a302fa26ddf4cc7fee7456d9e6f90649b0f4db1219fef360d5514fd",
+      "hash_status": "verified"
+    },
+    {
+      "path": "artifacts/a1/fold0_seed2022/results.json",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 4934,
+      "sha256": "3a43645774e7f4f888b4b7ed6ba568a26d83711abc2a3ef96f6cc8bc7b37be55",
+      "hash_status": "verified"
+    },
+    {
+      "path": "artifacts/a1/fold0_seed2022/score_arrays.npz",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 134382,
+      "sha256": "297c2728f04cb71086f39686d87d0f79826b68c1e6b1f0d1f22174e12e73e894",
+      "hash_status": "verified"
+    },
+    {
+      "path": "artifacts/a1/fold0_seed2022/thresholds.json",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 405,
+      "sha256": "50554908409ed681665264cb5ee0cb7650711f40236f62b74873eb97dae34cc1",
+      "hash_status": "verified"
+    },
+    {
+      "path": "artifacts/a1/fold1_seed2023/RESULTS.md",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 1426,
+      "sha256": "1288c6ee2be06d89859af45d6e6c729398fc762673e50252d6df9f313408728c",
+      "hash_status": "verified"
+    },
+    {
+      "path": "artifacts/a1/fold1_seed2023/SUCCESS",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 33,
+      "sha256": "30fd648daf5054a2c130649d8f1431b9c9b1e7001d56f0747af6b38e1c9c9660",
+      "hash_status": "verified"
+    },
+    {
+      "path": "artifacts/a1/fold1_seed2023/config.json",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 807,
+      "sha256": "9866004caec3192beeade5a687fa52fdd87bcb23ead75fce8e2ac393cf82e680",
+      "hash_status": "verified"
+    },
+    {
+      "path": "artifacts/a1/fold1_seed2023/input_hashes.json",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 1137,
+      "sha256": "d7433ca6636a7eaa82a67a81eafe486e73f204a5628f23691141985ff2b8a9dc",
+      "hash_status": "verified"
+    },
+    {
+      "path": "artifacts/a1/fold1_seed2023/manifest.json",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 3451,
+      "sha256": "a0cf209409d0267b7103ef0d0dfbe73d9b488acfe13296a1e617626e66b5331a",
+      "hash_status": "verified"
+    },
+    {
+      "path": "artifacts/a1/fold1_seed2023/results.json",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 4896,
+      "sha256": "f42f2a90c459549c4f71a04d10ea27221eba1fc366738f8a47188b636a008d50",
+      "hash_status": "verified"
+    },
+    {
+      "path": "artifacts/a1/fold1_seed2023/score_arrays.npz",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 134156,
+      "sha256": "4d20ce15c26f09ad938eb2add1cd869d2532339cc7b8a532b7b869a16ecb118c",
+      "hash_status": "verified"
+    },
+    {
+      "path": "artifacts/a1/fold1_seed2023/thresholds.json",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 406,
+      "sha256": "2e9b9529f05ffa55ab52a86fea6f5f32bdf5379307087ba664362f20a6f4b7d8",
+      "hash_status": "verified"
+    },
+    {
+      "path": "artifacts/a1/fold2_seed2024/RESULTS.md",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 1426,
+      "sha256": "68570b42c32d9fed7135bad6de690688173a43205effe264ac7aab28c45013f7",
+      "hash_status": "verified"
+    },
+    {
+      "path": "artifacts/a1/fold2_seed2024/SUCCESS",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 33,
+      "sha256": "360a927eb91f9f84b915818b1a5ff1ed090dd2674df7846eb08943ee9b4c1a9f",
+      "hash_status": "verified"
+    },
+    {
+      "path": "artifacts/a1/fold2_seed2024/config.json",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 807,
+      "sha256": "e44941fc301dd5ce79854c238c4b3d98dbb510cfbadea4a6098245615f74a47d",
+      "hash_status": "verified"
+    },
+    {
+      "path": "artifacts/a1/fold2_seed2024/input_hashes.json",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 1137,
+      "sha256": "6c0d8b5b53f6b1cac243aff597a73f0590b8824f8eafd0ef0211bb4d51f7a6c1",
+      "hash_status": "verified"
+    },
+    {
+      "path": "artifacts/a1/fold2_seed2024/manifest.json",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 3440,
+      "sha256": "c69347b6cdfeec6fc0c942cb4a61cc08abd6f176b5a01c73f138dbfd2ce7ffc1",
+      "hash_status": "verified"
+    },
+    {
+      "path": "artifacts/a1/fold2_seed2024/results.json",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 4932,
+      "sha256": "3e2591e2b393c51690e9fa3ac71fded4e78f3f7035f09f88aaabae44058e5807",
+      "hash_status": "verified"
+    },
+    {
+      "path": "artifacts/a1/fold2_seed2024/score_arrays.npz",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 134376,
+      "sha256": "c1e49d77e77f60eaeae647b6fd9066eeb77fa1ec6c4d747b433ae959dffd23b7",
+      "hash_status": "verified"
+    },
+    {
+      "path": "artifacts/a1/fold2_seed2024/thresholds.json",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 405,
+      "sha256": "2d119123bc9ac467d63338ffff40e6c2539df083017620f31ff91fc96bcf5d82",
+      "hash_status": "verified"
+    },
+    {
+      "path": "artifacts/a1/fold3_seed2025/RESULTS.md",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 1426,
+      "sha256": "1d0bb9a45ecf543b52ad4e32a01710386ffbff415fe6f3cc9cd3f82a856e1e85",
+      "hash_status": "verified"
+    },
+    {
+      "path": "artifacts/a1/fold3_seed2025/SUCCESS",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 33,
+      "sha256": "c08d14cedbbe822c57f93e70355591123944e8a2337f832c559e04f8bc5cb5af",
+      "hash_status": "verified"
+    },
+    {
+      "path": "artifacts/a1/fold3_seed2025/config.json",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 807,
+      "sha256": "398e5cb8ba07900f14a6b71c756b2ac41bec59d063af91c39a15ff20ba59d3bd",
+      "hash_status": "verified"
+    },
+    {
+      "path": "artifacts/a1/fold3_seed2025/input_hashes.json",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 1137,
+      "sha256": "a95ab768992267414767ce9751513ab8d3b30da083940e8a273f3002e0e5c2c6",
+      "hash_status": "verified"
+    },
+    {
+      "path": "artifacts/a1/fold3_seed2025/manifest.json",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 3449,
+      "sha256": "2dcd8c2891994e88d636d95b2322b8325e085cc29ad7b668046f8ed8d82ef965",
+      "hash_status": "verified"
+    },
+    {
+      "path": "artifacts/a1/fold3_seed2025/results.json",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 4945,
+      "sha256": "0becd8616940b96bcc395b8c6e091ae8455d716e85e3e70980e670f89fcf3c1c",
+      "hash_status": "verified"
+    },
+    {
+      "path": "artifacts/a1/fold3_seed2025/score_arrays.npz",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 134297,
+      "sha256": "474f17c5e627769b5f9d2efaa48219b37b2534fee1a273564a974b7b845760b3",
+      "hash_status": "verified"
+    },
+    {
+      "path": "artifacts/a1/fold3_seed2025/thresholds.json",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 406,
+      "sha256": "1ce5c014ce17137d095a25aa4f655ee1177e12374781b599f625abfd04bd9e9d",
+      "hash_status": "verified"
+    },
+    {
+      "path": "artifacts/a1/fold4_seed2026/RESULTS.md",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 1426,
+      "sha256": "a81dfc3afec44fc56bf10105943b1f5df8eabdc272f23803ca15639d0ef046b7",
+      "hash_status": "verified"
+    },
+    {
+      "path": "artifacts/a1/fold4_seed2026/SUCCESS",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 33,
+      "sha256": "b77deb8a47aebc2cb3ab86ef97c1c5c27489e0f0f637c78d3d0b53f56b39e481",
+      "hash_status": "verified"
+    },
+    {
+      "path": "artifacts/a1/fold4_seed2026/config.json",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 807,
+      "sha256": "a632a2246cd6340e6e4c733781bdcca6d9774f8e5dd10d5989df8e73ff146004",
+      "hash_status": "verified"
+    },
+    {
+      "path": "artifacts/a1/fold4_seed2026/input_hashes.json",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 1137,
+      "sha256": "19fa93beaad6e37c51d845c5cca5370eac144842a74a9df629dfb23343c017f2",
+      "hash_status": "verified"
+    },
+    {
+      "path": "artifacts/a1/fold4_seed2026/manifest.json",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 3438,
+      "sha256": "a6b41b424c980d798a807be0398b4135560356aa515bf376832a267ba7935d56",
+      "hash_status": "verified"
+    },
+    {
+      "path": "artifacts/a1/fold4_seed2026/results.json",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 4929,
+      "sha256": "0cb177812b6d822ee21331e8795f37a98335bee4aaec298af731f20d7ed1d85d",
+      "hash_status": "verified"
+    },
+    {
+      "path": "artifacts/a1/fold4_seed2026/score_arrays.npz",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 134399,
+      "sha256": "c4c7f89076193e96762622eeaec8361d4beeaf328a9fbd3070cc19cfcf99f867",
+      "hash_status": "verified"
+    },
+    {
+      "path": "artifacts/a1/fold4_seed2026/thresholds.json",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 405,
+      "sha256": "c8ba990e386133ba71433c02801e3c5446c61fdd0496925149c6d7cfbccbe289",
+      "hash_status": "verified"
+    },
+    {
+      "path": "artifacts/a2/fold0_seed2022/RESULTS.md",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 1426,
+      "sha256": "25737ed923b20a09c3ffda472abcf6bc7f050daeeb8c86529d4bcf919109dcb2",
+      "hash_status": "verified"
+    },
+    {
+      "path": "artifacts/a2/fold0_seed2022/SUCCESS",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 33,
+      "sha256": "62caeaab2d98546f2c3be4a63b4a27246b0a6dae71e74d17826c1ee8448862b3",
+      "hash_status": "verified"
+    },
+    {
+      "path": "artifacts/a2/fold0_seed2022/config.json",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 807,
+      "sha256": "c233010ae71373f226db37d4d846364377e6defff99002f1d83d54feec5bb5f4",
+      "hash_status": "verified"
+    },
+    {
+      "path": "artifacts/a2/fold0_seed2022/input_hashes.json",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 1137,
+      "sha256": "3b098be01388168b536ae7f44f35431e01ed66fac3aae3f76ba9579ecd2eceb6",
+      "hash_status": "verified"
+    },
+    {
+      "path": "artifacts/a2/fold0_seed2022/manifest.json",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 3461,
+      "sha256": "add840679e29b2cb027ac59a71c4d5861327bdd9a2f37f78a7c8910c6fda15dc",
+      "hash_status": "verified"
+    },
+    {
+      "path": "artifacts/a2/fold0_seed2022/results.json",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 5111,
+      "sha256": "1883b5095ce22784979b4a3e61544c1daf0ec6983f12b9b33fcbcf5150a7f078",
+      "hash_status": "verified"
+    },
+    {
+      "path": "artifacts/a2/fold0_seed2022/score_arrays.npz",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 126141,
+      "sha256": "fea269d7c1c9f4509cf86e14f1d70ecac9667c265320ba64630fcd413770c9b3",
+      "hash_status": "verified"
+    },
+    {
+      "path": "artifacts/a2/fold0_seed2022/thresholds.json",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 406,
+      "sha256": "6dce479367abadabcc9541e06d901d26c7051e0763b9ed9fa9c58c0513faa852",
+      "hash_status": "verified"
+    },
+    {
+      "path": "artifacts/a2/fold1_seed2023/RESULTS.md",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 1426,
+      "sha256": "a57720aa68f0567ce3c7ac7b6f814f7cae8a44417ba7ad6a79a287421d221cb4",
+      "hash_status": "verified"
+    },
+    {
+      "path": "artifacts/a2/fold1_seed2023/SUCCESS",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 33,
+      "sha256": "460bd23d39a6fc9da5584dfb56a61094e4d9a3f97d1c98b0f08f964902ae3e6c",
+      "hash_status": "verified"
+    },
+    {
+      "path": "artifacts/a2/fold1_seed2023/config.json",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 807,
+      "sha256": "a6ae4b4d1ee60e5d9f9c88ca3495f6a0f2d2d8cc0b03e7988acea2280e3d1058",
+      "hash_status": "verified"
+    },
+    {
+      "path": "artifacts/a2/fold1_seed2023/input_hashes.json",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 1137,
+      "sha256": "0d58afe3f5906729fcea3f92fad84b3272a96a7c621404ab6c418c90a5983ee7",
+      "hash_status": "verified"
+    },
+    {
+      "path": "artifacts/a2/fold1_seed2023/manifest.json",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 3470,
+      "sha256": "40ac27d732d50960f6e6210489998eb7dd2453e9d5896a99fa9ba355a2ebf4c2",
+      "hash_status": "verified"
+    },
+    {
+      "path": "artifacts/a2/fold1_seed2023/results.json",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 5084,
+      "sha256": "1ee2e2ae0880a368902fa05fa609f01623fe927b8c3c6b780028d00dfbe4bb15",
+      "hash_status": "verified"
+    },
+    {
+      "path": "artifacts/a2/fold1_seed2023/score_arrays.npz",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 126127,
+      "sha256": "4f5b29b8094b129f35d0fc4908869041df75bae12e7d65ede81a0f95819fe5d5",
+      "hash_status": "verified"
+    },
+    {
+      "path": "artifacts/a2/fold1_seed2023/thresholds.json",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 405,
+      "sha256": "0760b9b088f1fd2e93252fe280bb4b5a6413b6e44b9dbde5ecc5871e3e3d0dea",
+      "hash_status": "verified"
+    },
+    {
+      "path": "artifacts/a2/fold2_seed2024/RESULTS.md",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 1426,
+      "sha256": "92035e9fc94decdcf4bab81a8f64bf8988c97ca47d3fb7ced6945d113520b65b",
+      "hash_status": "verified"
+    },
+    {
+      "path": "artifacts/a2/fold2_seed2024/SUCCESS",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 33,
+      "sha256": "5174f724f7e8a623ffd957f9d2ba4e8fbe267641ed76a00fd1ef8a23cf956c7a",
+      "hash_status": "verified"
+    },
+    {
+      "path": "artifacts/a2/fold2_seed2024/config.json",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 807,
+      "sha256": "c881dbbc94e5c83fd3bd80440dd1e285031af2aff2170e66e0a3376bcf48f1ac",
+      "hash_status": "verified"
+    },
+    {
+      "path": "artifacts/a2/fold2_seed2024/input_hashes.json",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 1137,
+      "sha256": "80f1d049d461c0995599e4bcef25a86a93a015b4624e0de888635b9ef9387d1c",
+      "hash_status": "verified"
+    },
+    {
+      "path": "artifacts/a2/fold2_seed2024/manifest.json",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 3469,
+      "sha256": "0c0528e185e373c16712738fb887e291ce1c6551b2bbfab9be8b92fbfb9a5ae4",
+      "hash_status": "verified"
+    },
+    {
+      "path": "artifacts/a2/fold2_seed2024/results.json",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 5108,
+      "sha256": "71abac764254bef5045cbc6e95095830d3e1342f724f44487db2da3c762652ca",
+      "hash_status": "verified"
+    },
+    {
+      "path": "artifacts/a2/fold2_seed2024/score_arrays.npz",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 126277,
+      "sha256": "998db652fdbcb5dbae8dee3b14e1efec3748c38dcdf0a914ed55cf51220cb949",
+      "hash_status": "verified"
+    },
+    {
+      "path": "artifacts/a2/fold2_seed2024/thresholds.json",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 405,
+      "sha256": "230c584b11e2f30e041e4501b4a7269e62f6e516c11c0e9d25c094195a71d2a6",
+      "hash_status": "verified"
+    },
+    {
+      "path": "artifacts/a2/fold3_seed2025/RESULTS.md",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 1426,
+      "sha256": "a58e0c2d17a2229c5b7ea3d7dd9b39894b271f5eeda2e8b9861aab03f41e151d",
+      "hash_status": "verified"
+    },
+    {
+      "path": "artifacts/a2/fold3_seed2025/SUCCESS",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 33,
+      "sha256": "28d0f238a1ad8254b3aabd21a0fcce1280d0a8a00fbb42d1492c914b93e92a16",
+      "hash_status": "verified"
+    },
+    {
+      "path": "artifacts/a2/fold3_seed2025/config.json",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 807,
+      "sha256": "7a08393b43939c8d6e1633160f578a5ebffa4b8e325e7e7a4a450b17de66ad2a",
+      "hash_status": "verified"
+    },
+    {
+      "path": "artifacts/a2/fold3_seed2025/input_hashes.json",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 1137,
+      "sha256": "ccffd50bcb4b0067fb6da71fa4d7ff2afe9f7926ca2d8843ab816aa6fd1d35a4",
+      "hash_status": "verified"
+    },
+    {
+      "path": "artifacts/a2/fold3_seed2025/manifest.json",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 3470,
+      "sha256": "fe0778f8f441594f036f9b1f6003b9e1eb34ca38b947ffb3265530d31862709f",
+      "hash_status": "verified"
+    },
+    {
+      "path": "artifacts/a2/fold3_seed2025/results.json",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 5115,
+      "sha256": "db4fc19ba28fb4dd8daa104d2857b996c6b176d463bdb8d1a1551710e938cb8d",
+      "hash_status": "verified"
+    },
+    {
+      "path": "artifacts/a2/fold3_seed2025/score_arrays.npz",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 126190,
+      "sha256": "2549c972b4a2267d1b95b6ac974424aa9cfc9234b0ac1b44786dd6004081d39e",
+      "hash_status": "verified"
+    },
+    {
+      "path": "artifacts/a2/fold3_seed2025/thresholds.json",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 403,
+      "sha256": "fb0f8165601a1e11c61bc9cfbc24b8d4c63e81944cfd700f4c78645da20d1d5a",
+      "hash_status": "verified"
+    },
+    {
+      "path": "artifacts/a2/fold4_seed2026/RESULTS.md",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 1426,
+      "sha256": "4762d9e56af77ba18460c6bbc219db8efa372ea15de610cf2fab001ee68559cb",
+      "hash_status": "verified"
+    },
+    {
+      "path": "artifacts/a2/fold4_seed2026/SUCCESS",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 33,
+      "sha256": "00591fd30221f8c2694850e4e8e8bd306fb4e607ef10fd5d9d11f58ad41c354f",
+      "hash_status": "verified"
+    },
+    {
+      "path": "artifacts/a2/fold4_seed2026/config.json",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 807,
+      "sha256": "db0e3b6b42c0f66a8b979faa714a946e980c24d7efb587452fb3d327e8a214e9",
+      "hash_status": "verified"
+    },
+    {
+      "path": "artifacts/a2/fold4_seed2026/input_hashes.json",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 1137,
+      "sha256": "ecc15fd97c2eb71a91edeb966f2b087f13e8975ac233f1d26db031e44c651552",
+      "hash_status": "verified"
+    },
+    {
+      "path": "artifacts/a2/fold4_seed2026/manifest.json",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 3469,
+      "sha256": "1957917bc4eacd155dcaea8b034aca03885825caabf612e1e289a01889e7d6c2",
+      "hash_status": "verified"
+    },
+    {
+      "path": "artifacts/a2/fold4_seed2026/results.json",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 5109,
+      "sha256": "36bc0a44ef14f86fe98649a63d95b3a547e2918e267328e7fec954ddd1f93555",
+      "hash_status": "verified"
+    },
+    {
+      "path": "artifacts/a2/fold4_seed2026/score_arrays.npz",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 126101,
+      "sha256": "1993100fcc7f38f530690199b96d9b80e12bee2443c00be1046264f2f7b0fc84",
+      "hash_status": "verified"
+    },
+    {
+      "path": "artifacts/a2/fold4_seed2026/thresholds.json",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 405,
+      "sha256": "20005fcb0f9ccf9303a751eebdf9dbe53b5b23d947feca8a229a57a86797b8d2",
+      "hash_status": "verified"
+    },
+    {
+      "path": "artifacts/a3/fold0_seed2022/RESULTS.md",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 1426,
+      "sha256": "adad89518a52265aa83ac6178e95bd4f6ecd7a36d89a819ce26a0150762456ac",
+      "hash_status": "verified"
+    },
+    {
+      "path": "artifacts/a3/fold0_seed2022/SUCCESS",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 33,
+      "sha256": "29811e259e563e8750955c95b2f33f8f07a3021fe54adbff3579375645602cbc",
+      "hash_status": "verified"
+    },
+    {
+      "path": "artifacts/a3/fold0_seed2022/config.json",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 807,
+      "sha256": "8709fe42851fa7b7ab2ae5a83e9c92f5458ce48471b140cf057edc481eddf1e4",
+      "hash_status": "verified"
+    },
+    {
+      "path": "artifacts/a3/fold0_seed2022/input_hashes.json",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 1137,
+      "sha256": "9c377d9dcbba434d527362e4c2743d8cccdc02e4145ec359cbaf8a0fea8fdacf",
+      "hash_status": "verified"
+    },
+    {
+      "path": "artifacts/a3/fold0_seed2022/manifest.json",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 3471,
+      "sha256": "6413b90d1c635203b165ed3352558c1db212ae9976058d6e79e653b9395c8ca8",
+      "hash_status": "verified"
+    },
+    {
+      "path": "artifacts/a3/fold0_seed2022/results.json",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 5123,
+      "sha256": "2480846e6a366c58f79dafeaee9da946519a498bd0a68aa14742666459e57244",
+      "hash_status": "verified"
+    },
+    {
+      "path": "artifacts/a3/fold0_seed2022/score_arrays.npz",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 121948,
+      "sha256": "63e52d394f3b396820e660eaa96dff3682b8a22818af2c36152f0f30eafbb4db",
+      "hash_status": "verified"
+    },
+    {
+      "path": "artifacts/a3/fold0_seed2022/thresholds.json",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 406,
+      "sha256": "12a37c91dcf24659d3d1ebb7348bd97def6a9857f16f47c7375d61054cc1d997",
+      "hash_status": "verified"
+    },
+    {
+      "path": "artifacts/a3/fold1_seed2023/RESULTS.md",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 1426,
+      "sha256": "a9bad4509ba2e558b03f796cb497f500ac61eff6ada8cbbb3be08f47411edab9",
+      "hash_status": "verified"
+    },
+    {
+      "path": "artifacts/a3/fold1_seed2023/SUCCESS",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 33,
+      "sha256": "f5bcb05789092f6de0aff2420ef5336c7db96aed50bbe1d12a9addd4cddb8c3b",
+      "hash_status": "verified"
+    },
+    {
+      "path": "artifacts/a3/fold1_seed2023/config.json",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 807,
+      "sha256": "a8a27fa717fe643aa86a09b14cf69d1614967435258840eaf6f7de148f08a788",
+      "hash_status": "verified"
+    },
+    {
+      "path": "artifacts/a3/fold1_seed2023/input_hashes.json",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 1137,
+      "sha256": "0beaddff23957888ae27054afd6d1d0425c5802242006b07e6ee4484239e818f",
+      "hash_status": "verified"
+    },
+    {
+      "path": "artifacts/a3/fold1_seed2023/manifest.json",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 3472,
+      "sha256": "b02477755132372b3a68818374434d51236f868e00845801d20ccafa2437e89f",
+      "hash_status": "verified"
+    },
+    {
+      "path": "artifacts/a3/fold1_seed2023/results.json",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 5155,
+      "sha256": "1a44f33ee2fd2ff62cd843ab0f6880d79ac03ac620cfb409fa0fcd0a74036b8b",
+      "hash_status": "verified"
+    },
+    {
+      "path": "artifacts/a3/fold1_seed2023/score_arrays.npz",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 121943,
+      "sha256": "23be6d2ac0dd79c2f11646e4982478b517b3509cf61d493c784fcab94db409d0",
+      "hash_status": "verified"
+    },
+    {
+      "path": "artifacts/a3/fold1_seed2023/thresholds.json",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 406,
+      "sha256": "e13ebb825d2fd15d5d2b8256e62c60c0e08d37a5aaf28fa060ffa6a73d8fcaa7",
+      "hash_status": "verified"
+    },
+    {
+      "path": "artifacts/a3/fold2_seed2024/RESULTS.md",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 1426,
+      "sha256": "d63328a246171197e202ababd3c613ab7f3d4a53ed0ec4e9c8b07446ad621fa8",
+      "hash_status": "verified"
+    },
+    {
+      "path": "artifacts/a3/fold2_seed2024/SUCCESS",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 33,
+      "sha256": "94a8ab0089f47a4400d167fd3e40f1ec7f320a7ad864273ad9ecdf6d864fb9af",
+      "hash_status": "verified"
+    },
+    {
+      "path": "artifacts/a3/fold2_seed2024/config.json",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 807,
+      "sha256": "9d2e6493e2e3c76eb2f12ab333892eaf4abfa1384672b3e9c94c765a5a2eff35",
+      "hash_status": "verified"
+    },
+    {
+      "path": "artifacts/a3/fold2_seed2024/input_hashes.json",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 1137,
+      "sha256": "e6d01df500a062020080a5f63583f4584bfe7d1bc088478ae39ec99d77a64a11",
+      "hash_status": "verified"
+    },
+    {
+      "path": "artifacts/a3/fold2_seed2024/manifest.json",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 3470,
+      "sha256": "3f1245910c74e02d5f944e86e0e9189d9581418b264632d007900cde79ef0839",
+      "hash_status": "verified"
+    },
+    {
+      "path": "artifacts/a3/fold2_seed2024/results.json",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 5155,
+      "sha256": "de38b24275bfbf87e613896f1aa4ed872d4e5d1fbb796ee450b87614c0814216",
+      "hash_status": "verified"
+    },
+    {
+      "path": "artifacts/a3/fold2_seed2024/score_arrays.npz",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 121983,
+      "sha256": "e045210da3073a5e2534db42b435b8af337b7f37fa99f2684fe915eaf64fde17",
+      "hash_status": "verified"
+    },
+    {
+      "path": "artifacts/a3/fold2_seed2024/thresholds.json",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 406,
+      "sha256": "84a67893d2366636fbe95e67f5254f817bfc93d627faa47f9d51c7d39744eb6b",
+      "hash_status": "verified"
+    },
+    {
+      "path": "artifacts/a3/fold3_seed2025/RESULTS.md",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 1426,
+      "sha256": "f4019bf6099912c3d5722d80febbdf05ea8bb50e7403dff34ae5b524f8c78f70",
+      "hash_status": "verified"
+    },
+    {
+      "path": "artifacts/a3/fold3_seed2025/SUCCESS",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 33,
+      "sha256": "59ab003b2d572bff4613c3a15cc71c0d3dbb86cc838fab5754db8f537dc7f3e8",
+      "hash_status": "verified"
+    },
+    {
+      "path": "artifacts/a3/fold3_seed2025/config.json",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 807,
+      "sha256": "63557f82de4fae29ba3920cb86e3291f00b8b815a4952aecb26aadfa55ee6f48",
+      "hash_status": "verified"
+    },
+    {
+      "path": "artifacts/a3/fold3_seed2025/input_hashes.json",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 1137,
+      "sha256": "205fdb8bc73b9607e155f9e6f3ee0e777999aa8c7975fc9e00fb32c6bed6cefc",
+      "hash_status": "verified"
+    },
+    {
+      "path": "artifacts/a3/fold3_seed2025/manifest.json",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 3472,
+      "sha256": "f623e7996918e2b7b5a28c447d65cda9aea26aab25d83476e533868353044f15",
+      "hash_status": "verified"
+    },
+    {
+      "path": "artifacts/a3/fold3_seed2025/results.json",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 5168,
+      "sha256": "c0e8411450b4ae13736f1698eae0ac46d8270b89198553ba9b4ca92f6e843fe8",
+      "hash_status": "verified"
+    },
+    {
+      "path": "artifacts/a3/fold3_seed2025/score_arrays.npz",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 121939,
+      "sha256": "6037497927dbf4e4a6c9fe2bcb832169075bc41bb3e2c23cb5254c129c05869f",
+      "hash_status": "verified"
+    },
+    {
+      "path": "artifacts/a3/fold3_seed2025/thresholds.json",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 407,
+      "sha256": "b7b96b639489b744a91bace3d7198ca66f28a9b3e67936477b0ebdb7f4503743",
+      "hash_status": "verified"
+    },
+    {
+      "path": "artifacts/a3/fold4_seed2026/RESULTS.md",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 1426,
+      "sha256": "fcf4eeeb4b8497a74b6ceff528b234040162948e26c1fa076435a2586aba1b07",
+      "hash_status": "verified"
+    },
+    {
+      "path": "artifacts/a3/fold4_seed2026/SUCCESS",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 33,
+      "sha256": "f52f76de5711324f34959c5f05077e6e697b38220b9879580f23082fa91d5f10",
+      "hash_status": "verified"
+    },
+    {
+      "path": "artifacts/a3/fold4_seed2026/config.json",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 807,
+      "sha256": "f0a638da99e53b9746a17bc1b34c4e9da55e6844287c610a2940d1c31c9fb5d5",
+      "hash_status": "verified"
+    },
+    {
+      "path": "artifacts/a3/fold4_seed2026/input_hashes.json",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 1137,
+      "sha256": "f57be1cf2bd2cc47ae1a701f0213c981040617f05fe8295a1124d34e458a2b84",
+      "hash_status": "verified"
+    },
+    {
+      "path": "artifacts/a3/fold4_seed2026/manifest.json",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 3471,
+      "sha256": "34988930cda2cdc9ef25c0369b843ba568216b1a10a14f208b53f23fee5ae46e",
+      "hash_status": "verified"
+    },
+    {
+      "path": "artifacts/a3/fold4_seed2026/results.json",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 5166,
+      "sha256": "dbb0bb19ea43b68487b964caa116e887edb9cbe26656242b88ad72fd37446bb7",
+      "hash_status": "verified"
+    },
+    {
+      "path": "artifacts/a3/fold4_seed2026/score_arrays.npz",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 121926,
+      "sha256": "2aa48c49bf13bba5acdb7c677e8b76aa7fda53ff86ce4573cb1ec9966c124673",
+      "hash_status": "verified"
+    },
+    {
+      "path": "artifacts/a3/fold4_seed2026/thresholds.json",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 406,
+      "sha256": "e9bed13b8b58d3aa53ee11e39f117fee7a510472deff7f7333a8966118a2aa59",
+      "hash_status": "verified"
+    },
+    {
+      "path": "configs/stage13a1_config.json",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 2328,
+      "sha256": "cd5fdb1d368ac2aa301ae7784168d55fa408e106ccf318d50ff5b77b9f3cd3d9",
+      "hash_status": "verified"
+    },
+    {
+      "path": "outputs/summary/completion_verification.json",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 411,
+      "sha256": "7a17dc0f9fc8395186d949e40eca79bb1d7f13497cabeaea009557edf8fe02db",
+      "hash_status": "verified"
+    },
+    {
+      "path": "outputs/summary/execution_commands.txt",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 392,
+      "sha256": "928ea4acfdfc44ce3ca2c4e2ea5d5c9757ccde56174b83ba7618e754ffe6ae4c",
+      "hash_status": "verified"
+    },
+    {
+      "path": "outputs/summary/final_gate.json",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 2614,
+      "sha256": "d8044e1d75381ad8423093b82c2b5611eeb1aa4cb58d264885a692e3fbae96b6",
+      "hash_status": "verified"
+    },
+    {
+      "path": "outputs/summary/final_gate.md",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 735,
+      "sha256": "a4e8acb12c86258c2e7075f4542c73d6beb00a844c012dc305d52386dc4e5f73",
+      "hash_status": "verified"
+    },
+    {
+      "path": "outputs/summary/knn10_vs_centroid.csv",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 3249,
+      "sha256": "d601583044eb5ee30cc45158b4985689dab19a9bf89c6fc5de30ea1e934fbd64",
+      "hash_status": "verified"
+    },
+    {
+      "path": "outputs/summary/knn5_sensitivity.csv",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 3194,
+      "sha256": "5e5aa55ace03d82d83d45f6dc1eb7760bc8467f8bcc3cabab63091c96cccaf8a",
+      "hash_status": "verified"
+    },
+    {
+      "path": "outputs/summary/provenance_verification.json",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 51651,
+      "sha256": "d018f68ef3096e4569d6fe7aa9d60dcf6f250b6fe37965f14534b73f728d7e64",
+      "hash_status": "verified"
+    },
+    {
+      "path": "outputs/summary/run_level_results.csv",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 15238,
+      "sha256": "1cb2aa34e3ff66d2d9179b1742a4241eff83667c6b8fd2f758b591934c726019",
+      "hash_status": "verified"
+    },
+    {
+      "path": "outputs/summary/scenario_summary.csv",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 5275,
+      "sha256": "9962a00e23fa6c9ec1ccc02c5bd3d1b1a463c779062c9322e192c1d9f23f985c",
+      "hash_status": "verified"
+    },
+    {
+      "path": "scripts/__pycache__/aggregate_results.cpython-310.pyc",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 4435,
+      "sha256": "ba688a56559bda5ae86562767be9b8dbcc5ecbde30bff48ede9be29d05c5347e",
+      "hash_status": "verified"
+    },
+    {
+      "path": "scripts/__pycache__/evaluate_run.cpython-310.pyc",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 8061,
+      "sha256": "049873fe2e9d88ddedfb9693fea5ee9a0647031cfdc776941c9d2c293cf85b61",
+      "hash_status": "verified"
+    },
+    {
+      "path": "scripts/__pycache__/finalize_bundles.cpython-310.pyc",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 8175,
+      "sha256": "c26d3f758074eabb31ae2ff7a88982e4b750a9b9b0608c0b3d70c3ab9c222bba",
+      "hash_status": "verified"
+    },
+    {
+      "path": "scripts/__pycache__/run_queue.cpython-310.pyc",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 1886,
+      "sha256": "84e3d5ce99e7443b2f6dded03dd4d184124c963b2147ccdd7a828218511d42c9",
+      "hash_status": "verified"
+    },
+    {
+      "path": "scripts/__pycache__/stage13_common.cpython-310.pyc",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 11830,
+      "sha256": "3f1963bae4b5e001b44507d2ac5e7355ab27ee00ad038893c46f9e1df8506498",
+      "hash_status": "verified"
+    },
+    {
+      "path": "scripts/__pycache__/verify_provenance.cpython-310.pyc",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 4488,
+      "sha256": "32ed3c56a9c2c71e9e01af6ffebaf166718d7495435509d087adefe957da139d",
+      "hash_status": "verified"
+    },
+    {
+      "path": "scripts/__pycache__/verify_stage13a1.cpython-310.pyc",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 5634,
+      "sha256": "8e3bae06dd00dd378c007bf81d5a17512ccf077b062a06f59beb820020336f77",
+      "hash_status": "verified"
+    },
+    {
+      "path": "scripts/aggregate_results.py",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 4401,
+      "sha256": "c88551c73c01d6db09222d64f9be3d99aa5171a983e72efcf1d7f2d08b63f866",
+      "hash_status": "verified"
+    },
+    {
+      "path": "scripts/evaluate_run.py",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 10609,
+      "sha256": "8a5835b9e2c62144b578d52a051db3753c14354b82cbcbddc9eb119b12697a69",
+      "hash_status": "verified"
+    },
+    {
+      "path": "scripts/finalize_bundles.py",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 9334,
+      "sha256": "25dbe9bbd33902c4b6f3044d543ef7a0e74f78a8269a1b431a0456a54d818c53",
+      "hash_status": "verified"
+    },
+    {
+      "path": "scripts/run_queue.py",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 1712,
+      "sha256": "ec7a8659206ec1383d98ed30f8ff157a3c28e2c1582e43d2ede08b1859ec71b5",
+      "hash_status": "verified"
+    },
+    {
+      "path": "scripts/stage13_common.py",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 12446,
+      "sha256": "dac618001b42e16ba63f9b2fa46f234690a4c4ffc553af0c40db4bbdae6ac8cb",
+      "hash_status": "verified"
+    },
+    {
+      "path": "scripts/verify_provenance.py",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 5704,
+      "sha256": "049ba8d523719c4e2a11b449148811bf88705f7c22d7974cf879bc523d7af9a7",
+      "hash_status": "verified"
+    },
+    {
+      "path": "scripts/verify_stage13a1.py",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 6933,
+      "sha256": "42d71e0bc88503ae221bcade1a5b209a578bdf53de92f368f2e7e8fc9bd48b26",
+      "hash_status": "verified"
+    },
+    {
+      "path": "tests/__pycache__/test_stage13_common.cpython-310.pyc",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 3084,
+      "sha256": "dac7bb2576bfb65a2087f0a5bc82ec0446966d4dbdb5b1f46f5ea8f47593c9e7",
+      "hash_status": "verified"
+    },
+    {
+      "path": "tests/test_stage13_common.py",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 2994,
+      "sha256": "3db7c01ea76143851db4f7afdc0c1d61ba3150ba897a1d830314a483a7432e53",
+      "hash_status": "verified"
+    }
+  ],
+  "limitations": [
+    "USTC development result",
+    "Frozen Stage11B embeddings reused",
+    "No external Test dataset used"
+  ],
+  "next_step": "No subsequent stage started"
+}

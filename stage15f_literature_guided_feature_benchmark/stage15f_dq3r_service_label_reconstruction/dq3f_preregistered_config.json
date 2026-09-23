@@ -1,0 +1,47 @@
+{
+  "status": "PREREGISTERED_NOT_RUN",
+  "dataset": "iscx_vpn_shared31_vpn_only",
+  "source_protocol": "stage12 medium seed2022",
+  "train_samples": 2730,
+  "validation_samples": 335,
+  "same_flow_ids_f1_f3": true,
+  "labels": {
+    "F1": "application",
+    "F2": "partial post-hoc service mapping",
+    "F3": "capture-activity service"
+  },
+  "training": {
+    "architecture": "resnet18",
+    "channels": 1,
+    "latent_dim": 128,
+    "epochs": 100,
+    "batch_size": 128,
+    "eval_batch_size": 256,
+    "workers": 0,
+    "optimizer": "Adam",
+    "learning_rate": 0.001,
+    "betas": [
+      0.9,
+      0.999
+    ],
+    "lambda": 0.005,
+    "scheduler_milestones": [
+      50,
+      80
+    ],
+    "scheduler_gamma": 0.1,
+    "prototype_reset_zero_based_epochs": [
+      50,
+      80
+    ],
+    "checkpoint_criterion": "Known Validation accuracy",
+    "early_stop_patience": 10,
+    "early_stop_min_epoch": 82,
+    "early_stop_min_delta": 0.0001,
+    "training_protocol": "corrected-paper"
+  },
+  "seed": 2022,
+  "known_test_feature_values_used": 0,
+  "unknown_test_feature_values_used": 0,
+  "group_generalization_claim_allowed": false
+}

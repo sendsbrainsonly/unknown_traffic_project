@@ -1,0 +1,53 @@
+{
+  "status": "PARTIAL_COMPARISON_FOUR_COMPLETED_PROTOCOLS",
+  "generated_at_utc": "2026-09-21T14:10:00Z",
+  "comparison": "RoNeTC versus project method H1",
+  "ours_definition": "H1 = max(A_OD, A_DES0), calibrated from Known Validation only",
+  "protocol_match": "PASS",
+  "excluded": {
+    "protocol": "USTC A-2",
+    "reason": "RoNeTC was aborted after 5/100 epochs and no Test evaluation was run"
+  },
+  "metric_direction": {
+    "auroc": "higher_is_better",
+    "auprc": "higher_is_better",
+    "ufar": "lower_is_better",
+    "known_frr": "lower_is_better"
+  },
+  "rows": [
+    {
+      "protocol": "ISCXTor medium_seed2022",
+      "known_test": 1113,
+      "unknown_test": 4000,
+      "ronetc": {"auroc": 0.6095453728661276, "auprc": 0.8137832513133556, "ufar": 0.949, "known_frr": 0.05211141060197664},
+      "ours_h1": {"auroc": 0.6041525157232704, "auprc": 0.7960461797318923, "ufar": 0.9815, "known_frr": 0.055705300988319856}
+    },
+    {
+      "protocol": "ISCX-VPN medium_seed2022",
+      "known_test": 1621,
+      "unknown_test": 6000,
+      "ronetc": {"auroc": 0.5831444581534032, "auprc": 0.8127755024126254, "ufar": 0.9478333333333333, "known_frr": 0.05860579888957434},
+      "ours_h1": {"auroc": 0.5871769483857701, "auprc": 0.8105265349613119, "ufar": 0.959, "known_frr": 0.05737199259716225}
+    },
+    {
+      "protocol": "VNAT medium_seed2025",
+      "known_test": 1960,
+      "unknown_test": 3825,
+      "ronetc": {"auroc": 0.8644283046551954, "auprc": 0.8859878979830922, "ufar": 0.7670588235294118, "known_frr": 0.06275510204081633},
+      "ours_h1": {"auroc": 0.8062258903561426, "auprc": 0.8713202027909768, "ufar": 0.6622222222222223, "known_frr": 0.03826530612244898}
+    },
+    {
+      "protocol": "VNAT medium_seed2026",
+      "known_test": 1911,
+      "unknown_test": 4299,
+      "ronetc": {"auroc": 0.6395380669132039, "auprc": 0.7547889850685456, "ufar": 0.8818329844149803, "known_frr": 0.047619047619047616},
+      "ours_h1": {"auroc": 0.759436528203351, "auprc": 0.8094191361304949, "ufar": 0.9362642474994185, "known_frr": 0.046049188906331764}
+    }
+  ],
+  "unweighted_protocol_mean": {
+    "ronetc": {"auroc": 0.6741640506469825, "auprc": 0.8168339091944046, "ufar": 0.8864312853194314, "known_frr": 0.05527283978785373},
+    "ours_h1": {"auroc": 0.6892479706671335, "auprc": 0.821828013403669, "ufar": 0.8847466174304102, "known_frr": 0.049347947153565705},
+    "delta_ronetc_minus_h1": {"auroc": -0.01508392002015102, "auprc": -0.004994104209264383, "ufar": 0.0016846678890212186, "known_frr": 0.005924892634288026}
+  },
+  "conclusion": "On the four completed matched protocols, H1 has better unweighted mean AUROC, AUPRC, UFAR, and Known FRR. RoNeTC and H1 each win two protocols by AUROC, so this is a partial comparison rather than a complete four-dataset conclusion."
+}

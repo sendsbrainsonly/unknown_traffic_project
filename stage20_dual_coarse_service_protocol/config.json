@@ -1,0 +1,45 @@
+{
+  "experiment_id": "stage20-dual-coarse-service-protocol-20260921-v1",
+  "task_decision": "coarse_service_primary_fine_application_historical_diagnostic",
+  "protocol_seed": 20260921,
+  "max_flows_per_service": 2000,
+  "split_fractions": {
+    "known_train": 0.8,
+    "known_validation": 0.1,
+    "known_test": 0.1
+  },
+  "split_unit": "exact_32x32_image_group",
+  "label_scope": "WEAK_CAPTURE_LABEL",
+  "datasets": {
+    "iscx_vpn": {
+      "source_pool": "../stage12_dual_external_validation/artifacts/iscx_vpn/preprocessing_pool/raw_prepared_parallel_v1",
+      "inventory_csv": "../stage12_dual_external_validation/protocol/iscx_vpn/dataset_inventory.csv",
+      "services": ["Chat", "Email", "File-Transfer", "P2P", "Streaming", "VoIP"],
+      "category_normalization": {}
+    },
+    "iscx_tor": {
+      "source_pool": "../stage12_dual_external_validation/artifacts/iscx_tor/preprocessing_pool/raw_prepared_parallel_v2",
+      "inventory_csv": "../stage12_dual_external_validation/protocol/iscx_tor/dataset_inventory.csv",
+      "services": ["Browsing", "Chat", "Email", "File-Transfer", "P2P", "Streaming", "VoIP"],
+      "category_normalization": {
+        "Audio": "Streaming",
+        "Video": "Streaming"
+      }
+    }
+  },
+  "open_set_protocol": "leave_one_service_out",
+  "unknown_usage": {
+    "training": 0,
+    "validation": 0,
+    "support_fitting": 0,
+    "normalization": 0,
+    "threshold_calibration": 0,
+    "final_test_only": true
+  },
+  "limitations": [
+    "capture-derived weak service labels",
+    "flow-level and exact-image-disjoint split, not uniformly capture-disjoint",
+    "source pool was capped at the historical fine-application preprocessing stage",
+    "coarse-task results are not directly comparable to historical fine-application results"
+  ]
+}

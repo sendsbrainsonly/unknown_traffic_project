@@ -1,0 +1,22 @@
+{
+  "dataset": "vnat",
+  "flow_uids_sha256": "ba8df4fdb88805e673395af2abdaad1c9b11e8319d25b371e0d4811e21540149",
+  "known_test_values_stored": 0,
+  "legacy_first8_exact_parity": true,
+  "legacy_first8_mismatch_elements": {
+    "direction": 0,
+    "iat": 0,
+    "length": 0,
+    "mask": 0
+  },
+  "max_packets": 32,
+  "packet_directions_sha256": "ac8dd7f483533a8a75fea0fa4b376fbff6982d211f31c147dab83c28697af7ee",
+  "packet_iat_sha256": "c0b1f415335e13521ed7fb494b7b70193c06e92d206a9265d672d7f82872fced",
+  "packet_lengths_sha256": "46dbeb68f08dd0c4a5df6d08178b0960482ee5fd72989447af1d7adb627f177a",
+  "packet_mask_sha256": "ef9d17dbb82a650b02a46d64f35acb837e9fa3b57f8d31f9769e70bb06736f25",
+  "recovered_flows": 21135,
+  "scope": "union of frozen pilot Known Train/Validation sample IDs only",
+  "status": "PASS",
+  "target_flows": 21135,
+  "unknown_test_values_stored": 0
+}

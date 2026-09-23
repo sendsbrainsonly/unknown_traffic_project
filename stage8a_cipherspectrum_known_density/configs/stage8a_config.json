@@ -1,0 +1,65 @@
+{
+  "stage": "Stage 8A — CipherSpectrum Known-Only Representation, Density and Boundary Freeze",
+  "settings": ["low", "medium", "high"],
+  "execution_order": ["low", "medium", "high"],
+  "allowed_source_roles": ["KNOWN_TRAIN", "KNOWN_VALIDATION"],
+  "forbidden_source_roles": ["KNOWN_TEST", "UNKNOWN_TEST"],
+  "encoder": {
+    "checkpoint": "Stage 7 formal best checkpoint only",
+    "representation": "deterministic mu_x",
+    "latent_dimension": 128,
+    "retraining": false,
+    "fine_tuning": false,
+    "warm_start": false
+  },
+  "representation_audit": {
+    "near_zero_variance_threshold": 1e-12,
+    "duplicate_definition": "exactly equal float32 rows"
+  },
+  "scaler": {
+    "type": "StandardScaler",
+    "fit_split": "KNOWN_TRAIN_ONLY"
+  },
+  "pca": {
+    "n_components": 64,
+    "svd_solver": "randomized",
+    "random_state": 0,
+    "fit_split": "KNOWN_TRAIN_ONLY"
+  },
+  "single_k1": {
+    "n_components": 1,
+    "covariance_type": "full",
+    "reg_covar": 0.001,
+    "n_init": 3,
+    "max_iter": 300,
+    "random_state": 0,
+    "fit_split": "KNOWN_TRAIN_ONLY"
+  },
+  "multi_k2": {
+    "n_components": 2,
+    "covariance_type": "full",
+    "reg_covar": 0.001,
+    "n_init": 3,
+    "max_iter": 300,
+    "random_state": 0,
+    "fit_split": "KNOWN_TRAIN_ONLY"
+  },
+  "thresholds": {
+    "fit_split": "KNOWN_VALIDATION_ONLY",
+    "target_known_acceptance": 0.95,
+    "native_method": "Stage3 linear P05 quantile",
+    "global_method": "closest empirical acceptance to 0.95; ties choose higher threshold",
+    "class_quantile": 0.05,
+    "component_quantile": 0.05,
+    "component_fallback_min_validation_n": 30
+  },
+  "score_definitions": {
+    "native": "negative minimum KL divergence to the frozen Open-Detect prototypes; higher is more Known",
+    "single_full_k1": "maximum class-conditional K1 log density",
+    "multi_global_k2": "maximum class-conditional K2 log density",
+    "class_p05_k2": "maximum over classes of class K2 log density minus class P05 threshold",
+    "component_p05_k2": "maximum over class-components of weighted component log density minus component P05 or frozen class fallback threshold"
+  },
+  "test_access": false,
+  "unknown_inference": false
+}

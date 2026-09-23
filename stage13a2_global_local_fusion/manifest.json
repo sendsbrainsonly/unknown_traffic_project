@@ -1,0 +1,1397 @@
+{
+  "schema_version": 1,
+  "experiment_id": "stage13a2-global-local-fusion-20260916-v1",
+  "created_at_utc": "2026-09-16T02:34:10Z",
+  "updated_at_utc": "2026-09-16T02:40:27Z",
+  "status": "success",
+  "experiment_type": "method-development-evaluation",
+  "claim_scope": "diagnostic",
+  "objective": "Test fixed robust-normalized centroid and kNN-10 support fusion on 15 frozen USTC development runs",
+  "inputs": [
+    {
+      "path": "/home/birkenwald/data/SEU-WXY/WXY-SEU/TrafficClassifier/Projects/unknown_traffic_project/stage13a1_knn_local_support",
+      "role": "15 frozen Stage13A-1 score bundles",
+      "access": "read_only"
+    }
+  ],
+  "code": {
+    "entrypoint": "scripts/evaluate_run.py",
+    "aggregator": "scripts/aggregate_results.py"
+  },
+  "execution": {
+    "formal_runs": 15,
+    "methods_per_run": 3,
+    "new_encoder_training": false,
+    "encoder_inference": false,
+    "external_test_datasets_read": []
+  },
+  "configuration": {
+    "stage13a1_root": "/home/birkenwald/data/SEU-WXY/WXY-SEU/TrafficClassifier/Projects/unknown_traffic_project/stage13a1_knn_local_support",
+    "scenarios": [
+      "a1",
+      "a2",
+      "a3"
+    ],
+    "seeds": [
+      2022,
+      2023,
+      2024,
+      2025,
+      2026
+    ],
+    "methods": [
+      "CENTROID",
+      "KNN_10",
+      "GL_FUSION"
+    ],
+    "normalization": {
+      "fit_split": "Known Validation only",
+      "location": "median",
+      "scale": "unscaled median absolute deviation",
+      "eps": 1e-12
+    },
+    "fusion": {
+      "centroid_weight": 0.5,
+      "knn10_weight": 0.5,
+      "weight_search": false
+    },
+    "threshold": {
+      "fit_split": "Known Validation only",
+      "quantile": 0.95,
+      "numpy_method": "higher"
+    },
+    "evaluation": {
+      "eval_seed": 2021,
+      "balanced_known_unknown": "1:1",
+      "primary_comparison": "GL_FUSION-CENTROID"
+    },
+    "gate": {
+      "a1_min_delta_auroc_exclusive": -0.005,
+      "a2_min_delta_auroc_inclusive": 0.02,
+      "a3_min_delta_auroc_exclusive": -0.005,
+      "min_positive_seed_count": 10,
+      "max_mean_delta_known_frr": 0.02,
+      "a2_requires_lower_ufar": true
+    },
+    "conditional_gate": {
+      "a1_min_delta_auroc_exclusive": -0.02,
+      "a2_min_delta_auroc_exclusive": 0.0,
+      "a3_min_delta_auroc_exclusive": -0.02,
+      "min_positive_seed_count": 8,
+      "max_mean_delta_known_frr": 0.02,
+      "a2_requires_lower_ufar": true
+    },
+    "claim_scope": "DEVELOPMENT_RESULT",
+    "external_validation_label": "NOT_INDEPENDENT_EXTERNAL_VALIDATION"
+  },
+  "core_results": [
+    {
+      "name": "final_gate",
+      "value": "GO"
+    },
+    {
+      "name": "positive_seed_count",
+      "value": 12
+    },
+    {
+      "name": "formal_runs",
+      "value": 15
+    }
+  ],
+  "artifacts": [
+    {
+      "path": "README.md",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 2939,
+      "sha256": "313c6a1bc28cf430c32b21599305554a38efb22dbfa864ab192799fc3808f75f",
+      "hash_status": "verified"
+    },
+    {
+      "path": "artifacts/a1/fold0_seed2022/RESULTS.md",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 1469,
+      "sha256": "26ced9d78c4cb4b560cfed63d480a7ca514875e5e00aa815b074fb8f33712fde",
+      "hash_status": "verified"
+    },
+    {
+      "path": "artifacts/a1/fold0_seed2022/SUCCESS",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 33,
+      "sha256": "00c89f52abe48c41bfb5602c25f47dde11b7aeb9bd8dc9f17f1feac98b01b13b",
+      "hash_status": "verified"
+    },
+    {
+      "path": "artifacts/a1/fold0_seed2022/config.json",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 624,
+      "sha256": "f40f120213f30e6d192fc480b867c62b14cc7af73d65e7c94e6089b58e3ff60c",
+      "hash_status": "verified"
+    },
+    {
+      "path": "artifacts/a1/fold0_seed2022/input_hashes.json",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 1618,
+      "sha256": "04f322f7a924b4928aaedff6330d6f49f4e8e3b31e374d0538bc07dd92d6cc7a",
+      "hash_status": "verified"
+    },
+    {
+      "path": "artifacts/a1/fold0_seed2022/manifest.json",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 3833,
+      "sha256": "0a30650b22b41323d6acc334eb0dc9d7a192e0b8a42aa11128ddf2bb7fd66400",
+      "hash_status": "verified"
+    },
+    {
+      "path": "artifacts/a1/fold0_seed2022/normalization_stats.json",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 376,
+      "sha256": "b1988af2b1998db87f40a43117241c058e1eebe971e3d7b20726b2179612470f",
+      "hash_status": "verified"
+    },
+    {
+      "path": "artifacts/a1/fold0_seed2022/results.json",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 6372,
+      "sha256": "3b8b78ee6e254b8afb7c8fbb2c23ea194ba47e9e105203d91382c359835009bb",
+      "hash_status": "verified"
+    },
+    {
+      "path": "artifacts/a1/fold0_seed2022/score_arrays.npz",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 240718,
+      "sha256": "fa2cd07cf29a438945b4408bf65740791cedecfec6b2c16439014c5800726c3c",
+      "hash_status": "verified"
+    },
+    {
+      "path": "artifacts/a1/fold0_seed2022/thresholds.json",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 408,
+      "sha256": "c77459657378358bbc76240ed8cf2b2ca1397ee646d70f8982cbc9ee988ae278",
+      "hash_status": "verified"
+    },
+    {
+      "path": "artifacts/a1/fold1_seed2023/RESULTS.md",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 1469,
+      "sha256": "74f3043bb1e09294e8b32c9bc591b0e1da6b504bcaae0fe3737914a154d96d56",
+      "hash_status": "verified"
+    },
+    {
+      "path": "artifacts/a1/fold1_seed2023/SUCCESS",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 33,
+      "sha256": "7ebad113a3b0643ee53ba6d21744001fb068811db1d10d30eba59cb27c24584b",
+      "hash_status": "verified"
+    },
+    {
+      "path": "artifacts/a1/fold1_seed2023/config.json",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 624,
+      "sha256": "7a30b0e9a7c35c3abdc73456f02aa3f5f94445c8b867441c8bf9e612bb891422",
+      "hash_status": "verified"
+    },
+    {
+      "path": "artifacts/a1/fold1_seed2023/input_hashes.json",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 1618,
+      "sha256": "94e45dda2ca174d1603e8e1b68f317eaaea96e9c49c551203b234c8f1075211b",
+      "hash_status": "verified"
+    },
+    {
+      "path": "artifacts/a1/fold1_seed2023/manifest.json",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 3845,
+      "sha256": "d1fcddbf776f20905abfad84517b4c2020cbdf5c6c52fa8fd2d468c9b0a17e21",
+      "hash_status": "verified"
+    },
+    {
+      "path": "artifacts/a1/fold1_seed2023/normalization_stats.json",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 375,
+      "sha256": "d9af7464b90280b28b6300342569e489b238be10c97f1de3b93bb71d9475cfd8",
+      "hash_status": "verified"
+    },
+    {
+      "path": "artifacts/a1/fold1_seed2023/results.json",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 6353,
+      "sha256": "c34a4ba5a93b15f03c8d91a5ab3f18e46e4e597e85704f7dd36c945dfe1c4a20",
+      "hash_status": "verified"
+    },
+    {
+      "path": "artifacts/a1/fold1_seed2023/score_arrays.npz",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 240687,
+      "sha256": "5e4ee057b4247992949c2a43cfb91554411683e9234b63a93d7b786f7cfe5f85",
+      "hash_status": "verified"
+    },
+    {
+      "path": "artifacts/a1/fold1_seed2023/thresholds.json",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 410,
+      "sha256": "e53e237e632f6dec86529d3014e8d91afd0b8de2017adb2720aa623878054f67",
+      "hash_status": "verified"
+    },
+    {
+      "path": "artifacts/a1/fold2_seed2024/RESULTS.md",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 1469,
+      "sha256": "eaaaa146b28d4c03190ce53aa39ecdf377220616a47995747f271fde6c6a8ba1",
+      "hash_status": "verified"
+    },
+    {
+      "path": "artifacts/a1/fold2_seed2024/SUCCESS",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 33,
+      "sha256": "94e6f363be23364b10ec66c8449015dc38ea86544190391382b95e3a066fbec3",
+      "hash_status": "verified"
+    },
+    {
+      "path": "artifacts/a1/fold2_seed2024/config.json",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 624,
+      "sha256": "152ca22b424b0ad101db0fd26ccbf3008d3e7502c5ed002df8163d42b8de2292",
+      "hash_status": "verified"
+    },
+    {
+      "path": "artifacts/a1/fold2_seed2024/input_hashes.json",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 1618,
+      "sha256": "d149070970c746799ebcf0344127606d6abc5924761cbb337a18bafc26abc0b6",
+      "hash_status": "verified"
+    },
+    {
+      "path": "artifacts/a1/fold2_seed2024/manifest.json",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 3831,
+      "sha256": "85affd1641ef63b07253657f9e1bba61dff5e5b0966c84c4a2c2240375a11059",
+      "hash_status": "verified"
+    },
+    {
+      "path": "artifacts/a1/fold2_seed2024/normalization_stats.json",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 375,
+      "sha256": "c8e99df176c90ef0f1eaf65ab1f6c12b1bcf1ad9affd16f06eba866d4ee67e81",
+      "hash_status": "verified"
+    },
+    {
+      "path": "artifacts/a1/fold2_seed2024/results.json",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 6357,
+      "sha256": "6e197ecc592267af65ff64ce738459be3960aad3e68439c8ae3144d32acb5d6c",
+      "hash_status": "verified"
+    },
+    {
+      "path": "artifacts/a1/fold2_seed2024/score_arrays.npz",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 240654,
+      "sha256": "af61985891efdabd8a9772170d6deb2d01f8e75357b017052d27780f182cf5a6",
+      "hash_status": "verified"
+    },
+    {
+      "path": "artifacts/a1/fold2_seed2024/thresholds.json",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 408,
+      "sha256": "44c8bb440af38ec6eba2668811c10a3e6083130b5ed7dca9f3cefa42c42555e4",
+      "hash_status": "verified"
+    },
+    {
+      "path": "artifacts/a1/fold3_seed2025/RESULTS.md",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 1469,
+      "sha256": "e73cc7490593e7da5f67afde5777cb3b872df0107d23d9aaa9186c0d954c0cad",
+      "hash_status": "verified"
+    },
+    {
+      "path": "artifacts/a1/fold3_seed2025/SUCCESS",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 33,
+      "sha256": "40a674c9e2bfb391bfc830b1cb465c31bdf339b8f8a866dd9bd56eefd63779f2",
+      "hash_status": "verified"
+    },
+    {
+      "path": "artifacts/a1/fold3_seed2025/config.json",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 624,
+      "sha256": "37b6753b204c94c0f867f297cc5b88d1fb10a3160f7eb5fbdbe2ded2ca3850d1",
+      "hash_status": "verified"
+    },
+    {
+      "path": "artifacts/a1/fold3_seed2025/input_hashes.json",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 1618,
+      "sha256": "6cf84bb8e16a8b0e8d253d709447e762c2b0b0abeb3ed4e371a4780793c7321b",
+      "hash_status": "verified"
+    },
+    {
+      "path": "artifacts/a1/fold3_seed2025/manifest.json",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 3841,
+      "sha256": "7b134d5278c30fa4be7a6274050dc078d29a047fba6cd9f5be9ae62898d59282",
+      "hash_status": "verified"
+    },
+    {
+      "path": "artifacts/a1/fold3_seed2025/normalization_stats.json",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 374,
+      "sha256": "34ef60a6520310bf6432253d4c12ae1bc30fff0d73a6d88e4a25cf3144289eca",
+      "hash_status": "verified"
+    },
+    {
+      "path": "artifacts/a1/fold3_seed2025/results.json",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 6375,
+      "sha256": "43e6b43cd0d81a3ac95f522467dd60b242dcf30d1a0e6e229c880d6144877d56",
+      "hash_status": "verified"
+    },
+    {
+      "path": "artifacts/a1/fold3_seed2025/score_arrays.npz",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 240534,
+      "sha256": "b2330f6e890feb3f1d391c9fb74a4953c6ec0139fa9c7a0f37601e7099393afa",
+      "hash_status": "verified"
+    },
+    {
+      "path": "artifacts/a1/fold3_seed2025/thresholds.json",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 410,
+      "sha256": "f3cc9d4e79c6a97513a77edf56e606519383c89d78aae53e8120ef0df87ba27c",
+      "hash_status": "verified"
+    },
+    {
+      "path": "artifacts/a1/fold4_seed2026/RESULTS.md",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 1469,
+      "sha256": "47998efacb5c202cce2332c3506b27c1fbf918b2a08308d81b81a6d31a1d473e",
+      "hash_status": "verified"
+    },
+    {
+      "path": "artifacts/a1/fold4_seed2026/SUCCESS",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 33,
+      "sha256": "c9904f90b38cc2ca48a8d66558ad76743b92f0e508a81e75836e2e04729763ac",
+      "hash_status": "verified"
+    },
+    {
+      "path": "artifacts/a1/fold4_seed2026/config.json",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 624,
+      "sha256": "655f0f9c269e11eb255eaacdc97d8abb1fd287767cb0cd3ec5010dc4f1ca1c0b",
+      "hash_status": "verified"
+    },
+    {
+      "path": "artifacts/a1/fold4_seed2026/input_hashes.json",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 1618,
+      "sha256": "568224c56ad7fadf5a938f548d5cb6ae37bada0b3ead2debce157cbd3758d7e4",
+      "hash_status": "verified"
+    },
+    {
+      "path": "artifacts/a1/fold4_seed2026/manifest.json",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 3843,
+      "sha256": "8a52d3086cf3c63375abcc3a0154d35562a732ad3135b851e2d96c24a26ad578",
+      "hash_status": "verified"
+    },
+    {
+      "path": "artifacts/a1/fold4_seed2026/normalization_stats.json",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 373,
+      "sha256": "dc62e48b31bde9e432ed1f612ab411a67ae716655c3cbd6ccc67bc677116a816",
+      "hash_status": "verified"
+    },
+    {
+      "path": "artifacts/a1/fold4_seed2026/results.json",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 6355,
+      "sha256": "36704b5f4bb1545ba3319514f37aee3d3038e03e297f8264a77acec12bb9ea89",
+      "hash_status": "verified"
+    },
+    {
+      "path": "artifacts/a1/fold4_seed2026/score_arrays.npz",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 240624,
+      "sha256": "02eb285fcd6bcf278668a3c8dacd040d1fad2b06fcce440a077d730d9e91161c",
+      "hash_status": "verified"
+    },
+    {
+      "path": "artifacts/a1/fold4_seed2026/thresholds.json",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 408,
+      "sha256": "4ad66f991e1ccf8d2f5d663eee6c6fb28fd964e5710083c2ae5f038781163034",
+      "hash_status": "verified"
+    },
+    {
+      "path": "artifacts/a2/fold0_seed2022/RESULTS.md",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 1469,
+      "sha256": "5f2559194050596f470165779ae79688c1699a2bd547e463965912ad0aa7f521",
+      "hash_status": "verified"
+    },
+    {
+      "path": "artifacts/a2/fold0_seed2022/SUCCESS",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 33,
+      "sha256": "1993e458bede6664aa1a018c296b660b7faf02b58bb90cfd40bd5edcac79c0e6",
+      "hash_status": "verified"
+    },
+    {
+      "path": "artifacts/a2/fold0_seed2022/config.json",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 624,
+      "sha256": "b254b29e3706586585f91e34ee0f01f5a2bc4a6ab51f4c3543ea65f6dc7447d8",
+      "hash_status": "verified"
+    },
+    {
+      "path": "artifacts/a2/fold0_seed2022/input_hashes.json",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 1618,
+      "sha256": "b2b1db3099559509af1ccf7564e091bba6bfcae9e15b26b0b06335a7479a4697",
+      "hash_status": "verified"
+    },
+    {
+      "path": "artifacts/a2/fold0_seed2022/manifest.json",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 3854,
+      "sha256": "7ad00b93bec29221516d80d51a6007ef274a814da45c359d25d37bee4e10f8ee",
+      "hash_status": "verified"
+    },
+    {
+      "path": "artifacts/a2/fold0_seed2022/normalization_stats.json",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 373,
+      "sha256": "1bf58b3c5f975f2f99e000d1be4cab00c86acfde0a403f1b3a08046aa3ea6936",
+      "hash_status": "verified"
+    },
+    {
+      "path": "artifacts/a2/fold0_seed2022/results.json",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 6531,
+      "sha256": "10c54c05abee65ea6943e3432954f0b7598744d56f6f1ebb45125e62532085f5",
+      "hash_status": "verified"
+    },
+    {
+      "path": "artifacts/a2/fold0_seed2022/score_arrays.npz",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 225997,
+      "sha256": "5686f10e13345ba091b26307dd536e52cdee0e31a0ce9655cc170bc2d406f23d",
+      "hash_status": "verified"
+    },
+    {
+      "path": "artifacts/a2/fold0_seed2022/thresholds.json",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 409,
+      "sha256": "f0b5f67d19c4eba254197907ff786baf7baeabedb98d05448d272cd529d74523",
+      "hash_status": "verified"
+    },
+    {
+      "path": "artifacts/a2/fold1_seed2023/RESULTS.md",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 1469,
+      "sha256": "86041caebb989b4a3648ebf957e57eff262fe9144f04dbe8044293eaf4f805d8",
+      "hash_status": "verified"
+    },
+    {
+      "path": "artifacts/a2/fold1_seed2023/SUCCESS",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 33,
+      "sha256": "dae112e937b84432c00a1723a295e87c43c37473a79b2d72d69a35ba3be31858",
+      "hash_status": "verified"
+    },
+    {
+      "path": "artifacts/a2/fold1_seed2023/config.json",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 624,
+      "sha256": "ca6cdc15bcc1b0026150368f83e71216adff76ac4f4fc3180b6218f6ffc2aee9",
+      "hash_status": "verified"
+    },
+    {
+      "path": "artifacts/a2/fold1_seed2023/input_hashes.json",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 1618,
+      "sha256": "40add057d4b36848289f44c1c8b05ea2b2277cfb04f696c31139369dc2053e6a",
+      "hash_status": "verified"
+    },
+    {
+      "path": "artifacts/a2/fold1_seed2023/manifest.json",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 3863,
+      "sha256": "6b7c71f7bcb61ed570ba92bfb2a79194d5cc289f37934fae58b3beb2828b59d6",
+      "hash_status": "verified"
+    },
+    {
+      "path": "artifacts/a2/fold1_seed2023/normalization_stats.json",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 375,
+      "sha256": "f2af1b9694e789b443cc2352f53c3f69f49504e8c430d0f5fe628c2ac8e7688f",
+      "hash_status": "verified"
+    },
+    {
+      "path": "artifacts/a2/fold1_seed2023/results.json",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 6475,
+      "sha256": "56c974192a3dabd75d5dafcf6eb3ee22d08abe3d2ca1c51ffec511b468f2a19d",
+      "hash_status": "verified"
+    },
+    {
+      "path": "artifacts/a2/fold1_seed2023/score_arrays.npz",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 225998,
+      "sha256": "02c0b1235e69d3a547f459952e904765b713e4f390f25f1a70c409274be930ae",
+      "hash_status": "verified"
+    },
+    {
+      "path": "artifacts/a2/fold1_seed2023/thresholds.json",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 409,
+      "sha256": "14a01e9a5b11bd962f064073238eb3a98f5466fc4fba7989894f95fad6a00456",
+      "hash_status": "verified"
+    },
+    {
+      "path": "artifacts/a2/fold2_seed2024/RESULTS.md",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 1469,
+      "sha256": "ca40672d6089ac2ae874021ed93f3dc23e1aaa7bddca49b1a24baba7c59b1a9c",
+      "hash_status": "verified"
+    },
+    {
+      "path": "artifacts/a2/fold2_seed2024/SUCCESS",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 33,
+      "sha256": "7c67b101685db8c0feb813cb6663cdda87daeea851e14ba4c0b12641854dec9b",
+      "hash_status": "verified"
+    },
+    {
+      "path": "artifacts/a2/fold2_seed2024/config.json",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 624,
+      "sha256": "f1a7d4741c318bbb21ccd0d7ced9cc671781c0bc3793e26a83ba5f7cdde28aa8",
+      "hash_status": "verified"
+    },
+    {
+      "path": "artifacts/a2/fold2_seed2024/input_hashes.json",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 1618,
+      "sha256": "7b47c399ab337fb08528ea143d70034f8d77d6d4473af870be9a88a3cd2526fb",
+      "hash_status": "verified"
+    },
+    {
+      "path": "artifacts/a2/fold2_seed2024/manifest.json",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 3861,
+      "sha256": "91b001754393b25974da9fe4660027b8309906b1bffb072956b2a44a15473a9e",
+      "hash_status": "verified"
+    },
+    {
+      "path": "artifacts/a2/fold2_seed2024/normalization_stats.json",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 375,
+      "sha256": "d9fa636775546c14b4b4a77757c670971cbd3e5d3ce72bc8b43d782f18a3fd34",
+      "hash_status": "verified"
+    },
+    {
+      "path": "artifacts/a2/fold2_seed2024/results.json",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 6522,
+      "sha256": "edebbc8299c95ab764ffd188d87c0233dd805bfd800328896f5b6f570e903a2e",
+      "hash_status": "verified"
+    },
+    {
+      "path": "artifacts/a2/fold2_seed2024/score_arrays.npz",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 226426,
+      "sha256": "c655c76fd372fcebdfc8f67aa8b7ef9952cec75e89f620deb274d745839aec49",
+      "hash_status": "verified"
+    },
+    {
+      "path": "artifacts/a2/fold2_seed2024/thresholds.json",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 407,
+      "sha256": "8aef54ec11b06dfc26bb97790a72eade63963550d94f968613cdbd6481120996",
+      "hash_status": "verified"
+    },
+    {
+      "path": "artifacts/a2/fold3_seed2025/RESULTS.md",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 1469,
+      "sha256": "4ee6e4a111a233e761acb65c55f934df8a3ce23edca1135c6c68bf57cd94e10a",
+      "hash_status": "verified"
+    },
+    {
+      "path": "artifacts/a2/fold3_seed2025/SUCCESS",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 33,
+      "sha256": "fc7b11d996588bcd20d6d8f41460f62e5d3d19c927d0efdcc6c8859d8ba39c07",
+      "hash_status": "verified"
+    },
+    {
+      "path": "artifacts/a2/fold3_seed2025/config.json",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 624,
+      "sha256": "2c8a3cef044d37cb4e0f257a371e4b161ba3e877d9f6b905a77fe76afe7012d3",
+      "hash_status": "verified"
+    },
+    {
+      "path": "artifacts/a2/fold3_seed2025/input_hashes.json",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 1618,
+      "sha256": "6bf90b4c09832f9a07cc73be576eea5118806efa16aaf73281c1dac56ad5031e",
+      "hash_status": "verified"
+    },
+    {
+      "path": "artifacts/a2/fold3_seed2025/manifest.json",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 3853,
+      "sha256": "67c40a33a02f22a05685bbc93425e107ccfe423b14b1f98c0387ac90dfe76e7c",
+      "hash_status": "verified"
+    },
+    {
+      "path": "artifacts/a2/fold3_seed2025/normalization_stats.json",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 374,
+      "sha256": "597a71aa00a9ff04385536348ac778b704313c5081a38b5d0a95cb0feacf2d6d",
+      "hash_status": "verified"
+    },
+    {
+      "path": "artifacts/a2/fold3_seed2025/results.json",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 6487,
+      "sha256": "ae846e40fda74135c15036bbc5f0b9809ad1dce3fd06f78049a3bd6ac221372f",
+      "hash_status": "verified"
+    },
+    {
+      "path": "artifacts/a2/fold3_seed2025/score_arrays.npz",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 226283,
+      "sha256": "5f456652e06cea0970b16f2d2d304750113f1dcb9221095704c636f96b59fa12",
+      "hash_status": "verified"
+    },
+    {
+      "path": "artifacts/a2/fold3_seed2025/thresholds.json",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 407,
+      "sha256": "34ab9a7d0b12228d88f0fbb2359c3e3ecd339c0a0feff114f9784aa97e1b5696",
+      "hash_status": "verified"
+    },
+    {
+      "path": "artifacts/a2/fold4_seed2026/RESULTS.md",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 1469,
+      "sha256": "e03779f35de4b0922b2342764c29c1ba33196ab538af5f2c71eda98cd94ee76f",
+      "hash_status": "verified"
+    },
+    {
+      "path": "artifacts/a2/fold4_seed2026/SUCCESS",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 33,
+      "sha256": "cc4d68ffa874e28e56d5d4ec5ce154e00190475c7e62b09f73767a2236a5087d",
+      "hash_status": "verified"
+    },
+    {
+      "path": "artifacts/a2/fold4_seed2026/config.json",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 624,
+      "sha256": "1de199acdb98c1d9faf6af063a606c93f665a4db7b423d15eedfa66a3b30f845",
+      "hash_status": "verified"
+    },
+    {
+      "path": "artifacts/a2/fold4_seed2026/input_hashes.json",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 1618,
+      "sha256": "9fb093e8f48a76dcdfd3af1df78f368ea74a9c1ff5e0f82f41852769b8afa3b2",
+      "hash_status": "verified"
+    },
+    {
+      "path": "artifacts/a2/fold4_seed2026/manifest.json",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 3862,
+      "sha256": "d35b4f0e3c5aa18b81cd0f9f7503d4d00c4f5319dcf34fb86d42063e01d16cc7",
+      "hash_status": "verified"
+    },
+    {
+      "path": "artifacts/a2/fold4_seed2026/normalization_stats.json",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 377,
+      "sha256": "18421bdc06f10a72ed3b7c11b451a6cceeba5146f744ffc5932912f9d90bc5da",
+      "hash_status": "verified"
+    },
+    {
+      "path": "artifacts/a2/fold4_seed2026/results.json",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 6558,
+      "sha256": "ff19aaca82e187ff890fd3502ade7f6998b3e0ca33f6b64e8d7d9db7fee97ee0",
+      "hash_status": "verified"
+    },
+    {
+      "path": "artifacts/a2/fold4_seed2026/score_arrays.npz",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 226103,
+      "sha256": "e7f8dfdddfb78c431f369d7094e3235bddea55483cf6f291b7cd3d1ab6aaaba7",
+      "hash_status": "verified"
+    },
+    {
+      "path": "artifacts/a2/fold4_seed2026/thresholds.json",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 409,
+      "sha256": "0fa1bdfa2699b7df5ccab5642020a4995f8906848e617a83bd982d3d56c3ebab",
+      "hash_status": "verified"
+    },
+    {
+      "path": "artifacts/a3/fold0_seed2022/RESULTS.md",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 1469,
+      "sha256": "112107e4740b61921173022380909633bcd0e6dc2592d192daf4d49b673a66c5",
+      "hash_status": "verified"
+    },
+    {
+      "path": "artifacts/a3/fold0_seed2022/SUCCESS",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 33,
+      "sha256": "2c8e81b92e5b442e05972052dcb200e834056dd39564918694a2b70b73a709b2",
+      "hash_status": "verified"
+    },
+    {
+      "path": "artifacts/a3/fold0_seed2022/config.json",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 624,
+      "sha256": "974d3ce3901f7ee3884fdfc00ad0b3c29c8456c9ada2bd4e34ad8cc8f187bb7f",
+      "hash_status": "verified"
+    },
+    {
+      "path": "artifacts/a3/fold0_seed2022/input_hashes.json",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 1618,
+      "sha256": "ce770d3dfac973bbcdc55f863a145a28a8ae3049ed1d88c2637a0e44d9a4c7d2",
+      "hash_status": "verified"
+    },
+    {
+      "path": "artifacts/a3/fold0_seed2022/manifest.json",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 3862,
+      "sha256": "c2c8fea17342cce35410ede0842b175a01411c40d53e04895f79cd2b4a220c86",
+      "hash_status": "verified"
+    },
+    {
+      "path": "artifacts/a3/fold0_seed2022/normalization_stats.json",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 375,
+      "sha256": "3c4642a2c0247df2d2993a58731bc8ba929173d07060f3b8eb563f6e3ae3ebd5",
+      "hash_status": "verified"
+    },
+    {
+      "path": "artifacts/a3/fold0_seed2022/results.json",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 6532,
+      "sha256": "d2a973a3d11f57b9aa6f301452faf089724d64bf767e68e2ebbc10b34f1c9df8",
+      "hash_status": "verified"
+    },
+    {
+      "path": "artifacts/a3/fold0_seed2022/score_arrays.npz",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 218611,
+      "sha256": "2d971a35734bdabc1304d787f700365145bde3fa7358a6bbfc7ae7401421c885",
+      "hash_status": "verified"
+    },
+    {
+      "path": "artifacts/a3/fold0_seed2022/thresholds.json",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 409,
+      "sha256": "7117050b32f156c89f044e95bb42c824ca9465ba39371f3ff9baf74af9271751",
+      "hash_status": "verified"
+    },
+    {
+      "path": "artifacts/a3/fold1_seed2023/RESULTS.md",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 1469,
+      "sha256": "b43da4f395b7fb8937ee7231091bfc86be6c2775e348c88ff89cb4c65ee7bb78",
+      "hash_status": "verified"
+    },
+    {
+      "path": "artifacts/a3/fold1_seed2023/SUCCESS",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 33,
+      "sha256": "1dd670bd5ae162e032b03eac1433419fb43cd9c8d10256bec15bfe7637a12954",
+      "hash_status": "verified"
+    },
+    {
+      "path": "artifacts/a3/fold1_seed2023/config.json",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 624,
+      "sha256": "697b2b3bc3ac7d0e4bbe308332e262e5d35741e1d645b3c7f98949c32d85953e",
+      "hash_status": "verified"
+    },
+    {
+      "path": "artifacts/a3/fold1_seed2023/input_hashes.json",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 1618,
+      "sha256": "e9bdcfa4404f4a4fd7fdaee48e55e1bfb5251b422c01c9a1828da935dab357d1",
+      "hash_status": "verified"
+    },
+    {
+      "path": "artifacts/a3/fold1_seed2023/manifest.json",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 3863,
+      "sha256": "6cdabe0d70199b971907b86dbf2e3736c2acf7cfe8a025395606b8de6db843fa",
+      "hash_status": "verified"
+    },
+    {
+      "path": "artifacts/a3/fold1_seed2023/normalization_stats.json",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 374,
+      "sha256": "127bea763950681ee01a4acb98c62b495181dec9278b185de69923df89079641",
+      "hash_status": "verified"
+    },
+    {
+      "path": "artifacts/a3/fold1_seed2023/results.json",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 6570,
+      "sha256": "f748ae5146492e5960105e8dbab47c8c040773decff415a21c023684a108a777",
+      "hash_status": "verified"
+    },
+    {
+      "path": "artifacts/a3/fold1_seed2023/score_arrays.npz",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 218544,
+      "sha256": "efb5da21f2ec1f0776f5625f6801918ab5e960e46f074e926d4fb18cf26adbbc",
+      "hash_status": "verified"
+    },
+    {
+      "path": "artifacts/a3/fold1_seed2023/thresholds.json",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 410,
+      "sha256": "e5b338eb0807ab5aa83311a4ce2c29a4626b7d55a3d2932fbf1d7a43f1e7db5f",
+      "hash_status": "verified"
+    },
+    {
+      "path": "artifacts/a3/fold2_seed2024/RESULTS.md",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 1469,
+      "sha256": "9dea1f8cc2cfc0b4af939a1a0b8de7b42ab4cd364467a7e782c353372f9c919f",
+      "hash_status": "verified"
+    },
+    {
+      "path": "artifacts/a3/fold2_seed2024/SUCCESS",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 33,
+      "sha256": "5c902a54ecd96d2bbe4946398724a51f45e278163ba237d971e192ed38919252",
+      "hash_status": "verified"
+    },
+    {
+      "path": "artifacts/a3/fold2_seed2024/config.json",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 624,
+      "sha256": "e804473bc83091e81756443bdb0dd7be8d57b5ff8ef19b0d248acb508861230d",
+      "hash_status": "verified"
+    },
+    {
+      "path": "artifacts/a3/fold2_seed2024/input_hashes.json",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 1618,
+      "sha256": "8b2bff8e81028b804da6a2d938093df73f00e424bdd65c761a80d3277ba05549",
+      "hash_status": "verified"
+    },
+    {
+      "path": "artifacts/a3/fold2_seed2024/manifest.json",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 3863,
+      "sha256": "12bf2b658cfa937278828e13b6d5037f6930843d79d065f2d3befb5dc5a893cd",
+      "hash_status": "verified"
+    },
+    {
+      "path": "artifacts/a3/fold2_seed2024/normalization_stats.json",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 376,
+      "sha256": "c9b3741ca716972e9fe094668f1851a3479913b8d41adfe1c601651c0d63c45c",
+      "hash_status": "verified"
+    },
+    {
+      "path": "artifacts/a3/fold2_seed2024/results.json",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 6572,
+      "sha256": "0a741426a1d3426ad0f94c6d9504808bbaf7894d5a4d89d0917b8ce451b31adf",
+      "hash_status": "verified"
+    },
+    {
+      "path": "artifacts/a3/fold2_seed2024/score_arrays.npz",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 218500,
+      "sha256": "66f4894521594f4ad07162221461291350ca02e0f2f98fb8d120fbe73e315bd5",
+      "hash_status": "verified"
+    },
+    {
+      "path": "artifacts/a3/fold2_seed2024/thresholds.json",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 409,
+      "sha256": "0691be835927228ab3f0ca97786d2a7cbe633e79fdb0ecc7aedac092c8d0d332",
+      "hash_status": "verified"
+    },
+    {
+      "path": "artifacts/a3/fold3_seed2025/RESULTS.md",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 1469,
+      "sha256": "0734fc9537fb82ae943079bfc99d45a47511ba5e6b89406c9ce96b48c0ee57e4",
+      "hash_status": "verified"
+    },
+    {
+      "path": "artifacts/a3/fold3_seed2025/SUCCESS",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 33,
+      "sha256": "0a81132fe910d94ce74a1da61bdee98a7b32f419295398312ae4847d1a976f9c",
+      "hash_status": "verified"
+    },
+    {
+      "path": "artifacts/a3/fold3_seed2025/config.json",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 624,
+      "sha256": "b7324489260bcd71ba7a8aa2cbf64afb5d9eff8fd852953913f600d3d1a55394",
+      "hash_status": "verified"
+    },
+    {
+      "path": "artifacts/a3/fold3_seed2025/input_hashes.json",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 1618,
+      "sha256": "115f02c36809fe7f7dfe9d5da89afeb28de66306e65589027fc00af54bb35cd7",
+      "hash_status": "verified"
+    },
+    {
+      "path": "artifacts/a3/fold3_seed2025/manifest.json",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 3864,
+      "sha256": "0e2b679657d6388effea7f9425268adfc01118ccddbd34fdba842a06bf6c94f1",
+      "hash_status": "verified"
+    },
+    {
+      "path": "artifacts/a3/fold3_seed2025/normalization_stats.json",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 376,
+      "sha256": "9745f493f04e09ab78d82599d337ae7b039fbc6da339848d9410c374ece2c9ba",
+      "hash_status": "verified"
+    },
+    {
+      "path": "artifacts/a3/fold3_seed2025/results.json",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 6581,
+      "sha256": "590468d5418450130c50b07d5c01e641e761e39006cef7edc33a9f7003ae6969",
+      "hash_status": "verified"
+    },
+    {
+      "path": "artifacts/a3/fold3_seed2025/score_arrays.npz",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 218526,
+      "sha256": "4017047ba5c94074c0c50c12f47bf1a0bf67a77e35d3b81a0926aae3f837f9ce",
+      "hash_status": "verified"
+    },
+    {
+      "path": "artifacts/a3/fold3_seed2025/thresholds.json",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 409,
+      "sha256": "4e8c478180582ee6cfebf79459e7e58e5fe12710cdc033f5683b9f7fb638ec8f",
+      "hash_status": "verified"
+    },
+    {
+      "path": "artifacts/a3/fold4_seed2026/RESULTS.md",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 1469,
+      "sha256": "143feaa30eb6fdcc0cee2576df336b13d896aa4cb9a03b3e86d99eed47436e6a",
+      "hash_status": "verified"
+    },
+    {
+      "path": "artifacts/a3/fold4_seed2026/SUCCESS",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 33,
+      "sha256": "7f7d43151229b3dbd5956e8c44fda2229d7ad2d3d25c93df2a581a4fb7007995",
+      "hash_status": "verified"
+    },
+    {
+      "path": "artifacts/a3/fold4_seed2026/config.json",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 624,
+      "sha256": "57e3507b679fa4292131314615772f3b7cb6fc9c0db0fcceb199050cc19c2cec",
+      "hash_status": "verified"
+    },
+    {
+      "path": "artifacts/a3/fold4_seed2026/input_hashes.json",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 1618,
+      "sha256": "312ad3087e8facf307764227494bb1b62cca0cef66f3de00c0244b7616b3d9a3",
+      "hash_status": "verified"
+    },
+    {
+      "path": "artifacts/a3/fold4_seed2026/manifest.json",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 3863,
+      "sha256": "772a90e814d72efda72511b58ab3e33f474f2f674e72caffb9c4ed1b662b625f",
+      "hash_status": "verified"
+    },
+    {
+      "path": "artifacts/a3/fold4_seed2026/normalization_stats.json",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 373,
+      "sha256": "1fb7b1244369d05306ad121876046d370b0d6e4e22b67a3e5f24a5d102c6382b",
+      "hash_status": "verified"
+    },
+    {
+      "path": "artifacts/a3/fold4_seed2026/results.json",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 6580,
+      "sha256": "76b4fbc460438ec32efc40d78c97e4b2ecda1b1be4d610793374ab8c461c44af",
+      "hash_status": "verified"
+    },
+    {
+      "path": "artifacts/a3/fold4_seed2026/score_arrays.npz",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 218423,
+      "sha256": "3a8e0394b3c8fd87dd81d2494c2b050675466423695d3cfe297022954a93202f",
+      "hash_status": "verified"
+    },
+    {
+      "path": "artifacts/a3/fold4_seed2026/thresholds.json",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 409,
+      "sha256": "58fbb24350ae52a7bc7a5d81a707875f36506306ff94b940fd4240e9ca33e5f6",
+      "hash_status": "verified"
+    },
+    {
+      "path": "configs/stage13a2_config.json",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 1405,
+      "sha256": "9764b598735f40d287bed17279c80d7bbbc23b2231abcd80c6918014915928df",
+      "hash_status": "verified"
+    },
+    {
+      "path": "outputs/summary/completion_verification.json",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 461,
+      "sha256": "d6a6e83bcda35c8e49e522550d25b1c85ae6b7ecbf15a3f97fcc3ced428c82d3",
+      "hash_status": "verified"
+    },
+    {
+      "path": "outputs/summary/execution_commands.txt",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 392,
+      "sha256": "7be53a232c9d17b36873f6cffd3ea9a9952f324a65d0194f710d7f3ddb06a60b",
+      "hash_status": "verified"
+    },
+    {
+      "path": "outputs/summary/final_gate.json",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 1470,
+      "sha256": "6c6d18d80e09bb0ed3264258b6fc74e29e48123239cc7efddc3ac2e75b8d0313",
+      "hash_status": "verified"
+    },
+    {
+      "path": "outputs/summary/final_gate.md",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 881,
+      "sha256": "27b0ad93a4f57e458949a513471555ad8d8c98cf9650e750e9dcb9d5e4dbd647",
+      "hash_status": "verified"
+    },
+    {
+      "path": "outputs/summary/gl_vs_centroid.csv",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 3380,
+      "sha256": "237c7c154a67046edd69f03b409206fb03dc52f342eb0e445ed618c47d2301ca",
+      "hash_status": "verified"
+    },
+    {
+      "path": "outputs/summary/provenance_verification.json",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 85258,
+      "sha256": "2f65fd43d65d38906425cec48b791fe111e35f2b2f60ea377e871cdce52853b9",
+      "hash_status": "verified"
+    },
+    {
+      "path": "outputs/summary/run_level_results.csv",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 15255,
+      "sha256": "2ddf137b822951a8d683e1a331da569ba3c50d831acc33de1dca6ed5f4e96e27",
+      "hash_status": "verified"
+    },
+    {
+      "path": "outputs/summary/scenario_summary.csv",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 5315,
+      "sha256": "e8efb4113510f70bd85f49ac61b62458f65bf09d856e2dbba7888038caecce80",
+      "hash_status": "verified"
+    },
+    {
+      "path": "scripts/__pycache__/aggregate_results.cpython-310.pyc",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 4286,
+      "sha256": "6ecb4f5d182962a03ad55bd3f55ae772fedcbf80cdd598c44b88be579db1d00a",
+      "hash_status": "verified"
+    },
+    {
+      "path": "scripts/__pycache__/evaluate_run.cpython-310.pyc",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 8521,
+      "sha256": "5b5f7ed643b6031581e8e03ea8f7a93ddf9179a9b995b707a08f515a2638126a",
+      "hash_status": "verified"
+    },
+    {
+      "path": "scripts/__pycache__/finalize_bundles.cpython-310.pyc",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 8235,
+      "sha256": "dea8c47c237178d2aefd54ed72bae7e9d50199f134edff649a830d6b86807bba",
+      "hash_status": "verified"
+    },
+    {
+      "path": "scripts/__pycache__/run_queue.cpython-310.pyc",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 1891,
+      "sha256": "e9b4b0a52d274d7ba846a0ab953add69590beeb74177a2a811496a643f496a07",
+      "hash_status": "verified"
+    },
+    {
+      "path": "scripts/__pycache__/stage13a2_common.cpython-310.pyc",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 7623,
+      "sha256": "931c8c42a01d3b5d2070b2431637a2a5cfdd88479f544b55d67a24ea8d25cfdb",
+      "hash_status": "verified"
+    },
+    {
+      "path": "scripts/__pycache__/verify_provenance.cpython-310.pyc",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 5846,
+      "sha256": "26d1b4114ecea0e28b41ad7400860e714e4feb3ec6b33f6b9120855b330ac689",
+      "hash_status": "verified"
+    },
+    {
+      "path": "scripts/__pycache__/verify_stage13a2.cpython-310.pyc",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 7698,
+      "sha256": "81d142515562ab51c5387562baec8ee01996d929aaca61e3256e3bc31a1af5d0",
+      "hash_status": "verified"
+    },
+    {
+      "path": "scripts/aggregate_results.py",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 4269,
+      "sha256": "2937e7338892a0af28fa21d669ad6e04ec0c6ef52e16ea6a371fd901b4407f5c",
+      "hash_status": "verified"
+    },
+    {
+      "path": "scripts/evaluate_run.py",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 10694,
+      "sha256": "82492b6ec4acbbf7d6b339c02c3c537c9641f975d60bfcec1c14ef5f67306e3d",
+      "hash_status": "verified"
+    },
+    {
+      "path": "scripts/finalize_bundles.py",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 9600,
+      "sha256": "1d327528b777ca5e43d43eb84e294384c233e1514c6471884a6fb5f877ca5b39",
+      "hash_status": "verified"
+    },
+    {
+      "path": "scripts/run_queue.py",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 1715,
+      "sha256": "601a951fd8ac8792f582015249df6acbbd2a5c692e80809b360ca3643e49b035",
+      "hash_status": "verified"
+    },
+    {
+      "path": "scripts/stage13a2_common.py",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 7736,
+      "sha256": "8888156240de6551759954bb8bc90269292605e9e22d0e64b44a04e0d65036f0",
+      "hash_status": "verified"
+    },
+    {
+      "path": "scripts/verify_provenance.py",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 7910,
+      "sha256": "bf8f0cd8bf3acc675c3f04b0c122414ddd7867501d3c8e4e4866672dacf3b632",
+      "hash_status": "verified"
+    },
+    {
+      "path": "scripts/verify_stage13a2.py",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 9767,
+      "sha256": "24c562cca23a39125110e129cd8d40a2fd7f0b51ac373196dde2cf0e2c141310",
+      "hash_status": "verified"
+    },
+    {
+      "path": "tests/__pycache__/test_stage13a2_common.cpython-310.pyc",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 2543,
+      "sha256": "60e590f51de5aed6fd199d39850e55c54823fd1b2cef3fb7406923959b3fdb78",
+      "hash_status": "verified"
+    },
+    {
+      "path": "tests/test_stage13a2_common.py",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 2648,
+      "sha256": "d031472b3dac575ab5c1d4bab75d1b296d2c82adee864b07ba37759e5b2ff5af",
+      "hash_status": "verified"
+    }
+  ],
+  "limitations": [
+    "USTC development result",
+    "Frozen Stage13A-1 scores reused",
+    "No external Test dataset used"
+  ],
+  "next_step": "No subsequent stage started"
+}

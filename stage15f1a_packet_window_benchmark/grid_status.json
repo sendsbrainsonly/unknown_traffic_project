@@ -1,0 +1,142 @@
+{
+  "active": [],
+  "completed": [
+    {
+      "dataset": "iscx_tor",
+      "elapsed_seconds": 80.08465552330017,
+      "exit_code": 0,
+      "gpu": "4",
+      "log": "/home/birkenwald/data/SEU-WXY/WXY-SEU/TrafficClassifier/Projects/unknown_traffic_project/stage15f1a_packet_window_benchmark/runs/T8/iscx_tor/medium_seed2022.T8.launcher.log",
+      "protocol_id": "medium_seed2022",
+      "window": 8
+    },
+    {
+      "dataset": "iscx_vpn",
+      "elapsed_seconds": 100.11135578155518,
+      "exit_code": 0,
+      "gpu": "0",
+      "log": "/home/birkenwald/data/SEU-WXY/WXY-SEU/TrafficClassifier/Projects/unknown_traffic_project/stage15f1a_packet_window_benchmark/runs/T8/iscx_vpn/medium_seed2022.T8.launcher.log",
+      "protocol_id": "medium_seed2022",
+      "window": 8
+    },
+    {
+      "dataset": "vnat",
+      "elapsed_seconds": 105.11324739456177,
+      "exit_code": 0,
+      "gpu": "6",
+      "log": "/home/birkenwald/data/SEU-WXY/WXY-SEU/TrafficClassifier/Projects/unknown_traffic_project/stage15f1a_packet_window_benchmark/runs/T8/vnat/medium_seed2026.T8.launcher.log",
+      "protocol_id": "medium_seed2026",
+      "window": 8
+    },
+    {
+      "dataset": "vnat",
+      "elapsed_seconds": 110.1221570968628,
+      "exit_code": 0,
+      "gpu": "7",
+      "log": "/home/birkenwald/data/SEU-WXY/WXY-SEU/TrafficClassifier/Projects/unknown_traffic_project/stage15f1a_packet_window_benchmark/runs/T8/vnat/medium_seed2025.T8.launcher.log",
+      "protocol_id": "medium_seed2025",
+      "window": 8
+    },
+    {
+      "dataset": "iscx_tor",
+      "elapsed_seconds": 80.0871696472168,
+      "exit_code": 0,
+      "gpu": "6",
+      "log": "/home/birkenwald/data/SEU-WXY/WXY-SEU/TrafficClassifier/Projects/unknown_traffic_project/stage15f1a_packet_window_benchmark/runs/T16/iscx_tor/medium_seed2022.T16.launcher.log",
+      "protocol_id": "medium_seed2022",
+      "window": 16
+    },
+    {
+      "dataset": "iscx_vpn",
+      "elapsed_seconds": 100.11485362052917,
+      "exit_code": 0,
+      "gpu": "0",
+      "log": "/home/birkenwald/data/SEU-WXY/WXY-SEU/TrafficClassifier/Projects/unknown_traffic_project/stage15f1a_packet_window_benchmark/runs/T16/iscx_vpn/medium_seed2022.T16.launcher.log",
+      "protocol_id": "medium_seed2022",
+      "window": 16
+    },
+    {
+      "dataset": "vnat",
+      "elapsed_seconds": 105.11948752403259,
+      "exit_code": 0,
+      "gpu": "7",
+      "log": "/home/birkenwald/data/SEU-WXY/WXY-SEU/TrafficClassifier/Projects/unknown_traffic_project/stage15f1a_packet_window_benchmark/runs/T16/vnat/medium_seed2025.T16.launcher.log",
+      "protocol_id": "medium_seed2025",
+      "window": 16
+    },
+    {
+      "dataset": "vnat",
+      "elapsed_seconds": 105.12537670135498,
+      "exit_code": 0,
+      "gpu": "6",
+      "log": "/home/birkenwald/data/SEU-WXY/WXY-SEU/TrafficClassifier/Projects/unknown_traffic_project/stage15f1a_packet_window_benchmark/runs/T16/vnat/medium_seed2026.T16.launcher.log",
+      "protocol_id": "medium_seed2026",
+      "window": 16
+    },
+    {
+      "dataset": "iscx_vpn",
+      "elapsed_seconds": 95.11093211174011,
+      "exit_code": 0,
+      "gpu": "7",
+      "log": "/home/birkenwald/data/SEU-WXY/WXY-SEU/TrafficClassifier/Projects/unknown_traffic_project/stage15f1a_packet_window_benchmark/runs/T32/iscx_vpn/medium_seed2022.T32.launcher.log",
+      "protocol_id": "medium_seed2022",
+      "window": 32
+    },
+    {
+      "dataset": "iscx_tor",
+      "elapsed_seconds": 80.09246516227722,
+      "exit_code": 0,
+      "gpu": "6",
+      "log": "/home/birkenwald/data/SEU-WXY/WXY-SEU/TrafficClassifier/Projects/unknown_traffic_project/stage15f1a_packet_window_benchmark/runs/T32/iscx_tor/medium_seed2022.T32.launcher.log",
+      "protocol_id": "medium_seed2022",
+      "window": 32
+    },
+    {
+      "dataset": "vnat",
+      "elapsed_seconds": 105.11730003356934,
+      "exit_code": 0,
+      "gpu": "7",
+      "log": "/home/birkenwald/data/SEU-WXY/WXY-SEU/TrafficClassifier/Projects/unknown_traffic_project/stage15f1a_packet_window_benchmark/runs/T32/vnat/medium_seed2025.T32.launcher.log",
+      "protocol_id": "medium_seed2025",
+      "window": 32
+    },
+    {
+      "dataset": "vnat",
+      "elapsed_seconds": 105.11050009727478,
+      "exit_code": 0,
+      "gpu": "6",
+      "log": "/home/birkenwald/data/SEU-WXY/WXY-SEU/TrafficClassifier/Projects/unknown_traffic_project/stage15f1a_packet_window_benchmark/runs/T32/vnat/medium_seed2026.T32.launcher.log",
+      "protocol_id": "medium_seed2026",
+      "window": 32
+    },
+    {
+      "dataset": "ustc",
+      "elapsed_seconds": 1516.6661150455475,
+      "exit_code": 0,
+      "gpu": "4",
+      "log": "/home/birkenwald/data/SEU-WXY/WXY-SEU/TrafficClassifier/Projects/unknown_traffic_project/stage15f1a_packet_window_benchmark/runs/T8/ustc/A-2.T8.launcher.log",
+      "protocol_id": "A-2",
+      "window": 8
+    },
+    {
+      "dataset": "ustc",
+      "elapsed_seconds": 1491.6324818134308,
+      "exit_code": 0,
+      "gpu": "0",
+      "log": "/home/birkenwald/data/SEU-WXY/WXY-SEU/TrafficClassifier/Projects/unknown_traffic_project/stage15f1a_packet_window_benchmark/runs/T16/ustc/A-2.T16.launcher.log",
+      "protocol_id": "A-2",
+      "window": 16
+    },
+    {
+      "dataset": "ustc",
+      "elapsed_seconds": 1511.6178934574127,
+      "exit_code": 0,
+      "gpu": "7",
+      "log": "/home/birkenwald/data/SEU-WXY/WXY-SEU/TrafficClassifier/Projects/unknown_traffic_project/stage15f1a_packet_window_benchmark/runs/T32/ustc/A-2.T32.launcher.log",
+      "protocol_id": "A-2",
+      "window": 32
+    }
+  ],
+  "failed": [],
+  "queued": 0
+}

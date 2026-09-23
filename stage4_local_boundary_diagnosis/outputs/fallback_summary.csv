@@ -1,0 +1,4 @@
+setting,total_components,fallback_components,minimum_component_validation_count,fallback_rule,unknown_samples_used
+A-1,38,1,7,validation_count < 30 -> class P05,0
+A-2,34,1,7,validation_count < 30 -> class P05,0
+A-3,30,1,21,validation_count < 30 -> class P05,0

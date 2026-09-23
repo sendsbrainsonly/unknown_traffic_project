@@ -1,0 +1,310 @@
+{
+  "schema_version": 1,
+  "experiment_id": "stage6-cipherspectrum-protocol-freeze-20260913",
+  "created_at_utc": "2026-09-13T04:25:26Z",
+  "updated_at_utc": "2026-09-13T04:45:44Z",
+  "status": "success",
+  "experiment_type": "protocol-freeze",
+  "claim_scope": "diagnostic",
+  "objective": "Freeze the canonical CipherSpectrum 120k corpus and three deterministic strict Unknown-free group-aware open-set protocols without training or Unknown inference.",
+  "inputs": [
+    {
+      "path": "../../cipherspectrum_labeling/outputs/cipherspectrum_official40_manifest.csv",
+      "sha256": "3ec053adcdf3fb39693129bdc53ab45fccd9f5563a1ed47791f01b98267cd5be",
+      "role": "official40 source manifest",
+      "read_only": true
+    },
+    {
+      "path": "../../four_dataset_readiness_audit/outputs/cipherspectrum/mix_provenance_summary.json",
+      "sha256": "e6fef114feeb78334176a4f64a332c115e5acfad6db1755f19040b946f411ce6",
+      "role": "MIX provenance evidence",
+      "read_only": true
+    },
+    {
+      "path": "../../four_dataset_readiness_audit/outputs/cipherspectrum/domain_sni_leakage.csv",
+      "sha256": "cbad31bd5ac886a51757cc90f5110cf623388b21891436b16c460f787ec2d0e5",
+      "role": "pre-protocol input leakage evidence",
+      "read_only": true
+    },
+    {
+      "path": "../../four_dataset_readiness_audit/outputs/cipherspectrum/raw_input_manifest.csv",
+      "sha256": "8a634d2e722b58387acad78d1c5a393c7169a13a87587e1ea8bd1ce6d9a02f2a",
+      "role": "pre-protocol input masking evidence",
+      "read_only": true
+    },
+    {
+      "path": "../../opendetect_ustc_encoder_audit/adapters/opendetect_preprocessing.py",
+      "sha256": "ff58c0c64b12e68d189e0fbd85b620cb9a3ee1edd6706110811bfcf403dfd8e3",
+      "role": "frozen preprocessing implementation",
+      "read_only": true
+    }
+  ],
+  "code": {
+    "revision": "ffcb0dfcaebe3b04b6d3bd42964d5a705303d2cc",
+    "dirty": true,
+    "changes": [
+      "stage6_cipherspectrum_protocol/",
+      "README.md",
+      "EXPERIMENT_RESULTS.md"
+    ]
+  },
+  "execution": {
+    "tmux_session": "stage6_protocol_freeze_20260913",
+    "command": "python -u stage6_cipherspectrum_protocol/scripts/freeze_protocol.py",
+    "exit_code": 0,
+    "verification_session": "stage6_protocol_verify_20260913",
+    "verification_command": "python -u stage6_cipherspectrum_protocol/tests/verify_protocol.py",
+    "verification_exit_code": 0,
+    "environment": "/home/birkenwald/data/SEU-WXY/conda_envs/2025-10-8-WXY-dgl_py310",
+    "physical_gpu_ids": []
+  },
+  "configuration": {
+    "files": [
+      {
+        "path": "../configs/protocol_config.json",
+        "sha256": "adab7f9a251be7900f42eb3286d9f897154f06ebdc0ddb6f3dd4eff48730ad8e"
+      }
+    ],
+    "parameters": {
+      "canonical_sources": [
+        "aes-128-gcm",
+        "aes-256-gcm",
+        "chacha20-poly1305"
+      ],
+      "known_split_ratios": [
+        0.7,
+        0.15,
+        0.15
+      ],
+      "minimum_train_per_class": 500,
+      "minimum_validation_per_class": 100,
+      "minimum_test_per_class": 100,
+      "component_fallback_min_validation_n": 30,
+      "unknown_candidate_rng": "numpy PCG64 over sorted class names"
+    },
+    "seeds": [
+      42,
+      43,
+      44
+    ]
+  },
+  "core_results": [
+    {
+      "setting": "low",
+      "candidate_index": 3,
+      "known_classes": 38,
+      "unknown_classes": 2,
+      "train": 75692,
+      "validation": 16242,
+      "test": 16246,
+      "unknown_test": 6000,
+      "purged_known": 5820,
+      "minimum_validation": 249,
+      "minimum_test": 250
+    },
+    {
+      "setting": "medium",
+      "candidate_index": 15,
+      "known_classes": 34,
+      "unknown_classes": 6,
+      "train": 56641,
+      "validation": 12168,
+      "test": 12162,
+      "unknown_test": 18000,
+      "purged_known": 21029,
+      "minimum_validation": 130,
+      "minimum_test": 130
+    },
+    {
+      "setting": "high",
+      "candidate_index": 15,
+      "known_classes": 30,
+      "unknown_classes": 10,
+      "train": 49976,
+      "validation": 10740,
+      "test": 10746,
+      "unknown_test": 30000,
+      "purged_known": 18538,
+      "minimum_validation": 186,
+      "minimum_test": 186
+    },
+    {
+      "canonical_samples": 120000,
+      "class_count": 40,
+      "split_manifest_rows": 360000,
+      "protocol_hashes_passed": 16,
+      "corpus_hashes_passed": 2,
+      "unknown_inference_executed": false,
+      "final_gate": "READY"
+    }
+  ],
+  "artifacts": [
+    {
+      "path": "audits/calibration_capacity.csv",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 5927,
+      "sha256": "0fba04843ddaab95b0f5da4e4baf8da8d1a166a00afa5656d1b71779fcf89a79",
+      "hash_status": "verified"
+    },
+    {
+      "path": "audits/component_fallback_stress.csv",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 21505,
+      "sha256": "434f37abd93160654b9ff67412224a83f6d0f90c2d74055ca8df4f4f616a99a5",
+      "hash_status": "verified"
+    },
+    {
+      "path": "audits/final_gate.md",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 391,
+      "sha256": "5052ad52e89b56dbc4c689dbe3b9480d0ec49e62a07c27dfab676a8ed8f9ed5e",
+      "hash_status": "verified"
+    },
+    {
+      "path": "audits/fold_selection_audit.csv",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 13723,
+      "sha256": "a8cbfb30e5fe5b9ddd2d805a3a108f2abd8999a218d5ef9d567cbb5f8d37db44",
+      "hash_status": "verified"
+    },
+    {
+      "path": "audits/input_leakage_summary.md",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 550,
+      "sha256": "e5ebdca5d9765a55b58f5ecede1c28f7520c1174fff059f0a4257a69d39c54f1",
+      "hash_status": "verified"
+    },
+    {
+      "path": "audits/mix_exclusion_audit.md",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 526,
+      "sha256": "51a48318c06aab670e466ce7412eb62e324cbfeed90d42fbefd5cfa6302e0db2",
+      "hash_status": "verified"
+    },
+    {
+      "path": "audits/split_integrity_audit.csv",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 276,
+      "sha256": "a6d420cc9e2f6f6f93b4c2855ee3fac67f648b2e10e9e70730bef8cb03128f84",
+      "hash_status": "verified"
+    },
+    {
+      "path": "audits/unknown_free_ledger.md",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 1015,
+      "sha256": "b69907a32375112bbffbfc11e2253485ea4994053276e5757902b9feb37f3919",
+      "hash_status": "verified"
+    },
+    {
+      "path": "corpus/canonical120k.sha256",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 544,
+      "sha256": "084e73f680752f883df6cb00b4d92fc73c40a6e23c449d0145c150076d6ab042",
+      "hash_status": "verified"
+    },
+    {
+      "path": "corpus/canonical120k_manifest.csv",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 72572138,
+      "sha256": "6dbef11e4818de00d70cfaf86187d8d6749db7a16a6eacd9fa0c4cbeef1d5020",
+      "hash_status": "verified"
+    },
+    {
+      "path": "corpus/canonical120k_summary.csv",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 1746,
+      "sha256": "a2c8bc38510eca06ab9a3df87ad1937d35ba6bdf6f8f336b23d5a175b57a531a",
+      "hash_status": "verified"
+    },
+    {
+      "path": "protocol/cipherspectrum_open_set_protocol.json",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 28922,
+      "sha256": "96eba64c7fbc85323604c68c1ece03c4702548c6f1908dae4fd22d7c37f7f666",
+      "hash_status": "verified"
+    },
+    {
+      "path": "protocol/cipherspectrum_open_set_protocol.md",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 2840,
+      "sha256": "2e1f3281435bdc80674e25f23b1abbde87822df0cc9d947bf84ecc352258ed83",
+      "hash_status": "verified"
+    },
+    {
+      "path": "protocol/preprocessing_freeze.json",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 767,
+      "sha256": "1c60de7fecf19cd56a9b20e4f98fd88835976874813f97ad3ff297e669edf8ef",
+      "hash_status": "verified"
+    },
+    {
+      "path": "protocol/protocol_hashes.sha256",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 1569,
+      "sha256": "c3783084f0f9b1242e1c05e263ecb9203f6c017f1b746cd885b99c637fccc290",
+      "hash_status": "verified"
+    },
+    {
+      "path": "protocol/run_metadata.json",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 1069,
+      "sha256": "5bfeb965613bdfde18210ee2b98ea1d43d9703a5f231ffd70834f0c87fa5324c",
+      "hash_status": "verified"
+    },
+    {
+      "path": "splits/high_fold.json",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 6997,
+      "sha256": "12bd599bcb43a4527b869341fdd5efdb7e8664745747516c61d72d335604278e",
+      "hash_status": "verified"
+    },
+    {
+      "path": "splits/low_fold.json",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 7254,
+      "sha256": "dc5fafcca97e55efe5d96aca0cf827db98cef66ba3fa449caf952073efb3cfd7",
+      "hash_status": "verified"
+    },
+    {
+      "path": "splits/medium_fold.json",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 7254,
+      "sha256": "d378b933eed561b509c46a92f98f64941514219284f4ba6843b022fb40b85319",
+      "hash_status": "verified"
+    },
+    {
+      "path": "splits/split_manifest.csv",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 135184624,
+      "sha256": "021e46a5c9aa2d9e44798af450d493aa572601c575fa5ae5ac4eee94054b45b4",
+      "hash_status": "verified"
+    }
+  ],
+  "limitations": [
+    "metadata-only protocol freeze, not an external performance result",
+    "ports remain visible in the frozen representation",
+    "DGSB-v1 is not cleared for external evaluation",
+    "no Unknown inference or model operation was performed"
+  ],
+  "next_step": "Only after explicit authorization, train three independent Known-only encoders without accessing Unknown results during model selection."
+}

@@ -1,0 +1,105 @@
+{
+  "status": "PASS",
+  "training_allowed": true,
+  "mother_counts": {
+    "known_train": 2730,
+    "known_validation": 335
+  },
+  "subset_counts": {
+    "A": 3065,
+    "B": 2101,
+    "C_PARENT": 1551,
+    "C_FINAL": 1551,
+    "D": 1440
+  },
+  "flow_id_sha256": "3ebe32f5fdd72eac04f33439a10608f252ce0391c357959d948e90373f8393ef",
+  "m_a_reuse": {
+    "status": "PASS",
+    "seeds": {
+      "2022": {
+        "classes": true,
+        "train_count": true,
+        "validation_count": true,
+        "train_array_digest": true,
+        "validation_array_digest": true,
+        "prediction_flow_order": true,
+        "checkpoint_sha256": true
+      },
+      "2023": {
+        "classes": true,
+        "train_count": true,
+        "validation_count": true,
+        "train_array_digest": true,
+        "validation_array_digest": true,
+        "prediction_flow_order": true,
+        "checkpoint_sha256": true
+      },
+      "2024": {
+        "classes": true,
+        "train_count": true,
+        "validation_count": true,
+        "train_array_digest": true,
+        "validation_array_digest": true,
+        "prediction_flow_order": true,
+        "checkpoint_sha256": true
+      }
+    }
+  },
+  "trafficformer_parity": {
+    "processing_audit_rows": 17769,
+    "success_parent_rows": 1526,
+    "final_service_manifest_rows": 1526,
+    "status_counts": {
+      "filtered:size_lt_2kb": 16243,
+      "success": 1526
+    },
+    "success_to_final_service_multiset_parity": true,
+    "service_label_counts": {
+      "voip": 473,
+      "file_transfer": 304,
+      "streaming": 275,
+      "p2p": 199,
+      "email": 138,
+      "chat": 137
+    },
+    "final_rule": "All successful parents enter the Service task because every Service has >=10 parents.",
+    "row_identity_limit": "The final manifest omits five-tuples/parent IDs; membership is proven as a multiset, not as a one-to-one native-session row map."
+  },
+  "feasibility": [
+    {
+      "model": "M-B",
+      "subset": "B",
+      "status": "PASS_WITH_LOW_VALIDATION_SUPPORT",
+      "missing_services": [],
+      "empty_service_splits": [],
+      "min_train_support": 61,
+      "min_validation_support": 4,
+      "train_flows": 1864,
+      "validation_flows": 237
+    },
+    {
+      "model": "M-C",
+      "subset": "C_FINAL",
+      "status": "PASS_WITH_LOW_VALIDATION_SUPPORT",
+      "missing_services": [],
+      "empty_service_splits": [],
+      "min_train_support": 44,
+      "min_validation_support": 6,
+      "train_flows": 1367,
+      "validation_flows": 184
+    },
+    {
+      "model": "M-D",
+      "subset": "D",
+      "status": "PASS_WITH_LOW_VALIDATION_SUPPORT",
+      "missing_services": [],
+      "empty_service_splits": [],
+      "min_train_support": 44,
+      "min_validation_support": 4,
+      "train_flows": 1269,
+      "validation_flows": 171
+    }
+  ],
+  "known_test_feature_values_used": 0,
+  "unknown_test_feature_values_used": 0
+}

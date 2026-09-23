@@ -1,0 +1,46 @@
+{
+  "stage13a1_root": "/home/birkenwald/data/SEU-WXY/WXY-SEU/TrafficClassifier/Projects/unknown_traffic_project/stage13a1_knn_local_support",
+  "scenarios": ["a1", "a2", "a3"],
+  "seeds": [2022, 2023, 2024, 2025, 2026],
+  "methods": ["CENTROID", "KNN_10", "GL_FUSION"],
+  "normalization": {
+    "fit_split": "Known Validation only",
+    "location": "median",
+    "scale": "unscaled median absolute deviation",
+    "eps": 1e-12
+  },
+  "fusion": {
+    "centroid_weight": 0.5,
+    "knn10_weight": 0.5,
+    "weight_search": false
+  },
+  "threshold": {
+    "fit_split": "Known Validation only",
+    "quantile": 0.95,
+    "numpy_method": "higher"
+  },
+  "evaluation": {
+    "eval_seed": 2021,
+    "balanced_known_unknown": "1:1",
+    "primary_comparison": "GL_FUSION-CENTROID"
+  },
+  "gate": {
+    "a1_min_delta_auroc_exclusive": -0.005,
+    "a2_min_delta_auroc_inclusive": 0.02,
+    "a3_min_delta_auroc_exclusive": -0.005,
+    "min_positive_seed_count": 10,
+    "max_mean_delta_known_frr": 0.02,
+    "a2_requires_lower_ufar": true
+  },
+  "conditional_gate": {
+    "a1_min_delta_auroc_exclusive": -0.02,
+    "a2_min_delta_auroc_exclusive": 0.0,
+    "a3_min_delta_auroc_exclusive": -0.02,
+    "min_positive_seed_count": 8,
+    "max_mean_delta_known_frr": 0.02,
+    "a2_requires_lower_ufar": true
+  },
+  "claim_scope": "DEVELOPMENT_RESULT",
+  "external_validation_label": "NOT_INDEPENDENT_EXTERNAL_VALIDATION"
+}
+

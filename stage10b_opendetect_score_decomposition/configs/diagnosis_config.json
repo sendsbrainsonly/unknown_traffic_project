@@ -1,0 +1,54 @@
+{
+  "analysis_scope": "POST_HOC_DIAGNOSTIC_ONLY",
+  "bootstrap": {
+    "iterations": 1000,
+    "seed": 0,
+    "stratification": "paired class-stratified resampling within Known and Unknown roles"
+  },
+  "expected_stage9_auroc": {
+    "high": {
+      "S0": 0.47213310381952883,
+      "S5": 0.8044775807908611,
+      "S6": 0.8212500512342444
+    },
+    "low": {
+      "S0": 0.5008302761729194,
+      "S5": 0.8800054372177606,
+      "S6": 0.8924803028110049
+    },
+    "medium": {
+      "S0": 0.49796968235333294,
+      "S5": 0.7797532547441428,
+      "S6": 0.795385398989257
+    }
+  },
+  "interpretation_only": {
+    "dominance_ratio": 1.5,
+    "material_auroc_delta": 0.02,
+    "representation_auroc_floor": 0.7,
+    "weak_known_macro_f1_floor": 0.6
+  },
+  "numerical_gates": {
+    "mu_alignment_atol": 5e-05,
+    "mu_alignment_mean_abs_max": 1e-06,
+    "native_identity_atol": 0.002,
+    "native_identity_rtol": 5e-05,
+    "stage9_auroc_atol": 5e-10
+  },
+  "score_chain": {
+    "S0": "Native KL: D_proto + V_post",
+    "S1": "Learned prototype mean-only: 0.5 * minimum squared raw-mu distance",
+    "S2": "Empirical Known-Train centroid in raw mu-128",
+    "S3": "Empirical Known-Train centroid after frozen StandardScaler",
+    "S4": "Empirical Known-Train centroid in frozen PCA64",
+    "S5": "Negative maximum frozen Single-Full-K1 class log likelihood",
+    "S6": "Negative maximum frozen Multi-Global-K2 class log likelihood"
+  },
+  "score_orientation": "higher_is_more_unknown",
+  "settings": [
+    "low",
+    "medium",
+    "high"
+  ],
+  "test_positive_class": "Unknown"
+}

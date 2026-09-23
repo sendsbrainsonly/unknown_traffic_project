@@ -1,0 +1,16 @@
+{
+  "status": "PASS",
+  "formal_frozen_runs": 15,
+  "unique_checkpoint_hashes": 15,
+  "detector_rows": 60,
+  "class_rows": 255,
+  "absorption_rows": 2900,
+  "bootstrap_rows": 36,
+  "new_encoder_training": false,
+  "cipherspectrum_stage9_sample_level_test_used": false,
+  "frozen_experiment_modified": false,
+  "next_stage_started": false,
+  "final_gate": "NO_GO",
+  "mechanism": "D5",
+  "failures": []
+}

@@ -1,0 +1,29 @@
+{
+  "status": "PASS",
+  "checks": {
+    "required_outputs": true,
+    "mother_3065_unique": true,
+    "mother_split_2730_335": true,
+    "subset_counts": true,
+    "c_parent_final_identical": true,
+    "all_six_services_each_split": true,
+    "nine_new_runs_success": true,
+    "nine_checkpoint_hashes": true,
+    "twelve_model_seed_rows": true,
+    "test_usage_zero": true,
+    "protected_hashes_unchanged": true,
+    "persistent_weak_label_limit": true,
+    "persistent_capture_limit": true,
+    "no_future_stage_outputs": true
+  },
+  "new_training_runs": 9,
+  "reused_m_a_runs": 3,
+  "known_test_feature_values_used": 0,
+  "unknown_test_feature_values_used": 0,
+  "dq5_to_dq7": "NOT_RUN",
+  "trafficformer_training": "NOT_RUN",
+  "tfe_gnn_training": "NOT_RUN",
+  "byte_behavior": "NOT_RUN",
+  "open_set": "NOT_RUN",
+  "des_h1_modified": false
+}

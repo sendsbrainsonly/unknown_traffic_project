@@ -1,0 +1,448 @@
+{
+  "bundle_hashes_status": "PASS",
+  "evaluation_config_frozen": true,
+  "evaluation_config_path": "/home/birkenwald/data/SEU-WXY/WXY-SEU/TrafficClassifier/Projects/unknown_traffic_project/stage8a_cipherspectrum_known_density/configs/evaluation_config.json",
+  "final_gate": "READY_FOR_FINAL_TEST",
+  "known_test_mu_generated": false,
+  "known_test_opened": 0,
+  "readme_status": "UPDATED",
+  "settings": [
+    {
+      "all_zero_dimensions": {
+        "train": 0,
+        "validation": 0
+      },
+      "bundle_files_verified": 107,
+      "bundle_status": "FROZEN",
+      "class_p05_validation_acceptance": 0.9684152198005171,
+      "classes_K2_validation_NLL_better": 37,
+      "collapse_detected": false,
+      "component_fallback_rate": 0.02631578947368421,
+      "component_p05_validation_acceptance": 0.971924639822682,
+      "component_val_n_lt_30": 2,
+      "duplicate_rows": {
+        "train": 0,
+        "validation": 0
+      },
+      "evaluation_config_frozen": true,
+      "hardest_five_known_validation_classes_by_f1": [
+        {
+          "accuracy": 0.35167464114832536,
+          "class_name": "trustarc.com",
+          "f1": 0.4206008583690987,
+          "local_class_id": 28,
+          "precision": 0.5231316725978647,
+          "recall": 0.35167464114832536,
+          "setting": "low",
+          "support": 418
+        },
+        {
+          "accuracy": 0.5529715762273901,
+          "class_name": "doubleclick.net",
+          "f1": 0.42209072978303747,
+          "local_class_id": 5,
+          "precision": 0.3413078149920255,
+          "recall": 0.5529715762273901,
+          "setting": "low",
+          "support": 387
+        },
+        {
+          "accuracy": 0.3624161073825503,
+          "class_name": "flipboard.com",
+          "f1": 0.46418338108882523,
+          "local_class_id": 6,
+          "precision": 0.6454183266932271,
+          "recall": 0.3624161073825503,
+          "setting": "low",
+          "support": 447
+        },
+        {
+          "accuracy": 0.6333333333333333,
+          "class_name": "hotjar.com",
+          "f1": 0.57,
+          "local_class_id": 14,
+          "precision": 0.5181818181818182,
+          "recall": 0.6333333333333333,
+          "setting": "low",
+          "support": 450
+        },
+        {
+          "accuracy": 0.5033407572383074,
+          "class_name": "gmx.net",
+          "f1": 0.5794871794871795,
+          "local_class_id": 8,
+          "precision": 0.6827794561933535,
+          "recall": 0.5033407572383074,
+          "setting": "low",
+          "support": 449
+        }
+      ],
+      "inf_count": 0,
+      "k1_all_converged": true,
+      "k2_all_converged": true,
+      "known_test_mu_generated": false,
+      "known_test_opened": 0,
+      "mean_DeltaNLL2": 18.240957556586515,
+      "median_DeltaNLL2": 17.130226135253906,
+      "minimum_k2_component_weight": 0.06724045425653458,
+      "mu_train_shape": [
+        75692,
+        128
+      ],
+      "mu_val_shape": [
+        16242,
+        128
+      ],
+      "multi_global_threshold": -72.2807846069336,
+      "nan_count": 0,
+      "native_validation_threshold": -36.656842422485354,
+      "near_zero_variance_dimensions": {
+        "train": 0,
+        "validation": 0
+      },
+      "pca64_explained_variance": 0.9182830819042038,
+      "per_class_coverage_ranges": {
+        "Class-P05-K2": [
+          0.9509043927648578,
+          0.9955257270693513
+        ],
+        "Component-P05-K2": [
+          0.949874686716792,
+          0.9977628635346756
+        ],
+        "Multi-Global-K2": [
+          0.8711111111111111,
+          1.0
+        ],
+        "Native": [
+          0.75,
+          1.0
+        ],
+        "Single-Full-K1": [
+          0.8777777777777778,
+          1.0
+        ]
+      },
+      "per_component_coverage_gaps": {
+        "Class-P05-K2": {
+          "max": 0.17350813743218807,
+          "mean": 0.03800792424266802
+        },
+        "Component-P05-K2": {
+          "max": 0.052219321148825104,
+          "mean": 0.019874081514670894
+        },
+        "Multi-Global-K2": {
+          "max": 0.22783702053159316,
+          "mean": 0.0534513271104958
+        },
+        "Native": {
+          "max": 0.6428571428571428,
+          "mean": 0.08191534646759824
+        },
+        "Single-Full-K1": {
+          "max": 0.4107142857142857,
+          "mean": 0.06417169489116391
+        }
+      },
+      "setting": "low",
+      "single_global_threshold": -83.87157440185547,
+      "unknown_inference_executed": false,
+      "unknown_mu_generated": false,
+      "unknown_test_opened": 0
+    },
+    {
+      "all_zero_dimensions": {
+        "train": 0,
+        "validation": 0
+      },
+      "bundle_files_verified": 99,
+      "bundle_status": "FROZEN",
+      "class_p05_validation_acceptance": 0.974112426035503,
+      "classes_K2_validation_NLL_better": 34,
+      "collapse_detected": false,
+      "component_fallback_rate": 0.029411764705882353,
+      "component_p05_validation_acceptance": 0.9760848126232742,
+      "component_val_n_lt_30": 2,
+      "duplicate_rows": {
+        "train": 0,
+        "validation": 0
+      },
+      "evaluation_config_frozen": true,
+      "hardest_five_known_validation_classes_by_f1": [
+        {
+          "accuracy": 0.17231638418079095,
+          "class_name": "logitech.com",
+          "f1": 0.25738396624472576,
+          "local_class_id": 18,
+          "precision": 0.5083333333333333,
+          "recall": 0.17231638418079095,
+          "setting": "medium",
+          "support": 354
+        },
+        {
+          "accuracy": 0.34057971014492755,
+          "class_name": "flipboard.com",
+          "f1": 0.3657587548638132,
+          "local_class_id": 6,
+          "precision": 0.3949579831932773,
+          "recall": 0.34057971014492755,
+          "setting": "medium",
+          "support": 276
+        },
+        {
+          "accuracy": 0.37371134020618557,
+          "class_name": "trustarc.com",
+          "f1": 0.4496124031007752,
+          "local_class_id": 25,
+          "precision": 0.5642023346303502,
+          "recall": 0.37371134020618557,
+          "setting": "medium",
+          "support": 388
+        },
+        {
+          "accuracy": 0.5311203319502075,
+          "class_name": "googleapis.com",
+          "f1": 0.4830188679245283,
+          "local_class_id": 11,
+          "precision": 0.4429065743944637,
+          "recall": 0.5311203319502075,
+          "setting": "medium",
+          "support": 241
+        },
+        {
+          "accuracy": 0.38461538461538464,
+          "class_name": "wistia.com",
+          "f1": 0.502092050209205,
+          "local_class_id": 30,
+          "precision": 0.7228915662650602,
+          "recall": 0.38461538461538464,
+          "setting": "medium",
+          "support": 156
+        }
+      ],
+      "inf_count": 0,
+      "k1_all_converged": true,
+      "k2_all_converged": true,
+      "known_test_mu_generated": false,
+      "known_test_opened": 0,
+      "mean_DeltaNLL2": 17.787340795292575,
+      "median_DeltaNLL2": 17.094158053398132,
+      "minimum_k2_component_weight": 0.07072368264198303,
+      "mu_train_shape": [
+        56641,
+        128
+      ],
+      "mu_val_shape": [
+        12168,
+        128
+      ],
+      "multi_global_threshold": -65.26948547363281,
+      "nan_count": 0,
+      "native_validation_threshold": -39.68401126861572,
+      "near_zero_variance_dimensions": {
+        "train": 0,
+        "validation": 0
+      },
+      "pca64_explained_variance": 0.9663168787956238,
+      "per_class_coverage_ranges": {
+        "Class-P05-K2": [
+          0.9493975903614458,
+          1.0
+        ],
+        "Component-P05-K2": [
+          0.9493975903614458,
+          1.0
+        ],
+        "Multi-Global-K2": [
+          0.8531073446327684,
+          1.0
+        ],
+        "Native": [
+          0.7594654788418709,
+          1.0
+        ],
+        "Single-Full-K1": [
+          0.8757062146892656,
+          1.0
+        ]
+      },
+      "per_component_coverage_gaps": {
+        "Class-P05-K2": {
+          "max": 0.1304609428137916,
+          "mean": 0.028107706971814608
+        },
+        "Component-P05-K2": {
+          "max": 0.05217391304347829,
+          "mean": 0.01920368564287238
+        },
+        "Multi-Global-K2": {
+          "max": 0.17879041248606464,
+          "mean": 0.04657168508791057
+        },
+        "Native": {
+          "max": 0.5957700601000138,
+          "mean": 0.0811278020685094
+        },
+        "Single-Full-K1": {
+          "max": 0.23430837455227693,
+          "mean": 0.05863700962505519
+        }
+      },
+      "setting": "medium",
+      "single_global_threshold": -75.09012603759766,
+      "unknown_inference_executed": false,
+      "unknown_mu_generated": false,
+      "unknown_test_opened": 0
+    },
+    {
+      "all_zero_dimensions": {
+        "train": 0,
+        "validation": 0
+      },
+      "bundle_files_verified": 91,
+      "bundle_status": "FROZEN",
+      "class_p05_validation_acceptance": 0.9672253258845438,
+      "classes_K2_validation_NLL_better": 30,
+      "collapse_detected": false,
+      "component_fallback_rate": 0.06666666666666667,
+      "component_p05_validation_acceptance": 0.9686219739292365,
+      "component_val_n_lt_30": 4,
+      "duplicate_rows": {
+        "train": 0,
+        "validation": 0
+      },
+      "evaluation_config_frozen": true,
+      "hardest_five_known_validation_classes_by_f1": [
+        {
+          "accuracy": 0.1701492537313433,
+          "class_name": "logitech.com",
+          "f1": 0.2676056338028169,
+          "local_class_id": 17,
+          "precision": 0.6263736263736264,
+          "recall": 0.1701492537313433,
+          "setting": "high",
+          "support": 335
+        },
+        {
+          "accuracy": 0.20810810810810812,
+          "class_name": "trustarc.com",
+          "f1": 0.29672447013487474,
+          "local_class_id": 23,
+          "precision": 0.5167785234899329,
+          "recall": 0.20810810810810812,
+          "setting": "high",
+          "support": 370
+        },
+        {
+          "accuracy": 0.4017094017094017,
+          "class_name": "hotjar.com",
+          "f1": 0.43653250773993807,
+          "local_class_id": 12,
+          "precision": 0.47796610169491527,
+          "recall": 0.4017094017094017,
+          "setting": "high",
+          "support": 351
+        },
+        {
+          "accuracy": 0.5860805860805861,
+          "class_name": "flipboard.com",
+          "f1": 0.47619047619047616,
+          "local_class_id": 5,
+          "precision": 0.40100250626566414,
+          "recall": 0.5860805860805861,
+          "setting": "high",
+          "support": 273
+        },
+        {
+          "accuracy": 0.47297297297297297,
+          "class_name": "googleapis.com",
+          "f1": 0.49065420560747663,
+          "local_class_id": 9,
+          "precision": 0.5097087378640777,
+          "recall": 0.47297297297297297,
+          "setting": "high",
+          "support": 222
+        }
+      ],
+      "inf_count": 0,
+      "k1_all_converged": true,
+      "k2_all_converged": true,
+      "known_test_mu_generated": false,
+      "known_test_opened": 0,
+      "mean_DeltaNLL2": 17.97859127918879,
+      "median_DeltaNLL2": 17.007143080234528,
+      "minimum_k2_component_weight": 0.06574394553899765,
+      "mu_train_shape": [
+        49976,
+        128
+      ],
+      "mu_val_shape": [
+        10740,
+        128
+      ],
+      "multi_global_threshold": -55.82355880737305,
+      "nan_count": 0,
+      "native_validation_threshold": -38.05300025939941,
+      "near_zero_variance_dimensions": {
+        "train": 0,
+        "validation": 0
+      },
+      "pca64_explained_variance": 0.973541259765625,
+      "per_class_coverage_ranges": {
+        "Class-P05-K2": [
+          0.9497816593886463,
+          0.9886039886039886
+        ],
+        "Component-P05-K2": [
+          0.9472295514511874,
+          0.9943019943019943
+        ],
+        "Multi-Global-K2": [
+          0.8925373134328358,
+          0.9950738916256158
+        ],
+        "Native": [
+          0.645320197044335,
+          1.0
+        ],
+        "Single-Full-K1": [
+          0.8895522388059701,
+          0.9950738916256158
+        ]
+      },
+      "per_component_coverage_gaps": {
+        "Class-P05-K2": {
+          "max": 0.18823529411764706,
+          "mean": 0.03887874218911375
+        },
+        "Component-P05-K2": {
+          "max": 0.1858823529411764,
+          "mean": 0.024946083181293096
+        },
+        "Multi-Global-K2": {
+          "max": 0.251764705882353,
+          "mean": 0.06143465644085478
+        },
+        "Native": {
+          "max": 0.7576470588235295,
+          "mean": 0.09360502941145994
+        },
+        "Single-Full-K1": {
+          "max": 0.42117647058823526,
+          "mean": 0.08293430103473715
+        }
+      },
+      "setting": "high",
+      "single_global_threshold": -70.98883819580078,
+      "unknown_inference_executed": false,
+      "unknown_mu_generated": false,
+      "unknown_test_opened": 0
+    }
+  ],
+  "stage6_protocol_hash_status": "PASS",
+  "stage7_checkpoint_hash_status": "PASS",
+  "unknown_inference_executed": false,
+  "unknown_mu_generated": false,
+  "unknown_test_opened": 0
+}

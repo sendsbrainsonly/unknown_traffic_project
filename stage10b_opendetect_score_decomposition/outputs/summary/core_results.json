@@ -1,0 +1,352 @@
+{
+  "analysis_scope": "POST_HOC_DIAGNOSTIC_ONLY",
+  "mechanism": {
+    "analysis_scope": "POST_HOC_DIAGNOSTIC_ONLY",
+    "dominance_ratio": 1.5,
+    "interpretation": "M2 dominates because S2-S1 is the largest mean improvement and exceeds the configured dominance ratio over M5; M5 remains substantial secondary evidence.",
+    "material_delta_floor": 0.02,
+    "mean_auroc_deltas": {
+      "K2_delta": 0.014959826759102268,
+      "covariance_delta": 0.14395069556699439,
+      "empirical_centroid_delta": 0.2822937309019528,
+      "pca_delta": -0.005998234316619733,
+      "remove_variance_delta": -0.08244436992667357,
+      "scaler_delta": -0.006700752119739267
+    },
+    "primary": "M2 \u2014 LEARNED_PROTOTYPE_MISMATCH",
+    "recommended_next_branch": "Branch P",
+    "secondary": [
+      "M5 \u2014 COVARIANCE_MISMATCH"
+    ],
+    "threshold_use": "interpretation-only after fixed diagnostics; not a detector threshold or hyperparameter selection"
+  },
+  "settings": {
+    "high": {
+      "V_post_AUROC": 0.6154536711334451,
+      "deltas": {
+        "S1-S0": -0.0927572523109374,
+        "S2-S1": 0.3075091227743656,
+        "S3-S2": 0.0090845306780816,
+        "S4-S3": -0.0087804888640733,
+        "S5-S4": 0.1172885647372665,
+        "S6-S5": 0.0167724703765741
+      },
+      "known_geometry_macro_f1": {
+        "EmpiricalCentroidPCA64": 0.7398216014009239,
+        "EmpiricalCentroidRaw": 0.7424092642963278,
+        "EmpiricalCentroidScaled": 0.7401565989528208,
+        "FullK1": 0.7640469419510129,
+        "FullK2": 0.768270285446608,
+        "LearnedPrototype": 0.7212872982625582
+      },
+      "known_median_V_post": 9.039631843566896,
+      "native_identity": {
+        "max_abs_error": 1.1444091796875e-05,
+        "mean_abs_error": 1.4237868255141884e-06,
+        "p99_abs_error": 5.7220458984375e-06,
+        "status": "PASS"
+      },
+      "normalized_gap": {
+        "max": 5.189286164960264,
+        "mean": 1.480265565795469,
+        "median": 1.2472571772066736
+      },
+      "prototype_gap_vs_absorption_spearman": -0.2413793103448276,
+      "scores": {
+        "S0": {
+          "AUPRC": 0.6957442447086553,
+          "AUROC": 0.4721331037905577
+        },
+        "S1": {
+          "AUPRC": 0.6595423705656891,
+          "AUROC": 0.3793758514796203
+        },
+        "S2": {
+          "AUPRC": 0.8312458362210285,
+          "AUROC": 0.686884974253986
+        },
+        "S3": {
+          "AUPRC": 0.8316642099584483,
+          "AUROC": 0.6959695049320677
+        },
+        "S4": {
+          "AUPRC": 0.8260257803881872,
+          "AUROC": 0.6871890160679943
+        },
+        "S5": {
+          "AUPRC": 0.9238748404147686,
+          "AUROC": 0.8044775808052609
+        },
+        "S6": {
+          "AUPRC": 0.9297080673356424,
+          "AUROC": 0.821250051181835
+        }
+      },
+      "top_unknown_S5": [
+        {
+          "AUROC": 0.949793566598424,
+          "delta_AUROC_vs_S0": 0.6167839971462248,
+          "unknown_class": "onetrust.com"
+        },
+        {
+          "AUROC": 0.9032660990135865,
+          "delta_AUROC_vs_S0": 0.5740695452571499,
+          "unknown_class": "cookielaw.org"
+        },
+        {
+          "AUROC": 0.8537217569328122,
+          "delta_AUROC_vs_S0": 0.482826431540418,
+          "unknown_class": "naver.com"
+        }
+      ],
+      "top_unknown_S6": [
+        {
+          "AUROC": 0.954036199516099,
+          "delta_AUROC_vs_S0": 0.6210266300638997,
+          "unknown_class": "onetrust.com"
+        },
+        {
+          "AUROC": 0.9098763260748186,
+          "delta_AUROC_vs_S0": 0.5806797723183821,
+          "unknown_class": "cookielaw.org"
+        },
+        {
+          "AUROC": 0.8759249488181649,
+          "delta_AUROC_vs_S0": 0.5050296234257707,
+          "unknown_class": "naver.com"
+        }
+      ],
+      "unknown_median_V_post": 11.086539268493652,
+      "variance_verdict": "VARIANCE_TERM_HELPS_RANKING"
+    },
+    "low": {
+      "V_post_AUROC": 0.5633372573761746,
+      "deltas": {
+        "S1-S0": -0.0692329291312733,
+        "S2-S1": 0.2855350342648446,
+        "S3-S2": -0.0465835282531083,
+        "S4-S3": 0.0003521995157781,
+        "S5-S4": 0.2091043846690466,
+        "S6-S5": 0.0124748656079446
+      },
+      "known_geometry_macro_f1": {
+        "EmpiricalCentroidPCA64": 0.7701377760559178,
+        "EmpiricalCentroidRaw": 0.7815331199583782,
+        "EmpiricalCentroidScaled": 0.7720459840530488,
+        "FullK1": 0.811082686620669,
+        "FullK2": 0.8107131980883413,
+        "LearnedPrototype": 0.768938234613032
+      },
+      "known_median_V_post": 9.2661714553833,
+      "native_identity": {
+        "max_abs_error": 9.5367431640625e-06,
+        "mean_abs_error": 1.5040031495866379e-06,
+        "p99_abs_error": 5.7220458984375e-06,
+        "status": "PASS"
+      },
+      "normalized_gap": {
+        "max": 4.02891203381054,
+        "mean": 1.4071297030397993,
+        "median": 1.3426723259887328
+      },
+      "prototype_gap_vs_absorption_spearman": -0.4649132896292589,
+      "scores": {
+        "S0": {
+          "AUPRC": 0.277507971101614,
+          "AUROC": 0.5008302761705445
+        },
+        "S1": {
+          "AUPRC": 0.2840803069604299,
+          "AUROC": 0.4315973470392712
+        },
+        "S2": {
+          "AUPRC": 0.5126248378136955,
+          "AUROC": 0.7171323813041158
+        },
+        "S3": {
+          "AUPRC": 0.4791128668993923,
+          "AUROC": 0.6705488530510075
+        },
+        "S4": {
+          "AUPRC": 0.4743923086776944,
+          "AUROC": 0.6709010525667857
+        },
+        "S5": {
+          "AUPRC": 0.7617236613609301,
+          "AUROC": 0.8800054372358324
+        },
+        "S6": {
+          "AUPRC": 0.8073105966776821,
+          "AUROC": 0.892480302843777
+        }
+      },
+      "top_unknown_S5": [
+        {
+          "AUROC": 0.8603004842217571,
+          "delta_AUROC_vs_S0": 0.5007708871927448,
+          "unknown_class": "segment.com"
+        },
+        {
+          "AUROC": 0.8997103902499075,
+          "delta_AUROC_vs_S0": 0.2575794349378306,
+          "unknown_class": "coinbase.com"
+        }
+      ],
+      "top_unknown_S6": [
+        {
+          "AUROC": 0.892479533423612,
+          "delta_AUROC_vs_S0": 0.5329499363945998,
+          "unknown_class": "segment.com"
+        },
+        {
+          "AUROC": 0.8924810722639418,
+          "delta_AUROC_vs_S0": 0.2503501169518649,
+          "unknown_class": "coinbase.com"
+        }
+      ],
+      "unknown_median_V_post": 10.276073932647703,
+      "variance_verdict": "VARIANCE_TERM_HELPS_RANKING"
+    },
+    "medium": {
+      "V_post_AUROC": 0.5956595771894242,
+      "deltas": {
+        "S1-S0": -0.08534292833781,
+        "S2-S1": 0.2538370356666483,
+        "S3-S2": 0.0173967412158089,
+        "S4-S3": -0.009566413601564,
+        "S5-S4": 0.10545913729467,
+        "S6-S5": 0.0156321442927881
+      },
+      "known_geometry_macro_f1": {
+        "EmpiricalCentroidPCA64": 0.729526562129181,
+        "EmpiricalCentroidRaw": 0.7313423131894122,
+        "EmpiricalCentroidScaled": 0.7301907219997404,
+        "FullK1": 0.7608698994940525,
+        "FullK2": 0.7676065417202792,
+        "LearnedPrototype": 0.7100805832430823
+      },
+      "known_median_V_post": 9.08691120147705,
+      "native_identity": {
+        "max_abs_error": 1.1920928955078125e-05,
+        "mean_abs_error": 1.5818727292319554e-06,
+        "p99_abs_error": 5.7220458984375e-06,
+        "status": "PASS"
+      },
+      "normalized_gap": {
+        "max": 3.901726448153107,
+        "mean": 1.3889718266812079,
+        "median": 1.2364621837907213
+      },
+      "prototype_gap_vs_absorption_spearman": 0.1257544506687922,
+      "scores": {
+        "S0": {
+          "AUPRC": 0.5857911548448939,
+          "AUROC": 0.497969682435272
+        },
+        "S1": {
+          "AUPRC": 0.5234741689219887,
+          "AUROC": 0.412626754097462
+        },
+        "S2": {
+          "AUPRC": 0.6976986974671378,
+          "AUROC": 0.6664637897641104
+        },
+        "S3": {
+          "AUPRC": 0.7103308855644583,
+          "AUROC": 0.6838605309799193
+        },
+        "S4": {
+          "AUPRC": 0.7012145973245159,
+          "AUROC": 0.6742941173783552
+        },
+        "S5": {
+          "AUPRC": 0.8572641079025294,
+          "AUROC": 0.7797532546730253
+        },
+        "S6": {
+          "AUPRC": 0.8697465087388713,
+          "AUROC": 0.7953853989658134
+        }
+      },
+      "top_unknown_S5": [
+        {
+          "AUROC": 0.8825030970783314,
+          "delta_AUROC_vs_S0": 0.4752029956695718,
+          "unknown_class": "ubuntu.com"
+        },
+        {
+          "AUROC": 0.8676087814504193,
+          "delta_AUROC_vs_S0": 0.4626412870690127,
+          "unknown_class": "naver.com"
+        },
+        {
+          "AUROC": 0.9403647426410128,
+          "delta_AUROC_vs_S0": 0.4588295373567942,
+          "unknown_class": "onetrust.com"
+        }
+      ],
+      "top_unknown_S6": [
+        {
+          "AUROC": 0.8923739516526887,
+          "delta_AUROC_vs_S0": 0.4874064572712822,
+          "unknown_class": "naver.com"
+        },
+        {
+          "AUROC": 0.8888559721537028,
+          "delta_AUROC_vs_S0": 0.4815558707449432,
+          "unknown_class": "ubuntu.com"
+        },
+        {
+          "AUROC": 0.960107274022913,
+          "delta_AUROC_vs_S0": 0.4785720687386943,
+          "unknown_class": "onetrust.com"
+        }
+      ],
+      "unknown_median_V_post": 11.430264472961426,
+      "variance_verdict": "VARIANCE_TERM_HELPS_RANKING"
+    }
+  },
+  "stage7_prototype_reset": {
+    "analysis_scope": "POST_HOC_DIAGNOSTIC_ONLY",
+    "optimizer_tracking_after_replacement": "old Parameter remains in optimizer; replacement Parameter is not re-registered",
+    "reset_helper_source": "/home/birkenwald/data/SEU-WXY/WXY-SEU/TrafficClassifier/Projects/unknown_traffic_project/opendetect_ustc_encoder_audit/scripts/train_opendetect.py",
+    "reset_helper_source_sha256": "ea09f228256bbb447328a4e57b64e65a32028e0ead1d3d57df29c531449f2e92",
+    "risk_realized_in_frozen_runs": false,
+    "scheduled_logged_epochs": [
+      51,
+      81
+    ],
+    "scheduled_zero_based_epoch_indices": [
+      50,
+      80
+    ],
+    "setting_rows": [
+      {
+        "best_epoch": 26,
+        "epochs_recorded": 31,
+        "prototype_reset_executions": 0,
+        "setting": "low",
+        "stop_epoch": 31
+      },
+      {
+        "best_epoch": 22,
+        "epochs_recorded": 27,
+        "prototype_reset_executions": 0,
+        "setting": "medium",
+        "stop_epoch": 27
+      },
+      {
+        "best_epoch": 22,
+        "epochs_recorded": 27,
+        "prototype_reset_executions": 0,
+        "setting": "high",
+        "stop_epoch": 27
+      }
+    ],
+    "stage7_reuses_corrected_ustc_helper": true,
+    "status": "PROTOTYPE_OPTIMIZER_RISK",
+    "train_source": "/home/birkenwald/data/SEU-WXY/WXY-SEU/TrafficClassifier/Projects/unknown_traffic_project/stage3_unknown_utility/scripts/train_known_only.py",
+    "train_source_sha256": "5e22b0d5804b227e7e58ba4a69ee71f41c4a8c1061ceff15308783d6863e28c8",
+    "update_semantics": "Parameter replacement"
+  }
+}

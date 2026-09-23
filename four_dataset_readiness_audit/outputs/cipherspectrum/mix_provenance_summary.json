@@ -1,0 +1,11 @@
+{
+  "mix_status": "PARTIALLY_OVERLAPPING",
+  "mix_pcap_count": 40200,
+  "exact_duplicate_mix_count": 0,
+  "normalized_fingerprint_overlap_mix_count": 0,
+  "mix_unique_split_groups": 18260,
+  "shared_split_groups_with_canonical": 16596,
+  "shared_split_group_rate": 0.9088718510405257,
+  "canonical_primary_candidate_pcap_count": 120000,
+  "recommend_exclude_mix_from_primary": true
+}

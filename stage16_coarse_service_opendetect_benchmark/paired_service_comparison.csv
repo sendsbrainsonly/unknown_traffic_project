@@ -1,0 +1,4 @@
+seed,ours_actual_identity,opendetect_status,delta_accuracy,delta_macro_f1,delta_weighted_f1,status
+2022,CorrectedOpenDetectNet_DQ3F,NOT_RUN_IDENTITY_GATE,,,,NOT_IDENTIFIABLE
+2023,CorrectedOpenDetectNet_DQ3F,NOT_RUN_IDENTITY_GATE,,,,NOT_IDENTIFIABLE
+2024,CorrectedOpenDetectNet_DQ3F,NOT_RUN_IDENTITY_GATE,,,,NOT_IDENTIFIABLE

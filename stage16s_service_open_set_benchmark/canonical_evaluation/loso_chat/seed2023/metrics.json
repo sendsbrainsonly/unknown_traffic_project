@@ -1,0 +1,88 @@
+{
+  "known_services": [
+    "Email",
+    "File-Transfer",
+    "P2P",
+    "Streaming",
+    "VoIP"
+  ],
+  "known_test_closed": {
+    "accuracy": 0.49375,
+    "macro_f1": 0.3773087706991244,
+    "weighted_f1": 0.45142114017563617
+  },
+  "known_validation_closed": {
+    "accuracy": 0.5443037974683544,
+    "macro_f1": 0.39926147387475863,
+    "weighted_f1": 0.4979475194630515
+  },
+  "methods": {
+    "DES-v0": {
+      "auprc": 0.5150334774378797,
+      "auroc": 0.5606543624161074,
+      "known_closed_accuracy": 0.49375,
+      "known_closed_macro_f1": 0.3773087706991244,
+      "known_closed_weighted_f1": 0.45142114017563617,
+      "known_frr": 0.0375,
+      "known_test_samples": 160,
+      "open_macro_f1": 0.21477372332889064,
+      "open_weighted_f1": 0.19358914976046362,
+      "threshold": 12.07793784474713,
+      "ufar": 0.959731543624161,
+      "unknown_prevalence": 0.48220064724919093,
+      "unknown_test_samples": 149,
+      "validation_frr": 0.05063291139240506
+    },
+    "DES-v1": {
+      "auprc": 0.5309391453923745,
+      "auroc": 0.5950922818791946,
+      "known_closed_accuracy": 0.49375,
+      "known_closed_macro_f1": 0.3773087706991244,
+      "known_closed_weighted_f1": 0.45142114017563617,
+      "known_frr": 0.0375,
+      "known_test_samples": 160,
+      "open_macro_f1": 0.21477372332889064,
+      "open_weighted_f1": 0.19358914976046362,
+      "threshold": 25.969670118260524,
+      "ufar": 0.959731543624161,
+      "unknown_prevalence": 0.48220064724919093,
+      "unknown_test_samples": 149,
+      "validation_frr": 0.05063291139240506
+    },
+    "H1": {
+      "auprc": 0.5504019406425029,
+      "auroc": 0.6479656040268456,
+      "known_closed_accuracy": 0.49375,
+      "known_closed_macro_f1": 0.3773087706991244,
+      "known_closed_weighted_f1": 0.45142114017563617,
+      "known_frr": 0.03125,
+      "known_test_samples": 160,
+      "open_macro_f1": 0.2141130832723962,
+      "open_weighted_f1": 0.1934983957255962,
+      "threshold": 0.9620253164556962,
+      "ufar": 0.959731543624161,
+      "unknown_prevalence": 0.48220064724919093,
+      "unknown_test_samples": 149,
+      "validation_frr": 0.05063291139240506
+    },
+    "OD-Native": {
+      "auprc": 0.5514584888180729,
+      "auroc": 0.65251677852349,
+      "known_closed_accuracy": 0.49375,
+      "known_closed_macro_f1": 0.3773087706991244,
+      "known_closed_weighted_f1": 0.45142114017563617,
+      "known_frr": 0.04375,
+      "known_test_samples": 160,
+      "open_macro_f1": 0.20957343950031534,
+      "open_weighted_f1": 0.18443880186850609,
+      "threshold": 23.950462341308594,
+      "ufar": 0.9664429530201343,
+      "unknown_prevalence": 0.48220064724919093,
+      "unknown_test_samples": 149,
+      "validation_frr": 0.05063291139240506
+    }
+  },
+  "protocol_id": "loso_chat",
+  "seed": 2023,
+  "unknown_service": "Chat"
+}

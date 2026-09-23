@@ -1,0 +1,17 @@
+{
+  "cache_flow_count": 23447,
+  "clean_pool_flow_count": 23449,
+  "explanation": "Stage14C5 cache is the union of Known Train/Validation flow IDs; rows visible only as Known Test are intentionally not loaded",
+  "extra_in_development_cache": [],
+  "known_or_unknown_test_feature_values_loaded": false,
+  "missing_from_development_cache": [
+    "49c6239214799dfc2ad36b0d101cf1d95d143384561931ba66b7ef4222e82047",
+    "4f9e530da01d1dde25c598bfd8b7f024f2e549f68e638ed64efbd953ce2afd58"
+  ],
+  "missing_roles": [
+    [
+      "known",
+      "test"
+    ]
+  ]
+}

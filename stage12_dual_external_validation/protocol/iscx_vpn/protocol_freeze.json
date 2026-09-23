@@ -1,0 +1,536 @@
+{
+  "status": "PROTOCOL_FROZEN_PRETRAIN",
+  "dataset": "iscx_vpn",
+  "eligible_class_count": 16,
+  "eligible_classes": [
+    "AIM",
+    "BitTorrent",
+    "Email",
+    "FTPS",
+    "Facebook",
+    "Gmail",
+    "Hangouts",
+    "ICQ",
+    "Netflix",
+    "SCP",
+    "SFTP",
+    "Skype",
+    "Spotify",
+    "Vimeo",
+    "VoIPBuster",
+    "YouTube"
+  ],
+  "unknown_protocol_sha256": "a088787beba0ca5a7c85607d816e2301d22e493d0334e709b7e9e56d255e0999",
+  "split_manifest_sha256": "618670af28797d9ceffc7138dcb9d2622552cdfc4712c38bd5da0886ec95c793",
+  "preprocessing_manifest_sha256": "774fe4cf02a1c7a5b0df788ef63190a4baf59c1994f61cd1d008097decc202f4",
+  "canonical_label_map_sha256": "0112fb67ee9fa672d5f0e1f9c827e632b9bdf4e96bab27388d5ead7a3279d6e4",
+  "settings": {
+    "low": {
+      "dataset": "iscx_vpn",
+      "setting": "low",
+      "known_classes": [
+        "AIM",
+        "BitTorrent",
+        "Email",
+        "FTPS",
+        "Facebook",
+        "Gmail",
+        "ICQ",
+        "Netflix",
+        "SCP",
+        "SFTP",
+        "Skype",
+        "Spotify",
+        "Vimeo",
+        "VoIPBuster",
+        "YouTube"
+      ],
+      "unknown_classes": [
+        "Hangouts"
+      ],
+      "unknown_free": true,
+      "split_policy": "FLOW_DISJOINT_ONLY",
+      "flow_disjoint_only": true,
+      "group_aware_not_feasible_classes": [
+        "BitTorrent"
+      ],
+      "overlaps": {
+        "known_train_known_validation_group": 98,
+        "known_train_known_validation_image": 0,
+        "known_train_known_test_group": 95,
+        "known_train_known_test_image": 0,
+        "known_validation_known_test_group": 87,
+        "known_validation_known_test_image": 0,
+        "known_train_known_validation_flow_id": 0,
+        "known_train_known_test_flow_id": 0,
+        "known_validation_known_test_flow_id": 0
+      },
+      "prohibited_overlaps": {
+        "known_train_known_validation_image": 0,
+        "known_train_known_test_image": 0,
+        "known_validation_known_test_image": 0,
+        "known_train_known_validation_flow_id": 0,
+        "known_train_known_test_flow_id": 0,
+        "known_validation_known_test_flow_id": 0
+      },
+      "split_diagnostics": {
+        "policy": "grouped_image_disjoint_exact_class_counts",
+        "target_counts_by_class": {
+          "AIM": {
+            "train": 425,
+            "validation": 53,
+            "test": 54
+          },
+          "BitTorrent": {
+            "train": 804,
+            "validation": 100,
+            "test": 102
+          },
+          "Email": {
+            "train": 1600,
+            "validation": 200,
+            "test": 200
+          },
+          "FTPS": {
+            "train": 1600,
+            "validation": 200,
+            "test": 200
+          },
+          "Facebook": {
+            "train": 1600,
+            "validation": 200,
+            "test": 200
+          },
+          "Gmail": {
+            "train": 432,
+            "validation": 54,
+            "test": 54
+          },
+          "Hangouts": {
+            "train": 1600,
+            "validation": 200,
+            "test": 200
+          },
+          "ICQ": {
+            "train": 430,
+            "validation": 53,
+            "test": 55
+          },
+          "Netflix": {
+            "train": 948,
+            "validation": 118,
+            "test": 119
+          },
+          "SCP": {
+            "train": 1600,
+            "validation": 200,
+            "test": 200
+          },
+          "SFTP": {
+            "train": 251,
+            "validation": 31,
+            "test": 32
+          },
+          "Skype": {
+            "train": 1600,
+            "validation": 200,
+            "test": 200
+          },
+          "Spotify": {
+            "train": 636,
+            "validation": 79,
+            "test": 81
+          },
+          "Vimeo": {
+            "train": 984,
+            "validation": 123,
+            "test": 124
+          },
+          "VoIPBuster": {
+            "train": 1600,
+            "validation": 200,
+            "test": 200
+          },
+          "YouTube": {
+            "train": 1600,
+            "validation": 200,
+            "test": 200
+          }
+        },
+        "duplicate_image_groups": 249,
+        "duplicate_records": 530,
+        "cross_label_duplicate_image_groups": 1,
+        "records_moved_from_legacy_split": 121,
+        "records_moved_by_class": {
+          "Email": 87,
+          "FTPS": 10,
+          "Netflix": 22,
+          "Skype": 2
+        },
+        "cross_split_exact_image_groups": 0
+      },
+      "roles": {
+        "known_train": {
+          "samples": 16110,
+          "array_sha256": "1614ca9a4e6533ade136e39e2f0f7430e6de6694a92fb5ef9323218d0c883fbf",
+          "file_sha256": "1004e2dde47249809f84d12c53025c6e702857339d667c631b417d0a250c33f7"
+        },
+        "known_validation": {
+          "samples": 2011,
+          "array_sha256": "6a4265da811976db7ded512f45c7d38f0b67d67037a94cd38743c051b73c40bd",
+          "file_sha256": "9ddc13a34bbc58d3368d5b31adeb4a38ef1e6c4b8edb3bc3c5460a5fe0e9b34c"
+        },
+        "known_test": {
+          "samples": 2021,
+          "array_sha256": "4fee349c50d6e5eec241e1d01071ac71bda1b7f6ed2470d8804dd08e483fed5e",
+          "file_sha256": "6255c5cb2ecfa1844765e90f96e5b11ecf2fb9d12bd214238cd31c8f17b36682"
+        },
+        "unknown_test": {
+          "samples": 2000,
+          "array_sha256": "32dc8be7683a11c853c7e9d410c254a960e57db8c10b1c5d4092656fc19e7562",
+          "file_sha256": "e7e12e0db524c2874e4a9b6416e34c217c99b3fdd664d846c92cb1d17af7f128"
+        }
+      }
+    },
+    "medium": {
+      "dataset": "iscx_vpn",
+      "setting": "medium",
+      "known_classes": [
+        "AIM",
+        "BitTorrent",
+        "Email",
+        "FTPS",
+        "Facebook",
+        "Gmail",
+        "ICQ",
+        "Netflix",
+        "SCP",
+        "SFTP",
+        "Spotify",
+        "Vimeo",
+        "VoIPBuster"
+      ],
+      "unknown_classes": [
+        "Hangouts",
+        "Skype",
+        "YouTube"
+      ],
+      "unknown_free": true,
+      "split_policy": "FLOW_DISJOINT_ONLY",
+      "flow_disjoint_only": true,
+      "group_aware_not_feasible_classes": [
+        "BitTorrent"
+      ],
+      "overlaps": {
+        "known_train_known_validation_group": 74,
+        "known_train_known_validation_image": 0,
+        "known_train_known_test_group": 74,
+        "known_train_known_test_image": 0,
+        "known_validation_known_test_group": 68,
+        "known_validation_known_test_image": 0,
+        "known_train_known_validation_flow_id": 0,
+        "known_train_known_test_flow_id": 0,
+        "known_validation_known_test_flow_id": 0
+      },
+      "prohibited_overlaps": {
+        "known_train_known_validation_image": 0,
+        "known_train_known_test_image": 0,
+        "known_validation_known_test_image": 0,
+        "known_train_known_validation_flow_id": 0,
+        "known_train_known_test_flow_id": 0,
+        "known_validation_known_test_flow_id": 0
+      },
+      "split_diagnostics": {
+        "policy": "grouped_image_disjoint_exact_class_counts",
+        "target_counts_by_class": {
+          "AIM": {
+            "train": 425,
+            "validation": 53,
+            "test": 54
+          },
+          "BitTorrent": {
+            "train": 804,
+            "validation": 100,
+            "test": 102
+          },
+          "Email": {
+            "train": 1600,
+            "validation": 200,
+            "test": 200
+          },
+          "FTPS": {
+            "train": 1600,
+            "validation": 200,
+            "test": 200
+          },
+          "Facebook": {
+            "train": 1600,
+            "validation": 200,
+            "test": 200
+          },
+          "Gmail": {
+            "train": 432,
+            "validation": 54,
+            "test": 54
+          },
+          "Hangouts": {
+            "train": 1600,
+            "validation": 200,
+            "test": 200
+          },
+          "ICQ": {
+            "train": 430,
+            "validation": 53,
+            "test": 55
+          },
+          "Netflix": {
+            "train": 948,
+            "validation": 118,
+            "test": 119
+          },
+          "SCP": {
+            "train": 1600,
+            "validation": 200,
+            "test": 200
+          },
+          "SFTP": {
+            "train": 251,
+            "validation": 31,
+            "test": 32
+          },
+          "Skype": {
+            "train": 1600,
+            "validation": 200,
+            "test": 200
+          },
+          "Spotify": {
+            "train": 636,
+            "validation": 79,
+            "test": 81
+          },
+          "Vimeo": {
+            "train": 984,
+            "validation": 123,
+            "test": 124
+          },
+          "VoIPBuster": {
+            "train": 1600,
+            "validation": 200,
+            "test": 200
+          },
+          "YouTube": {
+            "train": 1600,
+            "validation": 200,
+            "test": 200
+          }
+        },
+        "duplicate_image_groups": 249,
+        "duplicate_records": 530,
+        "cross_label_duplicate_image_groups": 1,
+        "records_moved_from_legacy_split": 121,
+        "records_moved_by_class": {
+          "Email": 87,
+          "FTPS": 10,
+          "Netflix": 22,
+          "Skype": 2
+        },
+        "cross_split_exact_image_groups": 0
+      },
+      "roles": {
+        "known_train": {
+          "samples": 12910,
+          "array_sha256": "33dd606b6b8cc88085e154348585dc3c5428052bd53ef564a84d28e5a140d655",
+          "file_sha256": "191a882dbfc0a8508448ca5ca7c55979cf11a4002b0397d2f90f509ded28ba1c"
+        },
+        "known_validation": {
+          "samples": 1611,
+          "array_sha256": "983356a652a49cb225f622feaf3110a85b6a4b928a6ee82c73dd7be76ae81b9a",
+          "file_sha256": "996b7e7f1a2c3c76287505bb315c74164625a4264e6953c30dd2fa059cc60cf2"
+        },
+        "known_test": {
+          "samples": 1621,
+          "array_sha256": "6ee835e7ca16fc580b775784ac4aee941b885a4f17eaf80cf94fd4a9d540340d",
+          "file_sha256": "658d148e6cc94c1b4d3d9b6035212789d5700ff0a52e8554e58411349a121272"
+        },
+        "unknown_test": {
+          "samples": 6000,
+          "array_sha256": "a5357bb1a8fa4f163a32fc2262f8755f0ad984c68804a6c04379281bb2800b1b",
+          "file_sha256": "6fb479f479c3567a6c78dd5330049bbf4bf1285a3f84c4a8c451695a7742f36d"
+        }
+      }
+    },
+    "high": {
+      "dataset": "iscx_vpn",
+      "setting": "high",
+      "known_classes": [
+        "AIM",
+        "BitTorrent",
+        "Email",
+        "FTPS",
+        "Facebook",
+        "Gmail",
+        "ICQ",
+        "Netflix",
+        "SCP",
+        "Spotify",
+        "Vimeo",
+        "VoIPBuster"
+      ],
+      "unknown_classes": [
+        "Hangouts",
+        "SFTP",
+        "Skype",
+        "YouTube"
+      ],
+      "unknown_free": true,
+      "split_policy": "FLOW_DISJOINT_ONLY",
+      "flow_disjoint_only": true,
+      "group_aware_not_feasible_classes": [
+        "BitTorrent"
+      ],
+      "overlaps": {
+        "known_train_known_validation_group": 64,
+        "known_train_known_validation_image": 0,
+        "known_train_known_test_group": 64,
+        "known_train_known_test_image": 0,
+        "known_validation_known_test_group": 58,
+        "known_validation_known_test_image": 0,
+        "known_train_known_validation_flow_id": 0,
+        "known_train_known_test_flow_id": 0,
+        "known_validation_known_test_flow_id": 0
+      },
+      "prohibited_overlaps": {
+        "known_train_known_validation_image": 0,
+        "known_train_known_test_image": 0,
+        "known_validation_known_test_image": 0,
+        "known_train_known_validation_flow_id": 0,
+        "known_train_known_test_flow_id": 0,
+        "known_validation_known_test_flow_id": 0
+      },
+      "split_diagnostics": {
+        "policy": "grouped_image_disjoint_exact_class_counts",
+        "target_counts_by_class": {
+          "AIM": {
+            "train": 425,
+            "validation": 53,
+            "test": 54
+          },
+          "BitTorrent": {
+            "train": 804,
+            "validation": 100,
+            "test": 102
+          },
+          "Email": {
+            "train": 1600,
+            "validation": 200,
+            "test": 200
+          },
+          "FTPS": {
+            "train": 1600,
+            "validation": 200,
+            "test": 200
+          },
+          "Facebook": {
+            "train": 1600,
+            "validation": 200,
+            "test": 200
+          },
+          "Gmail": {
+            "train": 432,
+            "validation": 54,
+            "test": 54
+          },
+          "Hangouts": {
+            "train": 1600,
+            "validation": 200,
+            "test": 200
+          },
+          "ICQ": {
+            "train": 430,
+            "validation": 53,
+            "test": 55
+          },
+          "Netflix": {
+            "train": 948,
+            "validation": 118,
+            "test": 119
+          },
+          "SCP": {
+            "train": 1600,
+            "validation": 200,
+            "test": 200
+          },
+          "SFTP": {
+            "train": 251,
+            "validation": 31,
+            "test": 32
+          },
+          "Skype": {
+            "train": 1600,
+            "validation": 200,
+            "test": 200
+          },
+          "Spotify": {
+            "train": 636,
+            "validation": 79,
+            "test": 81
+          },
+          "Vimeo": {
+            "train": 984,
+            "validation": 123,
+            "test": 124
+          },
+          "VoIPBuster": {
+            "train": 1600,
+            "validation": 200,
+            "test": 200
+          },
+          "YouTube": {
+            "train": 1600,
+            "validation": 200,
+            "test": 200
+          }
+        },
+        "duplicate_image_groups": 249,
+        "duplicate_records": 530,
+        "cross_label_duplicate_image_groups": 1,
+        "records_moved_from_legacy_split": 121,
+        "records_moved_by_class": {
+          "Email": 87,
+          "FTPS": 10,
+          "Netflix": 22,
+          "Skype": 2
+        },
+        "cross_split_exact_image_groups": 0
+      },
+      "roles": {
+        "known_train": {
+          "samples": 12659,
+          "array_sha256": "6e10c026ffb9615213b20df6e2dfe8989f487d50d055c4fc358d51e472ec3ec4",
+          "file_sha256": "b03eeb30e52fc32a1b26065317b19ba165e5780e226c4264f49802b943437892"
+        },
+        "known_validation": {
+          "samples": 1580,
+          "array_sha256": "7aebe962ffc219a225f117e765df8b8869a6815de5e4a2bf17ecea439b1b4aee",
+          "file_sha256": "1e44612dc801f007ceac123f1fe3da2d8dbdfed34a8789b3cb2a0d05f8b42546"
+        },
+        "known_test": {
+          "samples": 1589,
+          "array_sha256": "a7039428ad468a5a97586ae26718f1254ce2a75826ad8accd201c72594ed2b5c",
+          "file_sha256": "dbd7632f197d422490ed003000b5e2aedb70e62bbbae3e4e887393f614081635"
+        },
+        "unknown_test": {
+          "samples": 6314,
+          "array_sha256": "455e901780c2e32469849072e9a20002a46fc132f62f1df6fd48744cff1c6b7f",
+          "file_sha256": "3370c91fb597f721a4e611ffaeaeba49a5ee78056cc9028f64051bacda77ff61"
+        }
+      }
+    }
+  },
+  "dataset_split_policy": "FLOW_DISJOINT_ONLY",
+  "group_aware_not_feasible_classes": [
+    "BitTorrent"
+  ],
+  "claim_reduction_required": true,
+  "test_metrics_opened": false
+}

@@ -1,0 +1,35 @@
+{
+  "best_epoch": 96,
+  "checkpoint_path": "/home/birkenwald/data/SEU-WXY/WXY-SEU/TrafficClassifier/Projects/unknown_traffic_project/stage15r_representation_bottleneck_audit/pilot_runs/e1/vnat/medium_seed2025/model_best.pt",
+  "checkpoint_sha256": "e63ed3fd2873def1ced43961279323b48defa1765debf3fa61a7d70df67671f2",
+  "class_names": [
+    "netflix",
+    "rdp",
+    "rsync",
+    "scp",
+    "skype",
+    "ssh",
+    "youtube"
+  ],
+  "dataset": "vnat",
+  "epochs_completed": 100,
+  "experiment": "E1",
+  "known_test_samples_used": 0,
+  "known_train_samples": 15704,
+  "known_validation_samples": 1960,
+  "normalization": {
+    "fit_role": "none",
+    "type": "ToTensor uint8/255"
+  },
+  "peak_gpu_memory_bytes": 279572480,
+  "physical_gpu": "0",
+  "protocol_id": "medium_seed2025",
+  "runtime_seconds": 254.7195303440094,
+  "setting": "Medium",
+  "status": "PASS",
+  "unknown_test_samples_used": 0,
+  "validation_accuracy": 0.8938775510204081,
+  "validation_loss": 0.17554744877377335,
+  "validation_macro_f1": 0.6696614624297281,
+  "validation_weighted_f1": 0.8586731222637494
+}

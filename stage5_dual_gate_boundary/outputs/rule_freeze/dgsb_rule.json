@@ -1,0 +1,842 @@
+{
+  "claim_scope": "METHOD_FREEZE_AND_USTC_KNOWN_ONLY_SANITY",
+  "class_prediction": "predict y* from argmax_y,k s_yk(z)",
+  "created_before_cstnet_unknown_evaluation": true,
+  "final_decision": "accept Known iff Global Gate AND winning Local Component Gate",
+  "forbidden_fusion": [
+    "lambda",
+    "alpha",
+    "beta",
+    "temperature",
+    "learned fusion",
+    "MLP",
+    "SVM"
+  ],
+  "global_gate": {
+    "calibration_data": "Known Validation only after Local Gate is frozen",
+    "candidate_thresholds": "distinct finite G values among Local-Gate passing Known Validation samples",
+    "decision": "G(z) >= tau_global_dual",
+    "selection": "minimize absolute final acceptance error; ties choose the highest threshold",
+    "target_final_acceptance": 0.95
+  },
+  "local_gate": {
+    "assignment": "true-class Known Validation samples assigned by posterior under frozen train-fitted K2 GMM",
+    "decision": "L(z) >= tau_local_y*k* for the raw joint-score winning component",
+    "fallback": "if n_yk < 30, tau_local_yk = class-level Known Validation P05 tau_y",
+    "minimum_validation_samples": 30,
+    "quantile": 0.05,
+    "threshold": "tau_local_yk = empirical P05 of assigned Known Validation component joint scores"
+  },
+  "method_name": "Dual-Gate Support Boundary",
+  "model": {
+    "K": 2,
+    "covariance_type": "full",
+    "pca_dimension": 64,
+    "refit_performed": false,
+    "reg_covar": 0.001
+  },
+  "scores": {
+    "class_density": "log p(z|y) = logsumexp_k s_yk(z)",
+    "component_joint": "s_yk(z) = log(w_yk) + log N(z | mu_yk, Sigma_yk)",
+    "global_absolute": "G(z) = max_y log p(z|y)",
+    "winning_local": "L(z) = s_y*k*(z)",
+    "winning_local_component": "(y*,k*) = argmax_y,k s_yk(z)"
+  },
+  "short_name": "DGSB",
+  "unknown_samples_used_for_calibration": 0,
+  "ustc_known_only_setting_thresholds": {
+    "A-1": {
+      "actual_known_validation_acceptance": 0.9499989596121434,
+      "class_thresholds": {
+        "BitTorrent": 51.99139163895689,
+        "Cridex": 79.5584771220831,
+        "FTP": 40.91749642244255,
+        "Facetime": 92.86226272270439,
+        "Geodo": 40.167939025748524,
+        "Gmail": 6.75994473124959,
+        "Htbot": -10.457729098390109,
+        "Miuref": 41.5844855368381,
+        "MySQL": 67.30472637275831,
+        "Neris": -17.93957032254678,
+        "Nsis-ay": -9.529193296638528,
+        "Outlook": 50.19394605598454,
+        "SMB": 27.1767584419337,
+        "Shifu": 21.176639453722846,
+        "Skype": 49.99446318278134,
+        "Virut": -0.125186594069696,
+        "Weibo": 37.1731744765434,
+        "WorldOfWarcraft": 57.07405923037799,
+        "Zeus": 28.86595258697674
+      },
+      "component_thresholds": [
+        {
+          "class": "Gmail",
+          "component": 0,
+          "fallback_to_class_p05": false,
+          "threshold": -3.420580903234052,
+          "validation_samples": 248
+        },
+        {
+          "class": "Gmail",
+          "component": 1,
+          "fallback_to_class_p05": false,
+          "threshold": 10.614439016189895,
+          "validation_samples": 615
+        },
+        {
+          "class": "FTP",
+          "component": 0,
+          "fallback_to_class_p05": false,
+          "threshold": 61.19066642033051,
+          "validation_samples": 6479
+        },
+        {
+          "class": "FTP",
+          "component": 1,
+          "fallback_to_class_p05": false,
+          "threshold": 28.983568592424604,
+          "validation_samples": 3624
+        },
+        {
+          "class": "Nsis-ay",
+          "component": 0,
+          "fallback_to_class_p05": false,
+          "threshold": 31.768816110068347,
+          "validation_samples": 388
+        },
+        {
+          "class": "Nsis-ay",
+          "component": 1,
+          "fallback_to_class_p05": false,
+          "threshold": -45.62451830777915,
+          "validation_samples": 219
+        },
+        {
+          "class": "Facetime",
+          "component": 0,
+          "fallback_to_class_p05": false,
+          "threshold": 107.16874800166259,
+          "validation_samples": 534
+        },
+        {
+          "class": "Facetime",
+          "component": 1,
+          "fallback_to_class_p05": false,
+          "threshold": 58.16264647946258,
+          "validation_samples": 66
+        },
+        {
+          "class": "Weibo",
+          "component": 0,
+          "fallback_to_class_p05": false,
+          "threshold": -32.684681839261515,
+          "validation_samples": 184
+        },
+        {
+          "class": "Weibo",
+          "component": 1,
+          "fallback_to_class_p05": false,
+          "threshold": 53.02167055760544,
+          "validation_samples": 3811
+        },
+        {
+          "class": "Cridex",
+          "component": 0,
+          "fallback_to_class_p05": false,
+          "threshold": 74.09964436870825,
+          "validation_samples": 828
+        },
+        {
+          "class": "Cridex",
+          "component": 1,
+          "fallback_to_class_p05": false,
+          "threshold": 98.25168962040277,
+          "validation_samples": 810
+        },
+        {
+          "class": "Zeus",
+          "component": 0,
+          "fallback_to_class_p05": false,
+          "threshold": 29.573145403323227,
+          "validation_samples": 536
+        },
+        {
+          "class": "Zeus",
+          "component": 1,
+          "fallback_to_class_p05": false,
+          "threshold": 27.441129980479687,
+          "validation_samples": 561
+        },
+        {
+          "class": "SMB",
+          "component": 0,
+          "fallback_to_class_p05": false,
+          "threshold": -16.434364006570245,
+          "validation_samples": 820
+        },
+        {
+          "class": "SMB",
+          "component": 1,
+          "fallback_to_class_p05": false,
+          "threshold": 41.661324066411105,
+          "validation_samples": 3073
+        },
+        {
+          "class": "BitTorrent",
+          "component": 0,
+          "fallback_to_class_p05": false,
+          "threshold": 7.869240737347427,
+          "validation_samples": 97
+        },
+        {
+          "class": "BitTorrent",
+          "component": 1,
+          "fallback_to_class_p05": false,
+          "threshold": 67.9281344023428,
+          "validation_samples": 655
+        },
+        {
+          "class": "WorldOfWarcraft",
+          "component": 0,
+          "fallback_to_class_p05": true,
+          "threshold": 57.07405923037799,
+          "validation_samples": 7
+        },
+        {
+          "class": "WorldOfWarcraft",
+          "component": 1,
+          "fallback_to_class_p05": false,
+          "threshold": 58.135635443286624,
+          "validation_samples": 782
+        },
+        {
+          "class": "Shifu",
+          "component": 0,
+          "fallback_to_class_p05": false,
+          "threshold": 33.36187872436184,
+          "validation_samples": 380
+        },
+        {
+          "class": "Shifu",
+          "component": 1,
+          "fallback_to_class_p05": false,
+          "threshold": 9.014372757850815,
+          "validation_samples": 583
+        },
+        {
+          "class": "Outlook",
+          "component": 0,
+          "fallback_to_class_p05": false,
+          "threshold": 83.68170232396574,
+          "validation_samples": 697
+        },
+        {
+          "class": "Outlook",
+          "component": 1,
+          "fallback_to_class_p05": false,
+          "threshold": -74.23075581940637,
+          "validation_samples": 56
+        },
+        {
+          "class": "Virut",
+          "component": 0,
+          "fallback_to_class_p05": false,
+          "threshold": 68.71253772548535,
+          "validation_samples": 1878
+        },
+        {
+          "class": "Virut",
+          "component": 1,
+          "fallback_to_class_p05": false,
+          "threshold": -21.3624436389279,
+          "validation_samples": 1432
+        },
+        {
+          "class": "Geodo",
+          "component": 0,
+          "fallback_to_class_p05": false,
+          "threshold": 93.13544130037432,
+          "validation_samples": 3194
+        },
+        {
+          "class": "Geodo",
+          "component": 1,
+          "fallback_to_class_p05": false,
+          "threshold": -25.833379654927835,
+          "validation_samples": 900
+        },
+        {
+          "class": "MySQL",
+          "component": 0,
+          "fallback_to_class_p05": false,
+          "threshold": 81.50106846942958,
+          "validation_samples": 4302
+        },
+        {
+          "class": "MySQL",
+          "component": 1,
+          "fallback_to_class_p05": false,
+          "threshold": 61.18118960565967,
+          "validation_samples": 4307
+        },
+        {
+          "class": "Htbot",
+          "component": 0,
+          "fallback_to_class_p05": false,
+          "threshold": -4.683046817989948,
+          "validation_samples": 465
+        },
+        {
+          "class": "Htbot",
+          "component": 1,
+          "fallback_to_class_p05": false,
+          "threshold": -27.390644462629055,
+          "validation_samples": 169
+        },
+        {
+          "class": "Skype",
+          "component": 0,
+          "fallback_to_class_p05": false,
+          "threshold": 69.31354643718846,
+          "validation_samples": 547
+        },
+        {
+          "class": "Skype",
+          "component": 1,
+          "fallback_to_class_p05": false,
+          "threshold": 14.466230951641048,
+          "validation_samples": 85
+        },
+        {
+          "class": "Miuref",
+          "component": 0,
+          "fallback_to_class_p05": false,
+          "threshold": 46.762407254678514,
+          "validation_samples": 883
+        },
+        {
+          "class": "Miuref",
+          "component": 1,
+          "fallback_to_class_p05": false,
+          "threshold": 38.22190848974048,
+          "validation_samples": 465
+        },
+        {
+          "class": "Neris",
+          "component": 0,
+          "fallback_to_class_p05": false,
+          "threshold": -30.420128039405565,
+          "validation_samples": 1251
+        },
+        {
+          "class": "Neris",
+          "component": 1,
+          "fallback_to_class_p05": false,
+          "threshold": -13.408892443092284,
+          "validation_samples": 2128
+        }
+      ],
+      "target_known_validation_acceptance": 0.95,
+      "tau_global_dual": -22.98412964041015
+    },
+    "A-2": {
+      "actual_known_validation_acceptance": 0.9499896148254137,
+      "class_thresholds": {
+        "BitTorrent": -1.3966453614124028,
+        "Cridex": 7.427102759925239,
+        "FTP": -31.239872023035705,
+        "Facetime": 8.150600442505961,
+        "Gmail": -46.59910374177903,
+        "Miuref": -5.062543148843077,
+        "MySQL": -8.285292084827574,
+        "Neris": -59.03431860542575,
+        "Nsis-ay": -45.02141736209557,
+        "Outlook": -6.958859679150006,
+        "SMB": -37.53270291136623,
+        "Shifu": -41.50314878191732,
+        "Skype": -15.92417145412838,
+        "Virut": -56.437800669182444,
+        "Weibo": -28.503278749467967,
+        "WorldOfWarcraft": 1.4596645878996184,
+        "Zeus": -36.73495546946247
+      },
+      "component_thresholds": [
+        {
+          "class": "Gmail",
+          "component": 0,
+          "fallback_to_class_p05": false,
+          "threshold": -44.14148862982413,
+          "validation_samples": 319
+        },
+        {
+          "class": "Gmail",
+          "component": 1,
+          "fallback_to_class_p05": false,
+          "threshold": -54.005837642923666,
+          "validation_samples": 544
+        },
+        {
+          "class": "FTP",
+          "component": 0,
+          "fallback_to_class_p05": false,
+          "threshold": -37.774641952830976,
+          "validation_samples": 3340
+        },
+        {
+          "class": "FTP",
+          "component": 1,
+          "fallback_to_class_p05": false,
+          "threshold": -20.635724477785388,
+          "validation_samples": 6763
+        },
+        {
+          "class": "Nsis-ay",
+          "component": 0,
+          "fallback_to_class_p05": false,
+          "threshold": -7.670521956807822,
+          "validation_samples": 286
+        },
+        {
+          "class": "Nsis-ay",
+          "component": 1,
+          "fallback_to_class_p05": false,
+          "threshold": -65.29817820519014,
+          "validation_samples": 321
+        },
+        {
+          "class": "Facetime",
+          "component": 0,
+          "fallback_to_class_p05": false,
+          "threshold": -5.3797636054727835,
+          "validation_samples": 360
+        },
+        {
+          "class": "Facetime",
+          "component": 1,
+          "fallback_to_class_p05": false,
+          "threshold": 35.847860990470615,
+          "validation_samples": 240
+        },
+        {
+          "class": "Weibo",
+          "component": 0,
+          "fallback_to_class_p05": false,
+          "threshold": -63.62976177170817,
+          "validation_samples": 320
+        },
+        {
+          "class": "Weibo",
+          "component": 1,
+          "fallback_to_class_p05": false,
+          "threshold": -18.868234117878703,
+          "validation_samples": 3675
+        },
+        {
+          "class": "Cridex",
+          "component": 0,
+          "fallback_to_class_p05": false,
+          "threshold": 1.8894991788005353,
+          "validation_samples": 828
+        },
+        {
+          "class": "Cridex",
+          "component": 1,
+          "fallback_to_class_p05": false,
+          "threshold": 25.579335641218353,
+          "validation_samples": 810
+        },
+        {
+          "class": "Zeus",
+          "component": 0,
+          "fallback_to_class_p05": false,
+          "threshold": -16.946388191980265,
+          "validation_samples": 531
+        },
+        {
+          "class": "Zeus",
+          "component": 1,
+          "fallback_to_class_p05": false,
+          "threshold": -45.39462244000968,
+          "validation_samples": 566
+        },
+        {
+          "class": "SMB",
+          "component": 0,
+          "fallback_to_class_p05": false,
+          "threshold": -21.641033554608466,
+          "validation_samples": 3075
+        },
+        {
+          "class": "SMB",
+          "component": 1,
+          "fallback_to_class_p05": false,
+          "threshold": -63.175139448938815,
+          "validation_samples": 818
+        },
+        {
+          "class": "BitTorrent",
+          "component": 0,
+          "fallback_to_class_p05": false,
+          "threshold": 2.5573444091700273,
+          "validation_samples": 485
+        },
+        {
+          "class": "BitTorrent",
+          "component": 1,
+          "fallback_to_class_p05": false,
+          "threshold": -5.742718339951428,
+          "validation_samples": 267
+        },
+        {
+          "class": "WorldOfWarcraft",
+          "component": 0,
+          "fallback_to_class_p05": false,
+          "threshold": 2.0375918303512353,
+          "validation_samples": 782
+        },
+        {
+          "class": "WorldOfWarcraft",
+          "component": 1,
+          "fallback_to_class_p05": true,
+          "threshold": 1.4596645878996184,
+          "validation_samples": 7
+        },
+        {
+          "class": "Shifu",
+          "component": 0,
+          "fallback_to_class_p05": false,
+          "threshold": -36.33341084635611,
+          "validation_samples": 748
+        },
+        {
+          "class": "Shifu",
+          "component": 1,
+          "fallback_to_class_p05": false,
+          "threshold": -52.266833584967756,
+          "validation_samples": 215
+        },
+        {
+          "class": "Outlook",
+          "component": 0,
+          "fallback_to_class_p05": false,
+          "threshold": 10.277463666600344,
+          "validation_samples": 679
+        },
+        {
+          "class": "Outlook",
+          "component": 1,
+          "fallback_to_class_p05": false,
+          "threshold": -64.93461574210707,
+          "validation_samples": 74
+        },
+        {
+          "class": "Virut",
+          "component": 0,
+          "fallback_to_class_p05": false,
+          "threshold": -9.875949235363716,
+          "validation_samples": 1878
+        },
+        {
+          "class": "Virut",
+          "component": 1,
+          "fallback_to_class_p05": false,
+          "threshold": -74.44072482307386,
+          "validation_samples": 1432
+        },
+        {
+          "class": "MySQL",
+          "component": 0,
+          "fallback_to_class_p05": false,
+          "threshold": -14.468526663312767,
+          "validation_samples": 4303
+        },
+        {
+          "class": "MySQL",
+          "component": 1,
+          "fallback_to_class_p05": false,
+          "threshold": 2.230137049031311,
+          "validation_samples": 4306
+        },
+        {
+          "class": "Skype",
+          "component": 0,
+          "fallback_to_class_p05": false,
+          "threshold": -15.686837065507264,
+          "validation_samples": 564
+        },
+        {
+          "class": "Skype",
+          "component": 1,
+          "fallback_to_class_p05": false,
+          "threshold": -16.34339981723777,
+          "validation_samples": 68
+        },
+        {
+          "class": "Miuref",
+          "component": 0,
+          "fallback_to_class_p05": false,
+          "threshold": 2.008881569748932,
+          "validation_samples": 878
+        },
+        {
+          "class": "Miuref",
+          "component": 1,
+          "fallback_to_class_p05": false,
+          "threshold": -9.208177518666648,
+          "validation_samples": 470
+        },
+        {
+          "class": "Neris",
+          "component": 0,
+          "fallback_to_class_p05": false,
+          "threshold": -76.7833597848334,
+          "validation_samples": 1182
+        },
+        {
+          "class": "Neris",
+          "component": 1,
+          "fallback_to_class_p05": false,
+          "threshold": -21.63355015075027,
+          "validation_samples": 2197
+        }
+      ],
+      "target_known_validation_acceptance": 0.95,
+      "tau_global_dual": -71.73173771856428
+    },
+    "A-3": {
+      "actual_known_validation_acceptance": 0.9494611957310123,
+      "class_thresholds": {
+        "BitTorrent": 65.49413589574874,
+        "Cridex": 87.78504624106806,
+        "FTP": 46.009567135293274,
+        "Facetime": 89.72649808863422,
+        "Gmail": 32.7070004042257,
+        "MySQL": 88.164361725447,
+        "Nsis-ay": 15.190366216960504,
+        "Outlook": 75.07459199133699,
+        "SMB": 39.894229007490964,
+        "Shifu": 59.547066989433105,
+        "Skype": 59.261327572287136,
+        "Virut": 23.462953257449072,
+        "Weibo": 84.25786792066229,
+        "WorldOfWarcraft": 57.88017032466507,
+        "Zeus": 33.462750725695486
+      },
+      "component_thresholds": [
+        {
+          "class": "Gmail",
+          "component": 0,
+          "fallback_to_class_p05": false,
+          "threshold": 52.077371645642536,
+          "validation_samples": 311
+        },
+        {
+          "class": "Gmail",
+          "component": 1,
+          "fallback_to_class_p05": false,
+          "threshold": 25.781625896927107,
+          "validation_samples": 552
+        },
+        {
+          "class": "FTP",
+          "component": 0,
+          "fallback_to_class_p05": false,
+          "threshold": 84.47145179113052,
+          "validation_samples": 5114
+        },
+        {
+          "class": "FTP",
+          "component": 1,
+          "fallback_to_class_p05": false,
+          "threshold": 31.617649711132312,
+          "validation_samples": 4989
+        },
+        {
+          "class": "Nsis-ay",
+          "component": 0,
+          "fallback_to_class_p05": false,
+          "threshold": 31.609847139918365,
+          "validation_samples": 536
+        },
+        {
+          "class": "Nsis-ay",
+          "component": 1,
+          "fallback_to_class_p05": false,
+          "threshold": -40.7896590816485,
+          "validation_samples": 71
+        },
+        {
+          "class": "Facetime",
+          "component": 0,
+          "fallback_to_class_p05": false,
+          "threshold": 99.50297027896887,
+          "validation_samples": 499
+        },
+        {
+          "class": "Facetime",
+          "component": 1,
+          "fallback_to_class_p05": false,
+          "threshold": 76.77652063160187,
+          "validation_samples": 101
+        },
+        {
+          "class": "Weibo",
+          "component": 0,
+          "fallback_to_class_p05": false,
+          "threshold": 101.46972146546045,
+          "validation_samples": 3843
+        },
+        {
+          "class": "Weibo",
+          "component": 1,
+          "fallback_to_class_p05": false,
+          "threshold": -26.756870364395393,
+          "validation_samples": 152
+        },
+        {
+          "class": "Cridex",
+          "component": 0,
+          "fallback_to_class_p05": false,
+          "threshold": 84.1184026418722,
+          "validation_samples": 828
+        },
+        {
+          "class": "Cridex",
+          "component": 1,
+          "fallback_to_class_p05": false,
+          "threshold": 93.22098253053025,
+          "validation_samples": 810
+        },
+        {
+          "class": "Zeus",
+          "component": 0,
+          "fallback_to_class_p05": false,
+          "threshold": 17.320361835407162,
+          "validation_samples": 577
+        },
+        {
+          "class": "Zeus",
+          "component": 1,
+          "fallback_to_class_p05": false,
+          "threshold": 79.96205430057249,
+          "validation_samples": 520
+        },
+        {
+          "class": "SMB",
+          "component": 0,
+          "fallback_to_class_p05": false,
+          "threshold": 68.0930937829485,
+          "validation_samples": 3075
+        },
+        {
+          "class": "SMB",
+          "component": 1,
+          "fallback_to_class_p05": false,
+          "threshold": -6.5809061233725785,
+          "validation_samples": 818
+        },
+        {
+          "class": "BitTorrent",
+          "component": 0,
+          "fallback_to_class_p05": false,
+          "threshold": 83.3388056859261,
+          "validation_samples": 701
+        },
+        {
+          "class": "BitTorrent",
+          "component": 1,
+          "fallback_to_class_p05": false,
+          "threshold": -20.259186012367252,
+          "validation_samples": 51
+        },
+        {
+          "class": "WorldOfWarcraft",
+          "component": 0,
+          "fallback_to_class_p05": true,
+          "threshold": 57.88017032466507,
+          "validation_samples": 21
+        },
+        {
+          "class": "WorldOfWarcraft",
+          "component": 1,
+          "fallback_to_class_p05": false,
+          "threshold": 60.899502308648124,
+          "validation_samples": 768
+        },
+        {
+          "class": "Shifu",
+          "component": 0,
+          "fallback_to_class_p05": false,
+          "threshold": 14.345010958612928,
+          "validation_samples": 216
+        },
+        {
+          "class": "Shifu",
+          "component": 1,
+          "fallback_to_class_p05": false,
+          "threshold": 76.80163837400181,
+          "validation_samples": 747
+        },
+        {
+          "class": "Outlook",
+          "component": 0,
+          "fallback_to_class_p05": false,
+          "threshold": 101.24657695283024,
+          "validation_samples": 721
+        },
+        {
+          "class": "Outlook",
+          "component": 1,
+          "fallback_to_class_p05": false,
+          "threshold": -113.0591277562463,
+          "validation_samples": 32
+        },
+        {
+          "class": "Virut",
+          "component": 0,
+          "fallback_to_class_p05": false,
+          "threshold": -6.499321009874324,
+          "validation_samples": 751
+        },
+        {
+          "class": "Virut",
+          "component": 1,
+          "fallback_to_class_p05": false,
+          "threshold": 69.71882329614265,
+          "validation_samples": 2559
+        },
+        {
+          "class": "MySQL",
+          "component": 0,
+          "fallback_to_class_p05": false,
+          "threshold": 87.85620549894244,
+          "validation_samples": 3567
+        },
+        {
+          "class": "MySQL",
+          "component": 1,
+          "fallback_to_class_p05": false,
+          "threshold": 88.35586944992762,
+          "validation_samples": 5042
+        },
+        {
+          "class": "Skype",
+          "component": 0,
+          "fallback_to_class_p05": false,
+          "threshold": 73.6145404733202,
+          "validation_samples": 507
+        },
+        {
+          "class": "Skype",
+          "component": 1,
+          "fallback_to_class_p05": false,
+          "threshold": 22.799720034234582,
+          "validation_samples": 125
+        }
+      ],
+      "target_known_validation_acceptance": 0.95,
+      "tau_global_dual": -96.22261162568098
+    }
+  },
+  "ustc_unknown_inputs_accessed": 0
+}

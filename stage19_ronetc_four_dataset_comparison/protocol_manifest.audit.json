@@ -1,0 +1,29 @@
+{
+  "counts": {
+    "iscx_tor|medium_seed2022|known_test": 1113,
+    "iscx_tor|medium_seed2022|known_train": 8876,
+    "iscx_tor|medium_seed2022|known_validation": 1107,
+    "iscx_tor|medium_seed2022|unknown_test": 4000,
+    "iscx_vpn|medium_seed2022|known_test": 1621,
+    "iscx_vpn|medium_seed2022|known_train": 12910,
+    "iscx_vpn|medium_seed2022|known_validation": 1611,
+    "iscx_vpn|medium_seed2022|unknown_test": 6000,
+    "ustc|A-2|known_test": 43332,
+    "ustc|A-2|known_train": 346651,
+    "ustc|A-2|known_validation": 43331,
+    "ustc|A-2|unknown_test": 5579,
+    "vnat|medium_seed2025|known_test": 1960,
+    "vnat|medium_seed2025|known_train": 15704,
+    "vnat|medium_seed2025|known_validation": 1960,
+    "vnat|medium_seed2025|unknown_test": 3825,
+    "vnat|medium_seed2026|known_test": 1911,
+    "vnat|medium_seed2026|known_train": 15328,
+    "vnat|medium_seed2026|known_validation": 1911,
+    "vnat|medium_seed2026|unknown_test": 4299
+  },
+  "rows": 523029,
+  "sha256": "4947d66c44a04d7b52e155f98c5f71fcb5b1239174d87ddc41ebad41584d76cf",
+  "status": "PASS",
+  "unknown_train_rows": 0,
+  "unknown_validation_rows": 0
+}

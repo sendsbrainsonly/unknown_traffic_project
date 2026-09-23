@@ -1,0 +1,133 @@
+{
+  "experiment_id": "stage20-dual-coarse-service-protocol-20260921-v1",
+  "status": "PROTOCOL_FROZEN_NOT_TRAINED",
+  "task_decision": "coarse_service_primary_fine_application_historical_diagnostic",
+  "dataset_summaries": {
+    "iscx_vpn": {
+      "candidate_flows": 22142,
+      "selected_flows": 10955,
+      "services": [
+        "Chat",
+        "Email",
+        "File-Transfer",
+        "P2P",
+        "Streaming",
+        "VoIP"
+      ],
+      "candidate_by_service": {
+        "Chat": 1949,
+        "Email": 2000,
+        "File-Transfer": 5396,
+        "P2P": 1006,
+        "Streaming": 5212,
+        "VoIP": 6579
+      },
+      "selected_by_service": {
+        "Chat": 1949,
+        "Email": 2000,
+        "File-Transfer": 2000,
+        "P2P": 1006,
+        "Streaming": 2000,
+        "VoIP": 2000
+      },
+      "closed_role_counts": {
+        "known_test": 1093,
+        "known_train": 8764,
+        "known_validation": 1098
+      },
+      "captures_by_service": {
+        "Chat": 30,
+        "Email": 6,
+        "File-Transfer": 30,
+        "P2P": 1,
+        "Streaming": 24,
+        "VoIP": 38
+      },
+      "cross_service_duplicate_audit": {
+        "cross_service_duplicate_image_groups_excluded": 1,
+        "cross_service_duplicate_rows_excluded": 3,
+        "excluded_rows_by_service": {
+          "File-Transfer": 2,
+          "VoIP": 1
+        }
+      }
+    },
+    "iscx_tor": {
+      "candidate_flows": 15235,
+      "selected_flows": 11181,
+      "services": [
+        "Browsing",
+        "Chat",
+        "Email",
+        "File-Transfer",
+        "P2P",
+        "Streaming",
+        "VoIP"
+      ],
+      "candidate_by_service": {
+        "Browsing": 2005,
+        "Chat": 641,
+        "Email": 540,
+        "File-Transfer": 2270,
+        "P2P": 2000,
+        "Streaming": 5003,
+        "VoIP": 2776
+      },
+      "selected_by_service": {
+        "Browsing": 2000,
+        "Chat": 641,
+        "Email": 540,
+        "File-Transfer": 2000,
+        "P2P": 2000,
+        "Streaming": 2000,
+        "VoIP": 2000
+      },
+      "closed_role_counts": {
+        "known_test": 1117,
+        "known_train": 8946,
+        "known_validation": 1118
+      },
+      "captures_by_service": {
+        "Browsing": 10,
+        "Chat": 19,
+        "Email": 6,
+        "File-Transfer": 6,
+        "P2P": 5,
+        "Streaming": 16,
+        "VoIP": 12
+      },
+      "cross_service_duplicate_audit": {
+        "cross_service_duplicate_image_groups_excluded": 0,
+        "cross_service_duplicate_rows_excluded": 0,
+        "excluded_rows_by_service": {}
+      }
+    }
+  },
+  "closed_manifest_rows": 22136,
+  "loso_manifest_rows": 143997,
+  "protocol_count": 13,
+  "strict_unknown_free": true,
+  "unknown_fitting_samples": 0,
+  "source_hashes": {
+    "/home/birkenwald/data/SEU-WXY/WXY-SEU/TrafficClassifier/Projects/unknown_traffic_project/stage12_dual_external_validation/artifacts/iscx_tor/preprocessing_pool/raw_prepared_parallel_v2/provenance_test.jsonl": "6fc1e0730ba2028b4b88d381f2e81c51cb9536718c60c1a5edbb48f1ec290693",
+    "/home/birkenwald/data/SEU-WXY/WXY-SEU/TrafficClassifier/Projects/unknown_traffic_project/stage12_dual_external_validation/artifacts/iscx_tor/preprocessing_pool/raw_prepared_parallel_v2/provenance_train.jsonl": "08ed70932bd4d2b3712766cbe30dcfadc1eab5d77326892cbb18d6c0dc59d8de",
+    "/home/birkenwald/data/SEU-WXY/WXY-SEU/TrafficClassifier/Projects/unknown_traffic_project/stage12_dual_external_validation/artifacts/iscx_tor/preprocessing_pool/raw_prepared_parallel_v2/provenance_validation.jsonl": "74a6504b6a89dd06d0a878c82a6578a24e9115dc1ce35b44f1731003a502c713",
+    "/home/birkenwald/data/SEU-WXY/WXY-SEU/TrafficClassifier/Projects/unknown_traffic_project/stage12_dual_external_validation/artifacts/iscx_vpn/preprocessing_pool/raw_prepared_parallel_v1/provenance_test.jsonl": "1180f5dc34341ea67be17091cac6683c2b8323d6f9c4254c2bd3413d7633b3ef",
+    "/home/birkenwald/data/SEU-WXY/WXY-SEU/TrafficClassifier/Projects/unknown_traffic_project/stage12_dual_external_validation/artifacts/iscx_vpn/preprocessing_pool/raw_prepared_parallel_v1/provenance_train.jsonl": "9540fa68da4a7c92d2364b7f6578c7b1e345d2c2b6d63aabcb029373b26e0749",
+    "/home/birkenwald/data/SEU-WXY/WXY-SEU/TrafficClassifier/Projects/unknown_traffic_project/stage12_dual_external_validation/artifacts/iscx_vpn/preprocessing_pool/raw_prepared_parallel_v1/provenance_validation.jsonl": "a7f946d0926067d38c40d639e3b40383baf6aeaaf652c49625eb1852e3803b66",
+    "/home/birkenwald/data/SEU-WXY/WXY-SEU/TrafficClassifier/Projects/unknown_traffic_project/stage12_dual_external_validation/protocol/iscx_tor/dataset_inventory.csv": "3df65d866f9257c03468ed9ef8c220038b2e69cf87fda6da688bc37b8799bef4",
+    "/home/birkenwald/data/SEU-WXY/WXY-SEU/TrafficClassifier/Projects/unknown_traffic_project/stage12_dual_external_validation/protocol/iscx_vpn/dataset_inventory.csv": "d762593c5b756dc96d72509edfc56eec6b62b9b1b8a2ec9be0c17d9b8c13ae2d",
+    "/home/birkenwald/data/SEU-WXY/WXY-SEU/TrafficClassifier/Projects/unknown_traffic_project/stage20_dual_coarse_service_protocol/config.json": "b85aeecba527b1e7faa85035005b46562c8ceef53c1733328826a7781f815ad8"
+  },
+  "output_hashes": {
+    "closed_service_manifest.csv": "6404d496f50a6f7f6f397d125ad0cd653c9df152d8db1b9ed2ad2310967950bb",
+    "loso_service_protocol_manifest.csv": "08ecafe0bbe87328ad7193235856e1d448221579d96e7dffda56ac2f78785949",
+    "protocol_audit.json": "f976a2cd5223677140eed051b4c760b757fe02da01c8bb1deab4b986b5cfc608"
+  },
+  "limitations": [
+    "capture-derived weak service labels",
+    "flow-level and exact-image-disjoint split, not uniformly capture-disjoint",
+    "source pool was capped at the historical fine-application preprocessing stage",
+    "coarse-task results are not directly comparable to historical fine-application results"
+  ]
+}

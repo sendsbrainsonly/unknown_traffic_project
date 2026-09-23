@@ -1,0 +1,109 @@
+{
+  "decision_basis": {
+    "decision_time": "after observing the complete empirical distribution",
+    "flow_threshold": null,
+    "group_threshold": "No empirical threshold; three non-empty disjoint groups are the logical minimum for Train/Val/Test",
+    "group_definition": "application::capture_variant::capture_number, conservatively shared across VPN/non-VPN; exact duplicate PCAP groups are unioned",
+    "semantic_rule": "application is the class; VPN and non-VPN must be held out together if the application is later chosen as Unknown"
+  },
+  "eligible_classes": [
+    {
+      "application": "rdp",
+      "flow_count": 44,
+      "strict_group_count": 5,
+      "valid_strict_group_count": 5,
+      "effective_group_count": 5,
+      "vpn_flow_count": 6,
+      "nonvpn_flow_count": 38,
+      "status": "eligible for constructing a non-empty strict group-aware Train/Val/Test split"
+    },
+    {
+      "application": "rsync",
+      "flow_count": 1914,
+      "strict_group_count": 4,
+      "valid_strict_group_count": 4,
+      "effective_group_count": 4,
+      "vpn_flow_count": 3,
+      "nonvpn_flow_count": 1911,
+      "status": "eligible for constructing a non-empty strict group-aware Train/Val/Test split",
+      "caveats": [
+        "quarantine exact duplicate flows before protocol freeze, especially cross-application duplicates"
+      ]
+    },
+    {
+      "application": "scp",
+      "flow_count": 2290,
+      "strict_group_count": 4,
+      "valid_strict_group_count": 3,
+      "effective_group_count": 3,
+      "vpn_flow_count": 2,
+      "nonvpn_flow_count": 2288,
+      "status": "eligible for constructing a non-empty strict group-aware Train/Val/Test split",
+      "caveats": [
+        "exclude failed PCAPs from all derived datasets",
+        "mathematically feasible but minimally supported: exactly one group per split"
+      ]
+    },
+    {
+      "application": "sftp",
+      "flow_count": 1670,
+      "strict_group_count": 7,
+      "valid_strict_group_count": 7,
+      "effective_group_count": 7,
+      "vpn_flow_count": 4,
+      "nonvpn_flow_count": 1666,
+      "status": "eligible for constructing a non-empty strict group-aware Train/Val/Test split",
+      "caveats": [
+        "quarantine exact duplicate flows before protocol freeze, especially cross-application duplicates"
+      ]
+    },
+    {
+      "application": "skype",
+      "flow_count": 1270,
+      "strict_group_count": 57,
+      "valid_strict_group_count": 57,
+      "effective_group_count": 56,
+      "vpn_flow_count": 56,
+      "nonvpn_flow_count": 1214,
+      "status": "eligible for constructing a non-empty strict group-aware Train/Val/Test split",
+      "caveats": [
+        "exclude failed PCAPs from all derived datasets",
+        "retain at most one copy of an exact duplicate PCAP, or keep all copies in the same group",
+        "quarantine exact duplicate flows before protocol freeze, especially cross-application duplicates"
+      ]
+    },
+    {
+      "application": "ssh",
+      "flow_count": 13563,
+      "strict_group_count": 5,
+      "valid_strict_group_count": 5,
+      "effective_group_count": 5,
+      "vpn_flow_count": 5,
+      "nonvpn_flow_count": 13558,
+      "status": "eligible for constructing a non-empty strict group-aware Train/Val/Test split"
+    },
+    {
+      "application": "youtube",
+      "flow_count": 341,
+      "strict_group_count": 4,
+      "valid_strict_group_count": 4,
+      "effective_group_count": 4,
+      "vpn_flow_count": 3,
+      "nonvpn_flow_count": 338,
+      "status": "eligible for constructing a non-empty strict group-aware Train/Val/Test split"
+    },
+    {
+      "application": "zoiper",
+      "flow_count": 939,
+      "strict_group_count": 3,
+      "valid_strict_group_count": 3,
+      "effective_group_count": 3,
+      "vpn_flow_count": 301,
+      "nonvpn_flow_count": 638,
+      "status": "eligible for constructing a non-empty strict group-aware Train/Val/Test split",
+      "caveats": [
+        "mathematically feasible but minimally supported: exactly one group per split"
+      ]
+    }
+  ]
+}

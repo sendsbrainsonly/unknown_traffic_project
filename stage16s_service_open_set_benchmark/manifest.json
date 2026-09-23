@@ -1,0 +1,3395 @@
+{
+  "artifacts": [
+    {
+      "path": "artifact_hashes.csv",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 48687,
+      "sha256": "665edaece540ae636133fa101a817918a028ebf953248847fa9c3f1a83680378",
+      "hash_status": "verified"
+    },
+    {
+      "path": "canonical_evaluation/loso_chat/seed2022/SUCCESS",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 8,
+      "sha256": "1f513d4ecec4e91ddd48da1a59b6d96f1b76c374dc1da641980782a34f43b102",
+      "hash_status": "verified"
+    },
+    {
+      "path": "canonical_evaluation/loso_chat/seed2022/latent_outputs.npz",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 3551291,
+      "sha256": "1e5677c0ac2ffe9764dde4412c5d600b12d738141362c166190aebe1fb250106",
+      "hash_status": "verified"
+    },
+    {
+      "path": "canonical_evaluation/loso_chat/seed2022/lineage.json",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 546,
+      "sha256": "8fb83a9906f58f9f5e9f82094fa8121a26e4bfb636a2ae11deee895a79aa7b59",
+      "hash_status": "verified"
+    },
+    {
+      "path": "canonical_evaluation/loso_chat/seed2022/metrics.json",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 2810,
+      "sha256": "73cb5d22e6a00e8183cc0f8ef9420239be04d6415dc91eec4a029830f82cd8eb",
+      "hash_status": "verified"
+    },
+    {
+      "path": "canonical_evaluation/loso_chat/seed2022/result.json",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 4118,
+      "sha256": "f462f67b977bd0582ddabe8001718de749be50dd1e269910bab40a90b97cb4e3",
+      "hash_status": "verified"
+    },
+    {
+      "path": "canonical_evaluation/loso_chat/seed2022/sample_scores.csv",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 120658,
+      "sha256": "d3cb75355c8282a9f34c2cb442c3fb3cd860d6d638552c8464569ea8d7fedc87",
+      "hash_status": "verified"
+    },
+    {
+      "path": "canonical_evaluation/loso_chat/seed2022/score_arrays.npz",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 19775,
+      "sha256": "276fae63ae95308ba500d6dd50cd235b94c82502dfb129664859b870aafd8673",
+      "hash_status": "verified"
+    },
+    {
+      "path": "canonical_evaluation/loso_chat/seed2022/thresholds.json",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 1743,
+      "sha256": "ab76f43a2aac8306ecc8f0c6a4b54c0ffa19e04766ce4122c2b6cc2ab9adaaae",
+      "hash_status": "verified"
+    },
+    {
+      "path": "canonical_evaluation/loso_chat/seed2023/SUCCESS",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 8,
+      "sha256": "1f513d4ecec4e91ddd48da1a59b6d96f1b76c374dc1da641980782a34f43b102",
+      "hash_status": "verified"
+    },
+    {
+      "path": "canonical_evaluation/loso_chat/seed2023/latent_outputs.npz",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 3577455,
+      "sha256": "56102f7138510b0ba7306cbd9225d28451b4ef76d3e73c9216589169bc3e0e9a",
+      "hash_status": "verified"
+    },
+    {
+      "path": "canonical_evaluation/loso_chat/seed2023/lineage.json",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 546,
+      "sha256": "e47e4e8ae61d087ddea329a1726496881fa256748654ab13f2825826020e1313",
+      "hash_status": "verified"
+    },
+    {
+      "path": "canonical_evaluation/loso_chat/seed2023/metrics.json",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 2831,
+      "sha256": "95583889d66fd477a87bab0578605b2b283f6987020574a3271b432642a64153",
+      "hash_status": "verified"
+    },
+    {
+      "path": "canonical_evaluation/loso_chat/seed2023/result.json",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 4138,
+      "sha256": "7d96a67d0e57bed005ca474b4187156079fa9bc01e55f7027789547e05b180c5",
+      "hash_status": "verified"
+    },
+    {
+      "path": "canonical_evaluation/loso_chat/seed2023/sample_scores.csv",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 120934,
+      "sha256": "2bb615757292fe328acc3e64b7935b287e4ab53f73f00345aecb9209cb79681c",
+      "hash_status": "verified"
+    },
+    {
+      "path": "canonical_evaluation/loso_chat/seed2023/score_arrays.npz",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 19659,
+      "sha256": "19a7806a35d5369f3386176969c482e2a3506df2f52bc8c7f89150691be4d359",
+      "hash_status": "verified"
+    },
+    {
+      "path": "canonical_evaluation/loso_chat/seed2023/thresholds.json",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 1744,
+      "sha256": "f078a8ab452fb00f07778d97279773b9feca8de64cd859162a5dc57b3ea29509",
+      "hash_status": "verified"
+    },
+    {
+      "path": "canonical_evaluation/loso_chat/seed2024/SUCCESS",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 8,
+      "sha256": "1f513d4ecec4e91ddd48da1a59b6d96f1b76c374dc1da641980782a34f43b102",
+      "hash_status": "verified"
+    },
+    {
+      "path": "canonical_evaluation/loso_chat/seed2024/latent_outputs.npz",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 3553421,
+      "sha256": "7cecd5f4cd859f487a42ff8a02638e9382a8e76b15ade45bd7f7e3fbbdb2c523",
+      "hash_status": "verified"
+    },
+    {
+      "path": "canonical_evaluation/loso_chat/seed2024/lineage.json",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 546,
+      "sha256": "98f20f2b4d8a667612fd2edc116cb2d92d5c574e54a9e0931def2657b211da61",
+      "hash_status": "verified"
+    },
+    {
+      "path": "canonical_evaluation/loso_chat/seed2024/metrics.json",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 2819,
+      "sha256": "ba4fb61cd018c852d0da5199de0a86e98bc8f05297c28635b030c35c562cc308",
+      "hash_status": "verified"
+    },
+    {
+      "path": "canonical_evaluation/loso_chat/seed2024/result.json",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 4127,
+      "sha256": "7484e1cd4358a6254fc8a5a1c40298be125827c20adbc98b937e48cc5dc51f80",
+      "hash_status": "verified"
+    },
+    {
+      "path": "canonical_evaluation/loso_chat/seed2024/sample_scores.csv",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 120767,
+      "sha256": "91853d86fda041a5effca00970e7f4710db2bfb3c8ea2e57b0b64d823a7c4328",
+      "hash_status": "verified"
+    },
+    {
+      "path": "canonical_evaluation/loso_chat/seed2024/score_arrays.npz",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 19828,
+      "sha256": "53164dd8b9e4bc0a1ac90ef1653ffad1e20dc3d7e370fa804feea165de0717ee",
+      "hash_status": "verified"
+    },
+    {
+      "path": "canonical_evaluation/loso_chat/seed2024/thresholds.json",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 1744,
+      "sha256": "5efd2c9c38481f690aa2cac68e27cb8071847824ba1ae1a65b8338c8b916aa13",
+      "hash_status": "verified"
+    },
+    {
+      "path": "canonical_evaluation/loso_email/seed2022/SUCCESS",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 8,
+      "sha256": "1f513d4ecec4e91ddd48da1a59b6d96f1b76c374dc1da641980782a34f43b102",
+      "hash_status": "verified"
+    },
+    {
+      "path": "canonical_evaluation/loso_email/seed2022/latent_outputs.npz",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 3557999,
+      "sha256": "ad80af6bde2d8ee06cab2497f6b9304fc665e7391cbbf38cfec16d8704492788",
+      "hash_status": "verified"
+    },
+    {
+      "path": "canonical_evaluation/loso_email/seed2022/lineage.json",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 548,
+      "sha256": "e9dc76b5980035ca820b1bc94f86ca0708534228a8a3d9e6c142b6c71c9fcf64",
+      "hash_status": "verified"
+    },
+    {
+      "path": "canonical_evaluation/loso_email/seed2022/metrics.json",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 2910,
+      "sha256": "11e4873a47a1561bef18682b6f37c633729508b7b9d4c9f502f7928002d73c05",
+      "hash_status": "verified"
+    },
+    {
+      "path": "canonical_evaluation/loso_email/seed2022/result.json",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 4221,
+      "sha256": "8335611558637cba8e96b4140b3a4aaa34839f7e96deb208a06624bd347b150e",
+      "hash_status": "verified"
+    },
+    {
+      "path": "canonical_evaluation/loso_email/seed2022/sample_scores.csv",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 124334,
+      "sha256": "4b42ebd9bf4154a6358b1792f10ab63306beeed7a1009130c184f70db423fb8f",
+      "hash_status": "verified"
+    },
+    {
+      "path": "canonical_evaluation/loso_email/seed2022/score_arrays.npz",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 20380,
+      "sha256": "3b7aa9216839f10c189d16cc1051055a8b141ab4801571909614706f76656709",
+      "hash_status": "verified"
+    },
+    {
+      "path": "canonical_evaluation/loso_email/seed2022/thresholds.json",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 1742,
+      "sha256": "722b72c58e9f62370fa99f3a49237a45befe01bf13f130a40e9d0099a683408d",
+      "hash_status": "verified"
+    },
+    {
+      "path": "canonical_evaluation/loso_email/seed2023/SUCCESS",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 8,
+      "sha256": "1f513d4ecec4e91ddd48da1a59b6d96f1b76c374dc1da641980782a34f43b102",
+      "hash_status": "verified"
+    },
+    {
+      "path": "canonical_evaluation/loso_email/seed2023/latent_outputs.npz",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 3568730,
+      "sha256": "a6eacea5171041d1eb44b24e1fe0b122533c11ea520169b625143a8b6877faab",
+      "hash_status": "verified"
+    },
+    {
+      "path": "canonical_evaluation/loso_email/seed2023/lineage.json",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 548,
+      "sha256": "39d38c84632e03d1cc57a8d8e0071b4e4086cf8d214b46843f1e1dc85603dcc3",
+      "hash_status": "verified"
+    },
+    {
+      "path": "canonical_evaluation/loso_email/seed2023/metrics.json",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 2941,
+      "sha256": "b2d3a272a243d35f9b8c18db6bfc0a002c92a5bba5df0bea43226e119bd27917",
+      "hash_status": "verified"
+    },
+    {
+      "path": "canonical_evaluation/loso_email/seed2023/result.json",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 4247,
+      "sha256": "262c0dd1457b5f08adb3d26a8018e14e027189880601763476912863c7c90233",
+      "hash_status": "verified"
+    },
+    {
+      "path": "canonical_evaluation/loso_email/seed2023/sample_scores.csv",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 124669,
+      "sha256": "ccfb54dcc8c91a44a54e2fa4e7e09e26c4d2a0b6f5a4f3ac8f7fb680208005ce",
+      "hash_status": "verified"
+    },
+    {
+      "path": "canonical_evaluation/loso_email/seed2023/score_arrays.npz",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 20406,
+      "sha256": "a11500c80c54d35c92e364f8378ae762acef4bc59827c653778e056447eb3d36",
+      "hash_status": "verified"
+    },
+    {
+      "path": "canonical_evaluation/loso_email/seed2023/thresholds.json",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 1744,
+      "sha256": "8ca32d5fefb5a490b4b3ed7387e05c39b24628e9d33b1426e0e93fa8e0d7440e",
+      "hash_status": "verified"
+    },
+    {
+      "path": "canonical_evaluation/loso_email/seed2024/SUCCESS",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 8,
+      "sha256": "1f513d4ecec4e91ddd48da1a59b6d96f1b76c374dc1da641980782a34f43b102",
+      "hash_status": "verified"
+    },
+    {
+      "path": "canonical_evaluation/loso_email/seed2024/latent_outputs.npz",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 3562946,
+      "sha256": "76e842e1d9647c9dc5d718e6707d06d845d2af650c539041e4c829b9d060e178",
+      "hash_status": "verified"
+    },
+    {
+      "path": "canonical_evaluation/loso_email/seed2024/lineage.json",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 548,
+      "sha256": "7579edda6739720d3ebe0a07f9b6ec67f5e923fa60269a4c97fe4fa17a3c4088",
+      "hash_status": "verified"
+    },
+    {
+      "path": "canonical_evaluation/loso_email/seed2024/metrics.json",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 2928,
+      "sha256": "51e5c09982e1b395cc108c5b1fed144c7eac0c634dbea2f2c9b3083e56c751c4",
+      "hash_status": "verified"
+    },
+    {
+      "path": "canonical_evaluation/loso_email/seed2024/result.json",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 4236,
+      "sha256": "8ded7a03694a34b849272694dcffd6dbcaf2a817f1578a8760cff5506ab08bb9",
+      "hash_status": "verified"
+    },
+    {
+      "path": "canonical_evaluation/loso_email/seed2024/sample_scores.csv",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 124560,
+      "sha256": "5bd33cdc007da9408aed94fad0299359bf65ae4643edbc0821cd879d85d3257e",
+      "hash_status": "verified"
+    },
+    {
+      "path": "canonical_evaluation/loso_email/seed2024/score_arrays.npz",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 20499,
+      "sha256": "e653452ec21c7a227d73824090082edf505b47c694d3d005a7dba6ddf78fed92",
+      "hash_status": "verified"
+    },
+    {
+      "path": "canonical_evaluation/loso_email/seed2024/thresholds.json",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 1743,
+      "sha256": "2bcab40430557d20745890e881a61c4d3496f4d60cad92eb8431181d2249050e",
+      "hash_status": "verified"
+    },
+    {
+      "path": "canonical_evaluation/loso_file_transfer/seed2022/SUCCESS",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 8,
+      "sha256": "1f513d4ecec4e91ddd48da1a59b6d96f1b76c374dc1da641980782a34f43b102",
+      "hash_status": "verified"
+    },
+    {
+      "path": "canonical_evaluation/loso_file_transfer/seed2022/latent_outputs.npz",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 3555959,
+      "sha256": "2971fa342c927f6424b26d258d35ae64812509d73c5f099a3c1e15b1aeaf320c",
+      "hash_status": "verified"
+    },
+    {
+      "path": "canonical_evaluation/loso_file_transfer/seed2022/lineage.json",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 564,
+      "sha256": "0a016753c93f4d2eab76c070c937c849f6e710d8bbf794066591c8392c482f54",
+      "hash_status": "verified"
+    },
+    {
+      "path": "canonical_evaluation/loso_file_transfer/seed2022/metrics.json",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 2911,
+      "sha256": "7e3711b18ba87e3919e8769348f17617a44dd4645b5c96370009e7a2e57ce2f7",
+      "hash_status": "verified"
+    },
+    {
+      "path": "canonical_evaluation/loso_file_transfer/seed2022/result.json",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 4229,
+      "sha256": "db3dd5ad04221759c3bc2cd1d650e1b46f337e2f0e6801cb2d97278f8c77a950",
+      "hash_status": "verified"
+    },
+    {
+      "path": "canonical_evaluation/loso_file_transfer/seed2022/sample_scores.csv",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 183319,
+      "sha256": "4a01036eeba39065f55d481061480737c01bd8601f70679694d22f2323478ed7",
+      "hash_status": "verified"
+    },
+    {
+      "path": "canonical_evaluation/loso_file_transfer/seed2022/score_arrays.npz",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 25008,
+      "sha256": "a2ec911b05248823530c168ad3daafa101c9a2622dca2f3b5cd7ade8b62ed526",
+      "hash_status": "verified"
+    },
+    {
+      "path": "canonical_evaluation/loso_file_transfer/seed2022/thresholds.json",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 1743,
+      "sha256": "5100a6fb14f61d35437d3ce90fd4553b4461d6b55d8c7b0d5788fee84a53b7b9",
+      "hash_status": "verified"
+    },
+    {
+      "path": "canonical_evaluation/loso_file_transfer/seed2023/SUCCESS",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 8,
+      "sha256": "1f513d4ecec4e91ddd48da1a59b6d96f1b76c374dc1da641980782a34f43b102",
+      "hash_status": "verified"
+    },
+    {
+      "path": "canonical_evaluation/loso_file_transfer/seed2023/latent_outputs.npz",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 3561823,
+      "sha256": "20479e4ad7448b07fd06cac76371c259aab6d9ea44177f03140045b409733a51",
+      "hash_status": "verified"
+    },
+    {
+      "path": "canonical_evaluation/loso_file_transfer/seed2023/lineage.json",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 564,
+      "sha256": "bf776aa5c8904d2101a404702e8ab9b5cbc3cd687472ea47b069b5e5d256df6b",
+      "hash_status": "verified"
+    },
+    {
+      "path": "canonical_evaluation/loso_file_transfer/seed2023/metrics.json",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 2917,
+      "sha256": "5b95a6af0408673d9e860420eb055d983916f08a464a60c66c5ff2dfaab2fd23",
+      "hash_status": "verified"
+    },
+    {
+      "path": "canonical_evaluation/loso_file_transfer/seed2023/result.json",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 4233,
+      "sha256": "a12feb6b08b2eb23655f81e956c8f30013d8e70e5e8a8ba9b642f4e203c3e925",
+      "hash_status": "verified"
+    },
+    {
+      "path": "canonical_evaluation/loso_file_transfer/seed2023/sample_scores.csv",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 184259,
+      "sha256": "f9dc188aea34a7af2be5d8a5e048f6793e03e77175ee14bfaad5b2bb7da409a8",
+      "hash_status": "verified"
+    },
+    {
+      "path": "canonical_evaluation/loso_file_transfer/seed2023/score_arrays.npz",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 24807,
+      "sha256": "1eb11f50650de34355df8d780826cb6f91e372ba527bf2c898fd0025c984097a",
+      "hash_status": "verified"
+    },
+    {
+      "path": "canonical_evaluation/loso_file_transfer/seed2023/thresholds.json",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 1744,
+      "sha256": "358c11c0656aa757d407d8c1b3c770a9580c407c4c73fbb53cdcc096b050122d",
+      "hash_status": "verified"
+    },
+    {
+      "path": "canonical_evaluation/loso_file_transfer/seed2024/SUCCESS",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 8,
+      "sha256": "1f513d4ecec4e91ddd48da1a59b6d96f1b76c374dc1da641980782a34f43b102",
+      "hash_status": "verified"
+    },
+    {
+      "path": "canonical_evaluation/loso_file_transfer/seed2024/latent_outputs.npz",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 3557065,
+      "sha256": "52627aea87febc2bc7a47e3960cd26cbf97a17548fe3e5326b1b1d80b9c18896",
+      "hash_status": "verified"
+    },
+    {
+      "path": "canonical_evaluation/loso_file_transfer/seed2024/lineage.json",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 564,
+      "sha256": "0839be6c251de9eb1d74cfb6e3df06b022166f198d1992bb2dd02fc77deb4f2e",
+      "hash_status": "verified"
+    },
+    {
+      "path": "canonical_evaluation/loso_file_transfer/seed2024/metrics.json",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 2922,
+      "sha256": "8072b2b2b11e27ec49de1f1a0a20f43a85d534d25aecfb01d7e24b7df4cd975d",
+      "hash_status": "verified"
+    },
+    {
+      "path": "canonical_evaluation/loso_file_transfer/seed2024/result.json",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 4239,
+      "sha256": "1574c6225a3ff10f9e13bbd861773080e926213e07c63881899fb0a86cb691e6",
+      "hash_status": "verified"
+    },
+    {
+      "path": "canonical_evaluation/loso_file_transfer/seed2024/sample_scores.csv",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 183874,
+      "sha256": "5cdd53906b6d8253749e487c5b04c263492d2fbc16e299220a645dbb2a79e939",
+      "hash_status": "verified"
+    },
+    {
+      "path": "canonical_evaluation/loso_file_transfer/seed2024/score_arrays.npz",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 25025,
+      "sha256": "aa21748cbbbdab795654e4d9d72e37da3037898fdda48d031b4e571ab36c04c3",
+      "hash_status": "verified"
+    },
+    {
+      "path": "canonical_evaluation/loso_file_transfer/seed2024/thresholds.json",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 1743,
+      "sha256": "02d5c41d1561a6b851c00dda7e2c93566794dc2bfee7155718a4ea7d341b45fa",
+      "hash_status": "verified"
+    },
+    {
+      "path": "canonical_evaluation/loso_p2p/seed2022/SUCCESS",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 8,
+      "sha256": "1f513d4ecec4e91ddd48da1a59b6d96f1b76c374dc1da641980782a34f43b102",
+      "hash_status": "verified"
+    },
+    {
+      "path": "canonical_evaluation/loso_p2p/seed2022/latent_outputs.npz",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 3557631,
+      "sha256": "956ecd400afe40a4723a0c04e66f1be5e835de3db2d104d76e93b9e5ea89f621",
+      "hash_status": "verified"
+    },
+    {
+      "path": "canonical_evaluation/loso_p2p/seed2022/lineage.json",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 544,
+      "sha256": "1fdc5202737cdc7eeda643022d07a1ee3e3d3ceecfe63a9ca109ad04e8fc9bfe",
+      "hash_status": "verified"
+    },
+    {
+      "path": "canonical_evaluation/loso_p2p/seed2022/metrics.json",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 2919,
+      "sha256": "a91c839b39fe68400078700ebe506f7276a10887540cb87687dfa34c00c6872a",
+      "hash_status": "verified"
+    },
+    {
+      "path": "canonical_evaluation/loso_p2p/seed2022/result.json",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 4226,
+      "sha256": "5ce2345f774c4b142a230466b3ce954e87e2fbe184891ee8f68aa8ceb2576266",
+      "hash_status": "verified"
+    },
+    {
+      "path": "canonical_evaluation/loso_p2p/seed2022/sample_scores.csv",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 297755,
+      "sha256": "9ca0eff10518f69278e5556e2eb6f5d2d3a0ada54f5482c435bc039570a3150d",
+      "hash_status": "verified"
+    },
+    {
+      "path": "canonical_evaluation/loso_p2p/seed2022/score_arrays.npz",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 34814,
+      "sha256": "906594ae0e99b67ca872d96a3ad44b9697535dfe61f134eff509cbbd4e9dfc23",
+      "hash_status": "verified"
+    },
+    {
+      "path": "canonical_evaluation/loso_p2p/seed2022/thresholds.json",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 1740,
+      "sha256": "0a45ba412327f51f9d606199acea86f52fac48d80f59beee9126ce169cd677ed",
+      "hash_status": "verified"
+    },
+    {
+      "path": "canonical_evaluation/loso_p2p/seed2023/SUCCESS",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 8,
+      "sha256": "1f513d4ecec4e91ddd48da1a59b6d96f1b76c374dc1da641980782a34f43b102",
+      "hash_status": "verified"
+    },
+    {
+      "path": "canonical_evaluation/loso_p2p/seed2023/latent_outputs.npz",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 3570691,
+      "sha256": "e2a4861efa69476ada57e81fa6c462b126b70c65c2229861075f46858ee011f2",
+      "hash_status": "verified"
+    },
+    {
+      "path": "canonical_evaluation/loso_p2p/seed2023/lineage.json",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 544,
+      "sha256": "05f19416fa3312a48d0cdd8e94ec678d6e053ac9ac28136511788c7814a3ab91",
+      "hash_status": "verified"
+    },
+    {
+      "path": "canonical_evaluation/loso_p2p/seed2023/metrics.json",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 2933,
+      "sha256": "895068817482d2572b250c8065fddf2f5eac8e95d675ae292b5f4cc03ec3101f",
+      "hash_status": "verified"
+    },
+    {
+      "path": "canonical_evaluation/loso_p2p/seed2023/result.json",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 4237,
+      "sha256": "bf55e4edf19956a856d6aabdae752a4b39a6449634b4f5d610647a9b1436d855",
+      "hash_status": "verified"
+    },
+    {
+      "path": "canonical_evaluation/loso_p2p/seed2023/sample_scores.csv",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 297412,
+      "sha256": "e9ce63e37cab963b1ebdf42354705731bb71457eced3cc04431d4bbc967ced3f",
+      "hash_status": "verified"
+    },
+    {
+      "path": "canonical_evaluation/loso_p2p/seed2023/score_arrays.npz",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 34635,
+      "sha256": "7c3541568b498578a899c79247f18b688e56f82c9eaab0601d3e0c21f9312da0",
+      "hash_status": "verified"
+    },
+    {
+      "path": "canonical_evaluation/loso_p2p/seed2023/thresholds.json",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 1745,
+      "sha256": "6a3c92f25fffb3eabad90b68a06e6b1e33253739d14cbd29ac7f0d62b0fc3e44",
+      "hash_status": "verified"
+    },
+    {
+      "path": "canonical_evaluation/loso_p2p/seed2024/SUCCESS",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 8,
+      "sha256": "1f513d4ecec4e91ddd48da1a59b6d96f1b76c374dc1da641980782a34f43b102",
+      "hash_status": "verified"
+    },
+    {
+      "path": "canonical_evaluation/loso_p2p/seed2024/latent_outputs.npz",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 3557217,
+      "sha256": "d91353f87d019feaa141dde817b22eaf9347e614f60a36320a14630e4c72964c",
+      "hash_status": "verified"
+    },
+    {
+      "path": "canonical_evaluation/loso_p2p/seed2024/lineage.json",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 544,
+      "sha256": "78aadc46e57a7df4c87379c157b5ad4205989371a8c5575bd7be88b53e0b5f0f",
+      "hash_status": "verified"
+    },
+    {
+      "path": "canonical_evaluation/loso_p2p/seed2024/metrics.json",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 2901,
+      "sha256": "d9eed4048ec63a2b49a29e9237860c9cde8fab638d0303b9015ba20fc9d00e70",
+      "hash_status": "verified"
+    },
+    {
+      "path": "canonical_evaluation/loso_p2p/seed2024/result.json",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 4209,
+      "sha256": "41d260d191a54009d32d3f5b9355b147e9330e706dc0b663db4573edefc4171c",
+      "hash_status": "verified"
+    },
+    {
+      "path": "canonical_evaluation/loso_p2p/seed2024/sample_scores.csv",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 297720,
+      "sha256": "d982784e11236828130995aa14c69ce711721b5981af96b9193a551f7cf30c57",
+      "hash_status": "verified"
+    },
+    {
+      "path": "canonical_evaluation/loso_p2p/seed2024/score_arrays.npz",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 34486,
+      "sha256": "ef582c8c7cc89cdaae4c3df81ffe936b769f890d85cddc899e7ef061022047dc",
+      "hash_status": "verified"
+    },
+    {
+      "path": "canonical_evaluation/loso_p2p/seed2024/thresholds.json",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 1741,
+      "sha256": "87cd572c4146f078da9d7937ee2fbed1e7e74a7b7a315931f6f387e17d8fabfd",
+      "hash_status": "verified"
+    },
+    {
+      "path": "canonical_evaluation/loso_streaming/seed2022/SUCCESS",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 8,
+      "sha256": "1f513d4ecec4e91ddd48da1a59b6d96f1b76c374dc1da641980782a34f43b102",
+      "hash_status": "verified"
+    },
+    {
+      "path": "canonical_evaluation/loso_streaming/seed2022/latent_outputs.npz",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 3561606,
+      "sha256": "3a7b41d9eb43337e9eb7fd170d4e832d054314cfa5a2a9ef7ea7c3bcbfcf8793",
+      "hash_status": "verified"
+    },
+    {
+      "path": "canonical_evaluation/loso_streaming/seed2022/lineage.json",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 556,
+      "sha256": "51cc1ef6eab4af63eae7c51a36a585e11507e4696bc74968ba85b96c14330baa",
+      "hash_status": "verified"
+    },
+    {
+      "path": "canonical_evaluation/loso_streaming/seed2022/metrics.json",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 2932,
+      "sha256": "d0bd2c930f5beea15d0732129229bfa75b2421dc81ed8158a1c8e92fe7891c98",
+      "hash_status": "verified"
+    },
+    {
+      "path": "canonical_evaluation/loso_streaming/seed2022/result.json",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 4244,
+      "sha256": "e0123438a070ccc3774631919599a9793ab0f4430fd7dd5552ee7db01ebdac7b",
+      "hash_status": "verified"
+    },
+    {
+      "path": "canonical_evaluation/loso_streaming/seed2022/sample_scores.csv",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 322242,
+      "sha256": "f017b000cea6140e418f40e9e78df06bc62907096dac95583296831af071db47",
+      "hash_status": "verified"
+    },
+    {
+      "path": "canonical_evaluation/loso_streaming/seed2022/score_arrays.npz",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 35742,
+      "sha256": "4a8095fdb81783c2c89c0b4e26b83e0d46b2b9fa6e4b013a89f00a22c341a620",
+      "hash_status": "verified"
+    },
+    {
+      "path": "canonical_evaluation/loso_streaming/seed2022/thresholds.json",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 1745,
+      "sha256": "44c2a9b983a78648e036e4d065532ae30d87021e99b5f2fb7d33fe5375c2e1f9",
+      "hash_status": "verified"
+    },
+    {
+      "path": "canonical_evaluation/loso_streaming/seed2023/SUCCESS",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 8,
+      "sha256": "1f513d4ecec4e91ddd48da1a59b6d96f1b76c374dc1da641980782a34f43b102",
+      "hash_status": "verified"
+    },
+    {
+      "path": "canonical_evaluation/loso_streaming/seed2023/latent_outputs.npz",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 3563353,
+      "sha256": "22147a96ae583ea2d9eab10184bd59161bf5d42908b74832db6df676d2d81049",
+      "hash_status": "verified"
+    },
+    {
+      "path": "canonical_evaluation/loso_streaming/seed2023/lineage.json",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 1400,
+      "sha256": "0efd196715029a6c176357cab61337b84e5e42c6ad769baf993d146ef396744d",
+      "hash_status": "verified"
+    },
+    {
+      "path": "canonical_evaluation/loso_streaming/seed2023/metrics.json",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 2942,
+      "sha256": "472bb59880b642c43096b05987b1f45fac9f4f0eafa2f5ab125d6fd37d73e629",
+      "hash_status": "verified"
+    },
+    {
+      "path": "canonical_evaluation/loso_streaming/seed2023/result.json",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 4265,
+      "sha256": "030331a8f59a4a2bd685a5adaa9416bef142037d1e8001a6e0da758d0f1dba58",
+      "hash_status": "verified"
+    },
+    {
+      "path": "canonical_evaluation/loso_streaming/seed2023/sample_scores.csv",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 316810,
+      "sha256": "624a2f3e431cf5b657024f2a78a3c6a527d668654ba66ac2474ceb85921c1c30",
+      "hash_status": "verified"
+    },
+    {
+      "path": "canonical_evaluation/loso_streaming/seed2023/score_arrays.npz",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 35754,
+      "sha256": "aaa6956bc0ea64d40c486f6556b877964edc4ccb1fef5c83d70e0adeecb8a359",
+      "hash_status": "verified"
+    },
+    {
+      "path": "canonical_evaluation/loso_streaming/seed2023/thresholds.json",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 1741,
+      "sha256": "77f994170e35cbe0324e0f4a245ce80696b3e6f27d119b8e071385c63a5734a8",
+      "hash_status": "verified"
+    },
+    {
+      "path": "canonical_evaluation/loso_streaming/seed2024/SUCCESS",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 8,
+      "sha256": "1f513d4ecec4e91ddd48da1a59b6d96f1b76c374dc1da641980782a34f43b102",
+      "hash_status": "verified"
+    },
+    {
+      "path": "canonical_evaluation/loso_streaming/seed2024/latent_outputs.npz",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 3562303,
+      "sha256": "c62cff75a96d155d527136aabc66f51b47a2d1c6423db9ed8ce3e21d0a2e7924",
+      "hash_status": "verified"
+    },
+    {
+      "path": "canonical_evaluation/loso_streaming/seed2024/lineage.json",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 556,
+      "sha256": "23bd19b38828fc5c38cbe7a3dd20fd94e75d34ffbdb600fe4f8844ebcee4a193",
+      "hash_status": "verified"
+    },
+    {
+      "path": "canonical_evaluation/loso_streaming/seed2024/metrics.json",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 2912,
+      "sha256": "245ce1fd668d6f8de75fc4fb391b2b09138cb7ab4715f50055c2b3ff1a47ef82",
+      "hash_status": "verified"
+    },
+    {
+      "path": "canonical_evaluation/loso_streaming/seed2024/result.json",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 4224,
+      "sha256": "b52d04c93801824be15b11c76fad832353e57ec1218a4cd77cc55ce8b81a5c28",
+      "hash_status": "verified"
+    },
+    {
+      "path": "canonical_evaluation/loso_streaming/seed2024/sample_scores.csv",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 321513,
+      "sha256": "21630a67f3d01c6c2f85cdfbdcce78963b103657c09b78f551e9703185e40ac2",
+      "hash_status": "verified"
+    },
+    {
+      "path": "canonical_evaluation/loso_streaming/seed2024/score_arrays.npz",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 35473,
+      "sha256": "9b1852f0c792b90b954225cbf6e20abcebe5e8193187b5dc7d0643e0f7462d07",
+      "hash_status": "verified"
+    },
+    {
+      "path": "canonical_evaluation/loso_streaming/seed2024/thresholds.json",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 1743,
+      "sha256": "2cd870742d9f243b47a3427b4b67111da5251dba18da195e2c7a29e8b72e50f3",
+      "hash_status": "verified"
+    },
+    {
+      "path": "canonical_evaluation/loso_voip/seed2022/SUCCESS",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 8,
+      "sha256": "1f513d4ecec4e91ddd48da1a59b6d96f1b76c374dc1da641980782a34f43b102",
+      "hash_status": "verified"
+    },
+    {
+      "path": "canonical_evaluation/loso_voip/seed2022/latent_outputs.npz",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 3558542,
+      "sha256": "be6465498ebbdf26336c38ffd8a9c636d7d1b585f9cfc2e8c6a01a77a6989113",
+      "hash_status": "verified"
+    },
+    {
+      "path": "canonical_evaluation/loso_voip/seed2022/lineage.json",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 546,
+      "sha256": "2768189ffa93f4861c6c1fae2b131a94ec3fe8ca844e2360d60499466c3481db",
+      "hash_status": "verified"
+    },
+    {
+      "path": "canonical_evaluation/loso_voip/seed2022/metrics.json",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 2923,
+      "sha256": "6d963a142cc3e543060763c4ea2e4530657c3cd285717aff62cf77b26f48b602",
+      "hash_status": "verified"
+    },
+    {
+      "path": "canonical_evaluation/loso_voip/seed2022/result.json",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 4233,
+      "sha256": "1dd93a0a623f668fd9d8d0f03ce24eba66c7942d3bb23371987b7f537cb13967",
+      "hash_status": "verified"
+    },
+    {
+      "path": "canonical_evaluation/loso_voip/seed2022/sample_scores.csv",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 209594,
+      "sha256": "339b02083284deb6115d10de6db10a50b6f247f2365c70fc93d9856dc8da0954",
+      "hash_status": "verified"
+    },
+    {
+      "path": "canonical_evaluation/loso_voip/seed2022/score_arrays.npz",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 27710,
+      "sha256": "691164e80d37476d2138d964c66ec0a91703ff30d80bb785742fb1cba29375d3",
+      "hash_status": "verified"
+    },
+    {
+      "path": "canonical_evaluation/loso_voip/seed2022/thresholds.json",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 1746,
+      "sha256": "dd779d10ff7677e2fa0f1446b2d0df738ad684839ef6a3401db8b1316a8a483b",
+      "hash_status": "verified"
+    },
+    {
+      "path": "canonical_evaluation/loso_voip/seed2023/SUCCESS",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 8,
+      "sha256": "1f513d4ecec4e91ddd48da1a59b6d96f1b76c374dc1da641980782a34f43b102",
+      "hash_status": "verified"
+    },
+    {
+      "path": "canonical_evaluation/loso_voip/seed2023/latent_outputs.npz",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 3561858,
+      "sha256": "d4bb337e71c34d12eb21b9f2c364791706aaefa13d27fc8963e22a3a83aba642",
+      "hash_status": "verified"
+    },
+    {
+      "path": "canonical_evaluation/loso_voip/seed2023/lineage.json",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 546,
+      "sha256": "d2ea7754dd5d2d2a02e39c6c1e592b0c44c39b09eeb38c4fb294894ed2b94e6c",
+      "hash_status": "verified"
+    },
+    {
+      "path": "canonical_evaluation/loso_voip/seed2023/metrics.json",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 2938,
+      "sha256": "7cad40ed48825a5f78320120f40871645da096a657cc0d040561ddc73b2a0fd5",
+      "hash_status": "verified"
+    },
+    {
+      "path": "canonical_evaluation/loso_voip/seed2023/result.json",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 4243,
+      "sha256": "9c80a8fb2fc108d461a886b664e5bd25fcbe8cc4b73bed8537a359bb8cd969f5",
+      "hash_status": "verified"
+    },
+    {
+      "path": "canonical_evaluation/loso_voip/seed2023/sample_scores.csv",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 209805,
+      "sha256": "489bed1e2f05c6c2705507eed8639f7aec5d387422fdd1372559e226f497d0db",
+      "hash_status": "verified"
+    },
+    {
+      "path": "canonical_evaluation/loso_voip/seed2023/score_arrays.npz",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 27466,
+      "sha256": "0aa0bcc9488462e696d507e3bebc2c54cb8504a09191415a385ebcf9415b0cd5",
+      "hash_status": "verified"
+    },
+    {
+      "path": "canonical_evaluation/loso_voip/seed2023/thresholds.json",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 1746,
+      "sha256": "70c338444e31ddf5af85289fb0e5a41403042c50c5f3d38f9d2644c599b79d48",
+      "hash_status": "verified"
+    },
+    {
+      "path": "canonical_evaluation/loso_voip/seed2024/SUCCESS",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 8,
+      "sha256": "1f513d4ecec4e91ddd48da1a59b6d96f1b76c374dc1da641980782a34f43b102",
+      "hash_status": "verified"
+    },
+    {
+      "path": "canonical_evaluation/loso_voip/seed2024/latent_outputs.npz",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 3559821,
+      "sha256": "f6d267727420daa683417ffeec9d3beed9b0e84f54d9a86fd340946a5ac26c15",
+      "hash_status": "verified"
+    },
+    {
+      "path": "canonical_evaluation/loso_voip/seed2024/lineage.json",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 546,
+      "sha256": "805f9a1fc349596d3a0568bfc5df132487e8f31c0b0307b1cb7c2c67a275ab81",
+      "hash_status": "verified"
+    },
+    {
+      "path": "canonical_evaluation/loso_voip/seed2024/metrics.json",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 2937,
+      "sha256": "42f94bf813c9551d06f14c1aa56f61d7eb3d9f70055b388d551807ed4b98cca6",
+      "hash_status": "verified"
+    },
+    {
+      "path": "canonical_evaluation/loso_voip/seed2024/result.json",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 4245,
+      "sha256": "c739a6b0ea170c64ac8aa2ba8a59320cc51c7c0e481ce1f01495f45c42e5697c",
+      "hash_status": "verified"
+    },
+    {
+      "path": "canonical_evaluation/loso_voip/seed2024/sample_scores.csv",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 209069,
+      "sha256": "556d20fa0a37dab8cc3ba9cc9404c3a2abfe4f870c778136d997c718c9a96981",
+      "hash_status": "verified"
+    },
+    {
+      "path": "canonical_evaluation/loso_voip/seed2024/score_arrays.npz",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 27667,
+      "sha256": "8148d5305837c7f4ba96b42df70a39ba07c12e89704df062f7302f04948d25a0",
+      "hash_status": "verified"
+    },
+    {
+      "path": "canonical_evaluation/loso_voip/seed2024/thresholds.json",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 1746,
+      "sha256": "c504d5e1f938438b6c34b19a4fb62f01424ddc21e045dec6ecd3b653376eac53",
+      "hash_status": "verified"
+    },
+    {
+      "path": "completion_verification.json",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 9311,
+      "sha256": "eb228d43079faaf100aa8ae3ccc791495a138b41190df160ffa6091bfc9f221a",
+      "hash_status": "verified"
+    },
+    {
+      "path": "des_v0_scores.csv",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 3395266,
+      "sha256": "3faf6ac0bbc8eff8f4b018458d93cc6e221945dc50f9862c1fbad2890846b354",
+      "hash_status": "verified"
+    },
+    {
+      "path": "des_v1_scores.csv",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 3403836,
+      "sha256": "12b20a4701e968e1e05550e1c2a812e09203f74673ba10d09994c90f17c3da36",
+      "hash_status": "verified"
+    },
+    {
+      "path": "diagnostics/streaming_seed2023_parity.json",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 910,
+      "sha256": "c8bc1f3135a803b5930152f6268f18e2036337fd8dd914c03850ca273614aa0a",
+      "hash_status": "verified"
+    },
+    {
+      "path": "existing_implementation_reuse_audit.md",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 654,
+      "sha256": "e6430db638e8db26607e3b41476f5d4ace0ada1fd9db885340a38be864d5df48",
+      "hash_status": "verified"
+    },
+    {
+      "path": "failure_and_blocker_log.md",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 1036,
+      "sha256": "d27966dab9c9afb92d47e853aba188308ee02108405a518c63c960b42e4634ee",
+      "hash_status": "verified"
+    },
+    {
+      "path": "h1_scores.csv",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 3408096,
+      "sha256": "e8e2caaf6bd027652224fada57c09f8ed3d3a2bfb3b5bb57bf6ba04d80f682df",
+      "hash_status": "verified"
+    },
+    {
+      "path": "known_classifier_results.csv",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 3562,
+      "sha256": "a73e1499f97f8aa436dfc944e6735ed1d209162060d65d46a53d5008ae7b0ba3",
+      "hash_status": "verified"
+    },
+    {
+      "path": "known_rejection_analysis.csv",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 20079,
+      "sha256": "bd966ea99c625883ca96ad31ee6bc8a8e1ce9e622fb4ede9969db3da95210b61",
+      "hash_status": "verified"
+    },
+    {
+      "path": "known_unknown_membership_audit.csv",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 5460,
+      "sha256": "3fc87d2e2fd43b47567d9b42f3d6025a5ea98846637613ef83c301a0d996572c",
+      "hash_status": "verified"
+    },
+    {
+      "path": "known_val_thresholds.csv",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 11285,
+      "sha256": "ac6cfb9f53b1d0e58cf4d80bf26d9a48bd302910406af3860b8417ccb5226c27",
+      "hash_status": "verified"
+    },
+    {
+      "path": "launcher_logs/loso_chat_seed2023.log",
+      "scope": "bundle",
+      "role": "log",
+      "size_bytes": 10479,
+      "sha256": "6860e1f31e01bbdded82d9997db36180a618d146124efa30cb52b31de153b613",
+      "hash_status": "verified"
+    },
+    {
+      "path": "launcher_logs/loso_chat_seed2024.log",
+      "scope": "bundle",
+      "role": "log",
+      "size_bytes": 9999,
+      "sha256": "e14e0a424086903d20f62bf104f3fc134b968ec3319071abb24769a7e6219819",
+      "hash_status": "verified"
+    },
+    {
+      "path": "launcher_logs/loso_email_seed2022.log",
+      "scope": "bundle",
+      "role": "log",
+      "size_bytes": 10732,
+      "sha256": "dc1e5ebd135d24d5fac695a0878f9f98144c0d74ec4e43729f814b95e9e9943c",
+      "hash_status": "verified"
+    },
+    {
+      "path": "launcher_logs/loso_email_seed2023.log",
+      "scope": "bundle",
+      "role": "log",
+      "size_bytes": 10687,
+      "sha256": "fcfcb7ddacec9a724abc64203ca137f533bbdf26ef5fa7b948ac555daa060aed",
+      "hash_status": "verified"
+    },
+    {
+      "path": "launcher_logs/loso_email_seed2024.log",
+      "scope": "bundle",
+      "role": "log",
+      "size_bytes": 10744,
+      "sha256": "89478eba6a38a8502ee45e56e9abfeaba2a9c959c2106cfb21db1cc75fa2c819",
+      "hash_status": "verified"
+    },
+    {
+      "path": "launcher_logs/loso_file_transfer_seed2022.log",
+      "scope": "bundle",
+      "role": "log",
+      "size_bytes": 10850,
+      "sha256": "aec5e5dce60a750bb27e2b49d45b9f0efb7028e0600223d81da4fc0b12171a50",
+      "hash_status": "verified"
+    },
+    {
+      "path": "launcher_logs/loso_file_transfer_seed2023.log",
+      "scope": "bundle",
+      "role": "log",
+      "size_bytes": 11010,
+      "sha256": "913bd568f1a796336df11378e1091f00e7bb14d12a6e9f91fc6defca5c84bbec",
+      "hash_status": "verified"
+    },
+    {
+      "path": "launcher_logs/loso_file_transfer_seed2024.log",
+      "scope": "bundle",
+      "role": "log",
+      "size_bytes": 10940,
+      "sha256": "7882288a8ae7f1bcfd67b506e376e546160c09cd10219dc722ea1642f1a6f701",
+      "hash_status": "verified"
+    },
+    {
+      "path": "launcher_logs/loso_p2p_seed2022.log",
+      "scope": "bundle",
+      "role": "log",
+      "size_bytes": 10073,
+      "sha256": "63af424fd0db03ccb0005e57c47389fb9384ed7eebd65a4169069642ccba170c",
+      "hash_status": "verified"
+    },
+    {
+      "path": "launcher_logs/loso_p2p_seed2023.log",
+      "scope": "bundle",
+      "role": "log",
+      "size_bytes": 10551,
+      "sha256": "4af8a3924df60c1def7f7f8b3eb2258eaaffc7c916ec1a4ec023e88a4e0c8824",
+      "hash_status": "verified"
+    },
+    {
+      "path": "launcher_logs/loso_p2p_seed2024.log",
+      "scope": "bundle",
+      "role": "log",
+      "size_bytes": 10515,
+      "sha256": "81f929837b3b7a818ba374742d1415ee1adb29b84d8aa5610492fa977169e68d",
+      "hash_status": "verified"
+    },
+    {
+      "path": "launcher_logs/loso_streaming_seed2022.log",
+      "scope": "bundle",
+      "role": "log",
+      "size_bytes": 10505,
+      "sha256": "2bbd4b5d78b27c6bd8f8c42de40095a8e44552cc403d7bd6cbb89fd95beda0fc",
+      "hash_status": "verified"
+    },
+    {
+      "path": "launcher_logs/loso_streaming_seed2023.log",
+      "scope": "bundle",
+      "role": "log",
+      "size_bytes": 7984,
+      "sha256": "39a590badf811db6fad5b252c707bf0dcc12cdf6da0d12dbd60472ae6c2dfbff",
+      "hash_status": "verified"
+    },
+    {
+      "path": "launcher_logs/loso_streaming_seed2024.log",
+      "scope": "bundle",
+      "role": "log",
+      "size_bytes": 10557,
+      "sha256": "e50b120b285dc876f592c93d5a8fa21da2881f17253e479cefcde59c50fb1e75",
+      "hash_status": "verified"
+    },
+    {
+      "path": "launcher_logs/loso_voip_seed2022.log",
+      "scope": "bundle",
+      "role": "log",
+      "size_bytes": 10643,
+      "sha256": "21bb49679d8fcfd6eee4f88146298339d1b0dbe4bcd67824562240749bb8cc45",
+      "hash_status": "verified"
+    },
+    {
+      "path": "launcher_logs/loso_voip_seed2023.log",
+      "scope": "bundle",
+      "role": "log",
+      "size_bytes": 10583,
+      "sha256": "ee7b29c9304bba240caa502013d8d863d5e6cd03b1fd80961e14529889e371a0",
+      "hash_status": "verified"
+    },
+    {
+      "path": "launcher_logs/loso_voip_seed2024.log",
+      "scope": "bundle",
+      "role": "log",
+      "size_bytes": 10048,
+      "sha256": "fcdf4fdfd12b7c42cfc53ad97a0cdba4f84c9291c276becb77da98f0754c09fb",
+      "hash_status": "verified"
+    },
+    {
+      "path": "method_identity_and_lineage.md",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 1028,
+      "sha256": "4e2510fa810f447baa523094b6c88fd2590e53b8cebda0eaf21f46f931acd0b8",
+      "hash_status": "verified"
+    },
+    {
+      "path": "od_native_scores.csv",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 3398776,
+      "sha256": "f5fb213d135c6547f8e03eb3b78c10e6ca6850ebb01e95edc58be0e6f6ad75f9",
+      "hash_status": "verified"
+    },
+    {
+      "path": "paired_vs_opendetect.csv",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 9541,
+      "sha256": "41c49266a9fc05b9dfbaadb7cbd592e24642d83dcbc96476901cb107c1f61dac",
+      "hash_status": "verified"
+    },
+    {
+      "path": "per_known_service_results.csv",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 41007,
+      "sha256": "4bfef5fd904b0852108c82cbe52a0320133322fa7d10f65f22bc0e42e92a70bd",
+      "hash_status": "verified"
+    },
+    {
+      "path": "per_unknown_service_results.csv",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 15052,
+      "sha256": "08a6a1ea4c793b57044f7ed624370e2da35f7f431ba239ac8ab6ecf4f3b621cc",
+      "hash_status": "verified"
+    },
+    {
+      "path": "preflight_verification.json",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 384,
+      "sha256": "db5932a84ccc226f42fac422cd42144f421de3712a03df86a1ca42612cc90b6b",
+      "hash_status": "verified"
+    },
+    {
+      "path": "protected_asset_hashes_after.json",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 3630,
+      "sha256": "d086455051836e7c5340ce3932afe707b612ef25f5dbb29871be634cdb50eab2",
+      "hash_status": "verified"
+    },
+    {
+      "path": "protected_asset_hashes_before.json",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 3630,
+      "sha256": "d086455051836e7c5340ce3932afe707b612ef25f5dbb29871be634cdb50eab2",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/loso_chat/seed2022/SUCCESS",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 8,
+      "sha256": "1f513d4ecec4e91ddd48da1a59b6d96f1b76c374dc1da641980782a34f43b102",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/loso_chat/seed2022/checkpoint.sha256",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 80,
+      "sha256": "577c4f78d446d2a8b36da1d982e647ddf933637c0d872a6ad19f96fb0fc0c750",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/loso_chat/seed2022/config.json",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 1276,
+      "sha256": "2f4b85f168ac2118b3aea6f6f3d23fc4dab5f315b2b68122a9526fda0d9d04e4",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/loso_chat/seed2022/latent_outputs.npz",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 3551199,
+      "sha256": "9201279face1b3c57eda3b1a33220b0fddd612beaa10e447d602430a0c901abf",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/loso_chat/seed2022/metrics.json",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 2809,
+      "sha256": "5ecd249533d44e4bc7da027e8014a3cd787ac7a4f5792f4025857d41d8b27a30",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/loso_chat/seed2022/model_best.pt",
+      "scope": "bundle",
+      "role": "checkpoint",
+      "size_bytes": 108331666,
+      "sha256": "4e3504df167ce2b1098bf28ab2280c2f992d45d6495ea7197bc59cb334179dbb",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/loso_chat/seed2022/result.json",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 3825,
+      "sha256": "70b6ab54241bb8a9530e87b3780ab0a56bdf4c6718264d49a1fb827d8f18cc7c",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/loso_chat/seed2022/sample_scores.csv",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 120658,
+      "sha256": "8ddac4e75c43e15559c1f071231e8bf26e5791bd4e4af7ef07b37a524b9a366c",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/loso_chat/seed2022/score_arrays.npz",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 19791,
+      "sha256": "d559d868a92482abeb0b345595ef1b6267a58f5ed7a6111a93488a48b1d37809",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/loso_chat/seed2022/thresholds.json",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 1741,
+      "sha256": "22a9ac76493e03075f91dd6be401bc1ae85ae36912b440be916e61978104d885",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/loso_chat/seed2022/training_log.csv",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 24643,
+      "sha256": "87a4663367c552ba9db507db2edd4ba5edafa43c77b7d007c6cacee2264f1ec0",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/loso_chat/seed2022/training_log.jsonl",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 49660,
+      "sha256": "b8a29103b8b5e19afd5802495c391c2d3bb755a8e4bc220c78f9e5484664d1a3",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/loso_chat/seed2023/SUCCESS",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 8,
+      "sha256": "1f513d4ecec4e91ddd48da1a59b6d96f1b76c374dc1da641980782a34f43b102",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/loso_chat/seed2023/checkpoint.sha256",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 80,
+      "sha256": "31c9fad7bc7d8fd41e020c9c9bf338500250b185dc9edfed7d616cd4ab563a3b",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/loso_chat/seed2023/config.json",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 1276,
+      "sha256": "0626ac172ec897b080e9f8afd901f7efbc05e3911f15899226bee086618266ba",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/loso_chat/seed2023/latent_outputs.npz",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 3577101,
+      "sha256": "1bee2444e13e02b47f6de715dbe50f126bfef33dbed361de8504216492ece933",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/loso_chat/seed2023/metrics.json",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 2831,
+      "sha256": "bf353a0f917fc5bc95d90d5079702ee4b945a9917fb183f779ce09165963e75d",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/loso_chat/seed2023/model_best.pt",
+      "scope": "bundle",
+      "role": "checkpoint",
+      "size_bytes": 108331666,
+      "sha256": "6223a74dfad40deda6810dc2f5a7a17ff6bf5fd990acc49c666c70d917e0301e",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/loso_chat/seed2023/result.json",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 3846,
+      "sha256": "7c7fea3f28ef03ae449b7894330a20785d026d26a481314a4cc487700db41518",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/loso_chat/seed2023/sample_scores.csv",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 120936,
+      "sha256": "70beb927bc8db7ae2cf4258d2f4eba33844914582d6a5bdb17ae10e8c4fc1f6e",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/loso_chat/seed2023/score_arrays.npz",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 19658,
+      "sha256": "4f56ab2198fca07d11c4864fd60a66c370496abcb8aa682da8484482848acf7e",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/loso_chat/seed2023/thresholds.json",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 1743,
+      "sha256": "c780892d358621b6ad52c719d82f21905de9887dcf33ab0f1b44494d39cd29b0",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/loso_chat/seed2023/training_log.csv",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 25867,
+      "sha256": "31dbb430d972d97fed2bfef86335eebe5b14426cd432327cb841aab0dc36b603",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/loso_chat/seed2023/training_log.jsonl",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 52229,
+      "sha256": "10d7aefec367e0881fb319a011473ff0201be7e2feabf4a5da4c9e6e2df93360",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/loso_chat/seed2024/SUCCESS",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 8,
+      "sha256": "1f513d4ecec4e91ddd48da1a59b6d96f1b76c374dc1da641980782a34f43b102",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/loso_chat/seed2024/checkpoint.sha256",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 80,
+      "sha256": "391be895fa2d15b5c21b305a19677425680c2ce46e792daf7f7e6c896d37a516",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/loso_chat/seed2024/config.json",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 1276,
+      "sha256": "b8e00dc69169d006d8402fe713645ff86b8a488aa7f1f35a60f7e61cdd4b60f6",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/loso_chat/seed2024/latent_outputs.npz",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 3553301,
+      "sha256": "56c040ca0c813d13081204a51ae275b287084c5247c7ab233e044bcd3a19f4ba",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/loso_chat/seed2024/metrics.json",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 2819,
+      "sha256": "ab830d410ea04d86f2568592fbb2018c9ca6376b22f2360bf4c0b7f71184c2e5",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/loso_chat/seed2024/model_best.pt",
+      "scope": "bundle",
+      "role": "checkpoint",
+      "size_bytes": 108331666,
+      "sha256": "5b7248a7700bedfe977e662a329602d893c79c98ba1feff7b400087251f2bbf9",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/loso_chat/seed2024/result.json",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 3835,
+      "sha256": "d0ccb8338e2d86142a940bd8890d70fbd8c7ccf5be940ce692ef83ea90f09471",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/loso_chat/seed2024/sample_scores.csv",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 120810,
+      "sha256": "868d452af149fc9f770b2491168693264913e052edb40f023ae35cd66eb46bf8",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/loso_chat/seed2024/score_arrays.npz",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 19815,
+      "sha256": "98435023469df0f1c01185ffd845fb2281a49fc872184980b608b8511bf6f5dc",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/loso_chat/seed2024/thresholds.json",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 1743,
+      "sha256": "3fd5d1cf48e6c406ff0719475c9f651fefb4807050f7e412b458b788243c1c07",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/loso_chat/seed2024/training_log.csv",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 24129,
+      "sha256": "dea0504f9c7001edb623c34bf09df4fbff3da260dd474617da44a63155981880",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/loso_chat/seed2024/training_log.jsonl",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 48608,
+      "sha256": "37c8140350f725785b79297694c9bae373c95b94b09de7dddbe78eb616d6879a",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/loso_email/seed2022/SUCCESS",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 8,
+      "sha256": "1f513d4ecec4e91ddd48da1a59b6d96f1b76c374dc1da641980782a34f43b102",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/loso_email/seed2022/checkpoint.sha256",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 80,
+      "sha256": "48c77e5e223f14a53d5bdd031a86c8630032f1c1ea043622c61231ffe3652398",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/loso_email/seed2022/config.json",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 1277,
+      "sha256": "7a3f15af1071634146615b8c2ee1a4e96a33e73b924807a53ec6ddfb6aad8b4a",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/loso_email/seed2022/latent_outputs.npz",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 3558767,
+      "sha256": "b55292e29378e509b1ff4ebb12c16accdf89b7947d74f341a223640e8ce1f78c",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/loso_email/seed2022/metrics.json",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 2912,
+      "sha256": "737d4b70c5c6e246db23a301869530ac910faf95f389a66486328099af804f7a",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/loso_email/seed2022/model_best.pt",
+      "scope": "bundle",
+      "role": "checkpoint",
+      "size_bytes": 108331730,
+      "sha256": "4ebacbd08312bcf591b42648e9d50801ad8b06da2537bfb0664b5f32828749d7",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/loso_email/seed2022/result.json",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 3932,
+      "sha256": "0a560dd9358c916f2b3b9c61bdb77c26aec8945934d0c911b776004932cc3688",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/loso_email/seed2022/sample_scores.csv",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 124356,
+      "sha256": "c0e423890a7ffa6f5a6bdf6d0309abdb6d28d75a5fb2e2bb9a019faae1e182ab",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/loso_email/seed2022/score_arrays.npz",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 20374,
+      "sha256": "963c56493262f9f53558b8ba4edf314c886f73b2a497a69cc0936b98b660c673",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/loso_email/seed2022/thresholds.json",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 1743,
+      "sha256": "0936f816cda7cd98c279638f4fac4b618abf4309edd207802e75432881c7a7b3",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/loso_email/seed2022/training_log.csv",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 26020,
+      "sha256": "830edbe13e7a7afb646c1dbb4112107d4e072a4d4998475e8c391816f90729c6",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/loso_email/seed2022/training_log.jsonl",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 52651,
+      "sha256": "7a6046c8329a89dcfb06a926de93d8f9ea46e1dc6fe38152469983c2df44a2a0",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/loso_email/seed2023/SUCCESS",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 8,
+      "sha256": "1f513d4ecec4e91ddd48da1a59b6d96f1b76c374dc1da641980782a34f43b102",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/loso_email/seed2023/checkpoint.sha256",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 80,
+      "sha256": "b6ef841cc734ffe57cbf77cffe22d3ea2a5fe882a9bd26faa72e33df200e2030",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/loso_email/seed2023/config.json",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 1277,
+      "sha256": "dc618a793f3f34674be6f5330fcca213403819c1406dfcee9b52f9924b1bbd2c",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/loso_email/seed2023/latent_outputs.npz",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 3568418,
+      "sha256": "7cd5fe97afb5aeee03089eecffff00cbf69d11cf653c295924a36a0b1d8fe1de",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/loso_email/seed2023/metrics.json",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 2940,
+      "sha256": "0f136f2f46c512e922753a5b25eeaf96b372a8e09ee6f90866c430395b553dbf",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/loso_email/seed2023/model_best.pt",
+      "scope": "bundle",
+      "role": "checkpoint",
+      "size_bytes": 108331730,
+      "sha256": "b4924739a361a64730442124768d5761ca502f9024cf8596d193909624138da6",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/loso_email/seed2023/result.json",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 3955,
+      "sha256": "5eb070f35a8a026ed962f05f13079e490e03f62a2c70e0d5186e3b7d33c8476c",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/loso_email/seed2023/sample_scores.csv",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 124656,
+      "sha256": "e28cb9984d5a8ca2f8f91618010c572482c8291e0f2d5f218f640d32b190b8de",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/loso_email/seed2023/score_arrays.npz",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 20410,
+      "sha256": "018a5f58be2512f996fb5011b44903be3e87bd1f44ad2b4dec56130eb3fc07e1",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/loso_email/seed2023/thresholds.json",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 1743,
+      "sha256": "e8d182d2fdf3f6e5ff4da6b85b95517dd1fdcf3cf815eac3d72f4ebc9302b834",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/loso_email/seed2023/training_log.csv",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 25817,
+      "sha256": "63fc66fc89255dde8cbdaecb90634bd5784f8851fb4940d747798179601f9e76",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/loso_email/seed2023/training_log.jsonl",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 52179,
+      "sha256": "bfffe1214e241afd6093a120223d0ffad4c3ae74a13323f298ad439a7e1f8118",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/loso_email/seed2024/SUCCESS",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 8,
+      "sha256": "1f513d4ecec4e91ddd48da1a59b6d96f1b76c374dc1da641980782a34f43b102",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/loso_email/seed2024/checkpoint.sha256",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 80,
+      "sha256": "1f1d45550985bad45b4b35a2fce907854b265db655800498c50b94fbbecd32d7",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/loso_email/seed2024/config.json",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 1277,
+      "sha256": "f1d74388b088b89e703dde7329d17a47677a03db539402c37652c879a78ce305",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/loso_email/seed2024/latent_outputs.npz",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 3562617,
+      "sha256": "e4946d69fd86e1b27b77e74ff32a843cc868815f79db8928149368ebcc45bac0",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/loso_email/seed2024/metrics.json",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 2928,
+      "sha256": "119a66245278ebc109e7d63aece608bf4a396f81e6ab43246ba6bf248594aafa",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/loso_email/seed2024/model_best.pt",
+      "scope": "bundle",
+      "role": "checkpoint",
+      "size_bytes": 108331730,
+      "sha256": "7686096665a372e83c8ad34601973298ecc8c93e9dd0d433e547787ab7ace7c1",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/loso_email/seed2024/result.json",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 3944,
+      "sha256": "27a4e89f468970f86b8c9b76c589c359f26fe1abdaed93a8ed14884b76f53d2e",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/loso_email/seed2024/sample_scores.csv",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 124568,
+      "sha256": "88ebc3ecfe22bf4ce8d0a2237388ecbcb025b6dfe72177b055222ad51a6d8ab6",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/loso_email/seed2024/score_arrays.npz",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 20495,
+      "sha256": "3ffae8451eb5e76f97837d3aaac74ccd4da3f8f345b8e9f25471eb6e8f8d907f",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/loso_email/seed2024/thresholds.json",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 1743,
+      "sha256": "81696f43e72273918fedf47ab82cc63e1217ac603e3a3baf453ee3bd015decab",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/loso_email/seed2024/training_log.csv",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 26086,
+      "sha256": "b67794961ef14e96567015c869957a4c14179e60007b3f7b9ad91814a8dff9ba",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/loso_email/seed2024/training_log.jsonl",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 52717,
+      "sha256": "c3318e0f48165afa16c9c46cc86b7bf8a48bf11f42928ba99538757236e319bd",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/loso_file_transfer/seed2022/SUCCESS",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 8,
+      "sha256": "1f513d4ecec4e91ddd48da1a59b6d96f1b76c374dc1da641980782a34f43b102",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/loso_file_transfer/seed2022/checkpoint.sha256",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 80,
+      "sha256": "9ef026e11cad3d5f0e5215373fc2924e0076245ac9d2bd0364c3f743c023b1d8",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/loso_file_transfer/seed2022/config.json",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 1285,
+      "sha256": "691e69bdcccfcf5bd02bc9cae9c975b850b2fcc0298b6df886a09dc4a55dc709",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/loso_file_transfer/seed2022/latent_outputs.npz",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 3555693,
+      "sha256": "576e34f92bea29f570f95792cbb0c384449c9abf18a00fd228840ad79815bb35",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/loso_file_transfer/seed2022/metrics.json",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 2908,
+      "sha256": "8dc901ca8aefb8ba78e74d2de8f8da742c9a8c0f59b5180f5a4c2b93b15b00fb",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/loso_file_transfer/seed2022/model_best.pt",
+      "scope": "bundle",
+      "role": "checkpoint",
+      "size_bytes": 108331730,
+      "sha256": "e188b31e168f934fd192c753663e40f135778404d613365471b2e85b518ed793",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/loso_file_transfer/seed2022/result.json",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 3934,
+      "sha256": "598641204b4b5af0ca991d14d4a94b3dcebbb11a3196b5b4cd9fd81e379f002c",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/loso_file_transfer/seed2022/sample_scores.csv",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 183334,
+      "sha256": "a4e4366b194e45f3bdbad8fbd044de141199333b9e77374aa7620ac071eedce8",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/loso_file_transfer/seed2022/score_arrays.npz",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 25005,
+      "sha256": "b6d20923304ae7a1152f1935aeb6b06eb7708a2e3654c11ac59a25b4d91f6d9b",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/loso_file_transfer/seed2022/thresholds.json",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 1740,
+      "sha256": "93b33862164fe2ea49ab424944511009c481f85097b7e8cec1aa0291c75f2d22",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/loso_file_transfer/seed2022/training_log.csv",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 23954,
+      "sha256": "ceaf9e0d83860d3a741be7c7231b053804e9c403b3ebc3cf6d27ddd354db6689",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/loso_file_transfer/seed2022/training_log.jsonl",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 48164,
+      "sha256": "0dc84f3c05ee4e5788dabc0db5ab9a455f8001ad57aa85a0a4abef6307c54412",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/loso_file_transfer/seed2023/SUCCESS",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 8,
+      "sha256": "1f513d4ecec4e91ddd48da1a59b6d96f1b76c374dc1da641980782a34f43b102",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/loso_file_transfer/seed2023/checkpoint.sha256",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 80,
+      "sha256": "75f4e81a23cd1df715dab6d25e4bce03a0f40adddbdebbccfc1dd6b1a2fd8d81",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/loso_file_transfer/seed2023/config.json",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 1285,
+      "sha256": "0742653e5aa44d21c8f9df4a800fb60b47ac5705cd08f15dc6ce28f3978e5dbb",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/loso_file_transfer/seed2023/latent_outputs.npz",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 3562279,
+      "sha256": "e117ec3a3ff5f4edb464105385e2e153996941b63e5bd56b65561298e8eed15e",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/loso_file_transfer/seed2023/metrics.json",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 2918,
+      "sha256": "be89cd61ccadbf131315d8e60c8439c7b2f7452a3430685244b67d793309bce6",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/loso_file_transfer/seed2023/model_best.pt",
+      "scope": "bundle",
+      "role": "checkpoint",
+      "size_bytes": 108331730,
+      "sha256": "212f300bd11bb23e73461850bdad846b8d5bde902bb20e09f4138f76a0466ec2",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/loso_file_transfer/seed2023/result.json",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 3942,
+      "sha256": "8837ad1de5173541cf75b33e099a97df52393385c612e41c752ff22f1dfc29db",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/loso_file_transfer/seed2023/sample_scores.csv",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 184264,
+      "sha256": "26ad6ca54b27f80239b82065a06334bcf59d9014e72431723643db80ca240b68",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/loso_file_transfer/seed2023/score_arrays.npz",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 24824,
+      "sha256": "7c62cf37de1bba78dceefa230f2e80582be2293854c9fabb4d4411650b38f7c9",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/loso_file_transfer/seed2023/thresholds.json",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 1745,
+      "sha256": "7b712e08254d24a2b60767e03026a330f37c90ca97881fdead671dc3f9c1780e",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/loso_file_transfer/seed2023/training_log.csv",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 24253,
+      "sha256": "44b61942ae1d318869b64837ad854abbd2e75dd946d5ce1adfa16b765da183cc",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/loso_file_transfer/seed2023/training_log.jsonl",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 49001,
+      "sha256": "6562bd07c47c2236abb76653b27ac13a2bcbce812d494875a19c957557a600a4",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/loso_file_transfer/seed2024/SUCCESS",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 8,
+      "sha256": "1f513d4ecec4e91ddd48da1a59b6d96f1b76c374dc1da641980782a34f43b102",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/loso_file_transfer/seed2024/checkpoint.sha256",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 80,
+      "sha256": "164dcc22a5584b9c4b5e663cef59cad1ef632781ec34c6d86dc9562e8f5e36aa",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/loso_file_transfer/seed2024/config.json",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 1285,
+      "sha256": "10f3b0683c83840ade328782935f35f67bf990c460fb062ce7a3f88f63b28fc8",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/loso_file_transfer/seed2024/latent_outputs.npz",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 3557332,
+      "sha256": "a0b57e293719d9e3dccb0e7806880c78426ae32bf14cd06e516f7cf1b5317c8c",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/loso_file_transfer/seed2024/metrics.json",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 2923,
+      "sha256": "6b0844b56473ab379e124ad3fcb5df1e48b07d52086aa2fb4cca3d86401c1088",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/loso_file_transfer/seed2024/model_best.pt",
+      "scope": "bundle",
+      "role": "checkpoint",
+      "size_bytes": 108331730,
+      "sha256": "51111e0b6a896eb9e310710b14d00699c95e7bbd88aa878b67c34ebc2ddf6a91",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/loso_file_transfer/seed2024/result.json",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 3948,
+      "sha256": "275950de1385f036fd4d2a35952477b3108793e6b05ea34e62b78c978d368904",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/loso_file_transfer/seed2024/sample_scores.csv",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 183863,
+      "sha256": "4d1ddd6c3b4db0ead3ed39c634a93b4059ca3cade773ed1e5e04413b2a290f73",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/loso_file_transfer/seed2024/score_arrays.npz",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 25065,
+      "sha256": "8cfa8e9ef810a7ec09a0dfe5bb1dd145ea8a8cce09242e620f3d008005a2c2c4",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/loso_file_transfer/seed2024/thresholds.json",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 1741,
+      "sha256": "fbe59476a85df43c9f78a3a9f3570593181bb8dfc5ee94f762493891057a2b7c",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/loso_file_transfer/seed2024/training_log.csv",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 24247,
+      "sha256": "fee2e89850a86ee86ef37ee17bb84649e66a8c6b84c79083b4847ad591784870",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/loso_file_transfer/seed2024/training_log.jsonl",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 48726,
+      "sha256": "8b1099325d044b8c44210e1f359e83741e68443c3c15c83132156f4fe9efac7e",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/loso_p2p/seed2022/SUCCESS",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 8,
+      "sha256": "1f513d4ecec4e91ddd48da1a59b6d96f1b76c374dc1da641980782a34f43b102",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/loso_p2p/seed2022/checkpoint.sha256",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 80,
+      "sha256": "7b52b380861457c9b08646fd0e3422559a6b02f96ab479df9a0e119ce187ba52",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/loso_p2p/seed2022/config.json",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 1275,
+      "sha256": "b10949d82c39c0292cd3c548d590cc43b3a47269fc443aa6065a25e25a5eb66b",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/loso_p2p/seed2022/latent_outputs.npz",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 3557761,
+      "sha256": "81313fc2c538737e68f38adf7fdcee31dac7cd58107eafa31de2eca46f5c4890",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/loso_p2p/seed2022/metrics.json",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 2920,
+      "sha256": "0fbcfd74fb22b10ead62f7a706bb18fb3c838b30a3107dfb6941d20600333275",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/loso_p2p/seed2022/model_best.pt",
+      "scope": "bundle",
+      "role": "checkpoint",
+      "size_bytes": 108331666,
+      "sha256": "f5e61747924eca2f493bc3401dbaa4bdabe885f123848f389c6631841aeb47fe",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/loso_p2p/seed2022/result.json",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 3935,
+      "sha256": "8ba1aa32c1d1a1cd8810c17bcf48eaa454ebf72e280505fa3f64064c458d6f0e",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/loso_p2p/seed2022/sample_scores.csv",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 297779,
+      "sha256": "3c03cb7cd07118f09b6b944af4019f0de65f46faecd225a67f377c3bc00b1594",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/loso_p2p/seed2022/score_arrays.npz",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 34808,
+      "sha256": "3e8ac77d16114218bcc33ba7ba876520f00c260af606dbec66488006e86010ec",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/loso_p2p/seed2022/thresholds.json",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 1744,
+      "sha256": "5e81d972b888b031540845865fbf9b23b444944a8ab5766dea5159712f9ef4e0",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/loso_p2p/seed2022/training_log.csv",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 24153,
+      "sha256": "164c828a261f6730505d44be52ac23069ae172c262275585427ad5284478d539",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/loso_p2p/seed2022/training_log.jsonl",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 48901,
+      "sha256": "2fd83d3ecb8a883621bd52efbb18cfbd2a18af27c2cf32075c86dee9e6481fd4",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/loso_p2p/seed2023/SUCCESS",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 8,
+      "sha256": "1f513d4ecec4e91ddd48da1a59b6d96f1b76c374dc1da641980782a34f43b102",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/loso_p2p/seed2023/checkpoint.sha256",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 80,
+      "sha256": "e04b35a66405eeb5ec46919538284c3851bb167cec3c3c18f02ed877ff7b7f35",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/loso_p2p/seed2023/config.json",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 1275,
+      "sha256": "15ac9a0aae1de1bf5053dea6505391243affb136cf6f9072eae56cd0a7e28c19",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/loso_p2p/seed2023/latent_outputs.npz",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 3571034,
+      "sha256": "cf327ded7a894383b5b352b81775db8740611e26480fffc0550ebbc8edaf4f89",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/loso_p2p/seed2023/metrics.json",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 2938,
+      "sha256": "c8428fcd50d1e4b89b713dd843aba852b2578b6e7be47a4907efe3c1dc2b7ff2",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/loso_p2p/seed2023/model_best.pt",
+      "scope": "bundle",
+      "role": "checkpoint",
+      "size_bytes": 108331666,
+      "sha256": "4d235d2013a4e6814b9722ee8e601ec4b5e198fd172cec034140ffa2b40fb725",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/loso_p2p/seed2023/result.json",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 3951,
+      "sha256": "fd16c7c060d436981288b0eb937d57f132d457fb79fb6c2a71a567402df9bb7b",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/loso_p2p/seed2023/sample_scores.csv",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 297349,
+      "sha256": "5897133fc6809cc570162b383f5e7d98a2741af393ee2c87c2520bf13c6adb6b",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/loso_p2p/seed2023/score_arrays.npz",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 34623,
+      "sha256": "523544745d632a166dd24a3cbc9806c714a8d96540304d6b1692105a5339b7fb",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/loso_p2p/seed2023/thresholds.json",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 1744,
+      "sha256": "e2b6660270dc768cbfba175066aaf1f9c52fc312a2230ff745bd683591932c06",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/loso_p2p/seed2023/training_log.csv",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 26053,
+      "sha256": "2c142feb18ebab0fcadea555d434fadb4870883443b0700b2ccbd1aa0ed3d5ef",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/loso_p2p/seed2023/training_log.jsonl",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 52684,
+      "sha256": "59fd28cf3045b97c92c8729d71abeaf575c34e268befd0a360311224743707e2",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/loso_p2p/seed2024/SUCCESS",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 8,
+      "sha256": "1f513d4ecec4e91ddd48da1a59b6d96f1b76c374dc1da641980782a34f43b102",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/loso_p2p/seed2024/checkpoint.sha256",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 80,
+      "sha256": "87f14c4d6285b488567073fc0c6f936224b98cf24c5d537f1e17a816897b3e9e",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/loso_p2p/seed2024/config.json",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 1275,
+      "sha256": "2c3d30896a3ec5a13ce7a139e01410bb45d9149fcc7f69ba246c2c1a0c43a9ab",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/loso_p2p/seed2024/latent_outputs.npz",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 3557281,
+      "sha256": "930cb78772840d52d67e52158fc69c515297a46e401197ffdfe667478a2a773e",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/loso_p2p/seed2024/metrics.json",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 2899,
+      "sha256": "ed2de1f81373ce624ef83894f1b2447ba920eb6e0f4ff33d65315625efb6b6c6",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/loso_p2p/seed2024/model_best.pt",
+      "scope": "bundle",
+      "role": "checkpoint",
+      "size_bytes": 108331666,
+      "sha256": "99bc1dbc0ae3d477fb252159d2688994aa81f1ccc43d796e9959e88439b34408",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/loso_p2p/seed2024/result.json",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 3915,
+      "sha256": "9f43bf1288f526891235f6149137bc7ee45b998c4ae3bb75a6a8126bd98057d5",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/loso_p2p/seed2024/sample_scores.csv",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 297766,
+      "sha256": "d60fb497607b63990e59a01f05fb98bb7d95c8861b65606cd4825639295fc727",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/loso_p2p/seed2024/score_arrays.npz",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 34461,
+      "sha256": "0931e1483b802c42d0c2cdc659fe11a340263c46137fcf968debcbb402aa586b",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/loso_p2p/seed2024/thresholds.json",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 1737,
+      "sha256": "8e9a74dff93b04ae347b351afc3d552befcf2c658cb9b3e84b0154aebd3dd6ce",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/loso_p2p/seed2024/training_log.csv",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 26090,
+      "sha256": "269422f8da414106ef6e39ce366c90d892c5bf660ff63af5a5faa9e594b257a9",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/loso_p2p/seed2024/training_log.jsonl",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 52721,
+      "sha256": "72dc295b21848cf6b9bed1df3c8868c48c6b4da9e3fafd08dfda46afdc0b15b5",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/loso_streaming/seed2022/SUCCESS",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 8,
+      "sha256": "1f513d4ecec4e91ddd48da1a59b6d96f1b76c374dc1da641980782a34f43b102",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/loso_streaming/seed2022/checkpoint.sha256",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 80,
+      "sha256": "0672f9fee3281dea2e7c15ed459fbcfe18b7a7abadc8e8402a2572a32c4892d5",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/loso_streaming/seed2022/config.json",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 1281,
+      "sha256": "bde276b97c382e12156898192a6b78510cf83cbf550d81208a4b2d5443803e78",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/loso_streaming/seed2022/latent_outputs.npz",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 3561918,
+      "sha256": "dc5dac1ee28d42e21e70d2389620f6f3b777f61742ad179abab9d91ca5d17f26",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/loso_streaming/seed2022/metrics.json",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 2932,
+      "sha256": "59ba34f55c7dac6b0ed562cf99b77a29adacd7f6e86a0669f44221b1100a40c9",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/loso_streaming/seed2022/model_best.pt",
+      "scope": "bundle",
+      "role": "checkpoint",
+      "size_bytes": 108331730,
+      "sha256": "da994c7b7e87384cbae727b78db591127dace1a45e0e8c0439c3638d089b66b1",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/loso_streaming/seed2022/result.json",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 3953,
+      "sha256": "76f75e13a9ba42c45c208ab06289d0b8a6e43d97cfb54fb936cf3b9077a22fbb",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/loso_streaming/seed2022/sample_scores.csv",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 322249,
+      "sha256": "73846687fbe2475337d2bff09a017ac04c0b38e2622c4199728648081f64adf7",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/loso_streaming/seed2022/score_arrays.npz",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 35760,
+      "sha256": "ed37be0dd319f480438cd621511b853599ce28869e9609a9bb723e05e2bab554",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/loso_streaming/seed2022/thresholds.json",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 1744,
+      "sha256": "0e38457df3425d46d1768fab7ca9b3135ee2c9683c3b647ad4acd808e2dff621",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/loso_streaming/seed2022/training_log.csv",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 23905,
+      "sha256": "b525a6a09a8903fdf34ffe32288ac6ad4830361449c211a25ae4f17cadb0caf0",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/loso_streaming/seed2022/training_log.jsonl",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 48115,
+      "sha256": "b61ae2dcb6be939e4dc264d54f479bcb7c5955c987e322e3b7881ac15a36f4b8",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/loso_streaming/seed2023/FAILURE.json",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 831,
+      "sha256": "6e5f239a57047fdb9914b9510aabb71f0dfe7432eb38f844829f9dc7e725512c",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/loso_streaming/seed2023/config.json",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 1281,
+      "sha256": "4c585560b834a1951c0608401c00160b2a550d7ecd5313583bd8bb9204a7e283",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/loso_streaming/seed2023/model_best.pt",
+      "scope": "bundle",
+      "role": "checkpoint",
+      "size_bytes": 108331730,
+      "sha256": "8934d6a86b325053a8793b4dd7b667a71460a3a904d5d31f45e73ebc8134157f",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/loso_streaming/seed2023/training_log.csv",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 26153,
+      "sha256": "4affa1131a49c441073e5bb46502064288b847bc736a03bfdb620dfdfc4d81da",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/loso_streaming/seed2023/training_log.jsonl",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 52784,
+      "sha256": "a62ed2cb72fd9e672a39cb1a87cd85d0720fa366ac008fca3e1b29ff07aeb3d4",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/loso_streaming/seed2024/SUCCESS",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 8,
+      "sha256": "1f513d4ecec4e91ddd48da1a59b6d96f1b76c374dc1da641980782a34f43b102",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/loso_streaming/seed2024/checkpoint.sha256",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 80,
+      "sha256": "d2ff67533de74e3be5e5a66f5bd521b48ca798c931a40c6a7c2be935c3b6cf87",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/loso_streaming/seed2024/config.json",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 1281,
+      "sha256": "cb6ff6e4068b20fefe1a896a3493e7d0153e168d5aab2e1c6ebd9caa3baca24d",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/loso_streaming/seed2024/latent_outputs.npz",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 3562741,
+      "sha256": "957bdeef697a8cbb832a0f59a19d1737c38f9a406b0d2e39e2a6672b34f9df79",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/loso_streaming/seed2024/metrics.json",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 2912,
+      "sha256": "4265989a369df7c3ae402264b133dda9f6921bc7f424020670ed2a5773b705aa",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/loso_streaming/seed2024/model_best.pt",
+      "scope": "bundle",
+      "role": "checkpoint",
+      "size_bytes": 108331730,
+      "sha256": "ff2f8151067f6987f0940a82952eab0c8786208e5f983a3e8d451e2ae0969193",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/loso_streaming/seed2024/result.json",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 3933,
+      "sha256": "63b5903dfa1eda22db322a6df66fffad6154f70cc25c7ddba3098cbfbdd6cf1a",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/loso_streaming/seed2024/sample_scores.csv",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 321583,
+      "sha256": "0963d5780a5fa7eae0b88589c27841efb124c9040445130c2b0597aacef93e0e",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/loso_streaming/seed2024/score_arrays.npz",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 35465,
+      "sha256": "21fa4bc52b99b723f382cd0f38e3f4ef3afd13a74dd5fceb6d330d83dbff1184",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/loso_streaming/seed2024/thresholds.json",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 1738,
+      "sha256": "ec058e4422adfc893834cc1ce83bca291eb2a0e69c53009fb781ba390ae4b581",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/loso_streaming/seed2024/training_log.csv",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 24182,
+      "sha256": "b4956f05fef38a89f7b9e7949ba48075cd071f9275bd18091474fc0e1fbd8c45",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/loso_streaming/seed2024/training_log.jsonl",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 48661,
+      "sha256": "bc9da142f76217da6499f59de4a0bcdebba107bcb0bb6188625c2efded1631d4",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/loso_voip/seed2022/SUCCESS",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 8,
+      "sha256": "1f513d4ecec4e91ddd48da1a59b6d96f1b76c374dc1da641980782a34f43b102",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/loso_voip/seed2022/checkpoint.sha256",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 80,
+      "sha256": "e1b0241c85b2b3602dc34dba09ef81b048faf9138541738a2abdb81bf7364af4",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/loso_voip/seed2022/config.json",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 1276,
+      "sha256": "a11b9d5fd8c661c9503b12523389bb8af663ed02cf2e3e55447a9eed85ae3d8c",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/loso_voip/seed2022/latent_outputs.npz",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 3558308,
+      "sha256": "744252676875c05b562ebc38124900ce75ce415899b96c4c4e7e5237e05127fd",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/loso_voip/seed2022/metrics.json",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 2925,
+      "sha256": "023864ef2f53f15d2edf2fac6ddc8ca4320212b3446294a5b96fe59917081a8e",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/loso_voip/seed2022/model_best.pt",
+      "scope": "bundle",
+      "role": "checkpoint",
+      "size_bytes": 108331666,
+      "sha256": "b972cefc80e8426dc5c007b3ee0f0f86714cd3351cba7ade4b02ffba3f600f3a",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/loso_voip/seed2022/result.json",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 3943,
+      "sha256": "5a52a8d6add6b099980fbdf67c9474d14d505bcebaf7d0758337aa2ed29c8d59",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/loso_voip/seed2022/sample_scores.csv",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 209627,
+      "sha256": "fb92ebda53ef350e5c5b0052add265b9a8558c905cfaca18de56d0c1487fecb0",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/loso_voip/seed2022/score_arrays.npz",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 27701,
+      "sha256": "fb27c5e399699ea07509c1da4df47728edf5fb4eb080c30b3fa927ea6d6d2772",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/loso_voip/seed2022/thresholds.json",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 1745,
+      "sha256": "d5219e8cce906b4b1dfa5d7dbb420b2a58d10e390920f0f27366f24a610fb98f",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/loso_voip/seed2022/training_log.csv",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 26190,
+      "sha256": "50965a03c3715e91f23fcb48fd79f03dbef29f7d1095ccea35537d7a5c8669d7",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/loso_voip/seed2022/training_log.jsonl",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 52821,
+      "sha256": "5e1a33f742e5eaeadc20041e92b880437c6fd00c1cc0a15b37c2aae49c7723f3",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/loso_voip/seed2023/SUCCESS",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 8,
+      "sha256": "1f513d4ecec4e91ddd48da1a59b6d96f1b76c374dc1da641980782a34f43b102",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/loso_voip/seed2023/checkpoint.sha256",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 80,
+      "sha256": "15f666c3c580fa1afa7bde8b25cab372dc6fd0f76cc1ef0a6285387874849587",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/loso_voip/seed2023/config.json",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 1276,
+      "sha256": "be2ea5f9d659b5f38a51dccdffedd0d51bd08e4ae21c8223f2977685b7a0dd4e",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/loso_voip/seed2023/latent_outputs.npz",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 3561714,
+      "sha256": "ebcd392f43abaf7ca4fbc6d98a545236abf8d42b7f8f049b233715aeb24aefee",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/loso_voip/seed2023/metrics.json",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 2937,
+      "sha256": "fb7454257f1e4e82129bccec3f557fdc13c82712870d65c1d360b6bf31c81d24",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/loso_voip/seed2023/model_best.pt",
+      "scope": "bundle",
+      "role": "checkpoint",
+      "size_bytes": 108331666,
+      "sha256": "fca883e8a1e368293d867eff725ce0ce81befca0d4b87113f97a2a3e8aafc3c1",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/loso_voip/seed2023/result.json",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 3950,
+      "sha256": "87a21d086275fe4caefd993408abf1974a6b3ab07f650d4dcd5db46cdf46ffdd",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/loso_voip/seed2023/sample_scores.csv",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 209815,
+      "sha256": "edc45ffd7179976ea2fca7caf35da7c330b771b7e9ae8733ded8a0e069896209",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/loso_voip/seed2023/score_arrays.npz",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 27477,
+      "sha256": "f28629a1a9d59541b24ecf36475d3ce71a6b71e6b7a1b8e095878b998cc3b822",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/loso_voip/seed2023/thresholds.json",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 1748,
+      "sha256": "6b5158bdb1ced05ebe60a1c85adbd612b2913378bfb7d5cce628ac63fa8ff8ef",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/loso_voip/seed2023/training_log.csv",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 25790,
+      "sha256": "96712dec027a08459574deda7c9d48720cd62c962920408990df357ddc1a750e",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/loso_voip/seed2023/training_log.jsonl",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 52152,
+      "sha256": "8ebc0f89e34c63db076d9fbb592fb5f9b6aae8e7e50dc479e47b99f4a8a7d772",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/loso_voip/seed2024/SUCCESS",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 8,
+      "sha256": "1f513d4ecec4e91ddd48da1a59b6d96f1b76c374dc1da641980782a34f43b102",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/loso_voip/seed2024/checkpoint.sha256",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 80,
+      "sha256": "2b39cdafe44e9880a8effba234868fca4a3fc3fcaee618b09ebd26d3dda42f4b",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/loso_voip/seed2024/config.json",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 1276,
+      "sha256": "deb159abde4bce836c5a99f367720e6b54dc606540b092c31c4991bdb00745d4",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/loso_voip/seed2024/latent_outputs.npz",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 3560145,
+      "sha256": "84d74cac8a3b0df61108506fddd51f808b21cad67531095d807d4a4bcc2f6942",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/loso_voip/seed2024/metrics.json",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 2935,
+      "sha256": "3a3008e867cf053ea965a75d7232d26df1037f80cf246b2d96a95a1dc3c19592",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/loso_voip/seed2024/model_best.pt",
+      "scope": "bundle",
+      "role": "checkpoint",
+      "size_bytes": 108331666,
+      "sha256": "663d14258e879bb3c53eb6de74167c4aaed34dfdd79f05ade1f1a799a7581aef",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/loso_voip/seed2024/result.json",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 3951,
+      "sha256": "0680b194bd9b03d5a8c32a0bb5c369240cec18547017d0bf855d7a174d7dae39",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/loso_voip/seed2024/sample_scores.csv",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 209089,
+      "sha256": "8350b613d018fd350aeff249ce9cf1bb23fdcdf9c578d374cfb10a99de60d63f",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/loso_voip/seed2024/score_arrays.npz",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 27653,
+      "sha256": "8fe8bc20d6e1e6a550f26222e6c8510ea7b9bae14b64fbc0d2859d1e3482dfe1",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/loso_voip/seed2024/thresholds.json",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 1746,
+      "sha256": "b8330e82c667133f6c6b2ffcfabbef83ac3092fa3b4276085bfe2115996e36a9",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/loso_voip/seed2024/training_log.csv",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 23837,
+      "sha256": "8681304ee99ebc3145859b0a7731bb96df1022ad94c935aaf654087a18b0dfc3",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/loso_voip/seed2024/training_log.jsonl",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 48047,
+      "sha256": "9c36e66a6f2e462054208632dfdfd779c7a9700f8ef83c226b1fa95920af7a2f",
+      "hash_status": "verified"
+    },
+    {
+      "path": "scripts/__pycache__/aggregate_results.cpython-310.pyc",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 24616,
+      "sha256": "ac6a3c5487c0a37e96283d40951e39549e9eded55fb3c7f6b87a4b64c854b00d",
+      "hash_status": "verified"
+    },
+    {
+      "path": "scripts/__pycache__/diagnose_parity.cpython-310.pyc",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 4103,
+      "sha256": "0aa52993d7fef564f84a83966e0034b4433ce8846542db31874abd3079b296c3",
+      "hash_status": "verified"
+    },
+    {
+      "path": "scripts/__pycache__/evaluate_frozen_checkpoints.cpython-310.pyc",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 10462,
+      "sha256": "1be30b0f277c747497dd284b42452e4b2a9bbf29eb8a6f1654e87ea82f08c65b",
+      "hash_status": "verified"
+    },
+    {
+      "path": "scripts/__pycache__/stage16s_common.cpython-310.pyc",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 8491,
+      "sha256": "200a207056ae4d6736ae1a5fdb640a890f7d4d2eb406698a913441ebd1815f72",
+      "hash_status": "verified"
+    },
+    {
+      "path": "scripts/__pycache__/train_evaluate_run.cpython-310.pyc",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 17842,
+      "sha256": "919d1e594578739a300499c03854564ddda765a9dbcb39878cd1a15aabc33359",
+      "hash_status": "verified"
+    },
+    {
+      "path": "scripts/__pycache__/verify_completion.cpython-310.pyc",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 3196,
+      "sha256": "04e49fef5a29ac02a63035720d75e83c19d5ece2924eb81ec19deae387de58d6",
+      "hash_status": "verified"
+    },
+    {
+      "path": "scripts/aggregate_results.py",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 28299,
+      "sha256": "ccee96537dcbf1af9a83ae26ebcb7a07befef83ab197fc1b02732f1b7b729aec",
+      "hash_status": "verified"
+    },
+    {
+      "path": "scripts/diagnose_parity.py",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 5066,
+      "sha256": "f0b91880a16a3af00618ee8a0df807f333e65793158ab4e7c51f2d283bf0785e",
+      "hash_status": "verified"
+    },
+    {
+      "path": "scripts/evaluate_frozen_checkpoints.py",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 12630,
+      "sha256": "628104de36422065cd7b8ddd5bf83cc0d0e17f054946cc02b3c80f69ee152d6b",
+      "hash_status": "verified"
+    },
+    {
+      "path": "scripts/preflight.py",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 13913,
+      "sha256": "1eeb0b5b291e617439c8350870824c7b5366d2e20147c874a84069b1fad2637e",
+      "hash_status": "verified"
+    },
+    {
+      "path": "scripts/run_training_grid.py",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 2909,
+      "sha256": "d2138425b0f6c386b362f91fc95ab2c2dfe20f8ac7d1e12171d04c72ce7f1c4a",
+      "hash_status": "verified"
+    },
+    {
+      "path": "scripts/stage16s_common.py",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 6888,
+      "sha256": "49cd24c829df2d7aab98bc0321e3a59e046e6db81ce2361e301ffb397fa46aa1",
+      "hash_status": "verified"
+    },
+    {
+      "path": "scripts/train_evaluate_run.py",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 22205,
+      "sha256": "dbe17f8e310fa956f12791903d23a718912dcc43dd3a164c558e12dd3f4a0062",
+      "hash_status": "verified"
+    },
+    {
+      "path": "scripts/verify_completion.py",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 3463,
+      "sha256": "8eb5bb4d6e174fa7f8b70c6c3308d66dde6f2430a7481acf0632ad2eb2cc14c4",
+      "hash_status": "verified"
+    },
+    {
+      "path": "seed_stability.csv",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 17137,
+      "sha256": "385743f5f1d833decc86e2128c0e01b143890a830e08840c3b3c71a528d3fca7",
+      "hash_status": "verified"
+    },
+    {
+      "path": "service_open_set_feasibility.md",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 677,
+      "sha256": "f002180b6bd127b70ec686cbbc0bb7ffe1e73f4dbb002d11fece75feb8b82326",
+      "hash_status": "verified"
+    },
+    {
+      "path": "service_open_set_six_metrics.csv",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 24071,
+      "sha256": "fbe5367450b7b6d5d2b62875cbc38faa511a21a7eede8b9c9600da8658f8e24d",
+      "hash_status": "verified"
+    },
+    {
+      "path": "service_unknown_protocol_manifest.csv",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 7619903,
+      "sha256": "498b78efae22638c80ec203974052d95cda81a04ac064d7266d2956a3f1556a5",
+      "hash_status": "verified"
+    },
+    {
+      "path": "shared_encoder_checkpoints.csv",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 6602,
+      "sha256": "a89c20d2150f05cf55d6de4038efd336da80faea3dde2db30a67fa0f26720877",
+      "hash_status": "verified"
+    },
+    {
+      "path": "stage16s_report.md",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 8825,
+      "sha256": "11d744c318c6aac37ea2e61e729d7455a81573e26ec42bb3539f5c4892c49d9e",
+      "hash_status": "verified"
+    },
+    {
+      "path": "tests/__pycache__/test_stage16s.cpython-310-pytest-8.4.2.pyc",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 7955,
+      "sha256": "e2f02be79636dcab326b49d84d8b47be7f73d22373056cb81a49bdc08fc01183",
+      "hash_status": "verified"
+    },
+    {
+      "path": "tests/test_stage16s.py",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 2986,
+      "sha256": "b1ed1abdd5082c9a6e0792bdc28dc92de880812fa1f736d807daf5b454ce726f",
+      "hash_status": "verified"
+    },
+    {
+      "path": "training_configs.json",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 5845,
+      "sha256": "25422214aaba4fb77151c853f4efd1548df85ae02552a3f9c5842ca7e686282d",
+      "hash_status": "verified"
+    },
+    {
+      "path": "training_grid_execution.json",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 5732,
+      "sha256": "645e5d1dfc81d4f247ebaa1bd0720a15c43189df2305b1abb183f2c8a1a77432",
+      "hash_status": "verified"
+    },
+    {
+      "path": "unknown_confusion_analysis.csv",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 23416,
+      "sha256": "809dbee1f9671c7087d1fdcc206b551c731a45728e73b5351e3f3b96493b5f9b",
+      "hash_status": "verified"
+    }
+  ],
+  "claim_scope": "diagnostic",
+  "code": {
+    "changes": [],
+    "dirty": null,
+    "revision": null
+  },
+  "configuration": {
+    "files": [
+      "training_configs.json"
+    ],
+    "parameters": {
+      "methods": [
+        "OD-Native",
+        "DES-v0",
+        "DES-v1",
+        "H1"
+      ],
+      "protocols": 6,
+      "runs": 18
+    },
+    "seeds": [
+      2022,
+      2023,
+      2024
+    ]
+  },
+  "core_results": [
+    {
+      "name": "od_native_mean_auroc",
+      "value": 0.6236348663422149
+    },
+    {
+      "name": "des_v0_mean_delta_auroc",
+      "value": 0.028375773809985103
+    },
+    {
+      "name": "des_v1_mean_delta_auroc",
+      "value": 0.06294900712729089
+    },
+    {
+      "name": "h1_mean_delta_auroc",
+      "value": 0.018835436246280264
+    }
+  ],
+  "created_at_utc": "2026-09-20T08:41:47Z",
+  "execution": {
+    "command": "six LOSO protocols x seeds 2022-2024; corrected Open-Detect training then frozen score evaluation",
+    "environment": "/home/birkenwald/data/SEU-WXY/conda_envs/2025-10-8-WXY-dgl_py310",
+    "exit_code": 0,
+    "physical_gpu_ids": [
+      0,
+      5,
+      6,
+      7
+    ],
+    "tmux_session": "stage16s formal sessions recorded under .tmux-task"
+  },
+  "experiment_id": "stage16s-service-open-set-benchmark-20260920-v1",
+  "experiment_type": "strict-unknown-free-open-set-benchmark",
+  "inputs": [],
+  "limitations": [
+    "WEAK_CAPTURE_LABEL",
+    "CAPTURE_GENERALIZATION_NOT_IDENTIFIABLE",
+    "P2P_SINGLE_CAPTURE",
+    "THREE_SEEDS_NOT_INDEPENDENT_DATASETS"
+  ],
+  "next_step": "Stop after Stage 16S; use the report to decide whether new independent Service data are required.",
+  "objective": "Evaluate OD-Native, DES-v0, DES-v1, and H1 on frozen Service-level leave-one-service-out protocols",
+  "schema_version": 1,
+  "status": "success",
+  "updated_at_utc": "2026-09-20T09:25:53Z"
+}

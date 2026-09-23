@@ -1,0 +1,73 @@
+{
+  "stage": "15B",
+  "experiment_id": "stage15b-known-only-hybrid-detector-20260918-v1",
+  "claim_scope": "development",
+  "primary_development_datasets": ["VNAT", "USTC-TFC2016"],
+  "supplementary_retrospective_datasets": ["ISCX-VPN", "ISCXTor2016"],
+  "frozen_inputs": {
+    "encoder_training": false,
+    "signals": ["Open-Detect Native", "DES-v0", "DES-v1 where frozen", "prototype-distance component", "V_post"],
+    "normalization_fit_split": "Known Validation only",
+    "threshold_fit_split": "Known Validation only",
+    "unknown_calibration_samples": 0,
+    "test_calibration_samples": 0
+  },
+  "empirical_cdf": {
+    "definition": "count(Known-Val score <= x) / n_validation",
+    "implementation": "numpy.searchsorted(sorted_validation, x, side=right) / n_validation",
+    "range": [0.0, 1.0],
+    "larger_is_more_anomalous": true
+  },
+  "methods": {
+    "H0": "Open-Detect Native raw score baseline; A_OD is also saved for Hybrid construction",
+    "DES0": "frozen DES-v0 raw score reference",
+    "DES1": "frozen DES-v1 raw score reference where available",
+    "H1": "max(A_OD, A_DES0)",
+    "H2": "max(A_OD, A_DES1)",
+    "H3": "max(A_proto, A_DES0, A_Vpost)"
+  },
+  "threshold": {
+    "rule": "Known-Validation P95 independently for every method",
+    "numpy_method": "higher",
+    "unknown_if": "score >= threshold"
+  },
+  "evaluation": {
+    "unknown_positive": true,
+    "metrics": ["AUROC", "AUPRC", "UFAR", "Known FRR"],
+    "paired_bootstrap_repetitions": 10000,
+    "paired_bootstrap_seed": 0,
+    "bootstrap_unit": "protocol",
+    "negative_protocol_definition": "candidate AUROC - H0 AUROC < 0",
+    "large_failure_definition": "protocol-class AUROC delta versus H0 < -0.10"
+  },
+  "candidate_gate": {
+    "dataset_mean_auroc": "mean delta versus H0 >= 0 on both VNAT and USTC-TFC2016",
+    "overall_paired_auroc": "pooled primary mean delta versus H0 > 0",
+    "negative_protocol_reduction": "at least two fewer negative primary protocols than DES0 versus H0",
+    "hard_regime": "for VNAT rsync and scp separately: mean delta versus H0 >= -0.02 and no protocol-class delta < -0.10",
+    "auprc": "mean delta versus H0 >= -0.005 on both primary datasets",
+    "ufar": "mean delta versus H0 <= +0.01 on both primary datasets",
+    "calibration": "no Unknown/Test normalization, threshold, or learned weight"
+  },
+  "candidate_selection": {
+    "eligible_set": "candidates satisfying every candidate_gate condition",
+    "stability_order": ["fewest negative primary protocols", "largest worst primary protocol delta AUROC"],
+    "simplicity_tolerance": "among candidates within one negative protocol of the minimum and within 0.01 AUROC of the best worst-case delta, choose H1 before H2 before H3",
+    "final_tiebreaker": "largest pooled primary mean delta AUROC",
+    "single_formula_for_all_datasets": true
+  },
+  "final_gate": {
+    "HYBRID_CONFIRMED": "at least one candidate satisfies every candidate_gate condition",
+    "HYBRID_PARTIAL": "no full candidate, but one candidate has nonnegative mean AUROC on both primary datasets, positive pooled mean AUROC, no systematic AUPRC degradation, and Known-only calibration",
+    "HYBRID_FAILED": "no candidate satisfies the partial condition"
+  },
+  "forbidden": [
+    "encoder training or fine-tuning",
+    "Unknown/Test percentile fitting or threshold calibration",
+    "continuous fusion-weight search",
+    "new signals",
+    "gating model training",
+    "dataset-specific formula selection",
+    "modification of frozen upstream artifacts"
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "author_code_commit": "b50a18515a01799468c10f6c9b60c01f8a6a4e7c",
+  "batch_size": 512,
+  "checkpoint_selection": "highest harmonic mean of validation accuracy and macro-F1",
+  "early_stopping_min_delta": 0.0,
+  "early_stopping_monitor": "harmonic mean of validation accuracy and macro-F1",
+  "early_stopping_patience": 5,
+  "epochs": 100,
+  "gamma_paper": 1.0,
+  "lambda": 0.005,
+  "latent_dimension": 128,
+  "learning_rate": 0.001,
+  "num_classes": 20,
+  "optimizer": "Adam(beta1=0.9,beta2=0.999)",
+  "prototype_reset_epochs_zero_based": [50, 80],
+  "scheduler": "MultiStepLR(milestones=[50,80],gamma=0.1)",
+  "seed": 2022,
+  "temp_inter_code": 1.0,
+  "temp_intra_code": 1.0,
+  "validation_only_for_checkpoint_selection": true,
+  "workers": 0
+}

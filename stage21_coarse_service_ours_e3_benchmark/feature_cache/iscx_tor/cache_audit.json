@@ -1,0 +1,83 @@
+{
+  "cache_sha256": "344985e6e49a1b814ecf34daa7843264267b7ca7f7711b9c24a0546bfdbf120b",
+  "dataset": "iscx_tor",
+  "flows": 11181,
+  "input_definition": {
+    "fig_packets": 8,
+    "ip_addresses": "zeroed",
+    "seq_length": 320,
+    "trafficformer_packets": 5
+  },
+  "raw_recovery_captures": 10,
+  "recovered_stage20_only_flows": 137,
+  "recovery_audit": [
+    {
+      "pcap": "/home/birkenwald/data/SEU-WXY/WXY-SEU/TrafficClassifier/Dataset/ISCXTor2016/ISCXTor2016（whole）/raw/pcap/NonTor/AIM_Chat.pcap",
+      "pcap_sha256": "60a8ecb66c9c1ab1dec51ea1a871aea4860f2e813cb906b7628fbbc0527ca021",
+      "recovered_packets": 8,
+      "target_packets": 8
+    },
+    {
+      "pcap": "/home/birkenwald/data/SEU-WXY/WXY-SEU/TrafficClassifier/Dataset/ISCXTor2016/ISCXTor2016（whole）/raw/pcap/NonTor/ICQ_Chat.pcap",
+      "pcap_sha256": "6d175e3178007159c0ee0e33f30a70b1823c8d7af3c39b0a9c78d3f7b7098cec",
+      "recovered_packets": 110,
+      "target_packets": 110
+    },
+    {
+      "pcap": "/home/birkenwald/data/SEU-WXY/WXY-SEU/TrafficClassifier/Dataset/ISCXTor2016/ISCXTor2016（whole）/raw/pcap/NonTor/SFTP_filetransfer.pcap",
+      "pcap_sha256": "7eccfd8d2fc3e4fd28bd134c534a969cedd1929ee0e4d1b1dab7751a39e41ff4",
+      "recovered_packets": 133,
+      "target_packets": 133
+    },
+    {
+      "pcap": "/home/birkenwald/data/SEU-WXY/WXY-SEU/TrafficClassifier/Dataset/ISCXTor2016/ISCXTor2016（whole）/raw/pcap/NonTor/aimchat.pcap",
+      "pcap_sha256": "eb2353900d973fa20c1c550d679df26751fd53efc51e8c7571b1d67f935e8792",
+      "recovered_packets": 8,
+      "target_packets": 8
+    },
+    {
+      "pcap": "/home/birkenwald/data/SEU-WXY/WXY-SEU/TrafficClassifier/Dataset/ISCXTor2016/ISCXTor2016（whole）/raw/pcap/NonTor/icqchat.pcap",
+      "pcap_sha256": "2bc6b03fd5390442539c86a0ef794ffe673b6802fe2ef62a6f2e4ac61f3e8846",
+      "recovered_packets": 148,
+      "target_packets": 148
+    },
+    {
+      "pcap": "/home/birkenwald/data/SEU-WXY/WXY-SEU/TrafficClassifier/Dataset/ISCXTor2016/ISCXTor2016（whole）/raw/pcap/Tor/Tor/CHAT_aimchatgateway.pcap",
+      "pcap_sha256": "81b0b18b5f76004589b4d97a9c7a680ee6d5f541d9825fad431c0c333d0ff215",
+      "recovered_packets": 8,
+      "target_packets": 8
+    },
+    {
+      "pcap": "/home/birkenwald/data/SEU-WXY/WXY-SEU/TrafficClassifier/Dataset/ISCXTor2016/ISCXTor2016（whole）/raw/pcap/Tor/Tor/CHAT_gate_AIM_chat.pcap",
+      "pcap_sha256": "4657595c789b6494ae414233bfb04016f838f6982fe1e1d3fb4bbb8a9704581d",
+      "recovered_packets": 14,
+      "target_packets": 14
+    },
+    {
+      "pcap": "/home/birkenwald/data/SEU-WXY/WXY-SEU/TrafficClassifier/Dataset/ISCXTor2016/ISCXTor2016（whole）/raw/pcap/Tor/Tor/CHAT_gate_ICQ_chat.pcap",
+      "pcap_sha256": "59f5a2a34bb35901b121edef4cdc609832a9ca3714cf276f9067333e3db6f788",
+      "recovered_packets": 8,
+      "target_packets": 8
+    },
+    {
+      "pcap": "/home/birkenwald/data/SEU-WXY/WXY-SEU/TrafficClassifier/Dataset/ISCXTor2016/ISCXTor2016（whole）/raw/pcap/Tor/Tor/CHAT_icqchatgateway.pcap",
+      "pcap_sha256": "181051bb1b2735e98a0f51c759bca004a37b2a80913d0ead6c9fca3e6bc691c1",
+      "recovered_packets": 8,
+      "target_packets": 8
+    },
+    {
+      "pcap": "/home/birkenwald/data/SEU-WXY/WXY-SEU/TrafficClassifier/Dataset/ISCXTor2016/ISCXTor2016（whole）/raw/pcap/Tor/Tor/FILE-TRANSFER_gate_SFTP_filetransfer.pcap",
+      "pcap_sha256": "b390315c17b036806f654c5d2b3814c4bf93b1dd6107f0654c6f7ae177ddd00d",
+      "recovered_packets": 8,
+      "target_packets": 8
+    }
+  ],
+  "reused_stage19_flows": 11044,
+  "source_hashes": {
+    "stage19_flow_uids": "806415f94aa8d24ea22be48041a2590daff2543ad6a264137ab14707a7ca56da",
+    "stage19_views": "2a4ec4be2bd8fcbbac0c7a76ea0c90117eb0b1bd410b90a41c8ad1c9022cd1a2",
+    "stage20_closed_manifest": "6404d496f50a6f7f6f397d125ad0cd653c9df152d8db1b9ed2ad2310967950bb"
+  },
+  "stage20_membership_missing": 0,
+  "status": "PASS"
+}

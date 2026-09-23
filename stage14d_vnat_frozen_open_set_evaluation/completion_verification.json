@@ -1,0 +1,230 @@
+{
+  "checkpoint_count": 15,
+  "checkpoint_hashes_unchanged": true,
+  "conclusion": "DECOUPLING_ONLY_PARTIALLY_CONFIRMED",
+  "gates": {
+    "decoupling_partial": true,
+    "decoupling_stable": false,
+    "local_stable": false
+  },
+  "hard_protocol_analysis": {
+    "details": [
+      {
+        "delta_m1_m0_auroc": -0.018116266139296067,
+        "delta_m2_m1_auroc": -0.0071372059787709885,
+        "hard_known_classes": "rsync;sftp",
+        "hard_unknown_classes": "scp",
+        "has_hard_unknown": true,
+        "protocol_id": "high_seed2022",
+        "rsync_role": "known",
+        "scp_role": "unknown",
+        "setting": "High",
+        "sftp_role": "known"
+      },
+      {
+        "delta_m1_m0_auroc": -0.029544903462090932,
+        "delta_m2_m1_auroc": 0.004007020607235012,
+        "hard_known_classes": "scp;sftp",
+        "hard_unknown_classes": "rsync",
+        "has_hard_unknown": true,
+        "protocol_id": "high_seed2023",
+        "rsync_role": "unknown",
+        "scp_role": "known",
+        "setting": "High",
+        "sftp_role": "known"
+      },
+      {
+        "delta_m1_m0_auroc": -0.009444576355127632,
+        "delta_m2_m1_auroc": 0.01728242181745243,
+        "hard_known_classes": "scp;sftp",
+        "hard_unknown_classes": "rsync",
+        "has_hard_unknown": true,
+        "protocol_id": "high_seed2024",
+        "rsync_role": "unknown",
+        "scp_role": "known",
+        "setting": "High",
+        "sftp_role": "known"
+      },
+      {
+        "delta_m1_m0_auroc": 0.19680475978960366,
+        "delta_m2_m1_auroc": 0.014773329464801588,
+        "hard_known_classes": "rsync;scp",
+        "hard_unknown_classes": "sftp",
+        "has_hard_unknown": true,
+        "protocol_id": "high_seed2025",
+        "rsync_role": "known",
+        "scp_role": "known",
+        "setting": "High",
+        "sftp_role": "unknown"
+      },
+      {
+        "delta_m1_m0_auroc": -0.031604722038526156,
+        "delta_m2_m1_auroc": -0.015448495496493075,
+        "hard_known_classes": "rsync",
+        "hard_unknown_classes": "scp;sftp",
+        "has_hard_unknown": true,
+        "protocol_id": "high_seed2026",
+        "rsync_role": "known",
+        "scp_role": "unknown",
+        "setting": "High",
+        "sftp_role": "unknown"
+      },
+      {
+        "delta_m1_m0_auroc": -0.05723922258566849,
+        "delta_m2_m1_auroc": -0.020041327943863707,
+        "hard_known_classes": "rsync;sftp",
+        "hard_unknown_classes": "scp",
+        "has_hard_unknown": true,
+        "protocol_id": "low_seed2022",
+        "rsync_role": "known",
+        "scp_role": "unknown",
+        "setting": "Low",
+        "sftp_role": "known"
+      },
+      {
+        "delta_m1_m0_auroc": 0.035279700775149636,
+        "delta_m2_m1_auroc": 0.006316412468196919,
+        "hard_known_classes": "rsync;scp;sftp",
+        "hard_unknown_classes": "",
+        "has_hard_unknown": false,
+        "protocol_id": "low_seed2023",
+        "rsync_role": "known",
+        "scp_role": "known",
+        "setting": "Low",
+        "sftp_role": "known"
+      },
+      {
+        "delta_m1_m0_auroc": -0.0438429961680048,
+        "delta_m2_m1_auroc": 0.0022590233199624166,
+        "hard_known_classes": "scp;sftp",
+        "hard_unknown_classes": "rsync",
+        "has_hard_unknown": true,
+        "protocol_id": "low_seed2024",
+        "rsync_role": "unknown",
+        "scp_role": "known",
+        "setting": "Low",
+        "sftp_role": "known"
+      },
+      {
+        "delta_m1_m0_auroc": 0.012854950366153362,
+        "delta_m2_m1_auroc": 0.018832774868059676,
+        "hard_known_classes": "rsync;scp;sftp",
+        "hard_unknown_classes": "",
+        "has_hard_unknown": false,
+        "protocol_id": "low_seed2025",
+        "rsync_role": "known",
+        "scp_role": "known",
+        "setting": "Low",
+        "sftp_role": "known"
+      },
+      {
+        "delta_m1_m0_auroc": -0.05100063731898041,
+        "delta_m2_m1_auroc": -0.01988853895786724,
+        "hard_known_classes": "rsync;scp",
+        "hard_unknown_classes": "sftp",
+        "has_hard_unknown": true,
+        "protocol_id": "low_seed2026",
+        "rsync_role": "known",
+        "scp_role": "known",
+        "setting": "Low",
+        "sftp_role": "unknown"
+      },
+      {
+        "delta_m1_m0_auroc": -0.057862348429984944,
+        "delta_m2_m1_auroc": -0.008702574541407437,
+        "hard_known_classes": "rsync;sftp",
+        "hard_unknown_classes": "scp",
+        "has_hard_unknown": true,
+        "protocol_id": "medium_seed2022",
+        "rsync_role": "known",
+        "scp_role": "unknown",
+        "setting": "Medium",
+        "sftp_role": "known"
+      },
+      {
+        "delta_m1_m0_auroc": 0.06427709025771422,
+        "delta_m2_m1_auroc": 0.012265528641125956,
+        "hard_known_classes": "rsync;scp;sftp",
+        "hard_unknown_classes": "",
+        "has_hard_unknown": false,
+        "protocol_id": "medium_seed2023",
+        "rsync_role": "known",
+        "scp_role": "known",
+        "setting": "Medium",
+        "sftp_role": "known"
+      },
+      {
+        "delta_m1_m0_auroc": -0.07091942418492925,
+        "delta_m2_m1_auroc": 0.03294678758551062,
+        "hard_known_classes": "scp;sftp",
+        "hard_unknown_classes": "rsync",
+        "has_hard_unknown": true,
+        "protocol_id": "medium_seed2024",
+        "rsync_role": "unknown",
+        "scp_role": "known",
+        "setting": "Medium",
+        "sftp_role": "known"
+      },
+      {
+        "delta_m1_m0_auroc": 0.2532099506469254,
+        "delta_m2_m1_auroc": 0.006628117913832443,
+        "hard_known_classes": "rsync;scp",
+        "hard_unknown_classes": "sftp",
+        "has_hard_unknown": true,
+        "protocol_id": "medium_seed2025",
+        "rsync_role": "known",
+        "scp_role": "known",
+        "setting": "Medium",
+        "sftp_role": "unknown"
+      },
+      {
+        "delta_m1_m0_auroc": 0.019712882737506376,
+        "delta_m2_m1_auroc": -0.023417759037338337,
+        "hard_known_classes": "rsync",
+        "hard_unknown_classes": "scp;sftp",
+        "has_hard_unknown": true,
+        "protocol_id": "medium_seed2026",
+        "rsync_role": "known",
+        "scp_role": "unknown",
+        "setting": "Medium",
+        "sftp_role": "unknown"
+      }
+    ],
+    "groups": {
+      "hard_class_unknown": {
+        "m1_m0_delta_auroc_mean": 0.008346041374285565,
+        "m1_m0_positive_protocols": 3,
+        "m2_m1_delta_auroc_mean": -0.001394933437245523,
+        "m2_m1_positive_protocols": 6,
+        "protocol_count": 12
+      },
+      "no_hard_class_unknown": {
+        "m1_m0_delta_auroc_mean": 0.037470580466339075,
+        "m1_m0_positive_protocols": 3,
+        "m2_m1_delta_auroc_mean": 0.01247157199246085,
+        "m2_m1_positive_protocols": 3,
+        "protocol_count": 3
+      }
+    }
+  },
+  "method_results_completed": 45,
+  "native_validation_parity_all_pass": true,
+  "new_encoder_training": false,
+  "protocols_completed": 15,
+  "stage14b_after": {
+    "freeze_hash": "c904daef04d2c8e79469191121325c0a6ceeaeb3e595ef9c4c7d7a62c980ae2f",
+    "protocol_sha256": "5177bf7276812bbb417f085043f8518c8573ea1851de2f1d733deb77c9939ced",
+    "split_manifest_sha256": "66bf155e6906231b316c384a52f4b46dabd9d3aee76d5f66d86a3941eb172c4e"
+  },
+  "stage14b_before": {
+    "freeze_hash": "c904daef04d2c8e79469191121325c0a6ceeaeb3e595ef9c4c7d7a62c980ae2f",
+    "protocol_sha256": "5177bf7276812bbb417f085043f8518c8573ea1851de2f1d733deb77c9939ced",
+    "split_manifest_sha256": "66bf155e6906231b316c384a52f4b46dabd9d3aee76d5f66d86a3941eb172c4e"
+  },
+  "stage14b_unchanged": true,
+  "status": "PASS",
+  "test_parameter_selection": false,
+  "unknown_normalization_samples": 0,
+  "unknown_support_samples": 0,
+  "unknown_threshold_samples": 0
+}

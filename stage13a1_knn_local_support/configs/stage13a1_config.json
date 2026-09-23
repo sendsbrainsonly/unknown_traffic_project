@@ -1,0 +1,73 @@
+{
+  "stage": "Stage 13A-1",
+  "experiment": "DES-v1 Local kNN Support Diagnosis",
+  "claim_scope": "DEVELOPMENT_RESULT",
+  "external_validation_label": "NOT_INDEPENDENT_EXTERNAL_VALIDATION",
+  "seeds": [2022, 2023, 2024, 2025, 2026],
+  "scenarios": {
+    "a1": {"known_count": 19, "unknown_count": 1},
+    "a2": {"known_count": 17, "unknown_count": 3},
+    "a3": {"known_count": 15, "unknown_count": 5}
+  },
+  "stage11b_root": "/home/birkenwald/data/SEU-WXY/WXY-SEU/TrafficClassifier/Projects/unknown_traffic_project/stage11b_decoupled_support_readout",
+  "methods": ["CENTROID", "KNN_5", "KNN_10"],
+  "knn": {
+    "allowed_k": [5, 10],
+    "primary_k": 10,
+    "metric": "euclidean",
+    "aggregation": "mean_distance",
+    "candidate_class": "nearest_empirical_centroid",
+    "support": "Known Train deterministic mu in candidate class only",
+    "train_self_neighbor": "excluded_by_global_train_index",
+    "chunk_size": 512
+  },
+  "threshold": {
+    "source": "Known Validation only",
+    "quantile": 0.95,
+    "numpy_method": "higher",
+    "global_per_method": true
+  },
+  "evaluation": {
+    "eval_seed": 2021,
+    "protocol": "symmetric-balanced-1to1-v2",
+    "unknown_positive": true,
+    "higher_score_more_unknown": true
+  },
+  "gate": {
+    "material_auroc_delta": 0.02,
+    "clear_harm_auroc_delta": -0.02,
+    "majority_positive_seed_count_overall": 8,
+    "max_mean_delta_known_frr": 0.02,
+    "material_scenarios_required_for_go": 2,
+    "material_scenarios_required_for_conditional_go": 1,
+    "require_lower_ufar_in_each_material_scenario": true
+  },
+  "stability_definition": {
+    "comparison": "lexicographic",
+    "criteria": [
+      "fewer scenarios with mean delta AUROC <= -0.02",
+      "more scenarios with positive mean delta AUROC",
+      "more positive paired seeds",
+      "lower pooled paired-delta AUROC standard deviation"
+    ],
+    "used_for_primary_gate": false
+  },
+  "forbidden": [
+    "new encoder training",
+    "checkpoint modification",
+    "k other than 5 or 10",
+    "automatic k selection",
+    "score fusion",
+    "logvar fusion",
+    "margin score",
+    "weighted score",
+    "Unknown calibration",
+    "Test threshold tuning",
+    "per-class threshold",
+    "ISCX-VPN Test access",
+    "ISCXTor2016 Test access",
+    "CipherSpectrum Test access",
+    "automatic next stage"
+  ]
+}
+

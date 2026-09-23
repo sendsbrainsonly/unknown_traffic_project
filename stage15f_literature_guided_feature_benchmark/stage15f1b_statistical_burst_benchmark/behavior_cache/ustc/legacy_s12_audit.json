@@ -1,0 +1,23 @@
+{
+  "dataset": "ustc",
+  "features": [
+    "packet_count",
+    "total_bytes",
+    "duration_seconds",
+    "packet_length_mean",
+    "packet_length_std",
+    "iat_mean_seconds",
+    "iat_std_seconds",
+    "forward_packets",
+    "reverse_packets",
+    "forward_reverse_ratio",
+    "direction_changes",
+    "payload_bytes"
+  ],
+  "flows": 389982,
+  "matrix_sha256": "34c93823db4354a1bcf9b28f5b263b1e5df1ce117a09ffbf371a55a46fdba12c",
+  "missing_values": 389982,
+  "source": "/home/birkenwald/data/SEU-WXY/WXY-SEU/TrafficClassifier/Projects/unknown_traffic_project/stage15r_representation_bottleneck_audit/feature_cache/ustc/flow_statistics.csv",
+  "source_sha256": "82248538cb30d89ca4f574a211f77c33b7b0563f1f50617cd3870cbce1661cc6",
+  "status": "PASS"
+}

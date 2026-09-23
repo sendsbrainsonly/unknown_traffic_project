@@ -1,0 +1,105 @@
+{
+  "final_gate": "NO_GO",
+  "mechanism_case": "P3",
+  "conditions": {
+    "alignment_clear_5of5_each_scenario": true,
+    "scenario_mean_auroc_all_nonnegative": false,
+    "scenario_material_gain_count": 0,
+    "known_macro_f1_stable_no_mean_drop_ge_0.02": false,
+    "no_mean_known_frr_cost_ge_0.02": true,
+    "auroc_direction_stable_at_least_4of5_each_scenario": false
+  },
+  "scenario_delta_auroc": {
+    "a1": {
+      "mean": -0.16779999999999998,
+      "median": -0.1537249999999999,
+      "std": 0.07334883690284397,
+      "min": -0.2551,
+      "max": -0.06672499999999992
+    },
+    "a2": {
+      "mean": -0.06871249999999991,
+      "median": -0.046122222222222176,
+      "std": 0.0738540614584216,
+      "min": -0.19637777777777765,
+      "max": -0.004527777777777797
+    },
+    "a3": {
+      "mean": -0.03640930752764406,
+      "median": -0.043831677313780015,
+      "std": 0.05624122692059654,
+      "min": -0.10233604948042796,
+      "max": 0.04100653800492304
+    }
+  },
+  "auroc_better_counts": {
+    "a1": 0,
+    "a2": 0,
+    "a3": 1
+  },
+  "prototype_gap_lower_counts": {
+    "a1": 5,
+    "a2": 5,
+    "a3": 5
+  },
+  "mean_known_macro_f1_delta": {
+    "a1": -0.06053781869552795,
+    "a2": -0.03666107510204182,
+    "a3": -0.09430182271342007
+  },
+  "mean_known_frr_delta": {
+    "a1": 0.009999999999999998,
+    "a2": 0.005666666666666671,
+    "a3": 0.0019777503090234834
+  },
+  "dap_k1_minus_native_auroc": {
+    "a1": {
+      "mean": -0.0015599999999999614,
+      "median": 0.07340000000000013,
+      "std": 0.12991711131525363,
+      "min": -0.22529999999999994,
+      "max": 0.07529999999999992
+    },
+    "a2": {
+      "mean": 0.07876694444444446,
+      "median": 0.06724166666666687,
+      "std": 0.03426135769599387,
+      "min": 0.044426388888888946,
+      "max": 0.1319111111111111
+    },
+    "a3": {
+      "mean": 0.03482576270357736,
+      "median": 0.02964639156828086,
+      "std": 0.033174454209364955,
+      "min": -0.004210970219150734,
+      "max": 0.08669617605400304
+    }
+  },
+  "dap_k2_minus_k1_auroc": {
+    "a1": {
+      "mean": -0.06747,
+      "median": -0.049575000000000036,
+      "std": 0.04559355560273845,
+      "min": -0.13335000000000008,
+      "max": -0.020724999999999993
+    },
+    "a2": {
+      "mean": 0.013792777777777787,
+      "median": 0.02338333333333331,
+      "std": 0.027789490836032386,
+      "min": -0.03310000000000002,
+      "max": 0.03589444444444445
+    },
+    "a3": {
+      "mean": 0.003361442119786595,
+      "median": 0.001718919265800034,
+      "std": 0.004356064181246098,
+      "min": -0.0007746596157872654,
+      "max": 0.009621364103770791
+    }
+  },
+  "covariance_verdict": "COVARIANCE_REQUIREMENT_NOT_STABLE",
+  "multicomponent_verdict": "MULTICOMPONENT_SECONDARY",
+  "cipherspectrum_stage9_test_used_for_development": false,
+  "next_stage_started": false
+}

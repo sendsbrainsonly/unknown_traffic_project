@@ -1,0 +1,28 @@
+{
+  "best_epoch": 16,
+  "checkpoint_sha256": "9e46db430aa74f9938e877f6f4a47256122a19a33c83a2ce7e50eebdb14f27f3",
+  "duration_seconds": 162.31752133369446,
+  "freeze_after": {
+    "freeze_hash": "c904daef04d2c8e79469191121325c0a6ceeaeb3e595ef9c4c7d7a62c980ae2f",
+    "protocol_sha256": "5177bf7276812bbb417f085043f8518c8573ea1851de2f1d733deb77c9939ced",
+    "split_sha256": "66bf155e6906231b316c384a52f4b46dabd9d3aee76d5f66d86a3941eb172c4e"
+  },
+  "freeze_before": {
+    "freeze_hash": "c904daef04d2c8e79469191121325c0a6ceeaeb3e595ef9c4c7d7a62c980ae2f",
+    "protocol_sha256": "5177bf7276812bbb417f085043f8518c8573ea1851de2f1d733deb77c9939ced",
+    "split_sha256": "66bf155e6906231b316c384a52f4b46dabd9d3aee76d5f66d86a3941eb172c4e"
+  },
+  "guard_activations": 0,
+  "known_test_samples": 0,
+  "protocol_id": "medium_seed2026",
+  "status": "success",
+  "stop_epoch": 21,
+  "train_loss": 0.09801147651075072,
+  "unknown_training_samples": 0,
+  "unknown_validation_samples": 0,
+  "val_accuracy": 0.9921507064364207,
+  "val_loss": 0.08475235122885148,
+  "val_macro_f1": 0.9306873714236438,
+  "val_weighted_f1": 0.9920452299917335,
+  "variant": "D1"
+}

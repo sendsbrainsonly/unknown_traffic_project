@@ -1,0 +1,23 @@
+{
+  "deterministic_eval": true,
+  "device": "cuda:0",
+  "embedding_shape": [
+    64,
+    128
+  ],
+  "finite": true,
+  "input_shape": [
+    64,
+    30,
+    3
+  ],
+  "logits_shape": [
+    64,
+    5
+  ],
+  "loss": 1.802656650543213,
+  "peak_gpu_memory_bytes": 36361216,
+  "physical_gpu_visible": "NVIDIA L20",
+  "status": "PASS",
+  "unknown_samples_used": 0
+}

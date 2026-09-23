@@ -1,0 +1,15 @@
+{
+  "placeholder_official_code": [
+    "MIETT"
+  ],
+  "registry_sha256": "8bfa7dfadcff921e37ac2ce86dd752b75dd9ff654385ef6c327555926659ebb2",
+  "required_field_count": 16,
+  "source_notes_sha256": "7279370b1712bb2ac47206647924cc98985b7eac171c1d6b5faf58e3baf40b51",
+  "status": "PASS",
+  "unknown_official_code": [
+    "MT-FlowFormer",
+    "Deep Packet",
+    "FlowLens"
+  ],
+  "work_count": 19
+}

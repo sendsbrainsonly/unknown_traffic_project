@@ -1,0 +1,89 @@
+{
+  "updated_at_utc": "2026-09-21T13:17:14.597938+00:00",
+  "queue_state": "ABORTED",
+  "scheduler": "takeover_parallel",
+  "max_concurrent_physical_gpus": 3,
+  "active_physical_gpus": 4,
+  "completed_epochs": 400,
+  "planned_epochs": 500,
+  "progress_fraction": 0.8,
+  "tasks": [
+    {
+      "name": "iscx_tor_medium2022",
+      "dataset": "iscx_tor",
+      "protocol": "medium_seed2022",
+      "state": "SUCCESS",
+      "epoch": 100,
+      "planned_epochs": 100,
+      "physical_gpu": "0",
+      "pid": 109921,
+      "returncode": 0,
+      "started_at_utc": "2026-09-21T08:16:45.218053+00:00",
+      "finished_at_utc": "2026-09-21T09:14:44.347012+00:00",
+      "log": "queue_logs/iscx_tor_medium2022.log"
+    },
+    {
+      "name": "iscx_vpn_medium2022",
+      "dataset": "iscx_vpn",
+      "protocol": "medium_seed2022",
+      "state": "SUCCESS",
+      "epoch": 100,
+      "planned_epochs": 100,
+      "physical_gpu": "4",
+      "pid": 113469,
+      "returncode": 0,
+      "started_at_utc": "2026-09-21T08:16:53.227730+00:00",
+      "finished_at_utc": "2026-09-21T09:43:42.915524+00:00",
+      "log": "queue_logs/iscx_vpn_medium2022.log"
+    },
+    {
+      "name": "vnat_medium2025",
+      "dataset": "vnat",
+      "protocol": "medium_seed2025",
+      "state": "SUCCESS",
+      "epoch": 100,
+      "planned_epochs": 100,
+      "physical_gpu": "5",
+      "pid": 117477,
+      "returncode": 0,
+      "started_at_utc": "2026-09-21T08:17:01.237502+00:00",
+      "finished_at_utc": "2026-09-21T10:01:44.199128+00:00",
+      "log": "queue_logs/vnat_medium2025.log"
+    },
+    {
+      "name": "vnat_medium2026",
+      "dataset": "vnat",
+      "protocol": "medium_seed2026",
+      "state": "SUCCESS",
+      "epoch": 100,
+      "planned_epochs": 100,
+      "physical_gpu": "0",
+      "pid": 3098815,
+      "returncode": 0,
+      "started_at_utc": "2026-09-21T10:29:05.856272+00:00",
+      "finished_at_utc": "2026-09-21T12:08:42.405620+00:00",
+      "log": "queue_logs/vnat_medium2026_independent_single_gpu_20260921.log"
+    },
+    {
+      "name": "ustc_A2",
+      "dataset": "ustc",
+      "protocol": "A-2",
+      "state": "ABORTED",
+      "epoch": 0,
+      "planned_epochs": 100,
+      "physical_gpu": "0,1,2",
+      "pid": 1767920,
+      "returncode": -15,
+      "started_at_utc": "2026-09-21T13:15:14.472702+00:00",
+      "finished_at_utc": "2026-09-21T13:17:14.597886+00:00",
+      "log": "queue_logs/ustc_A2_ustc_three_gpu_restart_20260921.log"
+    }
+  ],
+  "automatic_retry": false,
+  "takeover": {
+    "vnat_adopted": false,
+    "vnat_reused_completed": true,
+    "ustc_physical_gpus": "0,1,2",
+    "ustc_data_parallel": true
+  }
+}

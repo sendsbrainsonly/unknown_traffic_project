@@ -1,0 +1,1742 @@
+{
+  "schema_version": 1,
+  "experiment_id": "stage18-pp-opennet-inspired-e4-20260920-v1",
+  "created_at_utc": "2026-09-20T14:15:17Z",
+  "updated_at_utc": "2026-09-20T14:54:53Z",
+  "status": "success",
+  "experiment_type": "controlled_representation_benchmark",
+  "claim_scope": "approximate",
+  "objective": "Independent PP-OpenNet-inspired packet time-length encoder benchmark on frozen Stage17 Email/Streaming protocols",
+  "inputs": [
+    {
+      "path": "../stage17_encoder_recovery_and_open_set_pilot/feature_cache/service3065_historical_inputs.npz",
+      "role": "frozen packet-level cache",
+      "sha256": "aff17d4b3271107852c0f30556627ab5daf693fba6a0a7b18df5f3785f260cff"
+    },
+    {
+      "path": "../stage16s_service_open_set_benchmark/service_unknown_protocol_manifest.csv",
+      "role": "frozen Known/Unknown protocol manifest"
+    },
+    {
+      "path": "../stage17_encoder_recovery_and_open_set_pilot/encoder_pilot_results.csv",
+      "role": "frozen E0/E3 paired baselines"
+    }
+  ],
+  "code": {
+    "revision": "ffcb0dfcaebe3b04b6d3bd42964d5a705303d2cc",
+    "dirty": true,
+    "changes": [
+      "stage18_pp_opennet_inspired_e4/scripts/stage18_common.py",
+      "stage18_pp_opennet_inspired_e4/scripts/e4_model.py",
+      "stage18_pp_opennet_inspired_e4/scripts/train_e4_run.py",
+      "stage18_pp_opennet_inspired_e4/scripts/aggregate_stage18.py",
+      "stage18_pp_opennet_inspired_e4/scripts/replay_verify.py",
+      "stage18_pp_opennet_inspired_e4/scripts/verify_stage18.py"
+    ]
+  },
+  "execution": {
+    "tmux_session": "stage18_email_2022, stage18_email_2023, stage18_email_2024, stage18_streaming_2022, stage18_streaming_2023, stage18_streaming_2024",
+    "command": "python stage18_pp_opennet_inspired_e4/scripts/train_e4_run.py --service <Email|Streaming> --seed <2022|2023|2024>",
+    "exit_code": 0,
+    "environment": "/home/birkenwald/data/SEU-WXY/conda_envs/2025-10-8-WXY-dgl_py310",
+    "physical_gpu_ids": [
+      1,
+      2,
+      3,
+      4
+    ]
+  },
+  "configuration": {
+    "files": [
+      "configs/stage18_config.json"
+    ],
+    "parameters": {
+      "protocols": [
+        "loso_email",
+        "loso_streaming"
+      ],
+      "epochs": 100,
+      "batch_size": 128,
+      "optimizer": "AdamW",
+      "learning_rate": 0.001,
+      "embedding_dim": 128,
+      "max_packets": 30,
+      "primary_open_score": "feature_distance",
+      "primary_known_validation_acceptance": 0.95,
+      "variants_per_protocol_seed": 7
+    },
+    "seeds": [
+      2022,
+      2023,
+      2024
+    ]
+  },
+  "core_results": [
+    {
+      "metric": "E4_FULL Email Known Test Macro-F1 mean",
+      "value": 0.749696838650399
+    },
+    {
+      "metric": "E4_FULL Streaming Known Test Macro-F1 mean",
+      "value": 0.7982795475323302
+    },
+    {
+      "metric": "E4_FULL overall feature-distance AUROC mean",
+      "value": 0.5940652759097503
+    },
+    {
+      "metric": "E4_FULL overall UFAR at Known-Val P95",
+      "value": 0.8609184975312324
+    },
+    {
+      "metric": "E4 minus E0 overall paired AUROC",
+      "value": -0.05696951435818232
+    },
+    {
+      "metric": "final_gate",
+      "value": "E4_FAIL_NO_FUSION"
+    }
+  ],
+  "artifacts": [
+    {
+      "path": "aggregation_summary.json",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 1245,
+      "sha256": "2dbbb33e6064b673827660f32601e045039714bc100d2a16dcd2a58f724e57b1",
+      "hash_status": "verified"
+    },
+    {
+      "path": "closed_set_summary.csv",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 2727,
+      "sha256": "434f5fb88a194ce9084f1241ff93523dfa950ec512fd3b91a5e4d680f7978979",
+      "hash_status": "verified"
+    },
+    {
+      "path": "completion_verification.json",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 671,
+      "sha256": "e8e185428306a2a3dc5c88b032bd1db5c94c90b79fba513b8a993c42b3573359",
+      "hash_status": "verified"
+    },
+    {
+      "path": "component_ablation.csv",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 7353,
+      "sha256": "414101a5f8b43d58d3dc21588a7454606d9ad8372c06d4c4d5ffd4ad7a9a233a",
+      "hash_status": "verified"
+    },
+    {
+      "path": "component_ablation_summary.csv",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 1933,
+      "sha256": "eaa5c2e3d613602bee77ad35e192850849a657b16dafe9545528ef06bcadbe40",
+      "hash_status": "verified"
+    },
+    {
+      "path": "configs/stage18_config.json",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 3056,
+      "sha256": "98cc7ae25a8045ed0cbd7f6cad62ae82ffd42272fd95560e7c6627b60b84c60c",
+      "hash_status": "verified"
+    },
+    {
+      "path": "confusion_matrices.csv",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 2940,
+      "sha256": "cd7f58b44b2025b4d10f6b816a46ad0d882f133aed6606a81af6098cf3bd8c98",
+      "hash_status": "verified"
+    },
+    {
+      "path": "data_input_audit.md",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 1119,
+      "sha256": "5353bcaa6ca472a915f03a292210d617ead7e8e45a1cf132e5789875bb1ea0be",
+      "hash_status": "verified"
+    },
+    {
+      "path": "e4_closed_set_results.csv",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 12782,
+      "sha256": "eb5d1a36d85c496c9dccb03dbf68c2363ecc77193a3291211777ca35780f23e0",
+      "hash_status": "verified"
+    },
+    {
+      "path": "e4_e3_error_complementarity.csv",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 718,
+      "sha256": "223f5f5839484b240177780cbd3529f8fe92e70f5edc9eae9b21fd7e62fe55eb",
+      "hash_status": "verified"
+    },
+    {
+      "path": "e4_open_set_results.csv",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 73209,
+      "sha256": "18f74073cd1571b1310603a51474b33660017c8d33e2dbc07062a523687b275d",
+      "hash_status": "verified"
+    },
+    {
+      "path": "e4_per_class_results.csv",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 19694,
+      "sha256": "409d889675fd90f5ae0923b7a157d0500a739543da09872cd4131b73c0b02679",
+      "hash_status": "verified"
+    },
+    {
+      "path": "e4_predictions.csv",
+      "scope": "bundle",
+      "role": "predictions",
+      "size_bytes": 13761490,
+      "sha256": "90f37b98a2ce71ef71281e4763db68033e21d9911eaeb642cb797becf779918a",
+      "hash_status": "verified"
+    },
+    {
+      "path": "e4_training_dynamics.csv",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 664363,
+      "sha256": "5a1751321f8673382ae6edabe1c014365dceec90fd97a6949dbca59f3d0e00c6",
+      "hash_status": "verified"
+    },
+    {
+      "path": "gate_decision.json",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 1016,
+      "sha256": "054f29aa79ca49370cc9723276e20d643f054d3759cf2a561f40e57e8f985bea",
+      "hash_status": "verified"
+    },
+    {
+      "path": "open_set_summary.csv",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 24177,
+      "sha256": "f25e43b2de6a0874d605d4a4e458e83aaba3ab46873a3bfaca82127d966cf6d4",
+      "hash_status": "verified"
+    },
+    {
+      "path": "paired_comparison.csv",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 5715,
+      "sha256": "6177d521417326691c0db1f4f31320785fc6932f9650db3ba0f673ab551f1117",
+      "hash_status": "verified"
+    },
+    {
+      "path": "paper_method_boundary.md",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 1648,
+      "sha256": "166e6fb2af417b6e07d431e4480737ac3c4c2d0e0cb7bf6688c195e7d0f6ae45",
+      "hash_status": "verified"
+    },
+    {
+      "path": "per_class_summary.csv",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 9664,
+      "sha256": "2cbb9b5e03d26dbf6733817dff6b93b51b7c0cbebff287a8c91a598dd152a0a0",
+      "hash_status": "verified"
+    },
+    {
+      "path": "protected_asset_hashes_after.json",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 2990,
+      "sha256": "2ed05de2955049144ca9ec8006fd529b4b1ee1fd5ff68b523ba712502e455280",
+      "hash_status": "verified"
+    },
+    {
+      "path": "protected_asset_hashes_before.json",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 2990,
+      "sha256": "2ed05de2955049144ca9ec8006fd529b4b1ee1fd5ff68b523ba712502e455280",
+      "hash_status": "verified"
+    },
+    {
+      "path": "replay_verification.json",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 14609,
+      "sha256": "20a110e3b2ef04771f7851b97ed6788064d57f5a4f361c56f20915728480d95e",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/loso_email/seed2022/E4_BASE_best.pt",
+      "scope": "bundle",
+      "role": "checkpoint",
+      "size_bytes": 216149,
+      "sha256": "723348c917f64eb6a2c6c2b15323efee0c04363a49c2c06dd2cc279210f6cace",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/loso_email/seed2022/E4_BASE_embeddings.npz",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 1139153,
+      "sha256": "1200c9808b90fce37ab7dc9d146b54f49b6da8885f83b461355e92855610c0fc",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/loso_email/seed2022/E4_BASE_history.csv",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 12479,
+      "sha256": "1e1c545acf0f9e111daac832ba65ec2ffa56fe45f5bd314cf18d68e3191d1786",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/loso_email/seed2022/E4_FULL_best.pt",
+      "scope": "bundle",
+      "role": "checkpoint",
+      "size_bytes": 880753,
+      "sha256": "0df4d6fb1594ab16dcc3e8ce2651d3bc0a48ae9344e40fb719d7d41e06358e88",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/loso_email/seed2022/E4_FULL_embeddings.npz",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 1134903,
+      "sha256": "32a3a6157303c639974523b175b4e6e81aa101e34911bc8156914ecfdf0f8965",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/loso_email/seed2022/E4_FULL_history.csv",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 12480,
+      "sha256": "098ad65e5068d7b338cc97933956fcf7c9b75f5b90f06339fbe4f6f74d6c375b",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/loso_email/seed2022/E4_LENGTH_best.pt",
+      "scope": "bundle",
+      "role": "checkpoint",
+      "size_bytes": 875117,
+      "sha256": "f5c9fb39bd939ea6e64e08f346bccee7375571f708691a8f9520bfc1c7c11483",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/loso_email/seed2022/E4_LENGTH_embeddings.npz",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 681186,
+      "sha256": "3f0a6e7230bddc4d7e54e3f77abd7148f7eb8ce3a4ca4282ffe15d31331fc46d",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/loso_email/seed2022/E4_LENGTH_history.csv",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 12456,
+      "sha256": "c971516a706a833b8aa976d60e5a99f6700da28e8502ad28c49feef1d37b5d37",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/loso_email/seed2022/E4_NO_MS_best.pt",
+      "scope": "bundle",
+      "role": "checkpoint",
+      "size_bytes": 813303,
+      "sha256": "600a1ea12fe432c0bb97864a9136b20c6d113f2123d3388f01f212368e99347d",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/loso_email/seed2022/E4_NO_MS_embeddings.npz",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 1112785,
+      "sha256": "e544f9eb08bf47eae8201ffd111521d86e6cbc855eff0f586d6bc9501b01714b",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/loso_email/seed2022/E4_NO_MS_history.csv",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 12481,
+      "sha256": "e3596b987918a048d7494a8de83d1698dc88a88a2993d5f5b94c89a840095c3f",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/loso_email/seed2022/E4_NO_RNN_best.pt",
+      "scope": "bundle",
+      "role": "checkpoint",
+      "size_bytes": 283669,
+      "sha256": "498c6d2652967a3ff52097c3281a32c83cd925f106331833106b8ecf93b6b126",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/loso_email/seed2022/E4_NO_RNN_embeddings.npz",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 1139032,
+      "sha256": "da399712695e87aeaf61771580a600ec7ef358bd86e2e7a7c0f50b8f223d0e0c",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/loso_email/seed2022/E4_NO_RNN_history.csv",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 12441,
+      "sha256": "93ec6e2df37c5e118da2568ce03c1035aa36d7dfa78dd7bfdb4c69c7c9f25288",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/loso_email/seed2022/E4_TIME_LENGTH_best.pt",
+      "scope": "bundle",
+      "role": "checkpoint",
+      "size_bytes": 878147,
+      "sha256": "15edd81ef2b5584112d5be2aa6300f0f0b95d21516e3dab1648c170abdbaa896",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/loso_email/seed2022/E4_TIME_LENGTH_embeddings.npz",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 1141463,
+      "sha256": "4b28cf26e718632a2a2722f8089d8b902710424c612b1742f07d38b0d7223a03",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/loso_email/seed2022/E4_TIME_LENGTH_history.csv",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 12489,
+      "sha256": "70778494302eb8862b7db2a568e4c23f9030ae8d08887b6aa9d1143d3b803f44",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/loso_email/seed2022/E4_TIME_best.pt",
+      "scope": "bundle",
+      "role": "checkpoint",
+      "size_bytes": 875057,
+      "sha256": "7449348c408b1a2fe770b2abb8526aa46f53abc82e9a7338b2ae83830d554b26",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/loso_email/seed2022/E4_TIME_embeddings.npz",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 1114006,
+      "sha256": "f07dee634c77eb191e563923f304082588e5e7ad143bd3aed3de34948071d297",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/loso_email/seed2022/E4_TIME_history.csv",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 12430,
+      "sha256": "52fed9d06327edb8f10272068d6e03d096587239b106852a97adb5f9a247b2bf",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/loso_email/seed2022/SUCCESS",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 8,
+      "sha256": "1f513d4ecec4e91ddd48da1a59b6d96f1b76c374dc1da641980782a34f43b102",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/loso_email/seed2022/closed_set_results.csv",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 2320,
+      "sha256": "d932c9c6bd26b631369cead00d1111abf814ae0115c100890aeaff0c3f867b1a",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/loso_email/seed2022/open_set_results.csv",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 12317,
+      "sha256": "e8cb87eb048f8c20134e7a64133ec4d4ccd25bbad87d37ee43dc948e267fff78",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/loso_email/seed2022/per_class_results.csv",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 3328,
+      "sha256": "6ad299547e6524f82af3b4b99f172aec21b2714e46aa4973b30fcf4415dabd6b",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/loso_email/seed2022/predictions.csv",
+      "scope": "bundle",
+      "role": "predictions",
+      "size_bytes": 1303015,
+      "sha256": "f5a23c99a41c5e386d8358a2648db5b788696b0f058ceacf8374e72a6d17ce23",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/loso_email/seed2022/run_manifest.json",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 3128,
+      "sha256": "41a4c2c73efe2aac040f3419b50e1edd1d06cd3153239694eb5774b0c48718cb",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/loso_email/seed2023/E4_BASE_best.pt",
+      "scope": "bundle",
+      "role": "checkpoint",
+      "size_bytes": 216149,
+      "sha256": "fdf5bd191c8dbeb25ea171ea0f139e1c1d6fc668e1a66a347c9b2118df21a3a0",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/loso_email/seed2023/E4_BASE_embeddings.npz",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 1142229,
+      "sha256": "53114e2234d204495d0745f66844879025f201b1cf24ffb8b0dc20e0f4803684",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/loso_email/seed2023/E4_BASE_history.csv",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 12471,
+      "sha256": "bdaf868a42cc8fdbfe0564e4615015df092c29a85738f4e5409ce69541326ed7",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/loso_email/seed2023/E4_FULL_best.pt",
+      "scope": "bundle",
+      "role": "checkpoint",
+      "size_bytes": 880753,
+      "sha256": "b362b6055b42462429bff99441f8c943f0ce9af435b204efa2a0c4b1d4dea838",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/loso_email/seed2023/E4_FULL_embeddings.npz",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 1132815,
+      "sha256": "288487503f77b905ad3206c4293bb45df9fa83f26cc3c3fced3a31db00cc206e",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/loso_email/seed2023/E4_FULL_history.csv",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 12424,
+      "sha256": "1dcc4c703d490f5492e09a554931e7a019b67352d8c9fb79db3f8b8f6854a402",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/loso_email/seed2023/E4_LENGTH_best.pt",
+      "scope": "bundle",
+      "role": "checkpoint",
+      "size_bytes": 875117,
+      "sha256": "6f359c7377f1e8a5c6cab3a2293edb1d40ba4599448f4f13d49d8d357c38dfbb",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/loso_email/seed2023/E4_LENGTH_embeddings.npz",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 680674,
+      "sha256": "da4ec2d2106dd94a23383275f042cd1d8c096004e40c81328e982416152bf13e",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/loso_email/seed2023/E4_LENGTH_history.csv",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 12438,
+      "sha256": "ae7c3d4bc814723b6e2229ab0c46bf2e47ffb8d4ab9ab73995c122f827a9d1e8",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/loso_email/seed2023/E4_NO_MS_best.pt",
+      "scope": "bundle",
+      "role": "checkpoint",
+      "size_bytes": 813303,
+      "sha256": "9b966d4c6bc604f0fad189d8dec737e6e9f452a79a3db73a45eaad35c9404777",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/loso_email/seed2023/E4_NO_MS_embeddings.npz",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 1130740,
+      "sha256": "78c356fedd8aa452656b828660a1c727093ba0f0cd90f08e2fb4bbf6400d5dbe",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/loso_email/seed2023/E4_NO_MS_history.csv",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 12470,
+      "sha256": "9dd90699ff541d825709bc0f9b0eb403e55ea775a1a70e5ae3f795dd98503eef",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/loso_email/seed2023/E4_NO_RNN_best.pt",
+      "scope": "bundle",
+      "role": "checkpoint",
+      "size_bytes": 283669,
+      "sha256": "9f036479755133f504c2324141106351d5812ab281bf362b898f77a986739ddf",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/loso_email/seed2023/E4_NO_RNN_embeddings.npz",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 1140389,
+      "sha256": "ee8bf91319b5f4e92fb440e1c5fe719732f52bc073f5ebc878c0520951c5ca1a",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/loso_email/seed2023/E4_NO_RNN_history.csv",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 12437,
+      "sha256": "53cea86959593b6c772ffb59fc0fbefdc7ed579c6e49ae11f4ecca25d25dc5e6",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/loso_email/seed2023/E4_TIME_LENGTH_best.pt",
+      "scope": "bundle",
+      "role": "checkpoint",
+      "size_bytes": 878147,
+      "sha256": "32bfc2adc1f5006b6c805561433a3ce8905cabe4da5342e8b2a3828b4dccf095",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/loso_email/seed2023/E4_TIME_LENGTH_embeddings.npz",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 1142621,
+      "sha256": "f6cd94483c3d1c7ce9001ff272c570ee97da4ed3d544da8d3958da4d2203236c",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/loso_email/seed2023/E4_TIME_LENGTH_history.csv",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 12473,
+      "sha256": "630be55b88d7489d520b4f006752d9898eea56c60447a9e5a71c520fd091c9aa",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/loso_email/seed2023/E4_TIME_best.pt",
+      "scope": "bundle",
+      "role": "checkpoint",
+      "size_bytes": 875057,
+      "sha256": "3435d78bd05a25073f2210c2664ff421f53b13729f3ac99e581f4fb760c0576f",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/loso_email/seed2023/E4_TIME_embeddings.npz",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 1113254,
+      "sha256": "c5cdac260650ac722bb335fbabc7d8f07ae2f1886af635400610009d3ef02005",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/loso_email/seed2023/E4_TIME_history.csv",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 12390,
+      "sha256": "a5cd98f0dd5ad032f86a4d28525fcb8636d812d681ca6f3494c39b47eda931f8",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/loso_email/seed2023/SUCCESS",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 8,
+      "sha256": "1f513d4ecec4e91ddd48da1a59b6d96f1b76c374dc1da641980782a34f43b102",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/loso_email/seed2023/closed_set_results.csv",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 2321,
+      "sha256": "22e6bb3ec1fe01a123dbb12abd853bb8f8eb3f36ed8040d0570b1822f4b138b8",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/loso_email/seed2023/open_set_results.csv",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 12291,
+      "sha256": "c6f472771abf909e3dab334b33efc362ac5b1b16d3fc19a7285bdffec7998459",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/loso_email/seed2023/per_class_results.csv",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 3350,
+      "sha256": "342814d50c50e99f3c00ecdb1484dba91fc873c85e09f608598a0bc83a476f96",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/loso_email/seed2023/predictions.csv",
+      "scope": "bundle",
+      "role": "predictions",
+      "size_bytes": 1308420,
+      "sha256": "25ffeaae895af05ca6e550f3b26917b5deafd0cc3b5451241397bb4105d9d901",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/loso_email/seed2023/run_manifest.json",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 3128,
+      "sha256": "3123ef703c20e117a3039e4338d7bc5f937a219a68ae28123433960f3e99fc86",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/loso_email/seed2024/E4_BASE_best.pt",
+      "scope": "bundle",
+      "role": "checkpoint",
+      "size_bytes": 216149,
+      "sha256": "b8a737cdd3c885756043e2504c9eca2a8ebc02a7b46343e85685942fdfa00938",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/loso_email/seed2024/E4_BASE_embeddings.npz",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 1141055,
+      "sha256": "24d3e4709f55069af8ebb8b84bbf8e6215c7bb231c7092887a780c923bd68fa8",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/loso_email/seed2024/E4_BASE_history.csv",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 12416,
+      "sha256": "4842db616dca1f3a67ade8414478f762e4320209703371dc9c86953d34126eb5",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/loso_email/seed2024/E4_FULL_best.pt",
+      "scope": "bundle",
+      "role": "checkpoint",
+      "size_bytes": 880753,
+      "sha256": "f68aea66dc16a7295a263cbc2c65b6dd14eb5c3b8d473f45759671531c6c7e18",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/loso_email/seed2024/E4_FULL_embeddings.npz",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 1131353,
+      "sha256": "7ecb85bd0c07563d035da493e3b0571347e52033bbd90926c2f88c4a8af8c952",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/loso_email/seed2024/E4_FULL_history.csv",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 12467,
+      "sha256": "43217dc71f092ff167e9a72c45295b996c3482a692ae4ca8a83a74e22162bf86",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/loso_email/seed2024/E4_LENGTH_best.pt",
+      "scope": "bundle",
+      "role": "checkpoint",
+      "size_bytes": 875117,
+      "sha256": "fc77b1ecc5af24daeda143612bee19cd9ea139209fcf47a2706b68a9e6056a7b",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/loso_email/seed2024/E4_LENGTH_embeddings.npz",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 680402,
+      "sha256": "75764c3c6f32c8f9de8c4f0cb3ce61b96bf6c50f7c7fc681ca2737546ac72d7c",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/loso_email/seed2024/E4_LENGTH_history.csv",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 12445,
+      "sha256": "5f3cdf3b2cc22b4808c0099e60fdaf6289e67b71827fed6ed8e20cfd06fe8deb",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/loso_email/seed2024/E4_NO_MS_best.pt",
+      "scope": "bundle",
+      "role": "checkpoint",
+      "size_bytes": 813303,
+      "sha256": "ed95f9eafe6ac81da606f1485b2cbb5d7ee5cfdfcdcfc4b3d3a8fb5dd3c71884",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/loso_email/seed2024/E4_NO_MS_embeddings.npz",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 1119477,
+      "sha256": "aae233717aa184c3da34c3193cbf11ef864250df1e1232ef1e3a260e0a9cc92d",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/loso_email/seed2024/E4_NO_MS_history.csv",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 12455,
+      "sha256": "c6d66df61b4b5505563a375a5962d949a3dc6d3eb391b329b6f69ceb6049da34",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/loso_email/seed2024/E4_NO_RNN_best.pt",
+      "scope": "bundle",
+      "role": "checkpoint",
+      "size_bytes": 283669,
+      "sha256": "164a535dc2c601bf016ec31ec9884aa4e133d4ecf3bdcf3cbb8b3f9aabc5bb69",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/loso_email/seed2024/E4_NO_RNN_embeddings.npz",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 1139426,
+      "sha256": "a57073a7c6cf991cacddc7ee830039f270dec04c1ee85f51a113f30e2c8710ac",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/loso_email/seed2024/E4_NO_RNN_history.csv",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 12441,
+      "sha256": "52fc7b9b66af2dcf3e565038e25ae4eb5da6ad031f0499fdc8b70b0c12d171bc",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/loso_email/seed2024/E4_TIME_LENGTH_best.pt",
+      "scope": "bundle",
+      "role": "checkpoint",
+      "size_bytes": 878147,
+      "sha256": "80d132b6a67bd705401011682dc8f74f2741ad29accdf0ae697392e2db23468a",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/loso_email/seed2024/E4_TIME_LENGTH_embeddings.npz",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 1140380,
+      "sha256": "7f21673916c60e49408c6dab9496ca85fd0d750ba2c55a6124059e15816f14a2",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/loso_email/seed2024/E4_TIME_LENGTH_history.csv",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 12481,
+      "sha256": "ee896306034f3c14daba93ca61ef21f415572411d2ad88ff7dc58486e9f536fb",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/loso_email/seed2024/E4_TIME_best.pt",
+      "scope": "bundle",
+      "role": "checkpoint",
+      "size_bytes": 875057,
+      "sha256": "a2a73cd49d79a4d0cf84235501a1299b6623cb9b1b9a62e082d082786b1e393c",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/loso_email/seed2024/E4_TIME_embeddings.npz",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 1116078,
+      "sha256": "483015bf09f5c9529ec6d4b8586e82bcf9dc444d67e22d7450fa3f299c19fff7",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/loso_email/seed2024/E4_TIME_history.csv",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 12401,
+      "sha256": "c7cd4b576d8907045a5b322a28eff074534b8b1c00fa45f984d54dabec9245a2",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/loso_email/seed2024/SUCCESS",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 8,
+      "sha256": "1f513d4ecec4e91ddd48da1a59b6d96f1b76c374dc1da641980782a34f43b102",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/loso_email/seed2024/closed_set_results.csv",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 2316,
+      "sha256": "14a19d12bb8a6276a53bac3e1f349f97b9c365d3338b4625a9bbab9fdeec9a15",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/loso_email/seed2024/open_set_results.csv",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 12336,
+      "sha256": "4343d935e4f6adabce446f92944b32a4d4e28461272bb9305892b2e3f96980b7",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/loso_email/seed2024/per_class_results.csv",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 3369,
+      "sha256": "533d8b15e2c63cc02376c05221279902f52cef79a83ca7ac2e54a2e92b2fe737",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/loso_email/seed2024/predictions.csv",
+      "scope": "bundle",
+      "role": "predictions",
+      "size_bytes": 1306215,
+      "sha256": "87b24b591dd0ad0dae7139aad2911b35abe5d9dd888e35199ce3584868e2582c",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/loso_email/seed2024/run_manifest.json",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 3128,
+      "sha256": "7a242b907226843e80919348f1fbe6b90be010f48ea0d4a01393725ade446d7f",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/loso_streaming/seed2022/E4_BASE_best.pt",
+      "scope": "bundle",
+      "role": "checkpoint",
+      "size_bytes": 216149,
+      "sha256": "09c7b20dcd51c1fdfec27ca710a55996e3929588f18e305c9e313864c243deab",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/loso_streaming/seed2022/E4_BASE_embeddings.npz",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 1137407,
+      "sha256": "f5826d8aaeb8d108c16c1feb4af91c8a52a8c7378a3b4309bbdad7863d42efde",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/loso_streaming/seed2022/E4_BASE_history.csv",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 12488,
+      "sha256": "a6c177f8a594cea748313847de39326791868e0ab5b58506ac017afb35eaeede",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/loso_streaming/seed2022/E4_FULL_best.pt",
+      "scope": "bundle",
+      "role": "checkpoint",
+      "size_bytes": 880753,
+      "sha256": "6e32ef0f61ceaca9b00990d885d31820c2c22761086569c103fca6f79689e988",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/loso_streaming/seed2022/E4_FULL_embeddings.npz",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 1134704,
+      "sha256": "4058d01569750a0f25395848fb3833779e80be20aaa99a3dbd997d070f84981b",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/loso_streaming/seed2022/E4_FULL_history.csv",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 12449,
+      "sha256": "fd239edce7771b650651d3bea35e3a347a32edd3dcf715a0f7ca826fe7a891ae",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/loso_streaming/seed2022/E4_LENGTH_best.pt",
+      "scope": "bundle",
+      "role": "checkpoint",
+      "size_bytes": 875117,
+      "sha256": "2aa68e14d5f5fb3aab6375bf7d6ab8b54249546ead27df85c3da21967bd6b46b",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/loso_streaming/seed2022/E4_LENGTH_embeddings.npz",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 679691,
+      "sha256": "630524cad0f7ef8b949e2a0665fdf5942588114f5e920b6b2e6d14b24847b306",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/loso_streaming/seed2022/E4_LENGTH_history.csv",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 12445,
+      "sha256": "d05752b930e1d91c43ee9a981af66ad25b6b005a4ebc6f04667880fc2c5e441e",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/loso_streaming/seed2022/E4_NO_MS_best.pt",
+      "scope": "bundle",
+      "role": "checkpoint",
+      "size_bytes": 813303,
+      "sha256": "c9733da2a9c368b07e9e802323dc5d9c488990c5b757159f7e61a1ccf96bbb76",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/loso_streaming/seed2022/E4_NO_MS_embeddings.npz",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 1119162,
+      "sha256": "2deeaf5e926b2615922f3966f1eb5293aa003a94b6eb4e8de1d9cecc17e0036b",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/loso_streaming/seed2022/E4_NO_MS_history.csv",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 12461,
+      "sha256": "e8f21ea9708aad020fa8b451e4ec4b62d41c73da5cd815f6e2aecdc0e29a3af4",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/loso_streaming/seed2022/E4_NO_RNN_best.pt",
+      "scope": "bundle",
+      "role": "checkpoint",
+      "size_bytes": 283669,
+      "sha256": "720e8cc8516d549dad5b4c835e9aa8e0c9feb48c24bca12075d1cfef9703c8e8",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/loso_streaming/seed2022/E4_NO_RNN_embeddings.npz",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 1137718,
+      "sha256": "9c2d0e18d5c0d6e267de64f4e15fc451b3af91d50720cdb867e53d26567c3d30",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/loso_streaming/seed2022/E4_NO_RNN_history.csv",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 12508,
+      "sha256": "732972f81072c4b396a6b88e048d4ffaba390d3e50c83d77437611489242b1cc",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/loso_streaming/seed2022/E4_TIME_LENGTH_best.pt",
+      "scope": "bundle",
+      "role": "checkpoint",
+      "size_bytes": 878147,
+      "sha256": "8149d3370de1d73c08539baded264545e600393042b3fcc9777c876dda27c96b",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/loso_streaming/seed2022/E4_TIME_LENGTH_embeddings.npz",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 1135925,
+      "sha256": "f38349af18f3933bf1491f2c08ef420b637c39fdd36236b72343abcf66b551b2",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/loso_streaming/seed2022/E4_TIME_LENGTH_history.csv",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 12499,
+      "sha256": "ab2db84e8a7cd9c361abcd119c4db3b4e854858b2931b1cc6e4a86e87a87dd25",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/loso_streaming/seed2022/E4_TIME_best.pt",
+      "scope": "bundle",
+      "role": "checkpoint",
+      "size_bytes": 875057,
+      "sha256": "7b837ee5a1bf020b5c12d1b9628b8de4a4fcea9119bd35670c1af7bd3a038398",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/loso_streaming/seed2022/E4_TIME_embeddings.npz",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 1111247,
+      "sha256": "0c7b7b9ef5d02575bec055daafaa55e77e22f0c91a9ca0a9b2982eb73fac657e",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/loso_streaming/seed2022/E4_TIME_history.csv",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 12490,
+      "sha256": "6f7b9731c01b58dc46288377a4c1f3837bd1edc4c7ebf575860bda77df230669",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/loso_streaming/seed2022/SUCCESS",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 8,
+      "sha256": "1f513d4ecec4e91ddd48da1a59b6d96f1b76c374dc1da641980782a34f43b102",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/loso_streaming/seed2022/closed_set_results.csv",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 2405,
+      "sha256": "1a4fbc9146232c9f518bc794f7b1dcf6eff63f852ec75755f2ffba9397bfad20",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/loso_streaming/seed2022/open_set_results.csv",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 12624,
+      "sha256": "7d7ab255942a816b5e4738c22980ac0d5d5bfd446d8c1ece84b0010a3516bbbe",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/loso_streaming/seed2022/per_class_results.csv",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 3462,
+      "sha256": "ef75a1e2b5ebd91a1a70d2c96db802800410c56639869f6d94a6896a2f45454b",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/loso_streaming/seed2022/predictions.csv",
+      "scope": "bundle",
+      "role": "predictions",
+      "size_bytes": 3314575,
+      "sha256": "a5fc9a5616cf7588b5df137f74ff845b44db937ec6400c569267ff2790f8070e",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/loso_streaming/seed2022/run_manifest.json",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 3135,
+      "sha256": "594da7e68b9fdb60f5f2ec18968173389697fee723b0b3b359830e9bf82ef974",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/loso_streaming/seed2023/E4_BASE_best.pt",
+      "scope": "bundle",
+      "role": "checkpoint",
+      "size_bytes": 216149,
+      "sha256": "ba6664efcc1e1ed25d32a8ac706c666861a9aebc2d7d2bb7a38b74b15b64a040",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/loso_streaming/seed2023/E4_BASE_embeddings.npz",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 1140314,
+      "sha256": "3a5819f8dae1a051a75afa84091d3b40d0077ba161809dbd72e144a03aadf963",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/loso_streaming/seed2023/E4_BASE_history.csv",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 12457,
+      "sha256": "f3174327702bda11ae474d473b183f4ccefe0d5d231fab3a0ef43ced05edf7f6",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/loso_streaming/seed2023/E4_FULL_best.pt",
+      "scope": "bundle",
+      "role": "checkpoint",
+      "size_bytes": 880753,
+      "sha256": "247c9f494e9cba91e35c9b268e9a1f0de0c066a0e03961ef7599234f0df0e5f4",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/loso_streaming/seed2023/E4_FULL_embeddings.npz",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 1131539,
+      "sha256": "386405d8eb6a2d294f97d3383bfd925bc501a3138e5a0a716e70139879afc1ba",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/loso_streaming/seed2023/E4_FULL_history.csv",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 12482,
+      "sha256": "304883ffd6b50e8e81c10f499f0a0457c93a79015331302aa9bab12a2f173faa",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/loso_streaming/seed2023/E4_LENGTH_best.pt",
+      "scope": "bundle",
+      "role": "checkpoint",
+      "size_bytes": 875117,
+      "sha256": "b12ec3727676a09d0507cc33dc038cd8d1fdf6ae884d36bc1c95592ca9cde31a",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/loso_streaming/seed2023/E4_LENGTH_embeddings.npz",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 680182,
+      "sha256": "653a712ace12bb63f2eb71721fd9d8d9fa5a0a29c5c105ddb0247f7b75c096d6",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/loso_streaming/seed2023/E4_LENGTH_history.csv",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 12459,
+      "sha256": "26d3d2442e076a06a3668c8442e691cccee45fc6d0d9093e0156243ce8c36f56",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/loso_streaming/seed2023/E4_NO_MS_best.pt",
+      "scope": "bundle",
+      "role": "checkpoint",
+      "size_bytes": 813303,
+      "sha256": "ba15ebe6d01250988b0c5eea372fecf7df5563d12b031a1f11e0582e12cc8bf6",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/loso_streaming/seed2023/E4_NO_MS_embeddings.npz",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 1110450,
+      "sha256": "46e03752575ed6216d895f03c56fc2a77445b6bc4f55573b866cd01fe49d34fd",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/loso_streaming/seed2023/E4_NO_MS_history.csv",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 12485,
+      "sha256": "e575b44c10bfe367cca59b5d6f6bee7bbacc8f0aae3d3ac0e84c7940ccb6a374",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/loso_streaming/seed2023/E4_NO_RNN_best.pt",
+      "scope": "bundle",
+      "role": "checkpoint",
+      "size_bytes": 283669,
+      "sha256": "5b2078e5c663270c07f0796f9d5cfde5a86fac56451c119ffb9479bbe3c72cb5",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/loso_streaming/seed2023/E4_NO_RNN_embeddings.npz",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 1138307,
+      "sha256": "142083480b9cf1b67b3b5dc2ba39a3a24a9d07732888715cc7ad2f95d6f6ab37",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/loso_streaming/seed2023/E4_NO_RNN_history.csv",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 12481,
+      "sha256": "9ddfa811633a8320cb621ff272fe796e986ea6942792c9146969a0a360c45401",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/loso_streaming/seed2023/E4_TIME_LENGTH_best.pt",
+      "scope": "bundle",
+      "role": "checkpoint",
+      "size_bytes": 878147,
+      "sha256": "0850404742ce1f442da531e2d7542c90680f4522babc0cc180843af82489dbf1",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/loso_streaming/seed2023/E4_TIME_LENGTH_embeddings.npz",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 1124523,
+      "sha256": "05c375731500d399d79b8e67f080b15afe1fe61258d015f476c6a6ee38aafe9f",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/loso_streaming/seed2023/E4_TIME_LENGTH_history.csv",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 12504,
+      "sha256": "3b6d0356f93e828325f5c356583673d43e6d97e9ef48e83cf0990827143fd90e",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/loso_streaming/seed2023/E4_TIME_best.pt",
+      "scope": "bundle",
+      "role": "checkpoint",
+      "size_bytes": 875057,
+      "sha256": "a53fa87302a448b30c2a49eb4f6a802b0a3d9b46f1f92fb62d75e5806fd420a8",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/loso_streaming/seed2023/E4_TIME_embeddings.npz",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 1113572,
+      "sha256": "5b934ab8147bc9023f2b3b2baafe19501ff3e5769d41c050fcff0cd1e622a1ea",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/loso_streaming/seed2023/E4_TIME_history.csv",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 12474,
+      "sha256": "b39c5c0f914ec6585e283e75d69848a984012ed6ffbcfdf8249a0542cba4c686",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/loso_streaming/seed2023/SUCCESS",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 8,
+      "sha256": "1f513d4ecec4e91ddd48da1a59b6d96f1b76c374dc1da641980782a34f43b102",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/loso_streaming/seed2023/closed_set_results.csv",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 2398,
+      "sha256": "ec52852003907bac0b688fe6744ff372dae1ce5773ec5c8573e0014619e63c39",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/loso_streaming/seed2023/open_set_results.csv",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 12825,
+      "sha256": "228a9a04252ce623bf424d5622e1a7b05a3d9c801c2f6532b5b5d4722066a0e4",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/loso_streaming/seed2023/per_class_results.csv",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 3476,
+      "sha256": "e6b9e31823b3146f11fb37d258d6328a06bf199510822dc987e26af8c5b12366",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/loso_streaming/seed2023/predictions.csv",
+      "scope": "bundle",
+      "role": "predictions",
+      "size_bytes": 3316023,
+      "sha256": "bf3a408b554a223565714a4a0910b979fcf778326d1a0d24ce1e23872f966856",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/loso_streaming/seed2023/run_manifest.json",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 3134,
+      "sha256": "17114b0aae729d455bc4ac8eaecd3d81d175b74f18c284bd116180a9bbdc2d49",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/loso_streaming/seed2024/E4_BASE_best.pt",
+      "scope": "bundle",
+      "role": "checkpoint",
+      "size_bytes": 216149,
+      "sha256": "d1352bffab9916884949c087453b068f67bcac4936192e7a2a8c6b2bd0798edb",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/loso_streaming/seed2024/E4_BASE_embeddings.npz",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 1138804,
+      "sha256": "574738826bcf5555a36ae44cc76e85245d1b311d54dbed330b4e027edd5509dc",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/loso_streaming/seed2024/E4_BASE_history.csv",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 12437,
+      "sha256": "eb2d4485d564ccd6a093500492be62747955cc2bb85890f3fc0fb84af2b218fa",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/loso_streaming/seed2024/E4_FULL_best.pt",
+      "scope": "bundle",
+      "role": "checkpoint",
+      "size_bytes": 880753,
+      "sha256": "115d689ef4e595a1bdff9115b12e16f016618d1c7925473f10f2567fcd2dde05",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/loso_streaming/seed2024/E4_FULL_embeddings.npz",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 1136604,
+      "sha256": "9be44b66545e2ab295ffcb7f2a8b2ad1b19af42e6a13d78832f30aac424f0442",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/loso_streaming/seed2024/E4_FULL_history.csv",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 12517,
+      "sha256": "f8ef7bfd0ed49702b0831d20f8a4236f216aad10e044e8d5c71967ab4aaebb70",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/loso_streaming/seed2024/E4_LENGTH_best.pt",
+      "scope": "bundle",
+      "role": "checkpoint",
+      "size_bytes": 875117,
+      "sha256": "b84c22fc56c3db3f5868026c43533e72002611666eca0f379c946607f8c2e239",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/loso_streaming/seed2024/E4_LENGTH_embeddings.npz",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 679347,
+      "sha256": "f9ecfd8d3dd0432292ea8c0da12e557a0fc5e2fca5e7349f188e9ce65675b0e2",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/loso_streaming/seed2024/E4_LENGTH_history.csv",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 12439,
+      "sha256": "91c2d1dbc9cfffec32ed099f2c580387821ddab1939382da151c039644d87cd9",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/loso_streaming/seed2024/E4_NO_MS_best.pt",
+      "scope": "bundle",
+      "role": "checkpoint",
+      "size_bytes": 813303,
+      "sha256": "42f88eb500659423f9135e808245397dc21f8979667363b17db6c04483f5c32d",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/loso_streaming/seed2024/E4_NO_MS_embeddings.npz",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 1125959,
+      "sha256": "5dbc97495b1abadd3ac5b8924d70f5afc66012861f7a011ee8c26e3dc05a3fda",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/loso_streaming/seed2024/E4_NO_MS_history.csv",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 12508,
+      "sha256": "508415c7fa95f3ed04b97acc38e4205800e0aa133287ebe992ae284003472c9f",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/loso_streaming/seed2024/E4_NO_RNN_best.pt",
+      "scope": "bundle",
+      "role": "checkpoint",
+      "size_bytes": 283669,
+      "sha256": "3a64afe94a89b7f58c9889741d598736075741320f9cf386c2e10cc9aa4788f4",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/loso_streaming/seed2024/E4_NO_RNN_embeddings.npz",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 1138885,
+      "sha256": "b330a1ad849f24b35401a396bb5ec8de7d665c51edeac66d4b8fdadd9fed0a8a",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/loso_streaming/seed2024/E4_NO_RNN_history.csv",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 12496,
+      "sha256": "532fc7395e422c1edd19741e7b04e80b1fcd4ca15a0aa827f56efd47c5274909",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/loso_streaming/seed2024/E4_TIME_LENGTH_best.pt",
+      "scope": "bundle",
+      "role": "checkpoint",
+      "size_bytes": 878147,
+      "sha256": "691ad076bce0e5c4a4390c4ef48cf206ecd6a2626a33a238065966d46e75e610",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/loso_streaming/seed2024/E4_TIME_LENGTH_embeddings.npz",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 1128799,
+      "sha256": "038ace532b90a833d746b6b1031a41b29e64566509bbc52a865a4fc32ac6e02d",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/loso_streaming/seed2024/E4_TIME_LENGTH_history.csv",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 12511,
+      "sha256": "27d952f601a9f1a5807a4c23b72887d8bd7466270ce8331a2909b6648d62b634",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/loso_streaming/seed2024/E4_TIME_best.pt",
+      "scope": "bundle",
+      "role": "checkpoint",
+      "size_bytes": 875057,
+      "sha256": "48ed8735d58667454193c7c80ffd633b2d2ce704c5a577a3ba3d5546337815fb",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/loso_streaming/seed2024/E4_TIME_embeddings.npz",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 1109661,
+      "sha256": "30d90baae240ace77314860e27600aacd106a980acb74d44cc96c5d964bb7c6b",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/loso_streaming/seed2024/E4_TIME_history.csv",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 12449,
+      "sha256": "f8e98d7e6c839421a8e4fbb6e6bdb3663d1f26f76570c453fae6a7c401a901fe",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/loso_streaming/seed2024/SUCCESS",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 8,
+      "sha256": "1f513d4ecec4e91ddd48da1a59b6d96f1b76c374dc1da641980782a34f43b102",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/loso_streaming/seed2024/closed_set_results.csv",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 2400,
+      "sha256": "54633fe34a8d62c562f09c9a2aa932e4b9c7e41dd907e0de5e423034f571ae82",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/loso_streaming/seed2024/open_set_results.csv",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 12662,
+      "sha256": "0eb1e978094d4ed662ae38dee68ac6c39f40ca49e67ad433a450bab3f0adb8e4",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/loso_streaming/seed2024/per_class_results.csv",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 3387,
+      "sha256": "8752b457a659f655abf949a76cb43f81caba5fff7b7e659277a5411ea5b527e2",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/loso_streaming/seed2024/predictions.csv",
+      "scope": "bundle",
+      "role": "predictions",
+      "size_bytes": 3316444,
+      "sha256": "8c9dd17b5c70e225058253cc8d4a005fe70872012fc3b71071bfe82d90a929b9",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/loso_streaming/seed2024/run_manifest.json",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 3135,
+      "sha256": "e53882936f2d53a08557b0faeb6cdd0a721e20b16532a48809a3d5951efed237",
+      "hash_status": "verified"
+    },
+    {
+      "path": "scripts/__pycache__/aggregate_stage18.cpython-310.pyc",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 13184,
+      "sha256": "db1b266e00ec969032a032c18421dfb08e77638ce6a78d0f2a98ace5eaaa3299",
+      "hash_status": "verified"
+    },
+    {
+      "path": "scripts/__pycache__/e4_model.cpython-310.pyc",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 4257,
+      "sha256": "a55a747793bfe355305ffe23507330c2d3c81fc90aafc8b10de9b8e72cf070f4",
+      "hash_status": "verified"
+    },
+    {
+      "path": "scripts/__pycache__/replay_verify.cpython-310.pyc",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 4313,
+      "sha256": "0e0bf3fed468677e7675f3d43e2887a341cdf4a9a09f6d614bcec99900991297",
+      "hash_status": "verified"
+    },
+    {
+      "path": "scripts/__pycache__/smoke_e4.cpython-310.pyc",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 2038,
+      "sha256": "5db836c9c899245b00e7449aa6db4a9ecab230d595661cb42dffd4edc2ea5501",
+      "hash_status": "verified"
+    },
+    {
+      "path": "scripts/__pycache__/snapshot_protected.cpython-310.pyc",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 2132,
+      "sha256": "8187ac579c5e54537fd5449ebb76b27da84ec82c287805d1d84c3bee3578ab5f",
+      "hash_status": "verified"
+    },
+    {
+      "path": "scripts/__pycache__/stage18_common.cpython-310.pyc",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 8726,
+      "sha256": "2e7f0aa99b22a822c34785a0378591cdeeacfff960571c4769465ba34a3d7d38",
+      "hash_status": "verified"
+    },
+    {
+      "path": "scripts/__pycache__/train_e4_run.cpython-310.pyc",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 14030,
+      "sha256": "575ccc66b147dce88da3334eb6a2518750f3fada6e0abe56e514d32e1d73f85d",
+      "hash_status": "verified"
+    },
+    {
+      "path": "scripts/__pycache__/verify_stage18.cpython-310.pyc",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 3883,
+      "sha256": "4fd9052e15bc6b36912cf95e0af1acd944400b8cae905e37d12272e98cdd4718",
+      "hash_status": "verified"
+    },
+    {
+      "path": "scripts/aggregate_stage18.py",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 17891,
+      "sha256": "a87d11b983fc2f28b8f7cbd0f4635f5ea7b49e65c7555a0e57e0700f32af051b",
+      "hash_status": "verified"
+    },
+    {
+      "path": "scripts/e4_model.py",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 4745,
+      "sha256": "0b8d4d2339c69b4dd27afb76a5d7017f860e6845d990767c1b1fd92743a5032f",
+      "hash_status": "verified"
+    },
+    {
+      "path": "scripts/replay_verify.py",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 4396,
+      "sha256": "ed67920f3eba5c39412e70bd082b0bf02f36e8090a1152b695b3f49e6c18d39f",
+      "hash_status": "verified"
+    },
+    {
+      "path": "scripts/smoke_e4.py",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 2048,
+      "sha256": "5bd7c99faef158f28ddc9870f89799630fea1c6bd208a7e3ccf3ca3db8d61b9d",
+      "hash_status": "verified"
+    },
+    {
+      "path": "scripts/snapshot_protected.py",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 1867,
+      "sha256": "57645637ba1e096ef0acf7f69a0628ed997c1c6a5c0bcb778111785124a91595",
+      "hash_status": "verified"
+    },
+    {
+      "path": "scripts/stage18_common.py",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 6643,
+      "sha256": "fb75a38dadc4b1d805df1ba9708502ab3b041477460fe495da1f11b40ee9c442",
+      "hash_status": "verified"
+    },
+    {
+      "path": "scripts/train_e4_run.py",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 18005,
+      "sha256": "41b7702389c86e508ef1e199cfa2f343385bd63de6fd0cf7fdd8962124824201",
+      "hash_status": "verified"
+    },
+    {
+      "path": "scripts/verify_stage18.py",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 4564,
+      "sha256": "0a02044aca3352c5025beb53e4fd920df7fcd0f5a60a8879ae022bebc113b84b",
+      "hash_status": "verified"
+    },
+    {
+      "path": "smoke_verification.json",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 357,
+      "sha256": "3358643c05396c468dd99fee2e14127e12b3e767198f6155cd67be3efd906bf3",
+      "hash_status": "verified"
+    },
+    {
+      "path": "stage18_report.md",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 9469,
+      "sha256": "70cec62ab645d4478349acc67f49a038a30a7da926df4274279ee920489389e7",
+      "hash_status": "verified"
+    },
+    {
+      "path": "tests/__pycache__/test_e4.cpython-310-pytest-8.4.2.pyc",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 6469,
+      "sha256": "a7a13cb7254443045c899fc8af44729dce9b2d6f5a03d6f42be76a33052e741f",
+      "hash_status": "verified"
+    },
+    {
+      "path": "tests/test_e4.py",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 2489,
+      "sha256": "a378404d1c48be2353b9933e23317c40fcd9bdaf877aaa02e23f85e7cbaf64f5",
+      "hash_status": "verified"
+    }
+  ],
+  "limitations": [
+    "Independent PP-OpenNet-inspired implementation; no verified official author code was available.",
+    "The frozen cache is capped at 30 packets rather than the paper's 1000-packet/two-second slices.",
+    "Only Email and Streaming Stage17 development protocols were available for this experiment.",
+    "Service labels are weak capture-activity labels and do not establish capture-disjoint generalization.",
+    "Background class, ARPL and PVRP were excluded to preserve the current Strict Unknown-Free boundary."
+  ],
+  "next_step": "Do not start fusion; retain the negative result and preregister any future long-window or rejection-mechanism study separately."
+}

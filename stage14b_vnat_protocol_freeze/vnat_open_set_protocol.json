@@ -1,0 +1,2272 @@
+{
+  "schema_version": 1,
+  "stage": "Stage 14B — VNAT Open-Set Protocol Freeze",
+  "freeze_status": "FROZEN_READY_FOR_STAGE_14C",
+  "frozen_at_utc": "2026-09-17T10:17:38.483050+00:00",
+  "semantic_class": "application",
+  "metadata_domains": [
+    "vpn_status",
+    "capture_id",
+    "group_id"
+  ],
+  "retained_applications": [
+    "netflix",
+    "rdp",
+    "rsync",
+    "scp",
+    "sftp",
+    "skype",
+    "ssh",
+    "vimeo",
+    "youtube",
+    "zoiper"
+  ],
+  "excluded_applications": [],
+  "clean_flow_count": 23449,
+  "cleaning": {
+    "cross_application_duplicate_flow_rows_removed": 4,
+    "cross_application_duplicate_flow_keys": [
+      [
+        "nonvpn_rsync_newcapture1",
+        "other:331deb3b2296047c61fbe545"
+      ],
+      [
+        "nonvpn_rsync_newcapture1",
+        "other:39e9abc84ef43971d29a5415"
+      ],
+      [
+        "nonvpn_sftp_newcapture2",
+        "other:331deb3b2296047c61fbe545"
+      ],
+      [
+        "nonvpn_sftp_newcapture2",
+        "other:39e9abc84ef43971d29a5415"
+      ]
+    ],
+    "failed_pcaps_excluded_whole": [
+      "nonvpn_scp_long_capture1",
+      "vpn_skype-chat_capture6"
+    ],
+    "exact_duplicate_pcaps_retained": [
+      "vpn_skype-chat_capture3"
+    ],
+    "exact_duplicate_pcaps_dropped": [
+      "vpn_skype-chat_capture4"
+    ]
+  },
+  "known_split": {
+    "method": "per-application deterministic flow-random stratification",
+    "ratio": {
+      "train": 0.8,
+      "validation": 0.1,
+      "test": 0.1
+    },
+    "integer_rule": "validation=test=max(1,floor(class_flows/10)); train=remainder",
+    "capture_group_hard_constraint": false,
+    "capture_group_metadata_retained": true,
+    "same_application_seed_assignment_reused_across_settings": true
+  },
+  "unknown_schedule": {
+    "master_seed": 2022,
+    "protocol_seeds": [
+      2022,
+      2023,
+      2024,
+      2025,
+      2026
+    ],
+    "base_application_order": [
+      "scp",
+      "rdp",
+      "skype",
+      "netflix",
+      "ssh",
+      "rsync",
+      "zoiper",
+      "vimeo",
+      "sftp",
+      "youtube"
+    ],
+    "method": "balanced nested cyclic schedule",
+    "settings": {
+      "Low": {
+        "known_class_count": 8,
+        "unknown_class_count": 2,
+        "unknown_share": 0.2
+      },
+      "Medium": {
+        "known_class_count": 7,
+        "unknown_class_count": 3,
+        "unknown_share": 0.3
+      },
+      "High": {
+        "known_class_count": 6,
+        "unknown_class_count": 4,
+        "unknown_share": 0.4
+      }
+    }
+  },
+  "downstream_data_roles": {
+    "encoder_training": "known train only",
+    "scaler_fitting": "known train only",
+    "prototype_support_fitting": "known train only",
+    "checkpoint_selection": "known validation only",
+    "threshold_calibration": "global Known Validation P95 only",
+    "known_test": "evaluation only",
+    "unknown_test": "evaluation only; never calibration or parameter selection"
+  },
+  "immutability": {
+    "locked_fields": [
+      "retained/excluded applications",
+      "integrity exclusions",
+      "Unknown applications per setting and seed",
+      "protocol seeds",
+      "Known 8:1:1 flow assignments",
+      "threshold calibration rule"
+    ],
+    "post_test_changes_forbidden": true
+  },
+  "source_hashes": {
+    "stage14a_vnat_data_audit/vnat_manifest.csv": "5d6827baf37c6893028637779765e7289ff83c56f8eb84fdecb52650a6334c5b",
+    "stage14a_vnat_data_audit/outputs/duplicate_flows.csv": "45c09e0653d0c4b08fe6dfdd1b89c071e66f20dcf8036fe4c0421864889f38e1",
+    "stage14a_vnat_data_audit/outputs/duplicate_files.csv": "c05cf493163a11e8d60a20ca5c6c65fa45bc6e91b728d906825061de73182036"
+  },
+  "split_manifest": {
+    "path": "vnat_split_manifest.csv",
+    "rows": 351735,
+    "sha256": "66bf155e6906231b316c384a52f4b46dabd9d3aee76d5f66d86a3941eb172c4e"
+  },
+  "protocols": [
+    {
+      "protocol_id": "low_seed2022",
+      "setting": "Low",
+      "seed": 2022,
+      "unknown_applications": [
+        "scp",
+        "rdp"
+      ],
+      "known_applications": [
+        "netflix",
+        "rsync",
+        "sftp",
+        "skype",
+        "ssh",
+        "vimeo",
+        "youtube",
+        "zoiper"
+      ],
+      "split_statistics": {
+        "train": {
+          "flows": 16901,
+          "vpn_flows": 296,
+          "nonvpn_flows": 16605,
+          "vpn_ratio": 0.01751376,
+          "applications": [
+            "netflix",
+            "rsync",
+            "sftp",
+            "skype",
+            "ssh",
+            "vimeo",
+            "youtube",
+            "zoiper"
+          ],
+          "capture_count": 132,
+          "group_count": 80
+        },
+        "validation": {
+          "flows": 2107,
+          "vpn_flows": 41,
+          "nonvpn_flows": 2066,
+          "vpn_ratio": 0.01945895,
+          "applications": [
+            "netflix",
+            "rsync",
+            "sftp",
+            "skype",
+            "ssh",
+            "vimeo",
+            "youtube",
+            "zoiper"
+          ],
+          "capture_count": 82,
+          "group_count": 69
+        },
+        "test": {
+          "flows": 2107,
+          "vpn_flows": 36,
+          "nonvpn_flows": 2071,
+          "vpn_ratio": 0.0170859,
+          "applications": [
+            "netflix",
+            "rsync",
+            "sftp",
+            "skype",
+            "ssh",
+            "vimeo",
+            "youtube",
+            "zoiper"
+          ],
+          "capture_count": 78,
+          "group_count": 70
+        },
+        "unknown_test": {
+          "flows": 2334,
+          "vpn_flows": 8,
+          "nonvpn_flows": 2326,
+          "vpn_ratio": 0.00342759,
+          "applications": [
+            "rdp",
+            "scp"
+          ],
+          "capture_count": 12,
+          "group_count": 8
+        }
+      },
+      "known_class_split_counts": {
+        "netflix": {
+          "train": 165,
+          "validation": 20,
+          "test": 20
+        },
+        "rsync": {
+          "train": 1530,
+          "validation": 191,
+          "test": 191
+        },
+        "sftp": {
+          "train": 1336,
+          "validation": 166,
+          "test": 166
+        },
+        "skype": {
+          "train": 1017,
+          "validation": 126,
+          "test": 126
+        },
+        "ssh": {
+          "train": 10851,
+          "validation": 1356,
+          "test": 1356
+        },
+        "vimeo": {
+          "train": 976,
+          "validation": 121,
+          "test": 121
+        },
+        "youtube": {
+          "train": 273,
+          "validation": 34,
+          "test": 34
+        },
+        "zoiper": {
+          "train": 753,
+          "validation": 93,
+          "test": 93
+        }
+      },
+      "known_group_count": 82,
+      "known_groups_spanning_multiple_splits": 73,
+      "known_capture_count": 150,
+      "known_captures_spanning_multiple_splits": 75
+    },
+    {
+      "protocol_id": "low_seed2023",
+      "setting": "Low",
+      "seed": 2023,
+      "unknown_applications": [
+        "skype",
+        "netflix"
+      ],
+      "known_applications": [
+        "rdp",
+        "rsync",
+        "scp",
+        "sftp",
+        "ssh",
+        "vimeo",
+        "youtube",
+        "zoiper"
+      ],
+      "split_statistics": {
+        "train": {
+          "flows": 17587,
+          "vpn_flows": 261,
+          "nonvpn_flows": 17326,
+          "vpn_ratio": 0.01484051,
+          "applications": [
+            "rdp",
+            "rsync",
+            "scp",
+            "sftp",
+            "ssh",
+            "vimeo",
+            "youtube",
+            "zoiper"
+          ],
+          "capture_count": 48,
+          "group_count": 31
+        },
+        "validation": {
+          "flows": 2194,
+          "vpn_flows": 31,
+          "nonvpn_flows": 2163,
+          "vpn_ratio": 0.01412944,
+          "applications": [
+            "rdp",
+            "rsync",
+            "scp",
+            "sftp",
+            "ssh",
+            "vimeo",
+            "youtube",
+            "zoiper"
+          ],
+          "capture_count": 28,
+          "group_count": 25
+        },
+        "test": {
+          "flows": 2194,
+          "vpn_flows": 33,
+          "nonvpn_flows": 2161,
+          "vpn_ratio": 0.01504102,
+          "applications": [
+            "rdp",
+            "rsync",
+            "scp",
+            "sftp",
+            "ssh",
+            "vimeo",
+            "youtube",
+            "zoiper"
+          ],
+          "capture_count": 30,
+          "group_count": 25
+        },
+        "unknown_test": {
+          "flows": 1474,
+          "vpn_flows": 56,
+          "nonvpn_flows": 1418,
+          "vpn_ratio": 0.03799186,
+          "applications": [
+            "netflix",
+            "skype"
+          ],
+          "capture_count": 111,
+          "group_count": 58
+        }
+      },
+      "known_class_split_counts": {
+        "rdp": {
+          "train": 36,
+          "validation": 4,
+          "test": 4
+        },
+        "rsync": {
+          "train": 1530,
+          "validation": 191,
+          "test": 191
+        },
+        "scp": {
+          "train": 1832,
+          "validation": 229,
+          "test": 229
+        },
+        "sftp": {
+          "train": 1336,
+          "validation": 166,
+          "test": 166
+        },
+        "ssh": {
+          "train": 10851,
+          "validation": 1356,
+          "test": 1356
+        },
+        "vimeo": {
+          "train": 976,
+          "validation": 121,
+          "test": 121
+        },
+        "youtube": {
+          "train": 273,
+          "validation": 34,
+          "test": 34
+        },
+        "zoiper": {
+          "train": 753,
+          "validation": 93,
+          "test": 93
+        }
+      },
+      "known_group_count": 32,
+      "known_groups_spanning_multiple_splits": 25,
+      "known_capture_count": 51,
+      "known_captures_spanning_multiple_splits": 28
+    },
+    {
+      "protocol_id": "low_seed2024",
+      "setting": "Low",
+      "seed": 2024,
+      "unknown_applications": [
+        "ssh",
+        "rsync"
+      ],
+      "known_applications": [
+        "netflix",
+        "rdp",
+        "scp",
+        "sftp",
+        "skype",
+        "vimeo",
+        "youtube",
+        "zoiper"
+      ],
+      "split_statistics": {
+        "train": {
+          "flows": 6388,
+          "vpn_flows": 303,
+          "nonvpn_flows": 6085,
+          "vpn_ratio": 0.04743269,
+          "applications": [
+            "netflix",
+            "rdp",
+            "scp",
+            "sftp",
+            "skype",
+            "vimeo",
+            "youtube",
+            "zoiper"
+          ],
+          "capture_count": 136,
+          "group_count": 80
+        },
+        "validation": {
+          "flows": 793,
+          "vpn_flows": 33,
+          "nonvpn_flows": 760,
+          "vpn_ratio": 0.04161412,
+          "applications": [
+            "netflix",
+            "rdp",
+            "scp",
+            "sftp",
+            "skype",
+            "vimeo",
+            "youtube",
+            "zoiper"
+          ],
+          "capture_count": 75,
+          "group_count": 68
+        },
+        "test": {
+          "flows": 793,
+          "vpn_flows": 37,
+          "nonvpn_flows": 756,
+          "vpn_ratio": 0.04665826,
+          "applications": [
+            "netflix",
+            "rdp",
+            "scp",
+            "sftp",
+            "skype",
+            "vimeo",
+            "youtube",
+            "zoiper"
+          ],
+          "capture_count": 77,
+          "group_count": 69
+        },
+        "unknown_test": {
+          "flows": 15475,
+          "vpn_flows": 8,
+          "nonvpn_flows": 15467,
+          "vpn_ratio": 0.00051696,
+          "applications": [
+            "rsync",
+            "ssh"
+          ],
+          "capture_count": 15,
+          "group_count": 9
+        }
+      },
+      "known_class_split_counts": {
+        "netflix": {
+          "train": 165,
+          "validation": 20,
+          "test": 20
+        },
+        "rdp": {
+          "train": 36,
+          "validation": 4,
+          "test": 4
+        },
+        "scp": {
+          "train": 1832,
+          "validation": 229,
+          "test": 229
+        },
+        "sftp": {
+          "train": 1336,
+          "validation": 166,
+          "test": 166
+        },
+        "skype": {
+          "train": 1017,
+          "validation": 126,
+          "test": 126
+        },
+        "vimeo": {
+          "train": 976,
+          "validation": 121,
+          "test": 121
+        },
+        "youtube": {
+          "train": 273,
+          "validation": 34,
+          "test": 34
+        },
+        "zoiper": {
+          "train": 753,
+          "validation": 93,
+          "test": 93
+        }
+      },
+      "known_group_count": 81,
+      "known_groups_spanning_multiple_splits": 74,
+      "known_capture_count": 147,
+      "known_captures_spanning_multiple_splits": 77
+    },
+    {
+      "protocol_id": "low_seed2025",
+      "setting": "Low",
+      "seed": 2025,
+      "unknown_applications": [
+        "zoiper",
+        "vimeo"
+      ],
+      "known_applications": [
+        "netflix",
+        "rdp",
+        "rsync",
+        "scp",
+        "sftp",
+        "skype",
+        "ssh",
+        "youtube"
+      ],
+      "split_statistics": {
+        "train": {
+          "flows": 17040,
+          "vpn_flows": 60,
+          "nonvpn_flows": 16980,
+          "vpn_ratio": 0.00352113,
+          "applications": [
+            "netflix",
+            "rdp",
+            "rsync",
+            "scp",
+            "sftp",
+            "skype",
+            "ssh",
+            "youtube"
+          ],
+          "capture_count": 136,
+          "group_count": 83
+        },
+        "validation": {
+          "flows": 2126,
+          "vpn_flows": 12,
+          "nonvpn_flows": 2114,
+          "vpn_ratio": 0.0056444,
+          "applications": [
+            "netflix",
+            "rdp",
+            "rsync",
+            "scp",
+            "sftp",
+            "skype",
+            "ssh",
+            "youtube"
+          ],
+          "capture_count": 81,
+          "group_count": 71
+        },
+        "test": {
+          "flows": 2126,
+          "vpn_flows": 7,
+          "nonvpn_flows": 2119,
+          "vpn_ratio": 0.00329257,
+          "applications": [
+            "netflix",
+            "rdp",
+            "rsync",
+            "scp",
+            "sftp",
+            "skype",
+            "ssh",
+            "youtube"
+          ],
+          "capture_count": 74,
+          "group_count": 68
+        },
+        "unknown_test": {
+          "flows": 2157,
+          "vpn_flows": 302,
+          "nonvpn_flows": 1855,
+          "vpn_ratio": 0.14000927,
+          "applications": [
+            "vimeo",
+            "zoiper"
+          ],
+          "capture_count": 8,
+          "group_count": 4
+        }
+      },
+      "known_class_split_counts": {
+        "netflix": {
+          "train": 165,
+          "validation": 20,
+          "test": 20
+        },
+        "rdp": {
+          "train": 36,
+          "validation": 4,
+          "test": 4
+        },
+        "rsync": {
+          "train": 1530,
+          "validation": 191,
+          "test": 191
+        },
+        "scp": {
+          "train": 1832,
+          "validation": 229,
+          "test": 229
+        },
+        "sftp": {
+          "train": 1336,
+          "validation": 166,
+          "test": 166
+        },
+        "skype": {
+          "train": 1017,
+          "validation": 126,
+          "test": 126
+        },
+        "ssh": {
+          "train": 10851,
+          "validation": 1356,
+          "test": 1356
+        },
+        "youtube": {
+          "train": 273,
+          "validation": 34,
+          "test": 34
+        }
+      },
+      "known_group_count": 86,
+      "known_groups_spanning_multiple_splits": 74,
+      "known_capture_count": 154,
+      "known_captures_spanning_multiple_splits": 75
+    },
+    {
+      "protocol_id": "low_seed2026",
+      "setting": "Low",
+      "seed": 2026,
+      "unknown_applications": [
+        "sftp",
+        "youtube"
+      ],
+      "known_applications": [
+        "netflix",
+        "rdp",
+        "rsync",
+        "scp",
+        "skype",
+        "ssh",
+        "vimeo",
+        "zoiper"
+      ],
+      "split_statistics": {
+        "train": {
+          "flows": 17160,
+          "vpn_flows": 306,
+          "nonvpn_flows": 16854,
+          "vpn_ratio": 0.01783217,
+          "applications": [
+            "netflix",
+            "rdp",
+            "rsync",
+            "scp",
+            "skype",
+            "ssh",
+            "vimeo",
+            "zoiper"
+          ],
+          "capture_count": 129,
+          "group_count": 78
+        },
+        "validation": {
+          "flows": 2140,
+          "vpn_flows": 35,
+          "nonvpn_flows": 2105,
+          "vpn_ratio": 0.01635514,
+          "applications": [
+            "netflix",
+            "rdp",
+            "rsync",
+            "scp",
+            "skype",
+            "ssh",
+            "vimeo",
+            "zoiper"
+          ],
+          "capture_count": 75,
+          "group_count": 60
+        },
+        "test": {
+          "flows": 2140,
+          "vpn_flows": 33,
+          "nonvpn_flows": 2107,
+          "vpn_ratio": 0.01542056,
+          "applications": [
+            "netflix",
+            "rdp",
+            "rsync",
+            "scp",
+            "skype",
+            "ssh",
+            "vimeo",
+            "zoiper"
+          ],
+          "capture_count": 70,
+          "group_count": 64
+        },
+        "unknown_test": {
+          "flows": 2009,
+          "vpn_flows": 7,
+          "nonvpn_flows": 2002,
+          "vpn_ratio": 0.00348432,
+          "applications": [
+            "sftp",
+            "youtube"
+          ],
+          "capture_count": 16,
+          "group_count": 11
+        }
+      },
+      "known_class_split_counts": {
+        "netflix": {
+          "train": 165,
+          "validation": 20,
+          "test": 20
+        },
+        "rdp": {
+          "train": 36,
+          "validation": 4,
+          "test": 4
+        },
+        "rsync": {
+          "train": 1530,
+          "validation": 191,
+          "test": 191
+        },
+        "scp": {
+          "train": 1832,
+          "validation": 229,
+          "test": 229
+        },
+        "skype": {
+          "train": 1017,
+          "validation": 126,
+          "test": 126
+        },
+        "ssh": {
+          "train": 10851,
+          "validation": 1356,
+          "test": 1356
+        },
+        "vimeo": {
+          "train": 976,
+          "validation": 121,
+          "test": 121
+        },
+        "zoiper": {
+          "train": 753,
+          "validation": 93,
+          "test": 93
+        }
+      },
+      "known_group_count": 79,
+      "known_groups_spanning_multiple_splits": 68,
+      "known_capture_count": 146,
+      "known_captures_spanning_multiple_splits": 71
+    },
+    {
+      "protocol_id": "medium_seed2022",
+      "setting": "Medium",
+      "seed": 2022,
+      "unknown_applications": [
+        "scp",
+        "rdp",
+        "skype"
+      ],
+      "known_applications": [
+        "netflix",
+        "rsync",
+        "sftp",
+        "ssh",
+        "vimeo",
+        "youtube",
+        "zoiper"
+      ],
+      "split_statistics": {
+        "train": {
+          "flows": 15884,
+          "vpn_flows": 255,
+          "nonvpn_flows": 15629,
+          "vpn_ratio": 0.01605389,
+          "applications": [
+            "netflix",
+            "rsync",
+            "sftp",
+            "ssh",
+            "vimeo",
+            "youtube",
+            "zoiper"
+          ],
+          "capture_count": 38,
+          "group_count": 25
+        },
+        "validation": {
+          "flows": 1981,
+          "vpn_flows": 33,
+          "nonvpn_flows": 1948,
+          "vpn_ratio": 0.01665825,
+          "applications": [
+            "netflix",
+            "rsync",
+            "sftp",
+            "ssh",
+            "vimeo",
+            "youtube",
+            "zoiper"
+          ],
+          "capture_count": 27,
+          "group_count": 22
+        },
+        "test": {
+          "flows": 1981,
+          "vpn_flows": 30,
+          "nonvpn_flows": 1951,
+          "vpn_ratio": 0.01514387,
+          "applications": [
+            "netflix",
+            "rsync",
+            "sftp",
+            "ssh",
+            "vimeo",
+            "youtube",
+            "zoiper"
+          ],
+          "capture_count": 26,
+          "group_count": 22
+        },
+        "unknown_test": {
+          "flows": 3603,
+          "vpn_flows": 63,
+          "nonvpn_flows": 3540,
+          "vpn_ratio": 0.01748543,
+          "applications": [
+            "rdp",
+            "scp",
+            "skype"
+          ],
+          "capture_count": 120,
+          "group_count": 64
+        }
+      },
+      "known_class_split_counts": {
+        "netflix": {
+          "train": 165,
+          "validation": 20,
+          "test": 20
+        },
+        "rsync": {
+          "train": 1530,
+          "validation": 191,
+          "test": 191
+        },
+        "sftp": {
+          "train": 1336,
+          "validation": 166,
+          "test": 166
+        },
+        "ssh": {
+          "train": 10851,
+          "validation": 1356,
+          "test": 1356
+        },
+        "vimeo": {
+          "train": 976,
+          "validation": 121,
+          "test": 121
+        },
+        "youtube": {
+          "train": 273,
+          "validation": 34,
+          "test": 34
+        },
+        "zoiper": {
+          "train": 753,
+          "validation": 93,
+          "test": 93
+        }
+      },
+      "known_group_count": 26,
+      "known_groups_spanning_multiple_splits": 22,
+      "known_capture_count": 42,
+      "known_captures_spanning_multiple_splits": 25
+    },
+    {
+      "protocol_id": "medium_seed2023",
+      "setting": "Medium",
+      "seed": 2023,
+      "unknown_applications": [
+        "skype",
+        "netflix",
+        "ssh"
+      ],
+      "known_applications": [
+        "rdp",
+        "rsync",
+        "scp",
+        "sftp",
+        "vimeo",
+        "youtube",
+        "zoiper"
+      ],
+      "split_statistics": {
+        "train": {
+          "flows": 6736,
+          "vpn_flows": 257,
+          "nonvpn_flows": 6479,
+          "vpn_ratio": 0.03815321,
+          "applications": [
+            "rdp",
+            "rsync",
+            "scp",
+            "sftp",
+            "vimeo",
+            "youtube",
+            "zoiper"
+          ],
+          "capture_count": 39,
+          "group_count": 26
+        },
+        "validation": {
+          "flows": 838,
+          "vpn_flows": 31,
+          "nonvpn_flows": 807,
+          "vpn_ratio": 0.03699284,
+          "applications": [
+            "rdp",
+            "rsync",
+            "scp",
+            "sftp",
+            "vimeo",
+            "youtube",
+            "zoiper"
+          ],
+          "capture_count": 23,
+          "group_count": 20
+        },
+        "test": {
+          "flows": 838,
+          "vpn_flows": 32,
+          "nonvpn_flows": 806,
+          "vpn_ratio": 0.03818616,
+          "applications": [
+            "rdp",
+            "rsync",
+            "scp",
+            "sftp",
+            "vimeo",
+            "youtube",
+            "zoiper"
+          ],
+          "capture_count": 24,
+          "group_count": 20
+        },
+        "unknown_test": {
+          "flows": 15037,
+          "vpn_flows": 61,
+          "nonvpn_flows": 14976,
+          "vpn_ratio": 0.00405666,
+          "applications": [
+            "netflix",
+            "skype",
+            "ssh"
+          ],
+          "capture_count": 121,
+          "group_count": 63
+        }
+      },
+      "known_class_split_counts": {
+        "rdp": {
+          "train": 36,
+          "validation": 4,
+          "test": 4
+        },
+        "rsync": {
+          "train": 1530,
+          "validation": 191,
+          "test": 191
+        },
+        "scp": {
+          "train": 1832,
+          "validation": 229,
+          "test": 229
+        },
+        "sftp": {
+          "train": 1336,
+          "validation": 166,
+          "test": 166
+        },
+        "vimeo": {
+          "train": 976,
+          "validation": 121,
+          "test": 121
+        },
+        "youtube": {
+          "train": 273,
+          "validation": 34,
+          "test": 34
+        },
+        "zoiper": {
+          "train": 753,
+          "validation": 93,
+          "test": 93
+        }
+      },
+      "known_group_count": 27,
+      "known_groups_spanning_multiple_splits": 20,
+      "known_capture_count": 41,
+      "known_captures_spanning_multiple_splits": 23
+    },
+    {
+      "protocol_id": "medium_seed2024",
+      "setting": "Medium",
+      "seed": 2024,
+      "unknown_applications": [
+        "ssh",
+        "rsync",
+        "zoiper"
+      ],
+      "known_applications": [
+        "netflix",
+        "rdp",
+        "scp",
+        "sftp",
+        "skype",
+        "vimeo",
+        "youtube"
+      ],
+      "split_statistics": {
+        "train": {
+          "flows": 5635,
+          "vpn_flows": 61,
+          "nonvpn_flows": 5574,
+          "vpn_ratio": 0.0108252,
+          "applications": [
+            "netflix",
+            "rdp",
+            "scp",
+            "sftp",
+            "skype",
+            "vimeo",
+            "youtube"
+          ],
+          "capture_count": 130,
+          "group_count": 77
+        },
+        "validation": {
+          "flows": 700,
+          "vpn_flows": 4,
+          "nonvpn_flows": 696,
+          "vpn_ratio": 0.00571429,
+          "applications": [
+            "netflix",
+            "rdp",
+            "scp",
+            "sftp",
+            "skype",
+            "vimeo",
+            "youtube"
+          ],
+          "capture_count": 69,
+          "group_count": 65
+        },
+        "test": {
+          "flows": 700,
+          "vpn_flows": 7,
+          "nonvpn_flows": 693,
+          "vpn_ratio": 0.01,
+          "applications": [
+            "netflix",
+            "rdp",
+            "scp",
+            "sftp",
+            "skype",
+            "vimeo",
+            "youtube"
+          ],
+          "capture_count": 71,
+          "group_count": 66
+        },
+        "unknown_test": {
+          "flows": 16414,
+          "vpn_flows": 309,
+          "nonvpn_flows": 16105,
+          "vpn_ratio": 0.01882539,
+          "applications": [
+            "rsync",
+            "ssh",
+            "zoiper"
+          ],
+          "capture_count": 21,
+          "group_count": 12
+        }
+      },
+      "known_class_split_counts": {
+        "netflix": {
+          "train": 165,
+          "validation": 20,
+          "test": 20
+        },
+        "rdp": {
+          "train": 36,
+          "validation": 4,
+          "test": 4
+        },
+        "scp": {
+          "train": 1832,
+          "validation": 229,
+          "test": 229
+        },
+        "sftp": {
+          "train": 1336,
+          "validation": 166,
+          "test": 166
+        },
+        "skype": {
+          "train": 1017,
+          "validation": 126,
+          "test": 126
+        },
+        "vimeo": {
+          "train": 976,
+          "validation": 121,
+          "test": 121
+        },
+        "youtube": {
+          "train": 273,
+          "validation": 34,
+          "test": 34
+        }
+      },
+      "known_group_count": 78,
+      "known_groups_spanning_multiple_splits": 71,
+      "known_capture_count": 141,
+      "known_captures_spanning_multiple_splits": 71
+    },
+    {
+      "protocol_id": "medium_seed2025",
+      "setting": "Medium",
+      "seed": 2025,
+      "unknown_applications": [
+        "zoiper",
+        "vimeo",
+        "sftp"
+      ],
+      "known_applications": [
+        "netflix",
+        "rdp",
+        "rsync",
+        "scp",
+        "skype",
+        "ssh",
+        "youtube"
+      ],
+      "split_statistics": {
+        "train": {
+          "flows": 15704,
+          "vpn_flows": 56,
+          "nonvpn_flows": 15648,
+          "vpn_ratio": 0.00356597,
+          "applications": [
+            "netflix",
+            "rdp",
+            "rsync",
+            "scp",
+            "skype",
+            "ssh",
+            "youtube"
+          ],
+          "capture_count": 127,
+          "group_count": 76
+        },
+        "validation": {
+          "flows": 1960,
+          "vpn_flows": 12,
+          "nonvpn_flows": 1948,
+          "vpn_ratio": 0.00612245,
+          "applications": [
+            "netflix",
+            "rdp",
+            "rsync",
+            "scp",
+            "skype",
+            "ssh",
+            "youtube"
+          ],
+          "capture_count": 77,
+          "group_count": 67
+        },
+        "test": {
+          "flows": 1960,
+          "vpn_flows": 7,
+          "nonvpn_flows": 1953,
+          "vpn_ratio": 0.00357143,
+          "applications": [
+            "netflix",
+            "rdp",
+            "rsync",
+            "scp",
+            "skype",
+            "ssh",
+            "youtube"
+          ],
+          "capture_count": 69,
+          "group_count": 63
+        },
+        "unknown_test": {
+          "flows": 3825,
+          "vpn_flows": 306,
+          "nonvpn_flows": 3519,
+          "vpn_ratio": 0.08,
+          "applications": [
+            "sftp",
+            "vimeo",
+            "zoiper"
+          ],
+          "capture_count": 17,
+          "group_count": 11
+        }
+      },
+      "known_class_split_counts": {
+        "netflix": {
+          "train": 165,
+          "validation": 20,
+          "test": 20
+        },
+        "rdp": {
+          "train": 36,
+          "validation": 4,
+          "test": 4
+        },
+        "rsync": {
+          "train": 1530,
+          "validation": 191,
+          "test": 191
+        },
+        "scp": {
+          "train": 1832,
+          "validation": 229,
+          "test": 229
+        },
+        "skype": {
+          "train": 1017,
+          "validation": 126,
+          "test": 126
+        },
+        "ssh": {
+          "train": 10851,
+          "validation": 1356,
+          "test": 1356
+        },
+        "youtube": {
+          "train": 273,
+          "validation": 34,
+          "test": 34
+        }
+      },
+      "known_group_count": 79,
+      "known_groups_spanning_multiple_splits": 69,
+      "known_capture_count": 145,
+      "known_captures_spanning_multiple_splits": 70
+    },
+    {
+      "protocol_id": "medium_seed2026",
+      "setting": "Medium",
+      "seed": 2026,
+      "unknown_applications": [
+        "sftp",
+        "youtube",
+        "scp"
+      ],
+      "known_applications": [
+        "netflix",
+        "rdp",
+        "rsync",
+        "skype",
+        "ssh",
+        "vimeo",
+        "zoiper"
+      ],
+      "split_statistics": {
+        "train": {
+          "flows": 15328,
+          "vpn_flows": 304,
+          "nonvpn_flows": 15024,
+          "vpn_ratio": 0.01983299,
+          "applications": [
+            "netflix",
+            "rdp",
+            "rsync",
+            "skype",
+            "ssh",
+            "vimeo",
+            "zoiper"
+          ],
+          "capture_count": 125,
+          "group_count": 75
+        },
+        "validation": {
+          "flows": 1911,
+          "vpn_flows": 35,
+          "nonvpn_flows": 1876,
+          "vpn_ratio": 0.01831502,
+          "applications": [
+            "netflix",
+            "rdp",
+            "rsync",
+            "skype",
+            "ssh",
+            "vimeo",
+            "zoiper"
+          ],
+          "capture_count": 73,
+          "group_count": 58
+        },
+        "test": {
+          "flows": 1911,
+          "vpn_flows": 33,
+          "nonvpn_flows": 1878,
+          "vpn_ratio": 0.01726845,
+          "applications": [
+            "netflix",
+            "rdp",
+            "rsync",
+            "skype",
+            "ssh",
+            "vimeo",
+            "zoiper"
+          ],
+          "capture_count": 68,
+          "group_count": 62
+        },
+        "unknown_test": {
+          "flows": 4299,
+          "vpn_flows": 9,
+          "nonvpn_flows": 4290,
+          "vpn_ratio": 0.00209351,
+          "applications": [
+            "scp",
+            "sftp",
+            "youtube"
+          ],
+          "capture_count": 20,
+          "group_count": 14
+        }
+      },
+      "known_class_split_counts": {
+        "netflix": {
+          "train": 165,
+          "validation": 20,
+          "test": 20
+        },
+        "rdp": {
+          "train": 36,
+          "validation": 4,
+          "test": 4
+        },
+        "rsync": {
+          "train": 1530,
+          "validation": 191,
+          "test": 191
+        },
+        "skype": {
+          "train": 1017,
+          "validation": 126,
+          "test": 126
+        },
+        "ssh": {
+          "train": 10851,
+          "validation": 1356,
+          "test": 1356
+        },
+        "vimeo": {
+          "train": 976,
+          "validation": 121,
+          "test": 121
+        },
+        "zoiper": {
+          "train": 753,
+          "validation": 93,
+          "test": 93
+        }
+      },
+      "known_group_count": 76,
+      "known_groups_spanning_multiple_splits": 66,
+      "known_capture_count": 142,
+      "known_captures_spanning_multiple_splits": 69
+    },
+    {
+      "protocol_id": "high_seed2022",
+      "setting": "High",
+      "seed": 2022,
+      "unknown_applications": [
+        "scp",
+        "rdp",
+        "skype",
+        "netflix"
+      ],
+      "known_applications": [
+        "rsync",
+        "sftp",
+        "ssh",
+        "vimeo",
+        "youtube",
+        "zoiper"
+      ],
+      "split_statistics": {
+        "train": {
+          "flows": 15719,
+          "vpn_flows": 255,
+          "nonvpn_flows": 15464,
+          "vpn_ratio": 0.01622241,
+          "applications": [
+            "rsync",
+            "sftp",
+            "ssh",
+            "vimeo",
+            "youtube",
+            "zoiper"
+          ],
+          "capture_count": 36,
+          "group_count": 23
+        },
+        "validation": {
+          "flows": 1961,
+          "vpn_flows": 32,
+          "nonvpn_flows": 1929,
+          "vpn_ratio": 0.0163182,
+          "applications": [
+            "rsync",
+            "sftp",
+            "ssh",
+            "vimeo",
+            "youtube",
+            "zoiper"
+          ],
+          "capture_count": 24,
+          "group_count": 20
+        },
+        "test": {
+          "flows": 1961,
+          "vpn_flows": 30,
+          "nonvpn_flows": 1931,
+          "vpn_ratio": 0.01529832,
+          "applications": [
+            "rsync",
+            "sftp",
+            "ssh",
+            "vimeo",
+            "youtube",
+            "zoiper"
+          ],
+          "capture_count": 24,
+          "group_count": 20
+        },
+        "unknown_test": {
+          "flows": 3808,
+          "vpn_flows": 64,
+          "nonvpn_flows": 3744,
+          "vpn_ratio": 0.01680672,
+          "applications": [
+            "netflix",
+            "rdp",
+            "scp",
+            "skype"
+          ],
+          "capture_count": 123,
+          "group_count": 66
+        }
+      },
+      "known_class_split_counts": {
+        "rsync": {
+          "train": 1530,
+          "validation": 191,
+          "test": 191
+        },
+        "sftp": {
+          "train": 1336,
+          "validation": 166,
+          "test": 166
+        },
+        "ssh": {
+          "train": 10851,
+          "validation": 1356,
+          "test": 1356
+        },
+        "vimeo": {
+          "train": 976,
+          "validation": 121,
+          "test": 121
+        },
+        "youtube": {
+          "train": 273,
+          "validation": 34,
+          "test": 34
+        },
+        "zoiper": {
+          "train": 753,
+          "validation": 93,
+          "test": 93
+        }
+      },
+      "known_group_count": 24,
+      "known_groups_spanning_multiple_splits": 20,
+      "known_capture_count": 39,
+      "known_captures_spanning_multiple_splits": 23
+    },
+    {
+      "protocol_id": "high_seed2023",
+      "setting": "High",
+      "seed": 2023,
+      "unknown_applications": [
+        "skype",
+        "netflix",
+        "ssh",
+        "rsync"
+      ],
+      "known_applications": [
+        "rdp",
+        "scp",
+        "sftp",
+        "vimeo",
+        "youtube",
+        "zoiper"
+      ],
+      "split_statistics": {
+        "train": {
+          "flows": 5206,
+          "vpn_flows": 255,
+          "nonvpn_flows": 4951,
+          "vpn_ratio": 0.04898194,
+          "applications": [
+            "rdp",
+            "scp",
+            "sftp",
+            "vimeo",
+            "youtube",
+            "zoiper"
+          ],
+          "capture_count": 35,
+          "group_count": 22
+        },
+        "validation": {
+          "flows": 647,
+          "vpn_flows": 31,
+          "nonvpn_flows": 616,
+          "vpn_ratio": 0.04791345,
+          "applications": [
+            "rdp",
+            "scp",
+            "sftp",
+            "vimeo",
+            "youtube",
+            "zoiper"
+          ],
+          "capture_count": 21,
+          "group_count": 18
+        },
+        "test": {
+          "flows": 647,
+          "vpn_flows": 31,
+          "nonvpn_flows": 616,
+          "vpn_ratio": 0.04791345,
+          "applications": [
+            "rdp",
+            "scp",
+            "sftp",
+            "vimeo",
+            "youtube",
+            "zoiper"
+          ],
+          "capture_count": 21,
+          "group_count": 18
+        },
+        "unknown_test": {
+          "flows": 16949,
+          "vpn_flows": 64,
+          "nonvpn_flows": 16885,
+          "vpn_ratio": 0.00377603,
+          "applications": [
+            "netflix",
+            "rsync",
+            "skype",
+            "ssh"
+          ],
+          "capture_count": 126,
+          "group_count": 67
+        }
+      },
+      "known_class_split_counts": {
+        "rdp": {
+          "train": 36,
+          "validation": 4,
+          "test": 4
+        },
+        "scp": {
+          "train": 1832,
+          "validation": 229,
+          "test": 229
+        },
+        "sftp": {
+          "train": 1336,
+          "validation": 166,
+          "test": 166
+        },
+        "vimeo": {
+          "train": 976,
+          "validation": 121,
+          "test": 121
+        },
+        "youtube": {
+          "train": 273,
+          "validation": 34,
+          "test": 34
+        },
+        "zoiper": {
+          "train": 753,
+          "validation": 93,
+          "test": 93
+        }
+      },
+      "known_group_count": 23,
+      "known_groups_spanning_multiple_splits": 18,
+      "known_capture_count": 36,
+      "known_captures_spanning_multiple_splits": 21
+    },
+    {
+      "protocol_id": "high_seed2024",
+      "setting": "High",
+      "seed": 2024,
+      "unknown_applications": [
+        "ssh",
+        "rsync",
+        "zoiper",
+        "vimeo"
+      ],
+      "known_applications": [
+        "netflix",
+        "rdp",
+        "scp",
+        "sftp",
+        "skype",
+        "youtube"
+      ],
+      "split_statistics": {
+        "train": {
+          "flows": 4659,
+          "vpn_flows": 60,
+          "nonvpn_flows": 4599,
+          "vpn_ratio": 0.0128783,
+          "applications": [
+            "netflix",
+            "rdp",
+            "scp",
+            "sftp",
+            "skype",
+            "youtube"
+          ],
+          "capture_count": 128,
+          "group_count": 76
+        },
+        "validation": {
+          "flows": 579,
+          "vpn_flows": 4,
+          "nonvpn_flows": 575,
+          "vpn_ratio": 0.00690846,
+          "applications": [
+            "netflix",
+            "rdp",
+            "scp",
+            "sftp",
+            "skype",
+            "youtube"
+          ],
+          "capture_count": 68,
+          "group_count": 64
+        },
+        "test": {
+          "flows": 579,
+          "vpn_flows": 7,
+          "nonvpn_flows": 572,
+          "vpn_ratio": 0.01208981,
+          "applications": [
+            "netflix",
+            "rdp",
+            "scp",
+            "sftp",
+            "skype",
+            "youtube"
+          ],
+          "capture_count": 70,
+          "group_count": 65
+        },
+        "unknown_test": {
+          "flows": 17632,
+          "vpn_flows": 310,
+          "nonvpn_flows": 17322,
+          "vpn_ratio": 0.01758167,
+          "applications": [
+            "rsync",
+            "ssh",
+            "vimeo",
+            "zoiper"
+          ],
+          "capture_count": 23,
+          "group_count": 13
+        }
+      },
+      "known_class_split_counts": {
+        "netflix": {
+          "train": 165,
+          "validation": 20,
+          "test": 20
+        },
+        "rdp": {
+          "train": 36,
+          "validation": 4,
+          "test": 4
+        },
+        "scp": {
+          "train": 1832,
+          "validation": 229,
+          "test": 229
+        },
+        "sftp": {
+          "train": 1336,
+          "validation": 166,
+          "test": 166
+        },
+        "skype": {
+          "train": 1017,
+          "validation": 126,
+          "test": 126
+        },
+        "youtube": {
+          "train": 273,
+          "validation": 34,
+          "test": 34
+        }
+      },
+      "known_group_count": 77,
+      "known_groups_spanning_multiple_splits": 70,
+      "known_capture_count": 139,
+      "known_captures_spanning_multiple_splits": 70
+    },
+    {
+      "protocol_id": "high_seed2025",
+      "setting": "High",
+      "seed": 2025,
+      "unknown_applications": [
+        "zoiper",
+        "vimeo",
+        "sftp",
+        "youtube"
+      ],
+      "known_applications": [
+        "netflix",
+        "rdp",
+        "rsync",
+        "scp",
+        "skype",
+        "ssh"
+      ],
+      "split_statistics": {
+        "train": {
+          "flows": 15431,
+          "vpn_flows": 54,
+          "nonvpn_flows": 15377,
+          "vpn_ratio": 0.00349945,
+          "applications": [
+            "netflix",
+            "rdp",
+            "rsync",
+            "scp",
+            "skype",
+            "ssh"
+          ],
+          "capture_count": 121,
+          "group_count": 72
+        },
+        "validation": {
+          "flows": 1926,
+          "vpn_flows": 11,
+          "nonvpn_flows": 1915,
+          "vpn_ratio": 0.00571132,
+          "applications": [
+            "netflix",
+            "rdp",
+            "rsync",
+            "scp",
+            "skype",
+            "ssh"
+          ],
+          "capture_count": 73,
+          "group_count": 64
+        },
+        "test": {
+          "flows": 1926,
+          "vpn_flows": 7,
+          "nonvpn_flows": 1919,
+          "vpn_ratio": 0.00363448,
+          "applications": [
+            "netflix",
+            "rdp",
+            "rsync",
+            "scp",
+            "skype",
+            "ssh"
+          ],
+          "capture_count": 66,
+          "group_count": 60
+        },
+        "unknown_test": {
+          "flows": 4166,
+          "vpn_flows": 309,
+          "nonvpn_flows": 3857,
+          "vpn_ratio": 0.07417187,
+          "applications": [
+            "sftp",
+            "vimeo",
+            "youtube",
+            "zoiper"
+          ],
+          "capture_count": 24,
+          "group_count": 15
+        }
+      },
+      "known_class_split_counts": {
+        "netflix": {
+          "train": 165,
+          "validation": 20,
+          "test": 20
+        },
+        "rdp": {
+          "train": 36,
+          "validation": 4,
+          "test": 4
+        },
+        "rsync": {
+          "train": 1530,
+          "validation": 191,
+          "test": 191
+        },
+        "scp": {
+          "train": 1832,
+          "validation": 229,
+          "test": 229
+        },
+        "skype": {
+          "train": 1017,
+          "validation": 126,
+          "test": 126
+        },
+        "ssh": {
+          "train": 10851,
+          "validation": 1356,
+          "test": 1356
+        }
+      },
+      "known_group_count": 75,
+      "known_groups_spanning_multiple_splits": 66,
+      "known_capture_count": 138,
+      "known_captures_spanning_multiple_splits": 67
+    },
+    {
+      "protocol_id": "high_seed2026",
+      "setting": "High",
+      "seed": 2026,
+      "unknown_applications": [
+        "sftp",
+        "youtube",
+        "scp",
+        "rdp"
+      ],
+      "known_applications": [
+        "netflix",
+        "rsync",
+        "skype",
+        "ssh",
+        "vimeo",
+        "zoiper"
+      ],
+      "split_statistics": {
+        "train": {
+          "flows": 15292,
+          "vpn_flows": 298,
+          "nonvpn_flows": 14994,
+          "vpn_ratio": 0.01948731,
+          "applications": [
+            "netflix",
+            "rsync",
+            "skype",
+            "ssh",
+            "vimeo",
+            "zoiper"
+          ],
+          "capture_count": 117,
+          "group_count": 70
+        },
+        "validation": {
+          "flows": 1907,
+          "vpn_flows": 35,
+          "nonvpn_flows": 1872,
+          "vpn_ratio": 0.01835343,
+          "applications": [
+            "netflix",
+            "rsync",
+            "skype",
+            "ssh",
+            "vimeo",
+            "zoiper"
+          ],
+          "capture_count": 72,
+          "group_count": 57
+        },
+        "test": {
+          "flows": 1907,
+          "vpn_flows": 33,
+          "nonvpn_flows": 1874,
+          "vpn_ratio": 0.01730467,
+          "applications": [
+            "netflix",
+            "rsync",
+            "skype",
+            "ssh",
+            "vimeo",
+            "zoiper"
+          ],
+          "capture_count": 64,
+          "group_count": 58
+        },
+        "unknown_test": {
+          "flows": 4343,
+          "vpn_flows": 15,
+          "nonvpn_flows": 4328,
+          "vpn_ratio": 0.00345383,
+          "applications": [
+            "rdp",
+            "scp",
+            "sftp",
+            "youtube"
+          ],
+          "capture_count": 28,
+          "group_count": 19
+        }
+      },
+      "known_class_split_counts": {
+        "netflix": {
+          "train": 165,
+          "validation": 20,
+          "test": 20
+        },
+        "rsync": {
+          "train": 1530,
+          "validation": 191,
+          "test": 191
+        },
+        "skype": {
+          "train": 1017,
+          "validation": 126,
+          "test": 126
+        },
+        "ssh": {
+          "train": 10851,
+          "validation": 1356,
+          "test": 1356
+        },
+        "vimeo": {
+          "train": 976,
+          "validation": 121,
+          "test": 121
+        },
+        "zoiper": {
+          "train": 753,
+          "validation": 93,
+          "test": 93
+        }
+      },
+      "known_group_count": 71,
+      "known_groups_spanning_multiple_splits": 62,
+      "known_capture_count": 134,
+      "known_captures_spanning_multiple_splits": 65
+    }
+  ],
+  "verification": {
+    "status": "PASS",
+    "protocol_count": 15,
+    "checks": [
+      {
+        "protocol_id": "low_seed2022",
+        "pass": true,
+        "conditions": {
+          "class_sets_disjoint": true,
+          "class_sets_complete": true,
+          "all_clean_flows_present_once": true,
+          "unknown_only_unknown_test": true,
+          "known_only_known_splits": true,
+          "all_known_classes_nonempty_each_split": true,
+          "failed_pcaps_absent": true,
+          "duplicate_pcap_drops_absent": true,
+          "cross_application_duplicates_absent": true
+        }
+      },
+      {
+        "protocol_id": "low_seed2023",
+        "pass": true,
+        "conditions": {
+          "class_sets_disjoint": true,
+          "class_sets_complete": true,
+          "all_clean_flows_present_once": true,
+          "unknown_only_unknown_test": true,
+          "known_only_known_splits": true,
+          "all_known_classes_nonempty_each_split": true,
+          "failed_pcaps_absent": true,
+          "duplicate_pcap_drops_absent": true,
+          "cross_application_duplicates_absent": true
+        }
+      },
+      {
+        "protocol_id": "low_seed2024",
+        "pass": true,
+        "conditions": {
+          "class_sets_disjoint": true,
+          "class_sets_complete": true,
+          "all_clean_flows_present_once": true,
+          "unknown_only_unknown_test": true,
+          "known_only_known_splits": true,
+          "all_known_classes_nonempty_each_split": true,
+          "failed_pcaps_absent": true,
+          "duplicate_pcap_drops_absent": true,
+          "cross_application_duplicates_absent": true
+        }
+      },
+      {
+        "protocol_id": "low_seed2025",
+        "pass": true,
+        "conditions": {
+          "class_sets_disjoint": true,
+          "class_sets_complete": true,
+          "all_clean_flows_present_once": true,
+          "unknown_only_unknown_test": true,
+          "known_only_known_splits": true,
+          "all_known_classes_nonempty_each_split": true,
+          "failed_pcaps_absent": true,
+          "duplicate_pcap_drops_absent": true,
+          "cross_application_duplicates_absent": true
+        }
+      },
+      {
+        "protocol_id": "low_seed2026",
+        "pass": true,
+        "conditions": {
+          "class_sets_disjoint": true,
+          "class_sets_complete": true,
+          "all_clean_flows_present_once": true,
+          "unknown_only_unknown_test": true,
+          "known_only_known_splits": true,
+          "all_known_classes_nonempty_each_split": true,
+          "failed_pcaps_absent": true,
+          "duplicate_pcap_drops_absent": true,
+          "cross_application_duplicates_absent": true
+        }
+      },
+      {
+        "protocol_id": "medium_seed2022",
+        "pass": true,
+        "conditions": {
+          "class_sets_disjoint": true,
+          "class_sets_complete": true,
+          "all_clean_flows_present_once": true,
+          "unknown_only_unknown_test": true,
+          "known_only_known_splits": true,
+          "all_known_classes_nonempty_each_split": true,
+          "failed_pcaps_absent": true,
+          "duplicate_pcap_drops_absent": true,
+          "cross_application_duplicates_absent": true
+        }
+      },
+      {
+        "protocol_id": "medium_seed2023",
+        "pass": true,
+        "conditions": {
+          "class_sets_disjoint": true,
+          "class_sets_complete": true,
+          "all_clean_flows_present_once": true,
+          "unknown_only_unknown_test": true,
+          "known_only_known_splits": true,
+          "all_known_classes_nonempty_each_split": true,
+          "failed_pcaps_absent": true,
+          "duplicate_pcap_drops_absent": true,
+          "cross_application_duplicates_absent": true
+        }
+      },
+      {
+        "protocol_id": "medium_seed2024",
+        "pass": true,
+        "conditions": {
+          "class_sets_disjoint": true,
+          "class_sets_complete": true,
+          "all_clean_flows_present_once": true,
+          "unknown_only_unknown_test": true,
+          "known_only_known_splits": true,
+          "all_known_classes_nonempty_each_split": true,
+          "failed_pcaps_absent": true,
+          "duplicate_pcap_drops_absent": true,
+          "cross_application_duplicates_absent": true
+        }
+      },
+      {
+        "protocol_id": "medium_seed2025",
+        "pass": true,
+        "conditions": {
+          "class_sets_disjoint": true,
+          "class_sets_complete": true,
+          "all_clean_flows_present_once": true,
+          "unknown_only_unknown_test": true,
+          "known_only_known_splits": true,
+          "all_known_classes_nonempty_each_split": true,
+          "failed_pcaps_absent": true,
+          "duplicate_pcap_drops_absent": true,
+          "cross_application_duplicates_absent": true
+        }
+      },
+      {
+        "protocol_id": "medium_seed2026",
+        "pass": true,
+        "conditions": {
+          "class_sets_disjoint": true,
+          "class_sets_complete": true,
+          "all_clean_flows_present_once": true,
+          "unknown_only_unknown_test": true,
+          "known_only_known_splits": true,
+          "all_known_classes_nonempty_each_split": true,
+          "failed_pcaps_absent": true,
+          "duplicate_pcap_drops_absent": true,
+          "cross_application_duplicates_absent": true
+        }
+      },
+      {
+        "protocol_id": "high_seed2022",
+        "pass": true,
+        "conditions": {
+          "class_sets_disjoint": true,
+          "class_sets_complete": true,
+          "all_clean_flows_present_once": true,
+          "unknown_only_unknown_test": true,
+          "known_only_known_splits": true,
+          "all_known_classes_nonempty_each_split": true,
+          "failed_pcaps_absent": true,
+          "duplicate_pcap_drops_absent": true,
+          "cross_application_duplicates_absent": true
+        }
+      },
+      {
+        "protocol_id": "high_seed2023",
+        "pass": true,
+        "conditions": {
+          "class_sets_disjoint": true,
+          "class_sets_complete": true,
+          "all_clean_flows_present_once": true,
+          "unknown_only_unknown_test": true,
+          "known_only_known_splits": true,
+          "all_known_classes_nonempty_each_split": true,
+          "failed_pcaps_absent": true,
+          "duplicate_pcap_drops_absent": true,
+          "cross_application_duplicates_absent": true
+        }
+      },
+      {
+        "protocol_id": "high_seed2024",
+        "pass": true,
+        "conditions": {
+          "class_sets_disjoint": true,
+          "class_sets_complete": true,
+          "all_clean_flows_present_once": true,
+          "unknown_only_unknown_test": true,
+          "known_only_known_splits": true,
+          "all_known_classes_nonempty_each_split": true,
+          "failed_pcaps_absent": true,
+          "duplicate_pcap_drops_absent": true,
+          "cross_application_duplicates_absent": true
+        }
+      },
+      {
+        "protocol_id": "high_seed2025",
+        "pass": true,
+        "conditions": {
+          "class_sets_disjoint": true,
+          "class_sets_complete": true,
+          "all_clean_flows_present_once": true,
+          "unknown_only_unknown_test": true,
+          "known_only_known_splits": true,
+          "all_known_classes_nonempty_each_split": true,
+          "failed_pcaps_absent": true,
+          "duplicate_pcap_drops_absent": true,
+          "cross_application_duplicates_absent": true
+        }
+      },
+      {
+        "protocol_id": "high_seed2026",
+        "pass": true,
+        "conditions": {
+          "class_sets_disjoint": true,
+          "class_sets_complete": true,
+          "all_clean_flows_present_once": true,
+          "unknown_only_unknown_test": true,
+          "known_only_known_splits": true,
+          "all_known_classes_nonempty_each_split": true,
+          "failed_pcaps_absent": true,
+          "duplicate_pcap_drops_absent": true,
+          "cross_application_duplicates_absent": true
+        }
+      }
+    ],
+    "strict_unknown_free_definition": "unknown applications are class-held-out and their flows appear only in unknown_test",
+    "capture_disjoint_known_split": false,
+    "capture_disjoint_note": "not claimed; user explicitly requested flow-random Known 8:1:1 with capture/group retained only as metadata"
+  },
+  "forbidden_actions": {
+    "model_training": false,
+    "open_detect_run": false,
+    "des_run": false,
+    "model_result_used_for_protocol": false
+  },
+  "freeze_hash": "c904daef04d2c8e79469191121325c0a6ceeaeb3e595ef9c4c7d7a62c980ae2f"
+}

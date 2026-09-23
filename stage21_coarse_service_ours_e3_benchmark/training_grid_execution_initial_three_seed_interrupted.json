@@ -1,0 +1,51 @@
+{
+  "failed": 1,
+  "selected_physical_gpu_ids": [
+    "1",
+    "2",
+    "4"
+  ],
+  "successful_or_skipped": 4,
+  "tasks": [
+    {
+      "dataset": "iscx_tor",
+      "exit_code": 0,
+      "gpu": "1",
+      "log_path": "/home/birkenwald/data/SEU-WXY/WXY-SEU/TrafficClassifier/Projects/unknown_traffic_project/stage21_coarse_service_ours_e3_benchmark/launcher_logs/iscx_tor_seed2022.log",
+      "seed": 2022,
+      "status": "SUCCESS"
+    },
+    {
+      "dataset": "iscx_tor",
+      "exit_code": 0,
+      "gpu": "2",
+      "log_path": "/home/birkenwald/data/SEU-WXY/WXY-SEU/TrafficClassifier/Projects/unknown_traffic_project/stage21_coarse_service_ours_e3_benchmark/launcher_logs/iscx_tor_seed2023.log",
+      "seed": 2023,
+      "status": "SUCCESS"
+    },
+    {
+      "dataset": "iscx_vpn",
+      "exit_code": 0,
+      "gpu": "1",
+      "log_path": "/home/birkenwald/data/SEU-WXY/WXY-SEU/TrafficClassifier/Projects/unknown_traffic_project/stage21_coarse_service_ours_e3_benchmark/launcher_logs/iscx_vpn_seed2022.log",
+      "seed": 2022,
+      "status": "SUCCESS"
+    },
+    {
+      "dataset": "iscx_vpn",
+      "exit_code": 0,
+      "gpu": "2",
+      "log_path": "/home/birkenwald/data/SEU-WXY/WXY-SEU/TrafficClassifier/Projects/unknown_traffic_project/stage21_coarse_service_ours_e3_benchmark/launcher_logs/iscx_vpn_seed2023.log",
+      "seed": 2023,
+      "status": "SUCCESS"
+    },
+    {
+      "dataset": "iscx_vpn",
+      "exit_code": -15,
+      "gpu": "4",
+      "log_path": "/home/birkenwald/data/SEU-WXY/WXY-SEU/TrafficClassifier/Projects/unknown_traffic_project/stage21_coarse_service_ours_e3_benchmark/launcher_logs/iscx_vpn_seed2024.log",
+      "seed": 2024,
+      "status": "FAILED"
+    }
+  ]
+}

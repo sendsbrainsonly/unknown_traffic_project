@@ -1,0 +1,38 @@
+{
+  "failed": 0,
+  "selected_physical_gpu_ids": [
+    "0",
+    "1"
+  ],
+  "successful_or_skipped": 4,
+  "tasks": [
+    {
+      "dataset": "iscx_tor",
+      "exit_code": 0,
+      "gpu": "0",
+      "seed": 2022,
+      "status": "SKIP_SUCCESS"
+    },
+    {
+      "dataset": "iscx_tor",
+      "exit_code": 0,
+      "gpu": "1",
+      "seed": 2023,
+      "status": "SKIP_SUCCESS"
+    },
+    {
+      "dataset": "iscx_vpn",
+      "exit_code": 0,
+      "gpu": "0",
+      "seed": 2022,
+      "status": "SKIP_SUCCESS"
+    },
+    {
+      "dataset": "iscx_vpn",
+      "exit_code": 0,
+      "gpu": "1",
+      "seed": 2023,
+      "status": "SKIP_SUCCESS"
+    }
+  ]
+}

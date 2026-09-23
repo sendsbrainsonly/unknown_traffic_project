@@ -1,0 +1,48 @@
+{
+  "stage": "14D",
+  "experiment_id": "stage14d-vnat-frozen-open-set-mechanism-evaluation-20260918-v1",
+  "protocol_grid": {
+    "settings": ["Low", "Medium", "High"],
+    "seeds": [2022, 2023, 2024, 2025, 2026]
+  },
+  "methods": {
+    "M0": "Open-Detect Native learned-prototype minimum Gaussian KL",
+    "M1": "DES-v0 Known-Train deterministic-mu empirical centroid squared Euclidean distance",
+    "M2": "DES-v1 fixed 0.5 robust-normalized global centroid plus 0.5 robust-normalized class-conditional kNN-10"
+  },
+  "des_v1": {
+    "k": 10,
+    "global_weight": 0.5,
+    "local_weight": 0.5,
+    "normalization_fit_split": "Known Validation only",
+    "epsilon": 1e-12
+  },
+  "threshold": {
+    "fit_split": "Known Validation only",
+    "percentile": 95,
+    "numpy_method": "higher",
+    "unknown_if": "score >= threshold"
+  },
+  "evaluation": {
+    "unknown_positive": true,
+    "inference_batch_size": 64,
+    "inference_batch_size_reason": "match Stage 14C Native validation loader exactly",
+    "sample_policy": "all frozen Known Test and all frozen Unknown Test samples; no balancing or subsampling",
+    "bootstrap_repetitions": 10000,
+    "bootstrap_seed": 0,
+    "bootstrap_unit": "paired protocol",
+    "known_macro_f1": "closed-set class prediction on all Known Test samples before rejection"
+  },
+  "conclusion_gate": {
+    "stable_improvement": "overall mean delta AUROC > 0, overall mean delta AUPRC > 0, AUROC improves in at least 10/15 protocols, every setting mean delta AUROC >= 0, and overall paired-bootstrap AUROC 95% CI lower bound > 0",
+    "partial_decoupling": "M1-M0 overall mean delta AUROC > 0 and delta AUPRC > 0 but stable_improvement is not fully met"
+  },
+  "forbidden": [
+    "encoder training or fine-tuning",
+    "Unknown use in support, normalization, or threshold calibration",
+    "Test threshold tuning",
+    "k or fusion-weight search",
+    "feature changes",
+    "Stage 14B protocol changes"
+  ]
+}

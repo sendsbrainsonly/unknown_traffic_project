@@ -1,0 +1,73 @@
+{
+  "file_count": 17,
+  "files": {
+    "configs/encoder/fig_graph.yaml": {
+      "bytes": 1817,
+      "sha256": "6d6d19f0834800bd20876495972c9a1c99b860f299acbbd0c3281707356786a8"
+    },
+    "configs/encoder/trafficformer_input.yaml": {
+      "bytes": 869,
+      "sha256": "4558ccfefcb7521fe871dbb219ac9b48daef87e202badd92c855e9f9e4124059"
+    },
+    "outputs/stage1/modelA/finetuned_model.bin": {
+      "bytes": 528647077,
+      "sha256": "df866633fa15541d1a1325d9a5d683a36d359499c462769d5be0c2a202fdfe52"
+    },
+    "outputs/stage1/modelB/seeds/seed2/modelB_best.pt": {
+      "bytes": 24709,
+      "sha256": "be074d3920e10dd57f77e162264bd4ce9c144eda5aa26610956a7142ea8ef9cd"
+    },
+    "outputs/stage1/modelB/seeds/seed2/run_summary.json": {
+      "bytes": 13646,
+      "sha256": "0796df3e96be608e55166fcf8b2ded9c5ad9052cb545d642de3d5c1158285d5a"
+    },
+    "scripts/task03_generate_trafficformer_input.py": {
+      "bytes": 2244,
+      "sha256": "27e296d742c0cd5e1a3d1ae7e23093a830f6da6a7a8345fe46fb380f4da61364"
+    },
+    "scripts/task04_generate_fig_graph.py": {
+      "bytes": 2163,
+      "sha256": "713e15284196cd57c8ab0325843e8bb69c8ff1bda8d87c81790056c52b10c6c9"
+    },
+    "scripts/task07_train_model_b.py": {
+      "bytes": 10159,
+      "sha256": "294d9405c4cf9c09460f96566942c969524595ae7b743cc3b2c6ce70eb7e1899"
+    },
+    "scripts/task08_export_model_a_zt.py": {
+      "bytes": 11193,
+      "sha256": "510b2d74b09b05ed16f58cdfb832e5b73d7981b35998ef29593af3f650bd5717"
+    },
+    "scripts/task09_model_c_fusion.py": {
+      "bytes": 12677,
+      "sha256": "7a760ddaa283b0226e6ffddda77b49b9c9411a7dc688760c45c9a9e41a9c0837"
+    },
+    "src/preprocessing/fig_graph.py": {
+      "bytes": 21851,
+      "sha256": "5b2785358ce4b1ec9ab458710fb39754c375eaa2284d3b3bf7138e2d6958ce32"
+    },
+    "src/preprocessing/trafficformer_input.py": {
+      "bytes": 15334,
+      "sha256": "e77599d60584bde10a660f63f9b4c407b438056c24d401634c4e21c49f5043e6"
+    },
+    "src/stage1/fig_dataset.py": {
+      "bytes": 8313,
+      "sha256": "54323123a4e562ee8fe8bca8f2a4f5dfd0356765e2a7551c5568851f0bed4f09"
+    },
+    "src/stage1/tagcn.py": {
+      "bytes": 2237,
+      "sha256": "abc5577b70527fc9efe9b7ef4ea74fe4b5f134e4f0b1201a3ae28e07aba2af19"
+    },
+    "stage16s_service_open_set_benchmark/service_unknown_protocol_manifest.csv": {
+      "bytes": 7619903,
+      "sha256": "498b78efae22638c80ec203974052d95cda81a04ac064d7266d2956a3f1556a5"
+    },
+    "stage16s_service_open_set_benchmark/training_configs.json": {
+      "bytes": 5845,
+      "sha256": "25422214aaba4fb77151c853f4efd1548df85ae02552a3f9c5842ca7e686282d"
+    },
+    "tf_runtime/code/models/pretrained_model.bin": {
+      "bytes": 715546509,
+      "sha256": "be9dcc1e0c6b68db005e506adf13a2d937a2f3982539a2c8a58f78c55af0d5ce"
+    }
+  }
+}

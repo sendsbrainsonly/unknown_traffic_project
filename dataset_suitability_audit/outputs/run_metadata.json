@@ -1,0 +1,123 @@
+{
+  "generated_utc": "2026-09-12T12:03:53.481325+00:00",
+  "actual_command": "python scripts/run_audit.py",
+  "dataset_roots": {
+    "CipherSpectrum": "/home/birkenwald/data/SEU-WXY/WXY-SEU/TrafficClassifier/Dataset/ipherSpectrum(sok)",
+    "CSTNET-TLS1.3": "/home/birkenwald/data/SEU-WXY/WXY-SEU/TrafficClassifier/Dataset/CSTNET-TLS1.3",
+    "CICDDoS2019": "/home/birkenwald/data/SEU-WXY/WXY-SEU/TrafficClassifier/Dataset/CICDDoS2019"
+  },
+  "read_only_dataset_audit": true,
+  "bulk_pcap_parsing": false,
+  "pcap_validation": "all capture magic bytes plus deterministic capinfos/tshark sample",
+  "models_trained": false,
+  "unknown_detection_run": false,
+  "splits_created": false,
+  "archives_extracted": false,
+  "totals": {
+    "CipherSpectrum": {
+      "files": 164223,
+      "logical_bytes": 15405783497,
+      "allocated_bytes": 15941799424
+    },
+    "CSTNET-TLS1.3": {
+      "files": 46418,
+      "logical_bytes": 13504861723,
+      "allocated_bytes": 11196400640
+    },
+    "CICDDoS2019": {
+      "files": 2951,
+      "logical_bytes": 37974510488,
+      "allocated_bytes": 9035050496
+    }
+  },
+  "valid_pcap_counts": {
+    "CipherSpectrum": 164205,
+    "CSTNET-TLS1.3": 46372,
+    "CICDDoS2019": 0
+  },
+  "sampled_pcap_counts": {
+    "CipherSpectrum": 4,
+    "CSTNET-TLS1.3": 16
+  },
+  "primary_candidate_class_counts": {
+    "CipherSpectrum": 85,
+    "CSTNET-TLS1.3": 120,
+    "CICDDoS2019": 19
+  },
+  "cipher_unparsed_filenames": 0,
+  "ranking": [
+    {
+      "dataset": "CSTNET-TLS1.3",
+      "raw_packet_availability": 2,
+      "label_quality": 2,
+      "number_of_classes": 2,
+      "per_class_sample_size": 1,
+      "flow_pcap_alignment": 2,
+      "strict_unknown_free_feasibility": 2,
+      "capture_session_leakage_risk": 1,
+      "opendetect_compatibility": 2,
+      "encrypted_traffic_relevance": 2,
+      "cross_dataset_scientific_value": 2,
+      "total_score": 18,
+      "tier": "Tier A — PRIMARY EXTERNAL DATASET"
+    },
+    {
+      "dataset": "CipherSpectrum",
+      "raw_packet_availability": 2,
+      "label_quality": 1,
+      "number_of_classes": 2,
+      "per_class_sample_size": 2,
+      "flow_pcap_alignment": 2,
+      "strict_unknown_free_feasibility": 2,
+      "capture_session_leakage_risk": 0,
+      "opendetect_compatibility": 2,
+      "encrypted_traffic_relevance": 2,
+      "cross_dataset_scientific_value": 1,
+      "total_score": 16,
+      "tier": "Tier B — SECONDARY VALIDATION"
+    },
+    {
+      "dataset": "CICDDoS2019",
+      "raw_packet_availability": 0,
+      "label_quality": 2,
+      "number_of_classes": 2,
+      "per_class_sample_size": 1,
+      "flow_pcap_alignment": 1,
+      "strict_unknown_free_feasibility": 2,
+      "capture_session_leakage_risk": 0,
+      "opendetect_compatibility": 0,
+      "encrypted_traffic_relevance": 0,
+      "cross_dataset_scientific_value": 1,
+      "total_score": 9,
+      "tier": "Tier C — DIAGNOSTIC ONLY"
+    }
+  ],
+  "elapsed_seconds": 27.406080722808838,
+  "output_files": [
+    "CICDDoS2019_inventory_summary.md",
+    "CSTNET-TLS1_3_inventory_summary.md",
+    "CipherSpectrum_inventory_summary.md",
+    "archive_inventory.csv",
+    "audit_summary.md",
+    "class_balance.csv",
+    "class_inventory.csv",
+    "dataset_inventory.csv",
+    "dataset_ranking.csv",
+    "flow_pcap_mapping_audit.csv",
+    "inventory_summary.md",
+    "leakage_risk_audit.csv",
+    "open_set_class_suitability.csv",
+    "opendetect_input_suitability.csv",
+    "openness_suitability.csv",
+    "pcap_inventory.csv",
+    "pcap_sample_audit.csv",
+    "run_metadata.json",
+    "table_schema_audit.csv",
+    "unknown_free_protocol_suitability.csv"
+  ],
+  "tool_versions": {
+    "python": "3.10.18 (main, Jun  5 2025, 13:14:17) [GCC 11.2.0]",
+    "capinfos": "/usr/bin/capinfos",
+    "tshark": "/usr/bin/tshark"
+  }
+}

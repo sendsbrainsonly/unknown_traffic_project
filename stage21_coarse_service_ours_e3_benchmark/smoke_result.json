@@ -1,0 +1,17 @@
+{
+  "status": "PASS",
+  "trafficformer_shape": [
+    4,
+    768
+  ],
+  "tagcn_shape": [
+    4,
+    128
+  ],
+  "fusion_shape": [
+    4,
+    6
+  ],
+  "finite": true,
+  "peak_gpu_memory_bytes": 2566953984
+}

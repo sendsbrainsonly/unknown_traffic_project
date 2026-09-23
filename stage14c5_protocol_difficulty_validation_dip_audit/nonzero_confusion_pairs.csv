@@ -1,0 +1,13 @@
+protocol_id,true_class,predicted_class,count,off_diagonal
+medium_seed2025,rsync,scp,185,True
+medium_seed2025,scp,rsync,10,True
+medium_seed2025,netflix,youtube,7,True
+medium_seed2025,youtube,netflix,5,True
+medium_seed2025,rdp,skype,1,True
+medium_seed2025,ssh,skype,1,True
+medium_seed2025,youtube,skype,1,True
+medium_seed2026,skype,ssh,3,True
+medium_seed2026,vimeo,netflix,3,True
+medium_seed2026,ssh,rsync,2,True
+medium_seed2026,netflix,vimeo,1,True
+medium_seed2026,ssh,skype,1,True

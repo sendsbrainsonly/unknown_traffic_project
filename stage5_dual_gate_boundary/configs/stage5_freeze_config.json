@@ -1,0 +1,50 @@
+{
+  "method": {
+    "name": "Dual-Gate Support Boundary",
+    "short_name": "DGSB",
+    "k": 2,
+    "covariance_type": "full",
+    "reg_covar": 0.001,
+    "pca_dimension": 64,
+    "local_quantile": 0.05,
+    "minimum_local_validation_samples": 30,
+    "local_fallback": "class_p05",
+    "global_target_known_validation_acceptance": 0.95,
+    "global_calibration_tie_break": "highest_threshold",
+    "decision": "global_gate_AND_winning_local_component_gate",
+    "class_prediction": "class_of_raw_maximum_joint_component_score",
+    "unknown_samples_allowed_for_calibration": 0,
+    "known_validation_target_tolerance": 0.005,
+    "minimum_noncollapse_acceptance": 0.9,
+    "maximum_mean_component_gap_increase_vs_global": 0.02
+  },
+  "cstnet": {
+    "dataset_name": "CSTNET-TLS1.3",
+    "dataset_root": "/home/birkenwald/data/SEU-WXY/WXY-SEU/TrafficClassifier/Dataset/CSTNET-TLS1.3",
+    "label_level": "website_domain_pcap",
+    "eligibility_thresholds_to_report": [50, 100, 200, 500],
+    "minimum_total_samples_per_class": 100,
+    "mass_exclusion_stop_fraction": 0.25,
+    "group_proxy": "floor(first_packet_timestamp_utc / 60 seconds)",
+    "group_proxy_seconds": 60,
+    "unknown_group_overlap_policy": "exclude_known_samples_sharing_a_group_with_unknown",
+    "minimum_known_samples_after_group_purge": 100,
+    "minimum_known_groups_after_group_purge": 10,
+    "known_group_split": "StratifiedGroupKFold",
+    "known_group_n_splits": 10,
+    "known_split_target": {
+      "train": 0.8,
+      "validation": 0.1,
+      "test": 0.1
+    },
+    "validation_test_fold_selection": "maximize_minimum_per_class_count_then_minimize_classwise_L1_deviation_then_global_size_deviation_then_fold_ids",
+    "folds": [
+      {"name": "low", "openness_ratio": 0.05, "seed": 42},
+      {"name": "medium", "openness_ratio": 0.15, "seed": 43},
+      {"name": "high", "openness_ratio": 0.25, "seed": 44}
+    ],
+    "created_before_unknown_evaluation": true,
+    "formal_training_allowed_in_this_stage": false,
+    "unknown_score_access_allowed_in_this_stage": false
+  }
+}

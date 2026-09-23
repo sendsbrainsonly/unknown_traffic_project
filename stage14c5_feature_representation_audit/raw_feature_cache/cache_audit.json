@@ -1,0 +1,27 @@
+{
+  "direction_rule": "first observed endpoint is forward; exact reverse endpoint is reverse",
+  "flow_statistics_sha256": "f83f7f274c59bcb2429bdaf9520a5cb43eb777936bb85557f01e2ca66be9486b",
+  "flow_uids_sha256": "4cccca47ed0083b8c405301d7dce34559809fd60ac65c00128b09c851e866c20",
+  "known_test_rows_loaded": 0,
+  "known_train_validation_row_uses": 214440,
+  "label_values_used_for_extraction": false,
+  "packet_count_mismatches": 0,
+  "protocol_count": 15,
+  "scope": "union of sample IDs appearing in at least one frozen Stage 14C Known Train/Validation input manifest",
+  "stage14b_freeze_hash": "c904daef04d2c8e79469191121325c0a6ceeaeb3e595ef9c4c7d7a62c980ae2f",
+  "stage14c_summary_sha256": "3def9d5b73c9a890791f3d71f57b11087de4acfea419709c43f555a18c2ed70f",
+  "statistics": [
+    "packet_count",
+    "total_bytes",
+    "duration_seconds",
+    "packet_size_mean",
+    "packet_size_std",
+    "iat_mean_seconds",
+    "iat_std_seconds",
+    "up_down_packet_ratio"
+  ],
+  "status": "PASS",
+  "unique_target_flows": 23447,
+  "unknown_test_rows_loaded": 0,
+  "up_down_ratio": "(forward_packet_count+1)/(reverse_packet_count+1)"
+}

@@ -1,0 +1,593 @@
+{
+  "schema_version": 1,
+  "experiment_id": "stage15f-dq-performance-gap-attribution-20260920-v1",
+  "created_at_utc": "2026-09-20T04:42:08Z",
+  "updated_at_utc": "2026-09-20T05:33:20.389324+00:00",
+  "status": "completed_with_blocked_branch",
+  "experiment_type": "data_protocol_audit",
+  "claim_scope": "diagnostic",
+  "objective": "Execute DQ-0 through DQ-3 on shared 31 ISCX-VPN captures using Known Train/Validation only.",
+  "inputs": [
+    {
+      "scope": "frozen assets",
+      "count": 208,
+      "hash_status": "PASS"
+    }
+  ],
+  "code": {
+    "revision": "working tree; task-local scripts listed in artifacts",
+    "dirty": true,
+    "changes": [
+      "task-local audit and reporting scripts only"
+    ]
+  },
+  "execution": {
+    "tmux_sessions": [
+      "s15fdq_dq0_dq2_outerproto",
+      "s15fdq_finalize_interim_20260920"
+    ],
+    "environment": "/home/birkenwald/data/SEU-WXY/conda_envs/2025-10-8-WXY-dgl_py310",
+    "physical_gpu_ids": []
+  },
+  "configuration": {
+    "dataset": "ISCX-VPN",
+    "shared_pcaps": 31,
+    "protocol": "medium_seed2022",
+    "allowed_roles": [
+      "known_train",
+      "known_validation"
+    ],
+    "seeds": []
+  },
+  "core_results": [
+    {
+      "name": "native_shared31_flows",
+      "value": 4224
+    },
+    {
+      "name": "cate_matched_flows",
+      "value": 2720
+    },
+    {
+      "name": "shared31_validation_macro_f1",
+      "value": 0.7708026129003042
+    },
+    {
+      "name": "fine_errors_coarse_correct",
+      "value": 22
+    },
+    {
+      "name": "dq3_gate",
+      "value": "BLOCKED_MAPPING_AMBIGUITY"
+    }
+  ],
+  "artifacts": [
+    {
+      "path": "RESULTS.md",
+      "bytes": 4636,
+      "sha256": "6525e7fbaa5abd3eac6c8ded20bd71e757ca7c80056eba6bb794a51af8e37b27"
+    },
+    {
+      "path": "cate_matching_analysis.csv",
+      "bytes": 22318,
+      "sha256": "148aa2c8c160776ea2147449f70ad8308c012445ebcfac535d2f46732cb5585b"
+    },
+    {
+      "path": "completion_verification.json",
+      "bytes": 1295,
+      "sha256": "dd465b297ad7987202ae032ab1a8d26bec94383fd97e33e8991fa45d88dbd62e"
+    },
+    {
+      "path": "controlled_protocol_matrix.csv",
+      "bytes": 1336,
+      "sha256": "f966dbbbddc0d1d713fdc4d172a985c43d8c005898613adbc910bfa9dbaf25e6"
+    },
+    {
+      "path": "cross_project_flow_manifest.csv",
+      "bytes": 20833779,
+      "sha256": "3bcdcfda05c8a11c610930fb7c96b32c4c31ae6a4aedc4de08e3e5c21f1c7adf"
+    },
+    {
+      "path": "cross_project_pcap_manifest.csv",
+      "bytes": 90202,
+      "sha256": "37e393fe44bf2df0057cbebeefcbc0e2c9f0ffec3e1902f770e8c5c2f92cf0e5"
+    },
+    {
+      "path": "domain_mixing_analysis.csv",
+      "bytes": 112,
+      "sha256": "0fb93717400383fef7340c3e315245c15303e80b716d12071ea7e6b25eaa1e17"
+    },
+    {
+      "path": "dq0_dq2_summary.json",
+      "bytes": 2077,
+      "sha256": "67b734b8939ee962a74fd90d3173198f63d1b3353fa033ea078506dd4f54ab43"
+    },
+    {
+      "path": "failed_attempts/interim_verifier_manifest_row_assumption_v1/RESULTS.md",
+      "bytes": 692,
+      "sha256": "59a053dfb23a94a39f58999cb744b012ad94278dbadb86a820da7aa6ff7afedc"
+    },
+    {
+      "path": "failed_attempts/tshark_default_reassembly_v1/README.txt",
+      "bytes": 133,
+      "sha256": "00366144a26b7f5912b21e2d8bdf8ea19fbaf7dba59d0651d731dce9546f3cf5"
+    },
+    {
+      "path": "failed_attempts/tshark_default_reassembly_v1/cross_project_pcap_manifest.csv",
+      "bytes": 90202,
+      "sha256": "37e393fe44bf2df0057cbebeefcbc0e2c9f0ffec3e1902f770e8c5c2f92cf0e5"
+    },
+    {
+      "path": "failed_attempts/tshark_default_reassembly_v1/tshark_stderr/AIM_004_vpn_aim_chat1a.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "failed_attempts/tshark_default_reassembly_v1/tshark_stderr/AIM_005_vpn_aim_chat1b.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "failed_attempts/tshark_default_reassembly_v1/tshark_stderr/BitTorrent_000_vpn_bittorrent.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "failed_attempts/tshark_default_reassembly_v1/tshark_stderr/Email_004_vpn_email2a.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "failed_attempts/tshark_default_reassembly_v1/tshark_stderr/Email_005_vpn_email2b.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "failed_attempts/tshark_default_reassembly_v1/tshark_stderr/FTPS_004_vpn_ftps_A.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "failed_attempts/tshark_default_reassembly_v1/tshark_stderr/FTPS_005_vpn_ftps_B.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "failed_attempts/tshark_default_reassembly_v1/tshark_stderr/Facebook_015_vpn_facebook_audio2.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "failed_attempts/tshark_default_reassembly_v1/tshark_stderr/Facebook_016_vpn_facebook_chat1a.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "failed_attempts/tshark_default_reassembly_v1/tshark_stderr/Facebook_017_vpn_facebook_chat1b.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "failed_attempts/tshark_default_reassembly_v1/tshark_stderr/Hangouts_011_vpn_hangouts_audio1.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "failed_attempts/tshark_default_reassembly_v1/tshark_stderr/Hangouts_012_vpn_hangouts_audio2.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "failed_attempts/tshark_default_reassembly_v1/tshark_stderr/Hangouts_013_vpn_hangouts_chat1a.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "failed_attempts/tshark_default_reassembly_v1/tshark_stderr/Hangouts_014_vpn_hangouts_chat1b.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "failed_attempts/tshark_default_reassembly_v1/tshark_stderr/ICQ_004_vpn_icq_chat1a.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "failed_attempts/tshark_default_reassembly_v1/tshark_stderr/ICQ_005_vpn_icq_chat1b.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "failed_attempts/tshark_default_reassembly_v1/tshark_stderr/Netflix_004_vpn_netflix_A.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "failed_attempts/tshark_default_reassembly_v1/tshark_stderr/SFTP_008_vpn_sftp_A.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "failed_attempts/tshark_default_reassembly_v1/tshark_stderr/SFTP_009_vpn_sftp_B.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "failed_attempts/tshark_default_reassembly_v1/tshark_stderr/Skype_020_vpn_skype_audio1.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "failed_attempts/tshark_default_reassembly_v1/tshark_stderr/Skype_021_vpn_skype_audio2.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "failed_attempts/tshark_default_reassembly_v1/tshark_stderr/Skype_022_vpn_skype_chat1a.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "failed_attempts/tshark_default_reassembly_v1/tshark_stderr/Skype_023_vpn_skype_chat1b.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "failed_attempts/tshark_default_reassembly_v1/tshark_stderr/Skype_024_vpn_skype_files1a.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "failed_attempts/tshark_default_reassembly_v1/tshark_stderr/Skype_025_vpn_skype_files1b.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "failed_attempts/tshark_default_reassembly_v1/tshark_stderr/Spotify_004_vpn_spotify_A.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "failed_attempts/tshark_default_reassembly_v1/tshark_stderr/Vimeo_004_vpn_vimeo_A.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "failed_attempts/tshark_default_reassembly_v1/tshark_stderr/Vimeo_005_vpn_vimeo_B.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "failed_attempts/tshark_default_reassembly_v1/tshark_stderr/VoIPBuster_005_vpn_voipbuster1a.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "failed_attempts/tshark_encapsulated_transport_v2/README.txt",
+      "bytes": 174,
+      "sha256": "f24ce632281b6bafaced9e721f39b8e87dddf843ea396f42adbafeeb31dbf241"
+    },
+    {
+      "path": "failed_attempts/tshark_encapsulated_transport_v2/cate_matching_analysis.csv",
+      "bytes": 22318,
+      "sha256": "148aa2c8c160776ea2147449f70ad8308c012445ebcfac535d2f46732cb5585b"
+    },
+    {
+      "path": "failed_attempts/tshark_encapsulated_transport_v2/cross_project_flow_manifest.csv",
+      "bytes": 21754248,
+      "sha256": "91974945e5c4aa53af8505c29c4e5c880caa94323ca48c460d9aa69d7c1e23a6"
+    },
+    {
+      "path": "failed_attempts/tshark_encapsulated_transport_v2/cross_project_pcap_manifest.csv",
+      "bytes": 90202,
+      "sha256": "37e393fe44bf2df0057cbebeefcbc0e2c9f0ffec3e1902f770e8c5c2f92cf0e5"
+    },
+    {
+      "path": "failed_attempts/tshark_encapsulated_transport_v2/dq0_dq2_summary.json",
+      "bytes": 2007,
+      "sha256": "c91643202df4f734e37790ac1223892d27c46265a51598f59f1240b41c16c471"
+    },
+    {
+      "path": "failed_attempts/tshark_encapsulated_transport_v2/fine_to_coarse_error_analysis.csv",
+      "bytes": 5277,
+      "sha256": "80384a8a4fccaab59a50c49c9a9a00e9ee1d73673bb00b3c33f54d48859b27fb"
+    },
+    {
+      "path": "failed_attempts/tshark_encapsulated_transport_v2/flow_reconstruction_audit.csv",
+      "bytes": 11804,
+      "sha256": "8caf3038ddfcfa919a12f0bbd7f5a8de087b999b546db2ff948f60d9ad2b2fd9"
+    },
+    {
+      "path": "failed_attempts/tshark_encapsulated_transport_v2/known_validation_shared31_predictions.csv",
+      "bytes": 113886,
+      "sha256": "f2557f5c01782863d80a6e7ea1bdfc5a66245cd216de0bd6b801cf6d51116726"
+    },
+    {
+      "path": "failed_attempts/tshark_encapsulated_transport_v2/label_mapping.json",
+      "bytes": 4545,
+      "sha256": "040bbf1b81144b73db87950d7bc3ba8183eb7f0ae2b3caf95b3f11cb5d92666b"
+    },
+    {
+      "path": "failed_attempts/tshark_encapsulated_transport_v2/sample_eligibility_summary.csv",
+      "bytes": 17915,
+      "sha256": "38b9264dc5e5496c37244980fda35b188b1020489fc1a49a0eccfed1dce8971b"
+    },
+    {
+      "path": "failed_attempts/tshark_encapsulated_transport_v2/short_flow_error_analysis.csv",
+      "bytes": 97877,
+      "sha256": "dead364b8d446d1df919244967c5cd25b78033db217089ce489e5bbff19bb156"
+    },
+    {
+      "path": "failed_attempts/tshark_encapsulated_transport_v2/tshark_stderr/AIM_004_vpn_aim_chat1a.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "failed_attempts/tshark_encapsulated_transport_v2/tshark_stderr/AIM_005_vpn_aim_chat1b.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "failed_attempts/tshark_encapsulated_transport_v2/tshark_stderr/BitTorrent_000_vpn_bittorrent.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "failed_attempts/tshark_encapsulated_transport_v2/tshark_stderr/Email_004_vpn_email2a.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "failed_attempts/tshark_encapsulated_transport_v2/tshark_stderr/Email_005_vpn_email2b.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "failed_attempts/tshark_encapsulated_transport_v2/tshark_stderr/FTPS_004_vpn_ftps_A.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "failed_attempts/tshark_encapsulated_transport_v2/tshark_stderr/FTPS_005_vpn_ftps_B.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "failed_attempts/tshark_encapsulated_transport_v2/tshark_stderr/Facebook_015_vpn_facebook_audio2.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "failed_attempts/tshark_encapsulated_transport_v2/tshark_stderr/Facebook_016_vpn_facebook_chat1a.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "failed_attempts/tshark_encapsulated_transport_v2/tshark_stderr/Facebook_017_vpn_facebook_chat1b.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "failed_attempts/tshark_encapsulated_transport_v2/tshark_stderr/Hangouts_011_vpn_hangouts_audio1.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "failed_attempts/tshark_encapsulated_transport_v2/tshark_stderr/Hangouts_012_vpn_hangouts_audio2.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "failed_attempts/tshark_encapsulated_transport_v2/tshark_stderr/Hangouts_013_vpn_hangouts_chat1a.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "failed_attempts/tshark_encapsulated_transport_v2/tshark_stderr/Hangouts_014_vpn_hangouts_chat1b.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "failed_attempts/tshark_encapsulated_transport_v2/tshark_stderr/ICQ_004_vpn_icq_chat1a.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "failed_attempts/tshark_encapsulated_transport_v2/tshark_stderr/ICQ_005_vpn_icq_chat1b.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "failed_attempts/tshark_encapsulated_transport_v2/tshark_stderr/Netflix_004_vpn_netflix_A.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "failed_attempts/tshark_encapsulated_transport_v2/tshark_stderr/SFTP_008_vpn_sftp_A.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "failed_attempts/tshark_encapsulated_transport_v2/tshark_stderr/SFTP_009_vpn_sftp_B.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "failed_attempts/tshark_encapsulated_transport_v2/tshark_stderr/Skype_020_vpn_skype_audio1.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "failed_attempts/tshark_encapsulated_transport_v2/tshark_stderr/Skype_021_vpn_skype_audio2.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "failed_attempts/tshark_encapsulated_transport_v2/tshark_stderr/Skype_022_vpn_skype_chat1a.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "failed_attempts/tshark_encapsulated_transport_v2/tshark_stderr/Skype_023_vpn_skype_chat1b.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "failed_attempts/tshark_encapsulated_transport_v2/tshark_stderr/Skype_024_vpn_skype_files1a.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "failed_attempts/tshark_encapsulated_transport_v2/tshark_stderr/Skype_025_vpn_skype_files1b.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "failed_attempts/tshark_encapsulated_transport_v2/tshark_stderr/Spotify_004_vpn_spotify_A.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "failed_attempts/tshark_encapsulated_transport_v2/tshark_stderr/Vimeo_004_vpn_vimeo_A.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "failed_attempts/tshark_encapsulated_transport_v2/tshark_stderr/Vimeo_005_vpn_vimeo_B.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "failed_attempts/tshark_encapsulated_transport_v2/tshark_stderr/VoIPBuster_005_vpn_voipbuster1a.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "failed_attempts/tshark_encapsulated_transport_v2/tshark_stderr/VoIPBuster_006_vpn_voipbuster1b.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "failed_attempts/tshark_encapsulated_transport_v2/tshark_stderr/YouTube_007_vpn_youtube_A.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "fair_matched_protocol_results.csv",
+      "bytes": 954,
+      "sha256": "1c83d304fbd81c20755524e805ed9e2947f9dda5b5b40a97b7ac1c053a4b77b2"
+    },
+    {
+      "path": "filter_effect_analysis.csv",
+      "bytes": 112,
+      "sha256": "b942bc121b852e6b42e6342d384ee1edc5c579632e7b24b2a561c25531d10949"
+    },
+    {
+      "path": "fine_to_coarse_error_analysis.csv",
+      "bytes": 5277,
+      "sha256": "80384a8a4fccaab59a50c49c9a9a00e9ee1d73673bb00b3c33f54d48859b27fb"
+    },
+    {
+      "path": "flow_matching_audit.md",
+      "bytes": 2318,
+      "sha256": "9cedd7e5a59eb98b69029e973fdb062e0e9441b63a15c8a1580551332a0d3b76"
+    },
+    {
+      "path": "flow_reconstruction_audit.csv",
+      "bytes": 11778,
+      "sha256": "b1256c46649a18723fdd69072c94c49f48aaf77ad5c71ba565dae30521a80a84"
+    },
+    {
+      "path": "frozen_asset_hashes_after.json",
+      "bytes": 39846,
+      "sha256": "d147246132a01f86eff168a4014a14e4416e95ecd1654788a337bb6214ec580f"
+    },
+    {
+      "path": "frozen_asset_hashes_before.json",
+      "bytes": 39847,
+      "sha256": "636ecfb853bc16ecd8e3f7faeb5d30d3d667599ad795c49b1516f76355372543"
+    },
+    {
+      "path": "granularity_feasibility.md",
+      "bytes": 3217,
+      "sha256": "a651749e284549cee0f6acb6e4f0071da523473a7c78e1a1e09f9325837424b9"
+    },
+    {
+      "path": "known_validation_shared31_predictions.csv",
+      "bytes": 113886,
+      "sha256": "f2557f5c01782863d80a6e7ea1bdfc5a66245cd216de0bd6b801cf6d51116726"
+    },
+    {
+      "path": "label_mapping.json",
+      "bytes": 4545,
+      "sha256": "040bbf1b81144b73db87950d7bc3ba8183eb7f0ae2b3caf95b3f11cb5d92666b"
+    },
+    {
+      "path": "paper_protocol_reproduction.csv",
+      "bytes": 1070,
+      "sha256": "4dcb65598e5ce638ba695b63445a098becfbe7d30df4229c8d831ec6f2f1448f"
+    },
+    {
+      "path": "performance_gap_attribution.md",
+      "bytes": 4639,
+      "sha256": "a453630457bb9cd0f490ba9cf10e537c66d16d34fddea99f62c6674af0900059"
+    },
+    {
+      "path": "sample_eligibility_summary.csv",
+      "bytes": 17915,
+      "sha256": "38b9264dc5e5496c37244980fda35b188b1020489fc1a49a0eccfed1dce8971b"
+    },
+    {
+      "path": "scripts/__pycache__/hash_frozen_inputs.cpython-310.pyc",
+      "bytes": 4148,
+      "sha256": "1be2f3bf0fbb6f2aa0903349eb2449774ded725ac4342d47e0ac6b2cbccb7e37"
+    },
+    {
+      "path": "scripts/__pycache__/run_dq0_dq2_audit.cpython-310.pyc",
+      "bytes": 29216,
+      "sha256": "77155ae5a0d1146379b953ed5ea2f1e1136b23077a35ee8988c550ac3a442b98"
+    },
+    {
+      "path": "scripts/debug_tf_flow_parity.py",
+      "bytes": 3801,
+      "sha256": "600d89cb279e9c8c27868743a358a7b8afef4b61b20dc91f9b9aabaf8dfeafd5"
+    },
+    {
+      "path": "scripts/finalize_dq0_dq3_interim.py",
+      "bytes": 29630,
+      "sha256": "a3d2b7ce8bf4b70fc0e8a7b0be06db2f6a44d841d095968aa1eab49689a0104a"
+    },
+    {
+      "path": "scripts/hash_frozen_inputs.py",
+      "bytes": 3713,
+      "sha256": "59b60fba01bfa91a2006bf71b7ac5c6cf514b1fc2fa2b933f6c9a8ba351b3686"
+    },
+    {
+      "path": "scripts/run_dq0_dq2_audit.py",
+      "bytes": 38369,
+      "sha256": "dcc492fc19a8a2f3cbff72800007a816ffcee526d75f785a43d323fdada557c4"
+    },
+    {
+      "path": "scripts/verify_dq0_dq3_interim.py",
+      "bytes": 4328,
+      "sha256": "f4faec8960f349b8fbe24f4a359bf3805d8c46613ac835308d3b1218ef90aa9a"
+    },
+    {
+      "path": "short_flow_error_analysis.csv",
+      "bytes": 97877,
+      "sha256": "dead364b8d446d1df919244967c5cd25b78033db217089ce489e5bbff19bb156"
+    },
+    {
+      "path": "split_sensitivity_analysis.csv",
+      "bytes": 112,
+      "sha256": "94aaa563bf700d8330caeb6625a82bb697dae7a4d69c1a9e281971da590d8fe1"
+    }
+  ],
+  "limitations": [
+    "No Known Test or Unknown Test values were used.",
+    "DQ-3 F1/F3 training was stopped because full Fine-to-Service prediction mapping is ambiguous.",
+    "DQ-4 through DQ-7 and ISCXTor are NOT_RUN.",
+    "CATE matching is not authoritative per-flow label truth."
+  ],
+  "next_step": "Resolve and preregister a service-native semantic label space, then reassess the DQ-3 gate; do not start DQ-4--DQ-7 before approval."
+}

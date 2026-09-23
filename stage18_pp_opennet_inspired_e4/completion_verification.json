@@ -1,0 +1,28 @@
+{
+  "ablation_rows": 36,
+  "closed_rows": 42,
+  "final_gate": "E4_FAIL_NO_FUSION",
+  "formal_runs": 6,
+  "fusion_started": false,
+  "known_test_selection_samples": 0,
+  "open_rows": 378,
+  "per_class_rows": 210,
+  "prediction_rows": 35049,
+  "protected_assets_unchanged": true,
+  "replay_max_abs_difference": 0.0,
+  "replay_models": 42,
+  "required_outputs": 19,
+  "status": "PASS",
+  "strict_single_feature_ablation": true,
+  "strict_unknown_free": true,
+  "trained_checkpoints": 42,
+  "training_dynamic_rows": 4200,
+  "unknown_usage": {
+    "normalization": 0,
+    "support": 0,
+    "threshold": 0,
+    "training": 0,
+    "validation": 0
+  },
+  "variants_per_run": 7
+}

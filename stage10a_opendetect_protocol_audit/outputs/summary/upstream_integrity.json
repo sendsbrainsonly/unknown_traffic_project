@@ -1,0 +1,95 @@
+{
+  "status": "PASS",
+  "audit_mode": "read-only static audit; no training/inference/refit/test rerun",
+  "stage6": {
+    "status": "PASS",
+    "protocol_hashes_verified": 16,
+    "corpus_hashes_verified": 2
+  },
+  "stage7_to_stage9_verifiers": [
+    {
+      "stage": "stage7",
+      "command": "/home/birkenwald/data/SEU-WXY/conda_envs/2025-10-8-WXY-dgl_py310/bin/python -B stage7_cipherspectrum_known_training/scripts/verify_stage7.py",
+      "returncode": 0,
+      "status": "PASS",
+      "stdout": "{\n  \"checkpoints_distinct\": true,\n  \"formal_settings_verified\": 3,\n  \"known_test_samples_opened_or_used\": 0,\n  \"results\": [\n    {\n      \"best_epoch\": 26,\n      \"bundle_artifacts_verified\": 15,\n      \"checkpoint_sha256\": \"78e23b0d9795a7829c03d740c67c5a823ca9f6ea36bda4cd0e24338a168b4d92\",\n      \"known_classes\": 38,\n      \"known_test_samples_opened_or_used\": 0,\n      \"setting\": \"low\",\n      \"status\": \"PASS\",\n      \"stop_epoch\": 31,\n      \"train_samples\": 75692,\n      \"unknown_classes_excluded\": 2,\n      \"unknown_inference_executed\": false,\n      \"unknown_samples_opened_or_used\": 0,\n      \"val_accuracy\": 0.7691786725772688,\n      \"val_composite\": 0.7691614733074097,\n      \"val_macro_f1\": 0.769144274806704,\n      \"validation_samples\": 16242\n    },\n    {\n      \"best_epoch\": 22,\n      \"bundle_artifacts_verified\": 15,\n      \"checkpoint_sha256\": \"59858ee8d9dcc0d36e64a8a396fcf0f401b720dbed8d2aa2f783761be352ac48\",\n      \"known_classes\": 34,\n      \"known_test_samples_opened_or_used\": 0,\n      \"setting\": \"medium\",\n      \"status\": \"PASS\",\n      \"stop_epoch\": 27,\n      \"train_samples\": 56641,\n      \"unknown_classes_excluded\": 6,\n      \"unknown_inference_executed\": false,\n      \"unknown_samples_opened_or_used\": 0,\n      \"val_accuracy\": 0.715318869165023,\n      \"val_composite\": 0.7098729434752433,\n      \"val_macro_f1\": 0.7045093139986812,\n      \"validation_samples\": 12168\n    },\n    {\n      \"best_epoch\": 22,\n      \"bundle_artifacts_verified\": 15,\n      \"checkpoint_sha256\": \"588c9eeec5d352f28b5598163aed193e01e53b8a408cdbf6ddbbaf58dbaae213\",\n      \"known_classes\": 30,\n      \"known_test_samples_opened_or_used\": 0,\n      \"setting\": \"high\",\n      \"status\": \"PASS\",\n      \"stop_epoch\": 27,\n      \"train_samples\": 49976,\n      \"unknown_classes_excluded\": 10,\n      \"unknown_inference_executed\": false,\n      \"unknown_samples_opened_or_used\": 0,\n      \"val_accuracy\": 0.7467411545623837,\n      \"val_composite\": 0.738102280882722,\n      \"val_macro_f1\": 0.7296610034742427,\n      \"validation_samples\": 10740\n    }\n  ],\n  \"stage6_protocol_hashes_verified\": 16,\n  \"status\": \"PASS\",\n  \"unknown_inference_executed\": false,\n  \"unknown_samples_opened_or_used\": 0\n}",
+      "stderr": ""
+    },
+    {
+      "stage": "stage8a",
+      "command": "/home/birkenwald/data/SEU-WXY/conda_envs/2025-10-8-WXY-dgl_py310/bin/python -B stage8a_cipherspectrum_known_density/scripts/verify_stage8a.py",
+      "returncode": 0,
+      "status": "PASS",
+      "stdout": "{\n  \"evaluation_config_frozen\": true,\n  \"final_gate\": \"READY_FOR_FINAL_TEST\",\n  \"known_test_opened\": 0,\n  \"provenance\": \"PASS\",\n  \"settings\": [\n    {\n      \"bundle_files_verified\": 107,\n      \"k1_all_converged\": true,\n      \"k2_all_converged\": true,\n      \"known_test_opened\": 0,\n      \"mu_train_shape\": [\n        75692,\n        128\n      ],\n      \"mu_val_shape\": [\n        16242,\n        128\n      ],\n      \"pca_explained_variance\": 0.9182830819042038,\n      \"setting\": \"low\",\n      \"status\": \"PASS\",\n      \"unknown_test_opened\": 0\n    },\n    {\n      \"bundle_files_verified\": 99,\n      \"k1_all_converged\": true,\n      \"k2_all_converged\": true,\n      \"known_test_opened\": 0,\n      \"mu_train_shape\": [\n        56641,\n        128\n      ],\n      \"mu_val_shape\": [\n        12168,\n        128\n      ],\n      \"pca_explained_variance\": 0.9663168787956238,\n      \"setting\": \"medium\",\n      \"status\": \"PASS\",\n      \"unknown_test_opened\": 0\n    },\n    {\n      \"bundle_files_verified\": 91,\n      \"k1_all_converged\": true,\n      \"k2_all_converged\": true,\n      \"known_test_opened\": 0,\n      \"mu_train_shape\": [\n        49976,\n        128\n      ],\n      \"mu_val_shape\": [\n        10740,\n        128\n      ],\n      \"pca_explained_variance\": 0.973541259765625,\n      \"setting\": \"high\",\n      \"status\": \"PASS\",\n      \"unknown_test_opened\": 0\n    }\n  ],\n  \"status\": \"PASS\",\n  \"unknown_inference_executed\": false,\n  \"unknown_test_opened\": 0\n}",
+      "stderr": ""
+    },
+    {
+      "stage": "stage8b",
+      "command": "/home/birkenwald/data/SEU-WXY/conda_envs/2025-10-8-WXY-dgl_py310/bin/python -B stage8b_cipherspectrum_dgsbv2/scripts/verify_stage8b.py",
+      "returncode": 0,
+      "status": "PASS",
+      "stdout": "{\n  \"existing_methods_modified\": 0,\n  \"final_gate\": \"READY_FOR_ONE_SHOT_FINAL_TEST\",\n  \"known_test_mu_generated\": false,\n  \"known_test_opened\": 0,\n  \"provenance\": \"PASS\",\n  \"settings\": [\n    {\n      \"dgsbv2_acceptance\": 0.9681689447112425,\n      \"gate_status\": \"DUAL_GATE_ACTIVE\",\n      \"global_acceptance\": 0.9750030784386159,\n      \"hash_files_verified\": 5,\n      \"local_acceptance\": 0.9845462381480113,\n      \"setting\": \"low\",\n      \"status\": \"PASS\"\n    },\n    {\n      \"dgsbv2_acceptance\": 0.9689349112426036,\n      \"gate_status\": \"DUAL_GATE_ACTIVE\",\n      \"global_acceptance\": 0.9750164365548981,\n      \"hash_files_verified\": 5,\n      \"local_acceptance\": 0.9853714661406969,\n      \"setting\": \"medium\",\n      \"status\": \"PASS\"\n    },\n    {\n      \"dgsbv2_acceptance\": 0.968901303538175,\n      \"gate_status\": \"DUAL_GATE_ACTIVE\",\n      \"global_acceptance\": 0.9749534450651769,\n      \"hash_files_verified\": 5,\n      \"local_acceptance\": 0.9832402234636871,\n      \"setting\": \"high\",\n      \"status\": \"PASS\"\n    }\n  ],\n  \"status\": \"PASS\",\n  \"unknown_inference_executed\": false,\n  \"unknown_mu_generated\": false,\n  \"unknown_test_opened\": 0\n}",
+      "stderr": ""
+    },
+    {
+      "stage": "stage9",
+      "command": "/home/birkenwald/data/SEU-WXY/conda_envs/2025-10-8-WXY-dgl_py310/bin/python -B stage9_cipherspectrum_final_test/scripts/verify_stage9.py",
+      "returncode": 0,
+      "status": "PASS",
+      "stdout": "{\n  \"bootstrap_iterations\": 1000,\n  \"final_gate\": \"B\",\n  \"final_hashes_verified\": 135,\n  \"methods_frozen\": [\n    \"Native\",\n    \"Single-Full-K1\",\n    \"Multi-Global-K2\",\n    \"Class-P05-K2\",\n    \"Component-P05-K2\",\n    \"DGSB-v2\"\n  ],\n  \"post_test_tuning_performed\": false,\n  \"settings\": [\n    {\n      \"bundle_hashes_verified\": 43,\n      \"known_n\": 16246,\n      \"setting\": \"low\",\n      \"status\": \"PASS\",\n      \"unknown_n\": 6000\n    },\n    {\n      \"bundle_hashes_verified\": 40,\n      \"known_n\": 12162,\n      \"setting\": \"medium\",\n      \"status\": \"PASS\",\n      \"unknown_n\": 18000\n    },\n    {\n      \"bundle_hashes_verified\": 40,\n      \"known_n\": 10746,\n      \"setting\": \"high\",\n      \"status\": \"PASS\",\n      \"unknown_n\": 30000\n    }\n  ],\n  \"status\": \"PASS\",\n  \"upstream_provenance\": \"PASS\"\n}",
+      "stderr": ""
+    }
+  ],
+  "opendetect_sibling": {
+    "status": "PASS",
+    "relationship": "sibling read-only source",
+    "v6_runs_verified": 15,
+    "checkpoint_hashes_verified": 15,
+    "paper_exact_reproduction_count": 0,
+    "tracked_official_python_source_diff": [],
+    "note": "nested official checkout has pre-existing tracked pyc changes; no tracked Python source diff"
+  },
+  "frozen_sentinel_hashes_before": {
+    "stage6_cipherspectrum_protocol/outputs/protocol/protocol_hashes.sha256": "c3783084f0f9b1242e1c05e263ecb9203f6c017f1b746cd885b99c637fccc290",
+    "stage6_cipherspectrum_protocol/outputs/corpus/canonical120k.sha256": "084e73f680752f883df6cb00b4d92fc73c40a6e23c449d0145c150076d6ab042",
+    "stage8a_cipherspectrum_known_density/manifest.json": "b51ddcb54b93f153a97de0c4b65df1b6e986ff9d8e66e6a7f29a1993a76cdf9b",
+    "stage8b_cipherspectrum_dgsbv2/manifest.json": "ed39cf6cc2c827d6fd6cc2c357e58c84fba9b13ddbc9caaba2ca6fddc0b81183",
+    "stage9_cipherspectrum_final_test/outputs/summary/stage9_final_hashes.sha256": "2d4ff28223f03a56f389af38552bad3c7b801f943d07d925d95133c79d811559",
+    "stage9_cipherspectrum_final_test/outputs/summary/stage9_final_manifest.json": "6b77a03bd2d93cea5bf584c74c263aa38e8e9b0718056a85e8b8537e3002d8ac",
+    "stage7_cipherspectrum_known_training/runs/formal-low-20260913/training_checkpoint_selection.json": "f5c75a6021e1fa1f2a49a152454a746edbfee6b13bb0e1dc1e564df2e4bfc44c",
+    "stage7_cipherspectrum_known_training/runs/formal-low-20260913/manifest.json": "9e163fbb61e190cf3f8b8c019b0194ffcb59c800e4879110b4340fbcf9a0c68b",
+    "stage8a_cipherspectrum_known_density/artifacts/low/bundle_manifest.json": "60262a041d20066cc678811535968d295cb32cb747260444a3270572614e56c8",
+    "stage8a_cipherspectrum_known_density/artifacts/low/native_threshold.json": "c2c3f1ccc25f09cb2242f75d84a81c4999490e8280d21db03e5ea6cafad2fc44",
+    "stage7_cipherspectrum_known_training/runs/formal-medium-20260913/training_checkpoint_selection.json": "18e7bbace41d4375340f7b79dc47dbf5d1c5fe9d9c677b8eda20abda098f2f73",
+    "stage7_cipherspectrum_known_training/runs/formal-medium-20260913/manifest.json": "d0afbc68db3be2a72d69f35c274f809614c30e2684edb64cbacea3a3be8f6556",
+    "stage8a_cipherspectrum_known_density/artifacts/medium/bundle_manifest.json": "7fa178714335a1915b43d67e0e9ba2b610f04c0198c91907bd906b6167adfa36",
+    "stage8a_cipherspectrum_known_density/artifacts/medium/native_threshold.json": "de19b9438235ec2016eacbac8705bd88d5129a63827d03590e132f275ad28cb5",
+    "stage7_cipherspectrum_known_training/runs/formal-high-20260913/training_checkpoint_selection.json": "9f6242bf29840e0ec6c2c7d7bc178b0f1c9b22613af3c73c50a00b79ee2300bc",
+    "stage7_cipherspectrum_known_training/runs/formal-high-20260913/manifest.json": "6258abd8021355465b51a651e8ed945662644b329ade9fdb7b5484c9cfe5b250",
+    "stage8a_cipherspectrum_known_density/artifacts/high/bundle_manifest.json": "a836b278bd189bca07745cd7345205985e8433c756fa73068b22e638303b651c",
+    "stage8a_cipherspectrum_known_density/artifacts/high/native_threshold.json": "572eab330feed6039ba84413ff03efe444de780c3d84034d6f1a8a71fa5bff80"
+  },
+  "frozen_sentinel_hashes_after": {
+    "stage6_cipherspectrum_protocol/outputs/protocol/protocol_hashes.sha256": "c3783084f0f9b1242e1c05e263ecb9203f6c017f1b746cd885b99c637fccc290",
+    "stage6_cipherspectrum_protocol/outputs/corpus/canonical120k.sha256": "084e73f680752f883df6cb00b4d92fc73c40a6e23c449d0145c150076d6ab042",
+    "stage8a_cipherspectrum_known_density/manifest.json": "b51ddcb54b93f153a97de0c4b65df1b6e986ff9d8e66e6a7f29a1993a76cdf9b",
+    "stage8b_cipherspectrum_dgsbv2/manifest.json": "ed39cf6cc2c827d6fd6cc2c357e58c84fba9b13ddbc9caaba2ca6fddc0b81183",
+    "stage9_cipherspectrum_final_test/outputs/summary/stage9_final_hashes.sha256": "2d4ff28223f03a56f389af38552bad3c7b801f943d07d925d95133c79d811559",
+    "stage9_cipherspectrum_final_test/outputs/summary/stage9_final_manifest.json": "6b77a03bd2d93cea5bf584c74c263aa38e8e9b0718056a85e8b8537e3002d8ac",
+    "stage7_cipherspectrum_known_training/runs/formal-low-20260913/training_checkpoint_selection.json": "f5c75a6021e1fa1f2a49a152454a746edbfee6b13bb0e1dc1e564df2e4bfc44c",
+    "stage7_cipherspectrum_known_training/runs/formal-low-20260913/manifest.json": "9e163fbb61e190cf3f8b8c019b0194ffcb59c800e4879110b4340fbcf9a0c68b",
+    "stage8a_cipherspectrum_known_density/artifacts/low/bundle_manifest.json": "60262a041d20066cc678811535968d295cb32cb747260444a3270572614e56c8",
+    "stage8a_cipherspectrum_known_density/artifacts/low/native_threshold.json": "c2c3f1ccc25f09cb2242f75d84a81c4999490e8280d21db03e5ea6cafad2fc44",
+    "stage7_cipherspectrum_known_training/runs/formal-medium-20260913/training_checkpoint_selection.json": "18e7bbace41d4375340f7b79dc47dbf5d1c5fe9d9c677b8eda20abda098f2f73",
+    "stage7_cipherspectrum_known_training/runs/formal-medium-20260913/manifest.json": "d0afbc68db3be2a72d69f35c274f809614c30e2684edb64cbacea3a3be8f6556",
+    "stage8a_cipherspectrum_known_density/artifacts/medium/bundle_manifest.json": "7fa178714335a1915b43d67e0e9ba2b610f04c0198c91907bd906b6167adfa36",
+    "stage8a_cipherspectrum_known_density/artifacts/medium/native_threshold.json": "de19b9438235ec2016eacbac8705bd88d5129a63827d03590e132f275ad28cb5",
+    "stage7_cipherspectrum_known_training/runs/formal-high-20260913/training_checkpoint_selection.json": "9f6242bf29840e0ec6c2c7d7bc178b0f1c9b22613af3c73c50a00b79ee2300bc",
+    "stage7_cipherspectrum_known_training/runs/formal-high-20260913/manifest.json": "6258abd8021355465b51a651e8ed945662644b329ade9fdb7b5484c9cfe5b250",
+    "stage8a_cipherspectrum_known_density/artifacts/high/bundle_manifest.json": "a836b278bd189bca07745cd7345205985e8433c756fa73068b22e638303b651c",
+    "stage8a_cipherspectrum_known_density/artifacts/high/native_threshold.json": "572eab330feed6039ba84413ff03efe444de780c3d84034d6f1a8a71fa5bff80"
+  },
+  "frozen_sentinels_unchanged": true,
+  "frozen_experiment_modified": false,
+  "opendetect_source_modified_by_audit": false
+}

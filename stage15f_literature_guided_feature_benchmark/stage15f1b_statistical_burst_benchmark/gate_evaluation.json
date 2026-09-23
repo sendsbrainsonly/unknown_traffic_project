@@ -1,0 +1,113 @@
+{
+  "behavior_focus_gains": [
+    {
+      "candidate": "S-Burst",
+      "class_name": "Spotify",
+      "dataset": "iscx_vpn",
+      "delta_f1_vs_s12": 0.05593284683848648,
+      "net_rescue": 3,
+      "protocol_id": "medium_seed2022"
+    },
+    {
+      "candidate": "S-Burst",
+      "class_name": "YouTube",
+      "dataset": "iscx_tor",
+      "delta_f1_vs_s12": 0.066669926809787,
+      "net_rescue": 5,
+      "protocol_id": "medium_seed2022"
+    },
+    {
+      "candidate": "S-ABCD",
+      "class_name": "Hangouts",
+      "dataset": "iscx_tor",
+      "delta_f1_vs_s12": 0.12801631358332388,
+      "net_rescue": 7,
+      "protocol_id": "medium_seed2022"
+    },
+    {
+      "candidate": "S-Burst",
+      "class_name": "netflix",
+      "dataset": "vnat",
+      "delta_f1_vs_s12": 0.05503439649781117,
+      "net_rescue": 2,
+      "protocol_id": "medium_seed2025"
+    },
+    {
+      "candidate": "S-ABCD",
+      "class_name": "netflix",
+      "dataset": "vnat",
+      "delta_f1_vs_s12": 0.07965367965367964,
+      "net_rescue": 2,
+      "protocol_id": "medium_seed2026"
+    },
+    {
+      "candidate": "S-Burst",
+      "class_name": "Weibo",
+      "dataset": "ustc",
+      "delta_f1_vs_s12": 0.07764363067367608,
+      "net_rescue": 182,
+      "protocol_id": "A-2"
+    }
+  ],
+  "burst_focus_gains": [
+    {
+      "class_name": "netflix",
+      "dataset": "vnat",
+      "delta_f1": 0.05503439649781117,
+      "net_rescue": 2,
+      "protocol_id": "medium_seed2025"
+    }
+  ],
+  "burst_gate_pass": true,
+  "burst_summary": {
+    "comparison": "S-Burst-S-ABCD",
+    "deltas": [
+      0.01030884270261967,
+      0.007651634343431413,
+      0.013799064669215322,
+      -0.008660881001529508,
+      0.007369157609745103
+    ],
+    "mean_delta_macro_f1": 0.0060935636646964,
+    "positive_protocols": 4,
+    "worst_delta_macro_f1": -0.008660881001529508
+  },
+  "class_conditional_gate_pass": true,
+  "conclusions": [
+    "STATISTICAL_FEATURE_BENEFIT",
+    "BURST_COMPLEMENTARITY_CONFIRMED",
+    "CLASS_CONDITIONAL_BEHAVIOR_BENEFIT"
+  ],
+  "focus_losses": [],
+  "full15_gate_met": false,
+  "full15_status": "NOT_RUN_STAGE_SCOPE",
+  "open_set_status": "NOT_RUN",
+  "s_burst_vs_s12": {
+    "comparison": "S-Burst-S12",
+    "deltas": [
+      0.02866662610194265,
+      0.05390317681232981,
+      0.02408590409733269,
+      -0.0036707391665188327,
+      0.024849603007483956
+    ],
+    "mean_delta_macro_f1": 0.025566914170514054,
+    "positive_protocols": 4,
+    "worst_delta_macro_f1": -0.0036707391665188327
+  },
+  "stage15f1c_status": "NOT_RUN",
+  "statistical_gate_pass": true,
+  "statistical_summary": {
+    "comparison": "S-ABCD-S12",
+    "deltas": [
+      0.01835778339932298,
+      0.0462515424688984,
+      0.010286839428117367,
+      0.004990141835010675,
+      0.017480445397738853
+    ],
+    "mean_delta_macro_f1": 0.019473350505817656,
+    "positive_protocols": 5,
+    "worst_delta_macro_f1": 0.004990141835010675
+  }
+}

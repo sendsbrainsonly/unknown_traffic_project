@@ -1,0 +1,21 @@
+{
+  "audit_role": "observation-only exact-config replay",
+  "batch_size": 128,
+  "des_executed": false,
+  "epochs": 100,
+  "freeze_hash": "c904daef04d2c8e79469191121325c0a6ceeaeb3e595ef9c4c7d7a62c980ae2f",
+  "input_manifest_sha256": "885c671e67563baeeb29cbeaa13b7db0e5e230434bbee80e7636b5394a66f8a8",
+  "known_test_samples_used": 0,
+  "loss": "0.005*(rec+kld+ent)+0.995*dis",
+  "optimizer": "Adam(lr=0.001,betas=[0.9,0.999],weight_decay=0)",
+  "protocol_id": "medium_seed2025",
+  "prototype_reset_epochs": [
+    51,
+    81
+  ],
+  "scheduler": "MultiStepLR(milestones=[50,80],gamma=0.1)",
+  "stage14c4_source_config_sha256": "b6c87353e05f8c754c1353e638181527ad104fc379b00d559ed254665f6d1191",
+  "stage14c4_training_code_sha256": "a72b0e52be8c10917c057b49fea58a228253a867007e7390097c27e98cab8655",
+  "training_seed": 2025,
+  "unknown_test_samples_used": 0
+}

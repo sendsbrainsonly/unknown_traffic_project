@@ -1,0 +1,47 @@
+{
+  "best_epoch": 72,
+  "checkpoint_path": "/home/birkenwald/data/SEU-WXY/WXY-SEU/TrafficClassifier/Projects/unknown_traffic_project/stage15r_representation_bottleneck_audit/pilot_runs/e2/iscx_tor/medium_seed2022/model_best.pt",
+  "checkpoint_sha256": "a8377c438a9d658e31bed094ee3a98eaf7e21e4cd3a9c5267dfefe8dd85b79df",
+  "class_names": [
+    "Browsing",
+    "Email",
+    "FTP",
+    "Facebook",
+    "Hangouts",
+    "Spotify",
+    "Vimeo",
+    "YouTube"
+  ],
+  "data_loader_workers": 4,
+  "dataset": "iscx_tor",
+  "epochs_completed": 100,
+  "experiment": "E2",
+  "known_test_samples_used": 0,
+  "known_train_samples": 8876,
+  "known_validation_samples": 1107,
+  "normalization": {
+    "channels": {
+      "log1p_iat_microseconds": {
+        "iqr": 6.915802955627441,
+        "median": 4.573104381561279
+      },
+      "signed_log1p_length": {
+        "iqr": 8.409385681152344,
+        "median": 4.007333278656006
+      }
+    },
+    "fit_role": "Known Train only"
+  },
+  "peak_gpu_memory_bytes": 20866048,
+  "physical_gpu": "4",
+  "project_local_tmp_alias": "/proc/self/fd/3",
+  "protocol_id": "medium_seed2022",
+  "runtime_seconds": 53.13928556442261,
+  "setting": "medium",
+  "status": "PASS",
+  "unknown_test_samples_used": 0,
+  "validation_accuracy": 0.4715447154471545,
+  "validation_loss": 1.3546540751151384,
+  "validation_macro_f1": 0.425009660822321,
+  "validation_weighted_f1": 0.45769839418655806
+}

@@ -1,0 +1,35 @@
+{
+  "decision_basis": {
+    "decision_time": "after observing the complete empirical distribution",
+    "flow_threshold": null,
+    "group_threshold": "No empirical threshold; three non-empty disjoint groups are the logical minimum for Train/Val/Test",
+    "group_definition": "application::capture_variant::capture_number, conservatively shared across VPN/non-VPN; exact duplicate PCAP groups are unioned",
+    "semantic_rule": "application is the class; VPN and non-VPN must be held out together if the application is later chosen as Unknown"
+  },
+  "excluded_classes": [
+    {
+      "application": "netflix",
+      "flow_count": 205,
+      "strict_group_count": 2,
+      "valid_strict_group_count": 2,
+      "effective_group_count": 2,
+      "vpn_flow_count": 1,
+      "nonvpn_flow_count": 204,
+      "reasons": [
+        "only 2 usable duplicate-aware groups; cannot allocate non-empty Train/Val/Test without group overlap"
+      ]
+    },
+    {
+      "application": "vimeo",
+      "flow_count": 1218,
+      "strict_group_count": 1,
+      "valid_strict_group_count": 1,
+      "effective_group_count": 1,
+      "vpn_flow_count": 1,
+      "nonvpn_flow_count": 1217,
+      "reasons": [
+        "only 1 usable duplicate-aware groups; cannot allocate non-empty Train/Val/Test without group overlap"
+      ]
+    }
+  ]
+}

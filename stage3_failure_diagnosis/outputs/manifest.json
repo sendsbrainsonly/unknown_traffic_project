@@ -1,0 +1,199 @@
+{
+  "schema_version": 1,
+  "experiment_id": "stage3-failure-diagnosis-20260912",
+  "created_at_utc": "2026-09-12T23:55:56Z",
+  "updated_at_utc": "2026-09-13T00:03:59Z",
+  "status": "success",
+  "experiment_type": "post-hoc-diagnosis",
+  "claim_scope": "diagnostic",
+  "objective": "Explain class-dependent Fixed-K2 open-set utility using frozen Stage 3 outputs and Known-only diagnostics",
+  "inputs": [
+    {
+      "path": "../../stage3_unknown_utility/outputs",
+      "role": "frozen Stage 3 result packages",
+      "package_sha256": {
+        "A-1": "0f8908d8602f704ba17db1f9cc4b1349bfd7b0dcc5babf5703680788fdad1be9",
+        "A-2": "5e0aa24845c391b2c71099df0f17db35bb6041f97af72290b5f773ad3242dfa6",
+        "A-3": "1328d3b3e81f9f6fe079d1d47a09859d0596c11f12e2835eecdc76475a3c22be"
+      }
+    },
+    {
+      "path": "../../stage3_unknown_utility/artifacts",
+      "role": "frozen scaler, PCA64, K1/K2 models, Known Train/Validation mu_x, Unknown component replay mu_x",
+      "hash_source": "each setting frozen_model_hashes.json and latent_export_manifest.json"
+    },
+    {
+      "path": "../../outputs/stage0_data/flow_index.csv",
+      "role": "existing simple traffic metadata; read-only join"
+    }
+  ],
+  "code": {
+    "revision": "ffcb0dfcaebe3b04b6d3bd42964d5a705303d2cc",
+    "dirty": true,
+    "changes": [
+      "stage3_failure_diagnosis/scripts/analyze_failure.py",
+      "stage3_failure_diagnosis/tests/test_failure_diagnosis.py",
+      "stage3_failure_diagnosis/README.md",
+      "README.md",
+      "EXPERIMENT_RESULTS.md"
+    ]
+  },
+  "execution": {
+    "tmux_session": "stage3_failure_diagnosis_formal_v2",
+    "command": "python stage3_failure_diagnosis/scripts/analyze_failure.py --output-dir stage3_failure_diagnosis/outputs",
+    "exit_code": 0,
+    "environment": "/home/birkenwald/data/SEU-WXY/conda_envs/2025-10-8-WXY-dgl_py310",
+    "physical_gpu_ids": []
+  },
+  "configuration": {
+    "files": [
+      "../../stage3_protocol/stage3_protocol.json",
+      "../scripts/analyze_failure.py"
+    ],
+    "parameters": {
+      "K1": 1,
+      "K2": 2,
+      "representation": "frozen mu_x -> frozen scaler -> frozen PCA64",
+      "unknown_replay": "component assignment only; exact frozen score parity required",
+      "epsilon_squared": "max(0,(H-k+1)/(n-k))"
+    },
+    "seeds": []
+  },
+  "core_results": [
+    {
+      "metric": "A-1 Htbot DeltaAbsorb",
+      "value": 86,
+      "evidence": "class_unknown_absorption_delta.csv"
+    },
+    {
+      "metric": "A-3 Virut DeltaAbsorb",
+      "value": -236,
+      "evidence": "class_unknown_absorption_delta.csv"
+    },
+    {
+      "metric": "DeltaNLL2 vs DeltaAbsorb pooled Spearman rho",
+      "value": -0.021545,
+      "p_value": 0.880711,
+      "n": 51,
+      "evidence": "known_signal_correlations.csv"
+    },
+    {
+      "metric": "final_diagnosis",
+      "value": "A — DENSITY-UTILITY MISMATCH",
+      "evidence": "audit_summary.md"
+    }
+  ],
+  "artifacts": [
+    {
+      "path": "audit_summary.md",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 3336,
+      "sha256": "822d28e97bae5a6af0bd75b98b5552832c867c597e1fd8151f02554e04f7ceb9",
+      "hash_status": "verified"
+    },
+    {
+      "path": "candidate_hypotheses.md",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 1836,
+      "sha256": "dccd38fd18aa500b98c4d1e06ddd77e78aea3274e5f72b5c1a1708fb789e4efa",
+      "hash_status": "verified"
+    },
+    {
+      "path": "class_unknown_absorption_delta.csv",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 2131,
+      "sha256": "3b9f2d8e3c84fd1ec108ef54649aa747bf4da080d79232c06f6c2e9b30175264",
+      "hash_status": "verified"
+    },
+    {
+      "path": "failure_case_summary.csv",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 1392,
+      "sha256": "4d7911be62af0976ce45b5d6345713fda4a82e4aa8c07d5a9285af880751bc97",
+      "hash_status": "verified"
+    },
+    {
+      "path": "known_only_candidate_signals.csv",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 20875,
+      "sha256": "0af37476f684d0905168f7b17e2cf141c013c4aa431676d2c60a3f57faf4d79b",
+      "hash_status": "verified"
+    },
+    {
+      "path": "known_only_support_diagnostics.csv",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 76270,
+      "sha256": "b21ac148d79995f403fc1203b0a5654f877fccd872fe9505fea5fd79876fed54",
+      "hash_status": "verified"
+    },
+    {
+      "path": "known_signal_correlations.csv",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 7949,
+      "sha256": "3240e22003fdd86c78b8f8cc3e77a777e0a2a497c8eb187efa25b8874a50f325",
+      "hash_status": "verified"
+    },
+    {
+      "path": "known_signal_vs_unknown_failure.csv",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 22420,
+      "sha256": "ecd61a41c2be8b471f385324f834dd41fbe05f90d079f18740032b430dcb0b00",
+      "hash_status": "verified"
+    },
+    {
+      "path": "provenance_snapshot.md",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 1442,
+      "sha256": "6ee0579006885ad83b9ab7677ecf7d44ab40b20b4443adc5d28c8ac869a300e4",
+      "hash_status": "verified"
+    },
+    {
+      "path": "run_metadata.json",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 4567,
+      "sha256": "45491b93341cf53e29524309bb7ce4138a085f68de15d83b06424f5bb8971326",
+      "hash_status": "verified"
+    },
+    {
+      "path": "simple_statistics_followup.csv",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 12675,
+      "sha256": "c6cd2ec37c4b8075d27a922503d9dc1dd9481c99fcb1bd5f1821b2a4e2736c9f",
+      "hash_status": "verified"
+    },
+    {
+      "path": "unknown_to_known_absorption_matrix.csv",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 5563,
+      "sha256": "4ce253953e3cd037ab317bc32871a7cc3936e486bd1fbf60a96bf68053a7673a",
+      "hash_status": "verified"
+    },
+    {
+      "path": "unknown_transition_details.parquet",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 880929,
+      "sha256": "bac067baa59983126f75664b016c5d2945f0dbe41f6512434331d5e2be2edcd0",
+      "hash_status": "verified"
+    }
+  ],
+  "limitations": [
+    "A-1/A-2/A-3 Final Test was already observed; this is post-hoc diagnosis, not independent validation.",
+    "DeltaAbsorb is sparse and zero-inflated, with four non-zero setting-class cells.",
+    "Candidate rules were not executed and must not be claimed as USTC improvements.",
+    "Simple traffic statistics are association diagnostics, not semantic-mode or causal evidence."
+  ],
+  "next_step": "No next-stage execution in this task. Under separate authorization, freeze a candidate before first evaluation on untouched CSTNET-TLS1.3, then CipherSpectrum."
+}

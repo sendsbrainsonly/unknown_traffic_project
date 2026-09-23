@@ -1,0 +1,20 @@
+{
+  "batch_size": 128,
+  "dataset": "iscx_tor",
+  "finite_fused": true,
+  "finite_uncertainty": true,
+  "loss": 9.706705093383789,
+  "mode": "smoke",
+  "parity": {
+    "max_abs_differences_evidence_uncertainty_loss": [
+      0.0,
+      0.0,
+      0.0
+    ],
+    "status": "PASS"
+  },
+  "peak_gpu_memory_bytes": 34887012352,
+  "project_local_tmp_alias": "/proc/self/fd/3",
+  "protocol_id": "medium_seed2022",
+  "status": "PASS"
+}

@@ -1,0 +1,53 @@
+{
+  "architecture": "current own-method architecture imported through immutable Stage 14C-4 implementation",
+  "batch_size": 128,
+  "checkpoint_selection": "highest harmonic mean of Known Validation Accuracy and Macro-F1",
+  "conclusion_rule": {
+    "CLOSED_SET_NEEDS_FURTHER_FIX": "any integrity violation, Test/Unknown/DES use, incomplete/NaN/crashed run, or unexplained catastrophic behavior",
+    "CLOSED_SET_PASS": "all integrity gates pass with no weak or composition-specific hard protocols",
+    "CLOSED_SET_PASS_WITH_HARD_PROTOCOLS": "all integrity gates pass but reproducible low performance is concentrated in identifiable frozen Known class compositions"
+  },
+  "des_executed": false,
+  "disk_free_bytes_before_training": 426403823616,
+  "early_stopping": false,
+  "epochs": 100,
+  "estimated_checkpoint_storage_bytes": 11000000000,
+  "feature": "F2",
+  "freeze_hash": "c904daef04d2c8e79469191121325c0a6ceeaeb3e595ef9c4c7d7a62c980ae2f",
+  "known_test_samples_used": 0,
+  "learning_rate": 0.001,
+  "loss": "0.005*(rec+kld+ent)+0.995*dis",
+  "native_results_path": "/home/birkenwald/data/SEU-WXY/WXY-SEU/TrafficClassifier/Projects/unknown_traffic_project/stage14c_native_opendetect_vnat/outputs/stage14c_native_run_results.csv",
+  "native_results_sha256": "eed5bcb14987d99a211792e89ddffa49d5710528c9a5a53939d86cb337555fad",
+  "numerical_protection": "upper logvar clamp at 20",
+  "optimizer": "Adam(beta1=0.9,beta2=0.999,weight_decay=0)",
+  "protocols": [
+    "low_seed2022",
+    "low_seed2023",
+    "low_seed2024",
+    "low_seed2025",
+    "low_seed2026",
+    "medium_seed2022",
+    "medium_seed2023",
+    "medium_seed2024",
+    "medium_seed2025",
+    "medium_seed2026",
+    "high_seed2022",
+    "high_seed2023",
+    "high_seed2024",
+    "high_seed2025",
+    "high_seed2026"
+  ],
+  "prototype_reset": "in-place copy; optimizer parameter link retained; prototype optimizer state cleared",
+  "prototype_reset_epochs": [
+    51,
+    81
+  ],
+  "runs": 15,
+  "scheduler": "MultiStepLR milestones=[50,80] gamma=0.1",
+  "stage14c4_training_source_sha256": "a72b0e52be8c10917c057b49fea58a228253a867007e7390097c27e98cab8655",
+  "status": "FROZEN_READY_TO_RUN",
+  "training_seed": "frozen protocol seed",
+  "unknown_test_samples_used": 0,
+  "weak_run_definition": "val_macro_f1 < 0.50 OR val_accuracy < 0.60 OR NaN/crash"
+}

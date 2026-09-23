@@ -1,0 +1,266 @@
+{
+  "K": 3,
+  "actual_command": "python /home/birkenwald/data/SEU-WXY/WXY-SEU/TrafficClassifier/Projects/unknown_traffic_project/opendetect_ustc_encoder_audit/scripts/run_k3_correspondence_sensitivity.py",
+  "classes": [
+    "FTP",
+    "Cridex",
+    "Miuref",
+    "Outlook"
+  ],
+  "elapsed_seconds": 39.31031608581543,
+  "encoder_retrained": false,
+  "flow_id_assertions": [
+    {
+      "class_name": "FTP",
+      "od_count": 80830,
+      "od_only": 0,
+      "sets_equal": true,
+      "split": "train",
+      "tf_count": 80830,
+      "tf_only": 0
+    },
+    {
+      "class_name": "FTP",
+      "od_count": 10103,
+      "od_only": 0,
+      "sets_equal": true,
+      "split": "val",
+      "tf_count": 10103,
+      "tf_only": 0
+    },
+    {
+      "class_name": "Cridex",
+      "od_count": 13108,
+      "od_only": 0,
+      "sets_equal": true,
+      "split": "train",
+      "tf_count": 13108,
+      "tf_only": 0
+    },
+    {
+      "class_name": "Cridex",
+      "od_count": 1638,
+      "od_only": 0,
+      "sets_equal": true,
+      "split": "val",
+      "tf_count": 1638,
+      "tf_only": 0
+    },
+    {
+      "class_name": "Miuref",
+      "od_count": 10782,
+      "od_only": 0,
+      "sets_equal": true,
+      "split": "train",
+      "tf_count": 10782,
+      "tf_only": 0
+    },
+    {
+      "class_name": "Miuref",
+      "od_count": 1348,
+      "od_only": 0,
+      "sets_equal": true,
+      "split": "val",
+      "tf_count": 1348,
+      "tf_only": 0
+    },
+    {
+      "class_name": "Outlook",
+      "od_count": 6019,
+      "od_only": 0,
+      "sets_equal": true,
+      "split": "train",
+      "tf_count": 6019,
+      "tf_only": 0
+    },
+    {
+      "class_name": "Outlook",
+      "od_count": 753,
+      "od_only": 0,
+      "sets_equal": true,
+      "split": "val",
+      "tf_count": 753,
+      "tf_only": 0
+    }
+  ],
+  "generated_utc": "2026-09-12T08:47:47.507361+00:00",
+  "k_selected_or_searched": false,
+  "main_k2_gate_unchanged": "C. SIMPLE-STATISTICS PERSISTENCE",
+  "opendetect": {
+    "checks": {
+      "Cridex": {
+        "model_path": "/home/birkenwald/data/SEU-WXY/WXY-SEU/TrafficClassifier/Projects/unknown_traffic_project/opendetect_ustc_encoder_audit/artifacts/latent_gaussian_audit/gmms/Cridex_seed0_k3.joblib",
+        "model_sha256": "fcd82394dbd267e2f90c2db1f958d7e27085e03a085195bbd7b219e2d3b1d9d3",
+        "train_absolute_difference": 0.0,
+        "train_component_counts_exact": true,
+        "train_component_counts_official": [
+          6423,
+          6526,
+          159
+        ],
+        "train_component_counts_recomputed": [
+          6423,
+          6526,
+          159
+        ],
+        "train_nll_official": -110.65595069122598,
+        "train_nll_recomputed": -110.65595069122598,
+        "train_nll_replay_note": "official train coordinates used randomized PCA.fit_transform; the saved PCA can only transform(train), so train score is diagnostic rather than the artifact identity gate",
+        "validation_absolute_difference": 0.0,
+        "validation_nll_official": -110.53778750125755,
+        "validation_nll_recomputed": -110.53778750125755
+      },
+      "FTP": {
+        "model_path": "/home/birkenwald/data/SEU-WXY/WXY-SEU/TrafficClassifier/Projects/unknown_traffic_project/opendetect_ustc_encoder_audit/artifacts/latent_gaussian_audit/gmms/FTP_seed0_k3.joblib",
+        "model_sha256": "1ce2a1d81b07cd2d7af781b8547815b7ccf97da6c3ce73ced2ddeed6f2c67a94",
+        "train_absolute_difference": 0.0,
+        "train_component_counts_exact": true,
+        "train_component_counts_official": [
+          23833,
+          49092,
+          7905
+        ],
+        "train_component_counts_recomputed": [
+          23833,
+          49092,
+          7905
+        ],
+        "train_nll_official": -103.34287098077218,
+        "train_nll_recomputed": -103.34287098077218,
+        "train_nll_replay_note": "official train coordinates used randomized PCA.fit_transform; the saved PCA can only transform(train), so train score is diagnostic rather than the artifact identity gate",
+        "validation_absolute_difference": 0.0,
+        "validation_nll_official": -103.13954743633508,
+        "validation_nll_recomputed": -103.13954743633508
+      },
+      "Miuref": {
+        "model_path": "/home/birkenwald/data/SEU-WXY/WXY-SEU/TrafficClassifier/Projects/unknown_traffic_project/opendetect_ustc_encoder_audit/artifacts/latent_gaussian_audit/gmms/Miuref_seed0_k3.joblib",
+        "model_sha256": "04941634aafaf89119c59ebff5a4781f644501ee4502aca9b4e1ece7d8d11c5a",
+        "train_absolute_difference": 0.0,
+        "train_component_counts_exact": true,
+        "train_component_counts_official": [
+          6254,
+          3888,
+          640
+        ],
+        "train_component_counts_recomputed": [
+          6254,
+          3888,
+          640
+        ],
+        "train_nll_official": -100.64448709738063,
+        "train_nll_recomputed": -100.64448709738063,
+        "train_nll_replay_note": "official train coordinates used randomized PCA.fit_transform; the saved PCA can only transform(train), so train score is diagnostic rather than the artifact identity gate",
+        "validation_absolute_difference": 0.0,
+        "validation_nll_official": -99.92909899363455,
+        "validation_nll_recomputed": -99.92909899363455
+      },
+      "Outlook": {
+        "model_path": "/home/birkenwald/data/SEU-WXY/WXY-SEU/TrafficClassifier/Projects/unknown_traffic_project/opendetect_ustc_encoder_audit/artifacts/latent_gaussian_audit/gmms/Outlook_seed0_k3.joblib",
+        "model_sha256": "8a413b7f843dedcdc7ce3bad842bf306e48c1d53430c49123c2e36cfb4c8d5e2",
+        "train_absolute_difference": 0.0,
+        "train_component_counts_exact": true,
+        "train_component_counts_official": [
+          5472,
+          103,
+          444
+        ],
+        "train_component_counts_recomputed": [
+          5472,
+          103,
+          444
+        ],
+        "train_nll_official": -110.46741169078118,
+        "train_nll_recomputed": -110.46741169078118,
+        "train_nll_replay_note": "official train coordinates used randomized PCA.fit_transform; the saved PCA can only transform(train), so train score is diagnostic rather than the artifact identity gate",
+        "validation_absolute_difference": 1.4210854715202004e-14,
+        "validation_nll_official": -108.66499824953648,
+        "validation_nll_recomputed": -108.66499824953647
+      }
+    },
+    "n_components": 3,
+    "nll_reproduction_tolerance": 1e-06,
+    "pca_replay_parameter_max_absolute_differences": {
+      "components_max_abs": 0.0,
+      "explained_variance_max_abs": 0.0,
+      "mean_max_abs": 0.0
+    },
+    "pca_sha256": "1316e249012206d60ec88afcd6391ff28729d24ddf6cf89edb966f806d143d3d",
+    "representation": "deterministic mu_x -> frozen train-fitted StandardScaler/PCA64",
+    "scaler_sha256": "bc9c0695a03bcf04cdb221c6f2151f267961c22b334b371f5f8babf11fb577e2",
+    "train_coordinate_recovery": "replayed PCA.fit_transform(train) because sklearn does not persist its training scores; replayed PCA parameters were required to match the frozen PCA"
+  },
+  "output_files": [
+    "cross_encoder_confusion_k3.csv",
+    "cross_encoder_correspondence_k3.csv",
+    "figures/Cridex_validation_k3_contingency.png",
+    "figures/FTP_validation_k3_contingency.png",
+    "figures/Miuref_validation_k3_contingency.png",
+    "figures/Outlook_validation_k3_contingency.png",
+    "flow_id_assertions_k3.csv",
+    "k3_sensitivity_summary.md",
+    "od_component_assignments_k3.parquet",
+    "run_metadata.json",
+    "tf_component_assignments_k3.parquet",
+    "train_val_stability_k3.csv"
+  ],
+  "primary_split": "validation",
+  "role": "appendix-only K=3 correspondence sensitivity",
+  "test_loaded_or_used": false,
+  "trafficformer": {
+    "blas_thread_limit": 1,
+    "checks": {
+      "Cridex": {
+        "converged": true,
+        "n_iter": 2,
+        "train_absolute_difference": 1.4210854715202004e-14,
+        "train_nll_official": -114.55518341064452,
+        "train_nll_recomputed": -114.55518341064453,
+        "validation_absolute_difference": 1.4210854715202004e-14,
+        "validation_nll_official": -114.30670166015624,
+        "validation_nll_recomputed": -114.30670166015625
+      },
+      "FTP": {
+        "converged": true,
+        "n_iter": 3,
+        "train_absolute_difference": 0.0,
+        "train_nll_official": -75.33861541748047,
+        "train_nll_recomputed": -75.33861541748047,
+        "validation_absolute_difference": 0.0,
+        "validation_nll_official": -75.5079574584961,
+        "validation_nll_recomputed": -75.5079574584961
+      },
+      "Miuref": {
+        "converged": true,
+        "n_iter": 4,
+        "train_absolute_difference": 0.0,
+        "train_nll_official": -80.91048431396484,
+        "train_nll_recomputed": -80.91048431396484,
+        "validation_absolute_difference": 0.0,
+        "validation_nll_official": -79.64418029785156,
+        "validation_nll_recomputed": -79.64418029785156
+      },
+      "Outlook": {
+        "converged": true,
+        "n_iter": 17,
+        "train_absolute_difference": 0.0,
+        "train_nll_official": -121.27323150634766,
+        "train_nll_recomputed": -121.27323150634766,
+        "validation_absolute_difference": 0.0,
+        "validation_nll_official": -118.5124740600586,
+        "validation_nll_recomputed": -118.5124740600586
+      }
+    },
+    "gmm_fit_split": "class-specific train",
+    "n_components": 3,
+    "nll_reproduction_tolerance": 1e-06,
+    "pca_explained_variance_ratio_sum": 0.9981486252846824,
+    "pca_fit_split": "train",
+    "pca_transform_splits": [
+      "train",
+      "val"
+    ],
+    "representation": "train-standardized z_f (768+128=896) -> train-fitted randomized PCA64",
+    "validation_role": "assignment and NLL reproduction only"
+  },
+  "unknown_detection_run": false
+}

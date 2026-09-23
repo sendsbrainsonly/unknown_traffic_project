@@ -1,0 +1,35 @@
+{
+  "checkpoint_epoch": 79,
+  "checkpoint_recorded_validation_accuracy": 0.5526315789473685,
+  "known_test_samples_used": 0,
+  "loader_margin_min": 1.3828277587890625e-05,
+  "loader_prediction_accuracy": 0.5526315789473685,
+  "manual_margin_min": 0.00019598007202148438,
+  "manual_prediction_accuracy": 0.543859649122807,
+  "max_abs_input_difference": 5.960464477539063e-08,
+  "mismatch_labels": [
+    3
+  ],
+  "mismatch_loader_margins": [
+    1.3828277587890625e-05
+  ],
+  "mismatch_loader_predictions": [
+    3
+  ],
+  "mismatch_manual_margins": [
+    0.00019598007202148438
+  ],
+  "mismatch_manual_predictions": [
+    4
+  ],
+  "prediction_mismatch_count": 1,
+  "prediction_mismatch_indices": [
+    16
+  ],
+  "protocol_id": "loso_streaming",
+  "run_epoch_validation_accuracy": 0.5526315789473685,
+  "sample_count": 114,
+  "seed": 2023,
+  "status": "DIAGNOSTIC_ONLY_NO_TRAINING",
+  "unknown_samples_used": 0
+}

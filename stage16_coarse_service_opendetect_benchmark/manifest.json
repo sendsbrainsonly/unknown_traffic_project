@@ -1,0 +1,262 @@
+{
+  "schema_version": 1,
+  "experiment_id": "stage16-coarse-service-opendetect-benchmark-20260920-v1",
+  "created_at_utc": "2026-09-20T08:21:17Z",
+  "updated_at_utc": "2026-09-20T08:29:35Z",
+  "status": "partial",
+  "experiment_type": "method-identity-and-closed-set-benchmark",
+  "claim_scope": "diagnostic",
+  "objective": "Audit method identity and, only if distinct, compare Service-6 methods on frozen A/C protocols",
+  "inputs": [
+    {
+      "path": "../stage15f_literature_guided_feature_benchmark/stage15f_dq3f_fine_service_matched_benchmark",
+      "role": "frozen DQ-3F Service-6 artifacts"
+    },
+    {
+      "path": "../stage15f_literature_guided_feature_benchmark/stage15f_dq4_flow_selection_filtering_attribution",
+      "role": "frozen A/C flow-selection artifacts"
+    },
+    {
+      "path": "../../Open-Detect",
+      "role": "read-only Open-Detect source provenance"
+    }
+  ],
+  "code": {
+    "revision": null,
+    "dirty": null,
+    "changes": [
+      "scripts/generate_identity_blocked_audit.py",
+      "scripts/verify_stage16.py"
+    ]
+  },
+  "execution": {
+    "tmux_session": "s16_generate_blocked_audit_20260920",
+    "command": "python scripts/generate_identity_blocked_audit.py && python scripts/verify_stage16.py",
+    "exit_code": 0,
+    "environment": "/home/birkenwald/data/SEU-WXY/conda_envs/2025-10-8-WXY-dgl_py310",
+    "physical_gpu_ids": []
+  },
+  "configuration": {
+    "files": [
+      "../stage15f_literature_guided_feature_benchmark/stage15f_dq3f_fine_service_matched_benchmark/dq3f_training_configs.json",
+      "../stage15f_literature_guided_feature_benchmark/stage15f_dq4_flow_selection_filtering_attribution/dq4_training_configs.json"
+    ],
+    "parameters": {
+      "protocol_A_train": 2730,
+      "protocol_A_validation": 335,
+      "protocol_C_train": 1367,
+      "protocol_C_validation": 184,
+      "method_identity_gate": "FAIL",
+      "data_parity_gate": "PASS",
+      "new_training_runs": 0
+    },
+    "seeds": [
+      2022,
+      2023,
+      2024
+    ]
+  },
+  "core_results": [
+    {
+      "name": "method_identity_gate",
+      "value": "METHOD_IDENTITY_NOT_DISTINCT"
+    },
+    {
+      "name": "data_parity_gate",
+      "value": "PASS"
+    },
+    {
+      "name": "historical_corrected_opendetect_macro_f1_mean",
+      "value": 0.85605
+    },
+    {
+      "name": "new_opendetect_runs",
+      "value": 0
+    }
+  ],
+  "artifacts": [
+    {
+      "path": "capture_dependency_audit.md",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 598,
+      "sha256": "c3a5d8801cddd8a786284bcd596d63614184ef3d132eba80ee0859cc5095ada7",
+      "hash_status": "verified"
+    },
+    {
+      "path": "completion_verification.json",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 1267,
+      "sha256": "7ab236d48ce2385d9e19b15e4b55e53d56c88c8275f1a2ca947c30d8b2affdf5",
+      "hash_status": "verified"
+    },
+    {
+      "path": "confusion_matrices/dq3f_corrected_opendetect_seed2022.csv",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 974,
+      "sha256": "73419ca63e70153b1a4e7765cc40674705e86c513e795806b52f20f45f02005b",
+      "hash_status": "verified"
+    },
+    {
+      "path": "confusion_matrices/dq3f_corrected_opendetect_seed2023.csv",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 975,
+      "sha256": "f791c2630242caf9e16615efc32dfe2698e45f1a8b64fc1ac2104f864b203755",
+      "hash_status": "verified"
+    },
+    {
+      "path": "confusion_matrices/dq3f_corrected_opendetect_seed2024.csv",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 974,
+      "sha256": "2350bb8d0eb4413e41bb136d25259a2301696d5d4619d121e7aef224eca70188",
+      "hash_status": "verified"
+    },
+    {
+      "path": "dataset_parity_audit.csv",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 766,
+      "sha256": "6527506a3e141438eee7620a9402b7ab0d13da94077cedb75e0820ce36a39c3e",
+      "hash_status": "verified"
+    },
+    {
+      "path": "dataset_parity_audit.md",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 1013,
+      "sha256": "5a3390fd1ac89705725a2a2db4112e33c0133e1e445ff801257312dfd8594b2d",
+      "hash_status": "verified"
+    },
+    {
+      "path": "filtering_protocol_comparison.csv",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 1451,
+      "sha256": "0c3d665a6a7c2b08f60c114c4bb2e8e29399c87e5127be20d989f5cad33f5fd4",
+      "hash_status": "verified"
+    },
+    {
+      "path": "matched_service_manifest.csv",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 683514,
+      "sha256": "9506fd6ae9cae6d254dd586d58081db7cc3f7577426853827c1f12b1f1f8698a",
+      "hash_status": "verified"
+    },
+    {
+      "path": "method_identity_audit.md",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 3211,
+      "sha256": "eaaec358c3b4b8ef005581c36cf82ecacbe9caa5321dfc2a909add0ed273019c",
+      "hash_status": "verified"
+    },
+    {
+      "path": "opendetect_service_results.csv",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 672,
+      "sha256": "3b6d8989ca5dc8110734226196cffb586ae49c159f485e266c4aaa67b60074d6",
+      "hash_status": "verified"
+    },
+    {
+      "path": "ours_service_results.csv",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 1858,
+      "sha256": "bd86aa5677d5bff42415dda28c085124fd9deddad61938d964cc51d658611698",
+      "hash_status": "verified"
+    },
+    {
+      "path": "paired_error_analysis.csv",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 239,
+      "sha256": "4e141e48d8f4226f407035c93c6690b9534d43f533f57a678c147d698613d74b",
+      "hash_status": "verified"
+    },
+    {
+      "path": "paired_service_comparison.csv",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 328,
+      "sha256": "560d3ddc9800e2163770a228d5568198d04ee4b47f75e0b7a1790a0c6115a335",
+      "hash_status": "verified"
+    },
+    {
+      "path": "per_service_results.csv",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 2759,
+      "sha256": "c24790fda3429d1b0ec7cc749eb7153996eef19394ef4558cdcf7bfa451a67ac",
+      "hash_status": "verified"
+    },
+    {
+      "path": "protected_asset_hashes_after.json",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 5064,
+      "sha256": "02aabdbfcea1a0001e35551f93761090ade07d209ad2d14c7260d2be23f53a96",
+      "hash_status": "verified"
+    },
+    {
+      "path": "protected_asset_hashes_before.json",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 5064,
+      "sha256": "02aabdbfcea1a0001e35551f93761090ade07d209ad2d14c7260d2be23f53a96",
+      "hash_status": "verified"
+    },
+    {
+      "path": "scripts/generate_identity_blocked_audit.py",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 29389,
+      "sha256": "0cf49ea23fb164ce302dd4a2c8f36ff640c05402d3760648560941d467c236f9",
+      "hash_status": "verified"
+    },
+    {
+      "path": "scripts/verify_stage16.py",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 3072,
+      "sha256": "8d382d38d2b814d03065b68fd10c57c0770e11cad5dd7a54f9aa4a4f38bf3a58",
+      "hash_status": "verified"
+    },
+    {
+      "path": "service_open_set_feasibility.md",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 971,
+      "sha256": "1619d35aa71ae0de4629fb1485913160c250a79ea9f393290ecbd72bb410a231",
+      "hash_status": "verified"
+    },
+    {
+      "path": "stage16_report.md",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 3153,
+      "sha256": "c810f0b548ac8385303803871a56951a149c1782f726d6c40edbf3097ebb0579",
+      "hash_status": "verified"
+    },
+    {
+      "path": "training_cost_comparison.csv",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 1170,
+      "sha256": "985e40c7017e38496aa80cb3686d60c628f866731f2b97244f9c7f8c75dc66eb",
+      "hash_status": "verified"
+    }
+  ],
+  "limitations": [
+    "DQ-3F candidate is already a corrected Open-Detect reproduction, so an independent OURS-vs-Open-Detect comparison is not identifiable.",
+    "All Service labels are WEAK_CAPTURE_LABEL.",
+    "P2P has one independent capture.",
+    "No Service-level independent Test protocol is frozen."
+  ],
+  "next_step": "Preregister either a corrected-vs-released Open-Detect variant study or a true Stage14C-6 F2 own-method Service A/C benchmark."
+}

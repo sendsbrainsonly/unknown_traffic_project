@@ -1,0 +1,534 @@
+{
+  "all_inputs_valid": true,
+  "artifacts": {
+    "test": {
+      "flow_ids": "/home/birkenwald/data/SEU-WXY/WXY-SEU/TrafficClassifier/Projects/unknown_traffic_project/outputs/stage1/modelA/embeddings/flow_ids_test.npy",
+      "images": "/home/birkenwald/data/SEU-WXY/WXY-SEU/TrafficClassifier/Projects/unknown_traffic_project/opendetect_ustc_encoder_audit/artifacts/test_images.npy",
+      "labels": "/home/birkenwald/data/SEU-WXY/WXY-SEU/TrafficClassifier/Projects/unknown_traffic_project/outputs/stage1/modelA/embeddings/labels_test.npy"
+    },
+    "train": {
+      "flow_ids": "/home/birkenwald/data/SEU-WXY/WXY-SEU/TrafficClassifier/Projects/unknown_traffic_project/outputs/stage1/modelA/embeddings/flow_ids_train.npy",
+      "images": "/home/birkenwald/data/SEU-WXY/WXY-SEU/TrafficClassifier/Projects/unknown_traffic_project/opendetect_ustc_encoder_audit/artifacts/train_images.npy",
+      "labels": "/home/birkenwald/data/SEU-WXY/WXY-SEU/TrafficClassifier/Projects/unknown_traffic_project/outputs/stage1/modelA/embeddings/labels_train.npy"
+    },
+    "val": {
+      "flow_ids": "/home/birkenwald/data/SEU-WXY/WXY-SEU/TrafficClassifier/Projects/unknown_traffic_project/outputs/stage1/modelA/embeddings/flow_ids_val.npy",
+      "images": "/home/birkenwald/data/SEU-WXY/WXY-SEU/TrafficClassifier/Projects/unknown_traffic_project/opendetect_ustc_encoder_audit/artifacts/val_images.npy",
+      "labels": "/home/birkenwald/data/SEU-WXY/WXY-SEU/TrafficClassifier/Projects/unknown_traffic_project/outputs/stage1/modelA/embeddings/labels_val.npy"
+    }
+  },
+  "class_split_statistics": [
+    {
+      "class_name": "BitTorrent",
+      "failed": 0,
+      "requested": 6014,
+      "split": "train",
+      "success": 6014,
+      "success_rate": 1.0
+    },
+    {
+      "class_name": "BitTorrent",
+      "failed": 0,
+      "requested": 752,
+      "split": "val",
+      "success": 752,
+      "success_rate": 1.0
+    },
+    {
+      "class_name": "BitTorrent",
+      "failed": 0,
+      "requested": 751,
+      "split": "test",
+      "success": 751,
+      "success_rate": 1.0
+    },
+    {
+      "class_name": "Cridex",
+      "failed": 0,
+      "requested": 13108,
+      "split": "train",
+      "success": 13108,
+      "success_rate": 1.0
+    },
+    {
+      "class_name": "Cridex",
+      "failed": 0,
+      "requested": 1638,
+      "split": "val",
+      "success": 1638,
+      "success_rate": 1.0
+    },
+    {
+      "class_name": "Cridex",
+      "failed": 0,
+      "requested": 1639,
+      "split": "test",
+      "success": 1639,
+      "success_rate": 1.0
+    },
+    {
+      "class_name": "FTP",
+      "failed": 0,
+      "requested": 80830,
+      "split": "train",
+      "success": 80830,
+      "success_rate": 1.0
+    },
+    {
+      "class_name": "FTP",
+      "failed": 0,
+      "requested": 10103,
+      "split": "val",
+      "success": 10103,
+      "success_rate": 1.0
+    },
+    {
+      "class_name": "FTP",
+      "failed": 0,
+      "requested": 10104,
+      "split": "test",
+      "success": 10104,
+      "success_rate": 1.0
+    },
+    {
+      "class_name": "Facetime",
+      "failed": 0,
+      "requested": 4800,
+      "split": "train",
+      "success": 4800,
+      "success_rate": 1.0
+    },
+    {
+      "class_name": "Facetime",
+      "failed": 0,
+      "requested": 600,
+      "split": "val",
+      "success": 600,
+      "success_rate": 1.0
+    },
+    {
+      "class_name": "Facetime",
+      "failed": 0,
+      "requested": 600,
+      "split": "test",
+      "success": 600,
+      "success_rate": 1.0
+    },
+    {
+      "class_name": "Geodo",
+      "failed": 0,
+      "requested": 32756,
+      "split": "train",
+      "success": 32756,
+      "success_rate": 1.0
+    },
+    {
+      "class_name": "Geodo",
+      "failed": 0,
+      "requested": 4094,
+      "split": "val",
+      "success": 4094,
+      "success_rate": 1.0
+    },
+    {
+      "class_name": "Geodo",
+      "failed": 0,
+      "requested": 4095,
+      "split": "test",
+      "success": 4095,
+      "success_rate": 1.0
+    },
+    {
+      "class_name": "Gmail",
+      "failed": 0,
+      "requested": 6903,
+      "split": "train",
+      "success": 6903,
+      "success_rate": 1.0
+    },
+    {
+      "class_name": "Gmail",
+      "failed": 0,
+      "requested": 863,
+      "split": "val",
+      "success": 863,
+      "success_rate": 1.0
+    },
+    {
+      "class_name": "Gmail",
+      "failed": 0,
+      "requested": 863,
+      "split": "test",
+      "success": 863,
+      "success_rate": 1.0
+    },
+    {
+      "class_name": "Htbot",
+      "failed": 0,
+      "requested": 5071,
+      "split": "train",
+      "success": 5071,
+      "success_rate": 1.0
+    },
+    {
+      "class_name": "Htbot",
+      "failed": 0,
+      "requested": 634,
+      "split": "val",
+      "success": 634,
+      "success_rate": 1.0
+    },
+    {
+      "class_name": "Htbot",
+      "failed": 0,
+      "requested": 634,
+      "split": "test",
+      "success": 634,
+      "success_rate": 1.0
+    },
+    {
+      "class_name": "Miuref",
+      "failed": 0,
+      "requested": 10782,
+      "split": "train",
+      "success": 10782,
+      "success_rate": 1.0
+    },
+    {
+      "class_name": "Miuref",
+      "failed": 0,
+      "requested": 1348,
+      "split": "val",
+      "success": 1348,
+      "success_rate": 1.0
+    },
+    {
+      "class_name": "Miuref",
+      "failed": 0,
+      "requested": 1348,
+      "split": "test",
+      "success": 1348,
+      "success_rate": 1.0
+    },
+    {
+      "class_name": "MySQL",
+      "failed": 0,
+      "requested": 68871,
+      "split": "train",
+      "success": 68871,
+      "success_rate": 1.0
+    },
+    {
+      "class_name": "MySQL",
+      "failed": 0,
+      "requested": 8609,
+      "split": "val",
+      "success": 8609,
+      "success_rate": 1.0
+    },
+    {
+      "class_name": "MySQL",
+      "failed": 0,
+      "requested": 8609,
+      "split": "test",
+      "success": 8609,
+      "success_rate": 1.0
+    },
+    {
+      "class_name": "Neris",
+      "failed": 0,
+      "requested": 27033,
+      "split": "train",
+      "success": 27033,
+      "success_rate": 1.0
+    },
+    {
+      "class_name": "Neris",
+      "failed": 0,
+      "requested": 3379,
+      "split": "val",
+      "success": 3379,
+      "success_rate": 1.0
+    },
+    {
+      "class_name": "Neris",
+      "failed": 0,
+      "requested": 3379,
+      "split": "test",
+      "success": 3379,
+      "success_rate": 1.0
+    },
+    {
+      "class_name": "Nsis-ay",
+      "failed": 0,
+      "requested": 4855,
+      "split": "train",
+      "success": 4855,
+      "success_rate": 1.0
+    },
+    {
+      "class_name": "Nsis-ay",
+      "failed": 0,
+      "requested": 607,
+      "split": "val",
+      "success": 607,
+      "success_rate": 1.0
+    },
+    {
+      "class_name": "Nsis-ay",
+      "failed": 0,
+      "requested": 607,
+      "split": "test",
+      "success": 607,
+      "success_rate": 1.0
+    },
+    {
+      "class_name": "Outlook",
+      "failed": 0,
+      "requested": 6019,
+      "split": "train",
+      "success": 6019,
+      "success_rate": 1.0
+    },
+    {
+      "class_name": "Outlook",
+      "failed": 0,
+      "requested": 753,
+      "split": "val",
+      "success": 753,
+      "success_rate": 1.0
+    },
+    {
+      "class_name": "Outlook",
+      "failed": 0,
+      "requested": 752,
+      "split": "test",
+      "success": 752,
+      "success_rate": 1.0
+    },
+    {
+      "class_name": "SMB",
+      "failed": 0,
+      "requested": 31150,
+      "split": "train",
+      "success": 31150,
+      "success_rate": 1.0
+    },
+    {
+      "class_name": "SMB",
+      "failed": 0,
+      "requested": 3893,
+      "split": "val",
+      "success": 3893,
+      "success_rate": 1.0
+    },
+    {
+      "class_name": "SMB",
+      "failed": 0,
+      "requested": 3894,
+      "split": "test",
+      "success": 3894,
+      "success_rate": 1.0
+    },
+    {
+      "class_name": "Shifu",
+      "failed": 0,
+      "requested": 7705,
+      "split": "train",
+      "success": 7705,
+      "success_rate": 1.0
+    },
+    {
+      "class_name": "Shifu",
+      "failed": 0,
+      "requested": 963,
+      "split": "val",
+      "success": 963,
+      "success_rate": 1.0
+    },
+    {
+      "class_name": "Shifu",
+      "failed": 0,
+      "requested": 963,
+      "split": "test",
+      "success": 963,
+      "success_rate": 1.0
+    },
+    {
+      "class_name": "Skype",
+      "failed": 0,
+      "requested": 5057,
+      "split": "train",
+      "success": 5057,
+      "success_rate": 1.0
+    },
+    {
+      "class_name": "Skype",
+      "failed": 0,
+      "requested": 632,
+      "split": "val",
+      "success": 632,
+      "success_rate": 1.0
+    },
+    {
+      "class_name": "Skype",
+      "failed": 0,
+      "requested": 632,
+      "split": "test",
+      "success": 632,
+      "success_rate": 1.0
+    },
+    {
+      "class_name": "Tinba",
+      "failed": 0,
+      "requested": 6802,
+      "split": "train",
+      "success": 6802,
+      "success_rate": 1.0
+    },
+    {
+      "class_name": "Tinba",
+      "failed": 0,
+      "requested": 851,
+      "split": "val",
+      "success": 851,
+      "success_rate": 1.0
+    },
+    {
+      "class_name": "Tinba",
+      "failed": 0,
+      "requested": 850,
+      "split": "test",
+      "success": 850,
+      "success_rate": 1.0
+    },
+    {
+      "class_name": "Virut",
+      "failed": 0,
+      "requested": 26482,
+      "split": "train",
+      "success": 26482,
+      "success_rate": 1.0
+    },
+    {
+      "class_name": "Virut",
+      "failed": 0,
+      "requested": 3310,
+      "split": "val",
+      "success": 3310,
+      "success_rate": 1.0
+    },
+    {
+      "class_name": "Virut",
+      "failed": 0,
+      "requested": 3311,
+      "split": "test",
+      "success": 3311,
+      "success_rate": 1.0
+    },
+    {
+      "class_name": "Weibo",
+      "failed": 0,
+      "requested": 31960,
+      "split": "train",
+      "success": 31960,
+      "success_rate": 1.0
+    },
+    {
+      "class_name": "Weibo",
+      "failed": 0,
+      "requested": 3995,
+      "split": "val",
+      "success": 3995,
+      "success_rate": 1.0
+    },
+    {
+      "class_name": "Weibo",
+      "failed": 0,
+      "requested": 3995,
+      "split": "test",
+      "success": 3995,
+      "success_rate": 1.0
+    },
+    {
+      "class_name": "WorldOfWarcraft",
+      "failed": 0,
+      "requested": 6306,
+      "split": "train",
+      "success": 6306,
+      "success_rate": 1.0
+    },
+    {
+      "class_name": "WorldOfWarcraft",
+      "failed": 0,
+      "requested": 789,
+      "split": "val",
+      "success": 789,
+      "success_rate": 1.0
+    },
+    {
+      "class_name": "WorldOfWarcraft",
+      "failed": 0,
+      "requested": 788,
+      "split": "test",
+      "success": 788,
+      "success_rate": 1.0
+    },
+    {
+      "class_name": "Zeus",
+      "failed": 0,
+      "requested": 8776,
+      "split": "train",
+      "success": 8776,
+      "success_rate": 1.0
+    },
+    {
+      "class_name": "Zeus",
+      "failed": 0,
+      "requested": 1097,
+      "split": "val",
+      "success": 1097,
+      "success_rate": 1.0
+    },
+    {
+      "class_name": "Zeus",
+      "failed": 0,
+      "requested": 1097,
+      "split": "test",
+      "success": 1097,
+      "success_rate": 1.0
+    }
+  ],
+  "failed": 0,
+  "label_map": {
+    "BitTorrent": 0,
+    "Cridex": 1,
+    "FTP": 2,
+    "Facetime": 3,
+    "Geodo": 4,
+    "Gmail": 5,
+    "Htbot": 6,
+    "Miuref": 7,
+    "MySQL": 8,
+    "Neris": 9,
+    "Nsis-ay": 10,
+    "Outlook": 11,
+    "SMB": 12,
+    "Shifu": 13,
+    "Skype": 14,
+    "Tinba": 15,
+    "Virut": 16,
+    "Weibo": 17,
+    "WorldOfWarcraft": 18,
+    "Zeus": 19
+  },
+  "manifest": "/home/birkenwald/data/SEU-WXY/WXY-SEU/TrafficClassifier/Projects/unknown_traffic_project/opendetect_ustc_encoder_audit/outputs/input_alignment_manifest.csv",
+  "requested": 489101,
+  "source_paths": {
+    "embedding_dir": "/home/birkenwald/data/SEU-WXY/WXY-SEU/TrafficClassifier/Projects/unknown_traffic_project/outputs/stage1/modelA/embeddings",
+    "flows_dir": "/home/birkenwald/data/SEU-WXY/WXY-SEU/TrafficClassifier/Projects/unknown_traffic_project/data/flows",
+    "label_map": "/home/birkenwald/data/SEU-WXY/WXY-SEU/TrafficClassifier/Projects/unknown_traffic_project/data/fig_graph/all_flows/label_map.json"
+  },
+  "success": 489101,
+  "success_rate": 1.0
+}

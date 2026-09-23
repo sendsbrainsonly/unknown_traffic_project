@@ -1,0 +1,22 @@
+{
+  "official_pretrained_model": {
+    "path": "/home/birkenwald/data/SEU-WXY/WXY-SEU/TrafficClassifier/Projects/unknown_traffic_project/tf_runtime/code/models/pretrained_model.bin",
+    "sha256": "be9dcc1e0c6b68db005e506adf13a2d937a2f3982539a2c8a58f78c55af0d5ce",
+    "size_bytes": 715546509
+  },
+  "stage20_closed_manifest": {
+    "path": "/home/birkenwald/data/SEU-WXY/WXY-SEU/TrafficClassifier/Projects/unknown_traffic_project/stage20_dual_coarse_service_protocol/closed_service_manifest.csv",
+    "sha256": "6404d496f50a6f7f6f397d125ad0cd653c9df152d8db1b9ed2ad2310967950bb",
+    "size_bytes": 9706981
+  },
+  "stage21_tor_cache": {
+    "path": "/home/birkenwald/data/SEU-WXY/WXY-SEU/TrafficClassifier/Projects/unknown_traffic_project/stage21_coarse_service_ours_e3_benchmark/feature_cache/iscx_tor/e3_t8_inputs.npz",
+    "sha256": "344985e6e49a1b814ecf34daa7843264267b7ca7f7711b9c24a0546bfdbf120b",
+    "size_bytes": 2787935
+  },
+  "stage21_vpn_cache": {
+    "path": "/home/birkenwald/data/SEU-WXY/WXY-SEU/TrafficClassifier/Projects/unknown_traffic_project/stage21_coarse_service_ours_e3_benchmark/feature_cache/iscx_vpn/e3_t8_inputs.npz",
+    "sha256": "1b7f67b23393bc107b4060ae6bd27b40af0826a255a2cde6e623b634487b31cb",
+    "size_bytes": 2484572
+  }
+}

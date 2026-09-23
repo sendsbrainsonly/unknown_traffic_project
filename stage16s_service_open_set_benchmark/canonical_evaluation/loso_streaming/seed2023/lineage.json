@@ -1,0 +1,17 @@
+{
+  "parameters_updated": false,
+  "source_checkpoint": "/home/birkenwald/data/SEU-WXY/WXY-SEU/TrafficClassifier/Projects/unknown_traffic_project/stage16s_service_open_set_benchmark/runs/loso_streaming/seed2023/model_best.pt",
+  "source_checkpoint_sha256": "8934d6a86b325053a8793b4dd7b667a71460a3a904d5d31f45e73ebc8134157f",
+  "source_failure": {
+    "error": "best-checkpoint validation parity failed",
+    "error_type": "RuntimeError",
+    "preserve_and_do_not_overwrite": true,
+    "protocol_id": "loso_streaming",
+    "seed": 2023,
+    "status": "FAILED",
+    "traceback": "Traceback (most recent call last):\n  File \"/home/birkenwald/data/SEU-WXY/WXY-SEU/TrafficClassifier/Projects/unknown_traffic_project/stage16s_service_open_set_benchmark/scripts/train_evaluate_run.py\", line 374, in main\n    result = run(args.protocol_id, args.seed)\n  File \"/home/birkenwald/data/SEU-WXY/WXY-SEU/TrafficClassifier/Projects/unknown_traffic_project/stage16s_service_open_set_benchmark/scripts/train_evaluate_run.py\", line 259, in run\n    raise RuntimeError(\"best-checkpoint validation parity failed\")\nRuntimeError: best-checkpoint validation parity failed\n",
+    "unknown_fit_samples": 0
+  },
+  "source_run": "/home/birkenwald/data/SEU-WXY/WXY-SEU/TrafficClassifier/Projects/unknown_traffic_project/stage16s_service_open_set_benchmark/runs/loso_streaming/seed2023",
+  "training_performed": false
+}

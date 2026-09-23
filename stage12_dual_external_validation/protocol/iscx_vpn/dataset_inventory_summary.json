@@ -1,0 +1,130 @@
+{
+  "dataset": "iscx_vpn",
+  "root": "/home/birkenwald/data/SEU-WXY/WXY-SEU/TrafficClassifier/Dataset/ISCX-VPN",
+  "pcap_root": "/home/birkenwald/data/SEU-WXY/WXY-SEU/TrafficClassifier/Dataset/ISCX-VPN/ISCX-VPN",
+  "total_files": 140,
+  "total_size_bytes": 27682407809,
+  "pcap_files": 140,
+  "pcap_size_bytes": 27682407809,
+  "readable_pcaps": 140,
+  "unreadable_pcaps": 0,
+  "mapping_errors": [],
+  "canonical_classes_before_flow_eligibility": [
+    "AIM",
+    "BitTorrent",
+    "Email",
+    "FTPS",
+    "Facebook",
+    "Gmail",
+    "Hangouts",
+    "ICQ",
+    "Netflix",
+    "SCP",
+    "SFTP",
+    "Skype",
+    "Spotify",
+    "Vimeo",
+    "VoIPBuster",
+    "YouTube"
+  ],
+  "class_readable_group_counts": {
+    "AIM": 6,
+    "BitTorrent": 1,
+    "Email": 6,
+    "FTPS": 6,
+    "Facebook": 18,
+    "Gmail": 3,
+    "Hangouts": 15,
+    "ICQ": 6,
+    "Netflix": 5,
+    "SCP": 12,
+    "SFTP": 10,
+    "Skype": 26,
+    "Spotify": 5,
+    "Vimeo": 6,
+    "VoIPBuster": 7,
+    "YouTube": 8
+  },
+  "class_domain_states": {
+    "AIM": [
+      "NonVPN",
+      "VPN"
+    ],
+    "BitTorrent": [
+      "VPN"
+    ],
+    "Email": [
+      "NonVPN",
+      "VPN"
+    ],
+    "FTPS": [
+      "NonVPN",
+      "VPN"
+    ],
+    "Facebook": [
+      "NonVPN",
+      "VPN"
+    ],
+    "Gmail": [
+      "NonVPN"
+    ],
+    "Hangouts": [
+      "NonVPN",
+      "VPN"
+    ],
+    "ICQ": [
+      "NonVPN",
+      "VPN"
+    ],
+    "Netflix": [
+      "NonVPN",
+      "VPN"
+    ],
+    "SCP": [
+      "NonVPN"
+    ],
+    "SFTP": [
+      "NonVPN",
+      "VPN"
+    ],
+    "Skype": [
+      "NonVPN",
+      "VPN"
+    ],
+    "Spotify": [
+      "NonVPN",
+      "VPN"
+    ],
+    "Vimeo": [
+      "NonVPN",
+      "VPN"
+    ],
+    "VoIPBuster": [
+      "NonVPN",
+      "VPN"
+    ],
+    "YouTube": [
+      "NonVPN",
+      "VPN"
+    ]
+  },
+  "class_packet_counts": {
+    "AIM": 7324,
+    "BitTorrent": 422098,
+    "Email": 96660,
+    "FTPS": 8064237,
+    "Facebook": 2745210,
+    "Gmail": 12272,
+    "Hangouts": 4933869,
+    "ICQ": 12120,
+    "Netflix": 1169303,
+    "SCP": 841496,
+    "SFTP": 976132,
+    "Skype": 4821309,
+    "Spotify": 157193,
+    "Vimeo": 466377,
+    "VoIPBuster": 1569019,
+    "YouTube": 460470
+  },
+  "flow_count_status": "pending Stage12 Open-Detect preprocessing"
+}

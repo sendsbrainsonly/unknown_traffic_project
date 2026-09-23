@@ -1,0 +1,9 @@
+{
+  "conclusion": "Parameter replacement disconnects the active model prototype from Adam; in-place copy preserves optimizer ownership.",
+  "in_place_reset_preserves_optimizer_link": true,
+  "in_place_reset_preserves_parameter_id": true,
+  "optimizer_links_original_before_reset": true,
+  "parameter_replacement_leaves_old_parameter_in_optimizer": true,
+  "parameter_replacement_links_new_parameter": false,
+  "status": "PASS"
+}

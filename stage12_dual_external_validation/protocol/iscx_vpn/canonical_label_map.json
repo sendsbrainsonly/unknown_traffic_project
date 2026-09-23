@@ -1,0 +1,23 @@
+{
+  "dataset": "iscx_vpn",
+  "canonical_class_to_label": {
+    "AIM": 0,
+    "BitTorrent": 1,
+    "Email": 2,
+    "FTPS": 3,
+    "Facebook": 4,
+    "Gmail": 5,
+    "Hangouts": 6,
+    "ICQ": 7,
+    "Netflix": 8,
+    "SCP": 9,
+    "SFTP": 10,
+    "Skype": 11,
+    "Spotify": 12,
+    "Vimeo": 13,
+    "VoIPBuster": 14,
+    "YouTube": 15
+  },
+  "domain_state_is_metadata": true,
+  "semantic_leakage_rule": "all domain states of one canonical class share Known/Unknown status"
+}

@@ -1,0 +1,20 @@
+{
+  "analysis_scope": "POST_HOC_DIAGNOSTIC_ONLY",
+  "dominance_ratio": 1.5,
+  "interpretation": "M2 dominates because S2-S1 is the largest mean improvement and exceeds the configured dominance ratio over M5; M5 remains substantial secondary evidence.",
+  "material_delta_floor": 0.02,
+  "mean_auroc_deltas": {
+    "K2_delta": 0.014959826759102268,
+    "covariance_delta": 0.14395069556699439,
+    "empirical_centroid_delta": 0.2822937309019528,
+    "pca_delta": -0.005998234316619733,
+    "remove_variance_delta": -0.08244436992667357,
+    "scaler_delta": -0.006700752119739267
+  },
+  "primary": "M2 \u2014 LEARNED_PROTOTYPE_MISMATCH",
+  "recommended_next_branch": "Branch P",
+  "secondary": [
+    "M5 \u2014 COVARIANCE_MISMATCH"
+  ],
+  "threshold_use": "interpretation-only after fixed diagnostics; not a detector threshold or hyperparameter selection"
+}

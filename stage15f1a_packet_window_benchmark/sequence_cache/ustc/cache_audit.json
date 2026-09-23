@@ -1,0 +1,22 @@
+{
+  "dataset": "ustc",
+  "flow_uids_sha256": "adaf21c167d3fc06cc6b12b778df287cb530b1db15dee1137fb57bade7b5ac9f",
+  "known_test_values_stored": 0,
+  "legacy_first8_exact_parity": true,
+  "legacy_first8_mismatch_elements": {
+    "direction": 0,
+    "iat": 0,
+    "length": 0,
+    "mask": 0
+  },
+  "max_packets": 32,
+  "packet_directions_sha256": "c1352f3c49f7ede892d569027faea91f172a4ffefe04fcf9c938d3ca9f48ad51",
+  "packet_iat_sha256": "d26a075ce0230fd1b07941067a2fad18737727f1f21f278a22c71f7c36315c28",
+  "packet_lengths_sha256": "93105ec43779561d3d36a7fd9bb85afead4d3700a9dbf97ea0b1cd13b3e4089f",
+  "packet_mask_sha256": "c722821b03d3d5bc1fbfbdac70413f5e66ac188f1fd1fc9c9141de4d743c09bd",
+  "recovered_flows": 389982,
+  "scope": "union of frozen pilot Known Train/Validation sample IDs only",
+  "status": "PASS",
+  "target_flows": 389982,
+  "unknown_test_values_stored": 0
+}

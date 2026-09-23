@@ -1,0 +1,78 @@
+{
+  "completed_tasks": 15,
+  "failed_tasks": 0,
+  "records": [
+    {
+      "returncode": 0,
+      "status": "success",
+      "task": "f1:low_seed2023"
+    },
+    {
+      "returncode": 0,
+      "status": "success",
+      "task": "f1:low_seed2026"
+    },
+    {
+      "returncode": 0,
+      "status": "success",
+      "task": "f1:high_seed2025"
+    },
+    {
+      "returncode": 0,
+      "status": "success",
+      "task": "f1:medium_seed2022"
+    },
+    {
+      "returncode": 0,
+      "status": "success",
+      "task": "f1:high_seed2022"
+    },
+    {
+      "returncode": 0,
+      "status": "success",
+      "task": "f1:medium_seed2026"
+    },
+    {
+      "returncode": 0,
+      "status": "success",
+      "task": "f1:low_seed2022"
+    },
+    {
+      "returncode": 0,
+      "status": "success",
+      "task": "f1:medium_seed2025"
+    },
+    {
+      "returncode": 0,
+      "status": "success",
+      "task": "f1:low_seed2025"
+    },
+    {
+      "status": "already_complete",
+      "task": "f1:high_seed2026"
+    },
+    {
+      "status": "already_complete",
+      "task": "f1:high_seed2023"
+    },
+    {
+      "status": "already_complete",
+      "task": "f1:low_seed2024"
+    },
+    {
+      "status": "already_complete",
+      "task": "f1:medium_seed2024"
+    },
+    {
+      "status": "already_complete",
+      "task": "f1:medium_seed2023"
+    },
+    {
+      "status": "already_complete",
+      "task": "f1:high_seed2024"
+    }
+  ],
+  "total_tasks": 15,
+  "worker_complete": true,
+  "worker_id": "worker0_gpu6"
+}

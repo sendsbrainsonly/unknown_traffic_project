@@ -1,0 +1,20 @@
+{
+  "checkpoint_best_epoch": 22,
+  "checkpoint_sha256": "588c9eeec5d352f28b5598163aed193e01e53b8a408cdbf6ddbbaf58dbaae213",
+  "cuda_device_name": "NVIDIA L20",
+  "known_test_opened": 0,
+  "latent_dimension": 128,
+  "mu_train_sha256": "10fcf0aefc85ae2ac5102aea4885671156b717bd8179017d009bdf8625d3d22e",
+  "mu_val_sha256": "3eec10e680077d1238cb472a3e68823b1971fed40572488ea4c055a891225565",
+  "native_score_definition": "negative minimum KL divergence to frozen prototypes",
+  "native_validation_parity": "PASS",
+  "physical_gpu": "0",
+  "representation": "deterministic mu_x from stable_encode; sampled z not used",
+  "setting": "high",
+  "stability_guard_activations": 0,
+  "status": "PASS",
+  "train_samples": 49976,
+  "unknown_inference_executed": false,
+  "unknown_test_opened": 0,
+  "validation_samples": 10740
+}

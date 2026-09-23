@@ -1,0 +1,33 @@
+{
+  "best_epoch": 88,
+  "checkpoint_sha256": "2d31e69f766119f3bbee0f88f19126d3f9645164da4e42422d8d6c1c28987683",
+  "class_names": [
+    "Browsing",
+    "Email",
+    "FTP",
+    "Facebook",
+    "Hangouts",
+    "Spotify",
+    "Vimeo",
+    "YouTube"
+  ],
+  "dataset": "iscx_tor",
+  "epochs_completed": 98,
+  "experiment": "E0",
+  "known_test_samples_used": 0,
+  "known_train_samples": 8876,
+  "known_validation_samples": 1107,
+  "objective": "native Open-Detect joint loss",
+  "peak_gpu_memory_bytes": "NOT_RECORDED",
+  "protocol_id": "medium_seed2022",
+  "runtime_seconds": 481.3116683959961,
+  "source_path": "/home/birkenwald/data/SEU-WXY/WXY-SEU/TrafficClassifier/Projects/unknown_traffic_project/stage12_dual_external_validation/runs/iscx_tor/medium/seed2022/known_train_validation_features.npz",
+  "source_sha256": "6be56a73a919c31f16c9964896901619d77c05a69a06b4303d9f3557b0e70f2e",
+  "status": "PASS_REUSED_FROZEN",
+  "train_loss": 0.6827720820554585,
+  "unknown_test_samples_used": 0,
+  "validation_accuracy": 0.6865401987353207,
+  "validation_loss": 0.9807505507456254,
+  "validation_macro_f1": 0.6769001299675422,
+  "validation_weighted_f1": 0.6899983947289596
+}

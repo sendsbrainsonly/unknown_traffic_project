@@ -1,0 +1,13 @@
+fold,component_weight_scenario,small_component_weight,known_class_count,classes_expected_fallback_n_lt_30,expected_fallback_rate,interpretation
+low,50/50,0.5,113,109,0.9646017699115044,sample-size stress only; not an observed GMM component result
+low,80/20,0.2,113,113,1.0,sample-size stress only; not an observed GMM component result
+low,90/10,0.1,113,113,1.0,sample-size stress only; not an observed GMM component result
+low,95/5,0.05,113,113,1.0,sample-size stress only; not an observed GMM component result
+medium,50/50,0.5,101,99,0.9801980198019802,sample-size stress only; not an observed GMM component result
+medium,80/20,0.2,101,101,1.0,sample-size stress only; not an observed GMM component result
+medium,90/10,0.1,101,101,1.0,sample-size stress only; not an observed GMM component result
+medium,95/5,0.05,101,101,1.0,sample-size stress only; not an observed GMM component result
+high,50/50,0.5,89,88,0.9887640449438202,sample-size stress only; not an observed GMM component result
+high,80/20,0.2,89,89,1.0,sample-size stress only; not an observed GMM component result
+high,90/10,0.1,89,89,1.0,sample-size stress only; not an observed GMM component result
+high,95/5,0.05,89,89,1.0,sample-size stress only; not an observed GMM component result

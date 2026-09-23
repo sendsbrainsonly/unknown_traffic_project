@@ -1,0 +1,49 @@
+{
+  "final_gate": "GO",
+  "primary": "GL_FUSION-CENTROID",
+  "scenario_characterization": {
+    "a1": {
+      "mean_delta_auroc": -0.0006950000000000012,
+      "mean_delta_auprc": -0.0026464157082120464,
+      "mean_delta_ufar": 0.0,
+      "mean_delta_known_frr": 0.009,
+      "positive_seed_count": 2
+    },
+    "a2": {
+      "mean_delta_auroc": 0.026021111111111116,
+      "mean_delta_auprc": 0.013253496115479435,
+      "mean_delta_ufar": -0.01933333333333333,
+      "mean_delta_known_frr": -0.0006666666666666682,
+      "positive_seed_count": 5
+    },
+    "a3": {
+      "mean_delta_auroc": 0.0015896565370117743,
+      "mean_delta_auprc": 0.0013582766462352902,
+      "mean_delta_ufar": -0.00988875154511743,
+      "mean_delta_known_frr": -0.002224969097651422,
+      "positive_seed_count": 5
+    }
+  },
+  "positive_seed_count": 12,
+  "conditions": {
+    "a1_preserved": true,
+    "a2_material_improvement": true,
+    "a3_preserved": true,
+    "at_least_10_of_15_positive_seeds": true,
+    "known_frr_safe": true,
+    "a2_ufar_decreased": true
+  },
+  "conditional_conditions": {
+    "a1_not_materially_harmed": true,
+    "a2_positive": true,
+    "a3_not_materially_harmed": true,
+    "at_least_8_of_15_positive_seeds": true,
+    "known_frr_safe": true,
+    "a2_ufar_decreased": true
+  },
+  "new_encoder_training": false,
+  "external_test_datasets_read": [],
+  "cipherspectrum_test_read": false,
+  "frozen_experiment_modified": false,
+  "next_stage_started": false
+}

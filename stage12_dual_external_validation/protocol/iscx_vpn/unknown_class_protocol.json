@@ -1,0 +1,112 @@
+{
+  "protocol_seed": 42,
+  "eligible_classes_canonical_sorted": [
+    "AIM",
+    "BitTorrent",
+    "Email",
+    "FTPS",
+    "Facebook",
+    "Gmail",
+    "Hangouts",
+    "ICQ",
+    "Netflix",
+    "SCP",
+    "SFTP",
+    "Skype",
+    "Spotify",
+    "Vimeo",
+    "VoIPBuster",
+    "YouTube"
+  ],
+  "permutation": [
+    "Hangouts",
+    "YouTube",
+    "Skype",
+    "SFTP",
+    "SCP",
+    "FTPS",
+    "AIM",
+    "ICQ",
+    "Spotify",
+    "Gmail",
+    "Email",
+    "Facebook",
+    "VoIPBuster",
+    "BitTorrent",
+    "Vimeo",
+    "Netflix"
+  ],
+  "settings": {
+    "low": {
+      "unknown_count": 1,
+      "unknown_classes": [
+        "Hangouts"
+      ],
+      "known_classes": [
+        "AIM",
+        "BitTorrent",
+        "Email",
+        "FTPS",
+        "Facebook",
+        "Gmail",
+        "ICQ",
+        "Netflix",
+        "SCP",
+        "SFTP",
+        "Skype",
+        "Spotify",
+        "Vimeo",
+        "VoIPBuster",
+        "YouTube"
+      ]
+    },
+    "medium": {
+      "unknown_count": 3,
+      "unknown_classes": [
+        "Hangouts",
+        "YouTube",
+        "Skype"
+      ],
+      "known_classes": [
+        "AIM",
+        "BitTorrent",
+        "Email",
+        "FTPS",
+        "Facebook",
+        "Gmail",
+        "ICQ",
+        "Netflix",
+        "SCP",
+        "SFTP",
+        "Spotify",
+        "Vimeo",
+        "VoIPBuster"
+      ]
+    },
+    "high": {
+      "unknown_count": 4,
+      "unknown_classes": [
+        "Hangouts",
+        "YouTube",
+        "Skype",
+        "SFTP"
+      ],
+      "known_classes": [
+        "AIM",
+        "BitTorrent",
+        "Email",
+        "FTPS",
+        "Facebook",
+        "Gmail",
+        "ICQ",
+        "Netflix",
+        "SCP",
+        "Spotify",
+        "Vimeo",
+        "VoIPBuster"
+      ]
+    }
+  },
+  "nested": true,
+  "setting_reduced_due_to_class_count": false
+}

@@ -1,0 +1,11 @@
+{
+  "des_executed": false,
+  "epochs": 100,
+  "freeze_hash": "c904daef04d2c8e79469191121325c0a6ceeaeb3e595ef9c4c7d7a62c980ae2f",
+  "known_test_samples_used": 0,
+  "max_absolute_difference": 1.1102230246251565e-16,
+  "parity_pass": true,
+  "protocol_id": "medium_seed2026",
+  "status": "PASS",
+  "unknown_test_samples_used": 0
+}

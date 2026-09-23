@@ -1,0 +1,30 @@
+{
+  "analysis_scope": "POST_HOC_DIAGNOSTIC_ONLY",
+  "atol": 0.002,
+  "formula": "A_native = 0.5 min_y ||mu-p_y||^2 + 0.5 sum(exp(logvar)-logvar-1)",
+  "max_abs_error": 1.1920928955078125e-05,
+  "mean_abs_error": 1.5818727292319554e-06,
+  "p99_abs_error": 5.7220458984375e-06,
+  "roles": {
+    "known_test": {
+      "max_abs_error": 1.1920928955078125e-05,
+      "mean_abs_error": 1.682231073766883e-06,
+      "p99_abs_error": 6.198883056640625e-06,
+      "prediction_mismatch_count": 0,
+      "samples": 12162,
+      "status": "PASS"
+    },
+    "unknown_test": {
+      "max_abs_error": 9.5367431640625e-06,
+      "mean_abs_error": 1.5140639411078559e-06,
+      "p99_abs_error": 5.7220458984375e-06,
+      "prediction_mismatch_count": 0,
+      "samples": 18000,
+      "status": "PASS"
+    }
+  },
+  "rtol": 5e-05,
+  "setting": "medium",
+  "stage9_relation": "A_native approximately equals -score_native_stage9",
+  "status": "PASS"
+}

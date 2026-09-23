@@ -1,0 +1,518 @@
+{
+  "checks": [
+    {
+      "check": "config_frozen_before_formal_training",
+      "detail": "FROZEN_BEFORE_FORMAL_TRAINING",
+      "status": "PASS"
+    },
+    {
+      "check": "s12_parity_5_of_5",
+      "detail": {
+        "runs": 5,
+        "status": "PASS"
+      },
+      "status": "PASS"
+    },
+    {
+      "check": "behavior_caches_and_legacy_s12",
+      "detail": [
+        {
+          "dataset": "ustc",
+          "flows": 389982,
+          "status": "PASS"
+        },
+        {
+          "dataset": "vnat",
+          "flows": 21135,
+          "status": "PASS"
+        },
+        {
+          "dataset": "iscx_vpn",
+          "flows": 14521,
+          "status": "PASS"
+        },
+        {
+          "dataset": "iscx_tor",
+          "flows": 9983,
+          "status": "PASS"
+        }
+      ],
+      "status": "PASS"
+    },
+    {
+      "check": "formal_trained_grid_40_of_40",
+      "detail": {
+        "completed": 40,
+        "failed": 0,
+        "status": "PASS"
+      },
+      "status": "PASS"
+    },
+    {
+      "check": "formal_runs_45_of_45",
+      "detail": [
+        {
+          "dataset": "iscx_vpn",
+          "feature_set": "S12",
+          "features": 12,
+          "protocol_id": "medium_seed2022",
+          "scenario": "FULL_FLOW",
+          "status": "PASS",
+          "validation": 1611
+        },
+        {
+          "dataset": "iscx_tor",
+          "feature_set": "S12",
+          "features": 12,
+          "protocol_id": "medium_seed2022",
+          "scenario": "FULL_FLOW",
+          "status": "PASS",
+          "validation": 1107
+        },
+        {
+          "dataset": "vnat",
+          "feature_set": "S12",
+          "features": 12,
+          "protocol_id": "medium_seed2025",
+          "scenario": "FULL_FLOW",
+          "status": "PASS",
+          "validation": 1960
+        },
+        {
+          "dataset": "vnat",
+          "feature_set": "S12",
+          "features": 12,
+          "protocol_id": "medium_seed2026",
+          "scenario": "FULL_FLOW",
+          "status": "PASS",
+          "validation": 1911
+        },
+        {
+          "dataset": "ustc",
+          "feature_set": "S12",
+          "features": 12,
+          "protocol_id": "A-2",
+          "scenario": "FULL_FLOW",
+          "status": "PASS",
+          "validation": 43331
+        },
+        {
+          "dataset": "iscx_vpn",
+          "feature_set": "S-A",
+          "features": 14,
+          "protocol_id": "medium_seed2022",
+          "scenario": "FULL_FLOW",
+          "status": "PASS",
+          "validation": 1611
+        },
+        {
+          "dataset": "iscx_tor",
+          "feature_set": "S-A",
+          "features": 14,
+          "protocol_id": "medium_seed2022",
+          "scenario": "FULL_FLOW",
+          "status": "PASS",
+          "validation": 1107
+        },
+        {
+          "dataset": "vnat",
+          "feature_set": "S-A",
+          "features": 14,
+          "protocol_id": "medium_seed2025",
+          "scenario": "FULL_FLOW",
+          "status": "PASS",
+          "validation": 1960
+        },
+        {
+          "dataset": "vnat",
+          "feature_set": "S-A",
+          "features": 14,
+          "protocol_id": "medium_seed2026",
+          "scenario": "FULL_FLOW",
+          "status": "PASS",
+          "validation": 1911
+        },
+        {
+          "dataset": "ustc",
+          "feature_set": "S-A",
+          "features": 14,
+          "protocol_id": "A-2",
+          "scenario": "FULL_FLOW",
+          "status": "PASS",
+          "validation": 43331
+        },
+        {
+          "dataset": "iscx_vpn",
+          "feature_set": "S-AB",
+          "features": 20,
+          "protocol_id": "medium_seed2022",
+          "scenario": "FULL_FLOW",
+          "status": "PASS",
+          "validation": 1611
+        },
+        {
+          "dataset": "iscx_tor",
+          "feature_set": "S-AB",
+          "features": 20,
+          "protocol_id": "medium_seed2022",
+          "scenario": "FULL_FLOW",
+          "status": "PASS",
+          "validation": 1107
+        },
+        {
+          "dataset": "vnat",
+          "feature_set": "S-AB",
+          "features": 20,
+          "protocol_id": "medium_seed2025",
+          "scenario": "FULL_FLOW",
+          "status": "PASS",
+          "validation": 1960
+        },
+        {
+          "dataset": "vnat",
+          "feature_set": "S-AB",
+          "features": 20,
+          "protocol_id": "medium_seed2026",
+          "scenario": "FULL_FLOW",
+          "status": "PASS",
+          "validation": 1911
+        },
+        {
+          "dataset": "ustc",
+          "feature_set": "S-AB",
+          "features": 20,
+          "protocol_id": "A-2",
+          "scenario": "FULL_FLOW",
+          "status": "PASS",
+          "validation": 43331
+        },
+        {
+          "dataset": "iscx_vpn",
+          "feature_set": "S-ABC",
+          "features": 27,
+          "protocol_id": "medium_seed2022",
+          "scenario": "FULL_FLOW",
+          "status": "PASS",
+          "validation": 1611
+        },
+        {
+          "dataset": "iscx_tor",
+          "feature_set": "S-ABC",
+          "features": 27,
+          "protocol_id": "medium_seed2022",
+          "scenario": "FULL_FLOW",
+          "status": "PASS",
+          "validation": 1107
+        },
+        {
+          "dataset": "vnat",
+          "feature_set": "S-ABC",
+          "features": 27,
+          "protocol_id": "medium_seed2025",
+          "scenario": "FULL_FLOW",
+          "status": "PASS",
+          "validation": 1960
+        },
+        {
+          "dataset": "vnat",
+          "feature_set": "S-ABC",
+          "features": 27,
+          "protocol_id": "medium_seed2026",
+          "scenario": "FULL_FLOW",
+          "status": "PASS",
+          "validation": 1911
+        },
+        {
+          "dataset": "ustc",
+          "feature_set": "S-ABC",
+          "features": 27,
+          "protocol_id": "A-2",
+          "scenario": "FULL_FLOW",
+          "status": "PASS",
+          "validation": 43331
+        },
+        {
+          "dataset": "iscx_vpn",
+          "feature_set": "S-ABCD",
+          "features": 35,
+          "protocol_id": "medium_seed2022",
+          "scenario": "FULL_FLOW",
+          "status": "PASS",
+          "validation": 1611
+        },
+        {
+          "dataset": "iscx_tor",
+          "feature_set": "S-ABCD",
+          "features": 35,
+          "protocol_id": "medium_seed2022",
+          "scenario": "FULL_FLOW",
+          "status": "PASS",
+          "validation": 1107
+        },
+        {
+          "dataset": "vnat",
+          "feature_set": "S-ABCD",
+          "features": 35,
+          "protocol_id": "medium_seed2025",
+          "scenario": "FULL_FLOW",
+          "status": "PASS",
+          "validation": 1960
+        },
+        {
+          "dataset": "vnat",
+          "feature_set": "S-ABCD",
+          "features": 35,
+          "protocol_id": "medium_seed2026",
+          "scenario": "FULL_FLOW",
+          "status": "PASS",
+          "validation": 1911
+        },
+        {
+          "dataset": "ustc",
+          "feature_set": "S-ABCD",
+          "features": 35,
+          "protocol_id": "A-2",
+          "scenario": "FULL_FLOW",
+          "status": "PASS",
+          "validation": 43331
+        },
+        {
+          "dataset": "iscx_vpn",
+          "feature_set": "S-Burst",
+          "features": 49,
+          "protocol_id": "medium_seed2022",
+          "scenario": "FULL_FLOW",
+          "status": "PASS",
+          "validation": 1611
+        },
+        {
+          "dataset": "iscx_tor",
+          "feature_set": "S-Burst",
+          "features": 49,
+          "protocol_id": "medium_seed2022",
+          "scenario": "FULL_FLOW",
+          "status": "PASS",
+          "validation": 1107
+        },
+        {
+          "dataset": "vnat",
+          "feature_set": "S-Burst",
+          "features": 49,
+          "protocol_id": "medium_seed2025",
+          "scenario": "FULL_FLOW",
+          "status": "PASS",
+          "validation": 1960
+        },
+        {
+          "dataset": "vnat",
+          "feature_set": "S-Burst",
+          "features": 49,
+          "protocol_id": "medium_seed2026",
+          "scenario": "FULL_FLOW",
+          "status": "PASS",
+          "validation": 1911
+        },
+        {
+          "dataset": "ustc",
+          "feature_set": "S-Burst",
+          "features": 49,
+          "protocol_id": "A-2",
+          "scenario": "FULL_FLOW",
+          "status": "PASS",
+          "validation": 43331
+        },
+        {
+          "dataset": "iscx_vpn",
+          "feature_set": "S12",
+          "features": 12,
+          "protocol_id": "medium_seed2022",
+          "scenario": "EARLY_16",
+          "status": "PASS",
+          "validation": 1611
+        },
+        {
+          "dataset": "iscx_tor",
+          "feature_set": "S12",
+          "features": 12,
+          "protocol_id": "medium_seed2022",
+          "scenario": "EARLY_16",
+          "status": "PASS",
+          "validation": 1107
+        },
+        {
+          "dataset": "vnat",
+          "feature_set": "S12",
+          "features": 12,
+          "protocol_id": "medium_seed2025",
+          "scenario": "EARLY_16",
+          "status": "PASS",
+          "validation": 1960
+        },
+        {
+          "dataset": "vnat",
+          "feature_set": "S12",
+          "features": 12,
+          "protocol_id": "medium_seed2026",
+          "scenario": "EARLY_16",
+          "status": "PASS",
+          "validation": 1911
+        },
+        {
+          "dataset": "ustc",
+          "feature_set": "S12",
+          "features": 12,
+          "protocol_id": "A-2",
+          "scenario": "EARLY_16",
+          "status": "PASS",
+          "validation": 43331
+        },
+        {
+          "dataset": "iscx_vpn",
+          "feature_set": "S-ABCD",
+          "features": 35,
+          "protocol_id": "medium_seed2022",
+          "scenario": "EARLY_16",
+          "status": "PASS",
+          "validation": 1611
+        },
+        {
+          "dataset": "iscx_tor",
+          "feature_set": "S-ABCD",
+          "features": 35,
+          "protocol_id": "medium_seed2022",
+          "scenario": "EARLY_16",
+          "status": "PASS",
+          "validation": 1107
+        },
+        {
+          "dataset": "vnat",
+          "feature_set": "S-ABCD",
+          "features": 35,
+          "protocol_id": "medium_seed2025",
+          "scenario": "EARLY_16",
+          "status": "PASS",
+          "validation": 1960
+        },
+        {
+          "dataset": "vnat",
+          "feature_set": "S-ABCD",
+          "features": 35,
+          "protocol_id": "medium_seed2026",
+          "scenario": "EARLY_16",
+          "status": "PASS",
+          "validation": 1911
+        },
+        {
+          "dataset": "ustc",
+          "feature_set": "S-ABCD",
+          "features": 35,
+          "protocol_id": "A-2",
+          "scenario": "EARLY_16",
+          "status": "PASS",
+          "validation": 43331
+        },
+        {
+          "dataset": "iscx_vpn",
+          "feature_set": "S-Burst",
+          "features": 49,
+          "protocol_id": "medium_seed2022",
+          "scenario": "EARLY_16",
+          "status": "PASS",
+          "validation": 1611
+        },
+        {
+          "dataset": "iscx_tor",
+          "feature_set": "S-Burst",
+          "features": 49,
+          "protocol_id": "medium_seed2022",
+          "scenario": "EARLY_16",
+          "status": "PASS",
+          "validation": 1107
+        },
+        {
+          "dataset": "vnat",
+          "feature_set": "S-Burst",
+          "features": 49,
+          "protocol_id": "medium_seed2025",
+          "scenario": "EARLY_16",
+          "status": "PASS",
+          "validation": 1960
+        },
+        {
+          "dataset": "vnat",
+          "feature_set": "S-Burst",
+          "features": 49,
+          "protocol_id": "medium_seed2026",
+          "scenario": "EARLY_16",
+          "status": "PASS",
+          "validation": 1911
+        },
+        {
+          "dataset": "ustc",
+          "feature_set": "S-Burst",
+          "features": 49,
+          "protocol_id": "A-2",
+          "scenario": "EARLY_16",
+          "status": "PASS",
+          "validation": 43331
+        }
+      ],
+      "status": "PASS"
+    },
+    {
+      "check": "known_test_and_unknown_test_usage_zero",
+      "detail": {
+        "known_test": 0,
+        "unknown_test": 0
+      },
+      "status": "PASS"
+    },
+    {
+      "check": "required_outputs_present",
+      "detail": {
+        "RESULTS.md": true,
+        "burst_incremental_results.csv": true,
+        "confusion_analysis.csv": true,
+        "early16_vs_fullflow.csv": true,
+        "feature_availability.csv": true,
+        "feature_definitions.json": true,
+        "feature_importance.csv": true,
+        "feature_missingness.csv": true,
+        "feature_parity_audit.md": true,
+        "native_behavior_complementarity.csv": true,
+        "per_class_results.csv": true,
+        "stage15f1b_report.md": true,
+        "statistical_group_ablation.csv": true,
+        "statistical_pilot_results.csv": true
+      },
+      "status": "PASS"
+    },
+    {
+      "check": "protected_assets_unchanged",
+      "detail": {
+        "added": [],
+        "changed": [],
+        "removed": [],
+        "requested": true,
+        "status": "PASS"
+      },
+      "status": "PASS"
+    },
+    {
+      "check": "forbidden_next_stages_not_run",
+      "detail": {
+        "byte_behavior_model": false,
+        "full15": false,
+        "open_set": false,
+        "stage15f1c": false
+      },
+      "status": "PASS"
+    }
+  ],
+  "formal_runs_expected": 45,
+  "formal_runs_observed": 45,
+  "known_test_samples_used": 0,
+  "stage": "Stage 15F-1B",
+  "status": "PASS",
+  "unknown_test_samples_used": 0
+}

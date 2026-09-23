@@ -1,0 +1,48 @@
+{
+  "bundle_verification": [
+    {
+      "bundle_hashes_sha256": "a3ef3f83acd2eee58b667943e53e6b5a83317239262f91565e420f1cda45dcb0",
+      "bundle_manifest_sha256": "60262a041d20066cc678811535968d295cb32cb747260444a3270572614e56c8",
+      "files": 107,
+      "setting": "low",
+      "status": "PASS"
+    },
+    {
+      "bundle_hashes_sha256": "66f369332de0620da1a8fe69ff020064695858b3cb1e58d5ccb902dae0093c58",
+      "bundle_manifest_sha256": "7fa178714335a1915b43d67e0e9ba2b610f04c0198c91907bd906b6167adfa36",
+      "files": 99,
+      "setting": "medium",
+      "status": "PASS"
+    },
+    {
+      "bundle_hashes_sha256": "574360c4e1c0ac6b39d02dfe2aac5d9ddbfc347e85b968d1c53ef853af0dcf68",
+      "bundle_manifest_sha256": "a836b278bd189bca07745cd7345205985e8433c756fa73068b22e638303b651c",
+      "files": 91,
+      "setting": "high",
+      "status": "PASS"
+    }
+  ],
+  "checks": {
+    "bundle_hashes_pass": true,
+    "evaluation_config_frozen": true,
+    "fallback_map_frozen": true,
+    "k1_k2_train_only": true,
+    "k2_convergence_or_anomaly_record_complete": true,
+    "known_test_usage_zero": true,
+    "pca_train_only": true,
+    "scaler_train_only": true,
+    "stage6_hash_pass": true,
+    "stage7_checkpoint_hash_pass": true,
+    "test_mu_absent": true,
+    "thresholds_validation_only": true,
+    "train_val_mu_complete": true,
+    "unknown_mu_absent": true,
+    "unknown_test_usage_zero": true
+  },
+  "gate": "READY_FOR_FINAL_TEST",
+  "known_test_mu_generated": false,
+  "known_test_opened": 0,
+  "unknown_inference_executed": false,
+  "unknown_mu_generated": false,
+  "unknown_test_opened": 0
+}

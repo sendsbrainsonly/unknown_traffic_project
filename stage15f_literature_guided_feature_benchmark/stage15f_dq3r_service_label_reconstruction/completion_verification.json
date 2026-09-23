@@ -1,0 +1,28 @@
+{
+  "schema_version": 1,
+  "status": "PASS",
+  "decision": "SERVICE_TASK_FEASIBLE_WITH_WEAK_LABELS",
+  "shared_pcaps": 31,
+  "capture_mapping_agreement": 31,
+  "provenance_rows": 3065,
+  "train_rows": 2730,
+  "validation_rows": 335,
+  "label_status_counts": {
+    "VERIFIED_DEFINITION": 0,
+    "WEAK_CAPTURE_LABEL": 3065,
+    "AMBIGUOUS": 0,
+    "UNAVAILABLE": 0
+  },
+  "service_count": 6,
+  "all_services_have_train_validation": true,
+  "all_service_capture_group_split_feasible": false,
+  "dq3f_status": "PREREGISTERED_NOT_RUN",
+  "known_test_feature_values_used": 0,
+  "unknown_test_feature_values_used": 0,
+  "model_training_runs": 0,
+  "byte_behavior_started": false,
+  "des_h1_modified": false,
+  "prior_experiment_outputs_modified": false,
+  "frozen_asset_hash_status": "PASS",
+  "frozen_asset_count": 17
+}

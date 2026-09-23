@@ -1,0 +1,756 @@
+{
+  "cache": {
+    "flow_count": 23449,
+    "flow_uids_path": "/home/birkenwald/data/SEU-WXY/WXY-SEU/TrafficClassifier/Projects/unknown_traffic_project/stage14c_vnat_encoder_training/flow_image_cache/flow_uids.npy",
+    "flow_uids_sha256": "2d5a6f4cbe4bd3302c067a892c43a061ec89f5d2590059b294399b9fe5dcd358",
+    "images_path": "/home/birkenwald/data/SEU-WXY/WXY-SEU/TrafficClassifier/Projects/unknown_traffic_project/stage14c_vnat_encoder_training/flow_image_cache/images.npy",
+    "images_sha256": "7f77952379e2462886f97a3434a725b4ce5508b0f37cb5020239a35c98d8eeee"
+  },
+  "checkpoints": {
+    "high_seed2022": {
+      "checkpoint_path": "/home/birkenwald/data/SEU-WXY/WXY-SEU/TrafficClassifier/Projects/unknown_traffic_project/stage14c_native_opendetect_vnat/runs/high_seed2022/best_checkpoint.pt",
+      "checkpoint_sha256": "ea654d96fe6cf9d06d67cef179f398056fb5de28c892b1f5f896061ae1766d43",
+      "known_classes": [
+        "rsync",
+        "sftp",
+        "ssh",
+        "vimeo",
+        "youtube",
+        "zoiper"
+      ],
+      "result_path": "/home/birkenwald/data/SEU-WXY/WXY-SEU/TrafficClassifier/Projects/unknown_traffic_project/stage14c_native_opendetect_vnat/runs/high_seed2022/result.json",
+      "result_sha256": "81e2c9a8402d643ee42aeb29aadc0e07471b3ae6a6f7b6c4c9d4e6e67723fde7",
+      "unknown_classes": [
+        "scp",
+        "rdp",
+        "skype",
+        "netflix"
+      ],
+      "validation_accuracy": 0.9469658337582866,
+      "validation_macro_f1": 0.8916104600245364
+    },
+    "high_seed2023": {
+      "checkpoint_path": "/home/birkenwald/data/SEU-WXY/WXY-SEU/TrafficClassifier/Projects/unknown_traffic_project/stage14c_native_opendetect_vnat/runs/high_seed2023/best_checkpoint.pt",
+      "checkpoint_sha256": "a91ae3ac218d46d66957ef6585444fcb0679921ff0cc711a979767c7f1d69f0e",
+      "known_classes": [
+        "rdp",
+        "scp",
+        "sftp",
+        "vimeo",
+        "youtube",
+        "zoiper"
+      ],
+      "result_path": "/home/birkenwald/data/SEU-WXY/WXY-SEU/TrafficClassifier/Projects/unknown_traffic_project/stage14c_native_opendetect_vnat/runs/high_seed2023/result.json",
+      "result_sha256": "18bc483d9d679114955718662b92fff4cfc322ef2d195db9361b50b8374c4706",
+      "unknown_classes": [
+        "skype",
+        "netflix",
+        "ssh",
+        "rsync"
+      ],
+      "validation_accuracy": 0.7743431221020093,
+      "validation_macro_f1": 0.8674252873563217
+    },
+    "high_seed2024": {
+      "checkpoint_path": "/home/birkenwald/data/SEU-WXY/WXY-SEU/TrafficClassifier/Projects/unknown_traffic_project/stage14c_native_opendetect_vnat/runs/high_seed2024/best_checkpoint.pt",
+      "checkpoint_sha256": "07224a4d6f9521e315c7a897a209a8183dfc133cba221c410f02fff0eeef0149",
+      "known_classes": [
+        "netflix",
+        "rdp",
+        "scp",
+        "sftp",
+        "skype",
+        "youtube"
+      ],
+      "result_path": "/home/birkenwald/data/SEU-WXY/WXY-SEU/TrafficClassifier/Projects/unknown_traffic_project/stage14c_native_opendetect_vnat/runs/high_seed2024/result.json",
+      "result_sha256": "878ee9c9bc5df4e839975c602f312426e9d39a6aad60b0fc07bc17a6dddafcdb",
+      "unknown_classes": [
+        "ssh",
+        "rsync",
+        "zoiper",
+        "vimeo"
+      ],
+      "validation_accuracy": 0.8151986183074266,
+      "validation_macro_f1": 0.8546922862712337
+    },
+    "high_seed2025": {
+      "checkpoint_path": "/home/birkenwald/data/SEU-WXY/WXY-SEU/TrafficClassifier/Projects/unknown_traffic_project/stage14c_native_opendetect_vnat/runs/high_seed2025/best_checkpoint.pt",
+      "checkpoint_sha256": "006f83d61d108f04fc264eaf3975d2da12ad753fa88400454e1e308a819787e5",
+      "known_classes": [
+        "netflix",
+        "rdp",
+        "rsync",
+        "scp",
+        "skype",
+        "ssh"
+      ],
+      "result_path": "/home/birkenwald/data/SEU-WXY/WXY-SEU/TrafficClassifier/Projects/unknown_traffic_project/stage14c_native_opendetect_vnat/runs/high_seed2025/result.json",
+      "result_sha256": "eb712f3443f27e906b4524fa5994fca7c391ee933f434994a84ce1f578497ca6",
+      "unknown_classes": [
+        "zoiper",
+        "vimeo",
+        "sftp",
+        "youtube"
+      ],
+      "validation_accuracy": 0.9034267912772586,
+      "validation_macro_f1": 0.7655346215227185
+    },
+    "high_seed2026": {
+      "checkpoint_path": "/home/birkenwald/data/SEU-WXY/WXY-SEU/TrafficClassifier/Projects/unknown_traffic_project/stage14c_native_opendetect_vnat/runs/high_seed2026/best_checkpoint.pt",
+      "checkpoint_sha256": "ed68faafe06e980637b1b080ddffe972890d9c5eb135d550aa6d9553972551c7",
+      "known_classes": [
+        "netflix",
+        "rsync",
+        "skype",
+        "ssh",
+        "vimeo",
+        "zoiper"
+      ],
+      "result_path": "/home/birkenwald/data/SEU-WXY/WXY-SEU/TrafficClassifier/Projects/unknown_traffic_project/stage14c_native_opendetect_vnat/runs/high_seed2026/result.json",
+      "result_sha256": "744f0c815accd13d536bb2912c5aadb0961b39803f3b701518d6fb3d4a5bcdd0",
+      "unknown_classes": [
+        "sftp",
+        "youtube",
+        "scp",
+        "rdp"
+      ],
+      "validation_accuracy": 0.9958049292081804,
+      "validation_macro_f1": 0.9830008225224129
+    },
+    "low_seed2022": {
+      "checkpoint_path": "/home/birkenwald/data/SEU-WXY/WXY-SEU/TrafficClassifier/Projects/unknown_traffic_project/stage14c_native_opendetect_vnat/runs/low_seed2022/best_checkpoint.pt",
+      "checkpoint_sha256": "94f04e75731b3f29a04aafa13ae8f30efc6659ab72cf07dd48d8836869545450",
+      "known_classes": [
+        "netflix",
+        "rsync",
+        "sftp",
+        "skype",
+        "ssh",
+        "vimeo",
+        "youtube",
+        "zoiper"
+      ],
+      "result_path": "/home/birkenwald/data/SEU-WXY/WXY-SEU/TrafficClassifier/Projects/unknown_traffic_project/stage14c_native_opendetect_vnat/runs/low_seed2022/result.json",
+      "result_sha256": "1691f082c03cdf5088fb3b91320bcb7c356966fbcf0f73b9b0fc624c667304bb",
+      "unknown_classes": [
+        "scp",
+        "rdp"
+      ],
+      "validation_accuracy": 0.935453251067869,
+      "validation_macro_f1": 0.8849855857591876
+    },
+    "low_seed2023": {
+      "checkpoint_path": "/home/birkenwald/data/SEU-WXY/WXY-SEU/TrafficClassifier/Projects/unknown_traffic_project/stage14c_native_opendetect_vnat/runs/low_seed2023/best_checkpoint.pt",
+      "checkpoint_sha256": "b4a5f49a67c93964934625fd41444b9abf666a4f1c7361993f619900564c5161",
+      "known_classes": [
+        "rdp",
+        "rsync",
+        "scp",
+        "sftp",
+        "ssh",
+        "vimeo",
+        "youtube",
+        "zoiper"
+      ],
+      "result_path": "/home/birkenwald/data/SEU-WXY/WXY-SEU/TrafficClassifier/Projects/unknown_traffic_project/stage14c_native_opendetect_vnat/runs/low_seed2023/result.json",
+      "result_sha256": "882e3c6ca209d8a5d04ee21581f6d7addfd07640b5795ccb4a0d7d38238f2bb2",
+      "unknown_classes": [
+        "skype",
+        "netflix"
+      ],
+      "validation_accuracy": 0.8514129443938013,
+      "validation_macro_f1": 0.7861184795084937
+    },
+    "low_seed2024": {
+      "checkpoint_path": "/home/birkenwald/data/SEU-WXY/WXY-SEU/TrafficClassifier/Projects/unknown_traffic_project/stage14c_native_opendetect_vnat/runs/low_seed2024/best_checkpoint.pt",
+      "checkpoint_sha256": "0cfd2cd6605cf5235364eb736c4eb38bf9bc91312192ace2ed37e239a504621a",
+      "known_classes": [
+        "netflix",
+        "rdp",
+        "scp",
+        "sftp",
+        "skype",
+        "vimeo",
+        "youtube",
+        "zoiper"
+      ],
+      "result_path": "/home/birkenwald/data/SEU-WXY/WXY-SEU/TrafficClassifier/Projects/unknown_traffic_project/stage14c_native_opendetect_vnat/runs/low_seed2024/result.json",
+      "result_sha256": "117a6bb2339a86cd0d61e4860ce99e3e2e107ac4272c2c96187f0c55068de099",
+      "unknown_classes": [
+        "ssh",
+        "rsync"
+      ],
+      "validation_accuracy": 0.8575031525851198,
+      "validation_macro_f1": 0.8197155325938582
+    },
+    "low_seed2025": {
+      "checkpoint_path": "/home/birkenwald/data/SEU-WXY/WXY-SEU/TrafficClassifier/Projects/unknown_traffic_project/stage14c_native_opendetect_vnat/runs/low_seed2025/best_checkpoint.pt",
+      "checkpoint_sha256": "bf5c5a993b0e2f806bbae899d81bc30496bb4e66418544baf196ff2fc0a68e3d",
+      "known_classes": [
+        "netflix",
+        "rdp",
+        "rsync",
+        "scp",
+        "sftp",
+        "skype",
+        "ssh",
+        "youtube"
+      ],
+      "result_path": "/home/birkenwald/data/SEU-WXY/WXY-SEU/TrafficClassifier/Projects/unknown_traffic_project/stage14c_native_opendetect_vnat/runs/low_seed2025/result.json",
+      "result_sha256": "16f8a9471fc5b93fd8a7b3e9ac486404e3809641bbd049fd030f98c771383d8f",
+      "unknown_classes": [
+        "zoiper",
+        "vimeo"
+      ],
+      "validation_accuracy": 0.8419567262464722,
+      "validation_macro_f1": 0.6819338792663903
+    },
+    "low_seed2026": {
+      "checkpoint_path": "/home/birkenwald/data/SEU-WXY/WXY-SEU/TrafficClassifier/Projects/unknown_traffic_project/stage14c_native_opendetect_vnat/runs/low_seed2026/best_checkpoint.pt",
+      "checkpoint_sha256": "c156eee4081960eff6b2b2af520b2f3b3bb18eb26deb53ff22db5778c4a857f5",
+      "known_classes": [
+        "netflix",
+        "rdp",
+        "rsync",
+        "scp",
+        "skype",
+        "ssh",
+        "vimeo",
+        "zoiper"
+      ],
+      "result_path": "/home/birkenwald/data/SEU-WXY/WXY-SEU/TrafficClassifier/Projects/unknown_traffic_project/stage14c_native_opendetect_vnat/runs/low_seed2026/result.json",
+      "result_sha256": "987fc23226a8e28eafa66cb6a9eccdef3275c5dc1cac6962f9c12154b756a304",
+      "unknown_classes": [
+        "sftp",
+        "youtube"
+      ],
+      "validation_accuracy": 0.9042056074766355,
+      "validation_macro_f1": 0.780422676658966
+    },
+    "medium_seed2022": {
+      "checkpoint_path": "/home/birkenwald/data/SEU-WXY/WXY-SEU/TrafficClassifier/Projects/unknown_traffic_project/stage14c_native_opendetect_vnat/runs/medium_seed2022/best_checkpoint.pt",
+      "checkpoint_sha256": "96925c5b73905cf425ac4f8a11e1c13ce7af37f64266a39b032fbe66b084e735",
+      "known_classes": [
+        "netflix",
+        "rsync",
+        "sftp",
+        "ssh",
+        "vimeo",
+        "youtube",
+        "zoiper"
+      ],
+      "result_path": "/home/birkenwald/data/SEU-WXY/WXY-SEU/TrafficClassifier/Projects/unknown_traffic_project/stage14c_native_opendetect_vnat/runs/medium_seed2022/result.json",
+      "result_sha256": "8982f0b72c3e8060179558d1c3421a66efc1bf21e88eacb4a8ef8f6c2835a844",
+      "unknown_classes": [
+        "scp",
+        "rdp",
+        "skype"
+      ],
+      "validation_accuracy": 0.933871781928319,
+      "validation_macro_f1": 0.8676531493012136
+    },
+    "medium_seed2023": {
+      "checkpoint_path": "/home/birkenwald/data/SEU-WXY/WXY-SEU/TrafficClassifier/Projects/unknown_traffic_project/stage14c_native_opendetect_vnat/runs/medium_seed2023/best_checkpoint.pt",
+      "checkpoint_sha256": "eee831c9edadbe74024544cc76b70f60ff0bebddc756b18ae48cc14dc8297b15",
+      "known_classes": [
+        "rdp",
+        "rsync",
+        "scp",
+        "sftp",
+        "vimeo",
+        "youtube",
+        "zoiper"
+      ],
+      "result_path": "/home/birkenwald/data/SEU-WXY/WXY-SEU/TrafficClassifier/Projects/unknown_traffic_project/stage14c_native_opendetect_vnat/runs/medium_seed2023/result.json",
+      "result_sha256": "41b63a4156bd4b8a8591f5d925b18bafc1c2582baad618a27e41a8bd110847d7",
+      "unknown_classes": [
+        "skype",
+        "netflix",
+        "ssh"
+      ],
+      "validation_accuracy": 0.5871121718377088,
+      "validation_macro_f1": 0.7042794600171607
+    },
+    "medium_seed2024": {
+      "checkpoint_path": "/home/birkenwald/data/SEU-WXY/WXY-SEU/TrafficClassifier/Projects/unknown_traffic_project/stage14c_native_opendetect_vnat/runs/medium_seed2024/best_checkpoint.pt",
+      "checkpoint_sha256": "76651b98ec7c2e3e8d5b75a6b4b4e353b4b819d21b89335150c56588fb08dd59",
+      "known_classes": [
+        "netflix",
+        "rdp",
+        "scp",
+        "sftp",
+        "skype",
+        "vimeo",
+        "youtube"
+      ],
+      "result_path": "/home/birkenwald/data/SEU-WXY/WXY-SEU/TrafficClassifier/Projects/unknown_traffic_project/stage14c_native_opendetect_vnat/runs/medium_seed2024/result.json",
+      "result_sha256": "8943cd25d9994b2582bda386578be41a4a651012cad80774b5a358707c2355b4",
+      "unknown_classes": [
+        "ssh",
+        "rsync",
+        "zoiper"
+      ],
+      "validation_accuracy": 0.7814285714285715,
+      "validation_macro_f1": 0.8531124899404937
+    },
+    "medium_seed2025": {
+      "checkpoint_path": "/home/birkenwald/data/SEU-WXY/WXY-SEU/TrafficClassifier/Projects/unknown_traffic_project/stage14c_native_opendetect_vnat/runs/medium_seed2025/best_checkpoint.pt",
+      "checkpoint_sha256": "db436b02ef12feea414c5b88a1092513c42ef9f79143d5c8ff505da0be14b560",
+      "known_classes": [
+        "netflix",
+        "rdp",
+        "rsync",
+        "scp",
+        "skype",
+        "ssh",
+        "youtube"
+      ],
+      "result_path": "/home/birkenwald/data/SEU-WXY/WXY-SEU/TrafficClassifier/Projects/unknown_traffic_project/stage14c_native_opendetect_vnat/runs/medium_seed2025/result.json",
+      "result_sha256": "77a91dc6927ba5fdfa7b6843480e68c41d73c8c2bd6401501dca3a7b1094e4c7",
+      "unknown_classes": [
+        "zoiper",
+        "vimeo",
+        "sftp"
+      ],
+      "validation_accuracy": 0.8969387755102041,
+      "validation_macro_f1": 0.7397546993503976
+    },
+    "medium_seed2026": {
+      "checkpoint_path": "/home/birkenwald/data/SEU-WXY/WXY-SEU/TrafficClassifier/Projects/unknown_traffic_project/stage14c_native_opendetect_vnat/runs/medium_seed2026/best_checkpoint.pt",
+      "checkpoint_sha256": "5e0dc8845b3f91f18a6568936db2ddc604bf4302944cba22813becf94a5d8d44",
+      "known_classes": [
+        "netflix",
+        "rdp",
+        "rsync",
+        "skype",
+        "ssh",
+        "vimeo",
+        "zoiper"
+      ],
+      "result_path": "/home/birkenwald/data/SEU-WXY/WXY-SEU/TrafficClassifier/Projects/unknown_traffic_project/stage14c_native_opendetect_vnat/runs/medium_seed2026/result.json",
+      "result_sha256": "2f5680f1b0912a79d3d0c0f7c30273b24d0ca00f51f04748b9e090b9b7b456bb",
+      "unknown_classes": [
+        "sftp",
+        "youtube",
+        "scp"
+      ],
+      "validation_accuracy": 0.9952904238618524,
+      "validation_macro_f1": 0.9833179712297598
+    }
+  },
+  "new_encoder_training": false,
+  "protocol_audits": {
+    "high_seed2022": {
+      "counts": {
+        "known:test": 1961,
+        "known:train": 15719,
+        "known:validation": 1961,
+        "unknown:unknown_test": 3808
+      },
+      "known_classes": [
+        "rsync",
+        "sftp",
+        "ssh",
+        "vimeo",
+        "youtube",
+        "zoiper"
+      ],
+      "test_samples_used_in_normalization": 0,
+      "test_samples_used_in_support": 0,
+      "test_samples_used_in_threshold_calibration": 0,
+      "unknown_classes": [
+        "netflix",
+        "rdp",
+        "scp",
+        "skype"
+      ],
+      "unknown_samples_in_train": 0,
+      "unknown_samples_in_validation": 0
+    },
+    "high_seed2023": {
+      "counts": {
+        "known:test": 647,
+        "known:train": 5206,
+        "known:validation": 647,
+        "unknown:unknown_test": 16949
+      },
+      "known_classes": [
+        "rdp",
+        "scp",
+        "sftp",
+        "vimeo",
+        "youtube",
+        "zoiper"
+      ],
+      "test_samples_used_in_normalization": 0,
+      "test_samples_used_in_support": 0,
+      "test_samples_used_in_threshold_calibration": 0,
+      "unknown_classes": [
+        "netflix",
+        "rsync",
+        "skype",
+        "ssh"
+      ],
+      "unknown_samples_in_train": 0,
+      "unknown_samples_in_validation": 0
+    },
+    "high_seed2024": {
+      "counts": {
+        "known:test": 579,
+        "known:train": 4659,
+        "known:validation": 579,
+        "unknown:unknown_test": 17632
+      },
+      "known_classes": [
+        "netflix",
+        "rdp",
+        "scp",
+        "sftp",
+        "skype",
+        "youtube"
+      ],
+      "test_samples_used_in_normalization": 0,
+      "test_samples_used_in_support": 0,
+      "test_samples_used_in_threshold_calibration": 0,
+      "unknown_classes": [
+        "rsync",
+        "ssh",
+        "vimeo",
+        "zoiper"
+      ],
+      "unknown_samples_in_train": 0,
+      "unknown_samples_in_validation": 0
+    },
+    "high_seed2025": {
+      "counts": {
+        "known:test": 1926,
+        "known:train": 15431,
+        "known:validation": 1926,
+        "unknown:unknown_test": 4166
+      },
+      "known_classes": [
+        "netflix",
+        "rdp",
+        "rsync",
+        "scp",
+        "skype",
+        "ssh"
+      ],
+      "test_samples_used_in_normalization": 0,
+      "test_samples_used_in_support": 0,
+      "test_samples_used_in_threshold_calibration": 0,
+      "unknown_classes": [
+        "sftp",
+        "vimeo",
+        "youtube",
+        "zoiper"
+      ],
+      "unknown_samples_in_train": 0,
+      "unknown_samples_in_validation": 0
+    },
+    "high_seed2026": {
+      "counts": {
+        "known:test": 1907,
+        "known:train": 15292,
+        "known:validation": 1907,
+        "unknown:unknown_test": 4343
+      },
+      "known_classes": [
+        "netflix",
+        "rsync",
+        "skype",
+        "ssh",
+        "vimeo",
+        "zoiper"
+      ],
+      "test_samples_used_in_normalization": 0,
+      "test_samples_used_in_support": 0,
+      "test_samples_used_in_threshold_calibration": 0,
+      "unknown_classes": [
+        "rdp",
+        "scp",
+        "sftp",
+        "youtube"
+      ],
+      "unknown_samples_in_train": 0,
+      "unknown_samples_in_validation": 0
+    },
+    "low_seed2022": {
+      "counts": {
+        "known:test": 2107,
+        "known:train": 16901,
+        "known:validation": 2107,
+        "unknown:unknown_test": 2334
+      },
+      "known_classes": [
+        "netflix",
+        "rsync",
+        "sftp",
+        "skype",
+        "ssh",
+        "vimeo",
+        "youtube",
+        "zoiper"
+      ],
+      "test_samples_used_in_normalization": 0,
+      "test_samples_used_in_support": 0,
+      "test_samples_used_in_threshold_calibration": 0,
+      "unknown_classes": [
+        "rdp",
+        "scp"
+      ],
+      "unknown_samples_in_train": 0,
+      "unknown_samples_in_validation": 0
+    },
+    "low_seed2023": {
+      "counts": {
+        "known:test": 2194,
+        "known:train": 17587,
+        "known:validation": 2194,
+        "unknown:unknown_test": 1474
+      },
+      "known_classes": [
+        "rdp",
+        "rsync",
+        "scp",
+        "sftp",
+        "ssh",
+        "vimeo",
+        "youtube",
+        "zoiper"
+      ],
+      "test_samples_used_in_normalization": 0,
+      "test_samples_used_in_support": 0,
+      "test_samples_used_in_threshold_calibration": 0,
+      "unknown_classes": [
+        "netflix",
+        "skype"
+      ],
+      "unknown_samples_in_train": 0,
+      "unknown_samples_in_validation": 0
+    },
+    "low_seed2024": {
+      "counts": {
+        "known:test": 793,
+        "known:train": 6388,
+        "known:validation": 793,
+        "unknown:unknown_test": 15475
+      },
+      "known_classes": [
+        "netflix",
+        "rdp",
+        "scp",
+        "sftp",
+        "skype",
+        "vimeo",
+        "youtube",
+        "zoiper"
+      ],
+      "test_samples_used_in_normalization": 0,
+      "test_samples_used_in_support": 0,
+      "test_samples_used_in_threshold_calibration": 0,
+      "unknown_classes": [
+        "rsync",
+        "ssh"
+      ],
+      "unknown_samples_in_train": 0,
+      "unknown_samples_in_validation": 0
+    },
+    "low_seed2025": {
+      "counts": {
+        "known:test": 2126,
+        "known:train": 17040,
+        "known:validation": 2126,
+        "unknown:unknown_test": 2157
+      },
+      "known_classes": [
+        "netflix",
+        "rdp",
+        "rsync",
+        "scp",
+        "sftp",
+        "skype",
+        "ssh",
+        "youtube"
+      ],
+      "test_samples_used_in_normalization": 0,
+      "test_samples_used_in_support": 0,
+      "test_samples_used_in_threshold_calibration": 0,
+      "unknown_classes": [
+        "vimeo",
+        "zoiper"
+      ],
+      "unknown_samples_in_train": 0,
+      "unknown_samples_in_validation": 0
+    },
+    "low_seed2026": {
+      "counts": {
+        "known:test": 2140,
+        "known:train": 17160,
+        "known:validation": 2140,
+        "unknown:unknown_test": 2009
+      },
+      "known_classes": [
+        "netflix",
+        "rdp",
+        "rsync",
+        "scp",
+        "skype",
+        "ssh",
+        "vimeo",
+        "zoiper"
+      ],
+      "test_samples_used_in_normalization": 0,
+      "test_samples_used_in_support": 0,
+      "test_samples_used_in_threshold_calibration": 0,
+      "unknown_classes": [
+        "sftp",
+        "youtube"
+      ],
+      "unknown_samples_in_train": 0,
+      "unknown_samples_in_validation": 0
+    },
+    "medium_seed2022": {
+      "counts": {
+        "known:test": 1981,
+        "known:train": 15884,
+        "known:validation": 1981,
+        "unknown:unknown_test": 3603
+      },
+      "known_classes": [
+        "netflix",
+        "rsync",
+        "sftp",
+        "ssh",
+        "vimeo",
+        "youtube",
+        "zoiper"
+      ],
+      "test_samples_used_in_normalization": 0,
+      "test_samples_used_in_support": 0,
+      "test_samples_used_in_threshold_calibration": 0,
+      "unknown_classes": [
+        "rdp",
+        "scp",
+        "skype"
+      ],
+      "unknown_samples_in_train": 0,
+      "unknown_samples_in_validation": 0
+    },
+    "medium_seed2023": {
+      "counts": {
+        "known:test": 838,
+        "known:train": 6736,
+        "known:validation": 838,
+        "unknown:unknown_test": 15037
+      },
+      "known_classes": [
+        "rdp",
+        "rsync",
+        "scp",
+        "sftp",
+        "vimeo",
+        "youtube",
+        "zoiper"
+      ],
+      "test_samples_used_in_normalization": 0,
+      "test_samples_used_in_support": 0,
+      "test_samples_used_in_threshold_calibration": 0,
+      "unknown_classes": [
+        "netflix",
+        "skype",
+        "ssh"
+      ],
+      "unknown_samples_in_train": 0,
+      "unknown_samples_in_validation": 0
+    },
+    "medium_seed2024": {
+      "counts": {
+        "known:test": 700,
+        "known:train": 5635,
+        "known:validation": 700,
+        "unknown:unknown_test": 16414
+      },
+      "known_classes": [
+        "netflix",
+        "rdp",
+        "scp",
+        "sftp",
+        "skype",
+        "vimeo",
+        "youtube"
+      ],
+      "test_samples_used_in_normalization": 0,
+      "test_samples_used_in_support": 0,
+      "test_samples_used_in_threshold_calibration": 0,
+      "unknown_classes": [
+        "rsync",
+        "ssh",
+        "zoiper"
+      ],
+      "unknown_samples_in_train": 0,
+      "unknown_samples_in_validation": 0
+    },
+    "medium_seed2025": {
+      "counts": {
+        "known:test": 1960,
+        "known:train": 15704,
+        "known:validation": 1960,
+        "unknown:unknown_test": 3825
+      },
+      "known_classes": [
+        "netflix",
+        "rdp",
+        "rsync",
+        "scp",
+        "skype",
+        "ssh",
+        "youtube"
+      ],
+      "test_samples_used_in_normalization": 0,
+      "test_samples_used_in_support": 0,
+      "test_samples_used_in_threshold_calibration": 0,
+      "unknown_classes": [
+        "sftp",
+        "vimeo",
+        "zoiper"
+      ],
+      "unknown_samples_in_train": 0,
+      "unknown_samples_in_validation": 0
+    },
+    "medium_seed2026": {
+      "counts": {
+        "known:test": 1911,
+        "known:train": 15328,
+        "known:validation": 1911,
+        "unknown:unknown_test": 4299
+      },
+      "known_classes": [
+        "netflix",
+        "rdp",
+        "rsync",
+        "skype",
+        "ssh",
+        "vimeo",
+        "zoiper"
+      ],
+      "test_samples_used_in_normalization": 0,
+      "test_samples_used_in_support": 0,
+      "test_samples_used_in_threshold_calibration": 0,
+      "unknown_classes": [
+        "scp",
+        "sftp",
+        "youtube"
+      ],
+      "unknown_samples_in_train": 0,
+      "unknown_samples_in_validation": 0
+    }
+  },
+  "stage14b_before": {
+    "freeze_hash": "c904daef04d2c8e79469191121325c0a6ceeaeb3e595ef9c4c7d7a62c980ae2f",
+    "protocol_sha256": "5177bf7276812bbb417f085043f8518c8573ea1851de2f1d733deb77c9939ced",
+    "split_manifest_sha256": "66bf155e6906231b316c384a52f4b46dabd9d3aee76d5f66d86a3941eb172c4e"
+  },
+  "status": "PASS",
+  "test_score_accessed": false
+}

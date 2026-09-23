@@ -1,0 +1,19 @@
+{
+  "dataset": "iscx_tor",
+  "engine": "Scapy PcapReader matching Stage12 prepare_pcap_dataset.py",
+  "flow_statistics_sha256": "7a855740d9e42b6a4831534663829ae3235b2b19fafbaec739119bb9b8bdd079",
+  "flow_uids_sha256": "790831f72ffad65d65cd09200fe5735bbb3a87d5287e804ee699a8f864360cad",
+  "known_test_or_unknown_test_values_used_for_selection": false,
+  "recovered_flows": 15096,
+  "sequence_packets": 8,
+  "sessionization": {
+    "direction": "bidirectional",
+    "ipv4_tcp_udp_only": true,
+    "tcp_syn_fin_rst_boundaries": true,
+    "timeout_seconds": 60.0
+  },
+  "source_split_manifest": "/home/birkenwald/data/SEU-WXY/WXY-SEU/TrafficClassifier/Projects/unknown_traffic_project/stage12_dual_external_validation/protocol/iscx_tor/split_manifest.csv",
+  "source_split_manifest_sha256": "7de5289ef75966fb360dc743778ba90a31f72c2eaf6694dc3a33291a794bc0d7",
+  "status": "PASS",
+  "target_flows": 15096
+}

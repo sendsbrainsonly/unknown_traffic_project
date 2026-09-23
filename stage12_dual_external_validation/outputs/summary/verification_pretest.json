@@ -1,0 +1,27 @@
+{
+  "status": "PASS",
+  "phase": "pretest",
+  "protocol": {
+    "iscx_vpn": {
+      "eligible_class_count": 16,
+      "settings": 3,
+      "split_policy": "FLOW_DISJOINT_ONLY",
+      "fallback_classes": [
+        "BitTorrent"
+      ]
+    },
+    "iscx_tor": {
+      "eligible_class_count": 10,
+      "settings": 3,
+      "split_policy": "FLOW_DISJOINT_ONLY",
+      "fallback_classes": [
+        "FTP"
+      ]
+    }
+  },
+  "pretest": {
+    "expected_runs": 30,
+    "ready_runs": 30,
+    "unique_checkpoint_hashes": 30
+  }
+}

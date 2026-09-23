@@ -1,0 +1,6 @@
+{
+  "VERIFIED_DEFINITION": "Independent, auditable per-flow semantic evidence supports the label.",
+  "WEAK_CAPTURE_LABEL": "The flow inherits a well-defined capture activity label, but per-flow target membership is not independently verified.",
+  "AMBIGUOUS": "Available sources permit multiple incompatible Service labels.",
+  "UNAVAILABLE": "No auditable Service label source is available."
+}

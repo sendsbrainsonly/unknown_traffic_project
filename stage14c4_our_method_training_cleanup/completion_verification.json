@@ -1,0 +1,13 @@
+{
+  "checkpoints_hash_verified": 4,
+  "conclusion": "NEEDS_FURTHER_DIAGNOSIS",
+  "des_executed": false,
+  "deterministic_rows": 12,
+  "epoch_rows": 400,
+  "failures": [],
+  "freeze_hash": "c904daef04d2c8e79469191121325c0a6ceeaeb3e595ef9c4c7d7a62c980ae2f",
+  "known_test_samples_used": 0,
+  "run_results": 4,
+  "unknown_test_samples_used": 0,
+  "verification": "PASS"
+}

@@ -1,0 +1,147 @@
+{
+  "schema_version": 1,
+  "experiment_id": "stage14b5-vnat-flow-retention-audit-20260917-v1",
+  "created_at_utc": "2026-09-17T12:11:34Z",
+  "updated_at_utc": "2026-09-17T12:37:52Z",
+  "status": "success",
+  "experiment_type": "dataset-audit",
+  "claim_scope": "diagnostic",
+  "verdict": "PASS_WITH_EXPLAINED_DIFFERENCE",
+  "objective": "Read-only audit of the complete VNAT PCAP-to-23449-flow lineage, filtering, deduplication, label mapping, and official H5 count differences without regenerating Stage 14B",
+  "inputs": [
+    {
+      "path": "stage14a_vnat_data_audit/vnat_manifest.csv",
+      "sha256": "5d6827baf37c6893028637779765e7289ff83c56f8eb84fdecb52650a6334c5b",
+      "role": "frozen Stage 14A PCAP and flow inventory"
+    },
+    {
+      "path": "stage14a_vnat_data_audit/outputs/duplicate_files.csv",
+      "sha256": "c05cf493163a11e8d60a20ca5c6c65fa45bc6e91b728d906825061de73182036",
+      "role": "exact duplicate PCAP evidence"
+    },
+    {
+      "path": "stage14a_vnat_data_audit/outputs/duplicate_flows.csv",
+      "sha256": "45c09e0653d0c4b08fe6dfdd1b89c071e66f20dcf8036fe4c0421864889f38e1",
+      "role": "packet-content duplicate flow evidence"
+    },
+    {
+      "path": "stage14b_vnat_protocol_freeze/vnat_open_set_protocol.json",
+      "sha256": "5177bf7276812bbb417f085043f8518c8573ea1851de2f1d733deb77c9939ced",
+      "role": "immutable frozen protocol"
+    },
+    {
+      "path": "stage14b_vnat_protocol_freeze/vnat_split_manifest.csv",
+      "sha256": "66bf155e6906231b316c384a52f4b46dabd9d3aee76d5f66d86a3941eb172c4e",
+      "role": "immutable frozen split manifest"
+    },
+    {
+      "path": "/home/birkenwald/data/SEU-WXY/WXY-SEU/TrafficClassifier/Dataset/VNAT/VNAT/VNAT_Dataframe_release_1.h5",
+      "sha256": "5d0c3d76cd292f19e25b5229719264bc1ddd71920a20bb27a7dec6c7138914de",
+      "role": "official read-only connection dataframe"
+    }
+  ],
+  "code": {
+    "revision": "ffcb0dfcaebe3b04b6d3bd42964d5a705303d2cc",
+    "dirty": true,
+    "changes": [
+      "stage14b5_vnat_flow_retention_audit/scripts/audit_flow_retention.py",
+      "stage14b5_vnat_flow_retention_audit/scripts/scan_corrupt_prefixes.py",
+      "stage14b5_vnat_flow_retention_audit/scripts/verify_stage14b5.py",
+      "stage14b5_vnat_flow_retention_audit/scripts/inspect_hdf_storage.py"
+    ]
+  },
+  "execution": {
+    "environment": "/home/birkenwald/data/SEU-WXY/conda_envs/2025-10-8-WXY-dgl_py310",
+    "physical_gpu_ids": [],
+    "runs": [
+      {
+        "tmux_session": "stage14b5-corrupt-prefix",
+        "command": "python stage14b5_vnat_flow_retention_audit/scripts/scan_corrupt_prefixes.py",
+        "exit_code": 0
+      },
+      {
+        "tmux_session": "stage14b5-audit-final",
+        "command": "python stage14b5_vnat_flow_retention_audit/scripts/audit_flow_retention.py",
+        "exit_code": 1,
+        "note": "preserved formatting failure before corrected rerun"
+      },
+      {
+        "tmux_session": "stage14b5-audit-final2",
+        "command": "python stage14b5_vnat_flow_retention_audit/scripts/audit_flow_retention.py",
+        "exit_code": 0
+      },
+      {
+        "tmux_session": "stage14b5-verify1",
+        "command": "python stage14b5_vnat_flow_retention_audit/scripts/verify_stage14b5.py",
+        "exit_code": 0
+      },
+      {
+        "tmux_session": "stage14b5-audit-final3",
+        "command": "python stage14b5_vnat_flow_retention_audit/scripts/audit_flow_retention.py",
+        "exit_code": 0,
+        "note": "final report with both accepted-pool and raw-complete-packet-record conservation ledgers"
+      },
+      {
+        "tmux_session": "stage14b5-verify3",
+        "command": "python stage14b5_vnat_flow_retention_audit/scripts/verify_stage14b5.py",
+        "exit_code": 0,
+        "note": "final independent verification"
+      }
+    ]
+  },
+  "configuration": {
+    "parameters": {
+      "tshark_version": "3.6.2",
+      "pcap_read_gate": "capinfos -Tm -c -a -e -u -H",
+      "tcp_session_key": "tcp.stream",
+      "udp_session_key": "udp.stream",
+      "explicit_flow_timeout": null,
+      "packet_count_threshold": null,
+      "duration_threshold": null,
+      "payload_threshold": null,
+      "freeze_hash_expected": "c904daef04d2c8e79469191121325c0a6ceeaeb3e595ef9c4c7d7a62c980ae2f"
+    },
+    "seeds": [],
+    "model_training": false,
+    "open_detect_run": false,
+    "des_run": false,
+    "stage14b_regenerated": false
+  },
+  "core_results": [
+    {"metric": "pcap_total", "value": 165},
+    {"metric": "pcap_fully_readable", "value": 163},
+    {"metric": "pcap_truncated", "value": 2},
+    {"metric": "successful_pcap_packets", "value": 24901394},
+    {"metric": "non_ip_packets_excluded", "value": 42024},
+    {"metric": "stage14a_constructed_flows", "value": 23454},
+    {"metric": "duplicate_pcap_flows_removed", "value": 1},
+    {"metric": "cross_application_duplicate_rows_removed", "value": 4},
+    {"metric": "final_clean_flows", "value": 23449},
+    {"metric": "official_h5_connections", "value": 33711},
+    {"metric": "official_connections_in_failed_pcaps", "value": 10556},
+    {"metric": "readable_prefix_diagnostic_flows_in_failed_pcaps", "value": 10555},
+    {"metric": "diagnostic_raw_file_flows_absent_from_final", "value": 10560},
+    {"metric": "freeze_hash_unchanged", "value": true}
+  ],
+  "artifacts": [
+    {"path": "RESULTS.md", "sha256": "e2da723c33ebd7f13cfa9efa8fc7cfd45e2e89ca663ff8f611a26a78313e5d34", "size_bytes": 3887, "role": "core result summary"},
+    {"path": "stage14b5_flow_lineage.csv", "sha256": "6dfe0e506ee5379439f8f8bfb3626c3e5e91e422286cd8b1473793a2c5bb453e", "size_bytes": 4038, "role": "flow lineage"},
+    {"path": "stage14b5_filter_breakdown.csv", "sha256": "0a578ad4d400c5d31b427a73de187bd9f7ab529bc73b1a4946580b290b17292a", "size_bytes": 2636, "role": "filter rules and counts"},
+    {"path": "stage14b5_class_retention.csv", "sha256": "fd4d6b754a9a77da3d98d38e6b9bb3e2ec689a033d7f8a137973dad61d24725c", "size_bytes": 1468, "role": "per-class retention"},
+    {"path": "stage14b5_flow_audit.md", "sha256": "1631211da27d831f84ce8a36f4d3aa6562b8270208e55b4aa0fd8a7b008c4bf2", "size_bytes": 12240, "role": "full audit report"},
+    {"path": "artifacts/official_connection_comparison.csv", "sha256": "6508a34af80aafcf0e92a58b13453b588379acbfd0087947e60539ce640faa38", "size_bytes": 30807, "role": "official/local capture-level comparison"},
+    {"path": "artifacts/corrupt_prefix_flow_counts.json", "sha256": "24659e9fef80d95eda18c20dd36f318059141ce218a1e4223e9f44029e023819", "size_bytes": 1428, "role": "diagnostic-only corrupt prefix counts"},
+    {"path": "artifacts/freeze_hash_before.json", "sha256": "af7979e926a74c9d0ca76a8738f98d8653466f5b446ca126571885814763a167", "size_bytes": 347, "role": "pre-audit freeze evidence"},
+    {"path": "artifacts/freeze_hash_after.json", "sha256": "c928f9952bffab1b926baa317d4ca48de2f7c3551a45d815b3521ba1473e1d50", "size_bytes": 373, "role": "post-audit freeze evidence"},
+    {"path": "artifacts/audit_summary.json", "sha256": "1453b033fe4af1d8c6d8c9e2439a40006e172cd85e83faf7006ff8e081e39fb9", "size_bytes": 630, "role": "machine-readable core result"},
+    {"path": ".tmux-task/stage14b5-audit-final/output.log", "sha256": "1e46a9361091f40d8e88ecf35b3d10085f63fa658ee6fe098045dc94f17b42c5", "size_bytes": 860, "role": "preserved failed attempt log"},
+    {"path": ".tmux-task/stage14b5-audit-final3/output.log", "sha256": "1453b033fe4af1d8c6d8c9e2439a40006e172cd85e83faf7006ff8e081e39fb9", "size_bytes": 630, "role": "final successful audit log"},
+    {"path": ".tmux-task/stage14b5-verify3/output.log", "sha256": "9ac8a3a1693c1dfa8a1cbcc198f853926a56e262ef12fb97a9fb5c2a1a976f02", "size_bytes": 129, "role": "final verification log"}
+  ],
+  "limitations": [
+    "The unavailable tail of each truncated PCAP prevents an exact full-file local counterfactual flow count.",
+    "Official H5 connections and local tshark stream flows are different definitions and are count-compared only.",
+    "Application labels are filename/capture-derived rather than independent per-flow ground truth."
+  ],
+  "next_step": null
+}

@@ -1,0 +1,499 @@
+{
+  "artifacts": [
+    {
+      "bytes": 7526,
+      "path": "RESULTS.md",
+      "sha256": "294a03e9b43a6edbdcd6100eb951d4a66d7c2558d8bf293c85f3611e13a98874"
+    },
+    {
+      "bytes": 937,
+      "path": "aggregate_summary.json",
+      "sha256": "0a530761b0621678ce1921a4d44ffcbe5a7666e9e2d36c7abf0f5d0b5f01a52d"
+    },
+    {
+      "bytes": 1745,
+      "path": "all_run_results.csv",
+      "sha256": "820562dfcfa4c27232e57eed92a735d98a2116ae1db44c41e12c75fec0be5b1b"
+    },
+    {
+      "bytes": 16752,
+      "path": "completion_verification.json",
+      "sha256": "e4273d50323c61e7783f81290ebd4df3783fd644887b38a6d7de505d2314063b"
+    },
+    {
+      "bytes": 1848,
+      "path": "config.json",
+      "sha256": "f46515e6522dd28e4a68adf543a3a0c85f78da1413c55360274d9676517956be"
+    },
+    {
+      "bytes": 3893,
+      "path": "feature_cache/iscx_tor/cache_audit.json",
+      "sha256": "5715927f3e6a000f9eaba352d1472fa3aae85bb468db42973f5ce5837fce7f5c"
+    },
+    {
+      "bytes": 2787935,
+      "path": "feature_cache/iscx_tor/e3_t8_inputs.npz",
+      "sha256": "344985e6e49a1b814ecf34daa7843264267b7ca7f7711b9c24a0546bfdbf120b"
+    },
+    {
+      "bytes": 752,
+      "path": "feature_cache/iscx_vpn/cache_audit.json",
+      "sha256": "aaa122b481e8a57a41c25af96a93a8802487646fd340db78e7d773aa3ebf0733"
+    },
+    {
+      "bytes": 2484572,
+      "path": "feature_cache/iscx_vpn/e3_t8_inputs.npz",
+      "sha256": "1b7f67b23393bc107b4060ae6bd27b40af0826a255a2cde6e623b634487b31cb"
+    },
+    {
+      "bytes": 682,
+      "path": "grid_progress.json",
+      "sha256": "4a80b92994b90edd4f304c52f148280ed5581beabefd578df6b37f56673e65ee"
+    },
+    {
+      "bytes": 2045,
+      "path": "launcher_logs/iscx_tor_seed2022.log",
+      "sha256": "e6bed3359cc2efb79bbb95a5740bf489d3446fa3d5ec0c8a59f04e038917b1ea"
+    },
+    {
+      "bytes": 2044,
+      "path": "launcher_logs/iscx_tor_seed2023.log",
+      "sha256": "e0ab3eb7c8a52508c823f445d7d8b64392ad0dd99886c3720e52a240160c4f0d"
+    },
+    {
+      "bytes": 2046,
+      "path": "launcher_logs/iscx_vpn_seed2022.log",
+      "sha256": "428509df0edb69a0d8d3945421cb3cda7c07974b7ff425e257ea295166ef6a69"
+    },
+    {
+      "bytes": 2041,
+      "path": "launcher_logs/iscx_vpn_seed2023.log",
+      "sha256": "f3c0f0a586359d912973fc0e09ab3524a7770ef0b43b03abe094d697eca86e67"
+    },
+    {
+      "bytes": 202,
+      "path": "launcher_logs/iscx_vpn_seed2024.log",
+      "sha256": "47d05ac62970c69528b6f245af3692c23204b6fd7a20fcb6211e66eef77c5582"
+    },
+    {
+      "bytes": 6282,
+      "path": "multiview_aggregate_metrics.csv",
+      "sha256": "0e99ae635fce481620f94a69831d31521c9913dba1de0746d32b92d77a649b17"
+    },
+    {
+      "bytes": 22139,
+      "path": "multiview_confusion_matrices.csv",
+      "sha256": "a70c07cc7a88912ffa4b70db9c9a7165c59e8ad6e88210e2c7e20121feda171e"
+    },
+    {
+      "bytes": 2354,
+      "path": "multiview_e3_deltas.csv",
+      "sha256": "9770925abfabda9a7a57f90f5ad286d6fa6fd581d81c6150c726d205aaddc67f"
+    },
+    {
+      "bytes": 7482,
+      "path": "multiview_per_class_aggregate.csv",
+      "sha256": "473f519bd042fdef30c794702879df11f31f7424cec5172ead4f0bc82b82d00b"
+    },
+    {
+      "bytes": 5255,
+      "path": "multiview_per_class_metrics.csv",
+      "sha256": "7feb9b00f5014361d60bba61ac53bd337e64dbb44433363df5bf5ae085d06b34"
+    },
+    {
+      "bytes": 3033,
+      "path": "multiview_run_metrics.csv",
+      "sha256": "fc910f7fa60a26b5870dbee3396cd9a2f28b642cedfb083d2ddd51fab78426a4"
+    },
+    {
+      "bytes": 5016,
+      "path": "multiview_summary.json",
+      "sha256": "1acb8200a704a1df3e500fa591a71e2a7fb601cf8352f308154b2c2c97f08709"
+    },
+    {
+      "bytes": 1034,
+      "path": "multiview_validation_test_gap.csv",
+      "sha256": "de86c91a6ccb1871e6e20a68b0fc07346dd61d3e0a004ecadfdd890b531cb26c"
+    },
+    {
+      "bytes": 528592391,
+      "path": "runs/iscx_tor/seed2022/E1_model_best.pt",
+      "sha256": "bd37028572f301bff36dd2cd7055b762cf6d9721e0f46f51c0ddba24af23150f"
+    },
+    {
+      "bytes": 18013,
+      "path": "runs/iscx_tor/seed2022/E2_model_best.pt",
+      "sha256": "031682f6e8bdd0c9b1f0dbbcc6186991e210d7a8657b95c93b4de74dbc666cec"
+    },
+    {
+      "bytes": 34920027,
+      "path": "runs/iscx_tor/seed2022/E3_embeddings.npz",
+      "sha256": "a0b5516e663d4dae9f1bb191f131c472a858fecef36fc4ad37e241c70dab84b6"
+    },
+    {
+      "bytes": 27221,
+      "path": "runs/iscx_tor/seed2022/E3_model_best.pt",
+      "sha256": "34adc71c457399ea0ad89da556b36177da1266b4fdcbc6034dff92f3e5bc5755"
+    },
+    {
+      "bytes": 8,
+      "path": "runs/iscx_tor/seed2022/SUCCESS",
+      "sha256": "1f513d4ecec4e91ddd48da1a59b6d96f1b76c374dc1da641980782a34f43b102"
+    },
+    {
+      "bytes": 529,
+      "path": "runs/iscx_tor/seed2022/results.csv",
+      "sha256": "9034507a268f2ff113f72e153749a16652552f190713a3ef4d138c351200a0e8"
+    },
+    {
+      "bytes": 1022,
+      "path": "runs/iscx_tor/seed2022/run_manifest.json",
+      "sha256": "9062c570fde408b243d6a87288255015fe9e128907cb25add32a97a214d27590"
+    },
+    {
+      "bytes": 339558,
+      "path": "runs/iscx_tor/seed2022/test_predictions.csv",
+      "sha256": "8ec50b08faafb284435d3ccf563a019695c71b25ca7901039c7c44ec531cae70"
+    },
+    {
+      "bytes": 12913,
+      "path": "runs/iscx_tor/seed2022/training_history.json",
+      "sha256": "fce782ccfe6acd249c07d5005e118eee18dc8d66621e93883c73a34b8b604e38"
+    },
+    {
+      "bytes": 528592391,
+      "path": "runs/iscx_tor/seed2023/E1_model_best.pt",
+      "sha256": "dd9eab3a3aeb38d12aae7361f08a9f1716852df2167d795c0bdcce44d85e3e58"
+    },
+    {
+      "bytes": 18013,
+      "path": "runs/iscx_tor/seed2023/E2_model_best.pt",
+      "sha256": "23797b3238dcc606123a22eebd390b20a3b11f2fa473b75c1af2bb35f46d67d8"
+    },
+    {
+      "bytes": 34720077,
+      "path": "runs/iscx_tor/seed2023/E3_embeddings.npz",
+      "sha256": "a49882d6ad913a7073bf7abf93770aae0fe82bd8cd406b8bad5e110ea165df91"
+    },
+    {
+      "bytes": 27221,
+      "path": "runs/iscx_tor/seed2023/E3_model_best.pt",
+      "sha256": "725d10d8fc4b1efb12912b3f96b40a9a89a6f24b51e66f289a82d97b5619c173"
+    },
+    {
+      "bytes": 8,
+      "path": "runs/iscx_tor/seed2023/SUCCESS",
+      "sha256": "1f513d4ecec4e91ddd48da1a59b6d96f1b76c374dc1da641980782a34f43b102"
+    },
+    {
+      "bytes": 530,
+      "path": "runs/iscx_tor/seed2023/results.csv",
+      "sha256": "780e24de47f6f5c602b0615f568886ab104e87077d086708d94f94b218fca641"
+    },
+    {
+      "bytes": 1021,
+      "path": "runs/iscx_tor/seed2023/run_manifest.json",
+      "sha256": "d38a7f648633080fa1ec662a65f227ec22032a05c4d8749daa448b03314f3f48"
+    },
+    {
+      "bytes": 334203,
+      "path": "runs/iscx_tor/seed2023/test_predictions.csv",
+      "sha256": "a9d6945685fb9bd2fef31ab67cf60e417685b0f2f7ed30b45a55dd8f44ae1cb1"
+    },
+    {
+      "bytes": 12915,
+      "path": "runs/iscx_tor/seed2023/training_history.json",
+      "sha256": "2604f76b2a5efc6e2a48705ab77ed5e9cdb979a93ea660ec2e9fea7311d5e537"
+    },
+    {
+      "bytes": 528589319,
+      "path": "runs/iscx_vpn/seed2022/E1_model_best.pt",
+      "sha256": "1681c5c91b4ce94c234e60ebd95cdaad0b0c5c92208b410be9a4ff52eca48799"
+    },
+    {
+      "bytes": 17501,
+      "path": "runs/iscx_vpn/seed2022/E2_model_best.pt",
+      "sha256": "985b4c176e4b8223e92bc89db9da374390c43b8a759cfe14bc1ba71d8fb2dbf6"
+    },
+    {
+      "bytes": 34060872,
+      "path": "runs/iscx_vpn/seed2022/E3_embeddings.npz",
+      "sha256": "f8ba7b21e84c79d2ef1c81f822469ce548a7ae0a495579976398732cc9628f38"
+    },
+    {
+      "bytes": 23637,
+      "path": "runs/iscx_vpn/seed2022/E3_model_best.pt",
+      "sha256": "7b7daf75183ee91e92174bd064e9ff68066cdb2c39c05cccf949679cfaa89d48"
+    },
+    {
+      "bytes": 8,
+      "path": "runs/iscx_vpn/seed2022/SUCCESS",
+      "sha256": "1f513d4ecec4e91ddd48da1a59b6d96f1b76c374dc1da641980782a34f43b102"
+    },
+    {
+      "bytes": 531,
+      "path": "runs/iscx_vpn/seed2022/results.csv",
+      "sha256": "9242fae13ac59ef813cec8e96b4344034ecb4d2de9c458329d5dd09f574133c2"
+    },
+    {
+      "bytes": 1022,
+      "path": "runs/iscx_vpn/seed2022/run_manifest.json",
+      "sha256": "3c4900f536fb36c5b3c9ca2950c8d96bf7e956e654d22cd0619537187ea8c9e9"
+    },
+    {
+      "bytes": 329993,
+      "path": "runs/iscx_vpn/seed2022/test_predictions.csv",
+      "sha256": "806775f89875c48098ee2ada8e2c03f915b3fc4ab1cb18840b87bee51b69145f"
+    },
+    {
+      "bytes": 12916,
+      "path": "runs/iscx_vpn/seed2022/training_history.json",
+      "sha256": "dbb5ae6a8753a8538c4eefa96737a84b2af5a17f32c8364a0f2dc1cbfc6390a2"
+    },
+    {
+      "bytes": 528589319,
+      "path": "runs/iscx_vpn/seed2023/E1_model_best.pt",
+      "sha256": "f85a28742ddd2c80e0abc7c433e9505d08d5e99ad6d9eedabcc248be0ed14492"
+    },
+    {
+      "bytes": 17501,
+      "path": "runs/iscx_vpn/seed2023/E2_model_best.pt",
+      "sha256": "7c212d2bfc20900923bf49b1b7a5fa6c25c602ce6817495556758d03a8518c49"
+    },
+    {
+      "bytes": 33694392,
+      "path": "runs/iscx_vpn/seed2023/E3_embeddings.npz",
+      "sha256": "4794ff88a3a8800ed517d6cf9c941fc1389fe2aa3a487bf8a65f10e9b2d06934"
+    },
+    {
+      "bytes": 23637,
+      "path": "runs/iscx_vpn/seed2023/E3_model_best.pt",
+      "sha256": "2319f2dea4b54fac0c5f278f55bb67b526e96fb9e28982b6f99190d28c8a6a07"
+    },
+    {
+      "bytes": 8,
+      "path": "runs/iscx_vpn/seed2023/SUCCESS",
+      "sha256": "1f513d4ecec4e91ddd48da1a59b6d96f1b76c374dc1da641980782a34f43b102"
+    },
+    {
+      "bytes": 530,
+      "path": "runs/iscx_vpn/seed2023/results.csv",
+      "sha256": "837593cc18bd9e4a8bfef5def1b758c505fd0ac95405d93930ce5e85e7180a30"
+    },
+    {
+      "bytes": 1021,
+      "path": "runs/iscx_vpn/seed2023/run_manifest.json",
+      "sha256": "d0c4069fa3080c15342dd1a3e079ec5210e1ebccab8d32cc5ddbc31fbf41a229"
+    },
+    {
+      "bytes": 326606,
+      "path": "runs/iscx_vpn/seed2023/test_predictions.csv",
+      "sha256": "eea79e815c56d35497b098e8190ab86c915973b5add3eddf6daeb65f982f5c0d"
+    },
+    {
+      "bytes": 12934,
+      "path": "runs/iscx_vpn/seed2023/training_history.json",
+      "sha256": "5a6e824730e80064455f46ed58b00c7e66df6f79b43a149abaae0ea113bdcb51"
+    },
+    {
+      "bytes": 380,
+      "path": "runs/iscx_vpn/seed2024/INTERRUPTED.md",
+      "sha256": "12c20451bcbe347cc780e076357ee10f7932dc90cd992b2125e56774e534527a"
+    },
+    {
+      "bytes": 1632,
+      "path": "scripts/aggregate.py",
+      "sha256": "ad7d65a16f99bfc1246c3b9e96736dcac030ef17ea6d4bae9f1480fd9141f7a2"
+    },
+    {
+      "bytes": 7427,
+      "path": "scripts/evaluate_multiview.py",
+      "sha256": "53997920daed895ba133ddeed36dbe62b964c93c32f26bfee04f6cee1d45bda4"
+    },
+    {
+      "bytes": 4767,
+      "path": "scripts/finalize_bundle.py",
+      "sha256": "54302b25638eb9498326740af0a978820a7d2396cb94acfe911d7482fd55508e"
+    },
+    {
+      "bytes": 10469,
+      "path": "scripts/prepare_inputs.py",
+      "sha256": "3bb97c4d9bde486d106e1beab98119399820b16afbadaa23a35870312df03b14"
+    },
+    {
+      "bytes": 2843,
+      "path": "scripts/run_grid.py",
+      "sha256": "9b0398332115289addadb3b17b6e1f20fa892f6db1ee7d0146017138f3953996"
+    },
+    {
+      "bytes": 2140,
+      "path": "scripts/smoke.py",
+      "sha256": "3f5d45497652c13a95b8fb89e3ba660081c01c2c0e4485060b4aef594f84ca26"
+    },
+    {
+      "bytes": 2081,
+      "path": "scripts/stage21_common.py",
+      "sha256": "2d242472c9a83bf1e6fa66fbee33a22008d594eb3709620ab49f424ff87f0043"
+    },
+    {
+      "bytes": 7218,
+      "path": "scripts/train_closed_run.py",
+      "sha256": "ea332076336004760095cfd1f251ed062818c6a16b0fb0a43fa7e900fcc79eec"
+    },
+    {
+      "bytes": 4369,
+      "path": "scripts/verify_completion.py",
+      "sha256": "235186f47088e189d20a8810ef584d0b88776087520693d0fe12b11218b8d662"
+    },
+    {
+      "bytes": 204,
+      "path": "smoke_result.json",
+      "sha256": "43909d516f0d2c27aa96622bd69edc365433912c2dbfe3094a0b26df46ca0623"
+    },
+    {
+      "bytes": 1056,
+      "path": "summary_results.csv",
+      "sha256": "df3068c27951dee475c09b5ff800033fa0441cdea2249338c95bd18657cdb8e4"
+    },
+    {
+      "bytes": 652,
+      "path": "training_grid_execution.json",
+      "sha256": "4727e6c8814c41dd38f4529039cd524235e92d4c29996c707986662e69059e41"
+    },
+    {
+      "bytes": 1705,
+      "path": "training_grid_execution_initial_three_seed_interrupted.json",
+      "sha256": "bbafc46eadbe9a9bd91f198ad11b77d489c8029cf7fcf34e8d2167db963f4643"
+    }
+  ],
+  "claim_scope": "diagnostic",
+  "code": {
+    "configuration_sha256": "f46515e6522dd28e4a68adf543a3a0c85f78da1413c55360274d9676517956be",
+    "scripts": [
+      "scripts/aggregate.py",
+      "scripts/evaluate_multiview.py",
+      "scripts/finalize_bundle.py",
+      "scripts/prepare_inputs.py",
+      "scripts/run_grid.py",
+      "scripts/smoke.py",
+      "scripts/stage21_common.py",
+      "scripts/train_closed_run.py",
+      "scripts/verify_completion.py"
+    ]
+  },
+  "configuration": {
+    "datasets": {
+      "iscx_tor": {
+        "classes": 7,
+        "flows": 11181
+      },
+      "iscx_vpn": {
+        "classes": 6,
+        "flows": 10955
+      }
+    },
+    "file": "config.json",
+    "sha256": "f46515e6522dd28e4a68adf543a3a0c85f78da1413c55360274d9676517956be"
+  },
+  "core_results": [
+    {
+      "accuracy_mean": 0.520128087831656,
+      "accuracy_std": 0.03888380603842634,
+      "dataset": "iscx_vpn",
+      "macro_f1_mean": 0.5249345042909267,
+      "macro_f1_std": 0.04791679462009599,
+      "method": "OURS-E3-T8",
+      "seeds": 2,
+      "weighted_f1_mean": 0.512889026336405,
+      "weighted_f1_std": 0.04507485308921194
+    },
+    {
+      "accuracy_mean": 0.6222023276633841,
+      "accuracy_std": 0.0134288272157565,
+      "dataset": "iscx_tor",
+      "macro_f1_mean": 0.5911243794949889,
+      "macro_f1_std": 0.014552519444146261,
+      "method": "OURS-E3-T8",
+      "seeds": 2,
+      "weighted_f1_mean": 0.6176433442573146,
+      "weighted_f1_std": 0.012695234580820947
+    }
+  ],
+  "created_at_utc": "2026-09-22T02:07:27Z",
+  "execution": {
+    "actual_training_physical_gpu_ids": [
+      1,
+      2
+    ],
+    "environment": "/home/birkenwald/data/SEU-WXY/conda_envs/2025-10-8-WXY-dgl_py310",
+    "formal_runs": 4,
+    "formal_tmux_session": "stage21-ours-e3-t8-formal-20260922",
+    "interrupted_attempt": {
+      "dataset": "iscx_vpn",
+      "excluded_from_aggregates": true,
+      "exit_code": -15,
+      "physical_gpu_id": 4,
+      "reason": "user-requested reduction to two GPUs and two seeds",
+      "seed": 2024
+    },
+    "parallelism": "two independent single-GPU processes; no DataParallel",
+    "seeds": [
+      2022,
+      2023
+    ],
+    "successful_runs": 4,
+    "test_selection_samples": 0
+  },
+  "experiment_id": "stage21-coarse-service-ours-e3-t8-20260922-v1",
+  "experiment_type": "benchmark",
+  "inputs": [
+    {
+      "path": "/home/birkenwald/data/SEU-WXY/WXY-SEU/TrafficClassifier/Projects/unknown_traffic_project/stage20_dual_coarse_service_protocol/closed_service_manifest.csv",
+      "role": "frozen Stage20 membership",
+      "sha256": "6404d496f50a6f7f6f397d125ad0cd653c9df152d8db1b9ed2ad2310967950bb"
+    },
+    {
+      "path": "/home/birkenwald/data/SEU-WXY/WXY-SEU/TrafficClassifier/Projects/unknown_traffic_project/stage21_coarse_service_ours_e3_benchmark/feature_cache/iscx_vpn/e3_t8_inputs.npz",
+      "role": "VPN E3-T8 inputs",
+      "sha256": "1b7f67b23393bc107b4060ae6bd27b40af0826a255a2cde6e623b634487b31cb"
+    },
+    {
+      "path": "/home/birkenwald/data/SEU-WXY/WXY-SEU/TrafficClassifier/Projects/unknown_traffic_project/stage21_coarse_service_ours_e3_benchmark/feature_cache/iscx_tor/e3_t8_inputs.npz",
+      "role": "TOR E3-T8 inputs",
+      "sha256": "344985e6e49a1b814ecf34daa7843264267b7ca7f7711b9c24a0546bfdbf120b"
+    }
+  ],
+  "limitations": [
+    "Only two seeds; standard deviations are descriptive, not confidence intervals.",
+    "Closed-set only; no open-set detection claim.",
+    "Stage20 weak capture labels and non-uniform capture-disjointness remain.",
+    "FIG is restricted to eight packets, unlike Stage17's 30-packet pilot.",
+    "Strict random-init TrafficFormer with three epochs is severely underfit.",
+    "Historical baselines use different populations or protocols and are not paired comparisons."
+  ],
+  "method_identity": {
+    "branches": [
+      "recovered TrafficFormer first-5 packets",
+      "project FIG/TAGCN first-8 packets"
+    ],
+    "excluded": [
+      "OpenDetectNet",
+      "Open-Detect prototype loss",
+      "Open-Detect classifier"
+    ],
+    "fusion": "Known-Train z-score per branch, 768+128 concatenation, linear classifier",
+    "method": "OURS-E3-T8"
+  },
+  "next_step": "Run a separate Known-Validation-only optimization and T8/T16/T30 ablation without modifying this baseline bundle.",
+  "objective": "Train and test the independent OURS-E3-T8 fusion method on frozen Stage20 VPN-6 and TOR-7 coarse-Service closed-set tasks.",
+  "schema_version": 1,
+  "status": "success",
+  "terminal_label": "CLOSED_SET_DIAGNOSTIC_COMPLETE",
+  "updated_at_utc": "2026-09-22T02:47:10Z",
+  "verification": {
+    "checks": 98,
+    "failures": 0,
+    "path": "completion_verification.json",
+    "status": "PASS"
+  }
+}

@@ -1,0 +1,64 @@
+{
+  "experiment_id": "stage18-pp-opennet-inspired-e4-20260920-v1",
+  "claim_scope": "approximate_pp_opennet_inspired_independent_reconstruction",
+  "frozen_inputs": {
+    "cache": "../stage17_encoder_recovery_and_open_set_pilot/feature_cache/service3065_historical_inputs.npz",
+    "cache_sha256": "aff17d4b3271107852c0f30556627ab5daf693fba6a0a7b18df5f3785f260cff",
+    "protocol_manifest": "../stage16s_service_open_set_benchmark/service_unknown_protocol_manifest.csv",
+    "protocols": ["loso_email", "loso_streaming"],
+    "seeds": [2022, 2023, 2024]
+  },
+  "input": {
+    "max_packets": 30,
+    "features": ["log1p_caplen", "log1p_iat_microseconds", "direction_sign"],
+    "normalization": "Known-Train-only median/IQR for length and IAT; clip [-8,8]; direction unchanged",
+    "padding": "zero after normalization with explicit valid-packet mask"
+  },
+  "training": {
+    "epochs": 100,
+    "batch_size": 128,
+    "optimizer": "AdamW",
+    "learning_rate": 0.001,
+    "weight_decay": 0.0001,
+    "scheduler": "MultiStepLR milestones [50,80], gamma 0.1",
+    "loss": "Known-Train inverse-sqrt-frequency weighted cross entropy",
+    "checkpoint_selection": "Known Validation Macro-F1 only",
+    "early_stopping": false,
+    "embedding_dim": 128,
+    "dropout": 0.2
+  },
+  "variants": {
+    "E4_FULL": {"features": "time_length_direction", "multi_scale": true, "recurrent": true},
+    "E4_TIME": {"features": "time", "multi_scale": true, "recurrent": true},
+    "E4_LENGTH": {"features": "length", "multi_scale": true, "recurrent": true},
+    "E4_TIME_LENGTH": {"features": "time_length", "multi_scale": true, "recurrent": true},
+    "E4_NO_MS": {"features": "time_length_direction", "multi_scale": false, "recurrent": true},
+    "E4_NO_RNN": {"features": "time_length_direction", "multi_scale": true, "recurrent": false},
+    "E4_BASE": {"features": "time_length_direction", "multi_scale": false, "recurrent": false}
+  },
+  "open_set": {
+    "scores": ["feature_distance", "msp", "energy"],
+    "primary_score": "feature_distance",
+    "feature_distance": "minimum squared Euclidean distance to Known-Train centroids after Known-Train embedding z-score",
+    "threshold_calibration": "Known Validation empirical higher quantile only",
+    "known_acceptance_targets": [0.90, 0.95, 0.99],
+    "primary_known_acceptance": 0.95,
+    "unknown_positive": true
+  },
+  "promotion_gate": {
+    "both_services_mean_closed_macro_f1_delta_vs_E0_min": -0.02,
+    "both_services_mean_auroc_delta_vs_E0_native_min": -0.005,
+    "overall_mean_auroc_delta_vs_E0_native_strictly_positive": true,
+    "positive_auroc_runs_vs_E0_native_min_of_6": 4,
+    "both_services_mean_ufar_at_95_max": 0.85,
+    "minimum_single_run_closed_macro_f1": 0.50,
+    "rule": "all conditions required for E4_SINGLE_BRANCH_PASS; otherwise no fusion"
+  },
+  "forbidden": [
+    "Unknown calibration or fitting",
+    "Known Test checkpoint selection or tuning",
+    "Open-Detect encoder/training/prototype reuse in E4",
+    "changing Stage16S/Stage17 splits",
+    "E3+E4 fusion in Stage18"
+  ]
+}

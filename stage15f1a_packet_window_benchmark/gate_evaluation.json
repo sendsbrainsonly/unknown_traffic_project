@@ -1,0 +1,82 @@
+{
+  "best_longer_window": "T16",
+  "class_breadth": {
+    "class_protocol_units": 52,
+    "mean_delta_f1": 0.01264916787603313,
+    "median_delta_f1": 0.0,
+    "negative_units": 23,
+    "positive_units": 23,
+    "unchanged_units": 6,
+    "units_gain_at_least_0_05": 6,
+    "units_loss_at_most_minus_0_05": 1
+  },
+  "class_breadth_pass": false,
+  "class_breadth_requirement": "median class delta > 0 and positive class-protocol units > negative units",
+  "coverage_performance_correlations": {
+    "T16_delta_vs_T8_truncation": {
+      "class_protocol_units": 52,
+      "pvalue": 0.8261402215626434,
+      "spearman_rho": 0.03121192056653091
+    },
+    "T32_delta_vs_T8_truncation": {
+      "class_protocol_units": 52,
+      "pvalue": 0.3973882648734842,
+      "spearman_rho": 0.11984955787880808
+    }
+  },
+  "focus_losses_below_minus_0_05": [
+    {
+      "class_name": "netflix",
+      "dataset": "vnat",
+      "delta_f1": -0.06862745098039225,
+      "net_rescue": -2,
+      "protocol_id": "medium_seed2025"
+    }
+  ],
+  "gate": "CLASS_CONDITIONAL_WINDOW_BENEFIT",
+  "protocol_level_global_gate_pass": true,
+  "qualifying_focus_gains": [
+    {
+      "class_name": "Hangouts",
+      "dataset": "iscx_tor",
+      "delta_f1": 0.10571317528177224,
+      "net_rescue": 6,
+      "protocol_id": "medium_seed2022"
+    },
+    {
+      "class_name": "netflix",
+      "dataset": "vnat",
+      "delta_f1": 0.2545454545454545,
+      "net_rescue": 5,
+      "protocol_id": "medium_seed2026"
+    }
+  ],
+  "t64_gate_met": false,
+  "t64_run_started": false,
+  "window_summaries": {
+    "16": {
+      "deltas": [
+        0.007812818494202067,
+        0.01599487645194453,
+        0.01117224990478527,
+        0.03611682446406406,
+        0.005718091584211216
+      ],
+      "mean_delta_macro_f1": 0.015362972179841427,
+      "positive_protocols": 5,
+      "worst_delta_macro_f1": 0.005718091584211216
+    },
+    "32": {
+      "deltas": [
+        0.0009379882552842389,
+        0.018222373093741195,
+        -0.05601031456630434,
+        0.008140279165306685,
+        0.015612087647864037
+      ],
+      "mean_delta_macro_f1": -0.0026195172808216372,
+      "positive_protocols": 4,
+      "worst_delta_macro_f1": -0.05601031456630434
+    }
+  }
+}

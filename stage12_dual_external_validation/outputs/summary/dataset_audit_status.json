@@ -1,0 +1,261 @@
+{
+  "status": "PASS",
+  "datasets": {
+    "iscx_vpn": {
+      "dataset": "iscx_vpn",
+      "root": "/home/birkenwald/data/SEU-WXY/WXY-SEU/TrafficClassifier/Dataset/ISCX-VPN",
+      "pcap_root": "/home/birkenwald/data/SEU-WXY/WXY-SEU/TrafficClassifier/Dataset/ISCX-VPN/ISCX-VPN",
+      "total_files": 140,
+      "total_size_bytes": 27682407809,
+      "pcap_files": 140,
+      "pcap_size_bytes": 27682407809,
+      "readable_pcaps": 140,
+      "unreadable_pcaps": 0,
+      "mapping_errors": [],
+      "canonical_classes_before_flow_eligibility": [
+        "AIM",
+        "BitTorrent",
+        "Email",
+        "FTPS",
+        "Facebook",
+        "Gmail",
+        "Hangouts",
+        "ICQ",
+        "Netflix",
+        "SCP",
+        "SFTP",
+        "Skype",
+        "Spotify",
+        "Vimeo",
+        "VoIPBuster",
+        "YouTube"
+      ],
+      "class_readable_group_counts": {
+        "AIM": 6,
+        "BitTorrent": 1,
+        "Email": 6,
+        "FTPS": 6,
+        "Facebook": 18,
+        "Gmail": 3,
+        "Hangouts": 15,
+        "ICQ": 6,
+        "Netflix": 5,
+        "SCP": 12,
+        "SFTP": 10,
+        "Skype": 26,
+        "Spotify": 5,
+        "Vimeo": 6,
+        "VoIPBuster": 7,
+        "YouTube": 8
+      },
+      "class_domain_states": {
+        "AIM": [
+          "NonVPN",
+          "VPN"
+        ],
+        "BitTorrent": [
+          "VPN"
+        ],
+        "Email": [
+          "NonVPN",
+          "VPN"
+        ],
+        "FTPS": [
+          "NonVPN",
+          "VPN"
+        ],
+        "Facebook": [
+          "NonVPN",
+          "VPN"
+        ],
+        "Gmail": [
+          "NonVPN"
+        ],
+        "Hangouts": [
+          "NonVPN",
+          "VPN"
+        ],
+        "ICQ": [
+          "NonVPN",
+          "VPN"
+        ],
+        "Netflix": [
+          "NonVPN",
+          "VPN"
+        ],
+        "SCP": [
+          "NonVPN"
+        ],
+        "SFTP": [
+          "NonVPN",
+          "VPN"
+        ],
+        "Skype": [
+          "NonVPN",
+          "VPN"
+        ],
+        "Spotify": [
+          "NonVPN",
+          "VPN"
+        ],
+        "Vimeo": [
+          "NonVPN",
+          "VPN"
+        ],
+        "VoIPBuster": [
+          "NonVPN",
+          "VPN"
+        ],
+        "YouTube": [
+          "NonVPN",
+          "VPN"
+        ]
+      },
+      "class_packet_counts": {
+        "AIM": 7324,
+        "BitTorrent": 422098,
+        "Email": 96660,
+        "FTPS": 8064237,
+        "Facebook": 2745210,
+        "Gmail": 12272,
+        "Hangouts": 4933869,
+        "ICQ": 12120,
+        "Netflix": 1169303,
+        "SCP": 841496,
+        "SFTP": 976132,
+        "Skype": 4821309,
+        "Spotify": 157193,
+        "Vimeo": 466377,
+        "VoIPBuster": 1569019,
+        "YouTube": 460470
+      },
+      "flow_count_status": "pending Stage12 Open-Detect preprocessing"
+    },
+    "iscx_tor": {
+      "dataset": "iscx_tor",
+      "root": "/home/birkenwald/data/SEU-WXY/WXY-SEU/TrafficClassifier/Dataset/ISCXTor2016",
+      "pcap_root": "/home/birkenwald/data/SEU-WXY/WXY-SEU/TrafficClassifier/Dataset/ISCXTor2016/ISCXTor2016（whole）/raw/pcap",
+      "total_files": 151,
+      "total_size_bytes": 44935414579,
+      "pcap_files": 95,
+      "pcap_size_bytes": 23227417524,
+      "readable_pcaps": 85,
+      "unreadable_pcaps": 10,
+      "mapping_errors": [],
+      "canonical_classes_before_flow_eligibility": [
+        "AIM",
+        "Browsing",
+        "Email",
+        "FTP",
+        "Facebook",
+        "Google",
+        "Hangouts",
+        "ICQ",
+        "P2P",
+        "SFTP",
+        "Skype",
+        "Spotify",
+        "Twitter",
+        "Vimeo",
+        "YouTube"
+      ],
+      "class_readable_group_counts": {
+        "AIM": 4,
+        "Browsing": 12,
+        "Email": 6,
+        "FTP": 2,
+        "Facebook": 9,
+        "Google": 1,
+        "Hangouts": 8,
+        "ICQ": 4,
+        "P2P": 9,
+        "SFTP": 2,
+        "Skype": 10,
+        "Spotify": 5,
+        "Twitter": 1,
+        "Vimeo": 5,
+        "YouTube": 7
+      },
+      "class_domain_states": {
+        "AIM": [
+          "NonTor",
+          "Tor"
+        ],
+        "Browsing": [
+          "NonTor",
+          "Tor"
+        ],
+        "Email": [
+          "NonTor",
+          "Tor"
+        ],
+        "FTP": [
+          "NonTor",
+          "Tor"
+        ],
+        "Facebook": [
+          "NonTor",
+          "Tor"
+        ],
+        "Google": [
+          "Tor"
+        ],
+        "Hangouts": [
+          "NonTor",
+          "Tor"
+        ],
+        "ICQ": [
+          "NonTor",
+          "Tor"
+        ],
+        "P2P": [
+          "NonTor",
+          "Tor"
+        ],
+        "SFTP": [
+          "NonTor",
+          "Tor"
+        ],
+        "Skype": [
+          "NonTor",
+          "Tor"
+        ],
+        "Spotify": [
+          "NonTor",
+          "Tor"
+        ],
+        "Twitter": [
+          "Tor"
+        ],
+        "Vimeo": [
+          "NonTor",
+          "Tor"
+        ],
+        "YouTube": [
+          "NonTor",
+          "Tor"
+        ]
+      },
+      "class_packet_counts": {
+        "AIM": 1523,
+        "Browsing": 1467414,
+        "Email": 550971,
+        "FTP": 4662932,
+        "Facebook": 1048917,
+        "Google": 10678,
+        "Hangouts": 1098806,
+        "ICQ": 1869,
+        "P2P": 10568521,
+        "SFTP": 1456750,
+        "Skype": 1100455,
+        "Spotify": 684265,
+        "Twitter": 14654,
+        "Vimeo": 2533463,
+        "YouTube": 1619058
+      },
+      "flow_count_status": "pending Stage12 Open-Detect preprocessing"
+    }
+  },
+  "training_started": false,
+  "test_opened": false
+}

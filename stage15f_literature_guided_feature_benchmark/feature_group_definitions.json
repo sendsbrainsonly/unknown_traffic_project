@@ -1,0 +1,399 @@
+{
+  "schema_version": 1,
+  "stage": "Stage 15F-0",
+  "status": "PREREGISTERED_DEFINITIONS_ONLY_NO_TRAINING",
+  "common_constraints": {
+    "allowed_development_roles": [
+      "known_train",
+      "known_validation"
+    ],
+    "forbidden_roles_for_selection": [
+      "known_test",
+      "unknown_test"
+    ],
+    "windows_to_audit": [
+      8,
+      16,
+      32,
+      64
+    ],
+    "missing_value_rule": "Missing or unrecoverable fields remain explicitly missing; zero is never used as a surrogate for missing.",
+    "normalization_rule": "Any fitted normalization in a later experiment must be fit on Known Train only and then applied unchanged to Known Validation/Test/Unknown Test."
+  },
+  "feature_groups": [
+    {
+      "id": "B0",
+      "name": "Native raw-byte image",
+      "status": "EXISTING_BASELINE",
+      "fields": [
+        "first 8 packet blocks",
+        "80 bytes zero-addressed IPv4/header serialization per packet",
+        "48 bytes Scapy Raw payload per packet"
+      ],
+      "mathematical_definition": "reshape(concat_{i=1..8}(header80_i || raw_payload48_i), 32, 32)",
+      "input_shape": "1 x 32 x 32 uint8 image; ToTensor maps to [0,1]",
+      "packet_window": 8,
+      "bytes_per_packet": 128,
+      "normalization": "No fitted dataset scaler",
+      "padding": "Zero-pad missing packet slots/bytes",
+      "truncation": "Discard packets after packet 8 and bytes beyond each fixed slot",
+      "supported_datasets": [
+        "USTC-TFC2016",
+        "VNAT",
+        "ISCX-VPN",
+        "ISCXTor2016"
+      ],
+      "requires_pcap_or_raw_packet": true,
+      "cost": "LOW_EXISTING_CACHE",
+      "leakage_risk": "Transport ports and other non-address header fields remain visible; capture/domain artifacts may be encoded."
+    },
+    {
+      "id": "B1",
+      "name": "Packet-structured bytes",
+      "status": "CANDIDATE",
+      "fields": [
+        "per-packet byte sequence",
+        "packet boundary",
+        "valid byte mask",
+        "valid packet mask"
+      ],
+      "mathematical_definition": "X[i,j]=jth retained byte of packet i; masks distinguish structural padding from observed zero bytes",
+      "input_shape": "N x L bytes plus N x L byte mask and N packet mask",
+      "packet_window": [
+        8,
+        16,
+        32,
+        64
+      ],
+      "bytes_per_packet": "to be frozen before Stage 15F-1; no search on Test",
+      "normalization": "Byte values /255; no fitted scaler",
+      "padding": "Explicit masks; right-pad packets and packet slots",
+      "truncation": "First-N packets, first-L retained bytes per packet",
+      "supported_datasets": [
+        "USTC-TFC2016",
+        "VNAT",
+        "ISCX-VPN",
+        "ISCXTor2016"
+      ],
+      "requires_pcap_or_raw_packet": true,
+      "cost": "MEDIUM",
+      "leakage_risk": "Header identifiers, ports, addresses, checksums, capture signatures and padding can leak labels unless explicitly masked."
+    },
+    {
+      "id": "B2",
+      "name": "Header-only bytes",
+      "status": "CANDIDATE_ABLATION",
+      "fields": [
+        "link/network/transport header bytes",
+        "packet boundary",
+        "valid masks"
+      ],
+      "mathematical_definition": "B2_i = serialized visible headers after preregistered identifier masking",
+      "input_shape": "N x L_header plus masks",
+      "packet_window": [
+        8,
+        16,
+        32,
+        64
+      ],
+      "bytes_per_packet": "variable headers padded to frozen L_header",
+      "normalization": "Byte values /255",
+      "padding": "Explicit mask",
+      "truncation": "First-N packets; header parsing failure is missing, not zero",
+      "supported_datasets": [
+        "USTC-TFC2016",
+        "VNAT",
+        "ISCX-VPN",
+        "ISCXTor2016"
+      ],
+      "requires_pcap_or_raw_packet": true,
+      "cost": "MEDIUM_HIGH_LAYER_PARSING",
+      "leakage_risk": "Highest direct risk from addresses, ports, sequence numbers, checksums and dataset-specific tunnel headers."
+    },
+    {
+      "id": "B3",
+      "name": "Transport-payload-only bytes",
+      "status": "CANDIDATE_ABLATION",
+      "fields": [
+        "visible TCP/UDP payload bytes",
+        "packet boundary",
+        "valid masks"
+      ],
+      "mathematical_definition": "B3_i = bytes after parsed transport header in the observed packet",
+      "input_shape": "N x L_payload plus masks",
+      "packet_window": [
+        8,
+        16,
+        32,
+        64
+      ],
+      "bytes_per_packet": "frozen L_payload in Stage 15F-1",
+      "normalization": "Byte values /255",
+      "padding": "Explicit mask",
+      "truncation": "First-N packets and first-L_payload observed bytes",
+      "supported_datasets": [
+        "USTC-TFC2016",
+        "VNAT",
+        "ISCX-VPN",
+        "ISCXTor2016"
+      ],
+      "requires_pcap_or_raw_packet": true,
+      "cost": "MEDIUM_HIGH_LAYER_PARSING",
+      "leakage_risk": "Encrypted payload can still expose record framing, lengths and deterministic capture artifacts; tunnel payload is not inner application payload."
+    },
+    {
+      "id": "B4",
+      "name": "Header plus payload with explicit boundary",
+      "status": "CANDIDATE_ABLATION",
+      "fields": [
+        "B2 header bytes",
+        "B3 payload bytes",
+        "header/payload boundary",
+        "valid masks"
+      ],
+      "mathematical_definition": "B4_i = (B2_i, separator, B3_i) with segment and validity masks",
+      "input_shape": "N x (L_header + L_payload) plus segment/mask tensors",
+      "packet_window": [
+        8,
+        16,
+        32,
+        64
+      ],
+      "bytes_per_packet": "frozen header/payload caps",
+      "normalization": "Byte values /255",
+      "padding": "Segment-aware explicit masks",
+      "truncation": "First-N packets; separate header/payload caps",
+      "supported_datasets": [
+        "USTC-TFC2016",
+        "VNAT",
+        "ISCX-VPN",
+        "ISCXTor2016"
+      ],
+      "requires_pcap_or_raw_packet": true,
+      "cost": "HIGH",
+      "leakage_risk": "Combines B2 and B3 risks; must retain identifier-masking audit."
+    },
+    {
+      "id": "T1",
+      "name": "Signed packet length plus IAT sequence",
+      "status": "EXISTING_DIAGNOSTIC_CANDIDATE",
+      "fields": [
+        "direction-signed captured frame length",
+        "inter-arrival time",
+        "valid packet mask"
+      ],
+      "mathematical_definition": "x_i=[sign(direction_i)*log(1+frame_len_i), log(1+IAT_i*1e6), mask_i]",
+      "input_shape": "N x 3",
+      "packet_window": [
+        8,
+        16,
+        32,
+        64
+      ],
+      "bytes_per_packet": null,
+      "normalization": "Known-Train median/IQR then clip to [-4,4]",
+      "padding": "Zero values with an explicit mask",
+      "truncation": "First-N packets",
+      "supported_datasets": [
+        "USTC-TFC2016",
+        "VNAT",
+        "ISCX-VPN",
+        "ISCXTor2016"
+      ],
+      "requires_pcap_or_raw_packet": false,
+      "cost": "LOW_AFTER_LINEAGE_CACHE",
+      "leakage_risk": "Capture tooling, MTU, tunnel overhead and application duration can be dataset/domain signatures."
+    },
+    {
+      "id": "T2",
+      "name": "Burst representation",
+      "status": "CANDIDATE",
+      "fields": [
+        "consecutive same-direction packet count",
+        "burst bytes",
+        "burst duration",
+        "inter-burst gap",
+        "burst direction",
+        "valid burst mask"
+      ],
+      "mathematical_definition": "Group consecutive packets with identical nonzero direction into ordered bursts and aggregate count/bytes/duration/gap",
+      "input_shape": "M x 6",
+      "packet_window": "EARLY_N_PACKET-derived or FULL_FLOW; treated as distinct configurations",
+      "bytes_per_packet": null,
+      "normalization": "Known-Train robust scaling after log1p of nonnegative magnitudes",
+      "padding": "Explicit burst mask",
+      "truncation": "First-M bursts or bursts induced by first-N packets, declared explicitly",
+      "supported_datasets": [
+        "USTC-TFC2016",
+        "VNAT",
+        "ISCX-VPN",
+        "ISCXTor2016"
+      ],
+      "requires_pcap_or_raw_packet": false,
+      "cost": "LOW_MEDIUM",
+      "leakage_risk": "Long-capture and tunnel scheduling artifacts; FULL_FLOW version uses future packets unavailable to an early detector."
+    },
+    {
+      "id": "S1",
+      "name": "Twelve audited flow statistics",
+      "status": "EXISTING_DIAGNOSTIC_CANDIDATE",
+      "fields": [
+        "packet_count",
+        "total_frame_bytes",
+        "duration_seconds",
+        "packet_length_mean",
+        "packet_length_std",
+        "iat_mean",
+        "iat_std",
+        "forward_packet_count",
+        "reverse_packet_count",
+        "smoothed_forward_reverse_ratio",
+        "direction_changes",
+        "transport_payload_bytes_when_recoverable"
+      ],
+      "mathematical_definition": "Full-flow scalar vector; unavailable payload fields remain missing and require a preregistered missingness treatment",
+      "input_shape": "12 scalars plus optional missingness indicators",
+      "packet_window": "FULL_FLOW",
+      "bytes_per_packet": null,
+      "normalization": "Known-Train log transforms plus robust scaling",
+      "padding": "Not applicable",
+      "truncation": "None; full-flow only",
+      "supported_datasets": [
+        "USTC-TFC2016",
+        "VNAT",
+        "ISCX-VPN",
+        "ISCXTor2016"
+      ],
+      "requires_pcap_or_raw_packet": false,
+      "cost": "LOW_AFTER_LINEAGE_CACHE",
+      "leakage_risk": "Duration/volume can encode capture scripts and cannot be compared directly with EARLY_N latency."
+    },
+    {
+      "id": "S2",
+      "name": "Expanded bidirectional statistics",
+      "status": "CANDIDATE",
+      "fields": [
+        "S1 fields",
+        "forward/reverse bytes",
+        "per-direction length min/max/mean/std/quartiles",
+        "per-direction IAT min/max/mean/std/quartiles",
+        "packet/byte rates",
+        "active/idle summaries",
+        "burst count/size/duration summaries",
+        "TCP/UDP protocol indicator",
+        "missingness indicators"
+      ],
+      "mathematical_definition": "Deterministic full-flow aggregates with direction defined by the first observed endpoint",
+      "input_shape": "fixed scalar vector; exact dimension frozen with extractor schema",
+      "packet_window": "FULL_FLOW",
+      "bytes_per_packet": null,
+      "normalization": "Known-Train log1p/robust scaling field-by-field",
+      "padding": "Not applicable",
+      "truncation": "None; full-flow only",
+      "supported_datasets": [
+        "USTC-TFC2016",
+        "VNAT",
+        "ISCX-VPN",
+        "ISCXTor2016"
+      ],
+      "requires_pcap_or_raw_packet": true,
+      "cost": "MEDIUM",
+      "leakage_risk": "Same as S1 plus TCP-state and capture-duration artifacts; domain metadata is excluded from the feature vector."
+    },
+    {
+      "id": "M1",
+      "name": "Byte plus temporal fusion",
+      "status": "CANDIDATE",
+      "fields": [
+        "B1 or selected B2/B3/B4 embedding",
+        "T1 and/or T2 embedding"
+      ],
+      "mathematical_definition": "Late fusion of independently encoded byte and temporal branches with a fixed preregistered fusion operator",
+      "input_shape": "two branch tensors; fused latent dimension frozen before training",
+      "packet_window": "matched EARLY_N horizon",
+      "bytes_per_packet": "inherits selected byte branch",
+      "normalization": "branch-specific Known-Train rules",
+      "padding": "inherits explicit masks",
+      "truncation": "same first-N packets for both branches",
+      "supported_datasets": [
+        "USTC-TFC2016",
+        "VNAT",
+        "ISCX-VPN",
+        "ISCXTor2016"
+      ],
+      "requires_pcap_or_raw_packet": true,
+      "cost": "HIGH",
+      "leakage_risk": "Union of byte and temporal risks; incompatible horizons must not be silently fused."
+    },
+    {
+      "id": "M2",
+      "name": "Byte plus statistical fusion",
+      "status": "CANDIDATE",
+      "fields": [
+        "selected byte embedding",
+        "S1 or S2 statistics"
+      ],
+      "mathematical_definition": "Late fusion of byte encoder output and scalar-statistics encoder output",
+      "input_shape": "byte branch plus scalar branch",
+      "packet_window": "EARLY_N+EARLY_N statistics or FULL_FLOW+FULL_FLOW only; mixed latency is a separate declared experiment",
+      "bytes_per_packet": "inherits selected byte branch",
+      "normalization": "branch-specific Known-Train rules",
+      "padding": "explicit byte masks; scalar missingness indicators",
+      "truncation": "declared per latency regime",
+      "supported_datasets": [
+        "USTC-TFC2016",
+        "VNAT",
+        "ISCX-VPN",
+        "ISCXTor2016"
+      ],
+      "requires_pcap_or_raw_packet": true,
+      "cost": "HIGH",
+      "leakage_risk": "FULL_FLOW scalar branch can invalidate an early-byte claim."
+    },
+    {
+      "id": "M3",
+      "name": "Byte plus temporal plus statistical fusion",
+      "status": "CANDIDATE_ONLY_AFTER_SINGLE_GROUP_GATE",
+      "fields": [
+        "selected byte embedding",
+        "selected temporal embedding",
+        "selected statistical embedding"
+      ],
+      "mathematical_definition": "One fixed fusion of the three independently gated feature families",
+      "input_shape": "three branches",
+      "packet_window": "latency-matched configurations only",
+      "bytes_per_packet": "inherits selected byte branch",
+      "normalization": "branch-specific Known-Train rules",
+      "padding": "explicit masks and scalar missingness indicators",
+      "truncation": "declared per latency regime",
+      "supported_datasets": [
+        "USTC-TFC2016",
+        "VNAT",
+        "ISCX-VPN",
+        "ISCXTor2016"
+      ],
+      "requires_pcap_or_raw_packet": true,
+      "cost": "VERY_HIGH",
+      "leakage_risk": "Largest capacity and artifact risk; not allowed before B/T/S single-group screening."
+    },
+    {
+      "id": "P1",
+      "name": "Frozen or minimally tuned pretrained traffic encoder",
+      "status": "OPTIONAL_AFTER_LOCAL_ASSET_AND_LICENSE_AUDIT",
+      "fields": [
+        "officially specified pretrained model input"
+      ],
+      "mathematical_definition": "z=f_pretrained(x); classifier/detector protocol held fixed",
+      "input_shape": "model-specific and must be recorded from paper plus code",
+      "packet_window": "model-specific",
+      "bytes_per_packet": "model-specific",
+      "normalization": "official implementation only unless labeled independent adaptation",
+      "padding": "model-specific",
+      "truncation": "model-specific",
+      "supported_datasets": "only datasets whose recoverable fields satisfy the official input contract",
+      "requires_pcap_or_raw_packet": true,
+      "cost": "VERY_HIGH",
+      "leakage_risk": "Pretraining corpus overlap, tokenizer/header leakage, unavailable weights, and mismatch between published and local preprocessing."
+    }
+  ]
+}

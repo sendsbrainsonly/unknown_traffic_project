@@ -1,0 +1,3 @@
+# Graph leakage audit
+
+The recovered FIG is a single-flow internal graph. Nodes are packets from that flow; edges are deterministic functions of within-flow order and direction. There are no cross-flow/capture edges, no global graph, and no labels, service names, filenames or capture IDs in features/weights. Normalization is fit on Known Train only. Known Validation calibrates/checkpoints; Unknown Test is never used for graph construction statistics, training, support, normalization or thresholding. Result: `PASS_INDUCTIVE_PER_FLOW_GRAPH`, subject to the weak capture-label limitation inherited from Stage16S.

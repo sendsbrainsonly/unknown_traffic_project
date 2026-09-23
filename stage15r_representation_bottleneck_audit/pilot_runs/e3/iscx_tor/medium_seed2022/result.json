@@ -1,0 +1,52 @@
+{
+  "best_epoch": 90,
+  "checkpoint_path": "/home/birkenwald/data/SEU-WXY/WXY-SEU/TrafficClassifier/Projects/unknown_traffic_project/stage15r_representation_bottleneck_audit/pilot_runs/e3/iscx_tor/medium_seed2022/model_best.txt",
+  "checkpoint_sha256": "b9581db9f9a3ffdb2eda59da400864b20b8fdbf749357dabd46b5be53e526f42",
+  "class_names": [
+    "Browsing",
+    "Email",
+    "FTP",
+    "Facebook",
+    "Hangouts",
+    "Spotify",
+    "Vimeo",
+    "YouTube"
+  ],
+  "dataset": "iscx_tor",
+  "epochs_completed": 140,
+  "experiment": "E3",
+  "features": [
+    "packet_count",
+    "total_bytes",
+    "duration_seconds",
+    "packet_length_mean",
+    "packet_length_std",
+    "iat_mean_seconds",
+    "iat_std_seconds",
+    "forward_packets",
+    "reverse_packets",
+    "forward_reverse_ratio",
+    "direction_changes",
+    "payload_bytes"
+  ],
+  "known_test_samples_used": 0,
+  "known_train_samples": 8876,
+  "known_validation_samples": 1107,
+  "lightgbm_version": "4.6.0",
+  "peak_gpu_memory_bytes": 0,
+  "protocol_id": "medium_seed2022",
+  "runtime_seconds": 1.6655406951904297,
+  "setting": "medium",
+  "source_audit": {
+    "missing_feature_semantics": "NaN retained for unavailable payload fields",
+    "source": "/home/birkenwald/data/SEU-WXY/WXY-SEU/TrafficClassifier/Projects/unknown_traffic_project/stage15r_representation_bottleneck_audit/feature_cache/iscx_tor/flow_statistics.csv",
+    "source_sha256": "7a855740d9e42b6a4831534663829ae3235b2b19fafbaec739119bb9b8bdd079"
+  },
+  "status": "PASS",
+  "train_loss": "NOT_RECORDED_BY_FIXED_EVAL_SET",
+  "unknown_test_samples_used": 0,
+  "validation_accuracy": 0.4977416440831075,
+  "validation_loss": 1.266387382947516,
+  "validation_macro_f1": 0.48771398379407993,
+  "validation_weighted_f1": 0.49244418562757847
+}

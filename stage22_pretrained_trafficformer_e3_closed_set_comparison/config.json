@@ -1,0 +1,57 @@
+{
+  "experiment_id": "stage22-pretrained-trafficformer-e3-closed-set-20260923-v1",
+  "method_id": "PRETRAINED-TF-E3-T8",
+  "claim_scope": "closed-set diagnostic; official pretraining exposure unverified",
+  "source_protocol": "../stage20_dual_coarse_service_protocol/closed_service_manifest.csv",
+  "source_feature_cache": "../stage21_coarse_service_ours_e3_benchmark/feature_cache",
+  "pretrained_model": "../tf_runtime/code/models/pretrained_model.bin",
+  "pretrained_model_sha256": "be9dcc1e0c6b68db005e506adf13a2d937a2f3982539a2c8a58f78c55af0d5ce",
+  "datasets": {
+    "iscx_vpn": {
+      "services": ["Chat", "Email", "File-Transfer", "P2P", "Streaming", "VoIP"],
+      "expected_flows": 10955,
+      "expected_train": 8764,
+      "expected_validation": 1098,
+      "expected_test": 1093
+    },
+    "iscx_tor": {
+      "services": ["Browsing", "Chat", "Email", "File-Transfer", "P2P", "Streaming", "VoIP"],
+      "expected_flows": 11181,
+      "expected_train": 8946,
+      "expected_validation": 1118,
+      "expected_test": 1117
+    }
+  },
+  "seeds": [2022, 2023],
+  "training": {
+    "trafficformer": {
+      "epochs": 20,
+      "batch_size": 64,
+      "learning_rate": 0.00006,
+      "seq_length": 320,
+      "pooling": "first",
+      "pretrained": true,
+      "checkpoint_criterion": "Known Validation Macro-F1"
+    },
+    "tagcn": {
+      "epochs": 50,
+      "batch_size": 64,
+      "learning_rate": 0.001,
+      "hidden_dim": 128,
+      "k_hops": 2,
+      "checkpoint_criterion": "Known Validation Macro-F1"
+    },
+    "fusion_head": {
+      "epochs": 30,
+      "batch_size": 256,
+      "learning_rate": 0.001,
+      "normalization": "Known-Train per-branch z-score",
+      "checkpoint_criterion": "Known Validation Macro-F1"
+    }
+  },
+  "evaluation": {
+    "roles": ["known_validation", "known_test"],
+    "test_for_checkpoint_selection": 0,
+    "primary_comparison": "E3 minus E1 on identical samples and shared E1 checkpoint"
+  }
+}

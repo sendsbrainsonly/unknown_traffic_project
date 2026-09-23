@@ -1,0 +1,301 @@
+{
+  "schema_version": 1,
+  "experiment_id": "stage5_dual_gate_boundary_freeze_v1",
+  "created_at_utc": "2026-09-13T02:11:26Z",
+  "updated_at_utc": "2026-09-13T02:19:29Z",
+  "status": "success",
+  "experiment_type": "method_and_protocol_freeze",
+  "claim_scope": "diagnostic",
+  "objective": "Freeze DGSB from USTC Known-only assets and freeze a CSTNET-TLS1.3 strict Unknown-free external validation protocol without training or Unknown score access.",
+  "inputs": [
+    {
+      "name": "Frozen Stage 3 Known assets",
+      "path": "../../stage3_unknown_utility/artifacts",
+      "scope": "A-1/A-2/A-3 scaler, PCA64, K2 GMM, Known Validation and Known Test only",
+      "hashes": "verified against Stage 3 frozen manifests"
+    },
+    {
+      "name": "Stage 4 Known-only thresholds and coverage",
+      "path": "../../stage4_local_boundary_diagnosis/outputs",
+      "scope": "Known-only baseline replay; post-hoc Unknown outputs excluded"
+    },
+    {
+      "name": "CSTNET suitability audit",
+      "path": "../../dataset_suitability_audit/outputs",
+      "scope": "class/PCAP inventory, label provenance and leakage-risk metadata"
+    },
+    {
+      "name": "CSTNET raw PCAP headers",
+      "path": "/home/birkenwald/data/SEU-WXY/WXY-SEU/TrafficClassifier/Dataset/CSTNET-TLS1.3",
+      "scope": "first 28 bytes per readable PCAP for first-packet timestamp grouping",
+      "inventory_fingerprint_sha256": "908cd511c40f74e7daaca9829dddd9ba92e652daafa8bedc572702008f65b476"
+    }
+  ],
+  "code": {
+    "revision": "ffcb0dfcaebe3b04b6d3bd42964d5a705303d2cc",
+    "dirty": true,
+    "changes": [
+      "stage5_dual_gate_boundary/",
+      "README.md",
+      "EXPERIMENT_RESULTS.md",
+      "未知流量_未知攻击检测_三核心问题_学生详细实验计划_公式优化版.md"
+    ]
+  },
+  "execution": {
+    "tmux_session": "stage5_formal_freeze_20260913_v1",
+    "command": "python stage5_dual_gate_boundary/scripts/run_stage5_freeze.py --output-root stage5_dual_gate_boundary/outputs",
+    "exit_code": 0,
+    "log": "../../.tmux-task/stage5_formal_freeze_20260913_v1/output.log",
+    "exit_status": "../../.tmux-task/stage5_formal_freeze_20260913_v1/exit.status",
+    "environment": "/home/birkenwald/data/SEU-WXY/conda_envs/2025-10-8-WXY-dgl_py310",
+    "physical_gpu_ids": []
+  },
+  "configuration": {
+    "files": [
+      "../configs/stage5_freeze_config.json"
+    ],
+    "parameters": {
+      "K": 2,
+      "covariance_type": "full",
+      "reg_covar": 0.001,
+      "pca_dimension": 64,
+      "local_quantile": 0.05,
+      "minimum_local_validation_samples": 30,
+      "global_target_acceptance": 0.95,
+      "cstnet_minimum_class_samples": 100,
+      "capture_group_window_seconds": 60
+    },
+    "seeds": [
+      42,
+      43,
+      44
+    ]
+  },
+  "core_results": [
+    {
+      "metric": "final_gate",
+      "value": "READY"
+    },
+    {
+      "metric": "dgsb_rule_sha256",
+      "value": "959f0a0dba96bb3c8b0519cc2c15f3ca3a9520df4de9d08636924415fe70c6a0"
+    },
+    {
+      "metric": "dgsb_validation_acceptance",
+      "A-1": 0.9499989596121434,
+      "A-2": 0.9499896148254136,
+      "A-3": 0.9494611957309875
+    },
+    {
+      "metric": "dgsb_known_test_frr",
+      "A-1": 0.04902103659932169,
+      "A-2": 0.05051671191728931,
+      "A-3": 0.05007123429607564
+    },
+    {
+      "metric": "cstnet_classes",
+      "raw": 120,
+      "eligible": 119,
+      "excluded": 1
+    },
+    {
+      "metric": "fold_class_counts",
+      "low_known_unknown": "113/6",
+      "medium_known_unknown": "101/18",
+      "high_known_unknown": "89/30"
+    },
+    {
+      "metric": "split_hashes",
+      "value": "PASS"
+    },
+    {
+      "metric": "ustc_unknown_inputs_accessed",
+      "value": 0
+    },
+    {
+      "metric": "cstnet_training_executed",
+      "value": false
+    },
+    {
+      "metric": "cstnet_unknown_scores_accessed",
+      "value": false
+    }
+  ],
+  "artifacts": [
+    {
+      "path": "cstnet_protocol/class_inventory.csv",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 17621,
+      "sha256": "d9c258015463240589352192f2110022e91271ff91903f1ba6d0543c19912122",
+      "hash_status": "verified"
+    },
+    {
+      "path": "cstnet_protocol/cstnet_open_set_protocol.json",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 18635,
+      "sha256": "fc8474c9b137ecde4566b92702b7a89df772c936bddd72d6aca80447a3e043c6",
+      "hash_status": "verified"
+    },
+    {
+      "path": "cstnet_protocol/cstnet_open_set_protocol.md",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 3205,
+      "sha256": "d91d351eba169d67e70eee8fc7517913fa6bf4894eb711f1fa6681a67e5cc46f",
+      "hash_status": "verified"
+    },
+    {
+      "path": "cstnet_protocol/eligibility_thresholds.csv",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 330,
+      "sha256": "a47537d78be160edbddda3b5a9afea94cbc14a691076c5dd8fb2eaabc66d6e55",
+      "hash_status": "verified"
+    },
+    {
+      "path": "cstnet_protocol/fold_selection_audit.csv",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 2322,
+      "sha256": "bbc260857d5779a7769ae7584204419c8879c4b1bde19e302ade17c3386279bd",
+      "hash_status": "verified"
+    },
+    {
+      "path": "cstnet_protocol/grouping_audit.csv",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 3885056,
+      "sha256": "7232b699844993bf0b35b3d433bf1bf9b9cc7897337c10a145488aa01be0ef85",
+      "hash_status": "verified"
+    },
+    {
+      "path": "cstnet_protocol/high_fold.json",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 3588,
+      "sha256": "5dcbaed0e479d8529675f69d31a07fded8fc3f4e622d8837c849fcf6ea46714d",
+      "hash_status": "verified"
+    },
+    {
+      "path": "cstnet_protocol/low_fold.json",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 3352,
+      "sha256": "d63ff1295d2b04b5c35575a126405269b460fc9b406f24594018c7ca1cf2d5d1",
+      "hash_status": "verified"
+    },
+    {
+      "path": "cstnet_protocol/medium_fold.json",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 3356,
+      "sha256": "8e807203bd5b3b83f7ce97fadf85af325e6360a809f96c4e64e8c5ad4a858515",
+      "hash_status": "verified"
+    },
+    {
+      "path": "cstnet_protocol/split_hashes.sha256",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 874,
+      "sha256": "11cf607d54532689f54ee56b879a886267f6e0b6745e442151791c2f03d38059",
+      "hash_status": "verified"
+    },
+    {
+      "path": "cstnet_protocol/split_manifest.csv",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 22942545,
+      "sha256": "defe5a23f74ff83f493ccacd8a99370333fedf258ce4b9c6211ea12436edf167",
+      "hash_status": "verified"
+    },
+    {
+      "path": "rule_freeze/class_thresholds.csv",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 2184,
+      "sha256": "400a86104d8043a56520d96534fcb3c74c67eab3cd847faf6fab4d778dbb4f80",
+      "hash_status": "verified"
+    },
+    {
+      "path": "rule_freeze/dgsb_calibration.csv",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 608,
+      "sha256": "1cd75acfd53cf2436f5d3cec9c5e460c02588e43747c16ead381af9544de5015",
+      "hash_status": "verified"
+    },
+    {
+      "path": "rule_freeze/dgsb_rule.json",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 24653,
+      "sha256": "959f0a0dba96bb3c8b0519cc2c15f3ca3a9520df4de9d08636924415fe70c6a0",
+      "hash_status": "verified"
+    },
+    {
+      "path": "rule_freeze/dgsb_rule.md",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 1409,
+      "sha256": "e9e9b7862693aa85f5b963f6f666715244a28a24de72cad8396d4a21784cb032",
+      "hash_status": "verified"
+    },
+    {
+      "path": "rule_freeze/dgsb_rule.sha256",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 81,
+      "sha256": "182880285cf5a8926cf32106db4ea2808db0f4e3a37a63eb676d6752e3c74d72",
+      "hash_status": "verified"
+    },
+    {
+      "path": "rule_freeze/known_only_run_metadata.json",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 10918,
+      "sha256": "00a7ac15a0d5bf8a69478d10061a6336b7bbed27860637e24c03112a01b075c2",
+      "hash_status": "verified"
+    },
+    {
+      "path": "rule_freeze/known_only_sanity.csv",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 140243,
+      "sha256": "8efdc1086195c9d83ff32e747bdbf8b467cdf07c1566709d8bcf396e6adb89e1",
+      "hash_status": "verified"
+    },
+    {
+      "path": "rule_freeze/local_component_thresholds.csv",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 7067,
+      "sha256": "7962687a8939922d5a32654159de12dffba22754bb08c3b055292cdd03daa3cc",
+      "hash_status": "verified"
+    },
+    {
+      "path": "rule_freeze/unknown_access_audit.md",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 4751,
+      "sha256": "53df5d842e24c11cbe003acb91082ed570f35ae6280a149e04249fccd9524a66",
+      "hash_status": "verified"
+    },
+    {
+      "path": "stage5_run_metadata.json",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 1223,
+      "sha256": "f574d06138d395b5c74ef8620c61178fafc0664f1c5eb3f405cbb601934332ff",
+      "hash_status": "verified"
+    }
+  ],
+  "limitations": [
+    "USTC Unknown is not evaluated in Stage 5; Known-only sanity is not a performance claim.",
+    "CSTNET has no authoritative capture/session manifest; the one-minute first-packet group is a proxy.",
+    "Domain is the class label and endpoint metadata remains unparsed, so shortcut risk is PROTOCOL_RISK.",
+    "CSTNET external training and Unknown evaluation have not started."
+  ],
+  "next_step": "In a separate task, verify frozen hashes and execute the first CSTNET strict Unknown-free external validation without modifying the rule or folds."
+}

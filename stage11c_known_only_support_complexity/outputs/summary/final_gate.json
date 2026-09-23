@@ -1,0 +1,80 @@
+{
+  "final_gate": "WEAK_SIGNAL",
+  "mechanism": "C4",
+  "rule_evaluations": {
+    "Rule-NLL": {
+      "checks": {
+        "avoids_a1_harm": false,
+        "retains_a2_gain": true,
+        "a3_no_severe_misselection": true,
+        "loso_direction_reasonable": false,
+        "adaptive_not_below_always_r1": true,
+        "known_only": true
+      },
+      "passed_checks": 4,
+      "all_checks_pass": false,
+      "a1_r2_count": 5,
+      "a2_r2_count": 5,
+      "a3_severe_errors": 0,
+      "adaptive_mean_auroc": 0.9754406909393346,
+      "always_r1_mean_auroc": 0.9709819111448048
+    },
+    "Rule-F1": {
+      "checks": {
+        "avoids_a1_harm": true,
+        "retains_a2_gain": false,
+        "a3_no_severe_misselection": true,
+        "loso_direction_reasonable": false,
+        "adaptive_not_below_always_r1": true,
+        "known_only": true
+      },
+      "passed_checks": 4,
+      "all_checks_pass": false,
+      "a1_r2_count": 0,
+      "a2_r2_count": 1,
+      "a3_severe_errors": 0,
+      "adaptive_mean_auroc": 0.9709956148485086,
+      "always_r1_mean_auroc": 0.9709819111448048
+    },
+    "Rule-Stability": {
+      "checks": {
+        "avoids_a1_harm": true,
+        "retains_a2_gain": false,
+        "a3_no_severe_misselection": true,
+        "loso_direction_reasonable": false,
+        "adaptive_not_below_always_r1": true,
+        "known_only": true
+      },
+      "passed_checks": 4,
+      "all_checks_pass": false,
+      "a1_r2_count": 0,
+      "a2_r2_count": 2,
+      "a3_severe_errors": 0,
+      "adaptive_mean_auroc": 0.9741360613097051,
+      "always_r1_mean_auroc": 0.9709819111448048
+    }
+  },
+  "stability_loso_training_medians": {
+    "a1": 0.102087627907645,
+    "a2": 0.10276818954826271,
+    "a3": 0.10493731177055746
+  },
+  "highest_absolute_spearman_feature": {
+    "feature": "geometry_pca64_anisotropy_ratio_mean",
+    "n": 15,
+    "spearman_rho": 0.7499999999999999,
+    "spearman_p_value": 0.001280898450935536,
+    "pearson_r": 0.5995844750418431,
+    "pearson_p_value": 0.018151033088428727,
+    "outcome": "OUTCOME_ONLY_delta_cov_auroc",
+    "analysis_scope": "EXPLORATORY_ONLY",
+    "used_for_threshold_mining": false
+  },
+  "unknown_feature_used_for_criterion": false,
+  "known_test_feature_used_for_criterion": false,
+  "cipherspectrum_stage9_sample_level_test_used": false,
+  "new_training": false,
+  "new_detector_fitting": false,
+  "frozen_experiment_modified": false,
+  "next_stage_started": false
+}

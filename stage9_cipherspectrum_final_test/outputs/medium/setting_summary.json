@@ -1,0 +1,69 @@
+{
+  "bootstrap": [
+    {
+      "bootstrap_iterations": 1000,
+      "ci_high": 0.05183333333333329,
+      "ci_low": 0.043831944444444396,
+      "delta": 0.047666666666666746,
+      "metric": "DeltaUFAR",
+      "seed": 0
+    },
+    {
+      "bootstrap_iterations": 1000,
+      "ci_high": -0.012909061009702356,
+      "ci_low": -0.018746916625555006,
+      "delta": -0.015951323795428386,
+      "metric": "Delta Known FRR",
+      "seed": 0
+    },
+    {
+      "bootstrap_iterations": 1000,
+      "ci_high": -0.010806258450730034,
+      "ci_low": -0.016591058328308584,
+      "delta": -0.013670380419887218,
+      "metric": "DeltaAUROC",
+      "seed": 0
+    },
+    {
+      "bootstrap_iterations": 1000,
+      "ci_high": -0.041027376749961764,
+      "ci_low": -0.051830282344260806,
+      "delta": -0.04640805106403978,
+      "metric": "DeltaAUPRC",
+      "seed": 0
+    }
+  ],
+  "known_positive_for_auc": true,
+  "known_test_n": 12162,
+  "methods": [
+    "Native",
+    "Single-Full-K1",
+    "Multi-Global-K2",
+    "Class-P05-K2",
+    "Component-P05-K2",
+    "DGSB-v2"
+  ],
+  "methods_modified_after_test_open": false,
+  "post_test_tuning_performed": false,
+  "primary": {
+    "DGSB AUPRC": 0.6485697366228149,
+    "DGSB AUROC": 0.7817150185459262,
+    "DGSB Known FRR": 0.031902647590856814,
+    "DGSB UFAR": 0.5915,
+    "Delta Known FRR": -0.015951323795428296,
+    "DeltaAUPRC": -0.04640805106403978,
+    "DeltaAUROC": -0.013670380419887218,
+    "DeltaUFAR": 0.047666666666666746,
+    "Multi AUPRC": 0.6949777876868547,
+    "Multi AUROC": 0.7953853989658134,
+    "Multi Known FRR": 0.04785397138628511,
+    "Multi UFAR": 0.5438333333333333,
+    "candidate": "DGSB-v2",
+    "primary_conclusion": "TRADEOFF",
+    "reference": "Multi-Global-K2",
+    "setting": "medium"
+  },
+  "setting": "medium",
+  "status": "COMPLETE",
+  "unknown_test_n": 18000
+}

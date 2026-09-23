@@ -1,0 +1,43 @@
+{
+  "analysis_scope": "POST_HOC_DIAGNOSTIC_ONLY",
+  "optimizer_tracking_after_replacement": "old Parameter remains in optimizer; replacement Parameter is not re-registered",
+  "reset_helper_source": "/home/birkenwald/data/SEU-WXY/WXY-SEU/TrafficClassifier/Projects/unknown_traffic_project/opendetect_ustc_encoder_audit/scripts/train_opendetect.py",
+  "reset_helper_source_sha256": "ea09f228256bbb447328a4e57b64e65a32028e0ead1d3d57df29c531449f2e92",
+  "risk_realized_in_frozen_runs": false,
+  "scheduled_logged_epochs": [
+    51,
+    81
+  ],
+  "scheduled_zero_based_epoch_indices": [
+    50,
+    80
+  ],
+  "setting_rows": [
+    {
+      "best_epoch": 26,
+      "epochs_recorded": 31,
+      "prototype_reset_executions": 0,
+      "setting": "low",
+      "stop_epoch": 31
+    },
+    {
+      "best_epoch": 22,
+      "epochs_recorded": 27,
+      "prototype_reset_executions": 0,
+      "setting": "medium",
+      "stop_epoch": 27
+    },
+    {
+      "best_epoch": 22,
+      "epochs_recorded": 27,
+      "prototype_reset_executions": 0,
+      "setting": "high",
+      "stop_epoch": 27
+    }
+  ],
+  "stage7_reuses_corrected_ustc_helper": true,
+  "status": "PROTOTYPE_OPTIMIZER_RISK",
+  "train_source": "/home/birkenwald/data/SEU-WXY/WXY-SEU/TrafficClassifier/Projects/unknown_traffic_project/stage3_unknown_utility/scripts/train_known_only.py",
+  "train_source_sha256": "5e22b0d5804b227e7e58ba4a69ee71f41c4a8c1061ceff15308783d6863e28c8",
+  "update_semantics": "Parameter replacement"
+}

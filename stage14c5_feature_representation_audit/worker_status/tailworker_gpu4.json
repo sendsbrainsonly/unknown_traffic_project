@@ -1,0 +1,34 @@
+{
+  "completed_tasks": 5,
+  "failed_tasks": 0,
+  "records": [
+    {
+      "returncode": 0,
+      "status": "success",
+      "task": "f2:high_seed2024"
+    },
+    {
+      "returncode": 0,
+      "status": "success",
+      "task": "f3:high_seed2024"
+    },
+    {
+      "returncode": 0,
+      "status": "success",
+      "task": "f1:high_seed2026"
+    },
+    {
+      "returncode": 0,
+      "status": "success",
+      "task": "f2:high_seed2026"
+    },
+    {
+      "returncode": 0,
+      "status": "success",
+      "task": "f3:high_seed2026"
+    }
+  ],
+  "total_tasks": 5,
+  "worker_complete": true,
+  "worker_id": "tailworker_gpu4"
+}

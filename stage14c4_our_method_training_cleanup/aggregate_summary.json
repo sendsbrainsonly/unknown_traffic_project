@@ -1,0 +1,11 @@
+{
+  "conclusion": "NEEDS_FURTHER_DIAGNOSIS",
+  "des_executed": false,
+  "known_test_samples_used": 0,
+  "normal_macro_f1_change": 0.24811259230871174,
+  "primary_runs_completed_100_epochs": true,
+  "seed_sensitivity_reduced_both": true,
+  "status": "PASS",
+  "unknown_test_samples_used": 0,
+  "weak_macro_f1_recovery": 0.07393364622504517
+}

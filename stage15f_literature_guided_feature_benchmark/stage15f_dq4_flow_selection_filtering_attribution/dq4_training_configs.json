@@ -1,0 +1,128 @@
+{
+  "status": "FROZEN_BEFORE_DQ4_TRAINING",
+  "mother_population": 3065,
+  "models": {
+    "M-A": {
+      "subset": "A",
+      "action": "REUSE_DQ3F_F3",
+      "reuse_parity": {
+        "status": "PASS",
+        "seeds": {
+          "2022": {
+            "classes": true,
+            "train_count": true,
+            "validation_count": true,
+            "train_array_digest": true,
+            "validation_array_digest": true,
+            "prediction_flow_order": true,
+            "checkpoint_sha256": true
+          },
+          "2023": {
+            "classes": true,
+            "train_count": true,
+            "validation_count": true,
+            "train_array_digest": true,
+            "validation_array_digest": true,
+            "prediction_flow_order": true,
+            "checkpoint_sha256": true
+          },
+          "2024": {
+            "classes": true,
+            "train_count": true,
+            "validation_count": true,
+            "train_array_digest": true,
+            "validation_array_digest": true,
+            "prediction_flow_order": true,
+            "checkpoint_sha256": true
+          }
+        }
+      }
+    },
+    "M-B": {
+      "subset": "B",
+      "action": "TRAIN"
+    },
+    "M-C": {
+      "subset": "C_FINAL",
+      "action": "TRAIN"
+    },
+    "M-D": {
+      "subset": "D",
+      "action": "TRAIN"
+    }
+  },
+  "seeds": [
+    2022,
+    2023,
+    2024
+  ],
+  "training": {
+    "architecture": "resnet18",
+    "channels": 1,
+    "latent_dim": 128,
+    "epochs": 100,
+    "batch_size": 128,
+    "eval_batch_size": 256,
+    "workers": 0,
+    "optimizer": "Adam",
+    "learning_rate": 0.001,
+    "betas": [
+      0.9,
+      0.999
+    ],
+    "lambda": 0.005,
+    "scheduler_milestones": [
+      50,
+      80
+    ],
+    "scheduler_gamma": 0.1,
+    "prototype_reset_zero_based_epochs": [
+      50,
+      80
+    ],
+    "checkpoint_criterion": "Known Validation accuracy",
+    "early_stop_patience": 10,
+    "early_stop_min_epoch": 82,
+    "early_stop_min_delta": 0.0001,
+    "training_protocol": "corrected-paper"
+  },
+  "feasibility": [
+    {
+      "model": "M-B",
+      "subset": "B",
+      "status": "PASS_WITH_LOW_VALIDATION_SUPPORT",
+      "missing_services": [],
+      "empty_service_splits": [],
+      "min_train_support": 61,
+      "min_validation_support": 4,
+      "train_flows": 1864,
+      "validation_flows": 237
+    },
+    {
+      "model": "M-C",
+      "subset": "C_FINAL",
+      "status": "PASS_WITH_LOW_VALIDATION_SUPPORT",
+      "missing_services": [],
+      "empty_service_splits": [],
+      "min_train_support": 44,
+      "min_validation_support": 6,
+      "train_flows": 1367,
+      "validation_flows": 184
+    },
+    {
+      "model": "M-D",
+      "subset": "D",
+      "status": "PASS_WITH_LOW_VALIDATION_SUPPORT",
+      "missing_services": [],
+      "empty_service_splits": [],
+      "min_train_support": 44,
+      "min_validation_support": 4,
+      "train_flows": 1269,
+      "validation_flows": 171
+    }
+  ],
+  "known_test_feature_values_used": 0,
+  "unknown_test_feature_values_used": 0,
+  "capture_generalization_claim": "CAPTURE_GENERALIZATION_NOT_IDENTIFIABLE",
+  "labels": "WEAK_CAPTURE_LABEL"
+}

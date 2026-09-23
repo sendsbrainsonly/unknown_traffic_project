@@ -1,0 +1,37 @@
+{
+  "author_code_commit": "b50a18515a01799468c10f6c9b60c01f8a6a4e7c",
+  "batch_size": 1024,
+  "channels": 1,
+  "checkpoint_selection": "highest validation accuracy; validation only",
+  "cuda_device_name": "NVIDIA L20",
+  "epochs": 3,
+  "gamma_paper": 1.0,
+  "image_parameters": {
+    "header_bytes_per_packet": 80,
+    "ip_anonymization": "0.0.0.0",
+    "packets": 8,
+    "payload_bytes_per_packet": 48,
+    "shape": [
+      32,
+      32
+    ]
+  },
+  "lambda": 0.005,
+  "latent_dimension": 128,
+  "learning_rate": 0.001,
+  "mode": "smoke",
+  "num_classes": 20,
+  "optimizer": "Adam(beta1=0.9,beta2=0.999)",
+  "physical_gpu": "1",
+  "released_semantics": true,
+  "scheduler": "MultiStepLR(milestones=[50,80],gamma=0.1)",
+  "seed": 2022,
+  "temp_inter_code": 1.0,
+  "temp_intra_code": 1.0,
+  "torch_version": "2.8.0+cu128",
+  "train_samples": 5120,
+  "upstream_code": "/home/birkenwald/data/SEU-WXY/WXY-SEU/TrafficClassifier/Projects/Open-Detect/code",
+  "validation_samples": 1280,
+  "visible_device": "cuda:0",
+  "workers": 0
+}

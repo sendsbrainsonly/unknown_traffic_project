@@ -1,0 +1,51 @@
+{
+  "best_epoch": 84,
+  "checkpoint_path": "/home/birkenwald/data/SEU-WXY/WXY-SEU/TrafficClassifier/Projects/unknown_traffic_project/stage15r_representation_bottleneck_audit/pilot_runs/e3/vnat/medium_seed2025/model_best.txt",
+  "checkpoint_sha256": "a33ecae88b7981308bac728eafc23f50b250f2b1cbf7e12b0bbfb37ef207910d",
+  "class_names": [
+    "netflix",
+    "rdp",
+    "rsync",
+    "scp",
+    "skype",
+    "ssh",
+    "youtube"
+  ],
+  "dataset": "vnat",
+  "epochs_completed": 134,
+  "experiment": "E3",
+  "features": [
+    "packet_count",
+    "total_bytes",
+    "duration_seconds",
+    "packet_length_mean",
+    "packet_length_std",
+    "iat_mean_seconds",
+    "iat_std_seconds",
+    "forward_packets",
+    "reverse_packets",
+    "forward_reverse_ratio",
+    "direction_changes",
+    "payload_bytes"
+  ],
+  "known_test_samples_used": 0,
+  "known_train_samples": 15704,
+  "known_validation_samples": 1960,
+  "lightgbm_version": "4.6.0",
+  "peak_gpu_memory_bytes": 0,
+  "protocol_id": "medium_seed2025",
+  "runtime_seconds": 1.9319968223571777,
+  "setting": "Medium",
+  "source_audit": {
+    "missing_feature_semantics": "VNAT full-flow forward/reverse counts and payload bytes unavailable; retained as NaN; direction_changes uses first 8 packets",
+    "source": "/home/birkenwald/data/SEU-WXY/WXY-SEU/TrafficClassifier/Projects/unknown_traffic_project/stage14c5_feature_representation_audit/raw_feature_cache",
+    "source_sha256": "a0e00f0c228173dd672c929f92edb9e0c8b3544f074f6f325a70429c4fb380e5"
+  },
+  "status": "PASS",
+  "train_loss": "NOT_RECORDED_BY_FIXED_EVAL_SET",
+  "unknown_test_samples_used": 0,
+  "validation_accuracy": 0.8989795918367347,
+  "validation_loss": 0.1797047897243917,
+  "validation_macro_f1": 0.7745616818744697,
+  "validation_weighted_f1": 0.8935134946117574
+}

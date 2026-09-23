@@ -1,0 +1,227 @@
+{
+  "schema_version": 1,
+  "experiment_id": "stage15f-dq3r-service-label-reconstruction-20260920-v1",
+  "created_at_utc": "2026-09-20T05:50:29Z",
+  "updated_at_utc": "2026-09-20T06:25:10Z",
+  "status": "success",
+  "experiment_type": "data_protocol_audit",
+  "claim_scope": "diagnostic",
+  "objective": "Reconstruct auditable service labels for shared31 ISCX-VPN Known Train/Validation flows, audit grouped feasibility, and preregister DQ-3F without training.",
+  "inputs": [
+    {
+      "path": "/home/birkenwald/data/SEU-WXY/WXY-SEU/TrafficClassifier/Projects/unknown_traffic_project/stage15f_literature_guided_feature_benchmark/stage15f_dq_performance_gap_attribution/cross_project_pcap_manifest.csv",
+      "role": "frozen DQ capture alignment"
+    },
+    {
+      "path": "/home/birkenwald/data/SEU-WXY/WXY-SEU/TrafficClassifier/Projects/unknown_traffic_project/stage15f_literature_guided_feature_benchmark/stage15f_dq_performance_gap_attribution/cross_project_flow_manifest.csv",
+      "role": "frozen DQ flow alignment"
+    },
+    {
+      "path": "/home/birkenwald/data/SEU-WXY/WXY-SEU/TrafficClassifier/Projects/unknown_traffic_project/stage12_dual_external_validation/protocol/iscx_vpn/split_manifest.csv",
+      "role": "frozen membership and flow IDs"
+    },
+    {
+      "url": "https://www.unb.ca/cic/datasets/vpn.html",
+      "role": "primary ISCXVPN2016 service taxonomy"
+    }
+  ],
+  "code": {
+    "revision": null,
+    "dirty": null,
+    "changes": []
+  },
+  "execution": {
+    "tmux_session": "s15fdq3r_run_audit_20260920",
+    "command": "python scripts/run_dq3r_audit.py",
+    "exit_code": 0,
+    "environment": "/home/birkenwald/data/SEU-WXY/conda_envs/2025-10-8-WXY-dgl_py310",
+    "physical_gpu_ids": []
+  },
+  "configuration": {
+    "files": [
+      "dq3f_preregistered_config.json"
+    ],
+    "parameters": {
+      "setting": "medium",
+      "seed": 2022,
+      "allowed_roles": [
+        "known_train",
+        "known_validation"
+      ]
+    },
+    "seeds": [
+      2022
+    ]
+  },
+  "core_results": [
+    {
+      "name": "decision",
+      "value": "SERVICE_TASK_FEASIBLE_WITH_WEAK_LABELS"
+    },
+    {
+      "name": "service_label_provenance_rows",
+      "value": 3065
+    },
+    {
+      "name": "weak_capture_label_rows",
+      "value": 3065
+    },
+    {
+      "name": "capture_group_all_services_feasible",
+      "value": false
+    }
+  ],
+  "artifacts": [
+    {
+      "path": "capture_group_feasibility.md",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 1291,
+      "sha256": "9857c6a600d8dc8ea09deab4b600db3bf31795b15665d07900c26099bb3d4441",
+      "hash_status": "verified"
+    },
+    {
+      "path": "capture_service_mapping_audit.csv",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 8872,
+      "sha256": "6c87c548c9c9c0cff3e982b16614616614383e3c5536b4da46e5681807248e83",
+      "hash_status": "verified"
+    },
+    {
+      "path": "coarse_open_set_semantics.md",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 1447,
+      "sha256": "2f2ab5923325d0b74d77d1c3f2eb351ba6256435fe9cdd6421cc2882b73e6d82",
+      "hash_status": "verified"
+    },
+    {
+      "path": "completion_verification.json",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 814,
+      "sha256": "a92f8936b971b0c49cbfdf4a6879bf0383ab1e3f82dee5bb429e942409eccd63",
+      "hash_status": "verified"
+    },
+    {
+      "path": "dq3f_preregistered_config.json",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 1140,
+      "sha256": "a62ba6617aca9aa03ca474fb1a2d88d2e941928d3a9656eb270be81890dcc7f1",
+      "hash_status": "verified"
+    },
+    {
+      "path": "dq3f_preregistered_protocol.md",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 2144,
+      "sha256": "dc0a1aaae8d78146066184b44071a9fe8c71643093786f1fa5a6904e7f9eafa7",
+      "hash_status": "verified"
+    },
+    {
+      "path": "dq3r_report.md",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 3348,
+      "sha256": "dd3822be08b549328c4900d42828a19b3d69f6db38699ee211fc857c91597e48",
+      "hash_status": "verified"
+    },
+    {
+      "path": "failed_attempts/README.md",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 736,
+      "sha256": "802f9c8f79dbadeb98830a1baf8a3b154eab3ddff135c6cf75b5b1a37cfc5eec",
+      "hash_status": "verified"
+    },
+    {
+      "path": "frozen_asset_hashes_after.json",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 4977,
+      "sha256": "82f843fcf503bd681b94413f817269e051e97f67b0170ccaf7063ab15d059438",
+      "hash_status": "verified"
+    },
+    {
+      "path": "frozen_asset_hashes_before.json",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 4978,
+      "sha256": "ae0040bf06639f645bbe4a5fdcf385bc3e4bd769fcfb2c2db30f647dc0afee1b",
+      "hash_status": "verified"
+    },
+    {
+      "path": "scripts/hash_frozen_inputs.py",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 2914,
+      "sha256": "77e5f4025c1872c161bdd879baf71da94fdcd493a4c2ac353b9a8c8a614bb60c",
+      "hash_status": "verified"
+    },
+    {
+      "path": "scripts/run_dq3r_audit.py",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 29644,
+      "sha256": "aa3f685573438238b50639b50d5d6bc362af2796141ae1922b4c50249766d8f6",
+      "hash_status": "verified"
+    },
+    {
+      "path": "scripts/verify_dq3r.py",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 5553,
+      "sha256": "d84d8a6004e16ea3a3a623998b0db5191d73f9b017ea9f7cef942d6bb4bcec19",
+      "hash_status": "verified"
+    },
+    {
+      "path": "service_label_mapping_audit.md",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 2046,
+      "sha256": "2229d788905ce0286d290eed6c5748d514ac81887abc222751c89d9b8427924a",
+      "hash_status": "verified"
+    },
+    {
+      "path": "service_label_provenance.csv",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 1593916,
+      "sha256": "3cd5b481a900d90e26ba38c5f564861c11b72ecf9ce20307bed9febac24c98ec",
+      "hash_status": "verified"
+    },
+    {
+      "path": "service_label_status_definitions.json",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 396,
+      "sha256": "ec17ec0a2fca747b8e36fbb637d2f5a5aec5232e3138e75ef4276647ba2ecae8",
+      "hash_status": "verified"
+    },
+    {
+      "path": "service_open_set_overlap.csv",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 1158,
+      "sha256": "1b89c3f372eaecc660985dedd1b47e2e00b98f65b5346aefb4dacc03d87371bb",
+      "hash_status": "verified"
+    },
+    {
+      "path": "service_train_val_support.csv",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 1436,
+      "sha256": "fac03feb275c076d6d164b47856d162ae962bb92a3cbe9c65e7c75a2bdc4bfc8",
+      "hash_status": "verified"
+    }
+  ],
+  "limitations": [
+    "Capture activity is not authoritative per-flow truth.",
+    "P2P has one capture, blocking a six-Service capture-disjoint Train/Validation split.",
+    "Existing Fine Unknown applications overlap Known Service semantics.",
+    "No model was trained and no Test feature values were opened."
+  ],
+  "next_step": "Run DQ-3F only after explicit authorization; keep it a weak-label flow-level diagnostic and do not infer group-generalized or open-set performance."
+}

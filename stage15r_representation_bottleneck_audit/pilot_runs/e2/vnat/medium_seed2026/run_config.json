@@ -1,0 +1,150 @@
+{
+  "invocation": {
+    "dataset": "vnat",
+    "device": "cuda:0",
+    "experiment": "E2",
+    "protocol_id": "medium_seed2026",
+    "setting": "Medium"
+  },
+  "stage15r_config": {
+    "claim_scope": "diagnostic",
+    "created_utc": "2026-09-19",
+    "e1": {
+      "input": "frozen Open-Detect 32x32 uint8 image",
+      "model": "torchvision ResNet18 with one input channel and a multiclass linear head",
+      "objective": "CrossEntropyLoss",
+      "removed_relative_to_e0": [
+        "variational reconstruction objective",
+        "Gaussian KL regularization",
+        "prototype distance loss",
+        "prototype reset"
+      ]
+    },
+    "e2": {
+      "features": [
+        "signed log1p(frame length)",
+        "log1p(inter-arrival time in microseconds)",
+        "valid-packet mask"
+      ],
+      "max_packets": 8,
+      "model": "fixed two-block 1D-CNN (3->64->128 channels, kernel=3) with masked global pooling and linear head",
+      "normalization": "Known-Train-only median/IQR, clip to [-4,4]",
+      "objective": "CrossEntropyLoss",
+      "rationale": "eight packets matches the current Open-Detect information horizon and is supported by every frozen lineage"
+    },
+    "e3": {
+      "dependency_policy": "must use real lightgbm; no sklearn model may be relabeled as LightGBM",
+      "features": [
+        "packet_count",
+        "total_bytes",
+        "duration",
+        "packet_length_mean",
+        "packet_length_std",
+        "iat_mean",
+        "iat_std",
+        "forward_packet_count",
+        "reverse_packet_count",
+        "forward_reverse_ratio",
+        "direction_changes",
+        "payload_bytes_when_recoverable"
+      ],
+      "implementation": "lightgbm 4.6.0 project-local wheel",
+      "model": "LightGBM multiclass",
+      "parameters": {
+        "checkpoint_criterion": "Known Validation multiclass_logloss",
+        "colsample_bytree": 1.0,
+        "deterministic": true,
+        "early_stopping_rounds": 50,
+        "force_col_wise": true,
+        "learning_rate": 0.05,
+        "max_depth": -1,
+        "min_child_samples": 20,
+        "n_estimators": 500,
+        "n_jobs": 4,
+        "num_leaves": 31,
+        "random_state": 2022,
+        "reg_alpha": 0.0,
+        "reg_lambda": 0.0,
+        "subsample": 1.0
+      }
+    },
+    "forbidden_model_selection_roles": [
+      "known_test",
+      "unknown_test"
+    ],
+    "pilot_gate": {
+      "clear_candidate_mean_delta_macro_f1": 0.03,
+      "diagnostic_candidate_mean_delta_macro_f1": 0.015,
+      "diagnostic_minimum_positive_protocols": 3,
+      "maximum_allowed_worst_delta_macro_f1": -0.02,
+      "minimum_positive_protocols": 4,
+      "notes": "Gate is frozen before pilot training. A candidate failing the clear gate is not expanded to full protocols merely because of one high seed."
+    },
+    "pilot_protocols": [
+      {
+        "dataset": "iscx_vpn",
+        "protocol_id": "medium_seed2022",
+        "reason": "middle-openness frozen protocol; representative 13-class application task",
+        "seed": 2022,
+        "setting": "medium"
+      },
+      {
+        "dataset": "iscx_tor",
+        "protocol_id": "medium_seed2022",
+        "reason": "middle-openness frozen protocol; representative 8-class application/service task",
+        "seed": 2022,
+        "setting": "medium"
+      },
+      {
+        "dataset": "vnat",
+        "protocol_id": "medium_seed2025",
+        "reason": "pre-identified hard Known composition with rsync and scp both Known",
+        "seed": 2025,
+        "setting": "Medium"
+      },
+      {
+        "dataset": "vnat",
+        "protocol_id": "medium_seed2026",
+        "reason": "pre-identified normal Known composition paired with the hard VNAT protocol",
+        "seed": 2026,
+        "setting": "Medium"
+      },
+      {
+        "dataset": "ustc",
+        "protocol_id": "A-2",
+        "reason": "middle-openness positive-control protocol with strong existing Known classification",
+        "seed": 2022,
+        "setting": "A-2"
+      }
+    ],
+    "stage": "Stage 15R — Representation Bottleneck Audit",
+    "strict_unknown_free": true,
+    "training": {
+      "augmentation": "RandomCrop(32,padding=4)+RandomHorizontalFlip for E1; none for E2/E3",
+      "batch_size": 128,
+      "betas": [
+        0.9,
+        0.999
+      ],
+      "checkpoint_criterion": "Known Validation accuracy; Macro-F1 is a co-reported diagnostic",
+      "early_stopping": false,
+      "epochs": 100,
+      "eval_batch_size": 256,
+      "learning_rate": 0.001,
+      "optimizer": "Adam",
+      "scheduler": "MultiStepLR",
+      "scheduler_gamma": 0.1,
+      "scheduler_milestones": [
+        50,
+        80
+      ],
+      "training_seed": 2022,
+      "weight_decay": 0.0
+    }
+  },
+  "strict_unknown_free": true,
+  "visible_roles": [
+    "known_train",
+    "known_validation"
+  ]
+}

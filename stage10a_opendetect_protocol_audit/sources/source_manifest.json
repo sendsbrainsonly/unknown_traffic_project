@@ -1,0 +1,194 @@
+{
+  "audit_type": "STATIC_ONLY",
+  "paper_pdf_found": true,
+  "paper_pdf": "/home/birkenwald/data/SEU-WXY/WXY-SEU/TrafficClassifier/Projects/Open-Detect/paper/Meng 等 - 2025 - Detection of Unknown Attacks Through Encrypted Traffic A Gaussian Prototype-Aided Variational Autoe.pdf",
+  "paper_pdf_sha256": "21d4f1d09e73227cfdf7762aa43aeda178e34cb274b27543f4f8b627043a6efa",
+  "opendetect_project_relation": "sibling project under Projects/; read-only source",
+  "official_parent_commit": "f26ac911be4324110a6632912388cd19413353bd",
+  "official_code_commit": "b50a18515a01799468c10f6c9b60c01f8a6a4e7c",
+  "official_parent_tracked_status": [],
+  "official_code_tracked_status": [
+    " M __pycache__/model.cpython-310.pyc",
+    " M networks/__pycache__/__init__.cpython-310.pyc",
+    " M networks/__pycache__/resnet.cpython-310.pyc"
+  ],
+  "unknown_project_commit": "ffcb0dfcaebe3b04b6d3bd42964d5a705303d2cc",
+  "files": [
+    {
+      "path": "/home/birkenwald/data/SEU-WXY/WXY-SEU/TrafficClassifier/Projects/Open-Detect/paper/Meng 等 - 2025 - Detection of Unknown Attacks Through Encrypted Traffic A Gaussian Prototype-Aided Variational Autoe.pdf",
+      "size_bytes": 4068264,
+      "sha256": "21d4f1d09e73227cfdf7762aa43aeda178e34cb274b27543f4f8b627043a6efa"
+    },
+    {
+      "path": "/home/birkenwald/data/SEU-WXY/WXY-SEU/TrafficClassifier/Projects/Open-Detect/code/train.py",
+      "size_bytes": 3510,
+      "sha256": "91d0f1d5d01fa82398d771a190eabafe77faac0d7cc6b3b554151e6bf5b90f88"
+    },
+    {
+      "path": "/home/birkenwald/data/SEU-WXY/WXY-SEU/TrafficClassifier/Projects/Open-Detect/code/test.py",
+      "size_bytes": 5503,
+      "sha256": "687875641625a11e2235058d658802143f5fdc7543b9f224cae2d12902946ef0"
+    },
+    {
+      "path": "/home/birkenwald/data/SEU-WXY/WXY-SEU/TrafficClassifier/Projects/Open-Detect/code/model.py",
+      "size_bytes": 6374,
+      "sha256": "756fc2d3c5ac146ce7fb1f0e1fa00a07b7ca7b626b2baffc2e14562121c1c636"
+    },
+    {
+      "path": "/home/birkenwald/data/SEU-WXY/WXY-SEU/TrafficClassifier/Projects/Open-Detect/code/utils.py",
+      "size_bytes": 1717,
+      "sha256": "24cf8e8ad11418c86a29f4e0a24491f53b594306892865be4eee36b3b8e26ad7"
+    },
+    {
+      "path": "/home/birkenwald/data/SEU-WXY/WXY-SEU/TrafficClassifier/Projects/Open-Detect/code/data/dataset.py",
+      "size_bytes": 6350,
+      "sha256": "9d6fe0b36cca21f73e74c6793bca420953072e47753128632d64af67eb6e8e22"
+    },
+    {
+      "path": "/home/birkenwald/data/SEU-WXY/WXY-SEU/TrafficClassifier/Projects/Open-Detect/code/data/splits.py",
+      "size_bytes": 2345,
+      "sha256": "24e7d693f20db12741ca6b02c7f213b12498d4e4b5330eb597357c9c57303285"
+    },
+    {
+      "path": "/home/birkenwald/data/SEU-WXY/WXY-SEU/TrafficClassifier/Projects/Open-Detect/code/data/Preprocessing/utils.py",
+      "size_bytes": 2209,
+      "sha256": "8d69dbd4f6a3d1f54b0e51dc2461a0e2195fd009532a14a97000a1d614168f9d"
+    },
+    {
+      "path": "/home/birkenwald/data/SEU-WXY/WXY-SEU/TrafficClassifier/Projects/Open-Detect/reproduction/run_ustc_reproduction.py",
+      "size_bytes": 13050,
+      "sha256": "6afd0df0aab5612d98fd7c3e9b6fb30ce2e2c2a1b17463dbb1ae8b0830d8a841"
+    },
+    {
+      "path": "/home/birkenwald/data/SEU-WXY/WXY-SEU/TrafficClassifier/Projects/Open-Detect/reproduction/run_reproduction.py",
+      "size_bytes": 43789,
+      "sha256": "7d674a1cb135a8762e3818538449a0e88b103a2943e603ce860bddc6fd752491"
+    },
+    {
+      "path": "/home/birkenwald/data/SEU-WXY/WXY-SEU/TrafficClassifier/Projects/Open-Detect/reproduction/corrected_model.py",
+      "size_bytes": 3539,
+      "sha256": "b904447ae41a3144e2408187aa200b0796643cffb1c03ea3402dd9718820dfbd"
+    },
+    {
+      "path": "/home/birkenwald/data/SEU-WXY/WXY-SEU/TrafficClassifier/Projects/Open-Detect/artifacts/paper-reproduction/final-reproduction-matrix-v3/final_reproduction_matrix.json",
+      "size_bytes": 6350,
+      "sha256": "965bfa44250a95c728e675c058ff155ecab3bfe2013a698f70d3833b00eaff4c"
+    },
+    {
+      "path": "/home/birkenwald/data/SEU-WXY/WXY-SEU/TrafficClassifier/Projects/Open-Detect/artifacts/paper-reproduction/v6-local-pcap-fivefold-corrected-v1/campaign_summary.json",
+      "size_bytes": 3276,
+      "sha256": "f87c47a2923d461312b3cb128754149ac150c00f21359eb89945b53538d02269"
+    },
+    {
+      "path": "/home/birkenwald/data/SEU-WXY/WXY-SEU/TrafficClassifier/Projects/Open-Detect/artifacts/v6-local-pcap-fivefold-splits-v1/campaign_manifest.json",
+      "size_bytes": 5467,
+      "sha256": "c8c8a4faa5f1d7d2bbbf96ce885fe97999a4198bda3904f86b340fb1edbe0227"
+    },
+    {
+      "path": "/home/birkenwald/data/SEU-WXY/WXY-SEU/TrafficClassifier/Projects/Open-Detect/artifacts/paper-reproduction/local-fivefold-corrected-stable-v1/summaries/c2_five_repeat_summary.json",
+      "size_bytes": 7530,
+      "sha256": "01db30512a76aede16fc77452ca00607d042dfbded2ddf5b79bd98a219622c68"
+    },
+    {
+      "path": "/home/birkenwald/data/SEU-WXY/WXY-SEU/TrafficClassifier/Projects/unknown_traffic_project/stage9_cipherspectrum_final_test/outputs/summary/cross_setting_results.csv",
+      "size_bytes": 3597,
+      "sha256": "7fc52d7fb87a1f5dab275b1c1bfe141db296ba681809c839cd78dae55f2191a3"
+    }
+  ],
+  "v6_checkpoints": [
+    {
+      "path": "/home/birkenwald/data/SEU-WXY/WXY-SEU/TrafficClassifier/Projects/Open-Detect/artifacts/paper-reproduction/v6-local-pcap-fivefold-corrected-v1/a1/fold0_seed2022/model_best.pt",
+      "size_bytes": 108338642,
+      "sha256": "66e4000124740f8e51227f20fa3ca326558d67d3bd708abcb8ea33fd408e9df7"
+    },
+    {
+      "path": "/home/birkenwald/data/SEU-WXY/WXY-SEU/TrafficClassifier/Projects/Open-Detect/artifacts/paper-reproduction/v6-local-pcap-fivefold-corrected-v1/a1/fold1_seed2023/model_best.pt",
+      "size_bytes": 108338642,
+      "sha256": "40d2fd2b5f56285d01501cfe2b794d670e485a100ee2edf2268f67ef7d89c7c6"
+    },
+    {
+      "path": "/home/birkenwald/data/SEU-WXY/WXY-SEU/TrafficClassifier/Projects/Open-Detect/artifacts/paper-reproduction/v6-local-pcap-fivefold-corrected-v1/a1/fold2_seed2024/model_best.pt",
+      "size_bytes": 108338642,
+      "sha256": "b5d484ac8197f03e86facbff8f282734fd1e87567baa2ce2af731b9ed3a0285e"
+    },
+    {
+      "path": "/home/birkenwald/data/SEU-WXY/WXY-SEU/TrafficClassifier/Projects/Open-Detect/artifacts/paper-reproduction/v6-local-pcap-fivefold-corrected-v1/a1/fold3_seed2025/model_best.pt",
+      "size_bytes": 108338642,
+      "sha256": "8d5044b8c93d27ebefbd7d5ad031ea91c28da618ba876ebc9e8d83b2c6eeb668"
+    },
+    {
+      "path": "/home/birkenwald/data/SEU-WXY/WXY-SEU/TrafficClassifier/Projects/Open-Detect/artifacts/paper-reproduction/v6-local-pcap-fivefold-corrected-v1/a1/fold4_seed2026/model_best.pt",
+      "size_bytes": 108338642,
+      "sha256": "ed1c5051ea7e01d0e06e94fa8bc0f76f7e001ef194a1cdf378fd7082da710fac"
+    },
+    {
+      "path": "/home/birkenwald/data/SEU-WXY/WXY-SEU/TrafficClassifier/Projects/Open-Detect/artifacts/paper-reproduction/v6-local-pcap-fivefold-corrected-v1/a2/fold0_seed2022/model_best.pt",
+      "size_bytes": 108337618,
+      "sha256": "6604b3e1e03824cd4d47f0fee985a6bd911b800730e7ebd93ece8d2679d4e762"
+    },
+    {
+      "path": "/home/birkenwald/data/SEU-WXY/WXY-SEU/TrafficClassifier/Projects/Open-Detect/artifacts/paper-reproduction/v6-local-pcap-fivefold-corrected-v1/a2/fold1_seed2023/model_best.pt",
+      "size_bytes": 108337618,
+      "sha256": "e061b1d763ab0ad6aed8d8ff5733fb32f8af3c3e21641d91f4fa41ae6ab40b9b"
+    },
+    {
+      "path": "/home/birkenwald/data/SEU-WXY/WXY-SEU/TrafficClassifier/Projects/Open-Detect/artifacts/paper-reproduction/v6-local-pcap-fivefold-corrected-v1/a2/fold2_seed2024/model_best.pt",
+      "size_bytes": 108337618,
+      "sha256": "c9643b3bb2c90b0e52bff69c68d25a7f3640de6bfc2ea301a9000e23862dbd81"
+    },
+    {
+      "path": "/home/birkenwald/data/SEU-WXY/WXY-SEU/TrafficClassifier/Projects/Open-Detect/artifacts/paper-reproduction/v6-local-pcap-fivefold-corrected-v1/a2/fold3_seed2025/model_best.pt",
+      "size_bytes": 108337618,
+      "sha256": "cee8cd348138dab15e0587720db71394577541118e2a6dcee9cf708cc982c297"
+    },
+    {
+      "path": "/home/birkenwald/data/SEU-WXY/WXY-SEU/TrafficClassifier/Projects/Open-Detect/artifacts/paper-reproduction/v6-local-pcap-fivefold-corrected-v1/a2/fold4_seed2026/model_best.pt",
+      "size_bytes": 108337618,
+      "sha256": "18a220d4de5372031f582abd38514b89442cef985fe91661ae331a99bb79a96b"
+    },
+    {
+      "path": "/home/birkenwald/data/SEU-WXY/WXY-SEU/TrafficClassifier/Projects/Open-Detect/artifacts/paper-reproduction/v6-local-pcap-fivefold-corrected-v1/a3/fold0_seed2022/model_best.pt",
+      "size_bytes": 108336594,
+      "sha256": "92e86ad6d562a8be9998107ba95172b854d7c868f9be59dba4c39d1fca768880"
+    },
+    {
+      "path": "/home/birkenwald/data/SEU-WXY/WXY-SEU/TrafficClassifier/Projects/Open-Detect/artifacts/paper-reproduction/v6-local-pcap-fivefold-corrected-v1/a3/fold1_seed2023/model_best.pt",
+      "size_bytes": 108336594,
+      "sha256": "352eb14b57b5dc18d31b7b624f1496fca9cf7b04cc8de8f9ada9d687b5a90648"
+    },
+    {
+      "path": "/home/birkenwald/data/SEU-WXY/WXY-SEU/TrafficClassifier/Projects/Open-Detect/artifacts/paper-reproduction/v6-local-pcap-fivefold-corrected-v1/a3/fold2_seed2024/model_best.pt",
+      "size_bytes": 108336594,
+      "sha256": "8e85df3014ec14874912fc2e3e349b110dbc86fcb26bb2c3a39061a44d56b96a"
+    },
+    {
+      "path": "/home/birkenwald/data/SEU-WXY/WXY-SEU/TrafficClassifier/Projects/Open-Detect/artifacts/paper-reproduction/v6-local-pcap-fivefold-corrected-v1/a3/fold3_seed2025/model_best.pt",
+      "size_bytes": 108336594,
+      "sha256": "e098e137b2f4f173fb9e4248f86a19bf65a8f94cd6a19257032e5855ad5dbf2d"
+    },
+    {
+      "path": "/home/birkenwald/data/SEU-WXY/WXY-SEU/TrafficClassifier/Projects/Open-Detect/artifacts/paper-reproduction/v6-local-pcap-fivefold-corrected-v1/a3/fold4_seed2026/model_best.pt",
+      "size_bytes": 108336594,
+      "sha256": "ac06b766d4667c427e070a08886f697a4740ed12d5a92b2bc9b6ad9a84c04a87"
+    }
+  ],
+  "source_boundaries": {
+    "paper_supplementary_found": false,
+    "official_code_auditable": true,
+    "author_exact_reproduction_complete": false,
+    "sibling_reproduction_status": {
+      "local_approximation": 8,
+      "excluded_by_scope": 1,
+      "blocked_by_missing_data": 1
+    },
+    "paper_level_exact_reproduction_count": 0,
+    "missing_for_author_exact": [
+      "published fold memberships",
+      "author random seeds",
+      "author USTC flow identities and raw-to-NPZ provenance",
+      "raw Malicious TLS PCAPs",
+      "unambiguous paper F1 definition",
+      "paper inference pseudocode"
+    ]
+  }
+}

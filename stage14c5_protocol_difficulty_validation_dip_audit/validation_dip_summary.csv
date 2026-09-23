@@ -1,0 +1,3 @@
+protocol_id,obvious_drop_count,obvious_drops_at_reset_epochs,obvious_drops_before_first_lr_reduction,obvious_drops_after_first_lr_reduction,recovered_within_3_epochs_count,reset_epoch_51_delta_macro_f1,reset_epoch_81_delta_macro_f1,reset_epoch_51_prototype_norm_jump,reset_epoch_81_prototype_norm_jump,max_val_macro_f1_after_epoch_82,nan_metric_count
+medium_seed2025,4,0,4,0,2,0.1123491821966609,-0.036811832281297474,5.4080095291137695,1.607797622680664,0.7272468793361633,0
+medium_seed2026,7,0,7,0,5,-0.031978248251494645,0.03318626936108393,6.73936939239502,0.8949470520019531,0.9643500607377692,0

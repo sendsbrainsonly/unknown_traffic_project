@@ -1,0 +1,20 @@
+{
+  "started_utc": "2026-09-13T04:32:45.703503+00:00",
+  "finished_utc": "2026-09-13T04:34:22.778218+00:00",
+  "command": "python -u stage6_cipherspectrum_protocol/scripts/freeze_protocol.py",
+  "config": "/home/birkenwald/data/SEU-WXY/WXY-SEU/TrafficClassifier/Projects/unknown_traffic_project/stage6_cipherspectrum_protocol/configs/protocol_config.json",
+  "config_sha256": "adab7f9a251be7900f42eb3286d9f897154f06ebdc0ddb6f3dd4eff48730ad8e",
+  "source_manifest": "/home/birkenwald/data/SEU-WXY/WXY-SEU/TrafficClassifier/Projects/unknown_traffic_project/cipherspectrum_labeling/outputs/cipherspectrum_official40_manifest.csv",
+  "source_manifest_sha256": "3ec053adcdf3fb39693129bdc53ab45fccd9f5563a1ed47791f01b98267cd5be",
+  "canonical_manifest_sha256": "6dbef11e4818de00d70cfaf86187d8d6749db7a16a6eacd9fa0c4cbeef1d5020",
+  "candidate_rows": 33,
+  "accepted_candidate_indices": {
+    "low": 3,
+    "medium": 15,
+    "high": 15
+  },
+  "training_executed": false,
+  "unknown_inference_executed": false,
+  "gpu_used": false,
+  "created_before_unknown_evaluation": true
+}

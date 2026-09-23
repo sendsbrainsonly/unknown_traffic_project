@@ -1,0 +1,124 @@
+{
+  "dataset": "iscx_tor",
+  "root": "/home/birkenwald/data/SEU-WXY/WXY-SEU/TrafficClassifier/Dataset/ISCXTor2016",
+  "pcap_root": "/home/birkenwald/data/SEU-WXY/WXY-SEU/TrafficClassifier/Dataset/ISCXTor2016/ISCXTor2016（whole）/raw/pcap",
+  "total_files": 151,
+  "total_size_bytes": 44935414579,
+  "pcap_files": 95,
+  "pcap_size_bytes": 23227417524,
+  "readable_pcaps": 85,
+  "unreadable_pcaps": 10,
+  "mapping_errors": [],
+  "canonical_classes_before_flow_eligibility": [
+    "AIM",
+    "Browsing",
+    "Email",
+    "FTP",
+    "Facebook",
+    "Google",
+    "Hangouts",
+    "ICQ",
+    "P2P",
+    "SFTP",
+    "Skype",
+    "Spotify",
+    "Twitter",
+    "Vimeo",
+    "YouTube"
+  ],
+  "class_readable_group_counts": {
+    "AIM": 4,
+    "Browsing": 12,
+    "Email": 6,
+    "FTP": 2,
+    "Facebook": 9,
+    "Google": 1,
+    "Hangouts": 8,
+    "ICQ": 4,
+    "P2P": 9,
+    "SFTP": 2,
+    "Skype": 10,
+    "Spotify": 5,
+    "Twitter": 1,
+    "Vimeo": 5,
+    "YouTube": 7
+  },
+  "class_domain_states": {
+    "AIM": [
+      "NonTor",
+      "Tor"
+    ],
+    "Browsing": [
+      "NonTor",
+      "Tor"
+    ],
+    "Email": [
+      "NonTor",
+      "Tor"
+    ],
+    "FTP": [
+      "NonTor",
+      "Tor"
+    ],
+    "Facebook": [
+      "NonTor",
+      "Tor"
+    ],
+    "Google": [
+      "Tor"
+    ],
+    "Hangouts": [
+      "NonTor",
+      "Tor"
+    ],
+    "ICQ": [
+      "NonTor",
+      "Tor"
+    ],
+    "P2P": [
+      "NonTor",
+      "Tor"
+    ],
+    "SFTP": [
+      "NonTor",
+      "Tor"
+    ],
+    "Skype": [
+      "NonTor",
+      "Tor"
+    ],
+    "Spotify": [
+      "NonTor",
+      "Tor"
+    ],
+    "Twitter": [
+      "Tor"
+    ],
+    "Vimeo": [
+      "NonTor",
+      "Tor"
+    ],
+    "YouTube": [
+      "NonTor",
+      "Tor"
+    ]
+  },
+  "class_packet_counts": {
+    "AIM": 1523,
+    "Browsing": 1467414,
+    "Email": 550971,
+    "FTP": 4662932,
+    "Facebook": 1048917,
+    "Google": 10678,
+    "Hangouts": 1098806,
+    "ICQ": 1869,
+    "P2P": 10568521,
+    "SFTP": 1456750,
+    "Skype": 1100455,
+    "Spotify": 684265,
+    "Twitter": 14654,
+    "Vimeo": 2533463,
+    "YouTube": 1619058
+  },
+  "flow_count_status": "pending Stage12 Open-Detect preprocessing"
+}

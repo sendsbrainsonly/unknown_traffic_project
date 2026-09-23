@@ -1,0 +1,872 @@
+{
+  "schema_version": 1,
+  "experiment_id": "stage10b-opendetect-score-decomposition-20260914-v1",
+  "created_at_utc": "2026-09-14T13:12:49Z",
+  "updated_at_utc": "2026-09-14T13:51:23Z",
+  "status": "success",
+  "experiment_type": "post-test-failure-diagnosis",
+  "claim_scope": "diagnostic",
+  "objective": "Post-hoc decomposition of frozen CipherSpectrum Open-Detect Native score geometry into S0-S6 controlled diagnostic contrasts without retraining or threshold tuning.",
+  "inputs": [
+    {
+      "path": "../stage6_cipherspectrum_protocol",
+      "role": "frozen split protocol and manifests",
+      "access": "read_only",
+      "verification": "outputs/summary/provenance_verification.json"
+    },
+    {
+      "path": "../stage7_cipherspectrum_known_training",
+      "role": "frozen checkpoints and Known-Train encoder outputs",
+      "access": "read_only",
+      "verification": "outputs/summary/provenance_verification.json"
+    },
+    {
+      "path": "../stage8a_cipherspectrum_known_density",
+      "role": "frozen train mu, StandardScaler, PCA64, K1 and K2",
+      "access": "read_only",
+      "verification": "outputs/summary/provenance_verification.json"
+    },
+    {
+      "path": "../stage8b_cipherspectrum_dgsbv2",
+      "role": "frozen evaluation provenance",
+      "access": "read_only",
+      "verification": "outputs/summary/provenance_verification.json"
+    },
+    {
+      "path": "../stage9_cipherspectrum_final_test",
+      "role": "frozen Test manifests, representations, scores, predictions and absorption evidence",
+      "access": "read_only",
+      "verification": "outputs/summary/provenance_verification.json"
+    },
+    {
+      "path": "../stage10a_opendetect_protocol_audit",
+      "role": "frozen paper-code-protocol audit",
+      "access": "read_only",
+      "verification": "outputs/summary/provenance_verification.json"
+    }
+  ],
+  "code": {
+    "revision": "ffcb0dfcaebe3b04b6d3bd42964d5a705303d2cc",
+    "dirty": true,
+    "changes": [
+      "configs/diagnosis_config.json",
+      "scripts/diagnosis_common.py",
+      "scripts/extract_frozen_logvar.py",
+      "scripts/run_score_decomposition.py",
+      "scripts/finalize_diagnosis.py",
+      "scripts/verify_provenance.py",
+      "scripts/verify_stage10b.py",
+      "tests/test_diagnosis_common.py"
+    ]
+  },
+  "execution": {
+    "tmux_session": "stage10b-infer-low-r40; stage10b-infer-medium-r41; stage10b-infer-high-r42; stage10b-analyze-low-r48; stage10b-analyze-medium-r49; stage10b-analyze-high-r50; stage10b-finalize-r58; stage10b-completion-verify-r61",
+    "command": "See outputs/summary/execution_commands.txt",
+    "exit_code": 0,
+    "environment": "/home/birkenwald/data/SEU-WXY/conda_envs/2025-10-8-WXY-dgl_py310",
+    "physical_gpu_ids": [
+      0
+    ]
+  },
+  "configuration": {
+    "files": [
+      "configs/diagnosis_config.json"
+    ],
+    "parameters": {
+      "analysis_scope": "POST_HOC_DIAGNOSTIC_ONLY",
+      "score_chain": "S0-S6 fixed before execution",
+      "score_orientation": "higher_is_more_unknown",
+      "positive_class": "Unknown",
+      "bootstrap_iterations": 1000,
+      "bootstrap_stratification": "paired class-stratified within Known and Unknown roles",
+      "frozen_inference_batch_size": 1024,
+      "frozen_inference_workers": 0,
+      "model_training": false,
+      "threshold_tuning": false,
+      "scaler_pca_gmm_refit": false
+    },
+    "seeds": [
+      0
+    ]
+  },
+  "core_results": [
+    {
+      "name": "final_gate",
+      "value": "DIAGNOSIS_COMPLETE"
+    },
+    {
+      "name": "primary_failure_mechanism",
+      "value": "M2 — LEARNED_PROTOTYPE_MISMATCH"
+    },
+    {
+      "name": "secondary_failure_mechanism",
+      "value": "M5 — COVARIANCE_MISMATCH"
+    },
+    {
+      "name": "recommended_next_branch",
+      "value": "Branch P (recommendation only; not started)"
+    },
+    {
+      "name": "mean_empirical_centroid_AUROC_delta_S2_minus_S1",
+      "value": 0.2822937309019528
+    },
+    {
+      "name": "mean_full_covariance_AUROC_delta_S5_minus_S4",
+      "value": 0.14395069556699439
+    },
+    {
+      "name": "mean_K2_AUROC_delta_S6_minus_S5",
+      "value": 0.014959826759102268
+    },
+    {
+      "name": "mu_recomputation_alignment",
+      "value": "exact max_abs_error=0 and mean_abs_error=0 for all six role-setting blocks"
+    },
+    {
+      "name": "stage9_AUROC_reproduction",
+      "value": "S0/S5/S6 PASS for Low/Medium/High"
+    }
+  ],
+  "artifacts": [
+    {
+      "path": "../.tmux-task/stage10b-provenance-final-r60/output.log",
+      "scope": "external",
+      "kind": "log",
+      "hash_status": "not_recorded"
+    },
+    {
+      "path": "../.tmux-task/stage10b-infer-low-r40/output.log",
+      "scope": "external",
+      "kind": "log",
+      "hash_status": "not_recorded"
+    },
+    {
+      "path": "../.tmux-task/stage10b-infer-medium-r41/output.log",
+      "scope": "external",
+      "kind": "log",
+      "hash_status": "not_recorded"
+    },
+    {
+      "path": "../.tmux-task/stage10b-infer-high-r42/output.log",
+      "scope": "external",
+      "kind": "log",
+      "hash_status": "not_recorded"
+    },
+    {
+      "path": "../.tmux-task/stage10b-analyze-low-r48/output.log",
+      "scope": "external",
+      "kind": "log",
+      "hash_status": "not_recorded"
+    },
+    {
+      "path": "../.tmux-task/stage10b-analyze-medium-r49/output.log",
+      "scope": "external",
+      "kind": "log",
+      "hash_status": "not_recorded"
+    },
+    {
+      "path": "../.tmux-task/stage10b-analyze-high-r50/output.log",
+      "scope": "external",
+      "kind": "log",
+      "hash_status": "not_recorded"
+    },
+    {
+      "path": "../.tmux-task/stage10b-finalize-r58/output.log",
+      "scope": "external",
+      "kind": "log",
+      "hash_status": "not_recorded"
+    },
+    {
+      "path": "../.tmux-task/stage10b-completion-verify-r61/output.log",
+      "scope": "external",
+      "kind": "log",
+      "hash_status": "not_recorded"
+    },
+    {
+      "path": "../.tmux-task/stage10b-stage7-reset-facts-r53/output.log",
+      "scope": "external",
+      "kind": "failed_diagnostic_log",
+      "hash_status": "not_recorded"
+    },
+    {
+      "path": "DIAGNOSIS_REPORT.md",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 8315,
+      "sha256": "3be19710f237e8b91610b92fee844858cc4755a851bd01b8cfa0a6bc347d73de",
+      "hash_status": "verified"
+    },
+    {
+      "path": "README.md",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 1748,
+      "sha256": "530ef6dc5367d9861568a5cff04abcd4780b97580f2259456d387cffa4e5c75c",
+      "hash_status": "verified"
+    },
+    {
+      "path": "artifacts/high/diagnostic_predictions.npz",
+      "scope": "bundle",
+      "role": "predictions",
+      "size_bytes": 310673,
+      "sha256": "0838ecbd94045886c63e64c365c0d0c1e9abea6c52bc1945a17307095b87ec49",
+      "hash_status": "verified"
+    },
+    {
+      "path": "artifacts/high/diagnostic_scores.npz",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 1590343,
+      "sha256": "a77d1405d287ace3072257c6e1495e5b7435efa4d249a1640a3099e9691a2e59",
+      "hash_status": "verified"
+    },
+    {
+      "path": "artifacts/high/logvar_known_test.npy",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 5502080,
+      "sha256": "d59d642b0eba321d3d5ef824cb268111bf7fa8ab258f4d9e3306f9c225bf3f96",
+      "hash_status": "verified"
+    },
+    {
+      "path": "artifacts/high/logvar_unknown_test.npy",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 15360128,
+      "sha256": "8c474e8e98c5b9c30ff200be2d6429d37b6e95311b770eb6ae35681f8fb1c8ac",
+      "hash_status": "verified"
+    },
+    {
+      "path": "artifacts/high/mu_known_test_recomputed.npy",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 5502080,
+      "sha256": "2a4b09859bee36840faa76c23c11f33e5b1c5ac289524dd399d06da42440c7b9",
+      "hash_status": "verified"
+    },
+    {
+      "path": "artifacts/high/mu_unknown_test_recomputed.npy",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 15360128,
+      "sha256": "88b780a1a6a2d02951a6f149c3964670655f5ca755678e5a45b59538d4b7a26f",
+      "hash_status": "verified"
+    },
+    {
+      "path": "artifacts/low/diagnostic_predictions.npz",
+      "scope": "bundle",
+      "role": "predictions",
+      "size_bytes": 149515,
+      "sha256": "bf685b1d41c53935bcfa5ee28dce7f889983dd298007e00fbc001363d3f23334",
+      "hash_status": "verified"
+    },
+    {
+      "path": "artifacts/low/diagnostic_scores.npz",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 871160,
+      "sha256": "b48e1f9a42b5f4c728302fbe6a1ec6511a5bf84ecbacde153da8a5451de067c9",
+      "hash_status": "verified"
+    },
+    {
+      "path": "artifacts/low/logvar_known_test.npy",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 8318080,
+      "sha256": "cc8c3939ac2b2e7de1d55fd2ada47379e7cec5bcb7e56dffe86b2a299bcb669b",
+      "hash_status": "verified"
+    },
+    {
+      "path": "artifacts/low/logvar_unknown_test.npy",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 3072128,
+      "sha256": "9bd85720ece463d6966e7f8691b430f57f3edf40030e4118bed1aaa572058499",
+      "hash_status": "verified"
+    },
+    {
+      "path": "artifacts/low/mu_known_test_recomputed.npy",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 8318080,
+      "sha256": "b9e77d2a9b28a15f3745739527088ebe09a2eb50b4c22e39d63cfa1a5c732c1a",
+      "hash_status": "verified"
+    },
+    {
+      "path": "artifacts/low/mu_unknown_test_recomputed.npy",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 3072128,
+      "sha256": "b17e75a1d716f665ab5fe192666c64f17ffc78221b10bd80f7456716aa355a8a",
+      "hash_status": "verified"
+    },
+    {
+      "path": "artifacts/medium/diagnostic_predictions.npz",
+      "scope": "bundle",
+      "role": "predictions",
+      "size_bytes": 233783,
+      "sha256": "7721e9ad5673e1c5ff3a36fd5ebbb70008600361c84e1182cf6dd4d71c3efb43",
+      "hash_status": "verified"
+    },
+    {
+      "path": "artifacts/medium/diagnostic_scores.npz",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 1178659,
+      "sha256": "f5d54257f0ae22c0c667196847ce7b33897e98b133ec7d0907546f4f15ae7704",
+      "hash_status": "verified"
+    },
+    {
+      "path": "artifacts/medium/logvar_known_test.npy",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 6227072,
+      "sha256": "145d61df46b77cbb57897c3844b2de2334e0b6dfade8d002dd8cf2b15c26bff8",
+      "hash_status": "verified"
+    },
+    {
+      "path": "artifacts/medium/logvar_unknown_test.npy",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 9216128,
+      "sha256": "c47f3ee5c4176067bc20ba7a3160ab972b36eb3598f09791f732f2c82b8b07c7",
+      "hash_status": "verified"
+    },
+    {
+      "path": "artifacts/medium/mu_known_test_recomputed.npy",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 6227072,
+      "sha256": "b71fd0af9acb87e2ee4463b202a226cb2f86f662859785ecfd535316b59bdeac",
+      "hash_status": "verified"
+    },
+    {
+      "path": "artifacts/medium/mu_unknown_test_recomputed.npy",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 9216128,
+      "sha256": "92a507a08b59becf9a6ea0003708a78532de2421e148a79978a7f9dccfe56c83",
+      "hash_status": "verified"
+    },
+    {
+      "path": "configs/diagnosis_config.json",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 1579,
+      "sha256": "c1fda6cb7a4264c0ccba7718767b2b470795e9dfb9eb162be12c0c016b648678",
+      "hash_status": "verified"
+    },
+    {
+      "path": "outputs/high/auroc_decomposition.csv",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 688,
+      "sha256": "e4ba338e12277441792dd0237ed0850f201ad90b008ce2c9658105537e4935dd",
+      "hash_status": "verified"
+    },
+    {
+      "path": "outputs/high/frozen_inference_audit.json",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 1650,
+      "sha256": "58781cd07291f397cdf72ceb789291e046c00ba25cc919647fd423ca580dad0d",
+      "hash_status": "verified"
+    },
+    {
+      "path": "outputs/high/known_geometry_classification.csv",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 709,
+      "sha256": "a3f739a401c70dc1f44d905bdfae476cc2538e096143e149c20cc627a4ecc679",
+      "hash_status": "verified"
+    },
+    {
+      "path": "outputs/high/logvar_distribution_audit.csv",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 27704,
+      "sha256": "309216a9d49368c8ad74610f75a44c834b24ae78b69f9de349ce65409a17e0d6",
+      "hash_status": "verified"
+    },
+    {
+      "path": "outputs/high/native_identity_check.json",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 924,
+      "sha256": "3b45f883b9ad3a59dd37641b69728fab7609c078ecd8d53c6665f7798e2a5e43",
+      "hash_status": "verified"
+    },
+    {
+      "path": "outputs/high/paired_auroc_bootstrap.csv",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 1348,
+      "sha256": "4c4dde766cb369515a63a2577299fe8eb6124194629d75d35125c4b6d2c8cf55",
+      "hash_status": "verified"
+    },
+    {
+      "path": "outputs/high/paired_auroc_bootstrap_replicates.parquet",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 64611,
+      "sha256": "4de471eef96e585a10e4fc8ac4df00624c3f3d5fe7eb45124eda8c3b931672f9",
+      "hash_status": "verified"
+    },
+    {
+      "path": "outputs/high/per_unknown_score_chain.csv",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 15962,
+      "sha256": "5515a136ca61c48747d0fc4caa4dd4fa5c446d427e99c47d6cfa34ac73e90806",
+      "hash_status": "verified"
+    },
+    {
+      "path": "outputs/high/posterior_variance_diagnosis.csv",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 1735,
+      "sha256": "312dbcff1f56be0974b232019a7e085271c511447dd8e9176f3b5e85404037b6",
+      "hash_status": "verified"
+    },
+    {
+      "path": "outputs/high/prototype_centroid_gap.csv",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 4792,
+      "sha256": "f2c52feb9e7b689d0f37a49eac60d5766990b81e71eef4527ac1a652bedaf9cb",
+      "hash_status": "verified"
+    },
+    {
+      "path": "outputs/high/prototype_gap_vs_absorption.csv",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 8072,
+      "sha256": "01beeb006f340377092d2f57900c07a3a19402259eb64c8a1ba592f36e8ddb9c",
+      "hash_status": "verified"
+    },
+    {
+      "path": "outputs/high/score_chain_metrics.csv",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 3576,
+      "sha256": "243070f8952ebe9031e492c54a1fcfd14428673eaf8f4f2fe678a5628187eb7a",
+      "hash_status": "verified"
+    },
+    {
+      "path": "outputs/high/setting_completion.json",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 676,
+      "sha256": "ba1ab6934e4ff9d5eb3da7ad73a0523273a6db3ae86a31af449409581b61b86b",
+      "hash_status": "verified"
+    },
+    {
+      "path": "outputs/low/auroc_decomposition.csv",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 679,
+      "sha256": "7a0d57c8002a218dce9f4ce7588c4a96b0bf8904f82695ecc21ca546532584d9",
+      "hash_status": "verified"
+    },
+    {
+      "path": "outputs/low/frozen_inference_audit.json",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 1645,
+      "sha256": "2b7e7a05b5f0722a21e78243fc83021c6a6a3c1d0fec3725430a987558c74952",
+      "hash_status": "verified"
+    },
+    {
+      "path": "outputs/low/known_geometry_classification.csv",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 702,
+      "sha256": "977be38b4cbf41fe097503de8d8c9b0e315a731f26e23132b4d183fec3de7832",
+      "hash_status": "verified"
+    },
+    {
+      "path": "outputs/low/logvar_distribution_audit.csv",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 27669,
+      "sha256": "60d07049ef99d83d5ea157173a0bb6d4cbd5d020a4d576be8013200edb1082d3",
+      "hash_status": "verified"
+    },
+    {
+      "path": "outputs/low/native_identity_check.json",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 919,
+      "sha256": "bf83d2581738e5c33105f35577944589bb8f1789ee5b33b14f81b887d75631dd",
+      "hash_status": "verified"
+    },
+    {
+      "path": "outputs/low/paired_auroc_bootstrap.csv",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 1342,
+      "sha256": "e238127e9208da4c2a03ad653ddbcfb92104cc2a81b2ae077f80bd530f8378f4",
+      "hash_status": "verified"
+    },
+    {
+      "path": "outputs/low/paired_auroc_bootstrap_replicates.parquet",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 64948,
+      "sha256": "0d91f972d047f47e5a28679dfa6af1842689e0de48c41fe2d743bb3c48465d95",
+      "hash_status": "verified"
+    },
+    {
+      "path": "outputs/low/per_unknown_score_chain.csv",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 3365,
+      "sha256": "3aca892019b99368ad1788a63173fe8f270b315e83baf85afc8cd2ba984d5d80",
+      "hash_status": "verified"
+    },
+    {
+      "path": "outputs/low/posterior_variance_diagnosis.csv",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 1748,
+      "sha256": "5ad7e35eb84ed684d11b939c848ba909b9519a6e4956b83c4f8a46ed1a18c03d",
+      "hash_status": "verified"
+    },
+    {
+      "path": "outputs/low/prototype_centroid_gap.csv",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 6009,
+      "sha256": "f3ece1e55bd5142275eec56156dc9be6ee33b1e879752f58984c2c65be2a885c",
+      "hash_status": "verified"
+    },
+    {
+      "path": "outputs/low/prototype_gap_vs_absorption.csv",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 10265,
+      "sha256": "6fb0e090206ce778dc96bece994de1b3c55f17d42707d6a569cf754e16e76144",
+      "hash_status": "verified"
+    },
+    {
+      "path": "outputs/low/score_chain_metrics.csv",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 3534,
+      "sha256": "fe72be067746d9263232f8a1d00501911e7753683a10b453cc0372201426d7a3",
+      "hash_status": "verified"
+    },
+    {
+      "path": "outputs/low/setting_completion.json",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 674,
+      "sha256": "fd2034b22f28f8de28e3a0a1e9d8b4444e93d827d02c6458c3a54e0b472c9d56",
+      "hash_status": "verified"
+    },
+    {
+      "path": "outputs/medium/auroc_decomposition.csv",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 698,
+      "sha256": "15400da41b7569f4c6eaf1f70c8c3376a9ff7d0b85a27f13b4e3ef7a5f41705e",
+      "hash_status": "verified"
+    },
+    {
+      "path": "outputs/medium/frozen_inference_audit.json",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 1654,
+      "sha256": "ea91662446adf8e3691b3c3d40e27097ac55105d24b22058bd104ff93c82d4ae",
+      "hash_status": "verified"
+    },
+    {
+      "path": "outputs/medium/known_geometry_classification.csv",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 721,
+      "sha256": "c359620eb8c5c47345023a60fffe8ac7a654e7c66a79906b1728dd0e6853b6a7",
+      "hash_status": "verified"
+    },
+    {
+      "path": "outputs/medium/logvar_distribution_audit.csv",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 27989,
+      "sha256": "48b568b4b9be1394ed7cd5f6180f6fdfb979d452418829292d8f3171bd2aab91",
+      "hash_status": "verified"
+    },
+    {
+      "path": "outputs/medium/native_identity_check.json",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 931,
+      "sha256": "72b03167cfaee35b66f897d6784a56ab51db453d99a8840b07fe31f6a1d1dc5b",
+      "hash_status": "verified"
+    },
+    {
+      "path": "outputs/medium/paired_auroc_bootstrap.csv",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 1356,
+      "sha256": "87ef2550290bd746e5aeccd37c3c732aa67c955da65283d1e510ec667de6cff7",
+      "hash_status": "verified"
+    },
+    {
+      "path": "outputs/medium/paired_auroc_bootstrap_replicates.parquet",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 64876,
+      "sha256": "48806e371393e5caaeeba04e036c0ae0a2277069ac9ce6a755cb4dcf0d2ef85f",
+      "hash_status": "verified"
+    },
+    {
+      "path": "outputs/medium/per_unknown_score_chain.csv",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 9796,
+      "sha256": "059da883ecec407bfc4f4801f4df29f2c285831392eaa125f1945b54a1a3e85c",
+      "hash_status": "verified"
+    },
+    {
+      "path": "outputs/medium/posterior_variance_diagnosis.csv",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 1766,
+      "sha256": "0ae62fc0ccad09b94780d9ef56bc35076852767d5bce4b2ffccb2bcf1d4fa8e2",
+      "hash_status": "verified"
+    },
+    {
+      "path": "outputs/medium/prototype_centroid_gap.csv",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 5488,
+      "sha256": "ddbcc8371d7b80ed9c5d7303951eec5ea670c70aeb6adb94c2fc5415669db5ae",
+      "hash_status": "verified"
+    },
+    {
+      "path": "outputs/medium/prototype_gap_vs_absorption.csv",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 9282,
+      "sha256": "6fb68bcf5b470326f91519dbf28de879cb8699ee5424babbb7952feb72753680",
+      "hash_status": "verified"
+    },
+    {
+      "path": "outputs/medium/score_chain_metrics.csv",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 3562,
+      "sha256": "ca6f048e355547a99266ce2780a758ab0bd9c9c45ca06ad6598b9b3dc97b5d40",
+      "hash_status": "verified"
+    },
+    {
+      "path": "outputs/medium/setting_completion.json",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 679,
+      "sha256": "5b1856b90cb83ad14309b5618dd9d6e6c0a6dde7ee8a777ad7dff4e176a4e8f6",
+      "hash_status": "verified"
+    },
+    {
+      "path": "outputs/summary/auroc_decomposition_summary.csv",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 1866,
+      "sha256": "41f5e4b5236d163e10c0a496133c95db5b977c5485f1aca75404e3fe169c9052",
+      "hash_status": "verified"
+    },
+    {
+      "path": "outputs/summary/completion_verification.json",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 1278,
+      "sha256": "c7d464a58794a035e9ec81ee76cf438bd2e74abb21d1b89efc14bc7ba4f31163",
+      "hash_status": "verified"
+    },
+    {
+      "path": "outputs/summary/core_results.json",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 11070,
+      "sha256": "a8ae900e6ff65dfa7e3f7e6bc771a623dc29568e1ce43f0366737d77d1d41b61",
+      "hash_status": "verified"
+    },
+    {
+      "path": "outputs/summary/execution_commands.txt",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 2401,
+      "sha256": "5f620bdbca6eed93b73b12a7c903bdb67eebd7332696a53b241c5b6bedd345ed",
+      "hash_status": "verified"
+    },
+    {
+      "path": "outputs/summary/final_gate.json",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 685,
+      "sha256": "0de027b3bf5a256852b2f0bc18cc14051ddd7f1eb393ec90e1c45fc58003eaa7",
+      "hash_status": "verified"
+    },
+    {
+      "path": "outputs/summary/mechanism_classification.json",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 856,
+      "sha256": "1f2ad82dffa13537e62ecb8bbcfb40a9f66634727affddb9ffb9bd651d278a40",
+      "hash_status": "verified"
+    },
+    {
+      "path": "outputs/summary/mechanism_contribution.csv",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 553,
+      "sha256": "9b1e419f37041b18d12f4a3bcf71282f8c077950676393e1564056fc30e75c06",
+      "hash_status": "verified"
+    },
+    {
+      "path": "outputs/summary/paired_auroc_bootstrap_summary.csv",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 3706,
+      "sha256": "b23536326e40371a045f8a33120a15bb51cd945a3810243e84206fe8d343f90b",
+      "hash_status": "verified"
+    },
+    {
+      "path": "outputs/summary/provenance_verification.json",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 13661,
+      "sha256": "3a45217b84980dd9e7b918c62128bf37e8c11e94d7816c3d4aeb04b581595b53",
+      "hash_status": "verified"
+    },
+    {
+      "path": "outputs/summary/score_chain_summary.csv",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 1244,
+      "sha256": "1f01ee40b082fd98ccdc5343fb4034565ff2c93f445bdb05a7bf6b84ddb3bf4a",
+      "hash_status": "verified"
+    },
+    {
+      "path": "outputs/summary/stage7_prototype_reset_audit.json",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 1476,
+      "sha256": "912e21e07909b107af174e427e0a1ab6b372745aa7f9cb17467b9ab9d1f03528",
+      "hash_status": "verified"
+    },
+    {
+      "path": "outputs/summary/stage7_prototype_reset_audit.md",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 1715,
+      "sha256": "d92d9a289329406db7fcf6704b2b4e1404dc21cbf88124855fcc80a4fc6380d6",
+      "hash_status": "verified"
+    },
+    {
+      "path": "scripts/__pycache__/diagnosis_common.cpython-310.pyc",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 4938,
+      "sha256": "66caafc52a3897c2cf5d68b55819756c8d184ff7cd173c2c684a21651155dd13",
+      "hash_status": "verified"
+    },
+    {
+      "path": "scripts/__pycache__/extract_frozen_logvar.cpython-310.pyc",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 7685,
+      "sha256": "a4ebc4705f7bd7180771e2e01b42af76d513cadf73483188efa58392a3c11103",
+      "hash_status": "verified"
+    },
+    {
+      "path": "scripts/__pycache__/finalize_diagnosis.cpython-310.pyc",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 23688,
+      "sha256": "1ade101befc392a24f11290d43b4df868620060bd8b62d32407270b13d716942",
+      "hash_status": "verified"
+    },
+    {
+      "path": "scripts/__pycache__/run_score_decomposition.cpython-310.pyc",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 22376,
+      "sha256": "9d5f0716cf28e617759c473743e9f47040c6fcb781d4238558e0c879de677dcf",
+      "hash_status": "verified"
+    },
+    {
+      "path": "scripts/__pycache__/verify_stage10b.cpython-310.pyc",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 6821,
+      "sha256": "6431dcdfd3071f4bf64a115c8ffb36c0b606dbbe4e0791492fea7246231b6557",
+      "hash_status": "verified"
+    },
+    {
+      "path": "scripts/diagnosis_common.py",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 4002,
+      "sha256": "6294f44d8bf9b6486379724cfb2259ac936de47806292680d9ad3af1d10200a9",
+      "hash_status": "verified"
+    },
+    {
+      "path": "scripts/extract_frozen_logvar.py",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 8812,
+      "sha256": "b5cc0cd3fdf3aafed5e73087c8eaf45916c24a53de77086aea85aae6f14dbe4a",
+      "hash_status": "verified"
+    },
+    {
+      "path": "scripts/finalize_diagnosis.py",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 25846,
+      "sha256": "a1b96e57d20b0a0ae346695b9a3ff1c5a9453ac5d147d94dfc1e273da85ed2f1",
+      "hash_status": "verified"
+    },
+    {
+      "path": "scripts/run_score_decomposition.py",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 31037,
+      "sha256": "0c17927df63b0e6a3d282fdbfa27223e06ee716da1115c1a228ba67b85212b2b",
+      "hash_status": "verified"
+    },
+    {
+      "path": "scripts/verify_provenance.py",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 7246,
+      "sha256": "911aa7ab0f9b43d0c097b2759c50791f77785e25fcd9a75a5be36e2bb5a1662f",
+      "hash_status": "verified"
+    },
+    {
+      "path": "scripts/verify_stage10b.py",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 7716,
+      "sha256": "f536743a3868773a04b2861a1888f460d641a8c33a07f54cd9a63743cadf3bf6",
+      "hash_status": "verified"
+    },
+    {
+      "path": "tests/test_diagnosis_common.py",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 1307,
+      "sha256": "8351f2f42e197cbc891174547baeab210abbb729880eddaf4606859c9f6b866c",
+      "hash_status": "verified"
+    }
+  ],
+  "limitations": [
+    "CipherSpectrum Test was already opened in Stage 9; all new scores are post-hoc diagnostics, not independent baselines.",
+    "Adjacent S0-S6 contrasts are controlled diagnostic comparisons, not strict causal effects.",
+    "Unknown-positive AUPRC in Stage 10B is not directly comparable to Stage 9 Known-positive AUPRC.",
+    "Prototype-gap versus absorption correlations are class-level explanatory analyses with limited sample size.",
+    "Stage7 prototype optimizer-detachment risk is static and latent; no reset executed in the frozen early-stopped runs."
+  ],
+  "next_step": "Recommend Branch P for prototype/support estimation, retaining covariance-aware support as a secondary axis; no next stage started."
+}

@@ -1,0 +1,139 @@
+{
+  "active": [],
+  "completed": [
+    {
+      "duration_seconds": 1396.6792089939117,
+      "exit_code": 0,
+      "log_path": "/home/birkenwald/data/SEU-WXY/WXY-SEU/TrafficClassifier/Projects/unknown_traffic_project/stage14c6_cleaned_pipeline_full15_closed_set/run_logs/low_seed2024.log",
+      "physical_gpu": "2",
+      "protocol_id": "low_seed2024",
+      "status": "success"
+    },
+    {
+      "duration_seconds": 2235.29479265213,
+      "exit_code": 0,
+      "log_path": "/home/birkenwald/data/SEU-WXY/WXY-SEU/TrafficClassifier/Projects/unknown_traffic_project/stage14c6_cleaned_pipeline_full15_closed_set/run_logs/low_seed2022.log",
+      "physical_gpu": "0",
+      "protocol_id": "low_seed2022",
+      "status": "success"
+    },
+    {
+      "duration_seconds": 2254.1515402793884,
+      "exit_code": 0,
+      "log_path": "/home/birkenwald/data/SEU-WXY/WXY-SEU/TrafficClassifier/Projects/unknown_traffic_project/stage14c6_cleaned_pipeline_full15_closed_set/run_logs/low_seed2025.log",
+      "physical_gpu": "3",
+      "protocol_id": "low_seed2025",
+      "status": "success"
+    },
+    {
+      "duration_seconds": 2319.1464960575104,
+      "exit_code": 0,
+      "log_path": "/home/birkenwald/data/SEU-WXY/WXY-SEU/TrafficClassifier/Projects/unknown_traffic_project/stage14c6_cleaned_pipeline_full15_closed_set/run_logs/low_seed2023.log",
+      "physical_gpu": "1",
+      "protocol_id": "low_seed2023",
+      "status": "success"
+    },
+    {
+      "duration_seconds": 1245.9360148906708,
+      "exit_code": 0,
+      "log_path": "/home/birkenwald/data/SEU-WXY/WXY-SEU/TrafficClassifier/Projects/unknown_traffic_project/stage14c6_cleaned_pipeline_full15_closed_set/run_logs/medium_seed2024.log",
+      "physical_gpu": "1",
+      "protocol_id": "medium_seed2024",
+      "status": "success"
+    },
+    {
+      "duration_seconds": 1327.31733584404,
+      "exit_code": 0,
+      "log_path": "/home/birkenwald/data/SEU-WXY/WXY-SEU/TrafficClassifier/Projects/unknown_traffic_project/stage14c6_cleaned_pipeline_full15_closed_set/run_logs/medium_seed2023.log",
+      "physical_gpu": "3",
+      "protocol_id": "medium_seed2023",
+      "status": "success"
+    },
+    {
+      "duration_seconds": 2282.802435398102,
+      "exit_code": 0,
+      "log_path": "/home/birkenwald/data/SEU-WXY/WXY-SEU/TrafficClassifier/Projects/unknown_traffic_project/stage14c6_cleaned_pipeline_full15_closed_set/run_logs/low_seed2026.log",
+      "physical_gpu": "2",
+      "protocol_id": "low_seed2026",
+      "status": "success"
+    },
+    {
+      "duration_seconds": 2183.564779996872,
+      "exit_code": 0,
+      "log_path": "/home/birkenwald/data/SEU-WXY/WXY-SEU/TrafficClassifier/Projects/unknown_traffic_project/stage14c6_cleaned_pipeline_full15_closed_set/run_logs/medium_seed2022.log",
+      "physical_gpu": "0",
+      "protocol_id": "medium_seed2022",
+      "status": "success"
+    },
+    {
+      "duration_seconds": 2020.706221818924,
+      "exit_code": 0,
+      "log_path": "/home/birkenwald/data/SEU-WXY/WXY-SEU/TrafficClassifier/Projects/unknown_traffic_project/stage14c6_cleaned_pipeline_full15_closed_set/run_logs/medium_seed2026.log",
+      "physical_gpu": "3",
+      "protocol_id": "medium_seed2026",
+      "status": "success"
+    },
+    {
+      "duration_seconds": 2061.3640735149384,
+      "exit_code": 0,
+      "log_path": "/home/birkenwald/data/SEU-WXY/WXY-SEU/TrafficClassifier/Projects/unknown_traffic_project/stage14c6_cleaned_pipeline_full15_closed_set/run_logs/medium_seed2025.log",
+      "physical_gpu": "1",
+      "protocol_id": "medium_seed2025",
+      "status": "success"
+    },
+    {
+      "duration_seconds": 1263.6986734867096,
+      "exit_code": 0,
+      "log_path": "/home/birkenwald/data/SEU-WXY/WXY-SEU/TrafficClassifier/Projects/unknown_traffic_project/stage14c6_cleaned_pipeline_full15_closed_set/run_logs/high_seed2023.log",
+      "physical_gpu": "0",
+      "protocol_id": "high_seed2023",
+      "status": "success"
+    },
+    {
+      "duration_seconds": 2141.29257106781,
+      "exit_code": 0,
+      "log_path": "/home/birkenwald/data/SEU-WXY/WXY-SEU/TrafficClassifier/Projects/unknown_traffic_project/stage14c6_cleaned_pipeline_full15_closed_set/run_logs/high_seed2022.log",
+      "physical_gpu": "2",
+      "protocol_id": "high_seed2022",
+      "status": "success"
+    },
+    {
+      "duration_seconds": 808.542973279953,
+      "exit_code": 0,
+      "log_path": "/home/birkenwald/data/SEU-WXY/WXY-SEU/TrafficClassifier/Projects/unknown_traffic_project/stage14c6_cleaned_pipeline_full15_closed_set/run_logs/high_seed2024.log",
+      "physical_gpu": "3",
+      "protocol_id": "high_seed2024",
+      "status": "success"
+    },
+    {
+      "duration_seconds": 1175.3148872852325,
+      "exit_code": 0,
+      "log_path": "/home/birkenwald/data/SEU-WXY/WXY-SEU/TrafficClassifier/Projects/unknown_traffic_project/stage14c6_cleaned_pipeline_full15_closed_set/run_logs/high_seed2026.log",
+      "physical_gpu": "0",
+      "protocol_id": "high_seed2026",
+      "status": "success"
+    },
+    {
+      "duration_seconds": 1243.2305059432983,
+      "exit_code": 0,
+      "log_path": "/home/birkenwald/data/SEU-WXY/WXY-SEU/TrafficClassifier/Projects/unknown_traffic_project/stage14c6_cleaned_pipeline_full15_closed_set/run_logs/high_seed2025.log",
+      "physical_gpu": "1",
+      "protocol_id": "high_seed2025",
+      "status": "success"
+    }
+  ],
+  "duration_seconds": 6869.682187795639,
+  "failures": [],
+  "finished_at_unix": 1789726567.9843469,
+  "max_parallel_runs": 4,
+  "pending": [],
+  "protocols_total": 15,
+  "selected_physical_gpus": [
+    "0",
+    "1",
+    "2",
+    "3"
+  ],
+  "started_at_unix": 1789719698.3021576,
+  "status": "success"
+}

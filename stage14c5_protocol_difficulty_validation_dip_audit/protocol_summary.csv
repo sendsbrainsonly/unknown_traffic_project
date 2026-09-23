@@ -1,0 +1,3 @@
+protocol_id,protocol_seed,known_classes,unknown_classes,known_class_count,unknown_class_count,known_train_samples,known_val_samples,known_test_samples_opened,unknown_test_samples_opened
+medium_seed2025,2025,netflix|rdp|rsync|scp|skype|ssh|youtube,zoiper|vimeo|sftp,7,3,15704,1960,0,0
+medium_seed2026,2026,netflix|rdp|rsync|skype|ssh|vimeo|zoiper,sftp|youtube|scp,7,3,15328,1911,0,0

@@ -1,0 +1,27 @@
+{
+  "generated_at_utc": "2026-09-17T09:45:36.421806+00:00",
+  "raw_stage14a_flows": 23454,
+  "quarantined_cross_application_flow_rows": 4,
+  "flows_after_quarantine": 23450,
+  "applications": 10,
+  "eligible": [
+    "sftp",
+    "skype"
+  ],
+  "borderline": [
+    "rdp",
+    "ssh",
+    "youtube",
+    "zoiper"
+  ],
+  "excluded": [
+    "netflix",
+    "rsync",
+    "scp",
+    "vimeo"
+  ],
+  "model_training": false,
+  "unknown_setting_generated": false,
+  "open_detect_run": false,
+  "des_run": false
+}

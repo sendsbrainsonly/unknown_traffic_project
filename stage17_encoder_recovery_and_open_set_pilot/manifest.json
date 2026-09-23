@@ -1,0 +1,1325 @@
+{
+  "schema_version": 1,
+  "experiment_id": "stage17-historical-encoder-recovery-open-set-pilot-20260920-v1",
+  "created_at_utc": "2026-09-20T11:53:18Z",
+  "updated_at_utc": "2026-09-20T12:27:12Z",
+  "status": "success",
+  "experiment_type": "recovery-audit-and-controlled-pilot",
+  "claim_scope": "diagnostic",
+  "objective": "Recover exact historical TrafficFormer, FIG/TAGCN, and fusion lineage; then run a frozen Service-LOSO encoder pilot with DES-v1 where protocol-valid.",
+  "inputs": [
+    {
+      "path": "stage16s_service_open_set_benchmark/service_unknown_protocol_manifest.csv",
+      "role": "frozen Service-LOSO membership"
+    },
+    {
+      "path": "stage12_dual_external_validation/protocol/iscx_vpn/preprocessing_manifest.json",
+      "role": "raw PCAP lineage and exact sessionization"
+    },
+    {
+      "path": "outputs/stage1/modelA/finetuned_model.bin",
+      "role": "historical load-only audit"
+    },
+    {
+      "path": "outputs/stage1/modelB/seeds/seed2/modelB_best.pt",
+      "role": "historical load-only audit"
+    }
+  ],
+  "code": {
+    "revision": "ffcb0dfcaebe3b04b6d3bd42964d5a705303d2cc",
+    "dirty": true,
+    "changes": [
+      "additive Stage17 scripts, evidence, checkpoints, predictions and reports only"
+    ]
+  },
+  "execution": {
+    "tmux_session": "stage17_email_2022 through stage17_streaming_2024",
+    "command": "train_pilot_run.py --unknown-service {Email,Streaming} --seed {2022,2023,2024}",
+    "exit_code": 0,
+    "environment": "/home/birkenwald/data/SEU-WXY/conda_envs/2025-10-8-WXY-dgl_py310",
+    "physical_gpu_ids": [
+      1,
+      2,
+      3,
+      7
+    ]
+  },
+  "configuration": {
+    "files": [
+      "service_loso_pilot_configs.json"
+    ],
+    "parameters": {
+      "protocols": [
+        "loso_email",
+        "loso_streaming"
+      ],
+      "encoders": [
+        "E0",
+        "E1",
+        "E2",
+        "E3"
+      ],
+      "detector": "DES-v1",
+      "threshold": "Known Validation P95"
+    },
+    "seeds": [
+      2022,
+      2023,
+      2024
+    ]
+  },
+  "core_results": [
+    {
+      "scope": "Email mean",
+      "E0_DESv1_AUROC": 0.718684,
+      "E3_DESv1_AUROC": 0.801853,
+      "E3_UFAR": 0.805556
+    },
+    {
+      "scope": "Streaming mean",
+      "E0_DESv1_AUROC": 0.674952,
+      "E3_DESv1_AUROC": 0.72097,
+      "E3_UFAR": 0.783925
+    },
+    {
+      "scope": "integrity",
+      "formal_runs": 6,
+      "trained_checkpoints": 18,
+      "strict_unknown_free": true,
+      "protected_assets_unchanged": true
+    }
+  ],
+  "artifacts": [
+    {
+      "path": "aggregation_summary.json",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 247,
+      "sha256": "c84f319c8d891e1f624581bf6a4441623abbf03021ba9e40e4468ba75f37dc98",
+      "hash_status": "verified"
+    },
+    {
+      "path": "completion_verification.json",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 548,
+      "sha256": "62abc32466af7c056c005f85ff34309cbf0bb648b37a39b5294f07c85c9c7cb0",
+      "hash_status": "verified"
+    },
+    {
+      "path": "embedding_geometry_diagnostics.md",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 917,
+      "sha256": "c12902759eeda8861d1e2d10d2665f6cbfe445ac6cef73c0c3860a7c397e009d",
+      "hash_status": "verified"
+    },
+    {
+      "path": "encoder_architecture_comparison.md",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 527,
+      "sha256": "9ef297d61864926c5989f294ef392a276e2006dc8790ae9b974356ec1228ed38",
+      "hash_status": "verified"
+    },
+    {
+      "path": "encoder_pilot_predictions.csv",
+      "scope": "bundle",
+      "role": "predictions",
+      "size_bytes": 3263269,
+      "sha256": "c652c64dde73bcf04804291997e62bb807ab0e1a14a79f53571b092455cdd7e0",
+      "hash_status": "verified"
+    },
+    {
+      "path": "encoder_pilot_results.csv",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 9216,
+      "sha256": "a54fb4d01a0a93d64e205754c6e63bc8f7ea8bea287f6845d3036e8916266f4d",
+      "hash_status": "verified"
+    },
+    {
+      "path": "feature_cache/cache_audit.json",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 756,
+      "sha256": "5d29dc1c184065dd6247601e855eb9b2f6a307d04f027941dc3fe2b77fb5b30e",
+      "hash_status": "verified"
+    },
+    {
+      "path": "feature_cache/capture_audit.csv",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 8657,
+      "sha256": "58a8950ffad6936af1214ddac715121ae363e05728672b636b0494115b8cc463",
+      "hash_status": "verified"
+    },
+    {
+      "path": "feature_cache/service3065_historical_inputs.npz",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 860707,
+      "sha256": "aff17d4b3271107852c0f30556627ab5daf693fba6a0a7b18df5f3785f260cff",
+      "hash_status": "verified"
+    },
+    {
+      "path": "feature_cache/tshark_stderr/AIM_004_vpn_aim_chat1a.log",
+      "scope": "bundle",
+      "role": "log",
+      "size_bytes": 53,
+      "sha256": "0219c5303308f6023e2d618140a950c50058b756d85487fbbab0fb57042b284d",
+      "hash_status": "verified"
+    },
+    {
+      "path": "feature_cache/tshark_stderr/AIM_005_vpn_aim_chat1b.log",
+      "scope": "bundle",
+      "role": "log",
+      "size_bytes": 53,
+      "sha256": "0219c5303308f6023e2d618140a950c50058b756d85487fbbab0fb57042b284d",
+      "hash_status": "verified"
+    },
+    {
+      "path": "feature_cache/tshark_stderr/BitTorrent_000_vpn_bittorrent.log",
+      "scope": "bundle",
+      "role": "log",
+      "size_bytes": 53,
+      "sha256": "0219c5303308f6023e2d618140a950c50058b756d85487fbbab0fb57042b284d",
+      "hash_status": "verified"
+    },
+    {
+      "path": "feature_cache/tshark_stderr/Email_004_vpn_email2a.log",
+      "scope": "bundle",
+      "role": "log",
+      "size_bytes": 53,
+      "sha256": "0219c5303308f6023e2d618140a950c50058b756d85487fbbab0fb57042b284d",
+      "hash_status": "verified"
+    },
+    {
+      "path": "feature_cache/tshark_stderr/Email_005_vpn_email2b.log",
+      "scope": "bundle",
+      "role": "log",
+      "size_bytes": 53,
+      "sha256": "0219c5303308f6023e2d618140a950c50058b756d85487fbbab0fb57042b284d",
+      "hash_status": "verified"
+    },
+    {
+      "path": "feature_cache/tshark_stderr/FTPS_004_vpn_ftps_A.log",
+      "scope": "bundle",
+      "role": "log",
+      "size_bytes": 53,
+      "sha256": "0219c5303308f6023e2d618140a950c50058b756d85487fbbab0fb57042b284d",
+      "hash_status": "verified"
+    },
+    {
+      "path": "feature_cache/tshark_stderr/FTPS_005_vpn_ftps_B.log",
+      "scope": "bundle",
+      "role": "log",
+      "size_bytes": 53,
+      "sha256": "0219c5303308f6023e2d618140a950c50058b756d85487fbbab0fb57042b284d",
+      "hash_status": "verified"
+    },
+    {
+      "path": "feature_cache/tshark_stderr/Facebook_015_vpn_facebook_audio2.log",
+      "scope": "bundle",
+      "role": "log",
+      "size_bytes": 53,
+      "sha256": "0219c5303308f6023e2d618140a950c50058b756d85487fbbab0fb57042b284d",
+      "hash_status": "verified"
+    },
+    {
+      "path": "feature_cache/tshark_stderr/Facebook_016_vpn_facebook_chat1a.log",
+      "scope": "bundle",
+      "role": "log",
+      "size_bytes": 53,
+      "sha256": "0219c5303308f6023e2d618140a950c50058b756d85487fbbab0fb57042b284d",
+      "hash_status": "verified"
+    },
+    {
+      "path": "feature_cache/tshark_stderr/Facebook_017_vpn_facebook_chat1b.log",
+      "scope": "bundle",
+      "role": "log",
+      "size_bytes": 53,
+      "sha256": "0219c5303308f6023e2d618140a950c50058b756d85487fbbab0fb57042b284d",
+      "hash_status": "verified"
+    },
+    {
+      "path": "feature_cache/tshark_stderr/ICQ_004_vpn_icq_chat1a.log",
+      "scope": "bundle",
+      "role": "log",
+      "size_bytes": 53,
+      "sha256": "0219c5303308f6023e2d618140a950c50058b756d85487fbbab0fb57042b284d",
+      "hash_status": "verified"
+    },
+    {
+      "path": "feature_cache/tshark_stderr/ICQ_005_vpn_icq_chat1b.log",
+      "scope": "bundle",
+      "role": "log",
+      "size_bytes": 53,
+      "sha256": "0219c5303308f6023e2d618140a950c50058b756d85487fbbab0fb57042b284d",
+      "hash_status": "verified"
+    },
+    {
+      "path": "feature_cache/tshark_stderr/Netflix_004_vpn_netflix_A.log",
+      "scope": "bundle",
+      "role": "log",
+      "size_bytes": 53,
+      "sha256": "0219c5303308f6023e2d618140a950c50058b756d85487fbbab0fb57042b284d",
+      "hash_status": "verified"
+    },
+    {
+      "path": "feature_cache/tshark_stderr/SFTP_008_vpn_sftp_A.log",
+      "scope": "bundle",
+      "role": "log",
+      "size_bytes": 53,
+      "sha256": "0219c5303308f6023e2d618140a950c50058b756d85487fbbab0fb57042b284d",
+      "hash_status": "verified"
+    },
+    {
+      "path": "feature_cache/tshark_stderr/SFTP_009_vpn_sftp_B.log",
+      "scope": "bundle",
+      "role": "log",
+      "size_bytes": 53,
+      "sha256": "0219c5303308f6023e2d618140a950c50058b756d85487fbbab0fb57042b284d",
+      "hash_status": "verified"
+    },
+    {
+      "path": "feature_cache/tshark_stderr/Spotify_004_vpn_spotify_A.log",
+      "scope": "bundle",
+      "role": "log",
+      "size_bytes": 53,
+      "sha256": "0219c5303308f6023e2d618140a950c50058b756d85487fbbab0fb57042b284d",
+      "hash_status": "verified"
+    },
+    {
+      "path": "feature_cache/tshark_stderr/Vimeo_004_vpn_vimeo_A.log",
+      "scope": "bundle",
+      "role": "log",
+      "size_bytes": 53,
+      "sha256": "0219c5303308f6023e2d618140a950c50058b756d85487fbbab0fb57042b284d",
+      "hash_status": "verified"
+    },
+    {
+      "path": "feature_cache/tshark_stderr/Vimeo_005_vpn_vimeo_B.log",
+      "scope": "bundle",
+      "role": "log",
+      "size_bytes": 53,
+      "sha256": "0219c5303308f6023e2d618140a950c50058b756d85487fbbab0fb57042b284d",
+      "hash_status": "verified"
+    },
+    {
+      "path": "feature_cache/tshark_stderr/VoIPBuster_005_vpn_voipbuster1a.log",
+      "scope": "bundle",
+      "role": "log",
+      "size_bytes": 53,
+      "sha256": "0219c5303308f6023e2d618140a950c50058b756d85487fbbab0fb57042b284d",
+      "hash_status": "verified"
+    },
+    {
+      "path": "feature_cache/tshark_stderr/VoIPBuster_006_vpn_voipbuster1b.log",
+      "scope": "bundle",
+      "role": "log",
+      "size_bytes": 53,
+      "sha256": "0219c5303308f6023e2d618140a950c50058b756d85487fbbab0fb57042b284d",
+      "hash_status": "verified"
+    },
+    {
+      "path": "fig_tagcn_architecture.md",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 312,
+      "sha256": "83e6da8d0ec1b354b1af2dfc59f3ac4097c4baf31ce9aee462f81f62151f834a",
+      "hash_status": "verified"
+    },
+    {
+      "path": "fusion_architecture.md",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 386,
+      "sha256": "510dffe3d835bb06685ad8723d80c1d5526f6012bb081c9a58c8d6fe7bbd2767",
+      "hash_status": "verified"
+    },
+    {
+      "path": "graph_leakage_audit.md",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 616,
+      "sha256": "313c22740733dc5d1df33e9652e6de480398233fe68a9f4e04523825f01bc09f",
+      "hash_status": "verified"
+    },
+    {
+      "path": "historical_checkpoint_exposure_audit.md",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 823,
+      "sha256": "bf6bd30c720dd5872186d31a6befe4108795e597ba7bbf761dd0c02ef5997f60",
+      "hash_status": "verified"
+    },
+    {
+      "path": "historical_checkpoint_inventory.csv",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 1546,
+      "sha256": "d81104c9bd53ec0c6aa8220a141d937945e61d4e71ed618fd464f9ce2e05b9e8",
+      "hash_status": "verified"
+    },
+    {
+      "path": "historical_feature_inventory.csv",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 534,
+      "sha256": "7ae970713d42cbfb210cac4e77899b4c0a80f21ad2bb203cea56298d2ce63eac",
+      "hash_status": "verified"
+    },
+    {
+      "path": "historical_feature_lineage.md",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 1261,
+      "sha256": "36133df95a7a14d0f2a9c6364b75b57892a4d47b97351791d3b529234a6697b5",
+      "hash_status": "verified"
+    },
+    {
+      "path": "historical_model_lineage.md",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 1024,
+      "sha256": "92495228f02eebf447697a9bef4420cf6d8c4576ec321d4615662a9b9221f794",
+      "hash_status": "verified"
+    },
+    {
+      "path": "historical_model_registry.csv",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 2169,
+      "sha256": "f77910dc2259437a69da58baa0a6331fd0864028150ce4a5cda78945c4a0b1fb",
+      "hash_status": "verified"
+    },
+    {
+      "path": "known_classification_comparison.csv",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 1481,
+      "sha256": "332d07688dc1ba263b4290db66329513da894faa633ca87345c110989ac85365",
+      "hash_status": "verified"
+    },
+    {
+      "path": "model_recovery_verification.md",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 247,
+      "sha256": "4433d6d64cd27e79b57b8134f129058e89086f0326f3ba6f2862e2e5bc587298",
+      "hash_status": "verified"
+    },
+    {
+      "path": "model_recovery_verification.md.json",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 116,
+      "sha256": "d2f3019dba703d656c8028707d061262115bf0260d5d9ca131d53fbe4c405506",
+      "hash_status": "verified"
+    },
+    {
+      "path": "open_set_comparison.csv",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 1812,
+      "sha256": "45d23fb3d5dd5f9a8900918c327e32044f2a1eb494761205b3ef3d749e9933e6",
+      "hash_status": "verified"
+    },
+    {
+      "path": "opendetect_encoder_reference.md",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 279,
+      "sha256": "fa1887e11cf5b72c083cbb127cd558a50c60bbd363561a5e3bfcd8b6152cc92b",
+      "hash_status": "verified"
+    },
+    {
+      "path": "paired_error_analysis.csv",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 1227,
+      "sha256": "07830d873a4316ddc4e02a7b4149e4bf508b65ea3ad3b973a3df3c671a20b381",
+      "hash_status": "verified"
+    },
+    {
+      "path": "per_service_encoder_comparison.csv",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 2810,
+      "sha256": "1e7b3c5fcd5d3343d44d2c10a2ba0b474c4e30e6f51409f4cfce6231498e78fa",
+      "hash_status": "verified"
+    },
+    {
+      "path": "protected_asset_hashes_after.json",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 2792,
+      "sha256": "7aec490183e96f7329cbd02aaf28010309ef07681848427028bd6a090423d13d",
+      "hash_status": "verified"
+    },
+    {
+      "path": "protected_asset_hashes_before.json",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 2792,
+      "sha256": "7aec490183e96f7329cbd02aaf28010309ef07681848427028bd6a090423d13d",
+      "hash_status": "verified"
+    },
+    {
+      "path": "recoverability_report.md",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 601,
+      "sha256": "b4838ecbe51ecb0dfa98a3816c10eb0699bc8bd886e6a3214a70cd6eeb789099",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/loso_email/seed2022/E1_embeddings.npz",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 7622589,
+      "sha256": "44980ed6fdb0f87b2b2eb186ba6cf71cb7c5502cbd1d9c452fbe15dba1258f99",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/loso_email/seed2022/E1_model_best.pt",
+      "scope": "bundle",
+      "role": "checkpoint",
+      "size_bytes": 528586247,
+      "sha256": "5d0d56b127342131d3a14b6355a87f18ecb098c7a93ac72ba39f7fded415afbd",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/loso_email/seed2022/E1_training_history.json",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 434,
+      "sha256": "c5e88e4ee9a0088b81ef1a779d3fe0543b7cc932af76dcb35fb4ac4c018ec602",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/loso_email/seed2022/E2_embeddings.npz",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 836897,
+      "sha256": "41614d71f86588c5f2568e852d8f1fb1e7bc6c1fdd03614bd2ee6961fa981fd1",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/loso_email/seed2022/E2_model_best.pt",
+      "scope": "bundle",
+      "role": "checkpoint",
+      "size_bytes": 16989,
+      "sha256": "da5e7d99c8af0b99a3306436af6e475308f042b5fe570f4b8b8a123ee05a7429",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/loso_email/seed2022/E2_training_history.json",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 7131,
+      "sha256": "e3ced3a7f0dbc738b5aab3076096ceeabd797c6232c2579a2707eb8b82e749ae",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/loso_email/seed2022/E3_embeddings.npz",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 9434503,
+      "sha256": "5cdb5e245f3948f2a5b52a10212a03103bbaa3db632ef6c97db8acf47ec6719b",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/loso_email/seed2022/E3_model_best.pt",
+      "scope": "bundle",
+      "role": "checkpoint",
+      "size_bytes": 20053,
+      "sha256": "92959f884a088383d2f0febc5ecfd4f30cb394e4921047f1677d3a9a90081e9c",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/loso_email/seed2022/E3_training_history.json",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 4272,
+      "sha256": "84674b4f9574674b8028691a9848248d524bbbcc6bd0edb3d55152e942ca6d2e",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/loso_email/seed2022/SUCCESS",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 8,
+      "sha256": "1f513d4ecec4e91ddd48da1a59b6d96f1b76c374dc1da641980782a34f43b102",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/loso_email/seed2022/geometry.json",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 1291,
+      "sha256": "290c7fd3ec05865f87c6beeb6821d26057043cad7b40f08957e1d406a7568a7a",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/loso_email/seed2022/predictions.csv",
+      "scope": "bundle",
+      "role": "predictions",
+      "size_bytes": 224025,
+      "sha256": "7e101257232cf04fcf12a989b34062628432da0d992c0dba2e7188f61ea13836",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/loso_email/seed2022/results.csv",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 1191,
+      "sha256": "7918a4796abf860c1d3c4363bae36ffb8d8421b2f74318f1661c41cb0d5e2729",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/loso_email/seed2022/run_manifest.json",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 1535,
+      "sha256": "f41757e3d2071b8767310085519bd6664b03753db32e21171ea6291145104562",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/loso_email/seed2023/E1_embeddings.npz",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 8878912,
+      "sha256": "d59e76ff4d7e84968687ec1574587a6d5fef1ae37062a15d4e445a42ea4e4b1f",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/loso_email/seed2023/E1_model_best.pt",
+      "scope": "bundle",
+      "role": "checkpoint",
+      "size_bytes": 528586247,
+      "sha256": "fed6e1f3ab5f5ba1de66fc6acabc1671159ab4d47942a3293652817424c8d447",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/loso_email/seed2023/E1_training_history.json",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 434,
+      "sha256": "9745841393b0421b1a18b77882c567b2386b3c29a00bce79a226132a89c47a1d",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/loso_email/seed2023/E2_embeddings.npz",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 809033,
+      "sha256": "e643217654c073d35e626935c19b1394c5e8f399b8e5be6f5c23714867eb0aca",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/loso_email/seed2023/E2_model_best.pt",
+      "scope": "bundle",
+      "role": "checkpoint",
+      "size_bytes": 16989,
+      "sha256": "9bdf8336bd3908aeae734c6f99f312b88717130c6d22496f1774e22a9ec12763",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/loso_email/seed2023/E2_training_history.json",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 7136,
+      "sha256": "e68c3902a6b0d00c70de51359b1c1ead0362b74b591b9584af4690d597ab5190",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/loso_email/seed2023/E3_embeddings.npz",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 9623990,
+      "sha256": "10cbfdbcf9f8650c3383154d3ef7160417ccc7c171922227cbae1c4b997dba00",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/loso_email/seed2023/E3_model_best.pt",
+      "scope": "bundle",
+      "role": "checkpoint",
+      "size_bytes": 20053,
+      "sha256": "030469973cd47f1a488266cf79638ded3e4f52ae9b46b40e44e655d837ce4a76",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/loso_email/seed2023/E3_training_history.json",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 4295,
+      "sha256": "fe28058c312d3e7c62819568cdfd1f44fb1f3a4116e9c544cc978236830a3a94",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/loso_email/seed2023/SUCCESS",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 8,
+      "sha256": "1f513d4ecec4e91ddd48da1a59b6d96f1b76c374dc1da641980782a34f43b102",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/loso_email/seed2023/geometry.json",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 1285,
+      "sha256": "d665464d6d1c23e2d8452893a4803831229c574aec917917dcb8ceee8fae998a",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/loso_email/seed2023/predictions.csv",
+      "scope": "bundle",
+      "role": "predictions",
+      "size_bytes": 224587,
+      "sha256": "78098d015bdddf3cc390bc0c7cde50fbf8d1a59c10712841713fe5b831e1de44",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/loso_email/seed2023/results.csv",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 1194,
+      "sha256": "1d37379663dddd797c9e708de7fa74532f5d41969903220fde6f3d114c41d966",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/loso_email/seed2023/run_manifest.json",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 1535,
+      "sha256": "3982f3262cd1d26533ceb242e6d4c8fea0947757222e55f0cc8b277f80a77371",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/loso_email/seed2024/E1_embeddings.npz",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 8171475,
+      "sha256": "8c77facd10c769330dcdfc73f3dd9aab6f96f0d01d5f6a50e5646bc969356fe6",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/loso_email/seed2024/E1_model_best.pt",
+      "scope": "bundle",
+      "role": "checkpoint",
+      "size_bytes": 528586247,
+      "sha256": "3d816ed9f2b93d2e7b9749bd9be7137e34a44276b9df320a4d245f25340d5263",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/loso_email/seed2024/E1_training_history.json",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 434,
+      "sha256": "d588e95c8661e5b84caf5390cc32a9feb4dab4bcea0e83e420265d6c9b97f7d0",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/loso_email/seed2024/E2_embeddings.npz",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 864833,
+      "sha256": "aa731ab5c649df901d3df9902ff6e7212fa883b0c8501292ea69e9d1e647a8c2",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/loso_email/seed2024/E2_model_best.pt",
+      "scope": "bundle",
+      "role": "checkpoint",
+      "size_bytes": 16989,
+      "sha256": "9f2be73bb22ddcc21ac4ed3e05f0974dc1d85857db6b79733c4aa25262755ac0",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/loso_email/seed2024/E2_training_history.json",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 7118,
+      "sha256": "eb6845815cbad9c445a0fe1ca9865be6117e4d88c58c6ab73bade4870430290e",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/loso_email/seed2024/E3_embeddings.npz",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 9568736,
+      "sha256": "1b22056c224a36d322652f3fe313aed7ba1b72333effcec4b0fda4ac5380fb88",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/loso_email/seed2024/E3_model_best.pt",
+      "scope": "bundle",
+      "role": "checkpoint",
+      "size_bytes": 20053,
+      "sha256": "992b590c78031c536afe470568da601f5f0675dd9d2b6a5c3b06b05efddd8213",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/loso_email/seed2024/E3_training_history.json",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 4288,
+      "sha256": "7b294933de2dc433fca903725d577235385a395081cecea8bc1ca8e1ed01b02d",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/loso_email/seed2024/SUCCESS",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 8,
+      "sha256": "1f513d4ecec4e91ddd48da1a59b6d96f1b76c374dc1da641980782a34f43b102",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/loso_email/seed2024/geometry.json",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 1289,
+      "sha256": "cfac0ad7a7d69ffb7077b24baca8d1353f5e621489f92ebc0e315dcf8a88b6ea",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/loso_email/seed2024/predictions.csv",
+      "scope": "bundle",
+      "role": "predictions",
+      "size_bytes": 224183,
+      "sha256": "0459429178fdd2b8b805eb899b923fd56aeadf09916ad338130f37044ac2b08c",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/loso_email/seed2024/results.csv",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 1194,
+      "sha256": "b7fc282243d19afb1ed84b971081ccb001efafd698b0b6007ef75f5cf3906544",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/loso_email/seed2024/run_manifest.json",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 1535,
+      "sha256": "692dc51fe9c02d2d4d0326432540e43de44af120a4efa3a9ce0006dba018cad7",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/loso_streaming/seed2022/E1_embeddings.npz",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 8508665,
+      "sha256": "a8a6526123fa19962d3c74358d95310e6b73a9a1c737b767058017d8bacee7ee",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/loso_streaming/seed2022/E1_model_best.pt",
+      "scope": "bundle",
+      "role": "checkpoint",
+      "size_bytes": 528586247,
+      "sha256": "84efa80f82b2ecd419f97852bcc4b4455e9a5043d2f034d27baca83f22b313c6",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/loso_streaming/seed2022/E1_training_history.json",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 434,
+      "sha256": "f4351d8829af7ee1045a403f46a6e9d91b73255cf3a40603b5129a4bf89fc26f",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/loso_streaming/seed2022/E2_embeddings.npz",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 884506,
+      "sha256": "3e369e8156f1fe70b334b73e156a78b3e4852d498c7674407dd4a9851ed265fd",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/loso_streaming/seed2022/E2_model_best.pt",
+      "scope": "bundle",
+      "role": "checkpoint",
+      "size_bytes": 16989,
+      "sha256": "247d7606ab7ab97ef9c51d87d7710570f30148bd6d07f8f82165225e0d05b7a5",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/loso_streaming/seed2022/E2_training_history.json",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 7150,
+      "sha256": "653b431a2a7f9fd12d384bf6e6043f00ea1f2e03b2581abb92c4f405afa5ce86",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/loso_streaming/seed2022/E3_embeddings.npz",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 9642772,
+      "sha256": "d9b10c582d238f22cfcf703aa4e22656579ae68edfea22abfbcb7a797f42673e",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/loso_streaming/seed2022/E3_model_best.pt",
+      "scope": "bundle",
+      "role": "checkpoint",
+      "size_bytes": 20053,
+      "sha256": "f48cd3f01040b3a341eb6a2cbd372d2976835805fc0ec2f174468e1ff3dfe441",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/loso_streaming/seed2022/E3_training_history.json",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 4291,
+      "sha256": "6f7bbf6ecc4765ed0e922151b36570354c21f861bce876b8c28ce57a99f496c8",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/loso_streaming/seed2022/SUCCESS",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 8,
+      "sha256": "1f513d4ecec4e91ddd48da1a59b6d96f1b76c374dc1da641980782a34f43b102",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/loso_streaming/seed2022/geometry.json",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 1281,
+      "sha256": "2539440fee4249a3a9e61d96213082661f18784fa141ca0a84e0f86650794018",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/loso_streaming/seed2022/predictions.csv",
+      "scope": "bundle",
+      "role": "predictions",
+      "size_bytes": 592858,
+      "sha256": "35544b6f1a03af478f13bc6b7b485b0bc7c916512dee259aed00787beaccbe43",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/loso_streaming/seed2022/results.csv",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 1215,
+      "sha256": "f0f719e9307c61ec017d2492bb059bbb7e8a148a9c1cc3f69536451c49b2e8fb",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/loso_streaming/seed2022/run_manifest.json",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 1543,
+      "sha256": "33e48f1802f0a2a217b3cfbf03c3178ac8f0c02b6d8f00976ef96d6e6507b3f6",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/loso_streaming/seed2023/E1_embeddings.npz",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 4467016,
+      "sha256": "788da10ed48feedfbbc8db3c275f9b58517516014f80768970a78f77a8554e62",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/loso_streaming/seed2023/E1_model_best.pt",
+      "scope": "bundle",
+      "role": "checkpoint",
+      "size_bytes": 528586247,
+      "sha256": "fa5df20a0613835dcce497d20ee42df7e9754a159347101fd053d528085825a5",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/loso_streaming/seed2023/E1_training_history.json",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 434,
+      "sha256": "2a31d109ceb43c6d517ec3b23f09aae9ec7820449a9a0b0a10d422923705dfe0",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/loso_streaming/seed2023/E2_embeddings.npz",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 843850,
+      "sha256": "e5f91536eba39aed6f0babf72ea202caa8b26f63a42f5b8fde5b6b6cfcbda775",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/loso_streaming/seed2023/E2_model_best.pt",
+      "scope": "bundle",
+      "role": "checkpoint",
+      "size_bytes": 16989,
+      "sha256": "f2b06ecf29373542253d52b038b535b4494db9c168f1ceb532fa913c6960bece",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/loso_streaming/seed2023/E2_training_history.json",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 7122,
+      "sha256": "393dbcb96279e8843844e7b271bb32143f4e1c0eac6dc9cc70506c52d8f4fde0",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/loso_streaming/seed2023/E3_embeddings.npz",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 7079038,
+      "sha256": "fbaeee995f556c3ac5007b3a2815d21ab8fd5a37233ffd0cf0f9d9d5ef3a6297",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/loso_streaming/seed2023/E3_model_best.pt",
+      "scope": "bundle",
+      "role": "checkpoint",
+      "size_bytes": 20053,
+      "sha256": "6f6b3759edf036523bcfa320f4b53998f85ce4d0bfc40aacdc218ae730fe8ec7",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/loso_streaming/seed2023/E3_training_history.json",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 4275,
+      "sha256": "b935a11b5a05a11a5b54faeacbc66bbcbd09ffb671301340a0997a99182bbea4",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/loso_streaming/seed2023/SUCCESS",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 8,
+      "sha256": "1f513d4ecec4e91ddd48da1a59b6d96f1b76c374dc1da641980782a34f43b102",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/loso_streaming/seed2023/geometry.json",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 1287,
+      "sha256": "b3ff2ad3e276cd200904c42ca0a871b11656765ea6072f1030004c68e1483726",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/loso_streaming/seed2023/predictions.csv",
+      "scope": "bundle",
+      "role": "predictions",
+      "size_bytes": 593372,
+      "sha256": "dc800c7debcffde1e8e9d2348685d2554dd991b45d91faab3f45ab2d706b1012",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/loso_streaming/seed2023/results.csv",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 1229,
+      "sha256": "895b9851b029ecc69bc59b2f2b993a6ea3fb89de00d2b2430b22e2d254e1cc5c",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/loso_streaming/seed2023/run_manifest.json",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 1543,
+      "sha256": "43f49ff8d33812f535f13f9dadb9aaa10817a505d782bf6b1f8425f3728410d1",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/loso_streaming/seed2024/E1_embeddings.npz",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 4961545,
+      "sha256": "29c96acb8c22f7c7900f3837fa699c0835ce0b05fc85db37613c4b996ef59e2e",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/loso_streaming/seed2024/E1_model_best.pt",
+      "scope": "bundle",
+      "role": "checkpoint",
+      "size_bytes": 528586247,
+      "sha256": "f05144be0c86ff85e94f03ba24825bb2377d06b82101ce6b14ee52e8df5eb0b7",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/loso_streaming/seed2024/E1_training_history.json",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 435,
+      "sha256": "cbdcf496e3e115250f94c19aefb49571656e17128bf5cf77028afb34cc4c5117",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/loso_streaming/seed2024/E2_embeddings.npz",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 875046,
+      "sha256": "d9b2e400a6879d2fc8e211e8c985efd196a48a8ae4fcdd09dee8a949c17fa71a",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/loso_streaming/seed2024/E2_model_best.pt",
+      "scope": "bundle",
+      "role": "checkpoint",
+      "size_bytes": 16989,
+      "sha256": "f535dc1589ed6e9531a4511ee58db1dd306e528954e038062994adb1dd48bc34",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/loso_streaming/seed2024/E2_training_history.json",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 7143,
+      "sha256": "69a22128882aacab2f28df171d9ebc3d6196a7fcbffde5afa4f59b085abe6595",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/loso_streaming/seed2024/E3_embeddings.npz",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 7737507,
+      "sha256": "f3b09c3c6e79a00b133ce7a86e01236318b129d0e000d79d495304cee7a3e3c4",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/loso_streaming/seed2024/E3_model_best.pt",
+      "scope": "bundle",
+      "role": "checkpoint",
+      "size_bytes": 20053,
+      "sha256": "f1353e1b412c42a7c5c4a4d499b84b3fff29c767b52d17e888d4f832c1bdfb90",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/loso_streaming/seed2024/E3_training_history.json",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 4284,
+      "sha256": "fd240a65d4bba7ec8e6ee5ccb65c6fbde02d298b64ffb1531bd82a87ac5a2299",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/loso_streaming/seed2024/SUCCESS",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 8,
+      "sha256": "1f513d4ecec4e91ddd48da1a59b6d96f1b76c374dc1da641980782a34f43b102",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/loso_streaming/seed2024/geometry.json",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 1282,
+      "sha256": "932f0759606b4b04b081bbc20663696737d04292ed1e873843eee7a807bc1468",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/loso_streaming/seed2024/predictions.csv",
+      "scope": "bundle",
+      "role": "predictions",
+      "size_bytes": 591517,
+      "sha256": "36f4edecb0f3084b4728ea84c84cc3ccabf4abe352704c789c57e0ab81034db9",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/loso_streaming/seed2024/results.csv",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 1217,
+      "sha256": "fc4b827a30cbc2617494623a2c0854ad3625732468e1cd9ab4a54405ba3f83c2",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/loso_streaming/seed2024/run_manifest.json",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 1543,
+      "sha256": "df47da8ba60a621d0323de13761b8f6d99e78e52c0f0705da3be2020d3377023",
+      "hash_status": "verified"
+    },
+    {
+      "path": "scripts/__pycache__/aggregate_stage17.cpython-310.pyc",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 13488,
+      "sha256": "e5d197cf3ba79cfb9ce6f675bcb2ad5fa1cd645df02a77c7a6f37737cdc384f0",
+      "hash_status": "verified"
+    },
+    {
+      "path": "scripts/__pycache__/audit_historical.cpython-310.pyc",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 14662,
+      "sha256": "f6cf82132b8a872d6234c18ecfa2afa965b36ee9c962a67f6255be6e665b83ae",
+      "hash_status": "verified"
+    },
+    {
+      "path": "scripts/__pycache__/prepare_historical_inputs.cpython-310.pyc",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 7656,
+      "sha256": "8addd41c46a5d340545b29e65a3014ab1d9ea08e7b9234363f456260b022a333",
+      "hash_status": "verified"
+    },
+    {
+      "path": "scripts/__pycache__/smoke_models.cpython-310.pyc",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 3892,
+      "sha256": "8934e785920c73a1f167d9eec252146654a7c7f4fc26cc9e588581fdf1682f45",
+      "hash_status": "verified"
+    },
+    {
+      "path": "scripts/__pycache__/stage17_common.cpython-310.pyc",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 3898,
+      "sha256": "8da5ffde0a51dad6cd3c3109b311bb5ffc8e3b00e475d926c44239ef9c3f541b",
+      "hash_status": "verified"
+    },
+    {
+      "path": "scripts/__pycache__/train_pilot_run.cpython-310.pyc",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 18467,
+      "sha256": "c0bafa93ee3477a2cacd1b3515a280c3bd9aa0ad77136e5dc3c189da7d7a4335",
+      "hash_status": "verified"
+    },
+    {
+      "path": "scripts/__pycache__/verify_stage17.cpython-310.pyc",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 3882,
+      "sha256": "13dd25692cd295d61bbe4d2e27cb12d3fd39caa6a0cdc2814017a6ccfb702adb",
+      "hash_status": "verified"
+    },
+    {
+      "path": "scripts/aggregate_stage17.py",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 16936,
+      "sha256": "845b12d25e24dd6fd56840d8e97b577f33035a6c85d2cdfc515b1a225f856044",
+      "hash_status": "verified"
+    },
+    {
+      "path": "scripts/audit_historical.py",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 15626,
+      "sha256": "3314e68749bcc652cec9c0bd2aac127e157499225f9f2c323ca2f061f119d484",
+      "hash_status": "verified"
+    },
+    {
+      "path": "scripts/prepare_historical_inputs.py",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 9478,
+      "sha256": "1a48a7ae897a8da36eba55aad796f7b6e57df597d932ad2039597dc1aaff7652",
+      "hash_status": "verified"
+    },
+    {
+      "path": "scripts/smoke_models.py",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 3888,
+      "sha256": "cf8d19f96510b88eb415ecd3b68122e4cbe0dfbded2e0b558dad55b7100b6de4",
+      "hash_status": "verified"
+    },
+    {
+      "path": "scripts/stage17_common.py",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 2704,
+      "sha256": "55475e421f30b553f645daf6a5dff3e25081e3b198e72171467c293be1197c04",
+      "hash_status": "verified"
+    },
+    {
+      "path": "scripts/train_pilot_run.py",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 17446,
+      "sha256": "8e80a255f0f5c0640a418bcaba90150d458e215b3c81c8e01e17a23d23b9fafc",
+      "hash_status": "verified"
+    },
+    {
+      "path": "scripts/verify_stage17.py",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 3292,
+      "sha256": "36a4747090748d419b58bd5c7b0c861c8b06a7cc53a16455bf627dd2413b867d",
+      "hash_status": "verified"
+    },
+    {
+      "path": "service_loso_pilot_configs.json",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 935,
+      "sha256": "7e930ddd5f6a86c314706618f8e4dce08bdf98f069aee6e9334645284dc2a168",
+      "hash_status": "verified"
+    },
+    {
+      "path": "service_loso_pilot_manifest.csv",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 7285,
+      "sha256": "4cf76cf221db7516cb2a7aab8342605da1bbc5aa3bc0d1cc8bdf13f90c9eb90a",
+      "hash_status": "verified"
+    },
+    {
+      "path": "smoke_verification.json",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 1413,
+      "sha256": "80cef6a6daad49d9b46200dcb76452a9a68440c7040bf94d9c58b6c40c1d08bf",
+      "hash_status": "verified"
+    },
+    {
+      "path": "stage17_0_results.md",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 516,
+      "sha256": "ce03a93033fd8a07ec91a15448bf7859f5f172599b210024ee344c82595d4c37",
+      "hash_status": "verified"
+    },
+    {
+      "path": "stage17_report.md",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 4361,
+      "sha256": "37fc1f6a6ddbc939148e0123bf691e6b39e1f1f0819cf99fd8ac2ff9f6ddc941",
+      "hash_status": "verified"
+    },
+    {
+      "path": "trafficformer_architecture.md",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 437,
+      "sha256": "39542646c708687779fa0558579242adf04b2e29cb1cdeb4ef5758413c352389",
+      "hash_status": "verified"
+    },
+    {
+      "path": "training_failure_log.md",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 268,
+      "sha256": "d904304d18a111f90029a7f7d653b1514e4cd6c1ac63848d969b18ab7adcf705",
+      "hash_status": "verified"
+    }
+  ],
+  "limitations": [
+    "Only Email and Streaming development Services were tested; this is not a six-Service or four-dataset conclusion.",
+    "Official TrafficFormer pretraining corpus exposure is unverified, so strict E1 used random initialization and underfit/collapsed under the recovered three-epoch budget.",
+    "E3 gains combine representation and Known-classifier/probe effects; they do not causally isolate graph information.",
+    "Stage16S labels are weak capture-activity labels and capture-disjoint generalization is not identifiable."
+  ],
+  "next_step": "Do not start automatically. Resolve TrafficFormer exposure/training feasibility and preregister a broader controlled validation before any four-dataset promotion or multimodal support model."
+}
