@@ -13,10 +13,10 @@
 ## 当前状态（2026-09-23 UTC）
 
 - **当前主任务**：ISCX-VPN 6 类与 ISCXTor2016 7 类粗粒度 Service classification；Stage 20 的 13 个 LOSO open-set 协议已经冻结。
-- **最近完成阶段**：Stage 21 `OURS-E3-T8` 闭集诊断，VPN/TOR Macro-F1 分别为 `0.5249±0.0479`、`0.5911±0.0146`。E3 在四个 paired runs 中均优于 E2，但绝对效果仍不具竞争力。
-- **当前运行阶段**：Stage 22 使用官方预训练 TrafficFormer、20 epochs 和相同 E3 融合配置进行公平闭集比较；状态为 `running`，尚无最终指标，禁止将预检或部分 checkpoint 当作结果。
+- **最近完成阶段**：Stage 22 官方预训练 TrafficFormer/E3 闭集诊断，4/4 正式 run 与 99 项完成性检查均通过。VPN 的 E1/E3 Macro-F1 为 `0.8606±0.0040/0.8595±0.0070`，TOR 为 `0.8213±0.0064/0.8222±0.0076`。
+- **当前运行阶段**：无。Stage 22 已结束；任何 open-set 使用都需要先单独冻结外部预训练暴露协议。
 - **已停止阶段**：Stage 19 RoNeTC 四数据集完整训练应用户要求停止；只有四个已完成协议可用于受限比较，USTC 部分训练不计入正式结果。
-- **科学结论**：现有证据不支持 fixed Multi-GMM 或当前 E3 配置稳定优于基础方法；粗粒度任务改善与细粒度结果不属于同一标签空间，不能作为同任务“涨点”。
+- **科学结论**：现有证据不支持 fixed Multi-GMM 或当前 E3 配置稳定优于基础方法。E3 相对同 run TrafficFormer 在 VPN 略低、TOR 略高，两个数据集都只有 `1/2` seeds 的 Macro-F1 为正；粗粒度任务改善与细粒度结果不属于同一标签空间，不能作为同任务“涨点”。
 
 详细状态见 [`CURRENT_PROGRESS.md`](CURRENT_PROGRESS.md)，完整实验索引见 [`EXPERIMENT_RESULTS.md`](EXPERIMENT_RESULTS.md)，持续执行记录见 [`EXECUTION_PROGRESS.md`](EXECUTION_PROGRESS.md)。
 
@@ -24,7 +24,7 @@
 
 普通 Git 只保存源码、配置、测试、说明文档、各阶段 `RESULTS.md`、`manifest.json`、完成性核验和经过筛选的小型汇总指标。原始/派生数据、checkpoint、embedding、缓存、运行日志和大体积中间产物保留在本地；具体规则见 [`PUBLIC_REPOSITORY_CONTENTS.md`](PUBLIC_REPOSITORY_CONTENTS.md)。
 
-当前没有选定可称为“最终模型”的权重，因此本次发布不上传 checkpoint。Stage 22 完成并选定正式发布模型后，再单独通过 Git LFS 或 GitHub Release 发布权重及 SHA256。
+当前没有选定可称为“最终模型”的权重，因此本次发布不上传 checkpoint。Stage 22 没有证明 E3 稳定优于同 run TrafficFormer；后续只有在另行选定正式发布模型后，才通过 Git LFS 或 GitHub Release 发布权重及 SHA256。
 
 ## 历史基础阶段（截至 Stage 8B，保留用于追溯）
 

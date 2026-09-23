@@ -457,13 +457,13 @@ H1 是当前唯一推荐候选，但必须附带以下限定：
 ## 13. 当前 handoff
 
 - 2026-09-23 修订：本节原 Stage 15R handoff 已被后续阶段取代；历史记录保留在下方各阶段条目中。
-- 最近完成的科学阶段：`Stage 21 — OURS-E3-T8 Coarse Service Closed-Set Benchmark`，状态 `CLOSED_SET_DIAGNOSTIC_COMPLETE`。
-- 当前活动阶段：`Stage 22 — Pretrained TrafficFormer + E3 Closed-Set Comparison`，状态 `running`；最终指标尚未生成。
+- 最近完成的科学阶段：`Stage 22 — Pretrained TrafficFormer + E3 Closed-Set Comparison`，状态 `CLOSED_SET_DIAGNOSTIC_COMPLETE`；4/4 runs、99/99 checks PASS。
+- 当前活动阶段：无；Stage 22 已完成，未启动后续 open-set 实验。
 - 当前正式粗粒度协议：Stage 20 VPN-6 / TOR-7 closed split 与 13 个 LOSO protocols。
-- 当前方法边界：Stage 21 E3 闭集表现中等，尚未优于既有高分 baseline；Stage 22 用于检验随机初始化/训练预算是否是主要原因。
+- 当前方法边界：Stage 22 的 E3 相对同 run TrafficFormer 在 VPN Macro-F1 低 `0.001115`、TOR 高 `0.000918`，两个数据集都只有 `1/2` positive seeds，不支持稳定优越性结论。
 - Storage cleanup：已完成三轮；前两轮删除 108 个 latest/last checkpoint 和全部 Python/pytest cache，第三轮删除 181 个 A+B 候选文件并实际释放约 `5.288 GiB`。当前项目 apparent size `52.086 GiB`、实际分配空间 `43.736 GiB`；正式 checkpoint 与正式结果均保留。
-- GitHub publication：正在按源码、文档和轻量核心证据的白名单重新发布；大模型、数据和动态运行产物不进入普通 Git。
-- 安全恢复点：不得干扰 Stage 22 三卡训练；不得把 running 状态写成完成；不得继续批量删除历史 checkpoint。
+- GitHub publication：Stage 21 快照已发布；Stage 22 完成结果正在按同一白名单补充发布，大模型、数据和运行日志不进入普通 Git。
+- 安全恢复点：不得将 Stage 22 闭集结果外推为 Unknown-Free open-set 结论；不得继续批量删除历史 checkpoint。
 
 ## 14. 关键证据入口
 
@@ -848,3 +848,12 @@ H1 是当前唯一推荐候选，但必须附带以下限定：
 - 推送状态：已完成。HTTPS push 实际停在 GitHub 用户名提示，SSH 22 端口随后连接超时；复核历史上下文并确认 SSH 身份有效后，改用 GitHub SSH 443 端口执行非强制 push。远端 `main` 已由 `25cd43c` 更新到 `9a4a17e`；最终收尾提交及远端 SHA 核验见本节后续提交历史。
 - 当前阻塞：无。GitHub SSH 22 端口在本机网络超时，但官方 SSH 443 通道可用且已完成发布。
 - 发布边界：Stage 22 后续生成的最终指标文件仍留在本地工作树且未纳入本次提交；本次远端保持先前约定的 Stage 22 `running` 快照，不含动态 checkpoint、run 目录或日志，也未使用 force push。
+
+## 33. Stage 22 完成结果补充发布（2026-09-23）
+
+- 状态：`in_progress`。
+- 目标：将 Stage 22 已完成的核心结果、机器可读清单、项目索引和当前状态补充到 GitHub；继续排除 checkpoint、representation、predictions、运行日志和缓存。
+- 起始状态：Stage 22 `4/4` formal runs 已完成，自带核验=`99/99 PASS`；`RESULTS.md` 与核心汇总文件已生成，但根级 README、`CURRENT_PROGRESS.md`、`EXPERIMENT_RESULTS.md` 和本交接文档仍记录为 `running`。
+- 已执行：核对四个 JSON 可解析；运行 Stage 22 自带 `verify_completion.py` 得到 `PASS / 99 checks / 0 failures`；发现通用实验包校验因 `manifest.json.artifacts=[]` 失败，随后按保存规范刷新为 80 个 bundle artifact 条目并保留本地证据哈希。
+- 科学结论：VPN E1/E3 Macro-F1=`0.860607±0.003961/0.859493±0.007015`，TOR=`0.821259±0.006376/0.822178±0.007643`；E3−E1 mean delta=`-0.001115/+0.000918`，每个数据集均仅 `1/2` positive seeds，不能宣称 E3 稳定优于 TrafficFormer。
+- 当前动作：更新公开说明与索引，重新验证 bundle、提交白名单和敏感/大文件边界，然后通过已验证的 GitHub SSH 443 通道非强制推送并核对远端 SHA。

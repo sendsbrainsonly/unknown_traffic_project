@@ -1,36 +1,757 @@
 {
-  "schema_version": 1,
-  "experiment_id": "stage22-pretrained-trafficformer-e3-closed-set-20260923-v1",
-  "created_at_utc": "2026-09-23T02:49:05Z",
-  "updated_at_utc": "2026-09-23T02:49:05Z",
-  "status": "running",
-  "experiment_type": "benchmark",
+  "artifacts": [
+    {
+      "path": "aggregate_metrics.csv",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 6483,
+      "sha256": "82e0a5091057be7c8222fc99fb34b886fbdb9bb7f7e5d10c15ef8d5500d419be",
+      "hash_status": "verified"
+    },
+    {
+      "path": "aggregate_summary.json",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 9413,
+      "sha256": "41c9c6f099cdc9f7c797a958e3c67839ed9ac5eee4dd7e9180e19ab8ab439f9f",
+      "hash_status": "verified"
+    },
+    {
+      "path": "batch64_smoke_result.json",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 196,
+      "sha256": "25a431607c1d0c042d63b755213c77ed2d551da99c465a38fa83567da1772152",
+      "hash_status": "verified"
+    },
+    {
+      "path": "completion_verification.json",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 20237,
+      "sha256": "107849acf06d10328b8aeae916031bf4c88f2cd6799adcf8d886368865fe1ac4",
+      "hash_status": "verified"
+    },
+    {
+      "path": "config.json",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 1948,
+      "sha256": "c3c894566a752800d435b4663ef4e9695ee3d68154bd78a4dc553790cf23433d",
+      "hash_status": "verified"
+    },
+    {
+      "path": "confusion_matrices.csv",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 22509,
+      "sha256": "e9a26e357f590405d3e147d53ff59e2972e214eb1cc8ea393718c6a1a24058cc",
+      "hash_status": "verified"
+    },
+    {
+      "path": "e3_vs_branch_deltas.csv",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 2369,
+      "sha256": "9ff8dcd09d339c3fdebda1af3325ab21a828c0f9a26f6d9d18ad3c90b26d92e8",
+      "hash_status": "verified"
+    },
+    {
+      "path": "failed_attempts/batch64_smoke_reset_before_context/RESULTS.md",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 568,
+      "sha256": "90ad16c025c03af8928a87c8310499bed960197d77906565b030b8312694221b",
+      "hash_status": "verified"
+    },
+    {
+      "path": "launcher_logs/iscx_tor_seed2022.log",
+      "scope": "bundle",
+      "role": "log",
+      "size_bytes": 5933,
+      "sha256": "b52a2ad2380d3c9386e0c5177f3420e2ade904aec6c27c91c76cd150e4e37bb9",
+      "hash_status": "verified"
+    },
+    {
+      "path": "launcher_logs/iscx_tor_seed2023.log",
+      "scope": "bundle",
+      "role": "log",
+      "size_bytes": 5918,
+      "sha256": "2847f63addf1441e6ff5603b66b457578b9052c369a792e6b393f39b175bb4be",
+      "hash_status": "verified"
+    },
+    {
+      "path": "launcher_logs/iscx_vpn_seed2022.log",
+      "scope": "bundle",
+      "role": "log",
+      "size_bytes": 5943,
+      "sha256": "4369e759e66c2f9c4c064d9e86c9a04b9adeac206ddbbade659c4b45deeef7de",
+      "hash_status": "verified"
+    },
+    {
+      "path": "launcher_logs/iscx_vpn_seed2023.log",
+      "scope": "bundle",
+      "role": "log",
+      "size_bytes": 5871,
+      "sha256": "5473379f124e7cb3a3e1e68dfbed02ef35d72100df6053faa2f72c6214e17c4c",
+      "hash_status": "verified"
+    },
+    {
+      "path": "paired_vs_stage21_random3.csv",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 3448,
+      "sha256": "a1d47bc5d40297f414696024835fcba24ddcc7d7a1c62ad87bce3d0a982f3503",
+      "hash_status": "verified"
+    },
+    {
+      "path": "per_class_aggregate.csv",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 5178,
+      "sha256": "7a93a89b6435e9095953123c1dc650342b054688f7f5a9c859b6c7c4b01d3b47",
+      "hash_status": "verified"
+    },
+    {
+      "path": "per_class_metrics.csv",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 5846,
+      "sha256": "3651fefcaeaa6935af12ec73bfe357391ed92f01ad4582cc2ef7d1578505e0e9",
+      "hash_status": "verified"
+    },
+    {
+      "path": "preflight.json",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 1931,
+      "sha256": "9468bdad38ee11c4c4a54ae38d952955d7fe13d6689a1b7df503c1a05680c537",
+      "hash_status": "verified"
+    },
+    {
+      "path": "progress.txt",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 320,
+      "sha256": "69ec9d52c47a411fa897a59d1103eff2d3621b9599df75cb8c103d5215550f77",
+      "hash_status": "verified"
+    },
+    {
+      "path": "protected_asset_hashes_after.json",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 1258,
+      "sha256": "daceb6582efef0bc0e17f85acc694b49fae7b85247bd7f9e85ca722cf28f301f",
+      "hash_status": "verified"
+    },
+    {
+      "path": "protected_asset_hashes_before.json",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 1258,
+      "sha256": "daceb6582efef0bc0e17f85acc694b49fae7b85247bd7f9e85ca722cf28f301f",
+      "hash_status": "verified"
+    },
+    {
+      "path": "queue_status.json",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 1524,
+      "sha256": "0dc9e78217da80f88e8b0ca13e2e224efa0066a69960fa4d233367f28662c576",
+      "hash_status": "verified"
+    },
+    {
+      "path": "run_metrics.csv",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 3087,
+      "sha256": "02a579b068f70f477ebdc0ae7f0f798ba3bd431da2db0bb0778848c4c6305f7f",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/iscx_tor/seed2022/E1_model_best.pt",
+      "scope": "bundle",
+      "role": "checkpoint",
+      "size_bytes": 528593415,
+      "sha256": "d2ef3200b4e3745b2e842eb6bd3306f083342e70eb96175af2fd24992ece26b1",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/iscx_tor/seed2022/E2_model_best.pt",
+      "scope": "bundle",
+      "role": "checkpoint",
+      "size_bytes": 18013,
+      "sha256": "031682f6e8bdd0c9b1f0dbbcc6186991e210d7a8657b95c93b4de74dbc666cec",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/iscx_tor/seed2022/E3_model_best.pt",
+      "scope": "bundle",
+      "role": "checkpoint",
+      "size_bytes": 27221,
+      "sha256": "6264e00e13adefd39bb92c02e512d756dc30147ebdce006c87d5f2f960eef2a8",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/iscx_tor/seed2022/SUCCESS",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 8,
+      "sha256": "1f513d4ecec4e91ddd48da1a59b6d96f1b76c374dc1da641980782a34f43b102",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/iscx_tor/seed2022/predictions.csv",
+      "scope": "bundle",
+      "role": "predictions",
+      "size_bytes": 769071,
+      "sha256": "e3c348c9e7b49b86d3603cb8ece97a393c945ebbd0e2c7a219f3b7d894953202",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/iscx_tor/seed2022/pretrained_load_report.json",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 739,
+      "sha256": "6fc35700085218c033f4aa24427e350215400c49562c9aec6221aebeb13ab7b5",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/iscx_tor/seed2022/representations.npz",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 69034274,
+      "sha256": "93949bbb8c1049205f22631224ebcc2f823aff9a762264ac8802c24f58c53bdc",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/iscx_tor/seed2022/results.csv",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 607,
+      "sha256": "20f8c261506f79322d81615a363aca640e54a183e1087b9d793411125411f01e",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/iscx_tor/seed2022/run_manifest.json",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 1445,
+      "sha256": "9982a538a52a18fc4aa1a6c8f7eb25cb5ac2c99f8c3caf43c101a181d4204e1b",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/iscx_tor/seed2022/training_history.json",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 17177,
+      "sha256": "e658cc32e3cb37b5125281c0752ab7f69b6ec5ca125a5ffcec771fb15ccb5c2a",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/iscx_tor/seed2023/E1_model_best.pt",
+      "scope": "bundle",
+      "role": "checkpoint",
+      "size_bytes": 528593415,
+      "sha256": "b4cd611ff05cdf0f913509be2199dece675696d16ffc6334e2fd0a571fa6f9a1",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/iscx_tor/seed2023/E2_model_best.pt",
+      "scope": "bundle",
+      "role": "checkpoint",
+      "size_bytes": 18013,
+      "sha256": "23797b3238dcc606123a22eebd390b20a3b11f2fa473b75c1af2bb35f46d67d8",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/iscx_tor/seed2023/E3_model_best.pt",
+      "scope": "bundle",
+      "role": "checkpoint",
+      "size_bytes": 27221,
+      "sha256": "9b558ce08660fbd6f35a5a3559d4a3e94f48fe0324ad13ce5191379c20b609c9",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/iscx_tor/seed2023/SUCCESS",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 8,
+      "sha256": "1f513d4ecec4e91ddd48da1a59b6d96f1b76c374dc1da641980782a34f43b102",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/iscx_tor/seed2023/predictions.csv",
+      "scope": "bundle",
+      "role": "predictions",
+      "size_bytes": 768732,
+      "sha256": "f6be77bb302b26f19b57f37688431d9114ec136503b9bd2440ab56ceeb8e9405",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/iscx_tor/seed2023/pretrained_load_report.json",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 739,
+      "sha256": "6fc35700085218c033f4aa24427e350215400c49562c9aec6221aebeb13ab7b5",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/iscx_tor/seed2023/representations.npz",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 69037704,
+      "sha256": "62e3127854ab435ea78a832c8936655da54f738729de43f8b5d9bd236d6d211e",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/iscx_tor/seed2023/results.csv",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 604,
+      "sha256": "6be7cd6aab4342844d95289c1d468b3ee735d8c56322b2b5116e4d8dc56b152d",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/iscx_tor/seed2023/run_manifest.json",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 1445,
+      "sha256": "beb394a86a171596a35a721378d9e7b8b5cb7c3bcd07c353d796f8fca6651962",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/iscx_tor/seed2023/training_history.json",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 17166,
+      "sha256": "fc215ecbf56a28da928b4df71a5ced3a2667b12573c7f7a5b1f5da655c2843fa",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/iscx_vpn/seed2022/E1_model_best.pt",
+      "scope": "bundle",
+      "role": "checkpoint",
+      "size_bytes": 528590343,
+      "sha256": "e59e7dbd2116263f42ed4597e9280b33c8861c2966620d14bbaa861beefff60d",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/iscx_vpn/seed2022/E2_model_best.pt",
+      "scope": "bundle",
+      "role": "checkpoint",
+      "size_bytes": 17501,
+      "sha256": "985b4c176e4b8223e92bc89db9da374390c43b8a759cfe14bc1ba71d8fb2dbf6",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/iscx_vpn/seed2022/E3_model_best.pt",
+      "scope": "bundle",
+      "role": "checkpoint",
+      "size_bytes": 23637,
+      "sha256": "3162936603d95214fa0c7c834772ed59cc25a22b89fe85d1ef941791371a7a09",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/iscx_vpn/seed2022/SUCCESS",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 8,
+      "sha256": "1f513d4ecec4e91ddd48da1a59b6d96f1b76c374dc1da641980782a34f43b102",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/iscx_vpn/seed2022/predictions.csv",
+      "scope": "bundle",
+      "role": "predictions",
+      "size_bytes": 750307,
+      "sha256": "7e2bcd8c410e6e195c8301e625287432fe51def7e64894bec984257ea4596732",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/iscx_vpn/seed2022/pretrained_load_report.json",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 739,
+      "sha256": "6fc35700085218c033f4aa24427e350215400c49562c9aec6221aebeb13ab7b5",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/iscx_vpn/seed2022/representations.npz",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 68494931,
+      "sha256": "50906b181a769edd503f1622fdb51dccf68365b3df52bf91197114bd6087517d",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/iscx_vpn/seed2022/results.csv",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 607,
+      "sha256": "01f76e478cffb087a1190bb589a1dcf6069108cfe0185a208ae2fa8d938a42b5",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/iscx_vpn/seed2022/run_manifest.json",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 1444,
+      "sha256": "d082852df2414720166493fa2c742bd4bb4d21f312c11c41ffafe222cf5898db",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/iscx_vpn/seed2022/training_history.json",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 17174,
+      "sha256": "9cfc7a96279a443122516928adb313072ee13e4ffbf99a086f6900105cbff467",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/iscx_vpn/seed2023/E1_model_best.pt",
+      "scope": "bundle",
+      "role": "checkpoint",
+      "size_bytes": 528590343,
+      "sha256": "c22595a7a333836d7b4942173a7543fc53fab837148671521093da3cdef744cc",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/iscx_vpn/seed2023/E2_model_best.pt",
+      "scope": "bundle",
+      "role": "checkpoint",
+      "size_bytes": 17501,
+      "sha256": "7c212d2bfc20900923bf49b1b7a5fa6c25c602ce6817495556758d03a8518c49",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/iscx_vpn/seed2023/E3_model_best.pt",
+      "scope": "bundle",
+      "role": "checkpoint",
+      "size_bytes": 23637,
+      "sha256": "22a8ee7ec77eaad2c0c44b85eebdf56d4d21bd5dcd98ea7f080ae31fb3268ceb",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/iscx_vpn/seed2023/SUCCESS",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 8,
+      "sha256": "1f513d4ecec4e91ddd48da1a59b6d96f1b76c374dc1da641980782a34f43b102",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/iscx_vpn/seed2023/predictions.csv",
+      "scope": "bundle",
+      "role": "predictions",
+      "size_bytes": 750241,
+      "sha256": "f1fcf7ac98d50d2ce1ef660c5ca7400761cc8f4c634d28f41cba76fc1119c217",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/iscx_vpn/seed2023/pretrained_load_report.json",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 739,
+      "sha256": "6fc35700085218c033f4aa24427e350215400c49562c9aec6221aebeb13ab7b5",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/iscx_vpn/seed2023/representations.npz",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 68079982,
+      "sha256": "f161264ac353cdea7a6b4113a23a2eb8158d4571f5879345c595658499003f68",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/iscx_vpn/seed2023/results.csv",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 605,
+      "sha256": "df119729ac74579df779644ad6c39fe2a4bf53325b6127880df1888ff0786f64",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/iscx_vpn/seed2023/run_manifest.json",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 1444,
+      "sha256": "1368172c0cbab3cbc8077e222fc590db81b4ebce066c1c004c9b906637bebb1a",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/iscx_vpn/seed2023/training_history.json",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 17036,
+      "sha256": "b7c42f5a29837ec6f3a09fcbdfe4dbeb987a89a5bcc23e0f7a87f9260d251c94",
+      "hash_status": "verified"
+    },
+    {
+      "path": "scripts/__pycache__/aggregate.cpython-310.pyc",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 7109,
+      "sha256": "ebcf60ca79bbe228e4655db0e13c67e7c5c9f1d03b29f5d5074b2482260736d3",
+      "hash_status": "verified"
+    },
+    {
+      "path": "scripts/__pycache__/finalize.cpython-310.pyc",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 8271,
+      "sha256": "0b4d58a8ed54c91969d59d06284aa701ea4c3b8d8f04be71f750329e57094bd9",
+      "hash_status": "verified"
+    },
+    {
+      "path": "scripts/__pycache__/preflight.cpython-310.pyc",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 2858,
+      "sha256": "1dca0ccee05b3c885989ff1077f0a49d2e1af125e10c65ff70330cb5934824db",
+      "hash_status": "verified"
+    },
+    {
+      "path": "scripts/__pycache__/run_queue.cpython-310.pyc",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 4160,
+      "sha256": "89a3a2b6214cf9d70acc2231195658da0e7f2ab92b259d3396813a2d91d49367",
+      "hash_status": "verified"
+    },
+    {
+      "path": "scripts/__pycache__/smoke.cpython-310.pyc",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 2706,
+      "sha256": "67e2cfb8f4dff017fcc865c655f245531cf6c1fce8ac7b6854829bea93c3b5fb",
+      "hash_status": "verified"
+    },
+    {
+      "path": "scripts/__pycache__/stage22_common.cpython-310.pyc",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 3554,
+      "sha256": "99d9c728d6eeb35a6c410e1de7d1280972271f33ec3f3a7d281d56d2f89ad7ea",
+      "hash_status": "verified"
+    },
+    {
+      "path": "scripts/__pycache__/train_closed_run.cpython-310.pyc",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 11303,
+      "sha256": "ff9983f4f0fbb496391a40d6f8d9ae29e7f295cc1eef86fee98344db244dfe48",
+      "hash_status": "verified"
+    },
+    {
+      "path": "scripts/__pycache__/verify_completion.cpython-310.pyc",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 5125,
+      "sha256": "5e29c92051961ffd9df3b0ebc197657c9286a940b3073678bd9009f21b5c3615",
+      "hash_status": "verified"
+    },
+    {
+      "path": "scripts/aggregate.py",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 8722,
+      "sha256": "de1017cb8199d495fc6141463b5c35193c2bf3947a46100bdc8ac2857253ccbf",
+      "hash_status": "verified"
+    },
+    {
+      "path": "scripts/batch64_smoke.py",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 2509,
+      "sha256": "e3781461c52ca2f2f20360e3068defda9720d1d894db8a0eb3de57032c448e70",
+      "hash_status": "verified"
+    },
+    {
+      "path": "scripts/finalize.py",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 8205,
+      "sha256": "f296ba72b70d825fb1f6e5745645b392ac3bcdf0e5118ca20b0475487c2de9f6",
+      "hash_status": "verified"
+    },
+    {
+      "path": "scripts/preflight.py",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 2773,
+      "sha256": "242d51d1687f4e709b4d6c17c885350e0d7580624961e0ca6d7d4036d2dbdcbd",
+      "hash_status": "verified"
+    },
+    {
+      "path": "scripts/run_queue.py",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 3816,
+      "sha256": "849d2616d1d6b2b4e083d7fb0cc6b561de30bd7ca5fbcdb16741045507938944",
+      "hash_status": "verified"
+    },
+    {
+      "path": "scripts/smoke.py",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 2644,
+      "sha256": "6bff749dd4c242e12caad823515cfb96689299314df37914fa783985402a9708",
+      "hash_status": "verified"
+    },
+    {
+      "path": "scripts/stage22_common.py",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 2512,
+      "sha256": "bc5ad4b164ff1c6a659f5dfecc393f01ff5fe87288ce3a8b18337fa02311003e",
+      "hash_status": "verified"
+    },
+    {
+      "path": "scripts/train_closed_run.py",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 12146,
+      "sha256": "87312277e3d9c0835cf5b40c411b65ce1a0750515265dd8dd1461df0e794640c",
+      "hash_status": "verified"
+    },
+    {
+      "path": "scripts/verify_completion.py",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 4772,
+      "sha256": "d698fa064dadbaef2a4752308f80e4bb0fcd34c0243e133f8e8f7890e95194fc",
+      "hash_status": "verified"
+    },
+    {
+      "path": "smoke_result.json",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 863,
+      "sha256": "cf59967644f81f482f1e388dbf44248527deb484f6b75d37730ba1334fc54983",
+      "hash_status": "verified"
+    },
+    {
+      "path": "validation_test_gap.csv",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 1016,
+      "sha256": "20283098cf55d321fb4daf6880f17a8d88761775b633eac7059695f1002f94df",
+      "hash_status": "verified"
+    }
+  ],
   "claim_scope": "diagnostic",
-  "objective": "On the frozen Stage20 ISCX-VPN and ISCXTor closed-Service splits, compare official-pretrained TrafficFormer fine-tuned for 20 epochs with the same pretrained TrafficFormer plus the frozen TAGCN and linear E3 fusion pipeline.",
-  "inputs": [],
   "code": {
-    "revision": null,
-    "dirty": null,
-    "changes": []
-  },
-  "execution": {
-    "tmux_session": "stage22-pretrained-e3-grid-20260923",
-    "command": "select_gpu.py --min-free-gb 36 --count 3 -- python stage22.../scripts/run_queue.py --device-indices 0,1,2",
-    "exit_code": null,
-    "environment": null,
-    "physical_gpu_ids": []
+    "changes": [
+      "new isolated Stage22 scripts and reports only"
+    ],
+    "dirty": true,
+    "revision": "c2c9d52d27811f1d4fa6abf85b13f747989a6ffa"
   },
   "configuration": {
-    "files": ["config.json"],
+    "files": [
+      "config.json"
+    ],
     "parameters": {
-      "trafficformer": "official pretrained, 20 epochs, batch 64, lr 6e-5",
-      "tagcn": "50 epochs, batch 64, lr 1e-3, hidden 128, K=2",
-      "fusion": "Known-Train z-score, concat 768+128, 30 epochs"
+      "fusion_head": {
+        "batch_size": 256,
+        "checkpoint_criterion": "Known Validation Macro-F1",
+        "epochs": 30,
+        "learning_rate": 0.001,
+        "normalization": "Known-Train per-branch z-score"
+      },
+      "tagcn": {
+        "batch_size": 64,
+        "checkpoint_criterion": "Known Validation Macro-F1",
+        "epochs": 50,
+        "hidden_dim": 128,
+        "k_hops": 2,
+        "learning_rate": 0.001
+      },
+      "trafficformer": {
+        "batch_size": 64,
+        "checkpoint_criterion": "Known Validation Macro-F1",
+        "epochs": 20,
+        "learning_rate": 6e-05,
+        "pooling": "first",
+        "pretrained": true,
+        "seq_length": 320
+      }
     },
-    "seeds": [2022, 2023]
+    "seeds": [
+      2022,
+      2023
+    ]
   },
-  "core_results": [],
-  "artifacts": [],
-  "limitations": [],
-  "next_step": null
+  "core_results": [
+    {
+      "dataset": "iscx_vpn",
+      "encoder": "E1",
+      "mean_accuracy": 0.853156450137237,
+      "mean_macro_f1": 0.8606074342008693,
+      "mean_weighted_f1": 0.8474491068457638
+    },
+    {
+      "dataset": "iscx_vpn",
+      "encoder": "E3",
+      "mean_accuracy": 0.8499542543458372,
+      "mean_macro_f1": 0.8594926220789258,
+      "mean_weighted_f1": 0.8464479051836756
+    },
+    {
+      "dataset": "iscx_tor",
+      "encoder": "E1",
+      "mean_accuracy": 0.8312444046553268,
+      "mean_macro_f1": 0.8212590438545695,
+      "mean_weighted_f1": 0.8323779117566872
+    },
+    {
+      "dataset": "iscx_tor",
+      "encoder": "E3",
+      "mean_accuracy": 0.8321396598030439,
+      "mean_macro_f1": 0.8221775012760784,
+      "mean_weighted_f1": 0.8339034992439058
+    }
+  ],
+  "created_at_utc": "2026-09-23T02:49:05Z",
+  "execution": {
+    "command": "select_gpu.py --min-free-gb 36 --count 3 -- python stage22.../scripts/run_queue.py --device-indices 0,1,2",
+    "environment": "/home/birkenwald/data/SEU-WXY/conda_envs/2025-10-8-WXY-dgl_py310",
+    "exit_code": 0,
+    "physical_gpu_ids": [
+      "0",
+      "1",
+      "2"
+    ],
+    "tmux_session": "stage22-pretrained-e3-grid-20260923"
+  },
+  "experiment_id": "stage22-pretrained-trafficformer-e3-closed-set-20260923-v1",
+  "experiment_type": "benchmark",
+  "inputs": [
+    {
+      "path": "/home/birkenwald/data/SEU-WXY/WXY-SEU/TrafficClassifier/Projects/unknown_traffic_project/stage20_dual_coarse_service_protocol/closed_service_manifest.csv",
+      "role": "frozen split"
+    },
+    {
+      "path": "/home/birkenwald/data/SEU-WXY/WXY-SEU/TrafficClassifier/Projects/unknown_traffic_project/stage21_coarse_service_ours_e3_benchmark/feature_cache",
+      "role": "frozen features"
+    },
+    {
+      "path": "/home/birkenwald/data/SEU-WXY/WXY-SEU/TrafficClassifier/Projects/unknown_traffic_project/tf_runtime/code/models/pretrained_model.bin",
+      "role": "official pretrained initialization",
+      "sha256": "be9dcc1e0c6b68db005e506adf13a2d937a2f3982539a2c8a58f78c55af0d5ce"
+    }
+  ],
+  "limitations": [
+    "Official pretraining corpus exposure is unverified; not a strict Unknown-Free open-set result.",
+    "Capture-derived weak labels and no uniform capture-disjoint split.",
+    "Two seeds only.",
+    "Stage21 comparison combines initialization and epoch-budget changes."
+  ],
+  "next_step": "Stop after closed-set reporting; require a separate decision before any open-set use of the external pretrained checkpoint.",
+  "objective": "On the frozen Stage20 ISCX-VPN and ISCXTor closed-Service splits, compare official-pretrained TrafficFormer fine-tuned for 20 epochs with the same pretrained TrafficFormer plus the frozen TAGCN and linear E3 fusion pipeline.",
+  "schema_version": 1,
+  "status": "success",
+  "updated_at_utc": "2026-09-23T10:57:20Z"
 }

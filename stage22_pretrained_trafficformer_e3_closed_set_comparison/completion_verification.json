@@ -1,0 +1,524 @@
+{
+  "checks": 99,
+  "details": [
+    {
+      "detail": {
+        "official_pretrained_model": true,
+        "stage20_closed_manifest": true,
+        "stage21_tor_cache": true,
+        "stage21_vpn_cache": true
+      },
+      "name": "protected_assets_unchanged",
+      "passed": true
+    },
+    {
+      "detail": "/home/birkenwald/data/SEU-WXY/WXY-SEU/TrafficClassifier/Projects/unknown_traffic_project/stage22_pretrained_trafficformer_e3_closed_set_comparison/runs/iscx_vpn/seed2022/SUCCESS",
+      "name": "iscx_vpn_2022_success_marker",
+      "passed": true
+    },
+    {
+      "detail": "/home/birkenwald/data/SEU-WXY/WXY-SEU/TrafficClassifier/Projects/unknown_traffic_project/stage22_pretrained_trafficformer_e3_closed_set_comparison/runs/iscx_vpn/seed2022/run_manifest.json",
+      "name": "iscx_vpn_2022_manifest",
+      "passed": true
+    },
+    {
+      "detail": "SUCCESS",
+      "name": "iscx_vpn_2022_status",
+      "passed": true
+    },
+    {
+      "detail": "be9dcc1e0c6b68db005e506adf13a2d937a2f3982539a2c8a58f78c55af0d5ce",
+      "name": "iscx_vpn_2022_pretrained_hash",
+      "passed": true
+    },
+    {
+      "detail": 0,
+      "name": "iscx_vpn_2022_test_selection_zero",
+      "passed": true
+    },
+    {
+      "detail": "/home/birkenwald/data/SEU-WXY/WXY-SEU/TrafficClassifier/Projects/unknown_traffic_project/stage22_pretrained_trafficformer_e3_closed_set_comparison/runs/iscx_vpn/seed2022/E1_model_best.pt",
+      "name": "iscx_vpn_2022_E1_model_best.pt",
+      "passed": true
+    },
+    {
+      "detail": "/home/birkenwald/data/SEU-WXY/WXY-SEU/TrafficClassifier/Projects/unknown_traffic_project/stage22_pretrained_trafficformer_e3_closed_set_comparison/runs/iscx_vpn/seed2022/E2_model_best.pt",
+      "name": "iscx_vpn_2022_E2_model_best.pt",
+      "passed": true
+    },
+    {
+      "detail": "/home/birkenwald/data/SEU-WXY/WXY-SEU/TrafficClassifier/Projects/unknown_traffic_project/stage22_pretrained_trafficformer_e3_closed_set_comparison/runs/iscx_vpn/seed2022/E3_model_best.pt",
+      "name": "iscx_vpn_2022_E3_model_best.pt",
+      "passed": true
+    },
+    {
+      "detail": "/home/birkenwald/data/SEU-WXY/WXY-SEU/TrafficClassifier/Projects/unknown_traffic_project/stage22_pretrained_trafficformer_e3_closed_set_comparison/runs/iscx_vpn/seed2022/results.csv",
+      "name": "iscx_vpn_2022_results.csv",
+      "passed": true
+    },
+    {
+      "detail": "/home/birkenwald/data/SEU-WXY/WXY-SEU/TrafficClassifier/Projects/unknown_traffic_project/stage22_pretrained_trafficformer_e3_closed_set_comparison/runs/iscx_vpn/seed2022/predictions.csv",
+      "name": "iscx_vpn_2022_predictions.csv",
+      "passed": true
+    },
+    {
+      "detail": "/home/birkenwald/data/SEU-WXY/WXY-SEU/TrafficClassifier/Projects/unknown_traffic_project/stage22_pretrained_trafficformer_e3_closed_set_comparison/runs/iscx_vpn/seed2022/training_history.json",
+      "name": "iscx_vpn_2022_training_history.json",
+      "passed": true
+    },
+    {
+      "detail": "/home/birkenwald/data/SEU-WXY/WXY-SEU/TrafficClassifier/Projects/unknown_traffic_project/stage22_pretrained_trafficformer_e3_closed_set_comparison/runs/iscx_vpn/seed2022/representations.npz",
+      "name": "iscx_vpn_2022_representations.npz",
+      "passed": true
+    },
+    {
+      "detail": "/home/birkenwald/data/SEU-WXY/WXY-SEU/TrafficClassifier/Projects/unknown_traffic_project/stage22_pretrained_trafficformer_e3_closed_set_comparison/runs/iscx_vpn/seed2022/pretrained_load_report.json",
+      "name": "iscx_vpn_2022_pretrained_load_report.json",
+      "passed": true
+    },
+    {
+      "detail": 1093,
+      "name": "iscx_vpn_2022_E1_test_count",
+      "passed": true
+    },
+    {
+      "detail": 0.8572735590118938,
+      "name": "iscx_vpn_2022_E1_accuracy_replay",
+      "passed": true
+    },
+    {
+      "detail": 0.8645683463213484,
+      "name": "iscx_vpn_2022_E1_macro_f1_replay",
+      "passed": true
+    },
+    {
+      "detail": 1093,
+      "name": "iscx_vpn_2022_E2_test_count",
+      "passed": true
+    },
+    {
+      "detail": 0.44190301921317476,
+      "name": "iscx_vpn_2022_E2_accuracy_replay",
+      "passed": true
+    },
+    {
+      "detail": 0.41659810015300996,
+      "name": "iscx_vpn_2022_E2_macro_f1_replay",
+      "passed": true
+    },
+    {
+      "detail": 1093,
+      "name": "iscx_vpn_2022_E3_test_count",
+      "passed": true
+    },
+    {
+      "detail": 0.8581884720951509,
+      "name": "iscx_vpn_2022_E3_accuracy_replay",
+      "passed": true
+    },
+    {
+      "detail": 0.8665073960536983,
+      "name": "iscx_vpn_2022_E3_macro_f1_replay",
+      "passed": true
+    },
+    {
+      "detail": "/home/birkenwald/data/SEU-WXY/WXY-SEU/TrafficClassifier/Projects/unknown_traffic_project/stage22_pretrained_trafficformer_e3_closed_set_comparison/runs/iscx_vpn/seed2023/SUCCESS",
+      "name": "iscx_vpn_2023_success_marker",
+      "passed": true
+    },
+    {
+      "detail": "/home/birkenwald/data/SEU-WXY/WXY-SEU/TrafficClassifier/Projects/unknown_traffic_project/stage22_pretrained_trafficformer_e3_closed_set_comparison/runs/iscx_vpn/seed2023/run_manifest.json",
+      "name": "iscx_vpn_2023_manifest",
+      "passed": true
+    },
+    {
+      "detail": "SUCCESS",
+      "name": "iscx_vpn_2023_status",
+      "passed": true
+    },
+    {
+      "detail": "be9dcc1e0c6b68db005e506adf13a2d937a2f3982539a2c8a58f78c55af0d5ce",
+      "name": "iscx_vpn_2023_pretrained_hash",
+      "passed": true
+    },
+    {
+      "detail": 0,
+      "name": "iscx_vpn_2023_test_selection_zero",
+      "passed": true
+    },
+    {
+      "detail": "/home/birkenwald/data/SEU-WXY/WXY-SEU/TrafficClassifier/Projects/unknown_traffic_project/stage22_pretrained_trafficformer_e3_closed_set_comparison/runs/iscx_vpn/seed2023/E1_model_best.pt",
+      "name": "iscx_vpn_2023_E1_model_best.pt",
+      "passed": true
+    },
+    {
+      "detail": "/home/birkenwald/data/SEU-WXY/WXY-SEU/TrafficClassifier/Projects/unknown_traffic_project/stage22_pretrained_trafficformer_e3_closed_set_comparison/runs/iscx_vpn/seed2023/E2_model_best.pt",
+      "name": "iscx_vpn_2023_E2_model_best.pt",
+      "passed": true
+    },
+    {
+      "detail": "/home/birkenwald/data/SEU-WXY/WXY-SEU/TrafficClassifier/Projects/unknown_traffic_project/stage22_pretrained_trafficformer_e3_closed_set_comparison/runs/iscx_vpn/seed2023/E3_model_best.pt",
+      "name": "iscx_vpn_2023_E3_model_best.pt",
+      "passed": true
+    },
+    {
+      "detail": "/home/birkenwald/data/SEU-WXY/WXY-SEU/TrafficClassifier/Projects/unknown_traffic_project/stage22_pretrained_trafficformer_e3_closed_set_comparison/runs/iscx_vpn/seed2023/results.csv",
+      "name": "iscx_vpn_2023_results.csv",
+      "passed": true
+    },
+    {
+      "detail": "/home/birkenwald/data/SEU-WXY/WXY-SEU/TrafficClassifier/Projects/unknown_traffic_project/stage22_pretrained_trafficformer_e3_closed_set_comparison/runs/iscx_vpn/seed2023/predictions.csv",
+      "name": "iscx_vpn_2023_predictions.csv",
+      "passed": true
+    },
+    {
+      "detail": "/home/birkenwald/data/SEU-WXY/WXY-SEU/TrafficClassifier/Projects/unknown_traffic_project/stage22_pretrained_trafficformer_e3_closed_set_comparison/runs/iscx_vpn/seed2023/training_history.json",
+      "name": "iscx_vpn_2023_training_history.json",
+      "passed": true
+    },
+    {
+      "detail": "/home/birkenwald/data/SEU-WXY/WXY-SEU/TrafficClassifier/Projects/unknown_traffic_project/stage22_pretrained_trafficformer_e3_closed_set_comparison/runs/iscx_vpn/seed2023/representations.npz",
+      "name": "iscx_vpn_2023_representations.npz",
+      "passed": true
+    },
+    {
+      "detail": "/home/birkenwald/data/SEU-WXY/WXY-SEU/TrafficClassifier/Projects/unknown_traffic_project/stage22_pretrained_trafficformer_e3_closed_set_comparison/runs/iscx_vpn/seed2023/pretrained_load_report.json",
+      "name": "iscx_vpn_2023_pretrained_load_report.json",
+      "passed": true
+    },
+    {
+      "detail": 1093,
+      "name": "iscx_vpn_2023_E1_test_count",
+      "passed": true
+    },
+    {
+      "detail": 0.8490393412625801,
+      "name": "iscx_vpn_2023_E1_accuracy_replay",
+      "passed": true
+    },
+    {
+      "detail": 0.8566465220803902,
+      "name": "iscx_vpn_2023_E1_macro_f1_replay",
+      "passed": true
+    },
+    {
+      "detail": 1093,
+      "name": "iscx_vpn_2023_E2_test_count",
+      "passed": true
+    },
+    {
+      "detail": 0.4272644098810613,
+      "name": "iscx_vpn_2023_E2_accuracy_replay",
+      "passed": true
+    },
+    {
+      "detail": 0.4035223012646356,
+      "name": "iscx_vpn_2023_E2_macro_f1_replay",
+      "passed": true
+    },
+    {
+      "detail": 1093,
+      "name": "iscx_vpn_2023_E3_test_count",
+      "passed": true
+    },
+    {
+      "detail": 0.8417200365965233,
+      "name": "iscx_vpn_2023_E3_accuracy_replay",
+      "passed": true
+    },
+    {
+      "detail": 0.8524778481041535,
+      "name": "iscx_vpn_2023_E3_macro_f1_replay",
+      "passed": true
+    },
+    {
+      "detail": "/home/birkenwald/data/SEU-WXY/WXY-SEU/TrafficClassifier/Projects/unknown_traffic_project/stage22_pretrained_trafficformer_e3_closed_set_comparison/runs/iscx_tor/seed2022/SUCCESS",
+      "name": "iscx_tor_2022_success_marker",
+      "passed": true
+    },
+    {
+      "detail": "/home/birkenwald/data/SEU-WXY/WXY-SEU/TrafficClassifier/Projects/unknown_traffic_project/stage22_pretrained_trafficformer_e3_closed_set_comparison/runs/iscx_tor/seed2022/run_manifest.json",
+      "name": "iscx_tor_2022_manifest",
+      "passed": true
+    },
+    {
+      "detail": "SUCCESS",
+      "name": "iscx_tor_2022_status",
+      "passed": true
+    },
+    {
+      "detail": "be9dcc1e0c6b68db005e506adf13a2d937a2f3982539a2c8a58f78c55af0d5ce",
+      "name": "iscx_tor_2022_pretrained_hash",
+      "passed": true
+    },
+    {
+      "detail": 0,
+      "name": "iscx_tor_2022_test_selection_zero",
+      "passed": true
+    },
+    {
+      "detail": "/home/birkenwald/data/SEU-WXY/WXY-SEU/TrafficClassifier/Projects/unknown_traffic_project/stage22_pretrained_trafficformer_e3_closed_set_comparison/runs/iscx_tor/seed2022/E1_model_best.pt",
+      "name": "iscx_tor_2022_E1_model_best.pt",
+      "passed": true
+    },
+    {
+      "detail": "/home/birkenwald/data/SEU-WXY/WXY-SEU/TrafficClassifier/Projects/unknown_traffic_project/stage22_pretrained_trafficformer_e3_closed_set_comparison/runs/iscx_tor/seed2022/E2_model_best.pt",
+      "name": "iscx_tor_2022_E2_model_best.pt",
+      "passed": true
+    },
+    {
+      "detail": "/home/birkenwald/data/SEU-WXY/WXY-SEU/TrafficClassifier/Projects/unknown_traffic_project/stage22_pretrained_trafficformer_e3_closed_set_comparison/runs/iscx_tor/seed2022/E3_model_best.pt",
+      "name": "iscx_tor_2022_E3_model_best.pt",
+      "passed": true
+    },
+    {
+      "detail": "/home/birkenwald/data/SEU-WXY/WXY-SEU/TrafficClassifier/Projects/unknown_traffic_project/stage22_pretrained_trafficformer_e3_closed_set_comparison/runs/iscx_tor/seed2022/results.csv",
+      "name": "iscx_tor_2022_results.csv",
+      "passed": true
+    },
+    {
+      "detail": "/home/birkenwald/data/SEU-WXY/WXY-SEU/TrafficClassifier/Projects/unknown_traffic_project/stage22_pretrained_trafficformer_e3_closed_set_comparison/runs/iscx_tor/seed2022/predictions.csv",
+      "name": "iscx_tor_2022_predictions.csv",
+      "passed": true
+    },
+    {
+      "detail": "/home/birkenwald/data/SEU-WXY/WXY-SEU/TrafficClassifier/Projects/unknown_traffic_project/stage22_pretrained_trafficformer_e3_closed_set_comparison/runs/iscx_tor/seed2022/training_history.json",
+      "name": "iscx_tor_2022_training_history.json",
+      "passed": true
+    },
+    {
+      "detail": "/home/birkenwald/data/SEU-WXY/WXY-SEU/TrafficClassifier/Projects/unknown_traffic_project/stage22_pretrained_trafficformer_e3_closed_set_comparison/runs/iscx_tor/seed2022/representations.npz",
+      "name": "iscx_tor_2022_representations.npz",
+      "passed": true
+    },
+    {
+      "detail": "/home/birkenwald/data/SEU-WXY/WXY-SEU/TrafficClassifier/Projects/unknown_traffic_project/stage22_pretrained_trafficformer_e3_closed_set_comparison/runs/iscx_tor/seed2022/pretrained_load_report.json",
+      "name": "iscx_tor_2022_pretrained_load_report.json",
+      "passed": true
+    },
+    {
+      "detail": 1117,
+      "name": "iscx_tor_2022_E1_test_count",
+      "passed": true
+    },
+    {
+      "detail": 0.8370635631154879,
+      "name": "iscx_tor_2022_E1_accuracy_replay",
+      "passed": true
+    },
+    {
+      "detail": 0.8276346444805666,
+      "name": "iscx_tor_2022_E1_macro_f1_replay",
+      "passed": true
+    },
+    {
+      "detail": 1117,
+      "name": "iscx_tor_2022_E2_test_count",
+      "passed": true
+    },
+    {
+      "detail": 0.4512085944494181,
+      "name": "iscx_tor_2022_E2_accuracy_replay",
+      "passed": true
+    },
+    {
+      "detail": 0.37698202095924505,
+      "name": "iscx_tor_2022_E2_macro_f1_replay",
+      "passed": true
+    },
+    {
+      "detail": 1117,
+      "name": "iscx_tor_2022_E3_test_count",
+      "passed": true
+    },
+    {
+      "detail": 0.8388540734109221,
+      "name": "iscx_tor_2022_E3_accuracy_replay",
+      "passed": true
+    },
+    {
+      "detail": 0.829820953514132,
+      "name": "iscx_tor_2022_E3_macro_f1_replay",
+      "passed": true
+    },
+    {
+      "detail": "/home/birkenwald/data/SEU-WXY/WXY-SEU/TrafficClassifier/Projects/unknown_traffic_project/stage22_pretrained_trafficformer_e3_closed_set_comparison/runs/iscx_tor/seed2023/SUCCESS",
+      "name": "iscx_tor_2023_success_marker",
+      "passed": true
+    },
+    {
+      "detail": "/home/birkenwald/data/SEU-WXY/WXY-SEU/TrafficClassifier/Projects/unknown_traffic_project/stage22_pretrained_trafficformer_e3_closed_set_comparison/runs/iscx_tor/seed2023/run_manifest.json",
+      "name": "iscx_tor_2023_manifest",
+      "passed": true
+    },
+    {
+      "detail": "SUCCESS",
+      "name": "iscx_tor_2023_status",
+      "passed": true
+    },
+    {
+      "detail": "be9dcc1e0c6b68db005e506adf13a2d937a2f3982539a2c8a58f78c55af0d5ce",
+      "name": "iscx_tor_2023_pretrained_hash",
+      "passed": true
+    },
+    {
+      "detail": 0,
+      "name": "iscx_tor_2023_test_selection_zero",
+      "passed": true
+    },
+    {
+      "detail": "/home/birkenwald/data/SEU-WXY/WXY-SEU/TrafficClassifier/Projects/unknown_traffic_project/stage22_pretrained_trafficformer_e3_closed_set_comparison/runs/iscx_tor/seed2023/E1_model_best.pt",
+      "name": "iscx_tor_2023_E1_model_best.pt",
+      "passed": true
+    },
+    {
+      "detail": "/home/birkenwald/data/SEU-WXY/WXY-SEU/TrafficClassifier/Projects/unknown_traffic_project/stage22_pretrained_trafficformer_e3_closed_set_comparison/runs/iscx_tor/seed2023/E2_model_best.pt",
+      "name": "iscx_tor_2023_E2_model_best.pt",
+      "passed": true
+    },
+    {
+      "detail": "/home/birkenwald/data/SEU-WXY/WXY-SEU/TrafficClassifier/Projects/unknown_traffic_project/stage22_pretrained_trafficformer_e3_closed_set_comparison/runs/iscx_tor/seed2023/E3_model_best.pt",
+      "name": "iscx_tor_2023_E3_model_best.pt",
+      "passed": true
+    },
+    {
+      "detail": "/home/birkenwald/data/SEU-WXY/WXY-SEU/TrafficClassifier/Projects/unknown_traffic_project/stage22_pretrained_trafficformer_e3_closed_set_comparison/runs/iscx_tor/seed2023/results.csv",
+      "name": "iscx_tor_2023_results.csv",
+      "passed": true
+    },
+    {
+      "detail": "/home/birkenwald/data/SEU-WXY/WXY-SEU/TrafficClassifier/Projects/unknown_traffic_project/stage22_pretrained_trafficformer_e3_closed_set_comparison/runs/iscx_tor/seed2023/predictions.csv",
+      "name": "iscx_tor_2023_predictions.csv",
+      "passed": true
+    },
+    {
+      "detail": "/home/birkenwald/data/SEU-WXY/WXY-SEU/TrafficClassifier/Projects/unknown_traffic_project/stage22_pretrained_trafficformer_e3_closed_set_comparison/runs/iscx_tor/seed2023/training_history.json",
+      "name": "iscx_tor_2023_training_history.json",
+      "passed": true
+    },
+    {
+      "detail": "/home/birkenwald/data/SEU-WXY/WXY-SEU/TrafficClassifier/Projects/unknown_traffic_project/stage22_pretrained_trafficformer_e3_closed_set_comparison/runs/iscx_tor/seed2023/representations.npz",
+      "name": "iscx_tor_2023_representations.npz",
+      "passed": true
+    },
+    {
+      "detail": "/home/birkenwald/data/SEU-WXY/WXY-SEU/TrafficClassifier/Projects/unknown_traffic_project/stage22_pretrained_trafficformer_e3_closed_set_comparison/runs/iscx_tor/seed2023/pretrained_load_report.json",
+      "name": "iscx_tor_2023_pretrained_load_report.json",
+      "passed": true
+    },
+    {
+      "detail": 1117,
+      "name": "iscx_tor_2023_E1_test_count",
+      "passed": true
+    },
+    {
+      "detail": 0.8254252461951657,
+      "name": "iscx_tor_2023_E1_accuracy_replay",
+      "passed": true
+    },
+    {
+      "detail": 0.8148834432285724,
+      "name": "iscx_tor_2023_E1_macro_f1_replay",
+      "passed": true
+    },
+    {
+      "detail": 1117,
+      "name": "iscx_tor_2023_E2_test_count",
+      "passed": true
+    },
+    {
+      "detail": 0.4538943598925694,
+      "name": "iscx_tor_2023_E2_accuracy_replay",
+      "passed": true
+    },
+    {
+      "detail": 0.37975097700349936,
+      "name": "iscx_tor_2023_E2_macro_f1_replay",
+      "passed": true
+    },
+    {
+      "detail": 1117,
+      "name": "iscx_tor_2023_E3_test_count",
+      "passed": true
+    },
+    {
+      "detail": 0.8254252461951657,
+      "name": "iscx_tor_2023_E3_accuracy_replay",
+      "passed": true
+    },
+    {
+      "detail": 0.8145340490380247,
+      "name": "iscx_tor_2023_E3_macro_f1_replay",
+      "passed": true
+    },
+    {
+      "detail": [
+        [
+          "iscx_vpn",
+          2022
+        ],
+        [
+          "iscx_vpn",
+          2023
+        ],
+        [
+          "iscx_tor",
+          2022
+        ],
+        [
+          "iscx_tor",
+          2023
+        ]
+      ],
+      "name": "exact_run_scope",
+      "passed": true
+    },
+    {
+      "detail": "/home/birkenwald/data/SEU-WXY/WXY-SEU/TrafficClassifier/Projects/unknown_traffic_project/stage22_pretrained_trafficformer_e3_closed_set_comparison/run_metrics.csv",
+      "name": "aggregate_run_metrics.csv",
+      "passed": true
+    },
+    {
+      "detail": "/home/birkenwald/data/SEU-WXY/WXY-SEU/TrafficClassifier/Projects/unknown_traffic_project/stage22_pretrained_trafficformer_e3_closed_set_comparison/aggregate_metrics.csv",
+      "name": "aggregate_aggregate_metrics.csv",
+      "passed": true
+    },
+    {
+      "detail": "/home/birkenwald/data/SEU-WXY/WXY-SEU/TrafficClassifier/Projects/unknown_traffic_project/stage22_pretrained_trafficformer_e3_closed_set_comparison/per_class_metrics.csv",
+      "name": "aggregate_per_class_metrics.csv",
+      "passed": true
+    },
+    {
+      "detail": "/home/birkenwald/data/SEU-WXY/WXY-SEU/TrafficClassifier/Projects/unknown_traffic_project/stage22_pretrained_trafficformer_e3_closed_set_comparison/per_class_aggregate.csv",
+      "name": "aggregate_per_class_aggregate.csv",
+      "passed": true
+    },
+    {
+      "detail": "/home/birkenwald/data/SEU-WXY/WXY-SEU/TrafficClassifier/Projects/unknown_traffic_project/stage22_pretrained_trafficformer_e3_closed_set_comparison/confusion_matrices.csv",
+      "name": "aggregate_confusion_matrices.csv",
+      "passed": true
+    },
+    {
+      "detail": "/home/birkenwald/data/SEU-WXY/WXY-SEU/TrafficClassifier/Projects/unknown_traffic_project/stage22_pretrained_trafficformer_e3_closed_set_comparison/validation_test_gap.csv",
+      "name": "aggregate_validation_test_gap.csv",
+      "passed": true
+    },
+    {
+      "detail": "/home/birkenwald/data/SEU-WXY/WXY-SEU/TrafficClassifier/Projects/unknown_traffic_project/stage22_pretrained_trafficformer_e3_closed_set_comparison/e3_vs_branch_deltas.csv",
+      "name": "aggregate_e3_vs_branch_deltas.csv",
+      "passed": true
+    },
+    {
+      "detail": "/home/birkenwald/data/SEU-WXY/WXY-SEU/TrafficClassifier/Projects/unknown_traffic_project/stage22_pretrained_trafficformer_e3_closed_set_comparison/paired_vs_stage21_random3.csv",
+      "name": "aggregate_paired_vs_stage21_random3.csv",
+      "passed": true
+    },
+    {
+      "detail": "/home/birkenwald/data/SEU-WXY/WXY-SEU/TrafficClassifier/Projects/unknown_traffic_project/stage22_pretrained_trafficformer_e3_closed_set_comparison/aggregate_summary.json",
+      "name": "aggregate_aggregate_summary.json",
+      "passed": true
+    }
+  ],
+  "failures": [],
+  "status": "PASS"
+}
