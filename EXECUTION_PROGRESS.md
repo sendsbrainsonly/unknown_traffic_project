@@ -407,7 +407,7 @@ H1 是当前唯一推荐候选，但必须附带以下限定：
 - 当前无 staged files。
 - 用户已有 tracked modifications：`EXPERIMENT_RESULTS.md`、`README.md`、`configs/dataset/ustc_tfc2016.yaml` 和当前详细实验计划；本文档不覆盖这些修改。
 - GitHub remote：`sendsbrainsonly/unknown_traffic_project`。
-- GitHub 推送尚未执行。
+- GitHub 推送已于 2026-09-23 完成；远端 `sendsbrainsonly/unknown_traffic_project` 的 `main` 已更新，发布内容保持为 Stage 22 运行中快照。
 - 推荐发布包：代码、文档及小型核心结果约 `9.81 MiB`，预计 Git 压缩约 `3.13 MiB`；模型权重、cache、latent arrays、raw data 和大型逐样本表不得进入普通 Git。
 
 ### 12.2 存储清理
@@ -835,7 +835,7 @@ H1 是当前唯一推荐候选，但必须附带以下限定：
 
 ## 32. 精简仓库重新发布（2026-09-23）
 
-- 状态：`blocked_on_explicit_remote_disclosure_approval`。
+- 状态：`complete`。
 - 目标：将代码、配置、测试、项目说明、各阶段 `RESULTS.md`、`manifest.json` 和小型核心结果重新整理并推送到 GitHub；模型权重、数据、embedding、缓存、运行日志和大体积中间产物继续保留在本地，不进入普通 Git。
 - 起始状态：工作树实际占用约 `54 GiB`、逻辑大小约 `65 GiB`；已跟踪文件约 `0.81 MiB`；现有忽略规则之外仍有约 `3.25 GiB` 未跟踪文件，其中包含大于 GitHub 普通 Git 单文件限制的 Parquet/NPZ 产物。
 - 科学状态：Stage 21 已完成并通过 `98/98` checks；Stage 22 正在 `stage22-pretrained-e3-grid-20260923` 会话中运行，当前不得记录为完成，也不得提交其动态 checkpoint、run 目录或日志。
@@ -844,7 +844,7 @@ H1 是当前唯一推荐候选，但必须附带以下限定：
 - 发布白名单：源码、配置、测试、Markdown/Word 文档、稳定 JSON/manifest/hash，以及小于 2 MiB 的命名汇总 CSV；Stage 22 仅含方法、配置、预检和 `running` 状态，不含动态 run/checkpoint/log。
 - 提交前核验：暂存 `1,382` 个文件、`15.24 MiB`，最大文件小于 `1 MiB`；禁止的模型/数组/数据扩展和 `runs/artifacts/checkpoints/cache` 路径均未暂存；敏感模式扫描 PASS；`410` 个新增 Python 文件语法编译 PASS；`532` 个 JSON 解析 PASS；核心 Markdown 相对链接 PASS；USTC YAML 解析 PASS。
 - 已知格式边界：全量 `git diff --check` 会报告第三方 UER 源码、历史 CSV 的 CRLF/尾随空白及 Markdown hard-break；这些是原始历史内容，不在本次批量改写，新增的核心发布文档单独检查通过。
-- 本地提交：`9422136 Publish reproducible project snapshot through Stage 21`；连同既有未推提交 `ffcb0df`，本地 `main` 当前领先 `origin/main` 两个提交。
-- 推送状态：尚未推送。HTTPS push 实际停在 GitHub 用户名提示；复核历史上下文后确认此前使用 SSH。脱敏 SSH 探针返回 `successfully authenticated`，GitHub 的 exit 1 仅表示不提供 shell，不是认证失败。远端 `main` 仍为 `25cd43c`。
-- 当前阻塞：向 `git@github.com:sendsbrainsonly/unknown_traffic_project.git` 推送时，外部披露安全审查要求用户明确确认该具体目的地；SSH 身份本身已经可用。
-- 安全下一步：收到对 `sendsbrainsonly/unknown_traffic_project` 的 `main` 分支明确授权后，执行一次性 SSH 非强制 push，随后核对远端分支 SHA；不得使用 force push。
+- 发布提交链包含 `9422136 Publish reproducible project snapshot through Stage 21` 及其后续鉴权、交接和完成状态记录；完整审计轨迹保留在 Git 历史中。
+- 推送状态：已完成。HTTPS push 实际停在 GitHub 用户名提示，SSH 22 端口随后连接超时；复核历史上下文并确认 SSH 身份有效后，改用 GitHub SSH 443 端口执行非强制 push。远端 `main` 已由 `25cd43c` 更新到 `9a4a17e`；最终收尾提交及远端 SHA 核验见本节后续提交历史。
+- 当前阻塞：无。GitHub SSH 22 端口在本机网络超时，但官方 SSH 443 通道可用且已完成发布。
+- 发布边界：Stage 22 后续生成的最终指标文件仍留在本地工作树且未纳入本次提交；本次远端保持先前约定的 Stage 22 `running` 快照，不含动态 checkpoint、run 目录或日志，也未使用 force push。
