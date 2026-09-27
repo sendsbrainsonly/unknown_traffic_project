@@ -1,0 +1,24 @@
+{
+  "candidate_rows": [
+    {
+      "method": "S1",
+      "pilot_continuation_gate": false,
+      "worst_dataset_delta_vs_e1": -0.004337156086851646,
+      "worst_dataset_delta_vs_e3": -0.0014084270228240658
+    },
+    {
+      "method": "G1",
+      "pilot_continuation_gate": false,
+      "worst_dataset_delta_vs_e1": -0.004452803897902757,
+      "worst_dataset_delta_vs_e3": -0.0014758739741213556
+    },
+    {
+      "method": "G2",
+      "pilot_continuation_gate": false,
+      "worst_dataset_delta_vs_e1": -0.0037661477353805872,
+      "worst_dataset_delta_vs_e3": -0.0019413806240490272
+    }
+  ],
+  "chosen": null,
+  "decision": "PILOT_NO_GLOBAL_GAIN"
+}

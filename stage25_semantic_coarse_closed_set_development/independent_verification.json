@@ -1,0 +1,8 @@
+{
+  "status": "PASS",
+  "protected_hashes": 48,
+  "remap_metric_rows_replayed": 224,
+  "remap_predictions_checked": 61964,
+  "coarse_heads_replayed": 8,
+  "coarse_head_decisions_checked": 17704
+}

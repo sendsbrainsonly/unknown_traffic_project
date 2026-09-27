@@ -1,0 +1,10 @@
+{
+  "heads_fitted": 8,
+  "known_train_only_scaler_and_head": true,
+  "metric_rows": 32,
+  "protected_assets": 48,
+  "status": "PASS",
+  "test_selection_usage": 0,
+  "unknown_usage": 0,
+  "warnings": 0
+}

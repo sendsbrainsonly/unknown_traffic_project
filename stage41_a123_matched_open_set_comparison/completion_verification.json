@@ -1,0 +1,27 @@
+{
+  "balanced_test_ids_sha256": "e1e7a982328abf87fde192d5f395ff5bf1b913ddc29ea3146a4fbabec4db100e",
+  "matched_protocol_sha256": "176b1992ad65b2e8526f2329370f0ece47fc2faec45dd0c570f80c72a879448a",
+  "methods": 2,
+  "same_flow_test_ids": true,
+  "scenarios": 3,
+  "score_hashes": {
+    "A-1": {
+      "od_checkpoint": "13cff3dad1c1ec18826c358cb38d0b1f48904a321aec14e1de3464b2258c7d4b",
+      "od_scores": "c76779a07a41ebfa1bb4f933dae5d19aa2e87cf7a632e5dcf383ce3dd78e44fb",
+      "threeview_scores": "dbbde4960fba33d1707aa6bfb70cdeb6c8d4f36082380e97027e36e1219f3e15"
+    },
+    "A-2": {
+      "od_checkpoint": "95c2a96919cf5f3854d6c46519135d95693d01088d6bc513e56df99bba90f5a6",
+      "od_scores": "5d3753625573cd307d18ecca745a54150f7b1d9f648a5378877e516783dc2aeb",
+      "threeview_scores": "1210e33b9b216e302afbe9c94ca5f9818e7176c44c8a0e6160cb9468cbf15eb1"
+    },
+    "A-3": {
+      "od_checkpoint": "70894b0e2f3da1d32a992e432151952fb029e08c906231cdf381efc59a96aa71",
+      "od_scores": "610789f68d035dd48b48c76468ff0f80c0da5d8d46ee90537d07aac21a7af61e",
+      "threeview_scores": "8e1af2aca26cb69e2b59aac481f0ecf23d5ea9d3ab4b513426ad49e7792cfef2"
+    }
+  },
+  "status": "PASS",
+  "threshold_source": "Known Validation P95; oracle only retrospective",
+  "unknown_train_or_validation_usage": 0
+}

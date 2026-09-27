@@ -1,0 +1,17 @@
+{
+  "paper_scenario": "A-2: 17 Known / Geodo-Htbot-Tinba Unknown",
+  "paper_table_v_accuracy_mean": 0.8922,
+  "paper_table_v_f1_mean": 0.891,
+  "od_v6_local_model_runs": 5,
+  "od_v6_pool_size": 34585,
+  "od_v6_test_per_run": "600 Known + 600 Unknown; five different local folds",
+  "od_v6_p95_binary_accuracy_mean": 0.8253333333333334,
+  "od_v6_p95_unknown_f1_mean": 0.7979512950800978,
+  "od_v6_auroc_mean": 0.8534244444444443,
+  "od_v6_oracle_binary_accuracy_mean": 0.8324999999999999,
+  "od_v6_oracle_unknown_f1_mean": 0.8076743183335005,
+  "current_test_per_run": "558 Known + all 558 frozen Unknown; one frozen Stage40 model",
+  "exact_sample_identity_proven": false,
+  "reason": "OD v6 has separate 34,585-image local pool/folds and hashed provenance IDs; Stage40 has a different flow-ID and source-split pipeline, and only 558 scored Unknown Test samples",
+  "paired_method_comparison_allowed": false
+}

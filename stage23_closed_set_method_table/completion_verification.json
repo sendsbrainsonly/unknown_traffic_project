@@ -1,0 +1,154 @@
+{
+  "checks": 22441,
+  "failures": [],
+  "new_run_audit": [
+    {
+      "best_epoch": 55,
+      "checkpoint_sha256": "338dc4f439c9c0d82fe06de99184c5995f87483b3a84594b8164ac58220e5d8e",
+      "completed_epochs": 100,
+      "dataset": "iscx_vpn",
+      "method": "RoNeTC-runnable-reconstruction",
+      "seed": 2022,
+      "test": {
+        "accuracy": 0.7136322049405307,
+        "macro_f1": 0.7237829535138178,
+        "weighted_f1": 0.7064586474761915
+      },
+      "validation": {
+        "accuracy": 0.7085610200364298,
+        "macro_f1": 0.7181240071918747,
+        "weighted_f1": 0.7026226022514659
+      }
+    },
+    {
+      "best_epoch": 28,
+      "checkpoint_sha256": "3f8b4347cc22cdfde6e043b785dfa8877facb4a356e2e4d3156bb27e6e6cbd59",
+      "completed_epochs": 100,
+      "dataset": "iscx_vpn",
+      "method": "RoNeTC-runnable-reconstruction",
+      "seed": 2023,
+      "test": {
+        "accuracy": 0.6999085086916743,
+        "macro_f1": 0.707681160835586,
+        "weighted_f1": 0.6961730802186461
+      },
+      "validation": {
+        "accuracy": 0.7058287795992714,
+        "macro_f1": 0.7134224295395344,
+        "weighted_f1": 0.7003267738478364
+      }
+    },
+    {
+      "best_epoch": 50,
+      "checkpoint_sha256": "0768b60cb0384fd0988a3ab55957c0a9dd602105be70e2af00c050f2cfdc2a13",
+      "completed_epochs": 100,
+      "dataset": "iscx_tor",
+      "method": "RoNeTC-runnable-reconstruction",
+      "seed": 2022,
+      "test": {
+        "accuracy": 0.6150402864816473,
+        "macro_f1": 0.5538545439248278,
+        "weighted_f1": 0.610819903461855
+      },
+      "validation": {
+        "accuracy": 0.6413237924865832,
+        "macro_f1": 0.5924141512255833,
+        "weighted_f1": 0.6382718898194054
+      }
+    },
+    {
+      "best_epoch": 34,
+      "checkpoint_sha256": "00a087370809bfc4e13fe09b94fddee6057b1207d2f042069654740b632f35f2",
+      "completed_epochs": 100,
+      "dataset": "iscx_tor",
+      "method": "RoNeTC-runnable-reconstruction",
+      "seed": 2023,
+      "test": {
+        "accuracy": 0.5935541629364369,
+        "macro_f1": 0.5141666211427277,
+        "weighted_f1": 0.5760359460432823
+      },
+      "validation": {
+        "accuracy": 0.6288014311270125,
+        "macro_f1": 0.5563520790930092,
+        "weighted_f1": 0.6106856612404278
+      }
+    },
+    {
+      "best_epoch": 77,
+      "checkpoint_sha256": "cccda4c0001c17a5ea09d3f7f6e5bc164d44c0d6e957552f422dc863fd18bb41",
+      "completed_epochs": 200,
+      "dataset": "iscx_vpn",
+      "method": "YaTC-official-pretrained-Stage20",
+      "seed": 2022,
+      "test": {
+        "accuracy": 0.8902104300091491,
+        "macro_f1": 0.8986776007172372,
+        "weighted_f1": 0.8891624717673575
+      },
+      "validation": {
+        "accuracy": 0.8843351548269581,
+        "macro_f1": 0.8929502515937167,
+        "weighted_f1": 0.8834632084174436
+      }
+    },
+    {
+      "best_epoch": 46,
+      "checkpoint_sha256": "a562b9a9a8c0705343f182c82585dd481568a2d2e34b2b03a190fd32c3a7c8ea",
+      "completed_epochs": 200,
+      "dataset": "iscx_vpn",
+      "method": "YaTC-official-pretrained-Stage20",
+      "seed": 2023,
+      "test": {
+        "accuracy": 0.8664226898444648,
+        "macro_f1": 0.8754924353207592,
+        "weighted_f1": 0.8638659774551305
+      },
+      "validation": {
+        "accuracy": 0.8779599271402551,
+        "macro_f1": 0.8869083651178405,
+        "weighted_f1": 0.8768557547036616
+      }
+    },
+    {
+      "best_epoch": 163,
+      "checkpoint_sha256": "d3ef878c5b4e2e14723be50d6052c84dccc675d2fa22728533fb9ecd7cb7fc54",
+      "completed_epochs": 200,
+      "dataset": "iscx_tor",
+      "method": "YaTC-official-pretrained-Stage20",
+      "seed": 2022,
+      "test": {
+        "accuracy": 0.8424350940017905,
+        "macro_f1": 0.8281677374929776,
+        "weighted_f1": 0.8421042913672856
+      },
+      "validation": {
+        "accuracy": 0.8711985688729875,
+        "macro_f1": 0.8624328334144558,
+        "weighted_f1": 0.870226574154207
+      }
+    },
+    {
+      "best_epoch": 150,
+      "checkpoint_sha256": "212eef1e59399b242c26845c04f6a578dee84cded505e57c5496ce8089040921",
+      "completed_epochs": 200,
+      "dataset": "iscx_tor",
+      "method": "YaTC-official-pretrained-Stage20",
+      "seed": 2023,
+      "test": {
+        "accuracy": 0.8451208594449419,
+        "macro_f1": 0.8266190098743722,
+        "weighted_f1": 0.8451768165387357
+      },
+      "validation": {
+        "accuracy": 0.8738819320214669,
+        "macro_f1": 0.8662775945017669,
+        "weighted_f1": 0.8734264022403025
+      }
+    }
+  ],
+  "other_methods": "subject to method cards and non-comparability audit",
+  "stage20_manifest_sha256": "6404d496f50a6f7f6f397d125ad0cd653c9df152d8db1b9ed2ad2310967950bb",
+  "status": "PASS_FIVE_METHOD_MATCHED_TABLE",
+  "verified_runs": 20
+}

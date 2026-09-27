@@ -1,0 +1,23 @@
+{
+  "calibration_sha256": "7b8fa490d1694305782b9954523cf3192c6d143a496c960cddf889f5ea96ddf7",
+  "dataset": "iscx_tor",
+  "eval_input_reconstruction": "subset/union of already frozen Stage31 Train/Val and Stage38 Test caches",
+  "flows": 6913,
+  "fold": "file_transfer",
+  "model_and_threshold_frozen_before_read": true,
+  "role_counts": {
+    "auxiliary_known_service_unseen_app": 1768,
+    "known_test": 913,
+    "unknown_eval": 4232
+  },
+  "role_manifest_sha256": "47eff2cef1efa4fe4ff23f5600f5d799f34613628e90ec7bb5b050ab11a64313",
+  "source_cache_audit_sha256": {
+    "stage31_four_dataset_three_view_equal/input_caches/iscx_tor/tf_fig": "63a08c514e8aea57f30c16bc9882f891837eeda20ce62a6d3a4a3ca8a4a62ab4",
+    "stage31_four_dataset_three_view_equal/input_caches/iscx_tor/yatc_mfr": "c83fde245e22a04144de48375ae4378df723666e43e85275e8efe286daeab357",
+    "stage38_three_view_des_open_set_transfer/input_caches/iscx_tor/tf_fig_eval": "3bf5a679c76e490cb4e58d9cf036ded3a90934aa2cc4a7f7da3cedf599166959",
+    "stage38_three_view_des_open_set_transfer/input_caches/iscx_tor/yatc_mfr_eval": "5513a3f25e7fcd0595d69206dd6303f267a0e2006bc7ee2c7d19655bc3934f31"
+  },
+  "status": "PASS",
+  "test_used_for_training_or_calibration": 0,
+  "unknown_used_for_training_or_calibration": 0
+}

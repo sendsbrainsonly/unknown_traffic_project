@@ -1,0 +1,50 @@
+{
+  "datasets": {
+    "iscx_tor": {
+      "cache_flow_count": 15096,
+      "cache_integrity": "PASS",
+      "cache_shape": [
+        15096,
+        3,
+        8,
+        64
+      ],
+      "cached_flows": 11044,
+      "missing_flows": 137,
+      "missing_pcap_paths": [],
+      "missing_provenance_records": 0,
+      "missing_role_counts": {
+        "known_test": 12,
+        "known_train": 112,
+        "known_validation": 13
+      },
+      "missing_service_counts": {
+        "Chat": 101,
+        "File-Transfer": 36
+      },
+      "stage20_flows": 11181
+    },
+    "iscx_vpn": {
+      "cache_flow_count": 22142,
+      "cache_integrity": "PASS",
+      "cache_shape": [
+        22142,
+        3,
+        8,
+        64
+      ],
+      "cached_flows": 10955,
+      "missing_flows": 0,
+      "missing_pcap_paths": [],
+      "missing_provenance_records": 0,
+      "missing_role_counts": {},
+      "missing_service_counts": {},
+      "stage20_flows": 10955
+    }
+  },
+  "next_step": "Recover only the missing flows from exact Stage12 packet_refs before formal training",
+  "raw_dataset_modified": false,
+  "raw_pcap_reads": 0,
+  "stage20_manifest_sha256": "6404d496f50a6f7f6f397d125ad0cd653c9df152d8db1b9ed2ad2310967950bb",
+  "status": "RECOVERABLE_GAP"
+}

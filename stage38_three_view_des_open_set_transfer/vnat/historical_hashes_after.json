@@ -1,0 +1,19 @@
+{
+  "stage14b_vnat_protocol_freeze/vnat_open_set_protocol.json": "5177bf7276812bbb417f085043f8518c8573ea1851de2f1d733deb77c9939ced",
+  "stage14b_vnat_protocol_freeze/vnat_split_manifest.csv": "66bf155e6906231b316c384a52f4b46dabd9d3aee76d5f66d86a3941eb172c4e",
+  "stage31_four_dataset_three_view_equal/runs/vnat/medium_seed2025/graph/model_best.pt": "4bac1fe49a3fa30d4ebf46a540724a8417d8b2cd15f27f30ee5a0a292a172520",
+  "stage31_four_dataset_three_view_equal/runs/vnat/medium_seed2025/trafficformer/model_best.pt": "63c3b49b629681a834b5848206a9c1bffff3eade0ed8987dcd497ccae8081e78",
+  "stage31_four_dataset_three_view_equal/runs/vnat/medium_seed2025/yatc/model_best.pt": "deaee0143fa0dbf9de6b75f20ffeec9b9e06fce31a3ddc49a017ea84d5a036a7",
+  "stage31_four_dataset_three_view_equal/train_equal_fusion.py": "27153e71570b193bd37c640d702dbbc5a5435a3612a34993485ca110c5498310",
+  "stage33_vnat_six_class_single_seed/run_six.py": "2f72e90ad18e733d92d0c610476d98c404ef00801cdd00b9c480b6a81217f183",
+  "stage33_vnat_six_class_single_seed/runs/vnat/T0_equal_best.pt": "df70ada8838b5bac35f5af17f9c436ba4306b0a5db114631702e323e76959d63",
+  "stage33_vnat_six_class_single_seed/runs/vnat/adapters_best.pt": "f3422fe62c96cc21475e59e65cfbfbadbda94df8ff9020f4b040b5d33ad4c7cc",
+  "stage33_vnat_six_class_single_seed/selected_head_before_test.json": "a3f3cbc56288c2df4fe9d388bbf5625b72561e388c3abc64958d6ef7f144b3f0",
+  "stage36_vnat_sixclass_open_set_pilot/EXPERIMENT_PLAN.md": "04f1a6569c24f83598994d92c783574d98d451837a0820466a039a11cf9ec4b4",
+  "stage36_vnat_sixclass_open_set_pilot/RESULTS.md": "b9744801d0207334dd157334feefdfe287bf6149067860fdfc4f43c4bbce40ba",
+  "stage36_vnat_sixclass_open_set_pilot/known_smoke.json": "62c841cebe09d0ad967a33b3f566c6aa8db6228ea22aac5fd0e3bc28553775ce",
+  "stage36_vnat_sixclass_open_set_pilot/manifest.json": "591fe0f8f69fc550518ab6d278297ba2161b9d90600611e342e276301e635747",
+  "stage36_vnat_sixclass_open_set_pilot/parity.json": "714a6d2dd743ea24d9b7a38bed0af1e7d7c03984da0a36ca3e0d1e6a56343e71",
+  "stage36_vnat_sixclass_open_set_pilot/preflight.json": "2078d19a7ca6a43853303ded6acc0c7daf728f464a7a5fa23dd00ae089322480",
+  "stage36_vnat_sixclass_open_set_pilot/run_pilot.py": "2723ecc9aaa8cf1413deefa200bed49c8e584dfa0fb7b479aecdc9c6c88ae358"
+}

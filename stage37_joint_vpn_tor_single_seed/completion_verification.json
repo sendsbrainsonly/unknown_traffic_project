@@ -1,0 +1,68 @@
+{
+  "datasets": {
+    "iscx_tor": {
+      "checkpoint_sha256": "a5e508959f234f2fcb304069d7f4379ebfcbd50f6b1c13c0670551becb14b16e",
+      "metric_confusion_replay": true,
+      "paired": {
+        "both_correct": 892,
+        "both_wrong": 61,
+        "joint_only_correct": 55,
+        "staged_only_correct": 109
+      },
+      "status": "PASS",
+      "test_sample_ids_match_stage32": true,
+      "test_true_labels_match_stage32": true
+    },
+    "iscx_vpn": {
+      "checkpoint_sha256": "1c0165bf6edf5b83a7fe127f17c01728289a8aa89658917afd3afc45f088c4bf",
+      "metric_confusion_replay": true,
+      "paired": {
+        "both_correct": 939,
+        "both_wrong": 71,
+        "joint_only_correct": 21,
+        "staged_only_correct": 62
+      },
+      "status": "PASS",
+      "test_sample_ids_match_stage32": true,
+      "test_true_labels_match_stage32": true
+    }
+  },
+  "paired_rows": [
+    {
+      "both_correct": 939,
+      "both_wrong": 71,
+      "dataset": "iscx_vpn",
+      "delta_joint_minus_staged_accuracy": -0.03751143641354071,
+      "delta_joint_minus_staged_macro_f1": -0.03717057262508938,
+      "delta_joint_minus_staged_weighted_f1": -0.03867568148800404,
+      "joint_accuracy": 0.8783165599268069,
+      "joint_macro_f1": 0.8821798763539366,
+      "joint_only_correct": 21,
+      "joint_weighted_f1": 0.8758113264339775,
+      "staged_accuracy": 0.9158279963403476,
+      "staged_macro_f1": 0.919350448979026,
+      "staged_only_correct": 62,
+      "staged_weighted_f1": 0.9144870079219816,
+      "test_samples": 1093
+    },
+    {
+      "both_correct": 892,
+      "both_wrong": 61,
+      "dataset": "iscx_tor",
+      "delta_joint_minus_staged_accuracy": -0.0483437779767234,
+      "delta_joint_minus_staged_macro_f1": -0.04619158389047329,
+      "delta_joint_minus_staged_weighted_f1": -0.046309066655501274,
+      "joint_accuracy": 0.8478066248880931,
+      "joint_macro_f1": 0.8531835190471823,
+      "joint_only_correct": 55,
+      "joint_weighted_f1": 0.8504079231295881,
+      "staged_accuracy": 0.8961504028648165,
+      "staged_macro_f1": 0.8993751029376555,
+      "staged_only_correct": 109,
+      "staged_weighted_f1": 0.8967169897850894,
+      "test_samples": 1117
+    }
+  ],
+  "stage20_manifest_sha256": "6404d496f50a6f7f6f397d125ad0cd653c9df152d8db1b9ed2ad2310967950bb",
+  "status": "PASS"
+}

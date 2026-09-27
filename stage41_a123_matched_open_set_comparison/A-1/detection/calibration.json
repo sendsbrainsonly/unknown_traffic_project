@@ -1,0 +1,63 @@
+{
+  "calibration_runtime": "CPU; same frozen adapters and head",
+  "checkpoint_hashes": {
+    "T0_equal_best.pt": "3247173fbb3469dd8a7f0fdaf076de7fc70b9c1561a16e817ab8be3087b3b6d5",
+    "adapters_best.pt": "c7cdb62d285d3166977d7cbb11de26a81a962f2d137fa4267f90567ae27c54a2",
+    "graph": "1bf1a0005ed4a4d458f0e37d094ca125364f0575cdabbf6295179ecc087e3769",
+    "trafficformer": "fc151f8a45109f20fe0c2867d753de5f59e85ca6842c4ff3df66ab740c6af5a0",
+    "yatc": "73e129d8f29d3ba0fdef394c0ec17a68e6636f20ce4d47525ee04b38f14203e7"
+  },
+  "classes": [
+    "BitTorrent",
+    "Cridex",
+    "FTP",
+    "Facetime",
+    "Geodo",
+    "Gmail",
+    "Htbot",
+    "Miuref",
+    "MySQL",
+    "Neris",
+    "Nsis-ay",
+    "Outlook",
+    "SMB",
+    "Shifu",
+    "Skype",
+    "Virut",
+    "Weibo",
+    "WorldOfWarcraft",
+    "Zeus"
+  ],
+  "global_local_weights": [
+    0.5,
+    0.5
+  ],
+  "k": 10,
+  "known_train": 38448,
+  "known_validation": 4805,
+  "known_validation_metrics_replay": {
+    "accuracy": 0.9900104058272633,
+    "macro_f1": 0.9924413896996517,
+    "weighted_f1": 0.9900053127425776
+  },
+  "mad": {
+    "centroid": 1.1779882226570981,
+    "local": 0.006223943340592087
+  },
+  "median": {
+    "centroid": 1.4034130633282906,
+    "local": 0.011735838185995818
+  },
+  "role_manifest_sha256": "7e10620e6ede2189d84f529fab996736bb6d7f8357215fc47c3648a6d04ed233",
+  "status": "PASS",
+  "test_fitting_count": 0,
+  "threshold_rule": "Known-Val P95 method=higher; reject score>threshold",
+  "thresholds": {
+    "centroid": 16.879019105378358,
+    "des_v1": 69.4065635039504,
+    "energy": -6.044005459353191,
+    "msp": 0.002664862967088011
+  },
+  "unit": "A-1",
+  "unknown_fitting_count": 0
+}

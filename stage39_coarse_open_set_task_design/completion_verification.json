@@ -1,0 +1,19 @@
+{
+  "status": "PASS",
+  "scope": "metadata_audit_only",
+  "source_hashes_before": {
+    "/home/birkenwald/data/SEU-WXY/WXY-SEU/TrafficClassifier/Projects/unknown_traffic_project/stage12_dual_external_validation/protocol/iscx_vpn/split_manifest.csv": "618670af28797d9ceffc7138dcb9d2622552cdfc4712c38bd5da0886ec95c793",
+    "/home/birkenwald/data/SEU-WXY/WXY-SEU/TrafficClassifier/Projects/unknown_traffic_project/stage12_dual_external_validation/protocol/iscx_tor/split_manifest.csv": "7de5289ef75966fb360dc743778ba90a31f72c2eaf6694dc3a33291a794bc0d7",
+    "/home/birkenwald/data/SEU-WXY/WXY-SEU/TrafficClassifier/Projects/unknown_traffic_project/stage14b_vnat_protocol_freeze/vnat_split_manifest.csv": "66bf155e6906231b316c384a52f4b46dabd9d3aee76d5f66d86a3941eb172c4e"
+  },
+  "source_hashes_after": {
+    "/home/birkenwald/data/SEU-WXY/WXY-SEU/TrafficClassifier/Projects/unknown_traffic_project/stage12_dual_external_validation/protocol/iscx_vpn/split_manifest.csv": "618670af28797d9ceffc7138dcb9d2622552cdfc4712c38bd5da0886ec95c793",
+    "/home/birkenwald/data/SEU-WXY/WXY-SEU/TrafficClassifier/Projects/unknown_traffic_project/stage12_dual_external_validation/protocol/iscx_tor/split_manifest.csv": "7de5289ef75966fb360dc743778ba90a31f72c2eaf6694dc3a33291a794bc0d7",
+    "/home/birkenwald/data/SEU-WXY/WXY-SEU/TrafficClassifier/Projects/unknown_traffic_project/stage14b_vnat_protocol_freeze/vnat_split_manifest.csv": "66bf155e6906231b316c384a52f4b46dabd9d3aee76d5f66d86a3941eb172c4e"
+  },
+  "source_hashes_unchanged": true,
+  "feature_values_read": 0,
+  "models_trained": 0,
+  "formal_splits_generated": 0,
+  "feasibility_rows": 13
+}

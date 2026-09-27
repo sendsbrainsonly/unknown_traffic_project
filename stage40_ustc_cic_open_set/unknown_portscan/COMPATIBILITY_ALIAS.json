@@ -1,0 +1,17 @@
+{
+  "actual_dataset": "CIC-IDS-2017",
+  "actual_protocol": "unknown_portscan",
+  "known_classes": [
+    "BENIGN",
+    "DoS Slowhttptest"
+  ],
+  "unknown_classes": [
+    "PortScan"
+  ],
+  "internal_Stage31_key": "ustc/A-2",
+  "meaning": "CLI compatibility only",
+  "role_manifest": "/home/birkenwald/data/SEU-WXY/WXY-SEU/TrafficClassifier/Projects/unknown_traffic_project/stage40_ustc_cic_open_set/unknown_portscan_roles.csv",
+  "role_manifest_sha256": "ca0eb9bae57662b41342ec44e5e25006c8dd6105b74da95a4895018123043c89",
+  "training_recipe": "Stage31 TrafficFormer20e TAGCN50e YaTC200e T0 adapters30e head30e",
+  "unknown_training_samples": 0
+}

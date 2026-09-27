@@ -1,0 +1,13 @@
+{
+  "status": "PASS",
+  "test_samples": 2536,
+  "source_manifest_unchanged": true,
+  "balanced_manifest_unchanged": true,
+  "saved_logit_metric_replay": true,
+  "all_checkpoint_hashes_valid": true,
+  "unknown_samples_used": 0,
+  "test_parameter_selection": 0,
+  "accuracy": 0.9980283911671924,
+  "macro_f1": 0.9974820179795193,
+  "weighted_f1": 0.9980282028800223
+}

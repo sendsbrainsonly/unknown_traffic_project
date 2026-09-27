@@ -1,0 +1,174 @@
+{
+  "status": "PASS",
+  "frozen_pairs": 4,
+  "known_role_arrays": 8,
+  "independent_views": 3,
+  "test_feature_values_loaded": 0,
+  "unknown_values_loaded": 0,
+  "rows": [
+    {
+      "dataset": "iscx_vpn",
+      "encoder_seed": 2022,
+      "role": "known_train",
+      "samples": 8764,
+      "classes": 6,
+      "views": {
+        "trafficformer": 768,
+        "graph": 128,
+        "yatc": 192
+      },
+      "class_counts": {
+        "Chat": 1559,
+        "Email": 1600,
+        "File-Transfer": 1600,
+        "P2P": 805,
+        "Streaming": 1600,
+        "VoIP": 1600
+      }
+    },
+    {
+      "dataset": "iscx_vpn",
+      "encoder_seed": 2022,
+      "role": "known_validation",
+      "samples": 1098,
+      "classes": 6,
+      "views": {
+        "trafficformer": 768,
+        "graph": 128,
+        "yatc": 192
+      },
+      "class_counts": {
+        "Chat": 195,
+        "Email": 200,
+        "File-Transfer": 200,
+        "P2P": 101,
+        "Streaming": 202,
+        "VoIP": 200
+      }
+    },
+    {
+      "dataset": "iscx_vpn",
+      "encoder_seed": 2023,
+      "role": "known_train",
+      "samples": 8764,
+      "classes": 6,
+      "views": {
+        "trafficformer": 768,
+        "graph": 128,
+        "yatc": 192
+      },
+      "class_counts": {
+        "Chat": 1559,
+        "Email": 1600,
+        "File-Transfer": 1600,
+        "P2P": 805,
+        "Streaming": 1600,
+        "VoIP": 1600
+      }
+    },
+    {
+      "dataset": "iscx_vpn",
+      "encoder_seed": 2023,
+      "role": "known_validation",
+      "samples": 1098,
+      "classes": 6,
+      "views": {
+        "trafficformer": 768,
+        "graph": 128,
+        "yatc": 192
+      },
+      "class_counts": {
+        "Chat": 195,
+        "Email": 200,
+        "File-Transfer": 200,
+        "P2P": 101,
+        "Streaming": 202,
+        "VoIP": 200
+      }
+    },
+    {
+      "dataset": "iscx_tor",
+      "encoder_seed": 2022,
+      "role": "known_train",
+      "samples": 8946,
+      "classes": 7,
+      "views": {
+        "trafficformer": 768,
+        "graph": 128,
+        "yatc": 192
+      },
+      "class_counts": {
+        "Browsing": 1600,
+        "Chat": 513,
+        "Email": 432,
+        "File-Transfer": 1600,
+        "P2P": 1600,
+        "Streaming": 1601,
+        "VoIP": 1600
+      }
+    },
+    {
+      "dataset": "iscx_tor",
+      "encoder_seed": 2022,
+      "role": "known_validation",
+      "samples": 1118,
+      "classes": 7,
+      "views": {
+        "trafficformer": 768,
+        "graph": 128,
+        "yatc": 192
+      },
+      "class_counts": {
+        "Browsing": 200,
+        "Chat": 64,
+        "Email": 54,
+        "File-Transfer": 200,
+        "P2P": 200,
+        "Streaming": 200,
+        "VoIP": 200
+      }
+    },
+    {
+      "dataset": "iscx_tor",
+      "encoder_seed": 2023,
+      "role": "known_train",
+      "samples": 8946,
+      "classes": 7,
+      "views": {
+        "trafficformer": 768,
+        "graph": 128,
+        "yatc": 192
+      },
+      "class_counts": {
+        "Browsing": 1600,
+        "Chat": 513,
+        "Email": 432,
+        "File-Transfer": 1600,
+        "P2P": 1600,
+        "Streaming": 1601,
+        "VoIP": 1600
+      }
+    },
+    {
+      "dataset": "iscx_tor",
+      "encoder_seed": 2023,
+      "role": "known_validation",
+      "samples": 1118,
+      "classes": 7,
+      "views": {
+        "trafficformer": 768,
+        "graph": 128,
+        "yatc": 192
+      },
+      "class_counts": {
+        "Browsing": 200,
+        "Chat": 64,
+        "Email": 54,
+        "File-Transfer": 200,
+        "P2P": 200,
+        "Streaming": 200,
+        "VoIP": 200
+      }
+    }
+  ]
+}

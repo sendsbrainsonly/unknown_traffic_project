@@ -1,0 +1,9 @@
+{
+  "status": "PAUSED_DEPENDENCY_STOP",
+  "at_utc": "2026-09-26T03:27:03Z",
+  "closed_session": "stage35_joint_queue_two_gpu",
+  "joint_training_started": false,
+  "known_test_evaluated": false,
+  "reason": "Stage34 prerequisite was stopped by user before CIC fusion/Test; waiting Stage35 queue was closed to avoid stale dependent launch",
+  "stop_verification_log": "../.tmux-task/cic_balance_stop_verify_0926/output.log"
+}

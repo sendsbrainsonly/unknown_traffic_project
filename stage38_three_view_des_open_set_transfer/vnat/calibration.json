@@ -1,0 +1,24 @@
+{
+  "centroids_from": "Known Train only",
+  "knn_k": 10,
+  "known_validation_samples": 1960,
+  "mad": {
+    "centroid": 0.2820198762912888,
+    "local": 0.00147032326203771
+  },
+  "median": {
+    "centroid": 0.6216888198952265,
+    "local": 0.004300426854752005
+  },
+  "quantile_method": "higher",
+  "source": "Known Validation only",
+  "status": "PASS",
+  "test_used": 0,
+  "thresholds": {
+    "centroid": 67.56319769277212,
+    "des_v1": 1914.2488972990102,
+    "energy": -4.276202825896154,
+    "msp": 0.0468126493615133
+  },
+  "unknown_used": 0
+}

@@ -1,0 +1,29 @@
+{
+  "class_to_service": {
+    "File-Transfer": "File-Transfer",
+    "P2P": "P2P",
+    "Streaming": "Streaming"
+  },
+  "dataset": "iscx_vpn",
+  "fold": "communication",
+  "methods": [
+    "msp",
+    "des_v1"
+  ],
+  "primary_metrics_replayed": 6,
+  "quantiles": [
+    90,
+    95,
+    99
+  ],
+  "role_counts": {
+    "auxiliary_known_service_unseen_app": 3082,
+    "known_test": 858,
+    "unknown_eval": 10528
+  },
+  "role_manifest_sha256": "a01c6b3febd5e88e1a52408efc3bb67642df000e0826b714064d509105d5d803",
+  "score_rows": 14468,
+  "status": "PASS",
+  "test_used_for_parameter_selection": 0,
+  "unknown_used_for_fitting": 0
+}

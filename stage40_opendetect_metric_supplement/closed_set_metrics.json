@@ -1,0 +1,11 @@
+{
+  "dataset": "USTC-TFC2016",
+  "protocol": "A-2",
+  "known_test": 4333,
+  "num_known_classes": 17,
+  "accuracy": 0.9843064851142396,
+  "precision_weighted": 0.98435967333686,
+  "recall_weighted": 0.9843064851142396,
+  "f1_weighted": 0.9843146811262712,
+  "f1_macro": 0.987648838598579
+}

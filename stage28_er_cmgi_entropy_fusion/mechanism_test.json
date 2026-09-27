@@ -1,0 +1,8 @@
+{
+  "status": "PASS",
+  "negative_entropy_supported": true,
+  "lambda_half_equals_equal": true,
+  "batch_effect_max_abs": 0.0,
+  "nontrivial_lambda_weight_std": 0.07546612620353699,
+  "weight_sum_max_abs_error": 0.0
+}

@@ -1,0 +1,10 @@
+{
+  "status": "PASS",
+  "adapter_state_keys_equal": true,
+  "adapter_initialized_state_equal": true,
+  "adapter_loss_absolute_difference": 0.0,
+  "fusion_state_keys_equal": true,
+  "fusion_initialized_state_equal": true,
+  "fusion_max_logit_absolute_difference": 0.0,
+  "fusion_max_weight_absolute_difference": 0.0
+}

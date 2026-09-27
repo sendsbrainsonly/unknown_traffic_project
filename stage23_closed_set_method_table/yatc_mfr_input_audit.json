@@ -1,0 +1,29 @@
+{
+  "by_dataset": {
+    "iscx_tor": {
+      "flows": 11181,
+      "shorter_than_five": 7731
+    },
+    "iscx_vpn": {
+      "flows": 10955,
+      "shorter_than_five": 9386
+    }
+  },
+  "capture_bytes_total": 42504217337,
+  "captured_files": 203,
+  "flows": 22136,
+  "limitation": "IPv4/IP layer availability and exact author MFR bytes require a separate raw-packet reconstruction audit",
+  "missing_pcaps": [],
+  "packet_ref_distribution": {
+    "1": 7758,
+    "2": 7437,
+    "3": 603,
+    "4": 1319,
+    "5": 5019
+  },
+  "raw_dataset_modified": false,
+  "raw_pcap_bytes_read": 0,
+  "stage20_manifest_sha256": "6404d496f50a6f7f6f397d125ad0cd653c9df152d8db1b9ed2ad2310967950bb",
+  "status": "METADATA_READY_RAW_PACKET_CHECK_PENDING",
+  "test_feature_values_read": 0
+}

@@ -1,0 +1,237 @@
+{
+  "schema_version": 1,
+  "experiment_id": "stage36-vnat-sixclass-open-set-20260925-v1",
+  "created_at_utc": "2026-09-25T14:47:53Z",
+  "updated_at_utc": "2026-09-25T15:44:06Z",
+  "status": "running",
+  "experiment_type": "open-set-evaluation",
+  "claim_scope": "diagnostic",
+  "objective": "Evaluate frozen Stage33 three-view six-class VNAT representation for application-level Unknown detection under frozen Stage14B medium_seed2025 Unknown-Free protocol",
+  "inputs": [
+    {
+      "dataset": "VNAT",
+      "protocol": "Stage14B medium_seed2025",
+      "freeze_hash": "c904daef04d2c8e79469191121325c0a6ceeaeb3e595ef9c4c7d7a62c980ae2f",
+      "known_train": 15704,
+      "known_validation": 1960,
+      "known_test": 1960,
+      "unknown_test": 3825
+    }
+  ],
+  "code": {
+    "revision": null,
+    "dirty": null,
+    "changes": []
+  },
+  "execution": {
+    "tmux_session": "stage36_conditional_queue",
+    "command": "python stage36_vnat_sixclass_open_set_pilot/run_conditional.py",
+    "exit_code": null,
+    "environment": "2025-10-8-WXY-dgl_py310",
+    "physical_gpu_ids": [
+      2
+    ],
+    "note": "GPU2 used only for a completed 30-minute-bounded Known-Val smoke; released afterward. Full evaluation waits and will use GPUs0/1."
+  },
+  "configuration": {
+    "files": [
+      "EXPERIMENT_PLAN.md",
+      "run_pilot.py",
+      "run_conditional.py"
+    ],
+    "parameters": {
+      "scores": [
+        "msp",
+        "energy",
+        "centroid",
+        "des_v1"
+      ],
+      "knn_k": 10,
+      "threshold": "KnownVal P95 higher"
+    },
+    "seeds": [
+      2022
+    ]
+  },
+  "core_results": [
+    {
+      "gate": "preflight",
+      "status": "PASS",
+      "unknown_feature_values_loaded": 0
+    },
+    {
+      "gate": "known_val_packet_parity",
+      "status": "PASS",
+      "flow_count": 11,
+      "exact_array_comparisons": 66
+    },
+    {
+      "gate": "known_val_fused_head_parity",
+      "status": "PASS",
+      "flow_count": 1960,
+      "embedding_dim": 128,
+      "max_abs_logit_difference": 0.0
+    }
+  ],
+  "artifacts": [
+    {
+      "path": "EXPERIMENT_PLAN.md",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 4084,
+      "sha256": "04f1a6569c24f83598994d92c783574d98d451837a0820466a039a11cf9ec4b4",
+      "hash_status": "verified"
+    },
+    {
+      "path": "__pycache__/finalize_pilot.cpython-310.pyc",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 6606,
+      "sha256": "16380dc82a9084285eec5c05333fb0e8f0a7d5de684d537b47a35965409d844b",
+      "hash_status": "verified"
+    },
+    {
+      "path": "__pycache__/run_conditional.cpython-310.pyc",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 3986,
+      "sha256": "c1cfddb9affbe6b89856f9925c0d79fff43692d86bcad0ed150f8b6c8ecafea3",
+      "hash_status": "verified"
+    },
+    {
+      "path": "__pycache__/run_pilot.cpython-310.pyc",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 29067,
+      "sha256": "b150e1c738647436adcceb4246448a8930e72e4297f198284e783fbcdbe026aa",
+      "hash_status": "verified"
+    },
+    {
+      "path": "finalize_pilot.py",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 6848,
+      "sha256": "ae01b7a49591a19bac88f18c8bed1ceefbc1997aea8000e7751ddf629b0cb452",
+      "hash_status": "verified"
+    },
+    {
+      "path": "input_caches/known_val_parity/cache_audit.json",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 2447,
+      "sha256": "1ab7396ae5cb63827d9cdac8ab2cad44df6e6c5c9b8d9050af86d0f4c30b2c07",
+      "hash_status": "verified"
+    },
+    {
+      "path": "input_caches/known_val_parity/fig_adj.npy",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 10028,
+      "sha256": "2374468758c85b7d4c57b631f4bdb3bad4bc3d401a86e71386518d747e81fd5c",
+      "hash_status": "verified"
+    },
+    {
+      "path": "input_caches/known_val_parity/fig_mask.npy",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 458,
+      "sha256": "1f019098a4844234dc998345bd0daf3245c765eb69a21116b447d4dbf4db5921",
+      "hash_status": "verified"
+    },
+    {
+      "path": "input_caches/known_val_parity/fig_x.npy",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 9368,
+      "sha256": "6dda8f5230b3332b3683b3b7c8500895ba31e5ccc7e1ddbd62ad7a1042940753",
+      "hash_status": "verified"
+    },
+    {
+      "path": "input_caches/known_val_parity/flow_ids.npy",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 3648,
+      "sha256": "50affc7151f992efb117a7911c009b94b722bce1344737028a2e46112dbedc20",
+      "hash_status": "verified"
+    },
+    {
+      "path": "input_caches/known_val_parity/mfr.npy",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 17728,
+      "sha256": "2263ce5a093da3b52b6fb58ebc54a6e9bb63fc34eae419feccb710b20edb045f",
+      "hash_status": "verified"
+    },
+    {
+      "path": "input_caches/known_val_parity/segments.npy",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 3648,
+      "sha256": "5337404223072e99a5a17d354300bb0385b5152d4d23798c250d6c267bf91ffa",
+      "hash_status": "verified"
+    },
+    {
+      "path": "input_caches/known_val_parity/token_ids.npy",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 14208,
+      "sha256": "e51469518256ffc0e24481993d97a1fff134d2e024ced5f68a757ffd3528354a",
+      "hash_status": "verified"
+    },
+    {
+      "path": "known_smoke.json",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 218,
+      "sha256": "62c841cebe09d0ad967a33b3f566c6aa8db6228ea22aac5fd0e3bc28553775ce",
+      "hash_status": "verified"
+    },
+    {
+      "path": "parity.json",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 235,
+      "sha256": "714a6d2dd743ea24d9b7a38bed0af1e7d7c03984da0a36ca3e0d1e6a56343e71",
+      "hash_status": "verified"
+    },
+    {
+      "path": "preflight.json",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 1699,
+      "sha256": "2078d19a7ca6a43853303ded6acc0c7daf728f464a7a5fa23dd00ae089322480",
+      "hash_status": "verified"
+    },
+    {
+      "path": "queue_progress.json",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 147,
+      "sha256": "7084115daa0399100a1ca957df71bc3b0df128e8bdd4b876c46cfa38219406c0",
+      "hash_status": "verified"
+    },
+    {
+      "path": "run_conditional.py",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 4009,
+      "sha256": "e6789de024584393d8da54ee75a5204cf3d8dce862381a0a2be9251bfeb2534d",
+      "hash_status": "verified"
+    },
+    {
+      "path": "run_pilot.py",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 31578,
+      "sha256": "2723ecc9aaa8cf1413deefa200bed49c8e584dfa0fb7b479aecdc9c6c88ae358",
+      "hash_status": "verified"
+    }
+  ],
+  "limitations": [
+    "one VNAT protocol and seed",
+    "post-hoc Stage33 taxonomy",
+    "flow-random capture overlap",
+    "no Unknown evaluation yet"
+  ],
+  "next_step": "Wait for Stage34/35 verified completion; conditional queue then executes Unknown evaluation on GPUs0/1."
+}

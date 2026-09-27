@@ -1,0 +1,132 @@
+{
+  "created_before_test_feature_access": true,
+  "des_v1": {
+    "global_weight": 0.5,
+    "k": 10,
+    "local_weight": 0.5,
+    "normalization": "Known-Validation median/MAD"
+  },
+  "score_methods": [
+    "msp",
+    "energy",
+    "centroid",
+    "des_v1"
+  ],
+  "seed": 2022,
+  "status": "PASS",
+  "threshold": "Known Validation P95, method=higher, reject score>threshold",
+  "units": [
+    {
+      "dataset": "USTC-TFC2016",
+      "known_classes": [
+        "BitTorrent",
+        "Cridex",
+        "FTP",
+        "Facetime",
+        "Gmail",
+        "Miuref",
+        "MySQL",
+        "Neris",
+        "Nsis-ay",
+        "Outlook",
+        "SMB",
+        "Shifu",
+        "Skype",
+        "Virut",
+        "Weibo",
+        "WorldOfWarcraft",
+        "Zeus"
+      ],
+      "role_counts": {
+        "known_test": 4333,
+        "known_train": 34665,
+        "known_validation": 4333,
+        "unknown_test": 558
+      },
+      "role_manifest": "/home/birkenwald/data/SEU-WXY/WXY-SEU/TrafficClassifier/Projects/unknown_traffic_project/stage40_ustc_cic_open_set/ustc_a2_roles.csv",
+      "role_manifest_sha256": "d0d2e48364448f177f207aa213566f156fc4cd5c5e40ed320190c5f95930c1f1",
+      "selection": "existing Stage34 Known 10% rows; Unknown valid Test SHA256 10% per class, seed2022",
+      "source_hashes": {
+        "/home/birkenwald/data/SEU-WXY/WXY-SEU/TrafficClassifier/Projects/unknown_traffic_project/opendetect_ustc_encoder_audit/outputs/input_alignment_manifest.csv": "6e5f4964af78a45811bc74cafa5f20e9e59199e5377f3d5366ae45bfeac83dd7",
+        "/home/birkenwald/data/SEU-WXY/WXY-SEU/TrafficClassifier/Projects/unknown_traffic_project/stage34_ustc_cic_closed_set/ustc_a2_10pct_manifest.csv": "73f7eecef25ee91015d557f7f9f8e7eecd7560cd995c5cc7ec21c9390d45246d",
+        "/home/birkenwald/data/SEU-WXY/WXY-SEU/TrafficClassifier/Projects/unknown_traffic_project/stage3_unknown_utility/outputs/A-2/training_config.json": "3f8cb6f2c22770faec3ca2522366b3686eab3d99b793e2553b2dce86781d60ea"
+      },
+      "unknown_classes": [
+        "Geodo",
+        "Htbot",
+        "Tinba"
+      ],
+      "unknown_source_test_counts": {
+        "Geodo": 4095,
+        "Htbot": 634,
+        "Tinba": 850
+      }
+    },
+    {
+      "dataset": "CIC-IDS-2017",
+      "group_disjoint_across_train_validation_test": true,
+      "key": "unknown_slowhttptest",
+      "known_classes": [
+        "BENIGN",
+        "PortScan"
+      ],
+      "per_class_role": {
+        "BENIGN|known_test": 1136,
+        "BENIGN|known_train": 13849,
+        "BENIGN|known_validation": 901,
+        "DoS Slowhttptest|unknown_test": 132,
+        "PortScan|known_test": 1136,
+        "PortScan|known_train": 13849,
+        "PortScan|known_validation": 901
+      },
+      "role_counts": {
+        "known_test": 2272,
+        "known_train": 27698,
+        "known_validation": 1802,
+        "unknown_test": 132
+      },
+      "role_manifest": "/home/birkenwald/data/SEU-WXY/WXY-SEU/TrafficClassifier/Projects/unknown_traffic_project/stage40_ustc_cic_open_set/unknown_slowhttptest_roles.csv",
+      "role_manifest_sha256": "6b6d78e3abd34eab2a3a2797d1fe9376b2a9a364078fa8ce677e2a6a876dd99a",
+      "selection": "subset frozen Stage34B; all Known attack rows; SHA256 1:1 Known BENIGN per split; held-out Test attack only",
+      "source_hashes": {
+        "/home/birkenwald/data/SEU-WXY/WXY-SEU/TrafficClassifier/Projects/unknown_traffic_project/stage34b_cic_balanced_retest/balanced_manifest.csv": "35e99d89ad4eddc828c9d67529ea1b527d1fd511cb39db8c509461b5bf38e25d"
+      },
+      "unknown_classes": [
+        "DoS Slowhttptest"
+      ]
+    },
+    {
+      "dataset": "CIC-IDS-2017",
+      "group_disjoint_across_train_validation_test": true,
+      "key": "unknown_portscan",
+      "known_classes": [
+        "BENIGN",
+        "DoS Slowhttptest"
+      ],
+      "per_class_role": {
+        "BENIGN|known_test": 132,
+        "BENIGN|known_train": 3909,
+        "BENIGN|known_validation": 1055,
+        "DoS Slowhttptest|known_test": 132,
+        "DoS Slowhttptest|known_train": 3909,
+        "DoS Slowhttptest|known_validation": 1055,
+        "PortScan|unknown_test": 1136
+      },
+      "role_counts": {
+        "known_test": 264,
+        "known_train": 7818,
+        "known_validation": 2110,
+        "unknown_test": 1136
+      },
+      "role_manifest": "/home/birkenwald/data/SEU-WXY/WXY-SEU/TrafficClassifier/Projects/unknown_traffic_project/stage40_ustc_cic_open_set/unknown_portscan_roles.csv",
+      "role_manifest_sha256": "ca0eb9bae57662b41342ec44e5e25006c8dd6105b74da95a4895018123043c89",
+      "selection": "subset frozen Stage34B; all Known attack rows; SHA256 1:1 Known BENIGN per split; held-out Test attack only",
+      "source_hashes": {
+        "/home/birkenwald/data/SEU-WXY/WXY-SEU/TrafficClassifier/Projects/unknown_traffic_project/stage34b_cic_balanced_retest/balanced_manifest.csv": "35e99d89ad4eddc828c9d67529ea1b527d1fd511cb39db8c509461b5bf38e25d"
+      },
+      "unknown_classes": [
+        "PortScan"
+      ]
+    }
+  ]
+}

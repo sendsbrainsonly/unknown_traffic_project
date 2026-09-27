@@ -1,0 +1,6 @@
+{
+  "status": "FAILED",
+  "error": "RuntimeError('Known-only training queue failed; do not evaluate incomplete models')",
+  "traceback": "Traceback (most recent call last):\n  File \"/home/birkenwald/data/SEU-WXY/WXY-SEU/TrafficClassifier/Projects/unknown_traffic_project/stage39_coarse_open_set_execution/run_evaluation_queue.py\", line 110, in main\n    raise RuntimeError(\"Known-only training queue failed; do not evaluate incomplete models\")\nRuntimeError: Known-only training queue failed; do not evaluate incomplete models\n",
+  "updated_at_utc": "2026-09-26T14:47:09.242944+00:00"
+}

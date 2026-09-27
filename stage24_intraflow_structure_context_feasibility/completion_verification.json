@@ -1,0 +1,13 @@
+{
+  "chosen_candidate": null,
+  "claim_scope": "Known Validation pilot only; Stage20 Test exposed",
+  "formal_five_seed_gate_complete": false,
+  "interflow_gate": "INTERFLOW_NOT_FEASIBLE_FOR_FULL_CLASS_CAPTURE_DISJOINT_CLAIM",
+  "known_test_feature_usage": 0,
+  "pilot_gate": "PILOT_NO_GLOBAL_GAIN",
+  "pilot_runs_verified": 16,
+  "protected_assets_checked": 19,
+  "protected_hashes_unchanged": true,
+  "status": "PASS",
+  "unknown_test_feature_usage": 0
+}

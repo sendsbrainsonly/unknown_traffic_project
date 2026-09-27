@@ -1,0 +1,7 @@
+{
+  "status": "PASS",
+  "actual_protocol": "Stage34B-balanced-1to1",
+  "meaning": "Compatibility hash gate for the unchanged Stage34 raw-PCAP extractor; v2 in the filename is inherited code spelling only.",
+  "v2_manifest_sha256": "35e99d89ad4eddc828c9d67529ea1b527d1fd511cb39db8c509461b5bf38e25d",
+  "source_stage34_manifest_sha256": "9734812c102266e88c58364d499c4f1494c24d0f012ac45e33e6292c93f7bd53"
+}

@@ -1,0 +1,38 @@
+{
+  "schema_version": 1,
+  "experiment_id": "stage39-coarse-service-open-set-execution-20260926",
+  "created_at_utc": "2026-09-26T08:27:04Z",
+  "updated_at_utc": "2026-09-26T15:04:30Z",
+  "status": "running",
+  "experiment_type": "open-set-evaluation",
+  "claim_scope": "diagnostic",
+  "objective": "Execute predeclared whole-service holdouts with the frozen three-view recipe and Known-only detection calibration",
+  "inputs": [
+    {"path": "stage12_dual_external_validation/protocol/iscx_vpn/split_manifest.csv", "sha256": "618670af28797d9ceffc7138dcb9d2622552cdfc4712c38bd5da0886ec95c793"},
+    {"path": "stage12_dual_external_validation/protocol/iscx_tor/split_manifest.csv", "sha256": "7de5289ef75966fb360dc743778ba90a31f72c2eaf6694dc3a33291a794bc0d7"},
+    {"path": "stage14b_vnat_protocol_freeze/vnat_split_manifest.csv", "sha256": "66bf155e6906231b316c384a52f4b46dabd9d3aee76d5f66d86a3941eb172c4e"}
+  ],
+  "code": {
+    "revision": null,
+    "dirty": null,
+    "changes": ["New isolated Stage39 role manifests, cache subset builder, staged Known-only training queue, evaluation/cache/replay/deployment scripts. Historical protocols and models remain read-only."]
+  },
+  "execution": {
+    "tmux_session": "stage39_known_training_queue_v2_0926; stage39_evaluation_queue_v2_0926; stage39_aggregate_queue_v2_0926",
+    "command": "python stage39_coarse_open_set_execution/run_training_queue.py; python stage39_coarse_open_set_execution/run_evaluation_queue.py",
+    "exit_code": null,
+    "environment": "/home/birkenwald/data/SEU-WXY/conda_envs/2025-10-8-WXY-dgl_py310",
+    "physical_gpu_ids": [0, 1, 7]
+  },
+  "configuration": {
+    "files": ["protocol_index.csv", "freeze_verification.json", "../stage39_coarse_open_set_task_design/PLAN.md"],
+    "parameters": {"new_training_settings": 12, "retrospective_control_settings": 1, "fusion": "three-view equal feature fusion", "detector": "DES-v1 k=10 global/local 0.5/0.5", "thresholds": "Known Validation P90/P95/P99; higher quantile; score > threshold", "unknown_fit_count": 0, "test_fit_count": 0},
+    "seeds": [2022]
+  },
+  "core_results": [
+    {"dataset": "iscx_vpn", "heldout_service": "Communication", "method": "des_v1", "known_test_macro_f1": 0.9955041025064628, "auroc": 0.40522985436549264, "auprc": 0.9232789507191037, "ufar_p95": 0.8493541033434651, "known_frr_p95": 0.05827505827505827, "status": "verified_single_setting"}
+  ],
+  "artifacts": [],
+  "limitations": ["Only one of 12 new-training settings has final Unknown detection evidence so far; the eight ISCX calibrations and eval-input caches are preparation evidence, not detection results. ISCX service labels are capture-derived and Stage39 is development evidence.", "The first queue attempt failed before VNAT data access because of source path capitalization; original failure JSON and tmux logs are preserved, and the corrected Known-only cache audit passed."],
+  "next_step": "Allow frozen VNAT training/evaluation queues to finish; ISCX Known-only calibrations and eval-input caches are already PASS. Then aggregate all settings, verify source/checkpoint hashes and finalize bundle."
+}

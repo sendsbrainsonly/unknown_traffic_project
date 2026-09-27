@@ -1,0 +1,19 @@
+{
+  "status": "PASS",
+  "ustc_flows": 43331,
+  "cic_flows": 187813,
+  "cic_groups_in_sample": 494,
+  "cic_counts": {
+    "BENIGN|test": 16793,
+    "BENIGN|train": 133189,
+    "BENIGN|validation": 16849,
+    "DoS Slowhttptest|test": 132,
+    "DoS Slowhttptest|train": 3909,
+    "DoS Slowhttptest|validation": 1055,
+    "PortScan|test": 1136,
+    "PortScan|train": 13849,
+    "PortScan|validation": 901
+  },
+  "unknown_samples_used": 0,
+  "test_feature_values_loaded": 0
+}

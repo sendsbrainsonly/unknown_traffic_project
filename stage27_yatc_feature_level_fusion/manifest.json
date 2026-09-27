@@ -1,0 +1,750 @@
+{
+  "schema_version": 1,
+  "experiment_id": "stage27-yatc-feature-level-fusion-20260925-v1",
+  "created_at_utc": "2026-09-25T02:41:13Z",
+  "updated_at_utc": "2026-09-25T02:54:59Z",
+  "status": "success",
+  "experiment_type": "benchmark",
+  "claim_scope": "diagnostic",
+  "objective": "Evaluate frozen YaTC penultimate flow embedding as an additional feature branch to E3 with static and dynamic feature-level fusion on exact Stage20 known flows",
+  "inputs": [
+    "Stage20 frozen manifest",
+    "Stage22 frozen E3 representations/checkpoints",
+    "Stage23 frozen YaTC checkpoints/MFR caches"
+  ],
+  "code": {
+    "revision": null,
+    "dirty": true,
+    "changes": [
+      "Stage27 independent scripts and evidence only"
+    ]
+  },
+  "execution": {
+    "tmux_session": "codex_stage27_iscx_vpn_2022_20260925; codex_stage27_iscx_vpn_2023_20260925; codex_stage27_iscx_tor_2022_20260925; codex_stage27_iscx_tor_2023_20260925",
+    "command": "select_gpu.py --min-free-gb 5 -- python stage27_yatc_feature_level_fusion/run_one.py --dataset DATASET --seed SEED",
+    "exit_code": 0,
+    "environment": "/home/birkenwald/data/SEU-WXY/conda_envs/2025-10-8-WXY-dgl_py310",
+    "physical_gpu_ids": [
+      0
+    ]
+  },
+  "configuration": {
+    "files": [
+      "EXPERIMENT_PLAN.md"
+    ],
+    "parameters": {
+      "feature_fusion": [
+        "linear_concat",
+        "equal_projected",
+        "learned_feature_gate"
+      ],
+      "known_only_normalization_and_training": true,
+      "epochs": 30,
+      "batch_size": 256,
+      "unknown_usage": 0,
+      "encoder_weight_updates": 0
+    },
+    "seeds": [
+      2022,
+      2023
+    ]
+  },
+  "core_results": [
+    "4/4 runs, 120/120 independent metric replays PASS",
+    "VPN fine Macro-F1 E3/YaTC/F1/F2/F3=0.859493/0.887085/0.888900/0.884258/0.880846",
+    "Tor fine Macro-F1 E3/YaTC/F1/F2/F3=0.822178/0.827393/0.837946/0.842260/0.821191",
+    "F3 learned feature gate not stably superior; often collapses toward TrafficFormer"
+  ],
+  "artifacts": [
+    {
+      "path": "../.tmux-task/codex_stage27_iscx_vpn_2022_20260925/output.log",
+      "scope": "external",
+      "role": "log"
+    },
+    {
+      "path": "../.tmux-task/codex_stage27_iscx_vpn_2022_20260925/exit.status",
+      "scope": "external",
+      "role": "status"
+    },
+    {
+      "path": "../.tmux-task/codex_stage27_iscx_vpn_2023_20260925/output.log",
+      "scope": "external",
+      "role": "log"
+    },
+    {
+      "path": "../.tmux-task/codex_stage27_iscx_vpn_2023_20260925/exit.status",
+      "scope": "external",
+      "role": "status"
+    },
+    {
+      "path": "../.tmux-task/codex_stage27_iscx_tor_2022_20260925/output.log",
+      "scope": "external",
+      "role": "log"
+    },
+    {
+      "path": "../.tmux-task/codex_stage27_iscx_tor_2022_20260925/exit.status",
+      "scope": "external",
+      "role": "status"
+    },
+    {
+      "path": "../.tmux-task/codex_stage27_iscx_tor_2023_20260925/output.log",
+      "scope": "external",
+      "role": "log"
+    },
+    {
+      "path": "../.tmux-task/codex_stage27_iscx_tor_2023_20260925/exit.status",
+      "scope": "external",
+      "role": "status"
+    },
+    {
+      "path": "../.tmux-task/codex_stage27_aggregate_20260925/output.log",
+      "scope": "external",
+      "role": "log"
+    },
+    {
+      "path": "../.tmux-task/codex_stage27_aggregate_20260925/exit.status",
+      "scope": "external",
+      "role": "status"
+    },
+    {
+      "path": "../.tmux-task/codex_stage27_replay_20260925/output.log",
+      "scope": "external",
+      "role": "log"
+    },
+    {
+      "path": "../.tmux-task/codex_stage27_replay_20260925/exit.status",
+      "scope": "external",
+      "role": "status"
+    },
+    {
+      "path": "EXPERIMENT_PLAN.md",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 3260,
+      "sha256": "748dd59ec9a90ee2d9ad0e1aa3be4d55110472bd4818bfa07835870b13bb4ecb",
+      "hash_status": "verified"
+    },
+    {
+      "path": "__pycache__/run_one.cpython-310.pyc",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 18162,
+      "sha256": "46d34f0a466e2a156e13d23819e186df5f8ebc06d9ff10610fbddd31d345c488",
+      "hash_status": "verified"
+    },
+    {
+      "path": "aggregate.py",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 7546,
+      "sha256": "84f385f13200da8042f64a5b50dfc36d96d3535232a8bd8c416747f169dab9ab",
+      "hash_status": "verified"
+    },
+    {
+      "path": "completion_verification.json",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 260,
+      "sha256": "178bd4cb673b3ac91a00e94d02724a29d83b399fd3859003c5a400ad699eeb60",
+      "hash_status": "verified"
+    },
+    {
+      "path": "finalize.py",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 14759,
+      "sha256": "31da49c1eb39a2d89ed882d454f1a3aabf3b535b6dad9e9da83db7efa3b24827",
+      "hash_status": "verified"
+    },
+    {
+      "path": "gate_weight_summary.csv",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 5288,
+      "sha256": "00631c9390ac3085355164f0f377967324cbd547408f9652a5b2588d4ee028ac",
+      "hash_status": "verified"
+    },
+    {
+      "path": "independent_verification.json",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 1352,
+      "sha256": "8c57cbc893b371e7ae36073e36cea82ca14b9fc040e1dd2c6899facf672e5172",
+      "hash_status": "verified"
+    },
+    {
+      "path": "paired_comparison.csv",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 6958,
+      "sha256": "d1a51db5b5159fc4824c4cd415e8a93b9bdc43bb573b044ef3ce39810c42d504",
+      "hash_status": "verified"
+    },
+    {
+      "path": "per_class.csv",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 61758,
+      "sha256": "6136c56498ffd3fd8ec58be45412e729d906d7b8176ba140d405e2e067e1d1d7",
+      "hash_status": "verified"
+    },
+    {
+      "path": "run_metrics.csv",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 11705,
+      "sha256": "f558768c66475764433a1af0f028151a78427d508ce3a12111c59e1b57116961",
+      "hash_status": "verified"
+    },
+    {
+      "path": "run_one.py",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 18449,
+      "sha256": "596d07e4052257982628750032c84429172787167283d8089a5ef61f60eec354",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/iscx_tor/seed2022/F1_LinearConcat_best.pt",
+      "scope": "bundle",
+      "role": "checkpoint",
+      "size_bytes": 32781,
+      "sha256": "c06e308b0f8c2967ddb9a6365dc5a4dc7e14c2d7c0a72ac7333012ea1dfccf79",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/iscx_tor/seed2022/F2_EqualProjected_best.pt",
+      "scope": "bundle",
+      "role": "checkpoint",
+      "size_bytes": 566239,
+      "sha256": "33c03da73c9edc3dd1e3f6b25eb96e42be6dc4c78970902997124ad932143026",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/iscx_tor/seed2022/F3_FeatureGate_best.pt",
+      "scope": "bundle",
+      "role": "checkpoint",
+      "size_bytes": 666583,
+      "sha256": "2721d1d850299291e3a9437f8dfe042381eb748f29b67a408a538fdcac64dda8",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/iscx_tor/seed2022/RESULTS.md",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 1194,
+      "sha256": "d1ba3ccbea089c6a5590823a3d318f3741e9c3b4b11d0395f6e972f3576aa783",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/iscx_tor/seed2022/SUCCESS",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 8,
+      "sha256": "1f513d4ecec4e91ddd48da1a59b6d96f1b76c374dc1da641980782a34f43b102",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/iscx_tor/seed2022/features.npz",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 8480330,
+      "sha256": "a52bcf58b120a69bf573f7289358858b06886e518ff46b39b494bd77e90cdeb8",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/iscx_tor/seed2022/gate_weights.csv",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 1742015,
+      "sha256": "7a7b40f86f1c31b9aa4d21ebba4a44cfac3067322ec82690a2ede34ceeca2b52",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/iscx_tor/seed2022/logits.npz",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 1276413,
+      "sha256": "8d23313f70a2444734054043d0331d49a7a4f3c22ea5e604d18ca180fcfcba7d",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/iscx_tor/seed2022/manifest.json",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 5730,
+      "sha256": "12fb223427bbbef3da17ad1dc0dc644a759180341d4d4e095987796915b12703",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/iscx_tor/seed2022/per_class.csv",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 16537,
+      "sha256": "6a486cb7387f3ea1184d334a9f8b700f2e7c724ad467f3381547402f180972e9",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/iscx_tor/seed2022/run_metrics.csv",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 2844,
+      "sha256": "d27bab1365f80c8fe41c59ffa09b1f0c425a41af9004362521cf03eca7735d36",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/iscx_tor/seed2022/sample_predictions.csv",
+      "scope": "bundle",
+      "role": "predictions",
+      "size_bytes": 8117977,
+      "sha256": "869c9d4bc069cb877a640f548e638f497f5df141e7e8016a80654734707d6423",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/iscx_tor/seed2022/source_hashes_after.json",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 1461,
+      "sha256": "3757e653c5b9d822b589622e0f5c1ed4cac01da54cce87aca293658c3407010e",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/iscx_tor/seed2022/source_hashes_before.json",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 1461,
+      "sha256": "3757e653c5b9d822b589622e0f5c1ed4cac01da54cce87aca293658c3407010e",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/iscx_tor/seed2022/training_history.csv",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 7262,
+      "sha256": "f39bdd5b306c0797e35c5c890d122504d0add6bbba216a6a52ab80884aeeb1bf",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/iscx_tor/seed2022/verification.json",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 811,
+      "sha256": "fd34368086d129eb543196c2e344a9ce280114764cccae7eba051ef7d8d0003d",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/iscx_tor/seed2023/F1_LinearConcat_best.pt",
+      "scope": "bundle",
+      "role": "checkpoint",
+      "size_bytes": 32781,
+      "sha256": "e87977e926ce8e749828edffbf03e98bb3f9a0a23ead4d0be3795243b5536dff",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/iscx_tor/seed2023/F2_EqualProjected_best.pt",
+      "scope": "bundle",
+      "role": "checkpoint",
+      "size_bytes": 566239,
+      "sha256": "c42756b1d430afd122a0b9020387182a1bf953fb47f7d8421dc0b8dd216c19dc",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/iscx_tor/seed2023/F3_FeatureGate_best.pt",
+      "scope": "bundle",
+      "role": "checkpoint",
+      "size_bytes": 666583,
+      "sha256": "1fcb47dea2f1e826bc44fca6e54c24a0803635d0656c401fc2e0363bf9dde652",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/iscx_tor/seed2023/RESULTS.md",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 1194,
+      "sha256": "265918fa33b82af9fb35d254a8aad4f96ad65e958f910ed63f92b6c8ac218123",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/iscx_tor/seed2023/SUCCESS",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 8,
+      "sha256": "1f513d4ecec4e91ddd48da1a59b6d96f1b76c374dc1da641980782a34f43b102",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/iscx_tor/seed2023/features.npz",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 8483697,
+      "sha256": "9ce733cb2bbde8ad04bebe90df91e0789c31a7467aece6e4f45ac3e7d0f59cdd",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/iscx_tor/seed2023/gate_weights.csv",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 1738252,
+      "sha256": "84a44e0707f0a7b6c28f797f9cf22efddc7a6320087e48e2fd664b2b48c59efe",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/iscx_tor/seed2023/logits.npz",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 1286203,
+      "sha256": "af5bdb99f82109564fca7c801a636444da13c0e84b706a069baf9ea51a52f6a4",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/iscx_tor/seed2023/manifest.json",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 5730,
+      "sha256": "a89d699116af3a43adaf99187b678d799346ac130cb84a6c3a11604b563161cc",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/iscx_tor/seed2023/per_class.csv",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 16629,
+      "sha256": "b4f8e0339597f93f90503d422d2d51794cf67e66ab84541dd967ae3308f651a3",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/iscx_tor/seed2023/run_metrics.csv",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 2845,
+      "sha256": "653688c7aabc653da711156a6f5bb4f06ce3dc1affdecde06ba93435c4fc74bb",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/iscx_tor/seed2023/sample_predictions.csv",
+      "scope": "bundle",
+      "role": "predictions",
+      "size_bytes": 8116051,
+      "sha256": "0c92dd0e965a021aaf8045490fe81f5f10f23cb2405d5f034a6458f6e554cabc",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/iscx_tor/seed2023/source_hashes_after.json",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 1461,
+      "sha256": "0a3883e784dbb104d6669ce76d958c3a2fe7a1cf0e29fee7e4e51df837439dd5",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/iscx_tor/seed2023/source_hashes_before.json",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 1461,
+      "sha256": "0a3883e784dbb104d6669ce76d958c3a2fe7a1cf0e29fee7e4e51df837439dd5",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/iscx_tor/seed2023/training_history.csv",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 7227,
+      "sha256": "5443e9285b8a1f3549ce1f8e65db7c0e4f01179f28387cf3398fdfb2ad19cd02",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/iscx_tor/seed2023/verification.json",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 812,
+      "sha256": "01889ef256f74fbfcf65157354ea7d5cb8f9bfd802761e34f56f6b1918cdfa28",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/iscx_vpn/seed2022/F1_LinearConcat_best.pt",
+      "scope": "bundle",
+      "role": "checkpoint",
+      "size_bytes": 28429,
+      "sha256": "dd297f143b778a6f49ae884bb4350dfd58cf8f92efc10e0c3812a43a3a2b9aa2",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/iscx_vpn/seed2022/F2_EqualProjected_best.pt",
+      "scope": "bundle",
+      "role": "checkpoint",
+      "size_bytes": 565727,
+      "sha256": "59e6b3a7e76405b837546f87158ec1fa7a5e56f8f51304ef87f9179acdd1b7f4",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/iscx_vpn/seed2022/F3_FeatureGate_best.pt",
+      "scope": "bundle",
+      "role": "checkpoint",
+      "size_bytes": 666071,
+      "sha256": "d6abb17ae3393c4fe03ef4b21d6f024e24d10b991141a2f4690d6d926fedc936",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/iscx_vpn/seed2022/RESULTS.md",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 1194,
+      "sha256": "3d780146d3edcb593bb70fe3210f0f2776d9d30f836d390de644c2d7f9f9c47a",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/iscx_vpn/seed2022/SUCCESS",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 8,
+      "sha256": "1f513d4ecec4e91ddd48da1a59b6d96f1b76c374dc1da641980782a34f43b102",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/iscx_vpn/seed2022/features.npz",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 8313427,
+      "sha256": "beaad74b95d64fa8fc15328dce3ef0e0817322efacb4cb710d9f345d00ec4295",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/iscx_vpn/seed2022/gate_weights.csv",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 1687276,
+      "sha256": "55ce8ad91d9864a14d43dc8ad13a1d57b6c2023c438040b48e922d20da938881",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/iscx_vpn/seed2022/logits.npz",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 1077872,
+      "sha256": "e0c1396241f0bb961b1df7679b7df6a973ea6e00edf009ad197ad29385c62b8f",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/iscx_vpn/seed2022/manifest.json",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 5730,
+      "sha256": "e07735ac3fc79b2445f9d4984bc29729b998fdff998145725fb264e3e40f26b6",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/iscx_vpn/seed2022/per_class.csv",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 13867,
+      "sha256": "3e1463306064aa237fdf8b43ce32715b1d3949a0954a2300d3589ef197850f77",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/iscx_vpn/seed2022/run_metrics.csv",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 2934,
+      "sha256": "267ae5b6dc3584589ed1f509e771489460a7b45c258781788c2f01ec401dc4b4",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/iscx_vpn/seed2022/sample_predictions.csv",
+      "scope": "bundle",
+      "role": "predictions",
+      "size_bytes": 8095810,
+      "sha256": "bf40b9c250d94de3cf6d2e832e0eac2f064e92486427ef821a8647abc5ff9bee",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/iscx_vpn/seed2022/source_hashes_after.json",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 1461,
+      "sha256": "0f6758def18058e4eca5af534759017b74df69a6d175a5034d1ae2a9732f92c7",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/iscx_vpn/seed2022/source_hashes_before.json",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 1461,
+      "sha256": "0f6758def18058e4eca5af534759017b74df69a6d175a5034d1ae2a9732f92c7",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/iscx_vpn/seed2022/training_history.csv",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 7262,
+      "sha256": "c7edd48a7323797b5c6eb03e976a1120b7142b674f32ee6cace4040281c910f3",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/iscx_vpn/seed2022/verification.json",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 813,
+      "sha256": "6085178509c252adef62e0ee553e3aa24e5c8ad1a42e6f88c7d82abf41c3043f",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/iscx_vpn/seed2023/F1_LinearConcat_best.pt",
+      "scope": "bundle",
+      "role": "checkpoint",
+      "size_bytes": 28429,
+      "sha256": "a570c04d2ac505400233b50773f920a00cbeccafb5717da9564cb51056a52510",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/iscx_vpn/seed2023/F2_EqualProjected_best.pt",
+      "scope": "bundle",
+      "role": "checkpoint",
+      "size_bytes": 565727,
+      "sha256": "59c76dc4f858d6611d0e05a61f6ff085ca93469c95e7915e03c704f3238cc754",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/iscx_vpn/seed2023/F3_FeatureGate_best.pt",
+      "scope": "bundle",
+      "role": "checkpoint",
+      "size_bytes": 666071,
+      "sha256": "6baac0b4cd6a7476cbe279d62b0a38ea8c1548462dc0908684abbdff90d4e79e",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/iscx_vpn/seed2023/RESULTS.md",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 1194,
+      "sha256": "e440f6be3e77b87326fa8a306433354afba4eb8f43c445561c5e3fca952c0f92",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/iscx_vpn/seed2023/SUCCESS",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 8,
+      "sha256": "1f513d4ecec4e91ddd48da1a59b6d96f1b76c374dc1da641980782a34f43b102",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/iscx_vpn/seed2023/features.npz",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 8314333,
+      "sha256": "cedb9df18b6a5e60258b4d79faad1d2bdab864de9ad5256767f8e049f21f347f",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/iscx_vpn/seed2023/gate_weights.csv",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 1679810,
+      "sha256": "da3e95e64b570f8bc56f652feff16c64e452c4ae385877a0e05113eee80d8aaf",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/iscx_vpn/seed2023/logits.npz",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 1097610,
+      "sha256": "d0ee6f61f1f15cf098cec4881f7424a19d76d6bc626c1429ec377ff422e6b570",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/iscx_vpn/seed2023/manifest.json",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 5730,
+      "sha256": "8cdd5fab698e588523e9a2d98f39839481fb4fbc98dc16d0ebd36ab3d9bcdd0e",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/iscx_vpn/seed2023/per_class.csv",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 14923,
+      "sha256": "4e510dc271a1a9e3f9fbfd8ac3ed568562a270b97525fb00ab83859c67a2d8e7",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/iscx_vpn/seed2023/run_metrics.csv",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 3292,
+      "sha256": "8d59495266652a6475851b9843519d724ea8d4a5703dd5d3c5ddc45ae684d0ba",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/iscx_vpn/seed2023/sample_predictions.csv",
+      "scope": "bundle",
+      "role": "predictions",
+      "size_bytes": 8094738,
+      "sha256": "fdcb2f4bbf1e9dff9196a435b48f1af192b992e8b1562d1c4483a1159d092685",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/iscx_vpn/seed2023/source_hashes_after.json",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 1461,
+      "sha256": "eda2f01b435b4144f08880f78f9f418636a6ee08b31647e9f209ca79bd3f0d89",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/iscx_vpn/seed2023/source_hashes_before.json",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 1461,
+      "sha256": "eda2f01b435b4144f08880f78f9f418636a6ee08b31647e9f209ca79bd3f0d89",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/iscx_vpn/seed2023/training_history.csv",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 7155,
+      "sha256": "c50d937de1d5d2e682adb69ebe5b5608d3bf6b93fb3901a84a171f928c74111c",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/iscx_vpn/seed2023/verification.json",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 815,
+      "sha256": "be7ccd078d3d04ca6f6bac754a3fb88ef9bb1089be45d65b8f266a64ae888ba4",
+      "hash_status": "verified"
+    },
+    {
+      "path": "setting_summary.csv",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 3098,
+      "sha256": "7131701414d394cf0152d1578226d674715f7ecc358838a9176df8e26543d48a",
+      "hash_status": "verified"
+    },
+    {
+      "path": "stage27_report.md",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 3483,
+      "sha256": "51e33831646d005a0d26afa9dad715d8d6baf8623744e0858b715b712044e0eb",
+      "hash_status": "verified"
+    },
+    {
+      "path": "verify_replay.py",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 5263,
+      "sha256": "89c7f5f417e0b3f0f7e9feb11c37eff72489ae6de1154b4f478752cf4a382602",
+      "hash_status": "verified"
+    }
+  ],
+  "limitations": [
+    "Stage20 Test was previously exposed; Stage27 is development evidence only.",
+    "Only two seeds and two datasets; no Unknown/open-set evaluation.",
+    "Feature-level adaptation is not literal ER-CMGI entropy/diffusion implementation."
+  ],
+  "next_step": "Stop here; any further design needs a separate pre-registered protocol and fresh validation."
+}

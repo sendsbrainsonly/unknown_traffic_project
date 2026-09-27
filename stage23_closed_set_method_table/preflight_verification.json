@@ -1,0 +1,918 @@
+{
+  "checks": 120,
+  "details": [
+    {
+      "detail": 22136,
+      "name": "manifest_nonempty",
+      "passed": true
+    },
+    {
+      "detail": [
+        "iscx_vpn",
+        "iscx_tor"
+      ],
+      "name": "expected_datasets",
+      "passed": true
+    },
+    {
+      "detail": {
+        "known_test": 2210,
+        "known_train": 17710,
+        "known_validation": 2216
+      },
+      "name": "only_closed_roles",
+      "passed": true
+    },
+    {
+      "detail": 22136,
+      "name": "unique_dataset_flow_ids",
+      "passed": true
+    },
+    {
+      "detail": "/home/birkenwald/data/SEU-WXY/WXY-SEU/TrafficClassifier/Projects/unknown_traffic_project/stage12_dual_external_validation/artifacts/iscx_tor/preprocessing_pool/raw_prepared_parallel_v2",
+      "name": "source_pool_inside_project_0",
+      "passed": true
+    },
+    {
+      "detail": "/home/birkenwald/data/SEU-WXY/WXY-SEU/TrafficClassifier/Projects/unknown_traffic_project/stage12_dual_external_validation/artifacts/iscx_tor/preprocessing_pool/raw_prepared_parallel_v2/pool_test.npz",
+      "name": "source_file_exists_0",
+      "passed": true
+    },
+    {
+      "detail": {
+        "max_index": 1527,
+        "rows": 1529
+      },
+      "name": "source_index_in_bounds_0",
+      "passed": true
+    },
+    {
+      "detail": "/home/birkenwald/data/SEU-WXY/WXY-SEU/TrafficClassifier/Projects/unknown_traffic_project/stage12_dual_external_validation/artifacts/iscx_tor/preprocessing_pool/raw_prepared_parallel_v2",
+      "name": "source_pool_inside_project_1",
+      "passed": true
+    },
+    {
+      "detail": "/home/birkenwald/data/SEU-WXY/WXY-SEU/TrafficClassifier/Projects/unknown_traffic_project/stage12_dual_external_validation/artifacts/iscx_tor/preprocessing_pool/raw_prepared_parallel_v2/pool_train.npz",
+      "name": "source_file_exists_1",
+      "passed": true
+    },
+    {
+      "detail": {
+        "max_index": 12185,
+        "rows": 12186
+      },
+      "name": "source_index_in_bounds_1",
+      "passed": true
+    },
+    {
+      "detail": "/home/birkenwald/data/SEU-WXY/WXY-SEU/TrafficClassifier/Projects/unknown_traffic_project/stage12_dual_external_validation/artifacts/iscx_tor/preprocessing_pool/raw_prepared_parallel_v2",
+      "name": "source_pool_inside_project_2",
+      "passed": true
+    },
+    {
+      "detail": "/home/birkenwald/data/SEU-WXY/WXY-SEU/TrafficClassifier/Projects/unknown_traffic_project/stage12_dual_external_validation/artifacts/iscx_tor/preprocessing_pool/raw_prepared_parallel_v2/pool_validation.npz",
+      "name": "source_file_exists_2",
+      "passed": true
+    },
+    {
+      "detail": {
+        "max_index": 1519,
+        "rows": 1520
+      },
+      "name": "source_index_in_bounds_2",
+      "passed": true
+    },
+    {
+      "detail": "/home/birkenwald/data/SEU-WXY/WXY-SEU/TrafficClassifier/Projects/unknown_traffic_project/stage12_dual_external_validation/artifacts/iscx_vpn/preprocessing_pool/raw_prepared_parallel_v1",
+      "name": "source_pool_inside_project_3",
+      "passed": true
+    },
+    {
+      "detail": "/home/birkenwald/data/SEU-WXY/WXY-SEU/TrafficClassifier/Projects/unknown_traffic_project/stage12_dual_external_validation/artifacts/iscx_vpn/preprocessing_pool/raw_prepared_parallel_v1/pool_test.npz",
+      "name": "source_file_exists_3",
+      "passed": true
+    },
+    {
+      "detail": {
+        "max_index": 2217,
+        "rows": 2221
+      },
+      "name": "source_index_in_bounds_3",
+      "passed": true
+    },
+    {
+      "detail": "/home/birkenwald/data/SEU-WXY/WXY-SEU/TrafficClassifier/Projects/unknown_traffic_project/stage12_dual_external_validation/artifacts/iscx_vpn/preprocessing_pool/raw_prepared_parallel_v1",
+      "name": "source_pool_inside_project_4",
+      "passed": true
+    },
+    {
+      "detail": "/home/birkenwald/data/SEU-WXY/WXY-SEU/TrafficClassifier/Projects/unknown_traffic_project/stage12_dual_external_validation/artifacts/iscx_vpn/preprocessing_pool/raw_prepared_parallel_v1/pool_train.npz",
+      "name": "source_file_exists_4",
+      "passed": true
+    },
+    {
+      "detail": {
+        "max_index": 17709,
+        "rows": 17710
+      },
+      "name": "source_index_in_bounds_4",
+      "passed": true
+    },
+    {
+      "detail": "/home/birkenwald/data/SEU-WXY/WXY-SEU/TrafficClassifier/Projects/unknown_traffic_project/stage12_dual_external_validation/artifacts/iscx_vpn/preprocessing_pool/raw_prepared_parallel_v1",
+      "name": "source_pool_inside_project_5",
+      "passed": true
+    },
+    {
+      "detail": "/home/birkenwald/data/SEU-WXY/WXY-SEU/TrafficClassifier/Projects/unknown_traffic_project/stage12_dual_external_validation/artifacts/iscx_vpn/preprocessing_pool/raw_prepared_parallel_v1/pool_validation.npz",
+      "name": "source_file_exists_5",
+      "passed": true
+    },
+    {
+      "detail": {
+        "max_index": 2210,
+        "rows": 2211
+      },
+      "name": "source_index_in_bounds_5",
+      "passed": true
+    },
+    {
+      "detail": {
+        "known_test": 1093,
+        "known_train": 8764,
+        "known_validation": 1098
+      },
+      "name": "iscx_vpn_total",
+      "passed": true
+    },
+    {
+      "detail": [
+        "Chat",
+        "Email",
+        "File-Transfer",
+        "P2P",
+        "Streaming",
+        "VoIP"
+      ],
+      "name": "iscx_vpn_services",
+      "passed": true
+    },
+    {
+      "detail": 8764,
+      "name": "iscx_vpn_known_train_count",
+      "passed": true
+    },
+    {
+      "detail": {
+        "Chat": 1559,
+        "Email": 1600,
+        "File-Transfer": 1600,
+        "P2P": 805,
+        "Streaming": 1600,
+        "VoIP": 1600
+      },
+      "name": "iscx_vpn_known_train_every_service",
+      "passed": true
+    },
+    {
+      "detail": 1098,
+      "name": "iscx_vpn_known_validation_count",
+      "passed": true
+    },
+    {
+      "detail": {
+        "Chat": 195,
+        "Email": 200,
+        "File-Transfer": 200,
+        "P2P": 101,
+        "Streaming": 202,
+        "VoIP": 200
+      },
+      "name": "iscx_vpn_known_validation_every_service",
+      "passed": true
+    },
+    {
+      "detail": 1093,
+      "name": "iscx_vpn_known_test_count",
+      "passed": true
+    },
+    {
+      "detail": {
+        "Chat": 195,
+        "Email": 200,
+        "File-Transfer": 200,
+        "P2P": 100,
+        "Streaming": 198,
+        "VoIP": 200
+      },
+      "name": "iscx_vpn_known_test_every_service",
+      "passed": true
+    },
+    {
+      "detail": 0,
+      "name": "iscx_vpn_known_train_known_validation_image_disjoint",
+      "passed": true
+    },
+    {
+      "detail": 0,
+      "name": "iscx_vpn_known_train_known_test_image_disjoint",
+      "passed": true
+    },
+    {
+      "detail": 0,
+      "name": "iscx_vpn_known_validation_known_test_image_disjoint",
+      "passed": true
+    },
+    {
+      "detail": {
+        "cache_sha256": "1b7f67b23393bc107b4060ae6bd27b40af0826a255a2cde6e623b634487b31cb",
+        "dataset": "iscx_vpn",
+        "flows": 10955,
+        "input_definition": {
+          "fig_packets": 8,
+          "ip_addresses": "zeroed",
+          "seq_length": 320,
+          "trafficformer_packets": 5
+        },
+        "raw_recovery_captures": 0,
+        "recovered_stage20_only_flows": 0,
+        "recovery_audit": [],
+        "reused_stage19_flows": 10955,
+        "source_hashes": {
+          "stage19_flow_uids": "41e6bf1717765acbb0a4f4e17b343b9467e6b3650a1c6ce1e4bdc389a06c54e8",
+          "stage19_views": "3ab24391387d04cc8636d1dfc60ad43e5d306d7066bb76c24950403a82b223f2",
+          "stage20_closed_manifest": "6404d496f50a6f7f6f397d125ad0cd653c9df152d8db1b9ed2ad2310967950bb"
+        },
+        "stage20_membership_missing": 0,
+        "status": "PASS"
+      },
+      "name": "iscx_vpn_cache_membership",
+      "passed": true
+    },
+    {
+      "detail": "6404d496f50a6f7f6f397d125ad0cd653c9df152d8db1b9ed2ad2310967950bb",
+      "name": "iscx_vpn_cache_source_hash",
+      "passed": true
+    },
+    {
+      "detail": {
+        "known_test": 1117,
+        "known_train": 8946,
+        "known_validation": 1118
+      },
+      "name": "iscx_tor_total",
+      "passed": true
+    },
+    {
+      "detail": [
+        "Browsing",
+        "Chat",
+        "Email",
+        "File-Transfer",
+        "P2P",
+        "Streaming",
+        "VoIP"
+      ],
+      "name": "iscx_tor_services",
+      "passed": true
+    },
+    {
+      "detail": 8946,
+      "name": "iscx_tor_known_train_count",
+      "passed": true
+    },
+    {
+      "detail": {
+        "Browsing": 1600,
+        "Chat": 513,
+        "Email": 432,
+        "File-Transfer": 1600,
+        "P2P": 1600,
+        "Streaming": 1601,
+        "VoIP": 1600
+      },
+      "name": "iscx_tor_known_train_every_service",
+      "passed": true
+    },
+    {
+      "detail": 1118,
+      "name": "iscx_tor_known_validation_count",
+      "passed": true
+    },
+    {
+      "detail": {
+        "Browsing": 200,
+        "Chat": 64,
+        "Email": 54,
+        "File-Transfer": 200,
+        "P2P": 200,
+        "Streaming": 200,
+        "VoIP": 200
+      },
+      "name": "iscx_tor_known_validation_every_service",
+      "passed": true
+    },
+    {
+      "detail": 1117,
+      "name": "iscx_tor_known_test_count",
+      "passed": true
+    },
+    {
+      "detail": {
+        "Browsing": 200,
+        "Chat": 64,
+        "Email": 54,
+        "File-Transfer": 200,
+        "P2P": 200,
+        "Streaming": 199,
+        "VoIP": 200
+      },
+      "name": "iscx_tor_known_test_every_service",
+      "passed": true
+    },
+    {
+      "detail": 0,
+      "name": "iscx_tor_known_train_known_validation_image_disjoint",
+      "passed": true
+    },
+    {
+      "detail": 0,
+      "name": "iscx_tor_known_train_known_test_image_disjoint",
+      "passed": true
+    },
+    {
+      "detail": 0,
+      "name": "iscx_tor_known_validation_known_test_image_disjoint",
+      "passed": true
+    },
+    {
+      "detail": {
+        "cache_sha256": "344985e6e49a1b814ecf34daa7843264267b7ca7f7711b9c24a0546bfdbf120b",
+        "dataset": "iscx_tor",
+        "flows": 11181,
+        "input_definition": {
+          "fig_packets": 8,
+          "ip_addresses": "zeroed",
+          "seq_length": 320,
+          "trafficformer_packets": 5
+        },
+        "raw_recovery_captures": 10,
+        "recovered_stage20_only_flows": 137,
+        "recovery_audit": [
+          {
+            "pcap": "/home/birkenwald/data/SEU-WXY/WXY-SEU/TrafficClassifier/Dataset/ISCXTor2016/ISCXTor2016（whole）/raw/pcap/NonTor/AIM_Chat.pcap",
+            "pcap_sha256": "60a8ecb66c9c1ab1dec51ea1a871aea4860f2e813cb906b7628fbbc0527ca021",
+            "recovered_packets": 8,
+            "target_packets": 8
+          },
+          {
+            "pcap": "/home/birkenwald/data/SEU-WXY/WXY-SEU/TrafficClassifier/Dataset/ISCXTor2016/ISCXTor2016（whole）/raw/pcap/NonTor/ICQ_Chat.pcap",
+            "pcap_sha256": "6d175e3178007159c0ee0e33f30a70b1823c8d7af3c39b0a9c78d3f7b7098cec",
+            "recovered_packets": 110,
+            "target_packets": 110
+          },
+          {
+            "pcap": "/home/birkenwald/data/SEU-WXY/WXY-SEU/TrafficClassifier/Dataset/ISCXTor2016/ISCXTor2016（whole）/raw/pcap/NonTor/SFTP_filetransfer.pcap",
+            "pcap_sha256": "7eccfd8d2fc3e4fd28bd134c534a969cedd1929ee0e4d1b1dab7751a39e41ff4",
+            "recovered_packets": 133,
+            "target_packets": 133
+          },
+          {
+            "pcap": "/home/birkenwald/data/SEU-WXY/WXY-SEU/TrafficClassifier/Dataset/ISCXTor2016/ISCXTor2016（whole）/raw/pcap/NonTor/aimchat.pcap",
+            "pcap_sha256": "eb2353900d973fa20c1c550d679df26751fd53efc51e8c7571b1d67f935e8792",
+            "recovered_packets": 8,
+            "target_packets": 8
+          },
+          {
+            "pcap": "/home/birkenwald/data/SEU-WXY/WXY-SEU/TrafficClassifier/Dataset/ISCXTor2016/ISCXTor2016（whole）/raw/pcap/NonTor/icqchat.pcap",
+            "pcap_sha256": "2bc6b03fd5390442539c86a0ef794ffe673b6802fe2ef62a6f2e4ac61f3e8846",
+            "recovered_packets": 148,
+            "target_packets": 148
+          },
+          {
+            "pcap": "/home/birkenwald/data/SEU-WXY/WXY-SEU/TrafficClassifier/Dataset/ISCXTor2016/ISCXTor2016（whole）/raw/pcap/Tor/Tor/CHAT_aimchatgateway.pcap",
+            "pcap_sha256": "81b0b18b5f76004589b4d97a9c7a680ee6d5f541d9825fad431c0c333d0ff215",
+            "recovered_packets": 8,
+            "target_packets": 8
+          },
+          {
+            "pcap": "/home/birkenwald/data/SEU-WXY/WXY-SEU/TrafficClassifier/Dataset/ISCXTor2016/ISCXTor2016（whole）/raw/pcap/Tor/Tor/CHAT_gate_AIM_chat.pcap",
+            "pcap_sha256": "4657595c789b6494ae414233bfb04016f838f6982fe1e1d3fb4bbb8a9704581d",
+            "recovered_packets": 14,
+            "target_packets": 14
+          },
+          {
+            "pcap": "/home/birkenwald/data/SEU-WXY/WXY-SEU/TrafficClassifier/Dataset/ISCXTor2016/ISCXTor2016（whole）/raw/pcap/Tor/Tor/CHAT_gate_ICQ_chat.pcap",
+            "pcap_sha256": "59f5a2a34bb35901b121edef4cdc609832a9ca3714cf276f9067333e3db6f788",
+            "recovered_packets": 8,
+            "target_packets": 8
+          },
+          {
+            "pcap": "/home/birkenwald/data/SEU-WXY/WXY-SEU/TrafficClassifier/Dataset/ISCXTor2016/ISCXTor2016（whole）/raw/pcap/Tor/Tor/CHAT_icqchatgateway.pcap",
+            "pcap_sha256": "181051bb1b2735e98a0f51c759bca004a37b2a80913d0ead6c9fca3e6bc691c1",
+            "recovered_packets": 8,
+            "target_packets": 8
+          },
+          {
+            "pcap": "/home/birkenwald/data/SEU-WXY/WXY-SEU/TrafficClassifier/Dataset/ISCXTor2016/ISCXTor2016（whole）/raw/pcap/Tor/Tor/FILE-TRANSFER_gate_SFTP_filetransfer.pcap",
+            "pcap_sha256": "b390315c17b036806f654c5d2b3814c4bf93b1dd6107f0654c6f7ae177ddd00d",
+            "recovered_packets": 8,
+            "target_packets": 8
+          }
+        ],
+        "reused_stage19_flows": 11044,
+        "source_hashes": {
+          "stage19_flow_uids": "806415f94aa8d24ea22be48041a2590daff2543ad6a264137ab14707a7ca56da",
+          "stage19_views": "2a4ec4be2bd8fcbbac0c7a76ea0c90117eb0b1bd410b90a41c8ad1c9022cd1a2",
+          "stage20_closed_manifest": "6404d496f50a6f7f6f397d125ad0cd653c9df152d8db1b9ed2ad2310967950bb"
+        },
+        "stage20_membership_missing": 0,
+        "status": "PASS"
+      },
+      "name": "iscx_tor_cache_membership",
+      "passed": true
+    },
+    {
+      "detail": "6404d496f50a6f7f6f397d125ad0cd653c9df152d8db1b9ed2ad2310967950bb",
+      "name": "iscx_tor_cache_source_hash",
+      "passed": true
+    },
+    {
+      "detail": "SUCCESS",
+      "name": "iscx_vpn_2022_run_success",
+      "passed": true
+    },
+    {
+      "detail": "6404d496f50a6f7f6f397d125ad0cd653c9df152d8db1b9ed2ad2310967950bb",
+      "name": "iscx_vpn_2022_source_manifest",
+      "passed": true
+    },
+    {
+      "detail": 0,
+      "name": "iscx_vpn_2022_test_selection_zero",
+      "passed": true
+    },
+    {
+      "detail": "7e2bcd8c410e6e195c8301e625287432fe51def7e64894bec984257ea4596732",
+      "name": "iscx_vpn_2022_prediction_hash",
+      "passed": true
+    },
+    {
+      "detail": {
+        "manifest": 1098,
+        "predictions": 1098
+      },
+      "name": "iscx_vpn_2022_E1_known_validation_ids",
+      "passed": true
+    },
+    {
+      "detail": 1098,
+      "name": "iscx_vpn_2022_E1_known_validation_labels",
+      "passed": true
+    },
+    {
+      "detail": {
+        "manifest": 1093,
+        "predictions": 1093
+      },
+      "name": "iscx_vpn_2022_E1_known_test_ids",
+      "passed": true
+    },
+    {
+      "detail": 1093,
+      "name": "iscx_vpn_2022_E1_known_test_labels",
+      "passed": true
+    },
+    {
+      "detail": 0.8572735590118938,
+      "name": "iscx_vpn_2022_E1_accuracy_replay",
+      "passed": true
+    },
+    {
+      "detail": 0.8645683463213484,
+      "name": "iscx_vpn_2022_E1_macro_f1_replay",
+      "passed": true
+    },
+    {
+      "detail": 0.85171311009111,
+      "name": "iscx_vpn_2022_E1_weighted_f1_replay",
+      "passed": true
+    },
+    {
+      "detail": {
+        "manifest": 1098,
+        "predictions": 1098
+      },
+      "name": "iscx_vpn_2022_E3_known_validation_ids",
+      "passed": true
+    },
+    {
+      "detail": 1098,
+      "name": "iscx_vpn_2022_E3_known_validation_labels",
+      "passed": true
+    },
+    {
+      "detail": {
+        "manifest": 1093,
+        "predictions": 1093
+      },
+      "name": "iscx_vpn_2022_E3_known_test_ids",
+      "passed": true
+    },
+    {
+      "detail": 1093,
+      "name": "iscx_vpn_2022_E3_known_test_labels",
+      "passed": true
+    },
+    {
+      "detail": 0.8581884720951509,
+      "name": "iscx_vpn_2022_E3_accuracy_replay",
+      "passed": true
+    },
+    {
+      "detail": 0.8665073960536983,
+      "name": "iscx_vpn_2022_E3_macro_f1_replay",
+      "passed": true
+    },
+    {
+      "detail": 0.8538723083809491,
+      "name": "iscx_vpn_2022_E3_weighted_f1_replay",
+      "passed": true
+    },
+    {
+      "detail": "SUCCESS",
+      "name": "iscx_vpn_2023_run_success",
+      "passed": true
+    },
+    {
+      "detail": "6404d496f50a6f7f6f397d125ad0cd653c9df152d8db1b9ed2ad2310967950bb",
+      "name": "iscx_vpn_2023_source_manifest",
+      "passed": true
+    },
+    {
+      "detail": 0,
+      "name": "iscx_vpn_2023_test_selection_zero",
+      "passed": true
+    },
+    {
+      "detail": "f1fcf7ac98d50d2ce1ef660c5ca7400761cc8f4c634d28f41cba76fc1119c217",
+      "name": "iscx_vpn_2023_prediction_hash",
+      "passed": true
+    },
+    {
+      "detail": {
+        "manifest": 1098,
+        "predictions": 1098
+      },
+      "name": "iscx_vpn_2023_E1_known_validation_ids",
+      "passed": true
+    },
+    {
+      "detail": 1098,
+      "name": "iscx_vpn_2023_E1_known_validation_labels",
+      "passed": true
+    },
+    {
+      "detail": {
+        "manifest": 1093,
+        "predictions": 1093
+      },
+      "name": "iscx_vpn_2023_E1_known_test_ids",
+      "passed": true
+    },
+    {
+      "detail": 1093,
+      "name": "iscx_vpn_2023_E1_known_test_labels",
+      "passed": true
+    },
+    {
+      "detail": 0.8490393412625801,
+      "name": "iscx_vpn_2023_E1_accuracy_replay",
+      "passed": true
+    },
+    {
+      "detail": 0.8566465220803902,
+      "name": "iscx_vpn_2023_E1_macro_f1_replay",
+      "passed": true
+    },
+    {
+      "detail": 0.8431851036004177,
+      "name": "iscx_vpn_2023_E1_weighted_f1_replay",
+      "passed": true
+    },
+    {
+      "detail": {
+        "manifest": 1098,
+        "predictions": 1098
+      },
+      "name": "iscx_vpn_2023_E3_known_validation_ids",
+      "passed": true
+    },
+    {
+      "detail": 1098,
+      "name": "iscx_vpn_2023_E3_known_validation_labels",
+      "passed": true
+    },
+    {
+      "detail": {
+        "manifest": 1093,
+        "predictions": 1093
+      },
+      "name": "iscx_vpn_2023_E3_known_test_ids",
+      "passed": true
+    },
+    {
+      "detail": 1093,
+      "name": "iscx_vpn_2023_E3_known_test_labels",
+      "passed": true
+    },
+    {
+      "detail": 0.8417200365965233,
+      "name": "iscx_vpn_2023_E3_accuracy_replay",
+      "passed": true
+    },
+    {
+      "detail": 0.8524778481041535,
+      "name": "iscx_vpn_2023_E3_macro_f1_replay",
+      "passed": true
+    },
+    {
+      "detail": 0.8390235019864022,
+      "name": "iscx_vpn_2023_E3_weighted_f1_replay",
+      "passed": true
+    },
+    {
+      "detail": "SUCCESS",
+      "name": "iscx_tor_2022_run_success",
+      "passed": true
+    },
+    {
+      "detail": "6404d496f50a6f7f6f397d125ad0cd653c9df152d8db1b9ed2ad2310967950bb",
+      "name": "iscx_tor_2022_source_manifest",
+      "passed": true
+    },
+    {
+      "detail": 0,
+      "name": "iscx_tor_2022_test_selection_zero",
+      "passed": true
+    },
+    {
+      "detail": "e3c348c9e7b49b86d3603cb8ece97a393c945ebbd0e2c7a219f3b7d894953202",
+      "name": "iscx_tor_2022_prediction_hash",
+      "passed": true
+    },
+    {
+      "detail": {
+        "manifest": 1118,
+        "predictions": 1118
+      },
+      "name": "iscx_tor_2022_E1_known_validation_ids",
+      "passed": true
+    },
+    {
+      "detail": 1118,
+      "name": "iscx_tor_2022_E1_known_validation_labels",
+      "passed": true
+    },
+    {
+      "detail": {
+        "manifest": 1117,
+        "predictions": 1117
+      },
+      "name": "iscx_tor_2022_E1_known_test_ids",
+      "passed": true
+    },
+    {
+      "detail": 1117,
+      "name": "iscx_tor_2022_E1_known_test_labels",
+      "passed": true
+    },
+    {
+      "detail": 0.8370635631154879,
+      "name": "iscx_tor_2022_E1_accuracy_replay",
+      "passed": true
+    },
+    {
+      "detail": 0.8276346444805666,
+      "name": "iscx_tor_2022_E1_macro_f1_replay",
+      "passed": true
+    },
+    {
+      "detail": 0.8375224916125539,
+      "name": "iscx_tor_2022_E1_weighted_f1_replay",
+      "passed": true
+    },
+    {
+      "detail": {
+        "manifest": 1118,
+        "predictions": 1118
+      },
+      "name": "iscx_tor_2022_E3_known_validation_ids",
+      "passed": true
+    },
+    {
+      "detail": 1118,
+      "name": "iscx_tor_2022_E3_known_validation_labels",
+      "passed": true
+    },
+    {
+      "detail": {
+        "manifest": 1117,
+        "predictions": 1117
+      },
+      "name": "iscx_tor_2022_E3_known_test_ids",
+      "passed": true
+    },
+    {
+      "detail": 1117,
+      "name": "iscx_tor_2022_E3_known_test_labels",
+      "passed": true
+    },
+    {
+      "detail": 0.8388540734109221,
+      "name": "iscx_tor_2022_E3_accuracy_replay",
+      "passed": true
+    },
+    {
+      "detail": 0.829820953514132,
+      "name": "iscx_tor_2022_E3_macro_f1_replay",
+      "passed": true
+    },
+    {
+      "detail": 0.8398943919875216,
+      "name": "iscx_tor_2022_E3_weighted_f1_replay",
+      "passed": true
+    },
+    {
+      "detail": "SUCCESS",
+      "name": "iscx_tor_2023_run_success",
+      "passed": true
+    },
+    {
+      "detail": "6404d496f50a6f7f6f397d125ad0cd653c9df152d8db1b9ed2ad2310967950bb",
+      "name": "iscx_tor_2023_source_manifest",
+      "passed": true
+    },
+    {
+      "detail": 0,
+      "name": "iscx_tor_2023_test_selection_zero",
+      "passed": true
+    },
+    {
+      "detail": "f6be77bb302b26f19b57f37688431d9114ec136503b9bd2440ab56ceeb8e9405",
+      "name": "iscx_tor_2023_prediction_hash",
+      "passed": true
+    },
+    {
+      "detail": {
+        "manifest": 1118,
+        "predictions": 1118
+      },
+      "name": "iscx_tor_2023_E1_known_validation_ids",
+      "passed": true
+    },
+    {
+      "detail": 1118,
+      "name": "iscx_tor_2023_E1_known_validation_labels",
+      "passed": true
+    },
+    {
+      "detail": {
+        "manifest": 1117,
+        "predictions": 1117
+      },
+      "name": "iscx_tor_2023_E1_known_test_ids",
+      "passed": true
+    },
+    {
+      "detail": 1117,
+      "name": "iscx_tor_2023_E1_known_test_labels",
+      "passed": true
+    },
+    {
+      "detail": 0.8254252461951657,
+      "name": "iscx_tor_2023_E1_accuracy_replay",
+      "passed": true
+    },
+    {
+      "detail": 0.8148834432285724,
+      "name": "iscx_tor_2023_E1_macro_f1_replay",
+      "passed": true
+    },
+    {
+      "detail": 0.8272333319008206,
+      "name": "iscx_tor_2023_E1_weighted_f1_replay",
+      "passed": true
+    },
+    {
+      "detail": {
+        "manifest": 1118,
+        "predictions": 1118
+      },
+      "name": "iscx_tor_2023_E3_known_validation_ids",
+      "passed": true
+    },
+    {
+      "detail": 1118,
+      "name": "iscx_tor_2023_E3_known_validation_labels",
+      "passed": true
+    },
+    {
+      "detail": {
+        "manifest": 1117,
+        "predictions": 1117
+      },
+      "name": "iscx_tor_2023_E3_known_test_ids",
+      "passed": true
+    },
+    {
+      "detail": 1117,
+      "name": "iscx_tor_2023_E3_known_test_labels",
+      "passed": true
+    },
+    {
+      "detail": 0.8254252461951657,
+      "name": "iscx_tor_2023_E3_accuracy_replay",
+      "passed": true
+    },
+    {
+      "detail": 0.8145340490380247,
+      "name": "iscx_tor_2023_E3_macro_f1_replay",
+      "passed": true
+    },
+    {
+      "detail": 0.82791260650029,
+      "name": "iscx_tor_2023_E3_weighted_f1_replay",
+      "passed": true
+    }
+  ],
+  "failures": [],
+  "new_model_runs": 0,
+  "source_npz_audit": [
+    {
+      "max_referenced_index": 1527,
+      "path": "/home/birkenwald/data/SEU-WXY/WXY-SEU/TrafficClassifier/Projects/unknown_traffic_project/stage12_dual_external_validation/artifacts/iscx_tor/preprocessing_pool/raw_prepared_parallel_v2/pool_test.npz",
+      "rows": 1529,
+      "shape": [
+        1529,
+        32,
+        32
+      ]
+    },
+    {
+      "max_referenced_index": 12185,
+      "path": "/home/birkenwald/data/SEU-WXY/WXY-SEU/TrafficClassifier/Projects/unknown_traffic_project/stage12_dual_external_validation/artifacts/iscx_tor/preprocessing_pool/raw_prepared_parallel_v2/pool_train.npz",
+      "rows": 12186,
+      "shape": [
+        12186,
+        32,
+        32
+      ]
+    },
+    {
+      "max_referenced_index": 1519,
+      "path": "/home/birkenwald/data/SEU-WXY/WXY-SEU/TrafficClassifier/Projects/unknown_traffic_project/stage12_dual_external_validation/artifacts/iscx_tor/preprocessing_pool/raw_prepared_parallel_v2/pool_validation.npz",
+      "rows": 1520,
+      "shape": [
+        1520,
+        32,
+        32
+      ]
+    },
+    {
+      "max_referenced_index": 2217,
+      "path": "/home/birkenwald/data/SEU-WXY/WXY-SEU/TrafficClassifier/Projects/unknown_traffic_project/stage12_dual_external_validation/artifacts/iscx_vpn/preprocessing_pool/raw_prepared_parallel_v1/pool_test.npz",
+      "rows": 2221,
+      "shape": [
+        2221,
+        32,
+        32
+      ]
+    },
+    {
+      "max_referenced_index": 17709,
+      "path": "/home/birkenwald/data/SEU-WXY/WXY-SEU/TrafficClassifier/Projects/unknown_traffic_project/stage12_dual_external_validation/artifacts/iscx_vpn/preprocessing_pool/raw_prepared_parallel_v1/pool_train.npz",
+      "rows": 17710,
+      "shape": [
+        17710,
+        32,
+        32
+      ]
+    },
+    {
+      "max_referenced_index": 2210,
+      "path": "/home/birkenwald/data/SEU-WXY/WXY-SEU/TrafficClassifier/Projects/unknown_traffic_project/stage12_dual_external_validation/artifacts/iscx_vpn/preprocessing_pool/raw_prepared_parallel_v1/pool_validation.npz",
+      "rows": 2211,
+      "shape": [
+        2211,
+        32,
+        32
+      ]
+    }
+  ],
+  "stage20_manifest_sha256": "6404d496f50a6f7f6f397d125ad0cd653c9df152d8db1b9ed2ad2310967950bb",
+  "stage20_rows": 22136,
+  "status": "PASS",
+  "unknown_test_reads": 0,
+  "verified_baseline_rows": 8
+}

@@ -1,5 +1,7 @@
 # Unknown Traffic / Unknown Attack Detection
 
+> **代码快照（2026-09-27）**：Stage 23–41 的新增实现与阶段性说明正在纳入普通 Git；模型权重、原始/派生数据、逐样本预测和运行缓存仍只保留在本地。最新已核验的同流开集对照为 [Stage 41 单 seed USTC A-1/A-2/A-3](stage41_a123_matched_open_set_comparison/RESULTS.md)：三路方法仅在 A-2 的 AUROC/AUPRC 同时高于 Open-Detect，A-1/A-3 未形成稳定优势。[Stage 39](stage39_coarse_open_set_execution/RESULTS.md) 与依赖它的 [Stage 40 CIC 试验](stage40_ustc_cic_open_set/RESULTS.md) 尚未完成，不能把已有闭集指标写成 CIC 开集结果。下方“当前状态（2026-09-23）”为历史快照。
+
 面向未知流量 / 未知攻击检测（Open-Set）的研究项目。当前 evidence-based 主线为 **Persistent Local-Support Modeling**：
 
 > **任务粒度决策（2026-09-21）**：后续 ISCX-VPN / ISCXTor2016 主评测切换为粗粒度 **Service classification + Leave-One-Service-Out unknown detection**。VPN 使用 6 类，TOR 使用 7 类；冻结协议见 [`stage20_dual_coarse_service_protocol/RESULTS.md`](stage20_dual_coarse_service_protocol/RESULTS.md)。历史细粒度 Application 实验全部保留，但仅作为诊断证据，不能与新任务作同标签空间的直接涨点比较。

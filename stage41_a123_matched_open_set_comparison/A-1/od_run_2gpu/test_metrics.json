@@ -1,0 +1,145 @@
+{
+  "sample_counts": {
+    "validation_known": 4805,
+    "test_known_all": 4806,
+    "test_unknown_all": 85,
+    "test_known_balanced": 85,
+    "test_unknown_balanced": 85,
+    "test_unknown": 85
+  },
+  "closed_world_known_test": {
+    "accuracy": 0.9771119434040783,
+    "precision_weighted": 0.9801956962887013,
+    "recall_weighted": 0.9771119434040783,
+    "f1_weighted": 0.9767802543581622
+  },
+  "open_world": {
+    "evaluation_protocol_version": "symmetric-balanced-v2",
+    "primary_protocol": "balanced_1to1",
+    "paper_threshold_source": "95th percentile of known validation scores only",
+    "sample_counts": {
+      "validation_known": 4805,
+      "test_known_all": 4806,
+      "test_unknown_all": 85,
+      "test_known_balanced": 85,
+      "test_unknown_balanced": 85,
+      "test_unknown": 85
+    },
+    "balanced_1to1": {
+      "sample_counts": {
+        "known": 85,
+        "unknown": 85
+      },
+      "unknown_fraction": 0.5,
+      "auroc": 1.0,
+      "paper_validation_95pct": {
+        "threshold": 6.618760108947754,
+        "accuracy": 0.9764705882352941,
+        "precision": 0.9550561797752809,
+        "recall": 1.0,
+        "f1": 0.9770114942528736,
+        "absolute_difference_from_paper": {
+          "accuracy": -0.005529411764705894,
+          "f1": -0.00538850574712646
+        }
+      },
+      "released_oracle_youden": {
+        "threshold": 12.131927490234375,
+        "accuracy": 1.0,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "absolute_difference_from_paper": {
+          "accuracy": 0.018000000000000016,
+          "f1": 0.01759999999999995
+        }
+      },
+      "mean_known_score": 1.0362106561660767,
+      "mean_unknown_score": 33.951717376708984
+    },
+    "full_test_distribution": {
+      "sample_counts": {
+        "known": 4806,
+        "unknown": 85
+      },
+      "unknown_fraction": 0.01737885912901247,
+      "auroc": 0.9961885877946685,
+      "paper_validation_95pct": {
+        "threshold": 6.618760108947754,
+        "accuracy": 0.950725822940094,
+        "precision": 0.2607361963190184,
+        "recall": 1.0,
+        "f1": 0.41362530413625304
+      },
+      "released_oracle_youden": {
+        "threshold": 12.131927490234375,
+        "accuracy": 0.9883459415252505,
+        "precision": 0.5985915492957746,
+        "recall": 1.0,
+        "f1": 0.748898678414097
+      },
+      "mean_known_score": 1.3830500841140747,
+      "mean_unknown_score": 33.95172119140625
+    },
+    "legacy_released_asymmetric": {
+      "sample_counts": {
+        "known": 85,
+        "unknown": 85
+      },
+      "unknown_fraction": 0.5,
+      "auroc": 1.0,
+      "paper_validation_95pct": {
+        "threshold": 6.618760108947754,
+        "accuracy": 0.9764705882352941,
+        "precision": 0.9550561797752809,
+        "recall": 1.0,
+        "f1": 0.9770114942528736
+      },
+      "released_oracle_youden": {
+        "threshold": 12.131927490234375,
+        "accuracy": 1.0,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0
+      },
+      "mean_known_score": 1.0362106561660767,
+      "mean_unknown_score": 33.95172119140625
+    },
+    "auroc": 1.0,
+    "paper_validation_95pct": {
+      "threshold": 6.618760108947754,
+      "accuracy": 0.9764705882352941,
+      "precision": 0.9550561797752809,
+      "recall": 1.0,
+      "f1": 0.9770114942528736,
+      "absolute_difference_from_paper": {
+        "accuracy": -0.005529411764705894,
+        "f1": -0.00538850574712646
+      }
+    },
+    "released_oracle_youden": {
+      "threshold": 12.131927490234375,
+      "accuracy": 1.0,
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "absolute_difference_from_paper": {
+        "accuracy": 0.018000000000000016,
+        "f1": 0.01759999999999995
+      }
+    },
+    "mean_known_score": 1.0362106561660767,
+    "mean_unknown_score": 33.951717376708984
+  },
+  "training": {
+    "best_epoch": 81,
+    "best_validation_accuracy": 0.9798126951092612,
+    "configured_epochs": 100,
+    "completed_epochs": 100,
+    "stopped_early": false,
+    "early_stop_patience": 0,
+    "early_stop_min_epoch": 82,
+    "early_stop_min_delta": 0.0001,
+    "elapsed_seconds": 1996.3596913814545
+  }
+}

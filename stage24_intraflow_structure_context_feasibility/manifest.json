@@ -1,0 +1,1942 @@
+{
+  "schema_version": 1,
+  "experiment_id": "stage24-intraflow-structure-context-feasibility-20260924-v1",
+  "created_at_utc": "2026-09-24T12:28:54Z",
+  "updated_at_utc": "2026-09-24T12:50:59Z",
+  "status": "success",
+  "experiment_type": "benchmark",
+  "claim_scope": "diagnostic",
+  "objective": "Test whether added within-flow packet and burst structure improves the frozen TrafficFormer dual-branch representation, and audit cross-flow context feasibility without leakage",
+  "inputs": [
+    "Stage 20 frozen manifest",
+    "Stage 21 E3 first-eight-packet caches",
+    "Stage 22 frozen E1 checkpoints and Known Train/Validation representations"
+  ],
+  "code": {
+    "revision": null,
+    "dirty": null,
+    "changes": []
+  },
+  "execution": {
+    "tmux_session": "codex_stage24_pilot_queue_20260924",
+    "command": "python stage24_intraflow_structure_context_feasibility/scripts/run_pilot_queue.py",
+    "exit_code": 0,
+    "environment": "/home/birkenwald/data/SEU-WXY/conda_envs/2025-10-8-WXY-dgl_py310",
+    "physical_gpu_ids": [
+      0,
+      1,
+      2
+    ]
+  },
+  "configuration": {
+    "files": [
+      "EXPERIMENT_PLAN.md",
+      "DECISION_RULE_AMENDMENT.md"
+    ],
+    "parameters": {
+      "datasets": [
+        "iscx_vpn",
+        "iscx_tor"
+      ],
+      "methods": [
+        "S1",
+        "G1",
+        "G2",
+        "G2-shuffle"
+      ],
+      "known_test_feature_usage": 0,
+      "unknown_test_feature_usage": 0
+    },
+    "seeds": [
+      2022,
+      2023
+    ]
+  },
+  "core_results": [
+    "PILOT_NO_GLOBAL_GAIN",
+    "INTERFLOW_NOT_FEASIBLE_FOR_FULL_CLASS_CAPTURE_DISJOINT_CLAIM",
+    "16/16 run bundles verified",
+    "19/19 protected input hashes unchanged"
+  ],
+  "artifacts": [
+    {
+      "path": "AUDIT_ATTEMPT1_FAILURE.md",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 818,
+      "sha256": "0ea2c6debb5bbfdd0232d73656e967698ff5513addd056ed383028bbe357649b",
+      "hash_status": "verified"
+    },
+    {
+      "path": "DECISION_RULE_AMENDMENT.md",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 991,
+      "sha256": "630734ec81d457d02f963fd44050aa32bf69a4a8139ea93ac03e411d12325dfa",
+      "hash_status": "verified"
+    },
+    {
+      "path": "EXPERIMENT_PLAN.md",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 5246,
+      "sha256": "a7545b9a72ea6792192a484e67abf357ea97b3c23d6dc39a63e0b51f54523904",
+      "hash_status": "verified"
+    },
+    {
+      "path": "QUEUE_COMPLETE",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 44,
+      "sha256": "3a5d5eddebd3c0446bd7121f06e66e8e636190e7616db03ae729f314b58d365e",
+      "hash_status": "verified"
+    },
+    {
+      "path": "capture_group_audit.csv",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 716,
+      "sha256": "3f6e02412338884e5aff610550e983526b3ab160bef27d2635d7f8c62e3a180a",
+      "hash_status": "verified"
+    },
+    {
+      "path": "completion_verification.json",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 457,
+      "sha256": "4b015c4e0e60d434bad29631dc0d5968dfe2fd9f96471ac8f98c3ec9e3b82684",
+      "hash_status": "verified"
+    },
+    {
+      "path": "packet_count_audit.csv",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 1611,
+      "sha256": "93af7cee877a6a8c327b8adef1a2104d52c0f773e94d02b101e6822f78dffd81",
+      "hash_status": "verified"
+    },
+    {
+      "path": "pilot_candidate_decision.json",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 659,
+      "sha256": "c40591af33198888913007f98696926725507919e7f6cb8bebf9c398838362bb",
+      "hash_status": "verified"
+    },
+    {
+      "path": "pilot_dataset_summary.csv",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 980,
+      "sha256": "e27d72e70e1019f16cbafc4b95ebb3eb8193a5679406659684f435acd0bce076",
+      "hash_status": "verified"
+    },
+    {
+      "path": "pilot_error_rescue.csv",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 17663,
+      "sha256": "dd9f577a68ce2839debd4d03d1da309391f726f9ff7b9e0e3f377663de305fa8",
+      "hash_status": "verified"
+    },
+    {
+      "path": "pilot_packet_count_results.csv",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 28329,
+      "sha256": "53fd4fe858de46a8f58643b18a2e2378355685b3394f77d38cc050b32fc4516f",
+      "hash_status": "verified"
+    },
+    {
+      "path": "pilot_per_class.csv",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 22831,
+      "sha256": "e2c179c84de99770beb7ea5666be4d270f8bcb00d0d0f837485f744e47fdee50",
+      "hash_status": "verified"
+    },
+    {
+      "path": "pilot_run_results.csv",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 3901,
+      "sha256": "5bd20569ea3ff95eb8e01714b0b9ddac24ad9ccc9e6167a8e7d83f2c63aa583b",
+      "hash_status": "verified"
+    },
+    {
+      "path": "preflight.json",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 1315,
+      "sha256": "10f9064342875177ef250821c2cd6a01df1bf677ad7fa9f46bb4dddd9da5f3f7",
+      "hash_status": "verified"
+    },
+    {
+      "path": "prior_context_audit.csv",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 1585,
+      "sha256": "802ad05fa4a82aa120c45cf681cda07feb92cbda2cb97969a8a6b3333c30316f",
+      "hash_status": "verified"
+    },
+    {
+      "path": "progress.json",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 4515,
+      "sha256": "03c3b04dc2f64be5a5eb498ece7d5ee743c5856c06e25897638d5077100ffb09",
+      "hash_status": "verified"
+    },
+    {
+      "path": "protected_hashes_after.json",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 2089,
+      "sha256": "762e0faa19aa08680ab6d80cfc224d43ed0c2a09e386501b762619e20c5315fb",
+      "hash_status": "verified"
+    },
+    {
+      "path": "protected_hashes_before.json",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 2089,
+      "sha256": "762e0faa19aa08680ab6d80cfc224d43ed0c2a09e386501b762619e20c5315fb",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/pilot/iscx_tor/seed2022/G1/RESULTS.md",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 1274,
+      "sha256": "7c4c225af46b00303d2cbd8eb651785770e33a5c191ab33d0a39e5e28d3da137",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/pilot/iscx_tor/seed2022/G1/SUCCESS",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 8,
+      "sha256": "1f513d4ecec4e91ddd48da1a59b6d96f1b76c374dc1da641980782a34f43b102",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/pilot/iscx_tor/seed2022/G1/branch_best.pt",
+      "scope": "bundle",
+      "role": "checkpoint",
+      "size_bytes": 21509,
+      "sha256": "8a720b35dc6e3cc375e6b8413bda251e5b27fbadb9b55c7c3db4c2bcd306a2db",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/pilot/iscx_tor/seed2022/G1/fusion_best.pt",
+      "scope": "bundle",
+      "role": "checkpoint",
+      "size_bytes": 27205,
+      "sha256": "ca8c5ebe6eedee2b2170262c3d67c8a089b47a41dbbd6ba0710ad1ab01d399fd",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/pilot/iscx_tor/seed2022/G1/known_representations.npz",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 33632312,
+      "sha256": "48d88b7f5522917727ad0409cd29ac1dcbe26ec5be8e2ac70c69d2311885696c",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/pilot/iscx_tor/seed2022/G1/manifest.json",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 4839,
+      "sha256": "d31de38e38fdd6c7c8876bde2cfdf01cfede7be4e79e273848da4a5553b70e44",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/pilot/iscx_tor/seed2022/G1/result.json",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 1729,
+      "sha256": "3e8a49c2d259b8f3c13d73bfda40cfe8b7e6adf7ae10eeaf8490f8ddda4940f8",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/pilot/iscx_tor/seed2022/G1/train.log",
+      "scope": "bundle",
+      "role": "log",
+      "size_bytes": 2672,
+      "sha256": "1b43925b2decf1a9b55abec923e2457f2ec81da5b91992745179a2cc6c575bc2",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/pilot/iscx_tor/seed2022/G1/training_history.json",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 14819,
+      "sha256": "671f3cfe9dd037a32abaf261dd7a8632208dc2af08b5fcda894268bbdc974d60",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/pilot/iscx_tor/seed2022/G1/validation_confusion.csv",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 7211,
+      "sha256": "eed845542259ad139a0b9a39adb4c583010c3dcacdaa7240f91c7dc9b675c634",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/pilot/iscx_tor/seed2022/G1/validation_metrics.csv",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 427,
+      "sha256": "4db392ce53554454c5e236a6342bf1a8ecf89441409edc718be466ed3cb39e35",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/pilot/iscx_tor/seed2022/G1/validation_per_class.csv",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 2113,
+      "sha256": "18f6d79fe41de155f938137e9a0e4e41f2916a4273efc2d03bca90793a2269a4",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/pilot/iscx_tor/seed2022/G1/validation_predictions.csv",
+      "scope": "bundle",
+      "role": "predictions",
+      "size_bytes": 154449,
+      "sha256": "eb62e4549a2f060fd0cd868ab73bab976571b2de83e546f81df1e5f3665c6ca2",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/pilot/iscx_tor/seed2022/G2/RESULTS.md",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 1275,
+      "sha256": "3613ba4bd2901b7355d2065a074d8304b0420bac4b14ad9896c440d45ba08bed",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/pilot/iscx_tor/seed2022/G2/SUCCESS",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 8,
+      "sha256": "1f513d4ecec4e91ddd48da1a59b6d96f1b76c374dc1da641980782a34f43b102",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/pilot/iscx_tor/seed2022/G2/branch_best.pt",
+      "scope": "bundle",
+      "role": "checkpoint",
+      "size_bytes": 51781,
+      "sha256": "07bdaaa7f4724740a69ce4a7940adf9dd506dbb66949ae638271c6f50c83e458",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/pilot/iscx_tor/seed2022/G2/fusion_best.pt",
+      "scope": "bundle",
+      "role": "checkpoint",
+      "size_bytes": 27205,
+      "sha256": "d709e1c2c5739edea425d43c49b9f6e3bbc8ae957fa71ea13f92701b75252e9a",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/pilot/iscx_tor/seed2022/G2/known_representations.npz",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 32111863,
+      "sha256": "ec48f997d2264521106fa28bd16879e98622bdc0ff1bf33db0389196849851c4",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/pilot/iscx_tor/seed2022/G2/manifest.json",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 4837,
+      "sha256": "2cf672977f3337b4f15988292e6fc26bbd896dc57243e5493e554dd18e151f3e",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/pilot/iscx_tor/seed2022/G2/result.json",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 1728,
+      "sha256": "a772868a79ca64b2a82380792c736a3898be8cd8fbdc6312204c831e401062ec",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/pilot/iscx_tor/seed2022/G2/train.log",
+      "scope": "bundle",
+      "role": "log",
+      "size_bytes": 2670,
+      "sha256": "3cf6876bf407281e7e2c08577e6bbfae946499e85ec373e3f6870b1fda0f47bc",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/pilot/iscx_tor/seed2022/G2/training_history.json",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 14779,
+      "sha256": "969aaf9e2aa4add63d49ca2e16606db379d57c1d279a0e26cb85bd817f2c3c60",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/pilot/iscx_tor/seed2022/G2/validation_confusion.csv",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 7211,
+      "sha256": "464d03ed98ff4178ad3605d1e749427932958d2caef3732a585d48aa0008787d",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/pilot/iscx_tor/seed2022/G2/validation_metrics.csv",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 425,
+      "sha256": "be119f890f15482e586f243f32dd12249e7fb183d786d6426a2ac3825a407599",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/pilot/iscx_tor/seed2022/G2/validation_per_class.csv",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 2112,
+      "sha256": "4f56e9c385675e1fcba8044c32f1e0e603b936cefea7a7f35313bbed63d4fe60",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/pilot/iscx_tor/seed2022/G2/validation_predictions.csv",
+      "scope": "bundle",
+      "role": "predictions",
+      "size_bytes": 154626,
+      "sha256": "40fb3e302620f1c9b93c8bec0ba0ab2c1fe5f7587843d6224e0345b1afa8dfcf",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/pilot/iscx_tor/seed2022/G2-shuffle/RESULTS.md",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 1292,
+      "sha256": "68d4b2b1b8278c08a5255be59cd7017e300909f18c443fe3048be23cf15fabe0",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/pilot/iscx_tor/seed2022/G2-shuffle/SUCCESS",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 8,
+      "sha256": "1f513d4ecec4e91ddd48da1a59b6d96f1b76c374dc1da641980782a34f43b102",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/pilot/iscx_tor/seed2022/G2-shuffle/branch_best.pt",
+      "scope": "bundle",
+      "role": "checkpoint",
+      "size_bytes": 51781,
+      "sha256": "10d12700de54b552ac2e6c5620c77815e831cc950ad64b1062cc0b31caa215ff",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/pilot/iscx_tor/seed2022/G2-shuffle/fusion_best.pt",
+      "scope": "bundle",
+      "role": "checkpoint",
+      "size_bytes": 27205,
+      "sha256": "29b307fccccda051dfda9ca161dcf73a678b2f27b8280fb5bc2756881b9bc4dd",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/pilot/iscx_tor/seed2022/G2-shuffle/known_representations.npz",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 31980316,
+      "sha256": "c2830220f3f408500865c2a17892e0a8c518b33552b0fe2b3e954b94a40fdd5c",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/pilot/iscx_tor/seed2022/G2-shuffle/manifest.json",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 4864,
+      "sha256": "f53ef4d8b85b7032880ff3d6d9bda33213350e4d30332a265225715d8dd3f34a",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/pilot/iscx_tor/seed2022/G2-shuffle/result.json",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 1750,
+      "sha256": "83cdecefec24f8e285e8cc7d57d143babbaa2638bd18ce635f84a1706333ef31",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/pilot/iscx_tor/seed2022/G2-shuffle/train.log",
+      "scope": "bundle",
+      "role": "log",
+      "size_bytes": 2712,
+      "sha256": "1fe010384e6c0a00ab976641836161d95ce5dcdc4e5a4f53441259aade5c92bc",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/pilot/iscx_tor/seed2022/G2-shuffle/training_history.json",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 14823,
+      "sha256": "00519f8bd43e0372c51638e08275f4ad4cde1e45305a683c62adf831e98e6a58",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/pilot/iscx_tor/seed2022/G2-shuffle/validation_confusion.csv",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 7603,
+      "sha256": "324ebb29193c181a5ebd2910b1b2a9826c7e808aa102628990c672c09fe40a52",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/pilot/iscx_tor/seed2022/G2-shuffle/validation_metrics.csv",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 436,
+      "sha256": "c8ac4574aa4cd583bde1f6430fb51d4a046a7fc7c592caead9e16faf7c0f9f72",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/pilot/iscx_tor/seed2022/G2-shuffle/validation_per_class.csv",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 2187,
+      "sha256": "c2415dcf6648e259011c2e92479cc74d858c47ac65416b7c2d65f55144cf6566",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/pilot/iscx_tor/seed2022/G2-shuffle/validation_predictions.csv",
+      "scope": "bundle",
+      "role": "predictions",
+      "size_bytes": 154521,
+      "sha256": "e80d27914197450446318af924e4cae98c94b8f30007f0f0387adfdf9de78810",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/pilot/iscx_tor/seed2022/S1/RESULTS.md",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 1274,
+      "sha256": "471e636049d2076e0726ec752f18d7a71931116eb23f6ab03f1105feb86650b2",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/pilot/iscx_tor/seed2022/S1/SUCCESS",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 8,
+      "sha256": "1f513d4ecec4e91ddd48da1a59b6d96f1b76c374dc1da641980782a34f43b102",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/pilot/iscx_tor/seed2022/S1/branch_best.pt",
+      "scope": "bundle",
+      "role": "checkpoint",
+      "size_bytes": 16837,
+      "sha256": "f066dc9ceefa24e2cf7fe8908ec97135becda830e2a60e9759cc2cd75db53087",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/pilot/iscx_tor/seed2022/S1/fusion_best.pt",
+      "scope": "bundle",
+      "role": "checkpoint",
+      "size_bytes": 27205,
+      "sha256": "714407605ac9fb5b48539031eb0b9b0345109882f4fe5a9fba6ac5d0036cf0e3",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/pilot/iscx_tor/seed2022/S1/known_representations.npz",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 32355700,
+      "sha256": "fb41ecf1bdc66ff33de98f865bc3a07ef31782b022a86992be969b2511c23750",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/pilot/iscx_tor/seed2022/S1/manifest.json",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 4841,
+      "sha256": "23290ebf897cc8e2ef47da61e63eeaa1c40f4f8da0d053866e5433d6d31d069c",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/pilot/iscx_tor/seed2022/S1/result.json",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 1732,
+      "sha256": "50818888a624c4550b2510c8f0b2635dfe4fea745081717c5517ca3c5ba2901a",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/pilot/iscx_tor/seed2022/S1/train.log",
+      "scope": "bundle",
+      "role": "log",
+      "size_bytes": 2675,
+      "sha256": "afd9f499d2d6fbd145ae75ca734e189e7bd7e85a2d84394bb6cb2dbe73d303e0",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/pilot/iscx_tor/seed2022/S1/training_history.json",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 14804,
+      "sha256": "cb7b080a6168140feab44a21b981cb6c6bebe745bbb3583bc2275a8b203580c3",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/pilot/iscx_tor/seed2022/S1/validation_confusion.csv",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 7211,
+      "sha256": "5f56c2d0aec17e9b03ce529c8e55399b7b2d29265744a45bfb35d011f52a5797",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/pilot/iscx_tor/seed2022/S1/validation_metrics.csv",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 429,
+      "sha256": "8748b6a74a55ee36b3df935f45c64c5aff55ce081a6bd2a54c4664d2294bd9e0",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/pilot/iscx_tor/seed2022/S1/validation_per_class.csv",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 2107,
+      "sha256": "67e004310a429a5d221bd99b63db9b9aba2711069c108cf1b1d7801404fcc832",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/pilot/iscx_tor/seed2022/S1/validation_predictions.csv",
+      "scope": "bundle",
+      "role": "predictions",
+      "size_bytes": 156269,
+      "sha256": "935697e12dee98534fbf4bd3005a5392617d368848cab1819f8d5a51fce88a9f",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/pilot/iscx_tor/seed2023/G1/RESULTS.md",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 1274,
+      "sha256": "cfa876e8ada2ec99bed2162c31ebc042906b29de5ae1149d4c7329bceb409ab6",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/pilot/iscx_tor/seed2023/G1/SUCCESS",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 8,
+      "sha256": "1f513d4ecec4e91ddd48da1a59b6d96f1b76c374dc1da641980782a34f43b102",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/pilot/iscx_tor/seed2023/G1/branch_best.pt",
+      "scope": "bundle",
+      "role": "checkpoint",
+      "size_bytes": 21509,
+      "sha256": "c7075038e8c722a4b63df1d923f2595046c2f6a8e2637fa187e6d46978973a7a",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/pilot/iscx_tor/seed2023/G1/fusion_best.pt",
+      "scope": "bundle",
+      "role": "checkpoint",
+      "size_bytes": 27205,
+      "sha256": "bf45bd83c08b2501f687302348fbbccf34537a5a3f153d16e7bcf04a0284605e",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/pilot/iscx_tor/seed2023/G1/known_representations.npz",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 33682415,
+      "sha256": "86304529ae63f915718538731fe7e9a83bc04f16f4f2ff79467f2a7bc88518ea",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/pilot/iscx_tor/seed2023/G1/manifest.json",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 4842,
+      "sha256": "4b955e50e0ca7aa592493bc5cf88de6bbfaea8500a1975e2224fef9612580e02",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/pilot/iscx_tor/seed2023/G1/result.json",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 1734,
+      "sha256": "c126d434266d84922615c468d6ec46f30bd9175a8e29d0581b0807f3afbfa9eb",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/pilot/iscx_tor/seed2023/G1/train.log",
+      "scope": "bundle",
+      "role": "log",
+      "size_bytes": 2673,
+      "sha256": "7c1803e152968f903cecb9308a9b5eb2add055a1bc38330e9d4ad2779c529e85",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/pilot/iscx_tor/seed2023/G1/training_history.json",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 14802,
+      "sha256": "610230ac0f0fc5ccccc8c6de6c3740d38023f47143f9c69f6961b4273ce90c30",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/pilot/iscx_tor/seed2023/G1/validation_confusion.csv",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 7212,
+      "sha256": "9aa1a03d130492041cb38d30a72d0da4b269c18a564a2e2e8a827513edee77aa",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/pilot/iscx_tor/seed2023/G1/validation_metrics.csv",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 430,
+      "sha256": "e18ed6cff28e6d7578ac7a488be4bf3dba506aa8acdd1888c80d3a21080fb804",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/pilot/iscx_tor/seed2023/G1/validation_per_class.csv",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 2012,
+      "sha256": "f33665bac6c5de27a68992b4d5976c0e557843d30436100a5399c11aaf7d657b",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/pilot/iscx_tor/seed2023/G1/validation_predictions.csv",
+      "scope": "bundle",
+      "role": "predictions",
+      "size_bytes": 154248,
+      "sha256": "c0847883d9cbc673231794b19510f9d89ead4c664c3d5fb2a00f1ead8659eccc",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/pilot/iscx_tor/seed2023/G2/RESULTS.md",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 1275,
+      "sha256": "f9a0c0d466378ef6d1bef708ab764d57fa1dfbd01dc1b933c7ea66a1a786678b",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/pilot/iscx_tor/seed2023/G2/SUCCESS",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 8,
+      "sha256": "1f513d4ecec4e91ddd48da1a59b6d96f1b76c374dc1da641980782a34f43b102",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/pilot/iscx_tor/seed2023/G2/branch_best.pt",
+      "scope": "bundle",
+      "role": "checkpoint",
+      "size_bytes": 51781,
+      "sha256": "897adc9f31016dd753837574e0baadc7400773b5a897561d5e4708348dce6b05",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/pilot/iscx_tor/seed2023/G2/fusion_best.pt",
+      "scope": "bundle",
+      "role": "checkpoint",
+      "size_bytes": 27205,
+      "sha256": "657ca67a48600813b6d8f297cc1ee88f86ed2354b82c1933fb22f5430c27e04e",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/pilot/iscx_tor/seed2023/G2/known_representations.npz",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 31942482,
+      "sha256": "62fa31c6e7bf0bc0bbc58b80c91f513c5f34423107255f620afa91d3e2a8a7ea",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/pilot/iscx_tor/seed2023/G2/manifest.json",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 4839,
+      "sha256": "a7b6a329bc984fbe7275522df0507605c40670bcbbe30521dcabb4b3e619ab85",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/pilot/iscx_tor/seed2023/G2/result.json",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 1732,
+      "sha256": "e26aab4000c969d9c765c92399e84cd02cff3016b556d18fbf4d451c1db30720",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/pilot/iscx_tor/seed2023/G2/train.log",
+      "scope": "bundle",
+      "role": "log",
+      "size_bytes": 2661,
+      "sha256": "1b4f60498a5843adeeffab6801f492437b4043f3f86a1979b6a73515ae46c3e6",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/pilot/iscx_tor/seed2023/G2/training_history.json",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 14799,
+      "sha256": "ad154262459fc6973ee074ddd2f72064ae9dd8a2e64798c6966cbc1f4ddccbf4",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/pilot/iscx_tor/seed2023/G2/validation_confusion.csv",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 7212,
+      "sha256": "b204fb48dca6a5c3ee4a6df763ce656eabdf38b9bbedbb414a5c2e30ee5a22c0",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/pilot/iscx_tor/seed2023/G2/validation_metrics.csv",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 427,
+      "sha256": "4837e2a31908612a58f3d982400ed22a758eb6ff117bfae76c7139dff8e4b962",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/pilot/iscx_tor/seed2023/G2/validation_per_class.csv",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 2001,
+      "sha256": "92f10890a008f8f8780070bc60f95cee4080495b832d93c7d18c8571e821df18",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/pilot/iscx_tor/seed2023/G2/validation_predictions.csv",
+      "scope": "bundle",
+      "role": "predictions",
+      "size_bytes": 154251,
+      "sha256": "0bf458712ef66a38e37b498616c0b4f494472ccb7f9a661771a1658ccd2fa6b0",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/pilot/iscx_tor/seed2023/G2-shuffle/RESULTS.md",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 1291,
+      "sha256": "662f1317a4a8b7b061951eacba6b98a17ea6d44d5cf2ca9b4205cacaa6d3ddfb",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/pilot/iscx_tor/seed2023/G2-shuffle/SUCCESS",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 8,
+      "sha256": "1f513d4ecec4e91ddd48da1a59b6d96f1b76c374dc1da641980782a34f43b102",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/pilot/iscx_tor/seed2023/G2-shuffle/branch_best.pt",
+      "scope": "bundle",
+      "role": "checkpoint",
+      "size_bytes": 51781,
+      "sha256": "e55252c541700fea9c1637c3e7a1eeed1a75fcf293a2fac96af3d868753e4d8a",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/pilot/iscx_tor/seed2023/G2-shuffle/fusion_best.pt",
+      "scope": "bundle",
+      "role": "checkpoint",
+      "size_bytes": 27205,
+      "sha256": "1045a564d3f31da1d667cad2fae372685e7ad461047e1d77db72db5eab11c85d",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/pilot/iscx_tor/seed2023/G2-shuffle/known_representations.npz",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 31685035,
+      "sha256": "889579b829783fcbc9beadc25573ceac5d3e616a0df60530bb2e5e0f98f4ea6e",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/pilot/iscx_tor/seed2023/G2-shuffle/manifest.json",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 4864,
+      "sha256": "abbfa01a7c4cf8cf6c495f66ee0b6cd29b9105929858edeb077c4955991c0ded",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/pilot/iscx_tor/seed2023/G2-shuffle/result.json",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 1747,
+      "sha256": "56dec8018582a2ea327408610009f225e2fa08d2fec64772c70d3e475958ea3d",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/pilot/iscx_tor/seed2023/G2-shuffle/train.log",
+      "scope": "bundle",
+      "role": "log",
+      "size_bytes": 2726,
+      "sha256": "292117af9c3c55b3c46a434dbe5dcd9ffbad1405b6d4975f781e357bfb14c3c2",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/pilot/iscx_tor/seed2023/G2-shuffle/training_history.json",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 14803,
+      "sha256": "c9e9431beb9c589ae6db4dab03177e6361750c6660fc5e02d36e73ceea66774d",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/pilot/iscx_tor/seed2023/G2-shuffle/validation_confusion.csv",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 7604,
+      "sha256": "92b2ec34a20f79ebd82a504cfb5721c9f206278972cccc1425ac7c49b23e6cd1",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/pilot/iscx_tor/seed2023/G2-shuffle/validation_metrics.csv",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 436,
+      "sha256": "661bb490e213fd97a1fba7000a10b580aecc62ce36ea5edb7b2b8db79fe33d2c",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/pilot/iscx_tor/seed2023/G2-shuffle/validation_per_class.csv",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 2053,
+      "sha256": "f4521cc3682b99a36d4d3df0b5c5d6b2b20936a28fd89ed69df6c24fd7596c8b",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/pilot/iscx_tor/seed2023/G2-shuffle/validation_predictions.csv",
+      "scope": "bundle",
+      "role": "predictions",
+      "size_bytes": 154447,
+      "sha256": "2bd84462fb3271fba70f913a1359c424dd0c773b647eea9ae1f9d416d9aa1cce",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/pilot/iscx_tor/seed2023/S1/RESULTS.md",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 1274,
+      "sha256": "40ac179f9827c2050760b16107e1b7612326495aeb769c14d6905efdb74499c1",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/pilot/iscx_tor/seed2023/S1/SUCCESS",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 8,
+      "sha256": "1f513d4ecec4e91ddd48da1a59b6d96f1b76c374dc1da641980782a34f43b102",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/pilot/iscx_tor/seed2023/S1/branch_best.pt",
+      "scope": "bundle",
+      "role": "checkpoint",
+      "size_bytes": 16837,
+      "sha256": "cba651479b06876de388314d7973766352c5f9fbf6e99c28fc6e638b519aa526",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/pilot/iscx_tor/seed2023/S1/fusion_best.pt",
+      "scope": "bundle",
+      "role": "checkpoint",
+      "size_bytes": 27205,
+      "sha256": "9ae4f346eaa4ca9da0011cae717219786717d5cf96d9c40ce84f89ff87b5fd18",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/pilot/iscx_tor/seed2023/S1/known_representations.npz",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 32424951,
+      "sha256": "16b66071c8c188bcad09a5c67d63f011d21419f459800ba300ab150733f86f0a",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/pilot/iscx_tor/seed2023/S1/manifest.json",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 4842,
+      "sha256": "aaaa54c72db0010c693f203a8f96de7bc169dd0198261b3ed705826088acaa2a",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/pilot/iscx_tor/seed2023/S1/result.json",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 1734,
+      "sha256": "43cea3469dd4a75ee341986a1c57ad5b7587622b2abfeb14764df6d844138f7e",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/pilot/iscx_tor/seed2023/S1/train.log",
+      "scope": "bundle",
+      "role": "log",
+      "size_bytes": 2677,
+      "sha256": "80771b856877f659d44b0ef2e0e797ccbb7f73b7653c8027f0b98418a39c8399",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/pilot/iscx_tor/seed2023/S1/training_history.json",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 14819,
+      "sha256": "e6b3f352d7acce35cc91f9383b012ed1ba5d43e1ff9afdbfdd7c57a402cb3d4e",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/pilot/iscx_tor/seed2023/S1/validation_confusion.csv",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 7213,
+      "sha256": "601d9e06950c0d3d52e500aa7fad8ac7d42a5028b3fbe601c51864fa99829aff",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/pilot/iscx_tor/seed2023/S1/validation_metrics.csv",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 430,
+      "sha256": "6dda0befc8f04e547e76f764b2cedb967c989c2e0d6a409f3632d680ea95df80",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/pilot/iscx_tor/seed2023/S1/validation_per_class.csv",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 1997,
+      "sha256": "400097ce7ce159ec4385dc3ba26ad7ee4803831049c749ff0b50886630e59a97",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/pilot/iscx_tor/seed2023/S1/validation_predictions.csv",
+      "scope": "bundle",
+      "role": "predictions",
+      "size_bytes": 154262,
+      "sha256": "a3851280ebf4a24568c76774b0ecf4b1168809e1fd7db9ffc5a0d65aa71b451e",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/pilot/iscx_vpn/seed2022/G1/RESULTS.md",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 1275,
+      "sha256": "a2d717bd2261e5636a36b0296bd02091f7b6526655dbabd1f7dfa9f26113e70f",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/pilot/iscx_vpn/seed2022/G1/SUCCESS",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 8,
+      "sha256": "1f513d4ecec4e91ddd48da1a59b6d96f1b76c374dc1da641980782a34f43b102",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/pilot/iscx_vpn/seed2022/G1/branch_best.pt",
+      "scope": "bundle",
+      "role": "checkpoint",
+      "size_bytes": 20997,
+      "sha256": "196836c452586f4eb7aac2d75b82369b8c00334bd59545b6a7e949b6da7a8f29",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/pilot/iscx_vpn/seed2022/G1/fusion_best.pt",
+      "scope": "bundle",
+      "role": "checkpoint",
+      "size_bytes": 23621,
+      "sha256": "7ddd61101cfb839c369c09bda478a477ae9de59fe3789d438063603352fd7990",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/pilot/iscx_vpn/seed2022/G1/known_representations.npz",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 33797434,
+      "sha256": "be3a76590a4f98240e0d465613dcb353f413e86281dfec8ce46704dbca30a6db",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/pilot/iscx_vpn/seed2022/G1/manifest.json",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 4839,
+      "sha256": "a57f5c1e19a0e570f2976a402953e1b4dc1c9a2ce5c03e30760dd767ab06f308",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/pilot/iscx_vpn/seed2022/G1/result.json",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 1731,
+      "sha256": "c8b38524a57f811203c572bdb1edf9ed56ab43049d9f832c202a0c2eeeb7aabb",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/pilot/iscx_vpn/seed2022/G1/train.log",
+      "scope": "bundle",
+      "role": "log",
+      "size_bytes": 2673,
+      "sha256": "96d6c09a0aa275bcedc48d78649092b4bdb6f16fcad9f197879b9c031e205e66",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/pilot/iscx_vpn/seed2022/G1/training_history.json",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 14826,
+      "sha256": "b238cfa57d79044c350d3f6e58cad0705f435b74648de2c4024511fffcf31329",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/pilot/iscx_vpn/seed2022/G1/validation_confusion.csv",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 5264,
+      "sha256": "dfc96a5070b036ca5e3cc31bcd257dc76511946ec193c034ba19a59fcc7315b4",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/pilot/iscx_vpn/seed2022/G1/validation_metrics.csv",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 427,
+      "sha256": "7e24204331c11c1ee62f043c66f37c04347a6d60799033749bada56ba10a32a3",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/pilot/iscx_vpn/seed2022/G1/validation_per_class.csv",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 1899,
+      "sha256": "1b0a80669f5af1ba7fd6b644757347dcf43fadce74cbbf24b6fbfbe1d6a7bfd0",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/pilot/iscx_vpn/seed2022/G1/validation_predictions.csv",
+      "scope": "bundle",
+      "role": "predictions",
+      "size_bytes": 150187,
+      "sha256": "aa4dab4694681dcde456305cb2863cc37f10803567edf322032eb04dc032b00b",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/pilot/iscx_vpn/seed2022/G2/RESULTS.md",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 1275,
+      "sha256": "1d37074b00d6da2794c909edee319dd93c086d51102d9ae423b16c55de0fd492",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/pilot/iscx_vpn/seed2022/G2/SUCCESS",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 8,
+      "sha256": "1f513d4ecec4e91ddd48da1a59b6d96f1b76c374dc1da641980782a34f43b102",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/pilot/iscx_vpn/seed2022/G2/branch_best.pt",
+      "scope": "bundle",
+      "role": "checkpoint",
+      "size_bytes": 51269,
+      "sha256": "15a65ef614bc7997f01c38e7c27c460a8d2e6908469b97490d7340989b966c40",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/pilot/iscx_vpn/seed2022/G2/fusion_best.pt",
+      "scope": "bundle",
+      "role": "checkpoint",
+      "size_bytes": 23621,
+      "sha256": "707438db6c0b7beaa8b57d22aac687983f073603460739612aea3dc2ca8182ad",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/pilot/iscx_vpn/seed2022/G2/known_representations.npz",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 32207618,
+      "sha256": "496694ace3afd417aac0067b53a43d098ddfae24f857578c619405a98cebc138",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/pilot/iscx_vpn/seed2022/G2/manifest.json",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 4838,
+      "sha256": "3fc93d7bd9c259214f65f525e93697c26e36d8b4bf220c9bf6d027c561208046",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/pilot/iscx_vpn/seed2022/G2/result.json",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 1728,
+      "sha256": "a114f10d3416049b728b18b70b0a248bb4b468498f1831b4cf19d63a0787035d",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/pilot/iscx_vpn/seed2022/G2/train.log",
+      "scope": "bundle",
+      "role": "log",
+      "size_bytes": 2661,
+      "sha256": "652a22de88851a243a16b48f5b76729b548af20d06065083ded5fcbd7571d40e",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/pilot/iscx_vpn/seed2022/G2/training_history.json",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 14787,
+      "sha256": "6a33a39a2dd791356fdc659108ce2716c8edeb32350e3803632c93c2755cc768",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/pilot/iscx_vpn/seed2022/G2/validation_confusion.csv",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 5264,
+      "sha256": "11366b5748426a292bf6be331889669582e9a2dd552b76a47cec10c6e1a1df9d",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/pilot/iscx_vpn/seed2022/G2/validation_metrics.csv",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 426,
+      "sha256": "9786c117c1d09d4f0aaae613edefe755004e4b2f471a2a67836af81ebd12b43b",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/pilot/iscx_vpn/seed2022/G2/validation_per_class.csv",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 1909,
+      "sha256": "7726990e713eac309d0948f6dff6f041803cece4471e99fb0f96d85b1a9369cf",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/pilot/iscx_vpn/seed2022/G2/validation_predictions.csv",
+      "scope": "bundle",
+      "role": "predictions",
+      "size_bytes": 150171,
+      "sha256": "e3ceaed2d57557f1fafb270fa4c7c030c7f12ca59d9a42ae46b8baf86dd71cf7",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/pilot/iscx_vpn/seed2022/G2-shuffle/RESULTS.md",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 1292,
+      "sha256": "950c5962a7e7405cdd936f6bf25ab9330f548268120e93d2421a9986066fabea",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/pilot/iscx_vpn/seed2022/G2-shuffle/SUCCESS",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 8,
+      "sha256": "1f513d4ecec4e91ddd48da1a59b6d96f1b76c374dc1da641980782a34f43b102",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/pilot/iscx_vpn/seed2022/G2-shuffle/branch_best.pt",
+      "scope": "bundle",
+      "role": "checkpoint",
+      "size_bytes": 51269,
+      "sha256": "ad7c0b91dccaf83c6fdf4efaafc70cccbf8ce52e51e9b78b8aee8d44fd425354",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/pilot/iscx_vpn/seed2022/G2-shuffle/fusion_best.pt",
+      "scope": "bundle",
+      "role": "checkpoint",
+      "size_bytes": 23621,
+      "sha256": "f7d86491749d30c3ce1acdeabf481b3808379270926f733fe21213c2d70aa418",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/pilot/iscx_vpn/seed2022/G2-shuffle/known_representations.npz",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 32359216,
+      "sha256": "4a90e503c6df2ee481723f955861c1a6511c2e6240fde18803ae26e1de976820",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/pilot/iscx_vpn/seed2022/G2-shuffle/manifest.json",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 4862,
+      "sha256": "1b120525863d00204401e6e981612f46254790367b614c150a190d36f12ec927",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/pilot/iscx_vpn/seed2022/G2-shuffle/result.json",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 1747,
+      "sha256": "0144fe0e89a2627eaad3373917fa00f26ed45fd83314c857ff8dea4783ed45c1",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/pilot/iscx_vpn/seed2022/G2-shuffle/train.log",
+      "scope": "bundle",
+      "role": "log",
+      "size_bytes": 2709,
+      "sha256": "7c077f2ef8bc0a82229162f1b908383c79601ca4233adb9191239e056c2d2761",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/pilot/iscx_vpn/seed2022/G2-shuffle/training_history.json",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 14793,
+      "sha256": "f3d67d438ed3b5e2396af923185b61ea0762bfa640dcf55ff0c3ed8da60b634c",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/pilot/iscx_vpn/seed2022/G2-shuffle/validation_confusion.csv",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 5554,
+      "sha256": "9879fdaa7359cc39701652bad4a94e13fe61fe32560eb6a65199254793f11441",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/pilot/iscx_vpn/seed2022/G2-shuffle/validation_metrics.csv",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 434,
+      "sha256": "7611443004b738608447901776a31161f9b2d2690c8a3d2531640c85709fb967",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/pilot/iscx_vpn/seed2022/G2-shuffle/validation_per_class.csv",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 1927,
+      "sha256": "384d9f0c5600f7a89a2148885d77e7de84bbe89186a96cc7f0e953c1d13c79c1",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/pilot/iscx_vpn/seed2022/G2-shuffle/validation_predictions.csv",
+      "scope": "bundle",
+      "role": "predictions",
+      "size_bytes": 150303,
+      "sha256": "4972c38bfd2884bef779314d110b887ed00a5e9f3eee56eee930e20b7a55295d",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/pilot/iscx_vpn/seed2022/S1/RESULTS.md",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 1558,
+      "sha256": "122b7cabc34433cc1c387525158623ee6120b83e09e070590e440de09ef31eb2",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/pilot/iscx_vpn/seed2022/S1/SUCCESS",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 8,
+      "sha256": "1f513d4ecec4e91ddd48da1a59b6d96f1b76c374dc1da641980782a34f43b102",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/pilot/iscx_vpn/seed2022/S1/branch_best.pt",
+      "scope": "bundle",
+      "role": "checkpoint",
+      "size_bytes": 16325,
+      "sha256": "e3cbaf5810f4df48a23467281b53842d48378beed194cb87e66d49d6f083a4a7",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/pilot/iscx_vpn/seed2022/S1/fusion_best.pt",
+      "scope": "bundle",
+      "role": "checkpoint",
+      "size_bytes": 23621,
+      "sha256": "d71cbb461d296007b03d6ad0c922ccd0c89c799fd0cc4b603bd4354e75461e68",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/pilot/iscx_vpn/seed2022/S1/known_representations.npz",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 32884525,
+      "sha256": "d2f4a958a86a905edae29fd691c5ecbe773f1ac1283f8e96a881b0d0863eb1f8",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/pilot/iscx_vpn/seed2022/S1/manifest.json",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 4644,
+      "sha256": "96d661290f64cd6550b91294e74c92a3511992df55b289a09b7c3aa0f89965f4",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/pilot/iscx_vpn/seed2022/S1/result.json",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 1730,
+      "sha256": "90583aa2d57dd125ee2101d4d0808a554b69a4c87f72aabe89d8b2740186dca1",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/pilot/iscx_vpn/seed2022/S1/training_history.json",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 14818,
+      "sha256": "555d2d33b0c96380d9ac92d6306e3f8a5783f3b7b22699f773ff76f81e1260e5",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/pilot/iscx_vpn/seed2022/S1/validation_confusion.csv",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 5262,
+      "sha256": "4951303f2e846791e7264cb9b144d9d3e78f3c965c8f938f79eee53f15b47454",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/pilot/iscx_vpn/seed2022/S1/validation_metrics.csv",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 426,
+      "sha256": "7396b331415f3d0a0fe033abb3a419b57e83bf327f5b49993961a3eab5348b55",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/pilot/iscx_vpn/seed2022/S1/validation_per_class.csv",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 1911,
+      "sha256": "1651bb288b4925cc1389e9f8f39ea0f719db3f0e153ad46b928e2c259274c3bc",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/pilot/iscx_vpn/seed2022/S1/validation_predictions.csv",
+      "scope": "bundle",
+      "role": "predictions",
+      "size_bytes": 150390,
+      "sha256": "0fa686c81efaaca4496c37dde5d51336cde0b0592004945ddde9e3de422b6f61",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/pilot/iscx_vpn/seed2023/G1/RESULTS.md",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 1274,
+      "sha256": "c28e928d33c2dd266d7d6580b16861491fd24b3d5c61b57dcd06c48714cc03e7",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/pilot/iscx_vpn/seed2023/G1/SUCCESS",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 8,
+      "sha256": "1f513d4ecec4e91ddd48da1a59b6d96f1b76c374dc1da641980782a34f43b102",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/pilot/iscx_vpn/seed2023/G1/branch_best.pt",
+      "scope": "bundle",
+      "role": "checkpoint",
+      "size_bytes": 20997,
+      "sha256": "242f2ef0e80e425be2de42ee6dc4eb24c01fa97ee43b1ba799132fe3f9218636",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/pilot/iscx_vpn/seed2023/G1/fusion_best.pt",
+      "scope": "bundle",
+      "role": "checkpoint",
+      "size_bytes": 23621,
+      "sha256": "0fcf92a26846d37f555c5ef6d808d2b8743ee34e3ce5163dad10c13a488499e0",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/pilot/iscx_vpn/seed2023/G1/known_representations.npz",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 33878156,
+      "sha256": "c1c84a710030324c075b1107751b7ec5c7acceb14edf3ec54b3ea414f215d7aa",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/pilot/iscx_vpn/seed2023/G1/manifest.json",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 4840,
+      "sha256": "bd151cf4b59077a60a571bec48add224115c2eb6ccb2d3a369a871082267154a",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/pilot/iscx_vpn/seed2023/G1/result.json",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 1731,
+      "sha256": "266e4736d6c90506534bbb8eaad3ed2aad56a13033031b2163b2f809d021f074",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/pilot/iscx_vpn/seed2023/G1/train.log",
+      "scope": "bundle",
+      "role": "log",
+      "size_bytes": 2673,
+      "sha256": "2e6ea721f6f84247c4050c51664797661d584218a1a01a106a8c74f87c677b1a",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/pilot/iscx_vpn/seed2023/G1/training_history.json",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 14763,
+      "sha256": "c4ab3b47a54d73a6672c4e24b3d4ab5bea3a7c7a0b4f243d6f455d429d05ae6f",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/pilot/iscx_vpn/seed2023/G1/validation_confusion.csv",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 5267,
+      "sha256": "c57274c8edc1a56815b8aefdf32c25619450772b0bf09c7203a5e25600f8759f",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/pilot/iscx_vpn/seed2023/G1/validation_metrics.csv",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 428,
+      "sha256": "5f6c3222291a177007b3a3a9306ce2d80bda1e3f6e482ddc87e91fa1ede486bd",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/pilot/iscx_vpn/seed2023/G1/validation_per_class.csv",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 1916,
+      "sha256": "cfc6bf77161a57f070c0ba82ef357888f04d7b70af2d824719cac6571776aced",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/pilot/iscx_vpn/seed2023/G1/validation_predictions.csv",
+      "scope": "bundle",
+      "role": "predictions",
+      "size_bytes": 150147,
+      "sha256": "c651d63bee9a8fc87dde10e7946c6647a28e38b6b265e7c8c8a72c24d2532271",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/pilot/iscx_vpn/seed2023/G2/RESULTS.md",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 1275,
+      "sha256": "179e2524bfc242acec31e86feb1a16291782c5595d31ad0b7dbad49613bc8097",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/pilot/iscx_vpn/seed2023/G2/SUCCESS",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 8,
+      "sha256": "1f513d4ecec4e91ddd48da1a59b6d96f1b76c374dc1da641980782a34f43b102",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/pilot/iscx_vpn/seed2023/G2/branch_best.pt",
+      "scope": "bundle",
+      "role": "checkpoint",
+      "size_bytes": 51269,
+      "sha256": "c6367f0883bca2224e68d3123b6d4b8468522f58255f17c02ef130226c2702df",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/pilot/iscx_vpn/seed2023/G2/fusion_best.pt",
+      "scope": "bundle",
+      "role": "checkpoint",
+      "size_bytes": 23621,
+      "sha256": "e89a67bbf34b364e19553fe35980ff5a8ccf429604a9a6357760a7e74a4bc180",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/pilot/iscx_vpn/seed2023/G2/known_representations.npz",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 32026326,
+      "sha256": "070e6c9f21e5fe783c56e2c46fc43f38ced51d7ec28b88fd4cfc3253ddf97aee",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/pilot/iscx_vpn/seed2023/G2/manifest.json",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 4839,
+      "sha256": "250370635e295b19696a83ebdbfd06fe6b4b765457eece45560219ccf5709056",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/pilot/iscx_vpn/seed2023/G2/result.json",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 1729,
+      "sha256": "04f7463ba8e84a5fb004d90ce52ac35794fb6c3d862403ec337bde9b59a53572",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/pilot/iscx_vpn/seed2023/G2/train.log",
+      "scope": "bundle",
+      "role": "log",
+      "size_bytes": 2668,
+      "sha256": "bb77666028626a9b9643b34318cd6236aba1a2d76807dca45ad5ae42335e3838",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/pilot/iscx_vpn/seed2023/G2/training_history.json",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 14713,
+      "sha256": "58e915d7251299a58498e3c228332d7c824e803a2a73945a87c9b8a7c206f2aa",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/pilot/iscx_vpn/seed2023/G2/validation_confusion.csv",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 5263,
+      "sha256": "0ca971571c673af339dde70246378b7eb2efd57ea3306b11fdb44307b142b362",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/pilot/iscx_vpn/seed2023/G2/validation_metrics.csv",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 427,
+      "sha256": "6bc2b47e7bce7969141e5942e093f2ae2098a00d3e73bf25655c77563b620eed",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/pilot/iscx_vpn/seed2023/G2/validation_per_class.csv",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 1903,
+      "sha256": "ff461685420a166de1192744f62e2bb8b8d972c5d4d51cf89c215967ee611b19",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/pilot/iscx_vpn/seed2023/G2/validation_predictions.csv",
+      "scope": "bundle",
+      "role": "predictions",
+      "size_bytes": 150178,
+      "sha256": "fccd7c111c4751263609dabccd3ff4bb7bf1f84e29101de16a6ea88a41f16b38",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/pilot/iscx_vpn/seed2023/G2-shuffle/RESULTS.md",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 1291,
+      "sha256": "8e1e3ae5bd54b73989c4823106aaaa5df62f3219c542ba67f3cdfcfa110767e6",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/pilot/iscx_vpn/seed2023/G2-shuffle/SUCCESS",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 8,
+      "sha256": "1f513d4ecec4e91ddd48da1a59b6d96f1b76c374dc1da641980782a34f43b102",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/pilot/iscx_vpn/seed2023/G2-shuffle/branch_best.pt",
+      "scope": "bundle",
+      "role": "checkpoint",
+      "size_bytes": 51269,
+      "sha256": "dcb57c5c306a5a584aa28574e30e91c57486f2e324efb2fcedcd26bcc7c4ba78",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/pilot/iscx_vpn/seed2023/G2-shuffle/fusion_best.pt",
+      "scope": "bundle",
+      "role": "checkpoint",
+      "size_bytes": 23621,
+      "sha256": "fe9c31ead9558d398a999db31b32bfa956b37521ba6f9b40a2c28fdd32cd3df9",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/pilot/iscx_vpn/seed2023/G2-shuffle/known_representations.npz",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 31920904,
+      "sha256": "b0ec2bfc872234fb0f6d6f128025172a0dcd4b0a7fc2ec837c7ea7e34e92216c",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/pilot/iscx_vpn/seed2023/G2-shuffle/manifest.json",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 4863,
+      "sha256": "cf98ca4fc8d680c1ba0a4012eb8f66c6eef8316e40a50f096c4da4e1829ec60e",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/pilot/iscx_vpn/seed2023/G2-shuffle/result.json",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 1747,
+      "sha256": "127f9581c79ccae6b47c9857d8def3517c771c898643dc55f0518557f9be1a00",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/pilot/iscx_vpn/seed2023/G2-shuffle/train.log",
+      "scope": "bundle",
+      "role": "log",
+      "size_bytes": 2729,
+      "sha256": "6c3488e9a4f8ac20de15c8aedef97e2511025efb3c00b2b122e0387c9d340d04",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/pilot/iscx_vpn/seed2023/G2-shuffle/training_history.json",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 14715,
+      "sha256": "cd68a4b2a9494d78d25e957f4bd5a607695c7c6f902c39208c8d8ba8521249bf",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/pilot/iscx_vpn/seed2023/G2-shuffle/validation_confusion.csv",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 5552,
+      "sha256": "b08c5dc446167af79983e856b175d07f0afc3811194342be2b51e21b936f4089",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/pilot/iscx_vpn/seed2023/G2-shuffle/validation_metrics.csv",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 435,
+      "sha256": "d6a66508cbcb1346950fd2aa293fb164f0c7ff8027d12cd69c90d51f411a0a47",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/pilot/iscx_vpn/seed2023/G2-shuffle/validation_per_class.csv",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 1967,
+      "sha256": "cf37fe8d3616c2095305ff6caec68495f4a88650d4863a23f9be1e6c4b3c7e76",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/pilot/iscx_vpn/seed2023/G2-shuffle/validation_predictions.csv",
+      "scope": "bundle",
+      "role": "predictions",
+      "size_bytes": 150398,
+      "sha256": "16535141b9e9e9426d42d049cff0a9bf2d62aa403579a29969ffee37e9d81efc",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/pilot/iscx_vpn/seed2023/S1/RESULTS.md",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 1274,
+      "sha256": "e014ad01b2bf3aafbea1c3f1f77713ef78be389c2791ab09fa59bb85cb2106ed",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/pilot/iscx_vpn/seed2023/S1/SUCCESS",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 8,
+      "sha256": "1f513d4ecec4e91ddd48da1a59b6d96f1b76c374dc1da641980782a34f43b102",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/pilot/iscx_vpn/seed2023/S1/branch_best.pt",
+      "scope": "bundle",
+      "role": "checkpoint",
+      "size_bytes": 16325,
+      "sha256": "ba79fd42fc7e152684122a1172fc5d475342202556498b0c05234d212d55b9a2",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/pilot/iscx_vpn/seed2023/S1/fusion_best.pt",
+      "scope": "bundle",
+      "role": "checkpoint",
+      "size_bytes": 23621,
+      "sha256": "4d5af969e64a88aa0d4cdf15f50f6211760f160494ab125171fd3532cd5e937c",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/pilot/iscx_vpn/seed2023/S1/known_representations.npz",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 32642892,
+      "sha256": "5cdb4cc00ec5940189a0e6362c013fb6fb7b205f7ba0352748bab7001647cd2a",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/pilot/iscx_vpn/seed2023/S1/manifest.json",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 4840,
+      "sha256": "621d2d2e6b59fb3762bb67a631008c0a6337b15084f040717c89d42575631b0a",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/pilot/iscx_vpn/seed2023/S1/result.json",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 1731,
+      "sha256": "a90abaa53b81cf2a7762128708d88bd81c0db08bcd26e25151c320feae2f83cf",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/pilot/iscx_vpn/seed2023/S1/train.log",
+      "scope": "bundle",
+      "role": "log",
+      "size_bytes": 2672,
+      "sha256": "089af7c8191971a11eb7cdbd4a742947f16c618659e4692812da74582b69a6d9",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/pilot/iscx_vpn/seed2023/S1/training_history.json",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 14740,
+      "sha256": "7b5b3db19eac75f443b7ba331c96193ffaa138b59dd1dd5ca72609356f4495c8",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/pilot/iscx_vpn/seed2023/S1/validation_confusion.csv",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 5267,
+      "sha256": "267877e66b9f2a21d19f9c9b4e67da0bc1b6de6f08bf4942462a77d30b476524",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/pilot/iscx_vpn/seed2023/S1/validation_metrics.csv",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 428,
+      "sha256": "f5820de65f8d7036edb149e0530eb04719298c4302ca10478476b63e243d6958",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/pilot/iscx_vpn/seed2023/S1/validation_per_class.csv",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 1921,
+      "sha256": "322f95c600b1d83f5ef04645cda1466c70bf9b2678f333c07d4dd1452217f436",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/pilot/iscx_vpn/seed2023/S1/validation_predictions.csv",
+      "scope": "bundle",
+      "role": "predictions",
+      "size_bytes": 150649,
+      "sha256": "17c911f91421affb4fd2b3e6876c8c845dda049dcc02c61625953b7bb773c68d",
+      "hash_status": "verified"
+    },
+    {
+      "path": "scripts/__pycache__/preflight.cpython-310.pyc",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 9525,
+      "sha256": "40dd76dd38aa62f8a845f272775087a5cff3baba0d0979d34ab8619c913fe090",
+      "hash_status": "verified"
+    },
+    {
+      "path": "scripts/__pycache__/structural_models.cpython-310.pyc",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 6603,
+      "sha256": "346b56210a366419086356d61b6dca5a356a067384b8ed5d9cc7f8b94a185d5d",
+      "hash_status": "verified"
+    },
+    {
+      "path": "scripts/__pycache__/train_pilot.cpython-310.pyc",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 18176,
+      "sha256": "542e1bc9200b3d03e3532846730eaa546aede627ade9db022cee4d34688e8cf2",
+      "hash_status": "verified"
+    },
+    {
+      "path": "scripts/aggregate_pilot.py",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 15720,
+      "sha256": "14a5d9653e8d2b8710a5a61120133939034c229ddcf8b18ac237bef6fb39278b",
+      "hash_status": "verified"
+    },
+    {
+      "path": "scripts/preflight.py",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 10867,
+      "sha256": "5070ceca095b78b421d1bdde5fcb3b842052cd34eb893186c8ee7cb575a425d5",
+      "hash_status": "verified"
+    },
+    {
+      "path": "scripts/run_pilot_queue.py",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 7919,
+      "sha256": "5895bd90c0e8909d51b736e9815a33be1d70a87d9150cc9a3eff5f70f6ccabe2",
+      "hash_status": "verified"
+    },
+    {
+      "path": "scripts/structural_models.py",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 6684,
+      "sha256": "eb2355d650176af99d3df6683ac5736403c0ddd1f1d1cf0e4471a100a8d25ad6",
+      "hash_status": "verified"
+    },
+    {
+      "path": "scripts/train_pilot.py",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 20184,
+      "sha256": "78fb5c8dfaf4db2062434776014abbb704e96d9e162b368c93e514c72e07bf1d",
+      "hash_status": "verified"
+    },
+    {
+      "path": "stage24_report.md",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 4106,
+      "sha256": "82e149d87c772be295342a3db3ca06cd245130f95f38c620c67064657ec72d9a",
+      "hash_status": "verified"
+    }
+  ],
+  "limitations": [
+    "Two-seed Known Validation development pilot only",
+    "Stage 20 Test previously exposed",
+    "Official TrafficFormer pretraining Unknown exposure unresolved",
+    "Pilot continuation rule amended after first negative S1 result"
+  ],
+  "next_step": "Stop at Stage 24 gates; no five-seed confirmation or cross-flow model under current frozen protocol"
+}

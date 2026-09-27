@@ -1,0 +1,8 @@
+{
+  "frozen_hashes_unchanged": true,
+  "methods": 4,
+  "metric_replay": "PASS",
+  "saved_sample_scores": 7745,
+  "status": "PASS",
+  "threshold_source": "Known Validation only"
+}

@@ -1,0 +1,13 @@
+{
+  "label_map": {
+    "Chat": "Communication",
+    "Email": "Communication",
+    "VoIP": "Communication"
+  },
+  "matched_prediction_cells": 56,
+  "metric_rows": 224,
+  "protected_assets": 48,
+  "status": "PASS",
+  "test_metric_replays": 28,
+  "unknown_usage": 0
+}

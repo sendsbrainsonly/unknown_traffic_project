@@ -1,0 +1,17 @@
+{
+  "status": "PASS",
+  "flow_ids": 39428,
+  "tf_fig_arrays_bitwise_equal": [
+    "token_ids",
+    "segments",
+    "fig_x",
+    "fig_adj",
+    "fig_mask"
+  ],
+  "yatc_arrays_bitwise_equal": [
+    "known_train_mfr",
+    "known_validation_mfr"
+  ],
+  "balanced_manifest_sha256": "35e99d89ad4eddc828c9d67529ea1b527d1fd511cb39db8c509461b5bf38e25d",
+  "unknown_or_test_features_read": 0
+}

@@ -1,0 +1,32 @@
+{
+  "findings": {
+    "iscx_tor": {
+      "all_service_3way_group_split_feasible": true,
+      "claim_scope": "Known Train/Validation metadata and packet refs only; Test features not read",
+      "endpoint_or_session_id_in_frozen_provenance": false,
+      "group_disjoint_blocked_services": [],
+      "known_train_validation_flows": 10064,
+      "non_monotone_provenance_packet_timestamp_flows": 5,
+      "one_or_two_packet_flows": 5887,
+      "one_or_two_ratio": 0.5849562798092209
+    },
+    "iscx_vpn": {
+      "all_service_3way_group_split_feasible": false,
+      "claim_scope": "Known Train/Validation metadata and packet refs only; Test features not read",
+      "endpoint_or_session_id_in_frozen_provenance": false,
+      "group_disjoint_blocked_services": [
+        "P2P"
+      ],
+      "known_train_validation_flows": 9862,
+      "non_monotone_provenance_packet_timestamp_flows": 0,
+      "one_or_two_packet_flows": 7805,
+      "one_or_two_ratio": 0.7914216183329953
+    }
+  },
+  "interflow_stage20_gate": "INTERFLOW_NOT_FEASIBLE_FOR_FULL_CLASS_CAPTURE_DISJOINT_CLAIM",
+  "known_test_feature_usage": 0,
+  "protected_asset_count": 19,
+  "reason": "at least one Service lacks three independent capture groups; frozen provenance has no endpoint/session identifier",
+  "status": "PASS",
+  "unknown_usage": 0
+}

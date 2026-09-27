@@ -1,0 +1,152 @@
+{
+  "schema_version": 1,
+  "experiment_id": "stage40-opendetect-metric-supplement-20260927",
+  "created_at_utc": "2026-09-27T02:41:41Z",
+  "updated_at_utc": "2026-09-27T02:45:49Z",
+  "status": "success",
+  "experiment_type": "metric-audit",
+  "claim_scope": "diagnostic",
+  "objective": "Recompute Open-Detect paper and released-code metrics from frozen Stage40 USTC sample scores under validation P95 and separate retrospective Test-oracle thresholds",
+  "inputs": [
+    {
+      "path": "../stage40_ustc_cic_open_set/ustc_a2/detection/sample_scores.csv",
+      "role": "frozen_sample_scores",
+      "sha256": "1210e33b9b216e302afbe9c94ca5f9818e7176c44c8a0e6160cb9468cbf15eb1"
+    },
+    {
+      "path": "../stage40_ustc_cic_open_set/ustc_a2/detection/open_set_results.csv",
+      "role": "frozen_reference_metrics",
+      "sha256": "299e5d45eb9dd3d529744588104943d06f3e656a7e5a5388f80f0cd08a81b7a7"
+    },
+    {
+      "path": "../stage40_ustc_cic_open_set/ustc_a2/detection/calibration.json",
+      "role": "frozen_known_validation_thresholds",
+      "sha256": "ca31475f8de1b0976497e2c53944a45c76ab8a8cc484b5700291697803ff3b55"
+    }
+  ],
+  "code": {
+    "revision": null,
+    "dirty": null,
+    "changes": [
+      "Added isolated metric-replay script and report; original Stage40 files untouched"
+    ]
+  },
+  "execution": {
+    "tmux_session": "stage40_metric_compute_0927",
+    "command": "python stage40_opendetect_metric_supplement/recompute_metrics.py",
+    "exit_code": 0,
+    "environment": "/home/birkenwald/data/SEU-WXY/conda_envs/2025-10-8-WXY-dgl_py310",
+    "physical_gpu_ids": []
+  },
+  "configuration": {
+    "files": [
+      "../stage40_ustc_cic_open_set/ustc_a2/detection/calibration.json"
+    ],
+    "parameters": {
+      "formal_threshold": "Known Validation P95, score > threshold",
+      "retrospective_threshold": "labeled Test argmax(TPR-FPR), score >= threshold",
+      "positive_class": "Unknown",
+      "methods": [
+        "msp",
+        "energy",
+        "centroid",
+        "des_v1"
+      ]
+    },
+    "seeds": []
+  },
+  "core_results": [
+    {
+      "dataset": "USTC-TFC2016",
+      "protocol": "A-2",
+      "method": "des_v1",
+      "threshold_policy": "known_validation_p95",
+      "binary_accuracy": 0.8987937027192803,
+      "unknown_f1": 0.5487693710118505,
+      "auroc": 0.9457265943534119,
+      "ufar": 0.460573476702509
+    },
+    {
+      "dataset": "USTC-TFC2016",
+      "protocol": "A-2",
+      "method": "des_v1",
+      "threshold_policy": "released_code_test_oracle_youden_NON_INDEPENDENT",
+      "binary_accuracy": 0.8311183806992435,
+      "unknown_f1": 0.5643459915611815,
+      "ufar": 0.04121863799283154
+    },
+    {
+      "dataset": "USTC-TFC2016",
+      "protocol": "A-2",
+      "known_closed_accuracy": 0.9843064851142396,
+      "known_closed_weighted_f1": 0.9843146811262712
+    }
+  ],
+  "artifacts": [
+    {
+      "path": "../.artifacts/pdf/open_detect_metrics_20260927.txt",
+      "scope": "external",
+      "role": "paper_text_extraction",
+      "hash_status": "not_hashed"
+    },
+    {
+      "path": "../.artifacts/pdf/open_detect_page_11.png",
+      "scope": "external",
+      "role": "paper_table_visual_check",
+      "hash_status": "not_hashed"
+    },
+    {
+      "path": "../.artifacts/pdf/open_detect_page_12.png",
+      "scope": "external",
+      "role": "paper_table_visual_check",
+      "hash_status": "not_hashed"
+    },
+    {
+      "path": "METRIC_DEFINITIONS.md",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 2116,
+      "sha256": "74ae5694f5da4b914745607119398cae4cd151e853c021f9e82248b6f22e4d07",
+      "hash_status": "verified"
+    },
+    {
+      "path": "closed_set_metrics.json",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 289,
+      "sha256": "c3ad331b431747e397f435dc501b59b0face676775f189e2245476b0790cc495",
+      "hash_status": "verified"
+    },
+    {
+      "path": "completion_verification.json",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 1277,
+      "sha256": "57816657986aaf6912e28f11e6b979d6551e186da3f850a3b09766128ce642bf",
+      "hash_status": "verified"
+    },
+    {
+      "path": "open_detect_metric_supplement.csv",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 2424,
+      "sha256": "ca89970910769b75e6e150d1ca09bf1962b937972188b7ee40a3b226f54badbc",
+      "hash_status": "verified"
+    },
+    {
+      "path": "recompute_metrics.py",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 7516,
+      "sha256": "f9c4d93646aaa61789fda39f2b503a9924722d3c7c1bd7d7ddfcf30e1e378454",
+      "hash_status": "verified"
+    }
+  ],
+  "limitations": [
+    "Single USTC run; no five-fold error bars",
+    "CIC open-set sample scores do not yet exist",
+    "Paper F1 averaging is under-specified; released-code convention used",
+    "Test-oracle threshold rows are retrospective and non-independent"
+  ],
+  "next_step": "If original CIC Stage40 runs finish, apply the same metric replay without changing their frozen scores or thresholds"
+}

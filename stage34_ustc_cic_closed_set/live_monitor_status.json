@@ -1,0 +1,136 @@
+{
+  "updated_at_utc": "2026-09-25T15:17:59.938018+00:00",
+  "elapsed_seconds": 9801,
+  "sessions": [
+    {
+      "session": "stage34_ustc_tf",
+      "state": "finished",
+      "exit_code": "0",
+      "latest_epoch": 20,
+      "latest_day": null,
+      "log_bytes": 5314
+    },
+    {
+      "session": "stage34_ustc_graph",
+      "state": "finished",
+      "exit_code": "0",
+      "latest_epoch": 50,
+      "latest_day": null,
+      "log_bytes": 1629
+    },
+    {
+      "session": "stage34_ustc_yatc",
+      "state": "finished",
+      "exit_code": "0",
+      "latest_epoch": 200,
+      "latest_day": null,
+      "log_bytes": 709224
+    },
+    {
+      "session": "stage34_cic_inputs_trainval",
+      "state": "finished",
+      "exit_code": "0",
+      "latest_epoch": null,
+      "latest_day": "Friday",
+      "log_bytes": 1304
+    },
+    {
+      "session": "stage34_ustc_fusion",
+      "state": "finished",
+      "exit_code": "0",
+      "latest_epoch": 30,
+      "latest_day": null,
+      "log_bytes": 5637
+    },
+    {
+      "session": "stage34_ustc_test_inputs",
+      "state": "finished",
+      "exit_code": "0",
+      "latest_epoch": null,
+      "latest_day": null,
+      "log_bytes": 3528
+    },
+    {
+      "session": "stage34_ustc_test_eval",
+      "state": "finished",
+      "exit_code": "0",
+      "latest_epoch": null,
+      "latest_day": null,
+      "log_bytes": 2294
+    },
+    {
+      "session": "stage34_cic_trafficformer",
+      "state": "running",
+      "exit_code": null,
+      "latest_epoch": null,
+      "latest_day": null,
+      "log_bytes": 1156
+    },
+    {
+      "session": "stage34_cic_graph",
+      "state": "running",
+      "exit_code": null,
+      "latest_epoch": 50,
+      "latest_day": null,
+      "log_bytes": 1652
+    },
+    {
+      "session": "stage34_cic_yatc",
+      "state": "failed",
+      "exit_code": "143",
+      "latest_epoch": 2,
+      "latest_day": null,
+      "log_bytes": 39084
+    },
+    {
+      "session": "stage34_cic_fusion",
+      "state": "not_started",
+      "exit_code": null,
+      "latest_epoch": null,
+      "latest_day": null,
+      "log_bytes": 0
+    },
+    {
+      "session": "stage34_cic_test_inputs",
+      "state": "not_started",
+      "exit_code": null,
+      "latest_epoch": null,
+      "latest_day": null,
+      "log_bytes": 0
+    },
+    {
+      "session": "stage34_cic_test_eval",
+      "state": "not_started",
+      "exit_code": null,
+      "latest_epoch": null,
+      "latest_day": null,
+      "log_bytes": 0
+    },
+    {
+      "session": "stage34_bounded_queue",
+      "state": "failed",
+      "exit_code": "143",
+      "latest_epoch": null,
+      "latest_day": null,
+      "log_bytes": 7066
+    },
+    {
+      "session": "stage34_finalizer",
+      "state": "failed",
+      "exit_code": "143",
+      "latest_epoch": null,
+      "latest_day": null,
+      "log_bytes": 147
+    }
+  ],
+  "gpu": [
+    "0, 33042, 100",
+    "1, 2837, 8",
+    "2, 3, 0",
+    "3, 19893, 0",
+    "4, 21651, 98",
+    "5, 39420, 20",
+    "6, 38709, 25",
+    "7, 33579, 0"
+  ]
+}

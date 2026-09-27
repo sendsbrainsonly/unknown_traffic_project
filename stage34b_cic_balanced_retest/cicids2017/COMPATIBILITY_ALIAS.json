@@ -1,0 +1,10 @@
+{
+  "actual_dataset": "CIC-IDS-2017",
+  "actual_protocol": "Stage34 original five-minute group split, Stage34B 1:1 benign/malicious subset",
+  "actual_sample_manifest": "/home/birkenwald/data/SEU-WXY/WXY-SEU/TrafficClassifier/Projects/unknown_traffic_project/stage34b_cic_balanced_retest/balanced_manifest.csv",
+  "actual_sample_sha256": "35e99d89ad4eddc828c9d67529ea1b527d1fd511cb39db8c509461b5bf38e25d",
+  "internal_Stage31_runner_key": "ustc/A-2",
+  "meaning": "CLI/path compatibility only",
+  "reused_recipe": "Stage31 TrafficFormer20e, TAGCN50e, YaTC200e, T0 adapter30e/head30e",
+  "unknown_samples_used": 0
+}

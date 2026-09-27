@@ -1,0 +1,6 @@
+{
+  "status": "FAILED",
+  "error": "CalledProcessError(1, ['/home/birkenwald/data/SEU-WXY/conda_envs/2025-10-8-WXY-dgl_py310/bin/python', '/home/birkenwald/data/SEU-WXY/WXY-SEU/TrafficClassifier/Projects/unknown_traffic_project/stage39_coarse_open_set_execution/build_fold_cache.py', '--dataset', 'VNAT', '--fold', 'communication'])",
+  "traceback": "Traceback (most recent call last):\n  File \"/home/birkenwald/data/SEU-WXY/WXY-SEU/TrafficClassifier/Projects/unknown_traffic_project/stage39_coarse_open_set_execution/run_training_queue.py\", line 100, in main\n    subprocess.run([PYTHON, str(ROOT / \"build_fold_cache.py\"), \"--dataset\", dataset,\n  File \"/home/birkenwald/data/SEU-WXY/conda_envs/2025-10-8-WXY-dgl_py310/lib/python3.10/subprocess.py\", line 526, in run\n    raise CalledProcessError(retcode, process.args,\nsubprocess.CalledProcessError: Command '['/home/birkenwald/data/SEU-WXY/conda_envs/2025-10-8-WXY-dgl_py310/bin/python', '/home/birkenwald/data/SEU-WXY/WXY-SEU/TrafficClassifier/Projects/unknown_traffic_project/stage39_coarse_open_set_execution/build_fold_cache.py', '--dataset', 'VNAT', '--fold', 'communication']' returned non-zero exit status 1.\n",
+  "updated_at_utc": "2026-09-26T14:47:03.009136+00:00"
+}

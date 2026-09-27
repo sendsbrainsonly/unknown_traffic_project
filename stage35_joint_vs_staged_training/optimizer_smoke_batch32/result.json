@@ -1,0 +1,15 @@
+{
+  "gradient_norms": {
+    "fusion": 76889.453125,
+    "graph": 161.62998962402344,
+    "trafficformer": 3872.55908203125,
+    "yatc": 1379.8935546875
+  },
+  "loss": 2.8723671436309814,
+  "microbatch": 32,
+  "optimizer_groups_stepped": 4,
+  "peak_gpu_memory_bytes": 16720373760,
+  "status": "PASS",
+  "test_feature_values_loaded": 0,
+  "unknown_samples_used": 0
+}

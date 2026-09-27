@@ -1,0 +1,13 @@
+{
+  "status": "INTERRUPTED_BY_USER",
+  "at_utc": "2026-09-26T03:27:03Z",
+  "reason": "User requested stopping old imbalanced CIC experiment and immediately running balanced retest",
+  "closed_sessions": ["stage34_two_gpu_resume", "stage34_two_gpu_finalizer", "stage34_cic_trafficformer"],
+  "last_trafficformer_epoch": 18,
+  "last_trafficformer_validation_macro_f1": 0.31504646509975504,
+  "cic_fusion_or_test_completed": false,
+  "ustc_known_test_completed": true,
+  "close_exit_status_files_created": false,
+  "stop_verification_log": "../.tmux-task/cic_balance_stop_verify_0926/output.log",
+  "replacement_bundle": "../stage34b_cic_balanced_retest/"
+}

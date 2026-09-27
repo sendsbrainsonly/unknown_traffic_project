@@ -1,0 +1,9 @@
+{
+  "stage36_known_validation_logits_max_abs_diff": 0.0,
+  "stage36_packet_comparisons": 66,
+  "stage36_unchanged": true,
+  "stage38_protocol": "Stage14B medium_seed2025",
+  "status": "PASS",
+  "test_values_read": 0,
+  "unknown_values_read": 0
+}

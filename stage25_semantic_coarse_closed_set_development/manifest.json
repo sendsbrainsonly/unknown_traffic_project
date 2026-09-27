@@ -1,0 +1,361 @@
+{
+  "schema_version": 1,
+  "experiment_id": "stage25-semantic-coarse-closed-set-20260924-v1",
+  "created_at_utc": "2026-09-24T15:24:00Z",
+  "updated_at_utc": "2026-09-24T15:38:55Z",
+  "status": "success",
+  "experiment_type": "benchmark",
+  "claim_scope": "diagnostic",
+  "objective": "Evaluate semantically coarser labels on matched frozen Stage20 flows while preserving original fine-class model capability; separately audit >=2-packet subset and frozen-encoder coarse heads",
+  "inputs": [
+    "Stage20 frozen closed_service_manifest.csv",
+    "Stage21 frozen first-eight-packet caches",
+    "Stage22 E1/E3 frozen representations and predictions",
+    "Stage23/23B matched-flow predictions and historical result table"
+  ],
+  "code": {
+    "revision": null,
+    "dirty": true,
+    "changes": [
+      "New independent Stage25 scripts and evidence bundle only; Stage20-24 source assets read-only"
+    ]
+  },
+  "execution": {
+    "tmux_session": "codex_stage25_phase_a_retry1_20260924; codex_stage25_phase_b_20260924; codex_stage25_finalize_20260924; codex_stage25_independent_verify_20260924",
+    "command": "python stage25_semantic_coarse_closed_set_development/run_stage25.py a|b|finalize; python stage25_semantic_coarse_closed_set_development/verify_stage25.py",
+    "exit_code": 0,
+    "environment": "/home/birkenwald/data/SEU-WXY/conda_envs/2025-10-8-WXY-dgl_py310",
+    "physical_gpu_ids": []
+  },
+  "configuration": {
+    "files": [
+      "EXPERIMENT_PLAN.md"
+    ],
+    "parameters": {
+      "coarse_map": "Chat+Email+VoIP->Communication; others unchanged",
+      "primary_scope": "all Stage20 flows",
+      "secondary_scope": "packet_count>=2",
+      "coarse_head": "StandardScaler Known Train + LogisticRegression(C=1,lbfgs,max_iter=200,random_state=0)",
+      "unknown_usage": 0,
+      "test_fit_selection_usage": 0
+    },
+    "seeds": [
+      2022,
+      2023
+    ]
+  },
+  "core_results": [
+    "VPN E3 fine/coarse-remap/coarse-head Macro-F1=0.859493/0.896004/0.897301",
+    "Tor E3 fine/coarse-remap/coarse-head Macro-F1=0.822178/0.852783/0.854317",
+    "YaTC coarse-remap VPN/Tor Macro-F1=0.923689/0.876259",
+    "48/48 source SHA256 unchanged; independent replay PASS"
+  ],
+  "artifacts": [
+    {
+      "path": "../.tmux-task/codex_stage25_phase_a_20260924/output.log",
+      "scope": "external",
+      "role": "failed-attempt-log"
+    },
+    {
+      "path": "../.tmux-task/codex_stage25_phase_a_20260924/exit.status",
+      "scope": "external",
+      "role": "failed-attempt-status"
+    },
+    {
+      "path": "../.tmux-task/codex_stage25_phase_a_retry1_20260924/output.log",
+      "scope": "external",
+      "role": "log"
+    },
+    {
+      "path": "../.tmux-task/codex_stage25_phase_a_retry1_20260924/exit.status",
+      "scope": "external",
+      "role": "status"
+    },
+    {
+      "path": "../.tmux-task/codex_stage25_phase_b_20260924/output.log",
+      "scope": "external",
+      "role": "log"
+    },
+    {
+      "path": "../.tmux-task/codex_stage25_phase_b_20260924/exit.status",
+      "scope": "external",
+      "role": "status"
+    },
+    {
+      "path": "../.tmux-task/codex_stage25_finalize_20260924/output.log",
+      "scope": "external",
+      "role": "log"
+    },
+    {
+      "path": "../.tmux-task/codex_stage25_finalize_20260924/exit.status",
+      "scope": "external",
+      "role": "status"
+    },
+    {
+      "path": "../.tmux-task/codex_stage25_independent_verify_20260924/output.log",
+      "scope": "external",
+      "role": "log"
+    },
+    {
+      "path": "../.tmux-task/codex_stage25_independent_verify_20260924/exit.status",
+      "scope": "external",
+      "role": "status"
+    },
+    {
+      "path": "EXPERIMENT_PLAN.md",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 3529,
+      "sha256": "b9d38c6dd65bf16aeac223bdc2af2990a5b2efd7d644c0341ba39800f8236d06",
+      "hash_status": "verified"
+    },
+    {
+      "path": "PHASE_A_COMPLETE",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 9,
+      "sha256": "672eb8316fec83f94119a4193f9fc552513d56a147502f8be4830e017d817831",
+      "hash_status": "verified"
+    },
+    {
+      "path": "PHASE_B_COMPLETE",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 9,
+      "sha256": "672eb8316fec83f94119a4193f9fc552513d56a147502f8be4830e017d817831",
+      "hash_status": "verified"
+    },
+    {
+      "path": "__pycache__/run_stage25.cpython-310.pyc",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 23565,
+      "sha256": "d45ddaba3e79b51e86ddbfd49de39aa85f53feca6e61ab19bbea172dbbd85140",
+      "hash_status": "verified"
+    },
+    {
+      "path": "coarse_head_fit.csv",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 906,
+      "sha256": "ce394ca7107ffc2564e91d3c5ea969ca2030ae52f61b2333d5c912ab75e25bfe",
+      "hash_status": "verified"
+    },
+    {
+      "path": "coarse_head_per_class.csv",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 14246,
+      "sha256": "ea6c1d9df5c04d37accdc118b115899fa8e035401455794e52ed07e859f69bba",
+      "hash_status": "verified"
+    },
+    {
+      "path": "coarse_head_predictions.csv",
+      "scope": "bundle",
+      "role": "predictions",
+      "size_bytes": 2333900,
+      "sha256": "95fbb3185027d7d15ec5e6c7adbb2527a12ba9e617e57099c1246df03616903f",
+      "hash_status": "verified"
+    },
+    {
+      "path": "coarse_head_results.csv",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 3181,
+      "sha256": "af28c8f4791d8df477114fa296996a6f8cc8bd31e80cb06b9738332f375d1e4c",
+      "hash_status": "verified"
+    },
+    {
+      "path": "coarse_head_warnings.csv",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 39,
+      "sha256": "1cc4e4c6fac4abe3129f6f5a5267983d4a7a5bdf80d76c09324db7746e7ae78a",
+      "hash_status": "verified"
+    },
+    {
+      "path": "completion_verification.json",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 316,
+      "sha256": "bf711612fd15483350cdf18c11d2a282c36f237dfcaffea032c9ece245332c28",
+      "hash_status": "verified"
+    },
+    {
+      "path": "heads/iscx_tor/seed2022/E1/coarse_head.npz",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 48422,
+      "sha256": "40c4fc58f45f456ab6228b144c6c2e7bfeba1cf0a70335911ed777f0beed8433",
+      "hash_status": "verified"
+    },
+    {
+      "path": "heads/iscx_tor/seed2022/E3/coarse_head.npz",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 52528,
+      "sha256": "acbd9f19dbe03075f4b42489f161d7051dac2178a3348c5f9a69e021377b528d",
+      "hash_status": "verified"
+    },
+    {
+      "path": "heads/iscx_tor/seed2023/E1/coarse_head.npz",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 48424,
+      "sha256": "816adfddbc293a5d27333388302f8e185b615589810da243b66820ff5cca3be4",
+      "hash_status": "verified"
+    },
+    {
+      "path": "heads/iscx_tor/seed2023/E3/coarse_head.npz",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 52476,
+      "sha256": "1b1e38528a4ae07c67ea27ab710b2746b50d901ad86954c207ba13cf06851b6c",
+      "hash_status": "verified"
+    },
+    {
+      "path": "heads/iscx_vpn/seed2022/E1/coarse_head.npz",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 42546,
+      "sha256": "7c253c3d2623c19220e79862a42ca1fefc5d3965166b6cef4540142f4ba041f8",
+      "hash_status": "verified"
+    },
+    {
+      "path": "heads/iscx_vpn/seed2022/E3/coarse_head.npz",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 45426,
+      "sha256": "1a1a749a9c3e9fdfe9cf22f29db5c02d271d6da4a3e52b6075637ffc519d8180",
+      "hash_status": "verified"
+    },
+    {
+      "path": "heads/iscx_vpn/seed2023/E1/coarse_head.npz",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 42564,
+      "sha256": "af35f2b190317b14b33c0b9fddcfbf3dd68dad40b36494249060021fa71ddebe",
+      "hash_status": "verified"
+    },
+    {
+      "path": "heads/iscx_vpn/seed2023/E3/coarse_head.npz",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 45376,
+      "sha256": "58eb562290e46a90cc7a3df32dc15ea7d4469c925b0dc80aa3d9dc3aa648bcd7",
+      "hash_status": "verified"
+    },
+    {
+      "path": "independent_verification.json",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 196,
+      "sha256": "50045511823981d6877bf40eb5393859c248b5faa8c7dfffa364f4886f45b77c",
+      "hash_status": "verified"
+    },
+    {
+      "path": "phase_a_verification.json",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 265,
+      "sha256": "adcedeeda2ed2c2d958d652781a7d192910debb348a0df65f970cdf67ffe1582",
+      "hash_status": "verified"
+    },
+    {
+      "path": "phase_b_verification.json",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 203,
+      "sha256": "d73ba7e5b198fe634ce5232a6e5df41d140f1f27a983bad4563c87928ce7d3fe",
+      "hash_status": "verified"
+    },
+    {
+      "path": "protected_hashes_after.json",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 7538,
+      "sha256": "a76c522a82753705d72c22e4c1bc3b009e8d7a461d6cff4024d02f12dcc12b68",
+      "hash_status": "verified"
+    },
+    {
+      "path": "protected_hashes_before.json",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 7538,
+      "sha256": "a76c522a82753705d72c22e4c1bc3b009e8d7a461d6cff4024d02f12dcc12b68",
+      "hash_status": "verified"
+    },
+    {
+      "path": "remap_per_class.csv",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 128895,
+      "sha256": "fece47ba47a9d510036b3066642b9ee04cc8b28eab499f16db5eb68c32305343",
+      "hash_status": "verified"
+    },
+    {
+      "path": "remap_predictions.csv",
+      "scope": "bundle",
+      "role": "predictions",
+      "size_bytes": 8754951,
+      "sha256": "18f637f394917782017df2a8ad1bbb8df2a8513692523cbc3bccd7d61888119d",
+      "hash_status": "verified"
+    },
+    {
+      "path": "remap_run_results.csv",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 45324,
+      "sha256": "5b4010a94d0ed4055ae03fe39b6077c4a61c45601a681a226277e32df5c87c54",
+      "hash_status": "verified"
+    },
+    {
+      "path": "run_stage25.py",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 26084,
+      "sha256": "bbb70f67a439924105bb39ba88849e7d0d4e468253304219246ed40773a585d7",
+      "hash_status": "verified"
+    },
+    {
+      "path": "scope_coverage.csv",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 2605,
+      "sha256": "e2bd03f337a98448d68f201160867644bd1fe67925545fa96a7dfb3f2c3fe712",
+      "hash_status": "verified"
+    },
+    {
+      "path": "stage25_report.md",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 4657,
+      "sha256": "77eed2b4d615c2476c9d7d4a5ffec84b0e4bf890dc9a8df2e417ee09a37c704c",
+      "hash_status": "verified"
+    },
+    {
+      "path": "stage25_summary.csv",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 7771,
+      "sha256": "8036ed16f915d8fc1c606e194265775e0e3a39a1a028dd7eaf8034631e0089d2",
+      "hash_status": "verified"
+    },
+    {
+      "path": "verify_stage25.py",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 5402,
+      "sha256": "2576979fc8d5b3db6c5c7e361e79fded8438117b14f26cde56d9930c2abd080f",
+      "hash_status": "verified"
+    }
+  ],
+  "limitations": [
+    "Development Test previously exposed",
+    "Coarse semantics change the task",
+    "Capture-derived weak labels and non-uniform capture overlap",
+    "Only two seeds",
+    "At least two packets retain only 53.27% of Tor Known Test"
+  ],
+  "next_step": "Retain fine-task guardrail and matched baselines; do not promote this coarse score as a fine-class or open-set improvement"
+}

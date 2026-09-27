@@ -1,0 +1,10 @@
+{
+  "checkpoint_sha256": "95c2a96919cf5f3854d6c46519135d95693d01088d6bc513e56df99bba90f5a6",
+  "role_manifest_sha256": "b74a6614fc42963806f17b171530fb2993af4863e558baa3ba111c15c7899440",
+  "roles": {
+    "test": 4891,
+    "validation": 4333
+  },
+  "setting": "A-2",
+  "status": "PASS"
+}

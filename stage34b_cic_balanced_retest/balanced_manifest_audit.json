@@ -1,0 +1,48 @@
+{
+  "status": "PASS",
+  "seed": 2022,
+  "selection": "SHA256 rank of BENIGN flow_id within each existing split; retain all attack rows",
+  "selection_locked_before_original_test_result": true,
+  "source_manifest": "/home/birkenwald/data/SEU-WXY/WXY-SEU/TrafficClassifier/Projects/unknown_traffic_project/stage34_ustc_cic_closed_set/cicids2017_three_class_manifest_v2.csv",
+  "source_manifest_sha256": "9734812c102266e88c58364d499c4f1494c24d0f012ac45e33e6292c93f7bd53",
+  "balanced_manifest_sha256": "35e99d89ad4eddc828c9d67529ea1b527d1fd511cb39db8c509461b5bf38e25d",
+  "columns": [
+    "flow_id",
+    "day",
+    "source_pcap",
+    "label",
+    "match_status",
+    "flow_start_epoch_utc",
+    "canonical_flow_key",
+    "first_packet_index",
+    "last_packet_index",
+    "packet_count",
+    "group_id",
+    "split"
+  ],
+  "source_counts": {
+    "BENIGN|train": 133189,
+    "BENIGN|validation": 16849,
+    "BENIGN|test": 16793,
+    "DoS Slowhttptest|train": 3909,
+    "DoS Slowhttptest|validation": 1055,
+    "DoS Slowhttptest|test": 132,
+    "PortScan|train": 13849,
+    "PortScan|validation": 901,
+    "PortScan|test": 1136
+  },
+  "balanced_counts": {
+    "BENIGN|train": 17758,
+    "BENIGN|validation": 1956,
+    "BENIGN|test": 1268,
+    "DoS Slowhttptest|train": 3909,
+    "DoS Slowhttptest|validation": 1055,
+    "DoS Slowhttptest|test": 132,
+    "PortScan|train": 13849,
+    "PortScan|validation": 901,
+    "PortScan|test": 1136
+  },
+  "group_rule": "preserve original source_pcap|five-minute group assignment; subset only",
+  "unknown_samples_used": 0,
+  "test_feature_values_read": 0
+}

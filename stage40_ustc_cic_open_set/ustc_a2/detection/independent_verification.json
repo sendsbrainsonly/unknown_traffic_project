@@ -1,0 +1,15 @@
+{
+  "status": "PASS",
+  "unit": "ustc_a2",
+  "replayed_methods": [
+    "msp",
+    "energy",
+    "centroid",
+    "des_v1"
+  ],
+  "sample_rows": 4891,
+  "known_test": 4333,
+  "unknown_test": 558,
+  "per_unknown_class_rows": 12,
+  "role_and_source_hashes_unchanged": true
+}

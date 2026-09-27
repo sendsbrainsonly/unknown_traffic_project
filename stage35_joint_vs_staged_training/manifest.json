@@ -1,0 +1,179 @@
+{
+  "schema_version": 1,
+  "experiment_id": "stage35-joint-vs-staged-ustc-20260925-v1",
+  "created_at_utc": "2026-09-25T13:40:17Z",
+  "updated_at_utc": "2026-09-26T03:41:35Z",
+  "status": "aborted",
+  "experiment_type": "ablation",
+  "claim_scope": "diagnostic",
+  "objective": "Compare feature-level three-view joint encoder training with the current separately trained encoder fusion on identical frozen USTC flows",
+  "inputs": [
+    {
+      "path": "../stage34_ustc_cic_closed_set/ustc_a2_10pct_manifest.csv",
+      "role": "frozen matched flow manifest",
+      "sha256": "73f7eecef25ee91015d557f7f9f8e7eecd7560cd995c5cc7ec21c9390d45246d"
+    }
+  ],
+  "code": {
+    "revision": null,
+    "dirty": true,
+    "changes": [
+      "isolated Stage35 joint feature-fusion implementation and queue"
+    ]
+  },
+  "execution": {
+    "tmux_session": "stage35_joint_queue_two_gpu",
+    "command": "python stage35_joint_vs_staged_training/run_queue.py with Stage34 two-GPU continuation dependency",
+    "exit_code": null,
+    "environment": "/home/birkenwald/data/SEU-WXY/conda_envs/2025-10-8-WXY-dgl_py310",
+    "physical_gpu_ids": [],
+    "allowed_physical_gpu_ids": [
+      0,
+      1
+    ],
+    "superseded_session": "stage35_joint_queue"
+  },
+  "configuration": {
+    "files": [
+      "EXPERIMENT_PLAN.md",
+      "preflight.json"
+    ],
+    "parameters": {
+      "joint_epochs": 20,
+      "effective_batch": 64,
+      "microbatch": 32,
+      "fusion": "three 64D features, fixed equal scaled concat"
+    },
+    "seeds": [
+      2022
+    ]
+  },
+  "core_results": [],
+  "artifacts": [
+    {
+      "path": "EXPERIMENT_PLAN.md",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 4483,
+      "sha256": "0b2ba5f850c7b5cc2fc0be709d4eb2a44a8e6e8cc3c92eb3f8b18659ac77a41d",
+      "hash_status": "verified"
+    },
+    {
+      "path": "USER_INTERRUPTION_20260926.json",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 425,
+      "sha256": "7409cf5695fa650096be56b21fc423a7668ac8b4ef41bfc10db0b55bd237a128",
+      "hash_status": "verified"
+    },
+    {
+      "path": "__pycache__/finalize.cpython-310.pyc",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 11110,
+      "sha256": "4156402930524e3024f78638b6c58851eb3b74456f5b095ccbce5820db97b5b0",
+      "hash_status": "verified"
+    },
+    {
+      "path": "__pycache__/joint_ustc.cpython-310.pyc",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 29372,
+      "sha256": "2c19cfa56a49126d6e39b76ff135291caff208903ad7cee5c377f9d967352e79",
+      "hash_status": "verified"
+    },
+    {
+      "path": "__pycache__/run_queue.cpython-310.pyc",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 4003,
+      "sha256": "f7f65789bffce7e51860d1c027347bb412720e422736630533e54a17cf946534",
+      "hash_status": "verified"
+    },
+    {
+      "path": "code_lock.json",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 1147,
+      "sha256": "76dbbfa49ad58f8ab9fc5ee0c5c336745cefb66a0e5ee709f2664b0cd96474cc",
+      "hash_status": "verified"
+    },
+    {
+      "path": "finalize.py",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 12345,
+      "sha256": "cdfc6a7cdb295dea67219d6230c9b5646b6e772bbb4d2b966af3beab81f84c18",
+      "hash_status": "verified"
+    },
+    {
+      "path": "joint_ustc.py",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 34634,
+      "sha256": "1bde9bcb4b086e8a90124f5732f659f0e90300bafef2489d11f80594ef44cc1b",
+      "hash_status": "verified"
+    },
+    {
+      "path": "optimizer_smoke_batch32/SUCCESS",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 8,
+      "sha256": "1f513d4ecec4e91ddd48da1a59b6d96f1b76c374dc1da641980782a34f43b102",
+      "hash_status": "verified"
+    },
+    {
+      "path": "optimizer_smoke_batch32/result.json",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 365,
+      "sha256": "a015b7e8463a3409dbd9207d2c27b13b391f2e9b19ea1c4acf625f5672896ec4",
+      "hash_status": "verified"
+    },
+    {
+      "path": "preflight.json",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 1611,
+      "sha256": "85358dab09ea06a2a0dc5519103ff8bc3357111eacdd2bd540be5377bfd501c0",
+      "hash_status": "verified"
+    },
+    {
+      "path": "queue_progress.json",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 185,
+      "sha256": "f68f079af67f799b36c1a4bb2d1f256046e175125af9535178e184f2d9024677",
+      "hash_status": "verified"
+    },
+    {
+      "path": "run_queue.py",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 3895,
+      "sha256": "fbf8c3e5c5e2c410368dd1059846ff0062137ba81af22ad1a3c525136440ef61",
+      "hash_status": "verified"
+    },
+    {
+      "path": "smoke_batch32/SUCCESS",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 8,
+      "sha256": "1f513d4ecec4e91ddd48da1a59b6d96f1b76c374dc1da641980782a34f43b102",
+      "hash_status": "verified"
+    },
+    {
+      "path": "smoke_batch32/result.json",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 254,
+      "sha256": "8753a884138511647b2cec8b131e15835a7f4913ae38f201ee9c0ef813eefa6a",
+      "hash_status": "verified"
+    }
+  ],
+  "limitations": [
+    "one USTC protocol and seed",
+    "staged and joint training budgets and objectives differ"
+  ],
+  "next_step": "Wait for Stage34 baseline, then execute the queued joint training and matched Test replay."
+}

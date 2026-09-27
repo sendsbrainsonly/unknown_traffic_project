@@ -1,0 +1,76 @@
+{
+  "status": "PASS",
+  "seed": 2022,
+  "sample_fraction_per_class_split": 0.1,
+  "classes": [
+    "BENIGN",
+    "DoS Slowhttptest",
+    "PortScan"
+  ],
+  "group_definition": "source_pcap|floor(flow_start_epoch_utc/300)",
+  "source_class_counts": {
+    "BENIGN": 1668300,
+    "DoS Slowhttptest": 5096,
+    "PortScan": 158863
+  },
+  "group_count": 496,
+  "whole_group_split_counts": {
+    "BENIGN|test": 167926,
+    "BENIGN|train": 1331888,
+    "BENIGN|validation": 168486,
+    "DoS Slowhttptest|test": 132,
+    "DoS Slowhttptest|train": 3909,
+    "DoS Slowhttptest|validation": 1055,
+    "PortScan|test": 11359,
+    "PortScan|train": 138491,
+    "PortScan|validation": 9013
+  },
+  "sample_split_counts": {
+    "BENIGN|test": 16793,
+    "BENIGN|train": 133189,
+    "BENIGN|validation": 16849,
+    "DoS Slowhttptest|test": 13,
+    "DoS Slowhttptest|train": 391,
+    "DoS Slowhttptest|validation": 106,
+    "PortScan|test": 1136,
+    "PortScan|train": 13849,
+    "PortScan|validation": 901
+  },
+  "group_objective": {
+    "DoS Slowhttptest": {
+      "whole_group_role_flows": {
+        "train": 3909,
+        "validation": 1055,
+        "test": 132
+      },
+      "normalized_deviation": 0.18112244897959184
+    },
+    "PortScan": {
+      "whole_group_role_flows": {
+        "validation": 9013,
+        "test": 11359,
+        "train": 138491
+      },
+      "normalized_deviation": 0.0717637209419437
+    },
+    "BENIGN": {
+      "whole_group_role_flows": {
+        "test": 167926,
+        "train": 1331888,
+        "validation": 168486
+      }
+    }
+  },
+  "sample_manifest_sha256": "0a094ecacd07243783e490b43245335af461e59a2ec06406c9c2b46b31f5402a",
+  "group_assignments_sha256": "607f16147d5a3b05ebdae14ac5e3944f58e9b3680190b3847ef771390bf2e6bd",
+  "source_parquet_sha256": {
+    "Monday": "9b8542c57f155d6069d7f2189f2b4a7ceed0d6b50a183b9c618eaf4f9499ef05",
+    "Tuesday": "c033dad11fa5be524bf949b13534657542db98850379ba93e4d4213a6dce652d",
+    "Wednesday": "212325f65a10ea98ef4434b9a8741d9acc0c1de9ded960c6543cfde2c3f909f1",
+    "Thursday": "79eff12da8eefc28df1eb0b42ba29bbca9ae8aaeafbd4962fc86a016dca5a343",
+    "Friday": "2b4960943dabc2c9fb800af8799233d30fbf95d3160d0d24eb04d5ac7cf121cb"
+  },
+  "unknown_samples_used": 0,
+  "test_features_read": 0,
+  "limitation": "Slowhttptest and PortScan are single-day, single-capture labels; group-disjoint does not remove class-day/capture confounding"
+}

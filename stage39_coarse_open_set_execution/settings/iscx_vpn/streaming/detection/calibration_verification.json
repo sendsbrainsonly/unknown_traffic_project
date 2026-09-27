@@ -1,0 +1,7 @@
+{
+  "known_validation_metric_replay": true,
+  "known_validation_prediction_replay": true,
+  "status": "PASS",
+  "test_feature_values_loaded": 0,
+  "unknown_feature_values_loaded": 0
+}

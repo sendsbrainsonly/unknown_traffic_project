@@ -1,0 +1,579 @@
+{
+  "schema_version": 1,
+  "experiment_id": "stage26-yatc-e3-frozen-score-fusion-20260924-v1",
+  "created_at_utc": "2026-09-24T15:58:15Z",
+  "updated_at_utc": "2026-09-24T16:12:55Z",
+  "status": "success",
+  "experiment_type": "benchmark",
+  "claim_scope": "diagnostic",
+  "objective": "Test whether a fixed equal-weight frozen YaTC+E3 probability ensemble improves matched Stage20 fine/coarse closed-set performance beyond both single models",
+  "inputs": [
+    "Stage20 frozen closed_service_manifest.csv",
+    "Stage21 packet-count cache",
+    "Stage22 frozen E3 checkpoints/representations and predictions",
+    "Stage23 frozen YaTC checkpoints/MFR caches and predictions"
+  ],
+  "code": {
+    "revision": null,
+    "dirty": true,
+    "changes": [
+      "New independent Stage26 scripts and evidence bundle only; source Stage20-25 assets read-only"
+    ]
+  },
+  "execution": {
+    "tmux_session": "codex_stage26_vpn2022_20260924; codex_stage26_vpn2023_20260924; codex_stage26_tor2022_20260924; codex_stage26_tor2023_20260924",
+    "command": "select_gpu.py --min-free-gb 5 -- python stage26_yatc_e3_frozen_score_fusion/run_one.py --dataset DATASET --seed SEED",
+    "exit_code": 0,
+    "environment": "/home/birkenwald/data/SEU-WXY/conda_envs/2025-10-8-WXY-dgl_py310",
+    "physical_gpu_ids": []
+  },
+  "configuration": {
+    "files": [
+      "EXPERIMENT_PLAN.md"
+    ],
+    "parameters": {
+      "fusion": "0.5 softmax E3 + 0.5 softmax YaTC",
+      "coarse_map": "Chat+Email+VoIP->Communication",
+      "primary_scope": "full-flow coarse",
+      "secondary_scope": "original fine and >=2-packet",
+      "weight_search": false,
+      "weight_updates": 0,
+      "unknown_usage": 0
+    },
+    "seeds": [
+      2022,
+      2023
+    ]
+  },
+  "core_results": [
+    "FUSION_NOT_CONFIRMED; coarse positive pairs 1/4",
+    "VPN coarse Macro-F1 E3/YaTC/Fusion=0.895838/0.923689/0.906884",
+    "Tor coarse Macro-F1 E3/YaTC/Fusion=0.852381/0.875886/0.877392",
+    "Independent replay PASS: 26556 decisions, 96 metrics, 60 source-hash entries"
+  ],
+  "artifacts": [
+    {
+      "path": "../.tmux-task/codex_stage26_vpn2022_20260924/output.log",
+      "scope": "external",
+      "role": "log"
+    },
+    {
+      "path": "../.tmux-task/codex_stage26_vpn2022_20260924/exit.status",
+      "scope": "external",
+      "role": "status"
+    },
+    {
+      "path": "../.tmux-task/codex_stage26_vpn2023_20260924/output.log",
+      "scope": "external",
+      "role": "log"
+    },
+    {
+      "path": "../.tmux-task/codex_stage26_vpn2023_20260924/exit.status",
+      "scope": "external",
+      "role": "status"
+    },
+    {
+      "path": "../.tmux-task/codex_stage26_tor2022_20260924/output.log",
+      "scope": "external",
+      "role": "log"
+    },
+    {
+      "path": "../.tmux-task/codex_stage26_tor2022_20260924/exit.status",
+      "scope": "external",
+      "role": "status"
+    },
+    {
+      "path": "../.tmux-task/codex_stage26_tor2023_20260924/output.log",
+      "scope": "external",
+      "role": "log"
+    },
+    {
+      "path": "../.tmux-task/codex_stage26_tor2023_20260924/exit.status",
+      "scope": "external",
+      "role": "status"
+    },
+    {
+      "path": "../.tmux-task/codex_stage26_aggregate_20260924/output.log",
+      "scope": "external",
+      "role": "log"
+    },
+    {
+      "path": "../.tmux-task/codex_stage26_aggregate_20260924/exit.status",
+      "scope": "external",
+      "role": "status"
+    },
+    {
+      "path": "../.tmux-task/codex_stage26_independent_verify_20260924/output.log",
+      "scope": "external",
+      "role": "log"
+    },
+    {
+      "path": "../.tmux-task/codex_stage26_independent_verify_20260924/exit.status",
+      "scope": "external",
+      "role": "status"
+    },
+    {
+      "path": "EXPERIMENT_PLAN.md",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 2802,
+      "sha256": "80386a4014ae680a2b52b8adc84b8df94e5a60328069e86c9fb4026d12ceaf71",
+      "hash_status": "verified"
+    },
+    {
+      "path": "__pycache__/aggregate.cpython-310.pyc",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 9819,
+      "sha256": "0f2b4fb28f980b217cf3a84a6149953ec46c604b8fcbbd829f019fab69b6ceca",
+      "hash_status": "verified"
+    },
+    {
+      "path": "__pycache__/finalize_bundles.cpython-310.pyc",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 4968,
+      "sha256": "2af84255d2ce666f9ce2acd6e6a33ef83ed5da27771bdd3e2f2e4aca8754b692",
+      "hash_status": "verified"
+    },
+    {
+      "path": "__pycache__/run_one.cpython-310.pyc",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 13129,
+      "sha256": "01da7a4577c9691427090204c73dc3c487ccde4d384ab1ec9deff13232caaca3",
+      "hash_status": "verified"
+    },
+    {
+      "path": "__pycache__/verify_replay.cpython-310.pyc",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 6168,
+      "sha256": "a0a875439a43b0e3c9a634b65b368fe31f014cd4079d0b478c9e903b4a083706",
+      "hash_status": "verified"
+    },
+    {
+      "path": "aggregate.py",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 9941,
+      "sha256": "286675b299dae8023c5f2f2b978a8b310ada045cfa2ff22f71d019a515f0fee1",
+      "hash_status": "verified"
+    },
+    {
+      "path": "completion_verification.json",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 537,
+      "sha256": "7943539f63a68e23f5ae62444d6191c64ed8a85f535fa1440658bd8a3a0d0df0",
+      "hash_status": "verified"
+    },
+    {
+      "path": "finalize_bundles.py",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 5399,
+      "sha256": "07c4a2cdee6f483753edaf83a802c4d82f595f758714880017b5373b01db51e8",
+      "hash_status": "verified"
+    },
+    {
+      "path": "independent_verification.json",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 221,
+      "sha256": "c489c8edc2ddd5d68451eb427846fbb6d47c9c447df0d58d5b46f91fb65f909f",
+      "hash_status": "verified"
+    },
+    {
+      "path": "paired_comparison.csv",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 7348,
+      "sha256": "e28b38424bbd5aa20c4bac5fc9092a3ca8e88e5a6be7d11e749e2a12637ce281",
+      "hash_status": "verified"
+    },
+    {
+      "path": "per_class.csv",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 54166,
+      "sha256": "4094c03a1898a7c35ee71db89c9350ea128925c48e11378967b6401b1e0fd07a",
+      "hash_status": "verified"
+    },
+    {
+      "path": "run_metrics.csv",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 10171,
+      "sha256": "249902a357172b603f0c392f0402a218dfd0bedd52af02d27b103d572788bccb",
+      "hash_status": "verified"
+    },
+    {
+      "path": "run_one.py",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 13022,
+      "sha256": "9c12b6ab23740b1b046853957d2987ac3c5dac5400e43067f420b9683b0671a4",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/iscx_tor/seed2022/RESULTS.md",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 1438,
+      "sha256": "a95e39b358508907e0ea6ef79071c01c876172451a78bed67311500728efd380",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/iscx_tor/seed2022/SUCCESS",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 9,
+      "sha256": "672eb8316fec83f94119a4193f9fc552513d56a147502f8be4830e017d817831",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/iscx_tor/seed2022/frozen_logits.npz",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 197670,
+      "sha256": "c2db2e234d28a1620b935988a3e4f7cfe940ed4f36a22ab846ee6219293a61e6",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/iscx_tor/seed2022/manifest.json",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 3952,
+      "sha256": "b61fe36e0229082ebf05651042db276d6b8324adbe5262fc5279853a92b5fdee",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/iscx_tor/seed2022/per_class.csv",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 14794,
+      "sha256": "039c58c39424c803d0d517ed3862d6cdc23e985ca939262a4110d1389b04f25e",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/iscx_tor/seed2022/run_metrics.csv",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 2599,
+      "sha256": "c6da7197db9da35c61f6050c2466f4362797a25cf653cb5b87e6329232786269",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/iscx_tor/seed2022/sample_predictions.csv",
+      "scope": "bundle",
+      "role": "predictions",
+      "size_bytes": 387110,
+      "sha256": "f6236d13d6748c172fc08468eaac8f4b9974a981566a798c76a14f3edc229f9f",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/iscx_tor/seed2022/source_hashes_after.json",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 1368,
+      "sha256": "bb4a0c712d7fc6dd714cfdabb4724bc48cc32c58fdf09f533a7b33efce32b9db",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/iscx_tor/seed2022/source_hashes_before.json",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 1368,
+      "sha256": "bb4a0c712d7fc6dd714cfdabb4724bc48cc32c58fdf09f533a7b33efce32b9db",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/iscx_tor/seed2022/verification.json",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 358,
+      "sha256": "ecc86229b5cc2ae9ca3acabbc89d65c48cea26719a424195e4f83e09664bc8c7",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/iscx_tor/seed2023/RESULTS.md",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 1438,
+      "sha256": "d9ccf4a501cc370029db9e23f23aab22341f54d0d16b6c4364d04a2ae7ce9609",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/iscx_tor/seed2023/SUCCESS",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 9,
+      "sha256": "672eb8316fec83f94119a4193f9fc552513d56a147502f8be4830e017d817831",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/iscx_tor/seed2023/frozen_logits.npz",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 198093,
+      "sha256": "6b6e955dad7e9a88afc7866102a15a83f944307a1b4a01b975c612c0d6e71654",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/iscx_tor/seed2023/manifest.json",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 3952,
+      "sha256": "eaf99db5d5bf94d836e98c1e23765e4affad16a804c22d045131c007148b30b5",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/iscx_tor/seed2023/per_class.csv",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 15054,
+      "sha256": "75efdc1072d7701e6ea27f78d1b122440421172b80e0abbc3969eba1c7bb1a76",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/iscx_tor/seed2023/run_metrics.csv",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 2601,
+      "sha256": "56787fa8aa444fb84202d6f853c1ce03ecbb7f7a75029adb75ca08478ad0079c",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/iscx_tor/seed2023/sample_predictions.csv",
+      "scope": "bundle",
+      "role": "predictions",
+      "size_bytes": 386255,
+      "sha256": "00910558507e01615faad2f3bab0a96a04f719de40ed9ceb2b1182fccff3bbc5",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/iscx_tor/seed2023/source_hashes_after.json",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 1368,
+      "sha256": "83575adadf224cc513fa94d4abb6159773eb6f32dd678faed1b36351b7d956cf",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/iscx_tor/seed2023/source_hashes_before.json",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 1368,
+      "sha256": "83575adadf224cc513fa94d4abb6159773eb6f32dd678faed1b36351b7d956cf",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/iscx_tor/seed2023/verification.json",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 359,
+      "sha256": "ee0b591a48a3e5ad73795b444ba8084436ea0aa6ea7f9c52dfaf2bb56db48c5b",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/iscx_vpn/seed2022/RESULTS.md",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 1438,
+      "sha256": "532dd8bb1f7cf41c3553a8bf657eedc3584bc52a9a051ad5fd4f9119900b70ba",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/iscx_vpn/seed2022/SUCCESS",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 9,
+      "sha256": "672eb8316fec83f94119a4193f9fc552513d56a147502f8be4830e017d817831",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/iscx_vpn/seed2022/frozen_logits.npz",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 182677,
+      "sha256": "491a754d44e587d5c5ffad3933f5af69c3d97519940e09edd557ae44f26b25d6",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/iscx_vpn/seed2022/manifest.json",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 3952,
+      "sha256": "9ee6be0737cb62fae5fd551368b052dc07bae2a141d790579a2e8697c08242ed",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/iscx_vpn/seed2022/per_class.csv",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 12226,
+      "sha256": "06813c49d64863f6d2fbe84bd665546b6324d718eb06dc0e4fe45c3c2f0b7f17",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/iscx_vpn/seed2022/run_metrics.csv",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 2599,
+      "sha256": "8884a5d0e05d3fcdde7b04b26ce9ee40c4b4ef08e16823c6223f46eab1cd1ca6",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/iscx_vpn/seed2022/sample_predictions.csv",
+      "scope": "bundle",
+      "role": "predictions",
+      "size_bytes": 390122,
+      "sha256": "dbc17863fb2c2884e8b90cc6eb3f74a6729a9d648ea5ca07fcfd375f6437a20a",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/iscx_vpn/seed2022/source_hashes_after.json",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 1368,
+      "sha256": "91de05a46ed86d1f6e701a177b18e263b7d96cc47eafb052ce4b33d0066b28b9",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/iscx_vpn/seed2022/source_hashes_before.json",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 1368,
+      "sha256": "91de05a46ed86d1f6e701a177b18e263b7d96cc47eafb052ce4b33d0066b28b9",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/iscx_vpn/seed2022/verification.json",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 360,
+      "sha256": "a53b444fcfedf313e733b328fe84cdd73f4c35a272c0eb89fa88d07c741358fa",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/iscx_vpn/seed2023/RESULTS.md",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 1438,
+      "sha256": "4277a57cc7ab85203ca21c983a95fa6ae5fb9defddf4ad339706b174fbcd9f93",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/iscx_vpn/seed2023/SUCCESS",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 9,
+      "sha256": "672eb8316fec83f94119a4193f9fc552513d56a147502f8be4830e017d817831",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/iscx_vpn/seed2023/frozen_logits.npz",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 183858,
+      "sha256": "34f6f71f64245a00c16c4df2b4e4f67978617fecb5abd7cff6ee0d7c1715b1e8",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/iscx_vpn/seed2023/manifest.json",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 3952,
+      "sha256": "bc38a54751493e568b1aa76360beaacc8579c907c5f6435675935c925004ec51",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/iscx_vpn/seed2023/per_class.csv",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 12308,
+      "sha256": "1738743a3174e264206f1b7f7edc0079e38bf8ea826ab03702b43b73c0e6fe23",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/iscx_vpn/seed2023/run_metrics.csv",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 2600,
+      "sha256": "787828d56db69d6068d1be84508b0e5732dca2f142c61f3dcd2517694b5d1c82",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/iscx_vpn/seed2023/sample_predictions.csv",
+      "scope": "bundle",
+      "role": "predictions",
+      "size_bytes": 389470,
+      "sha256": "c85f82e24a7915355d7a066915c69181dcc399af7c37cc235f8fe115dffc01f7",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/iscx_vpn/seed2023/source_hashes_after.json",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 1368,
+      "sha256": "5e8a5e028274a150c92f6245c1a1964c35a3cf19b5f28ffa0596e328f6a9282b",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/iscx_vpn/seed2023/source_hashes_before.json",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 1368,
+      "sha256": "5e8a5e028274a150c92f6245c1a1964c35a3cf19b5f28ffa0596e328f6a9282b",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/iscx_vpn/seed2023/verification.json",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 359,
+      "sha256": "bf8916ca6e8a97157e795109b7ce21e75de9e74d4c923cdc7983e8d5941107e8",
+      "hash_status": "verified"
+    },
+    {
+      "path": "sample_rescue.csv",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 23296,
+      "sha256": "0a7c073208c2ef3e3b23273a639d3a1f6ddca5d9d140fa3a166b180c947735a5",
+      "hash_status": "verified"
+    },
+    {
+      "path": "setting_summary.csv",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 6036,
+      "sha256": "b25032cd6b846652c6293829b1e722097ba4ebff0443fa79a7c5cc8d1db9726b",
+      "hash_status": "verified"
+    },
+    {
+      "path": "stage26_report.md",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 2901,
+      "sha256": "ee0f65a1c0f73c09c57e81b328414f7859bb9d49c7d0930bc6d0b6e878f5889a",
+      "hash_status": "verified"
+    },
+    {
+      "path": "verify_replay.py",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 5404,
+      "sha256": "d8b34e5f0cfaac8d64265ee9b03c6c6bc934633e8b7b470367bea5e03669de7f",
+      "hash_status": "verified"
+    }
+  ],
+  "limitations": [
+    "Previously exposed Stage20 Test",
+    "Two seeds and a single fixed fusion weight",
+    "Two-model deployment cost",
+    "Cached E3 representation inference time only"
+  ],
+  "next_step": "Retain YaTC as stronger coarse baseline; do not tune fusion weights against exposed Test"
+}

@@ -1,0 +1,126 @@
+{
+  "counts": [
+    {
+      "count": 1117,
+      "dataset": "iscx_tor",
+      "metric": "total",
+      "role": "known_test"
+    },
+    {
+      "count": 0,
+      "dataset": "iscx_tor",
+      "metric": "other_first_packet",
+      "role": "known_train"
+    },
+    {
+      "count": 7105,
+      "dataset": "iscx_tor",
+      "metric": "tcp_first_packet",
+      "role": "known_train"
+    },
+    {
+      "count": 8946,
+      "dataset": "iscx_tor",
+      "metric": "total",
+      "role": "known_train"
+    },
+    {
+      "count": 1841,
+      "dataset": "iscx_tor",
+      "metric": "udp_first_packet",
+      "role": "known_train"
+    },
+    {
+      "count": 0,
+      "dataset": "iscx_tor",
+      "metric": "other_first_packet",
+      "role": "known_validation"
+    },
+    {
+      "count": 885,
+      "dataset": "iscx_tor",
+      "metric": "tcp_first_packet",
+      "role": "known_validation"
+    },
+    {
+      "count": 1118,
+      "dataset": "iscx_tor",
+      "metric": "total",
+      "role": "known_validation"
+    },
+    {
+      "count": 233,
+      "dataset": "iscx_tor",
+      "metric": "udp_first_packet",
+      "role": "known_validation"
+    },
+    {
+      "count": 1093,
+      "dataset": "iscx_vpn",
+      "metric": "total",
+      "role": "known_test"
+    },
+    {
+      "count": 19,
+      "dataset": "iscx_vpn",
+      "metric": "other_first_packet",
+      "role": "known_train"
+    },
+    {
+      "count": 3205,
+      "dataset": "iscx_vpn",
+      "metric": "tcp_first_packet",
+      "role": "known_train"
+    },
+    {
+      "count": 8764,
+      "dataset": "iscx_vpn",
+      "metric": "total",
+      "role": "known_train"
+    },
+    {
+      "count": 5540,
+      "dataset": "iscx_vpn",
+      "metric": "udp_first_packet",
+      "role": "known_train"
+    },
+    {
+      "count": 0,
+      "dataset": "iscx_vpn",
+      "metric": "other_first_packet",
+      "role": "known_validation"
+    },
+    {
+      "count": 396,
+      "dataset": "iscx_vpn",
+      "metric": "tcp_first_packet",
+      "role": "known_validation"
+    },
+    {
+      "count": 1098,
+      "dataset": "iscx_vpn",
+      "metric": "total",
+      "role": "known_validation"
+    },
+    {
+      "count": 702,
+      "dataset": "iscx_vpn",
+      "metric": "udp_first_packet",
+      "role": "known_validation"
+    }
+  ],
+  "etbert_one_two_packet_count_all_roles": 15195,
+  "etbert_strict_policy": "minimum 3 packets and materialized flow PCAP >= 5 KiB",
+  "note": "First-packet transport is a conservative input-coverage diagnostic, not a full TFE payload/graph audit.",
+  "stage20_manifest_sha256": "6404d496f50a6f7f6f397d125ad0cd653c9df152d8db1b9ed2ad2310967950bb",
+  "stage20_packet_ref_distribution": {
+    "1": 7758,
+    "2": 7437,
+    "3": 603,
+    "4": 1319,
+    "5": 5019
+  },
+  "status": "PASS_TRAIN_VAL_NATIVE_COVERAGE_AUDIT",
+  "tfe_strict_policy": "TCP flow with at least one payload packet; first 50 payload packets",
+  "trident_native_scope": "86 full-bidirectional-flow statistics; official USTC preprocessing unavailable"
+}

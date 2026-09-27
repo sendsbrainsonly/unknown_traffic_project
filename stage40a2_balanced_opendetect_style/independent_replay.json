@@ -1,0 +1,18 @@
+{
+  "status": "PASS",
+  "selected_id_sha256": "93137f472c43d6c844f6a68f2f52c5fb1e37eebe0db73e2a16d55a102313cf0d",
+  "balanced_rows": 1116,
+  "methods": [
+    "msp",
+    "energy",
+    "centroid",
+    "des_v1"
+  ],
+  "policies": [
+    "known_validation_p95",
+    "released_code_test_oracle_youden"
+  ],
+  "metric_rows_replayed": 8,
+  "per_unknown_class_rows": 24,
+  "no_training_or_new_inference": true
+}

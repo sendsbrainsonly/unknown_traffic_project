@@ -1,0 +1,24 @@
+{
+  "role_manifest_sha256": "b74a6614fc42963806f17b171530fb2993af4863e558baa3ba111c15c7899440",
+  "roles": {
+    "test": {
+      "flow_ids_sha256": "de6b490d8dd2c0c35e1a9eeb219b584e225462960377c1b36f1f150dd69656b9",
+      "npz_sha256": "f885eb9d3fc5679572da41307d476b4a17b8f89c1ccc2267e0242fb27bf092a4",
+      "samples": 4891
+    },
+    "train": {
+      "flow_ids_sha256": "7d9c74011d0059b1e72a014e11b3bbf480e95229c9e8f4fd7efa9c6608dbe5f3",
+      "npz_sha256": "c98fb0051fff0a6cbd58a9e4999ce8c0f8f9ee0f31f91dc2a8cfcdc50e79bd5b",
+      "samples": 34665
+    },
+    "validation": {
+      "flow_ids_sha256": "5a7f3b71509504027eea5d4c0ac573e7ab9a326924782d3c40ed555f85cfffa4",
+      "npz_sha256": "bf2004e3b9d280c1896a3106b808f1b0ef277aabf79f8ad7e7469345565d8375",
+      "samples": 4333
+    }
+  },
+  "setting": "A-2",
+  "status": "PASS",
+  "unknown_train_count": 0,
+  "unknown_validation_count": 0
+}

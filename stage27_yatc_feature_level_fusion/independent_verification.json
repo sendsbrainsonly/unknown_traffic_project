@@ -1,0 +1,58 @@
+{
+  "status": "PASS",
+  "runs": [
+    {
+      "dataset": "iscx_vpn",
+      "seed": 2022,
+      "samples": {
+        "known_test": 1093,
+        "known_train": 8764,
+        "known_validation": 1098
+      },
+      "metric_rows_replayed": 30,
+      "checkpoint_hashes": "PASS",
+      "predictions_from_logits": "PASS",
+      "gate_weights": "PASS"
+    },
+    {
+      "dataset": "iscx_vpn",
+      "seed": 2023,
+      "samples": {
+        "known_test": 1093,
+        "known_train": 8764,
+        "known_validation": 1098
+      },
+      "metric_rows_replayed": 30,
+      "checkpoint_hashes": "PASS",
+      "predictions_from_logits": "PASS",
+      "gate_weights": "PASS"
+    },
+    {
+      "dataset": "iscx_tor",
+      "seed": 2022,
+      "samples": {
+        "known_test": 1117,
+        "known_train": 8946,
+        "known_validation": 1118
+      },
+      "metric_rows_replayed": 30,
+      "checkpoint_hashes": "PASS",
+      "predictions_from_logits": "PASS",
+      "gate_weights": "PASS"
+    },
+    {
+      "dataset": "iscx_tor",
+      "seed": 2023,
+      "samples": {
+        "known_test": 1117,
+        "known_train": 8946,
+        "known_validation": 1118
+      },
+      "metric_rows_replayed": 30,
+      "checkpoint_hashes": "PASS",
+      "predictions_from_logits": "PASS",
+      "gate_weights": "PASS"
+    }
+  ],
+  "total_metric_rows_replayed": 120
+}

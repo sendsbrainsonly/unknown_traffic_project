@@ -1,0 +1,178 @@
+{
+  "schema_version": 1,
+  "experiment_id": "stage40a2-balanced-opendetect-style-20260927",
+  "created_at_utc": "2026-09-27T03:10:46Z",
+  "updated_at_utc": "2026-09-27T03:16:38Z",
+  "status": "success",
+  "experiment_type": "retrospective-evaluation",
+  "claim_scope": "diagnostic",
+  "objective": "Score the frozen Stage40 USTC A-2 three-view model on deterministic balanced Known/Unknown subsets with validation-P95 and released-code Test-oracle threshold rules",
+  "inputs": [
+    {
+      "path": "../stage40_ustc_cic_open_set/ustc_a2/detection/sample_scores.csv",
+      "role": "frozen_three_view_test_scores",
+      "sha256": "1210e33b9b216e302afbe9c94ca5f9818e7176c44c8a0e6160cb9468cbf15eb1"
+    },
+    {
+      "path": "../stage40_ustc_cic_open_set/ustc_a2/detection/calibration.json",
+      "role": "frozen_known_validation_threshold",
+      "sha256": "ca31475f8de1b0976497e2c53944a45c76ab8a8cc484b5700291697803ff3b55"
+    },
+    {
+      "path": "../../Open-Detect/artifacts/paper-reproduction/v6-local-pcap-fivefold-corrected-v1/campaign_summary.json",
+      "role": "read_only_nonpaired_reference",
+      "sha256": "f87c47a2923d461312b3cb128754149ac150c00f21359eb89945b53538d02269"
+    },
+    {
+      "path": "../../Open-Detect/artifacts/v6-local-pcap-fivefold-splits-v1/campaign_manifest.json",
+      "role": "read_only_nonpaired_protocol",
+      "sha256": "c8c8a4faa5f1d7d2bbbf96ce885fe97999a4198bda3904f86b340fb1edbe0227"
+    }
+  ],
+  "code": {
+    "revision": null,
+    "dirty": null,
+    "changes": [
+      "Added isolated Stage40 A-2 balanced score replay; no frozen training code or source results changed"
+    ]
+  },
+  "execution": {
+    "tmux_session": "stage40a2_balanced_eval_0927",
+    "command": "python stage40a2_balanced_opendetect_style/run_balanced.py; python stage40a2_balanced_opendetect_style/replay_and_per_class.py",
+    "exit_code": 0,
+    "environment": "/home/birkenwald/data/SEU-WXY/conda_envs/2025-10-8-WXY-dgl_py310",
+    "physical_gpu_ids": []
+  },
+  "configuration": {
+    "files": [
+      "../stage40_ustc_cic_open_set/ustc_a2/detection/calibration.json"
+    ],
+    "parameters": {
+      "scenario": "USTC A-2 17 Known/3 Unknown",
+      "selection": "all 558 frozen Unknown; 558 Known lowest SHA256(seed2022:flow_id), score-blind",
+      "formal_threshold": "frozen Known-Val P95",
+      "retrospective_threshold": "released-code Test Youden J",
+      "positive_class": "Unknown",
+      "model_training": false,
+      "same_flow_as_opendetect_v6": "NOT_ESTABLISHED"
+    },
+    "seeds": [
+      2022
+    ]
+  },
+  "core_results": [
+    {
+      "dataset": "USTC-TFC2016",
+      "setting": "A-2",
+      "model": "frozen Stage40 three-view",
+      "method": "DES-v1",
+      "subset": "558 Known + 558 Unknown",
+      "auroc": 0.9499621022340412,
+      "auprc": 0.944430549146207
+    },
+    {
+      "threshold_policy": "Known-Val P95",
+      "binary_accuracy": 0.7491039426523297,
+      "unknown_f1": 0.6825396825396826,
+      "ufar": 0.460573476702509,
+      "known_frr": 0.04121863799283154
+    },
+    {
+      "threshold_policy": "Test-oracle Youden NON_INDEPENDENT",
+      "binary_accuracy": 0.8942652329749103,
+      "unknown_f1": 0.9018302828618968,
+      "ufar": 0.02867383512544803,
+      "known_frr": 0.1827956989247312
+    }
+  ],
+  "artifacts": [
+    {
+      "path": "balanced_closed_set.json",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 158,
+      "sha256": "bad304a3210568066481e866230e758e39cbb81f04afb54fb81ed0def190aacd",
+      "hash_status": "verified"
+    },
+    {
+      "path": "balanced_results.csv",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 2668,
+      "sha256": "4d9ad3f0d56ade9a5d79b02e0fc3fa02492afe4bf511fd5a2f0ab09913b7a39e",
+      "hash_status": "verified"
+    },
+    {
+      "path": "class_support.csv",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 470,
+      "sha256": "b84306e0c316dc95716264f65609ae69a0313a0fbc84ace69b76ba88d1f73815",
+      "hash_status": "verified"
+    },
+    {
+      "path": "comparison_context.json",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 910,
+      "sha256": "1b30def339a7a64312a8690502fc3302b6883198269ccd29411099928fce213d",
+      "hash_status": "verified"
+    },
+    {
+      "path": "completion_verification.json",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 1768,
+      "sha256": "b01eaa335e3117fea1b7ff8cc2fef74c5e843892fbeffaa280ae1199d8bc4e09",
+      "hash_status": "verified"
+    },
+    {
+      "path": "independent_replay.json",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 403,
+      "sha256": "0b87017923df8525593f96912f3a80889e26ae616148d54473fd08db1511016a",
+      "hash_status": "verified"
+    },
+    {
+      "path": "per_unknown_class.csv",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 2862,
+      "sha256": "6876b3a014eb082889b3e062d81d85373115baa75d65f69fc5c4b4a29fa1039e",
+      "hash_status": "verified"
+    },
+    {
+      "path": "replay_and_per_class.py",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 6031,
+      "sha256": "ce98e4ccdef9d2f912941e04fb3fa6986d8387f2696012d976be1ab8fa84dae0",
+      "hash_status": "verified"
+    },
+    {
+      "path": "run_balanced.py",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 9271,
+      "sha256": "5503c67ca721423892d83ce778af8a5c7c0d52ee66549ddd3132614b3c8536f2",
+      "hash_status": "verified"
+    },
+    {
+      "path": "selection_manifest.csv",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 99890,
+      "sha256": "63d8937cbab7e7fc5e83154110751638746ce3a97ec971435d18ea73f699684f",
+      "hash_status": "verified"
+    }
+  ],
+  "limitations": [
+    "One frozen model and one subset, not five-fold mean",
+    "OD v6 and Stage40 have different source pools and no proven shared flow IDs",
+    "Test-oracle threshold is non-independent",
+    "Geodo dominates Unknown sample composition",
+    "Historical Test scores had already been exposed"
+  ],
+  "next_step": "For a fair paired claim, construct a new shared frozen A-2 flow protocol and three-view features, then train/evaluate both methods with the same folds"
+}

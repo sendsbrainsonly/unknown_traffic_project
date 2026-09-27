@@ -1,0 +1,89 @@
+{
+  "application_to_class": {
+    "netflix": "streaming",
+    "rdp": "rdp",
+    "rsync": "rsync",
+    "scp": "scp",
+    "skype": "skype",
+    "ssh": "ssh",
+    "youtube": "streaming"
+  },
+  "classes": [
+    "streaming",
+    "rdp",
+    "rsync",
+    "scp",
+    "skype",
+    "ssh"
+  ],
+  "known_train_features_loaded": 15704,
+  "known_validation_features_loaded": 1960,
+  "protocol": "medium_seed2025",
+  "split_support": {
+    "known_test": {
+      "application_counts": {
+        "netflix": 20,
+        "rdp": 4,
+        "rsync": 191,
+        "scp": 229,
+        "skype": 126,
+        "ssh": 1356,
+        "youtube": 34
+      },
+      "flows": 1960,
+      "six_class_counts": {
+        "rdp": 4,
+        "rsync": 191,
+        "scp": 229,
+        "skype": 126,
+        "ssh": 1356,
+        "streaming": 54
+      }
+    },
+    "known_train": {
+      "application_counts": {
+        "netflix": 165,
+        "rdp": 36,
+        "rsync": 1530,
+        "scp": 1832,
+        "skype": 1017,
+        "ssh": 10851,
+        "youtube": 273
+      },
+      "flows": 15704,
+      "six_class_counts": {
+        "rdp": 36,
+        "rsync": 1530,
+        "scp": 1832,
+        "skype": 1017,
+        "ssh": 10851,
+        "streaming": 438
+      }
+    },
+    "known_validation": {
+      "application_counts": {
+        "netflix": 20,
+        "rdp": 4,
+        "rsync": 191,
+        "scp": 229,
+        "skype": 126,
+        "ssh": 1356,
+        "youtube": 34
+      },
+      "flows": 1960,
+      "six_class_counts": {
+        "rdp": 4,
+        "rsync": 191,
+        "scp": 229,
+        "skype": 126,
+        "ssh": 1356,
+        "streaming": 54
+      }
+    }
+  },
+  "stage32_test_seen_before_taxonomy_choice": true,
+  "status": "PASS",
+  "test_feature_values_loaded": 0,
+  "training_seed": 2022,
+  "unknown_feature_values_loaded": 0
+}

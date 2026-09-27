@@ -1,0 +1,11 @@
+{
+  "coarse_heads": 8,
+  "comparison_scope": "matched Stage20 development; Test previously exposed",
+  "hard_remap_prediction_cells": 56,
+  "historical_metric_replays": 28,
+  "protected_assets": 48,
+  "protected_hashes_unchanged": true,
+  "status": "PASS",
+  "test_fit_or_selection_usage": 0,
+  "unknown_usage": 0
+}

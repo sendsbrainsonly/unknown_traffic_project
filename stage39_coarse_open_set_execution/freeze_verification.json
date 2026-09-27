@@ -1,0 +1,14 @@
+{
+  "historical_test_promotions": 0,
+  "new_training_settings": 12,
+  "settings": 13,
+  "source_hashes": {
+    "/home/birkenwald/data/SEU-WXY/WXY-SEU/TrafficClassifier/Projects/unknown_traffic_project/stage12_dual_external_validation/protocol/iscx_tor/split_manifest.csv": "7de5289ef75966fb360dc743778ba90a31f72c2eaf6694dc3a33291a794bc0d7",
+    "/home/birkenwald/data/SEU-WXY/WXY-SEU/TrafficClassifier/Projects/unknown_traffic_project/stage12_dual_external_validation/protocol/iscx_vpn/split_manifest.csv": "618670af28797d9ceffc7138dcb9d2622552cdfc4712c38bd5da0886ec95c793",
+    "/home/birkenwald/data/SEU-WXY/WXY-SEU/TrafficClassifier/Projects/unknown_traffic_project/stage14b_vnat_protocol_freeze/vnat_split_manifest.csv": "66bf155e6906231b316c384a52f4b46dabd9d3aee76d5f66d86a3941eb172c4e"
+  },
+  "status": "PASS",
+  "test_feature_values_loaded": 0,
+  "unknown_feature_values_loaded": 0,
+  "unknown_train_val_samples": 0
+}

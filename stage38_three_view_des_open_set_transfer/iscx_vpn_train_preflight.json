@@ -1,0 +1,18 @@
+{
+  "status": "PASS",
+  "dataset": "iscx_vpn",
+  "protocol": "medium_seed2022",
+  "classes": [
+    "Communication",
+    "File-Transfer",
+    "P2P",
+    "Streaming"
+  ],
+  "known_train": 12910,
+  "known_validation": 1611,
+  "split_sha256": "618670af28797d9ceffc7138dcb9d2622552cdfc4712c38bd5da0886ec95c793",
+  "input_reference": "/home/birkenwald/data/SEU-WXY/WXY-SEU/TrafficClassifier/Projects/unknown_traffic_project/stage31_four_dataset_three_view_equal/input_caches/iscx_vpn",
+  "unknown_training_samples": 0,
+  "known_test_feature_values_loaded": 0,
+  "unknown_test_feature_values_loaded": 0
+}

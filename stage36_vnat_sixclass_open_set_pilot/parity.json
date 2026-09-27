@@ -1,0 +1,15 @@
+{
+  "exact_array_comparisons": 66,
+  "failures": [],
+  "fields": [
+    "token_ids",
+    "segments",
+    "fig_x",
+    "fig_adj",
+    "fig_mask",
+    "mfr"
+  ],
+  "samples": 11,
+  "status": "PASS",
+  "unknown_feature_values_loaded": 0
+}

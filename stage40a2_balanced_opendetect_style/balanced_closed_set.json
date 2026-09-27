@@ -1,0 +1,7 @@
+{
+  "known_test": 558,
+  "known_classes_present": 17,
+  "accuracy": 0.989247311827957,
+  "weighted_f1": 0.989247311827957,
+  "macro_f1": 0.9901657257330176
+}

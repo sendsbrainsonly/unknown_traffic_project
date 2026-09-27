@@ -1,0 +1,10 @@
+{
+  "actual_dataset": "CIC-IDS-2017",
+  "actual_protocol": "strict_three_class_five_minute_group_split_v2",
+  "actual_sample_manifest": "/home/birkenwald/data/SEU-WXY/WXY-SEU/TrafficClassifier/Projects/unknown_traffic_project/stage34_ustc_cic_closed_set/cicids2017_three_class_manifest_v2.csv",
+  "actual_sample_sha256": "9734812c102266e88c58364d499c4f1494c24d0f012ac45e33e6292c93f7bd53",
+  "internal_Stage31_runner_key": "ustc/A-2",
+  "meaning": "CLI/path compatibility only; not USTC data",
+  "reused_recipe": "Stage31 TrafficFormer20e, TAGCN50e, YaTC200e, T0 adapter30e/head30e",
+  "unknown_samples_used": 0
+}

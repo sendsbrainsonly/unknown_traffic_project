@@ -1,0 +1,17 @@
+{
+  "dataset": "iscx_vpn",
+  "fold": "file_transfer",
+  "known_train": 9459,
+  "known_validation": 1180,
+  "original_known_train_val_cache_only": true,
+  "role_manifest_sha256": "4316c79d0aee11388907083c1c7e350a4afef2d676256988a183efa70ff82d8e",
+  "source_cache_audit_sha256": {
+    "tf_fig": "c8b72665346aea347e05becb1a7b1a89fb96e5f3575474169defd4c523a1204f",
+    "yatc_mfr": "771aa64b8700ab0b5973fa7bd006e99c65f04feef90ab076e992a34af1f8fc68"
+  },
+  "status": "PASS",
+  "test_feature_values_loaded": 0,
+  "unknown_feature_values_loaded": 0,
+  "unknown_training_samples": 0,
+  "unknown_validation_samples": 0
+}

@@ -1,0 +1,22 @@
+{
+  "capture_audit": [],
+  "copied_from_stage19": 10955,
+  "dataset": "iscx_vpn",
+  "flow_uids_sha256": "211951278fda0527d6c0671303a9a8307a64fc25e670a27d6a0aa72c8c7d45b9",
+  "packet_counts_sha256": "16cbf669cd316366aaa9c8bbd66db8ff75beaaabfeabc5b92686d27dd05eb9f6",
+  "raw_pcap_modified": false,
+  "recovered_from_exact_packet_refs": 0,
+  "stage19_flow_uids_sha256": "41e6bf1717765acbb0a4f4e17b343b9467e6b3650a1c6ce1e4bdc389a06c54e8",
+  "stage19_views_sha256": "3ab24391387d04cc8636d1dfc60ad43e5d306d7066bb76c24950403a82b223f2",
+  "stage20_flows": 10955,
+  "stage20_manifest_sha256": "6404d496f50a6f7f6f397d125ad0cd653c9df152d8db1b9ed2ad2310967950bb",
+  "status": "PASS",
+  "view_shape": [
+    10955,
+    3,
+    8,
+    64
+  ],
+  "views_sha256": "0c43644547cad9fbbce2305032995b5480d1a05a10820b0c82c61d17fd10a4b0",
+  "zero_packet_flows": 0
+}

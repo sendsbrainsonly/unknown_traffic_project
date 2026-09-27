@@ -1,0 +1,17 @@
+{
+  "checkpoint_updates_after_selection": 0,
+  "dataset_score_rows": 12,
+  "datasets": [
+    "VNAT",
+    "ISCX-VPN",
+    "ISCXTor2016"
+  ],
+  "gate": "MIXED_OR_INCONCLUSIVE",
+  "iscx_replay": "PASS",
+  "known_test_for_fitting": 0,
+  "paired_rows": 12,
+  "status": "PASS",
+  "unknown_application_rows": 32,
+  "unknown_for_fitting": 0,
+  "vnat_replay": "PASS"
+}

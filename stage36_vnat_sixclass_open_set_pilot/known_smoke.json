@@ -1,0 +1,9 @@
+{
+  "embedding_dim": 128,
+  "known_test_feature_values_loaded": 0,
+  "known_validation": 1960,
+  "max_abs_logit_difference": 0.0,
+  "prediction_parity": true,
+  "status": "PASS",
+  "unknown_feature_values_loaded": 0
+}

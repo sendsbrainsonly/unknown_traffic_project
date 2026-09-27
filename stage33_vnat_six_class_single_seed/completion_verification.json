@@ -1,0 +1,17 @@
+{
+  "confusion_matrix_parity": true,
+  "metrics_recomputed_independently": {
+    "accuracy": 0.9637755102040816,
+    "macro_f1": 0.9431086487445555,
+    "weighted_f1": 0.9637500086144154
+  },
+  "saved_logit_argmax_parity": true,
+  "selected_checkpoint_hashes_unchanged": true,
+  "stage14b_freeze_hash": "c904daef04d2c8e79469191121325c0a6ceeaeb3e595ef9c4c7d7a62c980ae2f",
+  "stage14b_inputs_unchanged": true,
+  "stage32_source_and_cache_hashes_unchanged": true,
+  "status": "PASS",
+  "test_labels_from_frozen_manifest": true,
+  "test_rows_replayed": 1960,
+  "unknown_feature_values_loaded": 0
+}

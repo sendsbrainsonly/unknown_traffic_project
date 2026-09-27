@@ -1,0 +1,14 @@
+{
+  "dataset": "iscx_vpn",
+  "fold": "communication",
+  "known_test_used_for_fitting": 0,
+  "methods": [
+    "msp",
+    "des_v1"
+  ],
+  "protected_hashes_unchanged": true,
+  "saved_score_rows": 14468,
+  "status": "PASS",
+  "thresholds_replayed": 6,
+  "unknown_used_for_fitting": 0
+}

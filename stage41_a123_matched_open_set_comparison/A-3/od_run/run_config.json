@@ -1,0 +1,68 @@
+{
+  "data_dir": "/home/birkenwald/data/SEU-WXY/WXY-SEU/TrafficClassifier/Projects/unknown_traffic_project/stage41_a123_matched_open_set_comparison/A-3/od_inputs",
+  "output_dir": "/home/birkenwald/data/SEU-WXY/WXY-SEU/TrafficClassifier/Projects/unknown_traffic_project/stage41_a123_matched_open_set_comparison/A-3/od_run",
+  "split": 2,
+  "epochs": 100,
+  "batch_size": 128,
+  "eval_batch_size": 256,
+  "workers": 0,
+  "lr": 0.001,
+  "lamda": 0.005,
+  "latent_dim": 128,
+  "seed": 2022,
+  "eval_seed": 2021,
+  "result_label": "Stage41 matched 10-percent USTC flow pool",
+  "reproduction_boundary": "local frozen 10-percent flow subset; not authors exact five folds",
+  "early_stop_patience": 0,
+  "early_stop_min_epoch": 82,
+  "early_stop_min_delta": 0.0001,
+  "training_protocol": "released-code",
+  "known_classes": [
+    0,
+    1,
+    3,
+    4,
+    7,
+    8,
+    9,
+    11,
+    14,
+    17,
+    2,
+    5,
+    6,
+    10,
+    12
+  ],
+  "unknown_classes": [
+    13,
+    15,
+    16,
+    18,
+    19
+  ],
+  "dataset_sizes": {
+    "train_known": 30884,
+    "validation_known": 3860,
+    "test_known": 3860,
+    "test_unknown": 1031
+  },
+  "split_array_sha256": {
+    "train": "3121262a774538c2b2964fec9ca5d03a7c078623d4423d72f9f84f4ada6e7d9d",
+    "validation": "ef32aaabbf1891d5323e85312fdb934badbabf71c5ee2d63ee7cda0a551c7467",
+    "test": "2c220b006647b05648d7c33c0f4a11d9ccb5183dc8e75217d1326c7de0b32410"
+  },
+  "python": "3.10.18",
+  "torch": "2.8.0+cu128",
+  "torchvision": "0.23.0+cu128",
+  "numpy": "1.26.4",
+  "gpu": "NVIDIA L20",
+  "vendor_commit": "b50a18515a01799468c10f6c9b60c01f8a6a4e7c",
+  "paper_target": {
+    "scenario": "A-3",
+    "accuracy": 0.9551,
+    "f1": 0.9117
+  },
+  "corrected_model_numerics": null,
+  "protocol": "Stage41 matched 10-percent USTC flow pool; session-level 8:1:1; validation-only threshold; training=released-code"
+}

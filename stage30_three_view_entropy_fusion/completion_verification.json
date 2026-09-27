@@ -1,0 +1,32 @@
+{
+  "batch_invariance_max_abs": 8.58306884765625e-06,
+  "checkpoint_replays": 40,
+  "counterfactual_mean_delta_vs_equal": -0.003165769937160634,
+  "counterfactual_positive_units": 8,
+  "encoder_updates": 0,
+  "frozen_source_hashes_unchanged": true,
+  "gate": "FAIL",
+  "gate_details": {
+    "iscx_tor": {
+      "mean_delta_accuracy": -0.009481216457960661,
+      "mean_delta_macro_f1": -0.010299798045305253,
+      "mean_delta_weighted_f1": -0.009417687462247193,
+      "pass": false,
+      "positive_units": 0,
+      "worst_delta_macro_f1": -0.016318849320288598
+    },
+    "iscx_vpn": {
+      "mean_delta_accuracy": -0.0022768670309653684,
+      "mean_delta_macro_f1": -0.0020392338044580073,
+      "mean_delta_weighted_f1": -0.0021531523781059938,
+      "pass": false,
+      "positive_units": 2,
+      "worst_delta_macro_f1": -0.005042304086223859
+    }
+  },
+  "independent_views": 3,
+  "known_test_usage": 0,
+  "run_bundles": 20,
+  "status": "PASS",
+  "unknown_usage": 0
+}

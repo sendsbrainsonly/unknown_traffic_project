@@ -1,0 +1,9 @@
+{
+  "status": "INPUT_GENERATION_REQUIRED",
+  "frozen_protocols": 5,
+  "datasets": 4,
+  "matched_three_view_protocols": 0,
+  "test_feature_values_loaded": 0,
+  "unknown_feature_values_loaded": 0,
+  "raw_provenance_available": true
+}

@@ -1,0 +1,361 @@
+{
+  "schema_version": 1,
+  "experiment_id": "stage37-vpn-tor-joint-single-seed-20260926",
+  "created_at_utc": "2026-09-26T01:04:41Z",
+  "updated_at_utc": "2026-09-26T02:48:46Z",
+  "status": "success",
+  "experiment_type": "ablation",
+  "claim_scope": "diagnostic_previously_exposed_test",
+  "objective": "Matched Stage20 ISCX-VPN and ISCXTor closed-set comparison of three-view joint end-to-end training against Stage32 staged feature fusion",
+  "inputs": [
+    "stage20_dual_coarse_service_protocol/closed_service_manifest.csv",
+    "stage21_coarse_service_ours_e3_benchmark/feature_cache/iscx_vpn/e3_t8_inputs.npz",
+    "stage21_coarse_service_ours_e3_benchmark/feature_cache/iscx_tor/e3_t8_inputs.npz",
+    "stage23_closed_set_method_table/yatc_stage20_mfr_cache/iscx_vpn",
+    "stage23_closed_set_method_table/yatc_stage20_mfr_cache/iscx_tor",
+    "tf_runtime/code/models/pretrained_model.bin",
+    "../YaTC/code/output_dir/pretrained-model.pth",
+    "stage32_three_dataset_coarse_single_seed/runs/iscx_vpn/known_test_evaluation/sample_predictions.csv",
+    "stage32_three_dataset_coarse_single_seed/runs/iscx_tor/known_test_evaluation/sample_predictions.csv"
+  ],
+  "code": {
+    "revision": null,
+    "dirty": true,
+    "changes": [
+      "stage37_joint_vpn_tor_single_seed/run_joint.py",
+      "stage37_joint_vpn_tor_single_seed/run_queue.py",
+      "stage37_joint_vpn_tor_single_seed/verify_results.py"
+    ],
+    "reused_source": "stage35_joint_vs_staged_training/joint_ustc.py"
+  },
+  "execution": {
+    "tmux_session": "stage37_gpu2_joint_0926",
+    "command": "select_gpu.py --min-free-gb 20 --max-utilization 10 --allowed 2 -- python stage37_joint_vpn_tor_single_seed/run_queue.py",
+    "exit_code": 0,
+    "environment": "/home/birkenwald/data/SEU-WXY/conda_envs/2025-10-8-WXY-dgl_py310",
+    "physical_gpu_ids": [
+      2
+    ],
+    "tmux_log": "../.tmux-task/stage37_gpu2_joint_0926/output.log",
+    "tmux_exit_status": "../.tmux-task/stage37_gpu2_joint_0926/exit.status"
+  },
+  "configuration": {
+    "files": [
+      "stage37_joint_vpn_tor_single_seed/run_joint.py",
+      "stage37_joint_vpn_tor_single_seed/runs/iscx_vpn/seed2022_joint_e2e20/config.json",
+      "stage37_joint_vpn_tor_single_seed/runs/iscx_tor/seed2022_joint_e2e20/config.json"
+    ],
+    "parameters": {
+      "epochs": 20,
+      "microbatch": 32,
+      "effective_batch": 64,
+      "fusion": "equal feature-level",
+      "loss": "fused cross-entropy",
+      "checkpoint_selection": "Known Validation Macro-F1",
+      "unknown_used": 0,
+      "test_used_for_checkpoint_selection": 0
+    },
+    "seeds": [
+      2022
+    ]
+  },
+  "core_results": [
+    {
+      "dataset": "iscx_vpn",
+      "known_test_n": 1093,
+      "best_epoch": 15,
+      "validation_macro_f1": 0.882000024326757,
+      "test_accuracy": 0.8783165599268069,
+      "test_macro_f1": 0.8821798763539366,
+      "test_weighted_f1": 0.8758113264339775,
+      "stage32_test_macro_f1": 0.919350448979026,
+      "delta_macro_f1": -0.03717057262508938,
+      "checkpoint_sha256": "1c0165bf6edf5b83a7fe127f17c01728289a8aa89658917afd3afc45f088c4bf"
+    },
+    {
+      "dataset": "iscx_tor",
+      "known_test_n": 1117,
+      "best_epoch": 12,
+      "validation_macro_f1": 0.8521843257213224,
+      "test_accuracy": 0.8478066248880931,
+      "test_macro_f1": 0.8531835190471823,
+      "test_weighted_f1": 0.8504079231295881,
+      "stage32_test_macro_f1": 0.8993751029376555,
+      "delta_macro_f1": -0.04619158389047329,
+      "checkpoint_sha256": "a5e508959f234f2fcb304069d7f4379ebfcbd50f6b1c13c0670551becb14b16e"
+    }
+  ],
+  "artifacts": [
+    {
+      "path": "__pycache__/run_joint.cpython-310.pyc",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 15379,
+      "sha256": "485fa1ee6602fd332fa4f1973fcca0f312fb080c4782efebbf8cd10684853813",
+      "hash_status": "verified"
+    },
+    {
+      "path": "completion_verification.json",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 2322,
+      "sha256": "dd02dc79846780221a3f1ca400b33cb4a4573b88cf2192e511501f82ed1a0055",
+      "hash_status": "verified"
+    },
+    {
+      "path": "paired_comparison.csv",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 699,
+      "sha256": "a640f6454fab20365e0f493e8a437ea9369411697d5f8f7935570ef6d3d5a273",
+      "hash_status": "verified"
+    },
+    {
+      "path": "queue_progress.json",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 268,
+      "sha256": "c39db96bfa49eb7f18eb0cbd941c8adb44a225756e7b35cc601c2b5ae8763f0d",
+      "hash_status": "verified"
+    },
+    {
+      "path": "run_joint.py",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 17217,
+      "sha256": "78024c3a6cdb56c50dd4fa2ae469f96a8731a99d29a25b7161cbffa333748484",
+      "hash_status": "verified"
+    },
+    {
+      "path": "run_queue.py",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 1733,
+      "sha256": "88910892ebc5c3737f173cbc339d4875df0b063bdb1f5d9df8a2348c1d19a678",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/iscx_tor/seed2022_joint_e2e20/TRAIN_SUCCESS",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 14,
+      "sha256": "b272c1f730f26c66bd7d683c7c9bcaf07af32f520291c1d1db19200886a7695a",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/iscx_tor/seed2022_joint_e2e20/config.json",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 1109,
+      "sha256": "fd880384e4865a8bc6841bc995b873cb4c62dd864ea55a651cfb85b77cd27165",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/iscx_tor/seed2022_joint_e2e20/known_test_evaluation/SUCCESS",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 8,
+      "sha256": "1f513d4ecec4e91ddd48da1a59b6d96f1b76c374dc1da641980782a34f43b102",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/iscx_tor/seed2022_joint_e2e20/known_test_evaluation/confusion_matrix.npy",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 328,
+      "sha256": "591fffc6b88adb9dadcda59b72532f2b847126c0065462e9ea44e25985002d93",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/iscx_tor/seed2022_joint_e2e20/known_test_evaluation/logits.npy",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 22468,
+      "sha256": "8c927d1f842c9ad394fa3a0fc8942e5bc2024382e0cddbb5768f2d30e25b177c",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/iscx_tor/seed2022_joint_e2e20/known_test_evaluation/results.json",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 1992,
+      "sha256": "08ce1e9eea8aab78482f302dfcbed850bdd3153a0bd91a56a9fbe3accd6e8c66",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/iscx_tor/seed2022_joint_e2e20/known_test_evaluation/sample_predictions.csv",
+      "scope": "bundle",
+      "role": "predictions",
+      "size_bytes": 99678,
+      "sha256": "5df29dcaea12e28778426caec1a346fdb8f6360644d32ee5ff8facf6f140b829",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/iscx_tor/seed2022_joint_e2e20/known_train_graph_scaler.npz",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 556,
+      "sha256": "bd1c5ea42457a86690ab89e00b884edf1a71810b530020b899146e32c4a2895d",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/iscx_tor/seed2022_joint_e2e20/known_train_initial_feature_scalers.npz",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 10260,
+      "sha256": "f33097b456c94833fec7a61653a931373f689c877ca43f1513da675598ad8015",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/iscx_tor/seed2022_joint_e2e20/model_best.pt",
+      "scope": "bundle",
+      "role": "checkpoint",
+      "size_bytes": 537225668,
+      "sha256": null,
+      "hash_status": "skipped-large"
+    },
+    {
+      "path": "runs/iscx_tor/seed2022_joint_e2e20/progress.json",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 307,
+      "sha256": "9c2d5955ba1822a1a1d39d603a5f485fe9470a14b45e20748f7d869d32f4f4c1",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/iscx_tor/seed2022_joint_e2e20/train_summary.json",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 1939,
+      "sha256": "e4245d52caa04f95fc75a6d7ae97d082ccad9068a49b733c86a26c9fea0e26a8",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/iscx_tor/seed2022_joint_e2e20/training_history.jsonl",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 5680,
+      "sha256": "53ec8eca16031d5b4cec2bb8f3ea8b933630528c8f999213258df52b7e385099",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/iscx_vpn/seed2022_joint_e2e20/TRAIN_SUCCESS",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 14,
+      "sha256": "b272c1f730f26c66bd7d683c7c9bcaf07af32f520291c1d1db19200886a7695a",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/iscx_vpn/seed2022_joint_e2e20/config.json",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 1093,
+      "sha256": "507557ad99d6a6b79a018306269fd82421642c2ff411386a58acc47a4a89524a",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/iscx_vpn/seed2022_joint_e2e20/known_test_evaluation/SUCCESS",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 8,
+      "sha256": "1f513d4ecec4e91ddd48da1a59b6d96f1b76c374dc1da641980782a34f43b102",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/iscx_vpn/seed2022_joint_e2e20/known_test_evaluation/confusion_matrix.npy",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 256,
+      "sha256": "da08cb332bd747dbd8c35a30456594690a1d68b6b05513b9fc2406161001ab93",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/iscx_vpn/seed2022_joint_e2e20/known_test_evaluation/logits.npy",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 17616,
+      "sha256": "ae6b9f61a082c57796fa7c9b183e2cbd11de1cfd52b269836f3c8768691c6a34",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/iscx_vpn/seed2022_joint_e2e20/known_test_evaluation/results.json",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 1784,
+      "sha256": "f37cdda1b3fd5e6233b81772ba931615d8afd102f95699cc48db2e653989be7b",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/iscx_vpn/seed2022_joint_e2e20/known_test_evaluation/sample_predictions.csv",
+      "scope": "bundle",
+      "role": "predictions",
+      "size_bytes": 101364,
+      "sha256": "55813cd9042a0a0b06b445fe6e06c3344c9d7f59f9fba6c44085ebf5d285ca24",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/iscx_vpn/seed2022_joint_e2e20/known_train_graph_scaler.npz",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 556,
+      "sha256": "4f3f372795afc5ee5531d0da8210af89ed0de9dec1f97fb4281885d7c1947410",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/iscx_vpn/seed2022_joint_e2e20/known_train_initial_feature_scalers.npz",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 10260,
+      "sha256": "1b096bbb9e1da58dd2161511f31b55d1805ce38d5a6e7abdde65239108f2fc4f",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/iscx_vpn/seed2022_joint_e2e20/model_best.pt",
+      "scope": "bundle",
+      "role": "checkpoint",
+      "size_bytes": 537219908,
+      "sha256": null,
+      "hash_status": "skipped-large"
+    },
+    {
+      "path": "runs/iscx_vpn/seed2022_joint_e2e20/progress.json",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 306,
+      "sha256": "91f52a47845eca1f1e0572353b7bc1c5d7f8ccd3da27ac768926c47586028108",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/iscx_vpn/seed2022_joint_e2e20/train_summary.json",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 1749,
+      "sha256": "a58c10ecf2d3b6849da5f42c413c54614383d5036e388fa90e2c28e7eb0b760f",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/iscx_vpn/seed2022_joint_e2e20/training_history.jsonl",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 5678,
+      "sha256": "3a39cb56af1e8ae51e27b3f0d410f82c3ac27be837a88b7e86e47316d27ba31f",
+      "hash_status": "verified"
+    },
+    {
+      "path": "verify_results.py",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 5011,
+      "sha256": "9f1de884d500432667e515208b9f8b536aebf28cafdcb8cf1a993e48c3520ad3",
+      "hash_status": "verified"
+    }
+  ],
+  "limitations": [
+    "single seed",
+    "weak capture-level labels",
+    "previously exposed development Test",
+    "20-epoch joint versus different longer staged training budgets"
+  ],
+  "next_step": "No automatic new experiment; Stage32 staged recipe remains stronger on these two closed-set tasks"
+}

@@ -1,0 +1,39 @@
+{
+  "dataset": "iscx_tor",
+  "known_test_feature_values_loaded": 0,
+  "known_train": 8946,
+  "known_validation": 1118,
+  "seed": 2022,
+  "stage20_manifest_sha256": "6404d496f50a6f7f6f397d125ad0cd653c9df152d8db1b9ed2ad2310967950bb",
+  "status": "PASS",
+  "train_class_counts": {
+    "Browsing": 1600,
+    "Chat": 513,
+    "Email": 432,
+    "File-Transfer": 1600,
+    "P2P": 1600,
+    "Streaming": 1601,
+    "VoIP": 1600
+  },
+  "train_image_shape": [
+    8946,
+    32,
+    32
+  ],
+  "training_config_sha256": "25422214aaba4fb77151c853f4efd1548df85ae02552a3f9c5842ca7e686282d",
+  "unknown_test_feature_values_loaded": 0,
+  "val_image_shape": [
+    1118,
+    32,
+    32
+  ],
+  "validation_class_counts": {
+    "Browsing": 200,
+    "Chat": 64,
+    "Email": 54,
+    "File-Transfer": 200,
+    "P2P": 200,
+    "Streaming": 200,
+    "VoIP": 200
+  }
+}

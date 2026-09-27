@@ -1,0 +1,57 @@
+{
+  "application_counts": {
+    "known_test": {
+      "netflix": 20,
+      "rdp": 4,
+      "rsync": 191,
+      "scp": 229,
+      "skype": 126,
+      "ssh": 1356,
+      "youtube": 34
+    },
+    "known_train": {
+      "netflix": 165,
+      "rdp": 36,
+      "rsync": 1530,
+      "scp": 1832,
+      "skype": 1017,
+      "ssh": 10851,
+      "youtube": 273
+    },
+    "known_validation": {
+      "netflix": 20,
+      "rdp": 4,
+      "rsync": 191,
+      "scp": 229,
+      "skype": 126,
+      "ssh": 1356,
+      "youtube": 34
+    },
+    "unknown_test": {
+      "sftp": 1668,
+      "vimeo": 1218,
+      "zoiper": 939
+    }
+  },
+  "freeze_hash": "c904daef04d2c8e79469191121325c0a6ceeaeb3e595ef9c4c7d7a62c980ae2f",
+  "known_test_feature_values_loaded": 0,
+  "protocol": "medium_seed2025",
+  "role_counts": {
+    "known_test": 1960,
+    "known_train": 15704,
+    "known_validation": 1960,
+    "unknown_test": 3825
+  },
+  "source_hashes": {
+    "stage14b_protocol": "5177bf7276812bbb417f085043f8518c8573ea1851de2f1d733deb77c9939ced",
+    "stage14b_split_manifest": "66bf155e6906231b316c384a52f4b46dabd9d3aee76d5f66d86a3941eb172c4e",
+    "stage31_graph": "4bac1fe49a3fa30d4ebf46a540724a8417d8b2cd15f27f30ee5a0a292a172520",
+    "stage31_trafficformer": "63c3b49b629681a834b5848206a9c1bffff3eade0ed8987dcd497ccae8081e78",
+    "stage31_yatc": "deaee0143fa0dbf9de6b75f20ffeec9b9e06fce31a3ddc49a017ea84d5a036a7",
+    "stage33_T0_equal_best.pt": "df70ada8838b5bac35f5af17f9c436ba4306b0a5db114631702e323e76959d63",
+    "stage33_adapters_best.pt": "f3422fe62c96cc21475e59e65cfbfbadbda94df8ff9020f4b040b5d33ad4c7cc"
+  },
+  "status": "PASS",
+  "training_or_fitting_performed": false,
+  "unknown_feature_values_loaded": 0
+}

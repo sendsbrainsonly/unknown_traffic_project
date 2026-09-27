@@ -1,0 +1,13 @@
+{
+  "status": "FROZEN_BEFORE_TRAINING",
+  "sha256": {
+    "stage35_joint_vs_staged_training/joint_ustc.py": "1bde9bcb4b086e8a90124f5732f659f0e90300bafef2489d11f80594ef44cc1b",
+    "stage31_four_dataset_three_view_equal/train_tf_fig_branch.py": "f97f20f059f4fe6c768da4a389ad5fb6a692ffc89e72beeff65ce23aca234ff4",
+    "stage31_four_dataset_three_view_equal/train_yatc_branch.py": "d3bc72b56a97c8bfe5c5358a0585512175898128fffecfb4b8a0ed1e408e3381",
+    "stage31_four_dataset_three_view_equal/train_equal_fusion.py": "27153e71570b193bd37c640d702dbbc5a5435a3612a34993485ca110c5498310",
+    "stage34_ustc_cic_closed_set/ustc_runner.py": "e09b8cff465d22aa97ba49678b1c2ae21e69973e6a93e22691c268b84dcf12c2",
+    "stage17_encoder_recovery_and_open_set_pilot/scripts/train_pilot_run.py": "8e80a255f0f5c0640a418bcaba90150d458e215b3c81c8e01e17a23d23b9fafc",
+    "stage22_pretrained_trafficformer_e3_closed_set_comparison/scripts/train_closed_run.py": "87312277e3d9c0835cf5b40c411b65ce1a0750515265dd8dd1461df0e794640c",
+    "stage23_closed_set_method_table/scripts/train_yatc_closed.py": "e9d532db2c7c8e41759e3b381a2f5ac558b2e02e07fe7dbea650813cbdd7922f"
+  }
+}

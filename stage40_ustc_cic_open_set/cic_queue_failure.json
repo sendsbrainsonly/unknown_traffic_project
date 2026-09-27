@@ -1,0 +1,6 @@
+{
+  "status": "FAILED",
+  "error": "RuntimeError('Stage39 training queue failed; inspect GPU ownership before Stage40 launch')",
+  "traceback": "Traceback (most recent call last):\n  File \"/home/birkenwald/data/SEU-WXY/WXY-SEU/TrafficClassifier/Projects/unknown_traffic_project/stage40_ustc_cic_open_set/run_cic_queue.py\", line 143, in main\n    raise RuntimeError(\"Stage39 training queue failed; inspect GPU ownership before Stage40 launch\")\nRuntimeError: Stage39 training queue failed; inspect GPU ownership before Stage40 launch\n",
+  "updated_at_utc": "2026-09-26T16:16:04.010828+00:00"
+}

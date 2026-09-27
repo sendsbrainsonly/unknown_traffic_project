@@ -1,0 +1,64 @@
+{
+  "checkpoint_hashes": {
+    "T0_equal/T0_equal_best.pt": "20b3e84fd641244f12c2b1371ce88cc6813f710bbfae8a07a9ffe50626cc62aa",
+    "T0_equal/adapters_best.pt": "d711784f1ac522ff2a7441ad42dec0411a63058f0fdbcc54a30decd6e148ac1f",
+    "graph/model_best.pt": "6f75c08bdef97e05b14c315937652511c48e444dd0e31e733f6506b4cc45953f",
+    "role_manifest.csv": "5fa514e13f61da68fd26f9ca031ebf388f256187049f9359e5179a683d0d824f",
+    "trafficformer/model_best.pt": "58d1c09585ee48ccbcd79d9fba41432ca3efd99bf0244176410586bff1bf537a",
+    "yatc/model_best.pt": "7ff3c4da0a1fe229a745d303e097a7c39a0c47e238cb1357c935439db4d19c03"
+  },
+  "classes": [
+    "Browsing",
+    "Communication",
+    "File-Transfer"
+  ],
+  "dataset": "iscx_tor",
+  "decision_rule": "score > threshold",
+  "fold": "streaming",
+  "global_local_weights": [
+    0.5,
+    0.5
+  ],
+  "knn_k": 10,
+  "known_train": 4874,
+  "known_validation": 608,
+  "known_validation_metrics": {
+    "accuracy": 0.9802631578947368,
+    "macro_f1": 0.9804385017960519,
+    "weighted_f1": 0.9803199500806903
+  },
+  "mad": {
+    "centroid": 3.285368646878163,
+    "local": 0.012955034524202345
+  },
+  "median": {
+    "centroid": 7.159511690853736,
+    "local": 0.017596004717051982
+  },
+  "methods": [
+    "msp",
+    "des_v1"
+  ],
+  "percentiles": [
+    90,
+    95,
+    99
+  ],
+  "quantile_method": "higher",
+  "role_manifest_sha256": "5fa514e13f61da68fd26f9ca031ebf388f256187049f9359e5179a683d0d824f",
+  "status": "PASS",
+  "test_used_for_fitting": 0,
+  "thresholds": {
+    "des_v1": {
+      "90": 9.918182553332006,
+      "95": 34.13790567023831,
+      "99": 195.57546457408694
+    },
+    "msp": {
+      "90": 0.00491308851395611,
+      "95": 0.010881447820567658,
+      "99": 0.20274556799197108
+    }
+  },
+  "unknown_used_for_fitting": 0
+}

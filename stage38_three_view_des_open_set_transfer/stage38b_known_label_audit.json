@@ -1,0 +1,108 @@
+{
+  "status": "PASS",
+  "datasets": [
+    {
+      "dataset": "iscx_vpn",
+      "status": "PASS",
+      "protocol": "Stage12 medium_seed2022",
+      "role_counts": {
+        "known_train": 12910,
+        "known_validation": 1611,
+        "known_test": 1621,
+        "unknown_test": 6000
+      },
+      "known_coarse_classes": [
+        "Communication",
+        "File-Transfer",
+        "P2P",
+        "Streaming"
+      ],
+      "unknown_applications": [
+        "Hangouts",
+        "Skype",
+        "YouTube"
+      ],
+      "multiple_categories_per_known_application": {
+        "Facebook": [
+          "Chat",
+          "VoIP"
+        ]
+      },
+      "label_granularity": "capture-derived category metadata, not verified per-flow activity",
+      "test_feature_values_loaded": 0,
+      "unknown_feature_values_loaded": 0,
+      "source_hashes": {
+        "stage12_dual_external_validation/protocol/iscx_vpn/split_manifest.csv": "618670af28797d9ceffc7138dcb9d2622552cdfc4712c38bd5da0886ec95c793",
+        "stage12_dual_external_validation/protocol/iscx_vpn/protocol_freeze.json": "7308bb5fe7a93b74510492edb89e49e5c9a5c84517b76480868ff8746f25b6dd",
+        "stage12_dual_external_validation/protocol/iscx_vpn/unknown_class_protocol.json": "a088787beba0ca5a7c85607d816e2301d22e493d0334e709b7e9e56d255e0999",
+        "stage31_four_dataset_three_view_equal/input_caches/iscx_vpn/tf_fig/cache_audit.json": "c8b72665346aea347e05becb1a7b1a89fb96e5f3575474169defd4c523a1204f",
+        "stage31_four_dataset_three_view_equal/input_caches/iscx_vpn/yatc_mfr/cache_audit.json": "771aa64b8700ab0b5973fa7bd006e99c65f04feef90ab076e992a34af1f8fc68",
+        "stage31_four_dataset_three_view_equal/input_caches/iscx_vpn/tf_fig/flow_ids.npy": "ffa4859d2c7ecd02d689223d525cb5d0161c2e207e5f9f715296faae4773d29b",
+        "stage31_four_dataset_three_view_equal/input_caches/iscx_vpn/yatc_mfr/known_train_flow_ids.npy": "cf1332761ca9cf5ec83e831b2da192927dc3a4d803cc357eab3b460970c9a6fa",
+        "stage31_four_dataset_three_view_equal/input_caches/iscx_vpn/yatc_mfr/known_validation_flow_ids.npy": "db5c3f9403a8d3317ef8b85093d56b0129a5fef1e6131b1562d998840264eef2",
+        "stage31_four_dataset_three_view_equal/input_caches/iscx_vpn/tf_fig/token_ids.npy": "aa11f0a8aba90e86b3b287344b141b7cc13544b99ee103243019cf41e0b99bc7",
+        "stage31_four_dataset_three_view_equal/input_caches/iscx_vpn/tf_fig/segments.npy": "507439c58ee3b0c775e5d363255e5ff7914c67f5d289c4fc517ca78868c326be",
+        "stage31_four_dataset_three_view_equal/input_caches/iscx_vpn/tf_fig/fig_x.npy": "4dc9e1ca4d092b19824d7f73ed111365a208e7cedc8f58a01028c76452204ff7",
+        "stage31_four_dataset_three_view_equal/input_caches/iscx_vpn/tf_fig/fig_adj.npy": "75b71b7687b3606ed5f58f9c28f778beee79c5b251d7128865e859b7af54c9dd",
+        "stage31_four_dataset_three_view_equal/input_caches/iscx_vpn/tf_fig/fig_mask.npy": "7fa42e8938d045cc704f0b3baf1b4d5a300525cea1d4754adfb29f64862ce749",
+        "stage31_four_dataset_three_view_equal/input_caches/iscx_vpn/yatc_mfr/known_train_mfr.npy": "12c1feeb68f445f58e28a6072c844d65291c7d956599051d18d55e28dfeea2b3",
+        "stage31_four_dataset_three_view_equal/input_caches/iscx_vpn/yatc_mfr/known_validation_mfr.npy": "9ee84c61461db1ce22865de4cc908cf7e045de148e6d24b8fc1eb0cbcfe6f64a"
+      }
+    },
+    {
+      "dataset": "iscx_tor",
+      "status": "PASS",
+      "protocol": "Stage12 medium_seed2022",
+      "role_counts": {
+        "known_train": 8876,
+        "known_validation": 1107,
+        "known_test": 1113,
+        "unknown_test": 4000
+      },
+      "known_coarse_classes": [
+        "Browsing",
+        "Communication",
+        "File-Transfer",
+        "Streaming"
+      ],
+      "unknown_applications": [
+        "P2P",
+        "Skype"
+      ],
+      "multiple_categories_per_known_application": {
+        "Facebook": [
+          "Browsing",
+          "Chat",
+          "VoIP"
+        ],
+        "Hangouts": [
+          "Chat",
+          "VoIP"
+        ]
+      },
+      "label_granularity": "capture-derived category metadata, not verified per-flow activity",
+      "test_feature_values_loaded": 0,
+      "unknown_feature_values_loaded": 0,
+      "source_hashes": {
+        "stage12_dual_external_validation/protocol/iscx_tor/split_manifest.csv": "7de5289ef75966fb360dc743778ba90a31f72c2eaf6694dc3a33291a794bc0d7",
+        "stage12_dual_external_validation/protocol/iscx_tor/protocol_freeze.json": "a19d1545a77bbe4a96f303197c6d4bacf5efe134244d86c7b6c2d94e8ffac582",
+        "stage12_dual_external_validation/protocol/iscx_tor/unknown_class_protocol.json": "2b8ad9dfe176190f88bce1126d7905e85fab9ebdc953aa50448328f3fd705dbb",
+        "stage31_four_dataset_three_view_equal/input_caches/iscx_tor/tf_fig/cache_audit.json": "63a08c514e8aea57f30c16bc9882f891837eeda20ce62a6d3a4a3ca8a4a62ab4",
+        "stage31_four_dataset_three_view_equal/input_caches/iscx_tor/yatc_mfr/cache_audit.json": "c83fde245e22a04144de48375ae4378df723666e43e85275e8efe286daeab357",
+        "stage31_four_dataset_three_view_equal/input_caches/iscx_tor/tf_fig/flow_ids.npy": "fb054fa9428f0ae471ad47e50f6d8e91a74f38f623eb1ef54f78ef0c5b846e17",
+        "stage31_four_dataset_three_view_equal/input_caches/iscx_tor/yatc_mfr/known_train_flow_ids.npy": "109fdd3afad52108d069bef8e6e9f204ee481a7c1230e89971cde16c00f7962c",
+        "stage31_four_dataset_three_view_equal/input_caches/iscx_tor/yatc_mfr/known_validation_flow_ids.npy": "045eb57eed781d7329e6510ed7626504fa5bfb6cf541eaa9a6053aeacb06e444",
+        "stage31_four_dataset_three_view_equal/input_caches/iscx_tor/tf_fig/token_ids.npy": "5a58d9b782cac8cd2217cae3e0941a05d63066ff9bbaae6c16a2b30c1f9c2816",
+        "stage31_four_dataset_three_view_equal/input_caches/iscx_tor/tf_fig/segments.npy": "209b2bb7c63874702bd32cc55aa2fe322f09a7e8fe8c8544c173bd7ab66e4433",
+        "stage31_four_dataset_three_view_equal/input_caches/iscx_tor/tf_fig/fig_x.npy": "7cf7774907593bf74a9c8448c74fc2e1794f901b0050117da81e772f85f1c161",
+        "stage31_four_dataset_three_view_equal/input_caches/iscx_tor/tf_fig/fig_adj.npy": "152ad3ace9e0b6e5b155a2635cd96beb52d7f76b397557b669cabc28c191ff55",
+        "stage31_four_dataset_three_view_equal/input_caches/iscx_tor/tf_fig/fig_mask.npy": "335dee490dda7f0e1088de7d833b8c02bb23f28eb6361310546ea681dfd179db",
+        "stage31_four_dataset_three_view_equal/input_caches/iscx_tor/yatc_mfr/known_train_mfr.npy": "dba967cd9f8216e00631fb62baa68ee4285a734b6a6dc0992f5ee54b48fc8c45",
+        "stage31_four_dataset_three_view_equal/input_caches/iscx_tor/yatc_mfr/known_validation_mfr.npy": "f83df3a697c316beb4c623faf306f94a1cffe71b8c14ca4f9da82930db2ed4c6"
+      }
+    }
+  ],
+  "unknown_training_samples": 0,
+  "unknown_validation_samples": 0,
+  "test_feature_values_loaded": 0
+}

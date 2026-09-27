@@ -1,0 +1,23 @@
+{
+  "status": "PASS",
+  "test_features_read": 0,
+  "unknown_features_read": 0,
+  "results": {
+    "A-1": {
+      "shared_flows": 38998,
+      "mfr_role_counts": {
+        "known_train": 34665,
+        "known_validation": 4333
+      },
+      "arrays_bitwise_equal": true
+    },
+    "A-3": {
+      "shared_flows": 34744,
+      "mfr_role_counts": {
+        "known_train": 30884,
+        "known_validation": 3860
+      },
+      "arrays_bitwise_equal": true
+    }
+  }
+}

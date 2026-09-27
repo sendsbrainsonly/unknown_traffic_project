@@ -1,0 +1,145 @@
+{
+  "sample_counts": {
+    "validation_known": 4333,
+    "test_known_all": 4333,
+    "test_unknown_all": 558,
+    "test_known_balanced": 558,
+    "test_unknown_balanced": 558,
+    "test_unknown": 558
+  },
+  "closed_world_known_test": {
+    "accuracy": 0.9755365797369029,
+    "precision_weighted": 0.9797726833719748,
+    "recall_weighted": 0.9755365797369029,
+    "f1_weighted": 0.9750343547701332
+  },
+  "open_world": {
+    "evaluation_protocol_version": "symmetric-balanced-v2",
+    "primary_protocol": "balanced_1to1",
+    "paper_threshold_source": "95th percentile of known validation scores only",
+    "sample_counts": {
+      "validation_known": 4333,
+      "test_known_all": 4333,
+      "test_unknown_all": 558,
+      "test_known_balanced": 558,
+      "test_unknown_balanced": 558,
+      "test_unknown": 558
+    },
+    "balanced_1to1": {
+      "sample_counts": {
+        "known": 558,
+        "unknown": 558
+      },
+      "unknown_fraction": 0.5,
+      "auroc": 0.9174824321373056,
+      "paper_validation_95pct": {
+        "threshold": 6.1268510818481445,
+        "accuracy": 0.6415770609318996,
+        "precision": 0.8291666666666667,
+        "recall": 0.35663082437275984,
+        "f1": 0.49874686716791977,
+        "absolute_difference_from_paper": {
+          "accuracy": -0.2506229390681004,
+          "f1": -0.39225313283208024
+        }
+      },
+      "released_oracle_youden": {
+        "threshold": 1.8885040283203125,
+        "accuracy": 0.8700716845878136,
+        "precision": 0.8629173989455184,
+        "recall": 0.8799283154121864,
+        "f1": 0.8713398402839396,
+        "absolute_difference_from_paper": {
+          "accuracy": -0.022128315412186406,
+          "f1": -0.019660159716060388
+        }
+      },
+      "mean_known_score": 1.6298112869262695,
+      "mean_unknown_score": 9.112990379333496
+    },
+    "full_test_distribution": {
+      "sample_counts": {
+        "known": 4333,
+        "unknown": 558
+      },
+      "unknown_fraction": 0.11408709875281128,
+      "auroc": 0.9334171280338356,
+      "paper_validation_95pct": {
+        "threshold": 6.1268510818481445,
+        "accuracy": 0.8793702719280311,
+        "precision": 0.4627906976744186,
+        "recall": 0.35663082437275984,
+        "f1": 0.402834008097166
+      },
+      "released_oracle_youden": {
+        "threshold": 1.9324278831481934,
+        "accuracy": 0.8773257002657943,
+        "precision": 0.47941176470588237,
+        "recall": 0.8763440860215054,
+        "f1": 0.6197718631178707
+      },
+      "mean_known_score": 1.2894785404205322,
+      "mean_unknown_score": 9.112990379333496
+    },
+    "legacy_released_asymmetric": {
+      "sample_counts": {
+        "known": 558,
+        "unknown": 558
+      },
+      "unknown_fraction": 0.5,
+      "auroc": 0.9174824321373056,
+      "paper_validation_95pct": {
+        "threshold": 6.1268510818481445,
+        "accuracy": 0.6415770609318996,
+        "precision": 0.8291666666666667,
+        "recall": 0.35663082437275984,
+        "f1": 0.49874686716791977
+      },
+      "released_oracle_youden": {
+        "threshold": 1.8885040283203125,
+        "accuracy": 0.8700716845878136,
+        "precision": 0.8629173989455184,
+        "recall": 0.8799283154121864,
+        "f1": 0.8713398402839396
+      },
+      "mean_known_score": 1.6298112869262695,
+      "mean_unknown_score": 9.112990379333496
+    },
+    "auroc": 0.9174824321373056,
+    "paper_validation_95pct": {
+      "threshold": 6.1268510818481445,
+      "accuracy": 0.6415770609318996,
+      "precision": 0.8291666666666667,
+      "recall": 0.35663082437275984,
+      "f1": 0.49874686716791977,
+      "absolute_difference_from_paper": {
+        "accuracy": -0.2506229390681004,
+        "f1": -0.39225313283208024
+      }
+    },
+    "released_oracle_youden": {
+      "threshold": 1.8885040283203125,
+      "accuracy": 0.8700716845878136,
+      "precision": 0.8629173989455184,
+      "recall": 0.8799283154121864,
+      "f1": 0.8713398402839396,
+      "absolute_difference_from_paper": {
+        "accuracy": -0.022128315412186406,
+        "f1": -0.019660159716060388
+      }
+    },
+    "mean_known_score": 1.6298112869262695,
+    "mean_unknown_score": 9.112990379333496
+  },
+  "training": {
+    "best_epoch": 81,
+    "best_validation_accuracy": 0.9785368105238864,
+    "configured_epochs": 100,
+    "completed_epochs": 100,
+    "stopped_early": false,
+    "early_stop_patience": 0,
+    "early_stop_min_epoch": 82,
+    "early_stop_min_delta": 0.0001,
+    "elapsed_seconds": 1875.0561971664429
+  }
+}

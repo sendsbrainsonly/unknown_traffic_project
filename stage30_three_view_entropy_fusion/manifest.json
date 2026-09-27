@@ -1,0 +1,2995 @@
+{
+  "schema_version": 1,
+  "experiment_id": "stage30-three-view-entropy-fusion-20260925-v1",
+  "created_at_utc": "2026-09-25T06:42:50Z",
+  "updated_at_utc": "2026-09-25T07:01:16Z",
+  "status": "success",
+  "experiment_type": "ablation",
+  "claim_scope": "diagnostic",
+  "objective": "Test ER-CMGI-inspired per-view entropy fusion on true frozen TrafficFormer FIG YaTC three-branch features",
+  "inputs": [
+    {
+      "path": "frozen_input_hashes_before.json",
+      "role": "Stage20/22/27 Known-only sources"
+    }
+  ],
+  "code": {
+    "revision": null,
+    "dirty": null,
+    "changes": []
+  },
+  "execution": {
+    "tmux_session": "codex_stage30_queue_20260925",
+    "command": "run_queue.py; aggregate.py",
+    "exit_code": 0,
+    "environment": "fixed TrafficClassifier DGL Conda prefix",
+    "physical_gpu_ids": [
+      0,
+      1,
+      2
+    ]
+  },
+  "configuration": {
+    "files": [
+      "stage30_three_view_entropy_fusion/EXPERIMENT_PLAN.md",
+      "stage30_three_view_entropy_fusion/run_one.py"
+    ],
+    "parameters": {
+      "encoder_seeds": [
+        2022,
+        2023
+      ],
+      "training_seeds": [
+        2022,
+        2023,
+        2024,
+        2025,
+        2026
+      ],
+      "adapter_epochs": 30,
+      "head_epochs": 30,
+      "batch_size": 256,
+      "views": 3
+    },
+    "seeds": [
+      2022,
+      2023,
+      2024,
+      2025,
+      2026
+    ]
+  },
+  "core_results": [
+    {
+      "gate": "FAIL",
+      "units": 20,
+      "counterfactual_mean_delta": -0.003165769937160634
+    }
+  ],
+  "artifacts": [
+    {
+      "path": "EXPERIMENT_PLAN.md",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 3990,
+      "sha256": "a6b968bcff82e8507eb283f4a60a2bf98d21420cef785cb3c696eec145058880",
+      "hash_status": "verified"
+    },
+    {
+      "path": "__pycache__/aggregate.cpython-310.pyc",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 14879,
+      "sha256": "67f9ecb9dba8154aef0c48c35db173cd2d17e658dfb70c2cb8d409e0c87f68d9",
+      "hash_status": "verified"
+    },
+    {
+      "path": "__pycache__/finalize_run.cpython-310.pyc",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 7367,
+      "sha256": "740b28772214b2e996e1774717019db60de811dda906bb92842b950ebe6cc379",
+      "hash_status": "verified"
+    },
+    {
+      "path": "__pycache__/preflight.cpython-310.pyc",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 4330,
+      "sha256": "7cc939f97a542161cd2f4b10bebd85c641df06569f4de4e7d207e2f5525eb9f1",
+      "hash_status": "verified"
+    },
+    {
+      "path": "__pycache__/run_one.cpython-310.pyc",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 16054,
+      "sha256": "7b62e986fdfb2f49ae7deb791fe8be6415aa04d7f58b07a42bcaf025e7ebd27b",
+      "hash_status": "verified"
+    },
+    {
+      "path": "__pycache__/run_queue.cpython-310.pyc",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 6030,
+      "sha256": "c877da727e2732697cd098c64148623807dde681992a8d73ef79c35561c54265",
+      "hash_status": "verified"
+    },
+    {
+      "path": "aggregate.py",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 16699,
+      "sha256": "01047c4f60e61d6e5398e9b5a92c7a3160abddc54e9479c78ba712648baee881",
+      "hash_status": "verified"
+    },
+    {
+      "path": "completion_verification.json",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 977,
+      "sha256": "fccefbfbcca9e9efcfda167cb86f89c37f1d00e56b0e6429c2040adda347d9b2",
+      "hash_status": "verified"
+    },
+    {
+      "path": "finalize_run.py",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 8411,
+      "sha256": "1a139afafb3ca934bf723a601a8f75aea6fa1c806ee6f167a46d7e8f3f57d91f",
+      "hash_status": "verified"
+    },
+    {
+      "path": "frozen_input_hashes_after.json",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 3583,
+      "sha256": "25a3b0e38c5763a95caf7992f092ade316a22668053b012e6876fe879ba1a086",
+      "hash_status": "verified"
+    },
+    {
+      "path": "frozen_input_hashes_before.json",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 3583,
+      "sha256": "5012ad981ee58697fa0df8032480f7d8f94535e7aae2bef4e7040b85b11ed9ce",
+      "hash_status": "verified"
+    },
+    {
+      "path": "input_audit.json",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 3601,
+      "sha256": "e9fb3ebe2c8dc860a4d48fd13e0d88f99ca8b3865c5bffda81803e65eb0cbd73",
+      "hash_status": "verified"
+    },
+    {
+      "path": "preflight.py",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 4169,
+      "sha256": "06ce9cb2c5832c718d74ca676376976d5f5ca7f4509374b5132eca1423b18333",
+      "hash_status": "verified"
+    },
+    {
+      "path": "queue_progress.json",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 4257,
+      "sha256": "77a32cf93c47d850849561e9f9f36747cc91a0bb535243642443d0ec38b4bbfc",
+      "hash_status": "verified"
+    },
+    {
+      "path": "run_one.py",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 17277,
+      "sha256": "f51b7be6ea5c84ea30e149fbc6dbba7043b709dc8e7646a6af6d41ade861d5cb",
+      "hash_status": "verified"
+    },
+    {
+      "path": "run_queue.py",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 6514,
+      "sha256": "9592fda8372f0dde82c8792128861e069913b0214092895690dd10aaa3cfb3c3",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/iscx_tor/encoder2022_train2022/RESULTS.md",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 1302,
+      "sha256": "6bd472999576552fd6936e7d56938fd12f030b45100f95341de7275e823363e4",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/iscx_tor/encoder2022_train2022/SUCCESS",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 8,
+      "sha256": "1f513d4ecec4e91ddd48da1a59b6d96f1b76c374dc1da641980782a34f43b102",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/iscx_tor/encoder2022_train2022/T0_equal_best.pt",
+      "scope": "bundle",
+      "role": "checkpoint",
+      "size_bytes": 172257,
+      "sha256": "ee510317837aed39c85bcaaa5c8f4cef0880840aea87df57cf18c2927eb30336",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/iscx_tor/encoder2022_train2022/T1_three_entropy_best.pt",
+      "scope": "bundle",
+      "role": "checkpoint",
+      "size_bytes": 172635,
+      "sha256": "2afe449a037dbd8c691348154d81dd6398d67f42d571c2c308de05709536af25",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/iscx_tor/encoder2022_train2022/adapters_best.pt",
+      "scope": "bundle",
+      "role": "checkpoint",
+      "size_bytes": 970081,
+      "sha256": "cc4fe15dda5a6cfb1990dff576b3bc1c43595d57f1a1ecfbf7a189f6048b6f47",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/iscx_tor/encoder2022_train2022/counterfactual.json",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 488,
+      "sha256": "8da5c4ff43540908842657e920ef90a144d5d1db9ebb5dd24048559a17073445",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/iscx_tor/encoder2022_train2022/independent_replay.json",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 668,
+      "sha256": "ad8ce41842723e0b9b29674e8bf09c79cf28a5f76f2e5b221fa4ffad6bf96d69",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/iscx_tor/encoder2022_train2022/known_validation_entropy_weights.csv",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 496795,
+      "sha256": "15f53c22bc1f27d3a4d2badc87405716bf004f4d764eb1cae68c86f3790276dd",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/iscx_tor/encoder2022_train2022/known_validation_logits.npz",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 166224,
+      "sha256": "8fa154d0be487c741e29eefac7aaa6a6d2c2230c5e0f6f72108e2915df400aa4",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/iscx_tor/encoder2022_train2022/known_validation_predictions.csv",
+      "scope": "bundle",
+      "role": "predictions",
+      "size_bytes": 259956,
+      "sha256": "ba22f2bb46ce8b51fb1bbeac891a7f5f0accef147bf99e8ccf6f0fc63452b154",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/iscx_tor/encoder2022_train2022/manifest.json",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 5280,
+      "sha256": "c3258e32bd6a9d9f9f45a7a6170eca54370c3c85a4799562d4953e963b03fc95",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/iscx_tor/encoder2022_train2022/per_class.csv",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 1249,
+      "sha256": "6d53e8e997c9a2379ded5ffd2270d6fff81070d73b52649566238ee929dc318c",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/iscx_tor/encoder2022_train2022/run_metrics.csv",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 286,
+      "sha256": "431e2c0eefd8d5f08402ce8e183b21ee8e78a2b03b8a34c78a0c1bc44d90e692",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/iscx_tor/encoder2022_train2022/source_hashes_after.json",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 855,
+      "sha256": "93550b3a5b5658ba93992066dd14dec0f77d557108649974f5c101aecaafda71",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/iscx_tor/encoder2022_train2022/source_hashes_before.json",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 855,
+      "sha256": "93550b3a5b5658ba93992066dd14dec0f77d557108649974f5c101aecaafda71",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/iscx_tor/encoder2022_train2022/training_history.csv",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 16810,
+      "sha256": "543d466484d144fc3f00c6008e634d518d7a865baf0c3f5c0743b7b3737c14fc",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/iscx_tor/encoder2022_train2022/verification.json",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 744,
+      "sha256": "448c47ff87792dc5a35009a00066c66bc3f6f5e3aca4172e16cd6465a7cc069f",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/iscx_tor/encoder2022_train2023/RESULTS.md",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 1302,
+      "sha256": "2b935afa3089019629c4166379ad7684943874c5cc11ed22fc963edd7fc525f8",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/iscx_tor/encoder2022_train2023/SUCCESS",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 8,
+      "sha256": "1f513d4ecec4e91ddd48da1a59b6d96f1b76c374dc1da641980782a34f43b102",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/iscx_tor/encoder2022_train2023/T0_equal_best.pt",
+      "scope": "bundle",
+      "role": "checkpoint",
+      "size_bytes": 172257,
+      "sha256": "a6b5badbbc0e2418982c33e2ff5489ae437f9c6d6550ae32883564c2f889178a",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/iscx_tor/encoder2022_train2023/T1_three_entropy_best.pt",
+      "scope": "bundle",
+      "role": "checkpoint",
+      "size_bytes": 172635,
+      "sha256": "1475765af54bc6bea0d9126aef7c15b3d0f4af30226f1b9800e821cd14323c69",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/iscx_tor/encoder2022_train2023/adapters_best.pt",
+      "scope": "bundle",
+      "role": "checkpoint",
+      "size_bytes": 970081,
+      "sha256": "a38faa23ce6550e2f4f530e3a11e99f1bbb6eacdce0ce4eb41f317c7bd87b66d",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/iscx_tor/encoder2022_train2023/counterfactual.json",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 486,
+      "sha256": "1d0e2e1be147a02dd1f69c14714893c6ece3ddcab85dd05c21c6a6cd7aaf6bb6",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/iscx_tor/encoder2022_train2023/independent_replay.json",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 666,
+      "sha256": "67d792cd73725768893b4684baec62dbff32a8bf732b335334e7de972126b4d6",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/iscx_tor/encoder2022_train2023/known_validation_entropy_weights.csv",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 496890,
+      "sha256": "5769ccd20202bd48b8c7540bb48c61c842ba1ca59740a4e377f0663dce3d2f6e",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/iscx_tor/encoder2022_train2023/known_validation_logits.npz",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 166638,
+      "sha256": "10689de374bc27de6ef1cb218d9e5e244950e4b2099becc92eed0692cfe2c2a2",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/iscx_tor/encoder2022_train2023/known_validation_predictions.csv",
+      "scope": "bundle",
+      "role": "predictions",
+      "size_bytes": 259986,
+      "sha256": "bf944521e5c2cfc84bcd7890a429511d8911f0f7483c2f3c5ed021b280ac9d0b",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/iscx_tor/encoder2022_train2023/manifest.json",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 5280,
+      "sha256": "6fa0fb62fefce1b7681ef09784a739d786caa599542b0cd87983c6afcc686c4a",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/iscx_tor/encoder2022_train2023/per_class.csv",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 1303,
+      "sha256": "96fe2528598ce141b947238680f933c5eab151841ec46abe6e09bc52a9b434ac",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/iscx_tor/encoder2022_train2023/run_metrics.csv",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 286,
+      "sha256": "8e3279b879ddb6bbda881419677024a522fbb00a338affc76d2f7444abd430c0",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/iscx_tor/encoder2022_train2023/source_hashes_after.json",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 855,
+      "sha256": "93550b3a5b5658ba93992066dd14dec0f77d557108649974f5c101aecaafda71",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/iscx_tor/encoder2022_train2023/source_hashes_before.json",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 855,
+      "sha256": "93550b3a5b5658ba93992066dd14dec0f77d557108649974f5c101aecaafda71",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/iscx_tor/encoder2022_train2023/training_history.csv",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 16776,
+      "sha256": "6ccab85b3c407fef587171b215174abe24be6d171fadd0863e5c9a08a534edbc",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/iscx_tor/encoder2022_train2023/verification.json",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 744,
+      "sha256": "cbab39a7384c7c947c5821ceb86847b02615f293da091b3652d282fc30d48876",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/iscx_tor/encoder2022_train2024/RESULTS.md",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 1302,
+      "sha256": "1fbc3139c4b48001e04f3dabdc4f7718dc5325897276887ed3273d8639d20a47",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/iscx_tor/encoder2022_train2024/SUCCESS",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 8,
+      "sha256": "1f513d4ecec4e91ddd48da1a59b6d96f1b76c374dc1da641980782a34f43b102",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/iscx_tor/encoder2022_train2024/T0_equal_best.pt",
+      "scope": "bundle",
+      "role": "checkpoint",
+      "size_bytes": 172257,
+      "sha256": "7cf21eb8e325e48b51457de392cb8300e57b2e7a9e372aaf84cdf68ecae3b6d5",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/iscx_tor/encoder2022_train2024/T1_three_entropy_best.pt",
+      "scope": "bundle",
+      "role": "checkpoint",
+      "size_bytes": 172635,
+      "sha256": "4dcc975fefa63fb66d6692bf3fa08f9f3f4092e4ffe263b02adfe6d9dff3127b",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/iscx_tor/encoder2022_train2024/adapters_best.pt",
+      "scope": "bundle",
+      "role": "checkpoint",
+      "size_bytes": 970081,
+      "sha256": "b1a3d9dde9f0d402de59469b531fc29d0a67b1130d063e087bdd02522184e04c",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/iscx_tor/encoder2022_train2024/counterfactual.json",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 490,
+      "sha256": "8d0927e68080a5a86adacfa86e8bf32aa575f9bf05cfbf80626b5bbf5a671abe",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/iscx_tor/encoder2022_train2024/independent_replay.json",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 668,
+      "sha256": "41e141cf10191098b1478f22137442997df651a52452759c522784dddd81901e",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/iscx_tor/encoder2022_train2024/known_validation_entropy_weights.csv",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 496806,
+      "sha256": "ddb381bd8a3774e7fadae77de66a9b466a8734ca9722c02e5ee467e4eafa4115",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/iscx_tor/encoder2022_train2024/known_validation_logits.npz",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 167335,
+      "sha256": "dcadaf14a0342af44794d581bb6186b405543883429c3a9be3cc0d6280ea3b06",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/iscx_tor/encoder2022_train2024/known_validation_predictions.csv",
+      "scope": "bundle",
+      "role": "predictions",
+      "size_bytes": 260019,
+      "sha256": "1d544f7ac54a17d6218d91b7475128d4b052fabfd02151e9f4c6cbfd681c4c98",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/iscx_tor/encoder2022_train2024/manifest.json",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 5280,
+      "sha256": "ad696258b62a5bb0844bc9f7c187eed53c11307000c1b8c8b876b6e08d4ed323",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/iscx_tor/encoder2022_train2024/per_class.csv",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 1307,
+      "sha256": "1f188aec87615b8e19928681407080ac8118eaa16b1778bae916d72be16cdd05",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/iscx_tor/encoder2022_train2024/run_metrics.csv",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 286,
+      "sha256": "da6cde77f0045343cb60d2484f55757a28faee10afebe78db078f35b7a83bd7a",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/iscx_tor/encoder2022_train2024/source_hashes_after.json",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 855,
+      "sha256": "93550b3a5b5658ba93992066dd14dec0f77d557108649974f5c101aecaafda71",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/iscx_tor/encoder2022_train2024/source_hashes_before.json",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 855,
+      "sha256": "93550b3a5b5658ba93992066dd14dec0f77d557108649974f5c101aecaafda71",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/iscx_tor/encoder2022_train2024/training_history.csv",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 16793,
+      "sha256": "4f0ac35ef9bacbda3466473ec5bb0870929c77decae5e9e6e4afd7c631e8075b",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/iscx_tor/encoder2022_train2024/verification.json",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 744,
+      "sha256": "d161e7aa8e8f0caf66710d02f8fd07e0ecb40ed1fb576f5cb479455857e054bc",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/iscx_tor/encoder2022_train2025/RESULTS.md",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 1302,
+      "sha256": "7502e37377a8c1564822fa2b287bcdf17469e41f4a69a529c23200c9c4896ffd",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/iscx_tor/encoder2022_train2025/SUCCESS",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 8,
+      "sha256": "1f513d4ecec4e91ddd48da1a59b6d96f1b76c374dc1da641980782a34f43b102",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/iscx_tor/encoder2022_train2025/T0_equal_best.pt",
+      "scope": "bundle",
+      "role": "checkpoint",
+      "size_bytes": 172257,
+      "sha256": "c3daf847ce524f4420cb625d119433b841152a2c31eaff440235e510cee0aed0",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/iscx_tor/encoder2022_train2025/T1_three_entropy_best.pt",
+      "scope": "bundle",
+      "role": "checkpoint",
+      "size_bytes": 172635,
+      "sha256": "be54871efbb4551b8860c159ffc5075298f1789da9fb7af0cf2f6044cd14c246",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/iscx_tor/encoder2022_train2025/adapters_best.pt",
+      "scope": "bundle",
+      "role": "checkpoint",
+      "size_bytes": 970081,
+      "sha256": "1a8c3436b91f4920dd4ee417aeee1de7d62d938da0bf0f5231dcdc03558459a5",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/iscx_tor/encoder2022_train2025/counterfactual.json",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 487,
+      "sha256": "e43bc5fb4ed7852bec0daf73706df422d2b7916ebb083d6bf5bcbdf1f27e98f6",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/iscx_tor/encoder2022_train2025/independent_replay.json",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 668,
+      "sha256": "78b745dbc47c9ca8d0c79578b2e3ce617b3668955345d9e697cc9e7ea0bd7572",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/iscx_tor/encoder2022_train2025/known_validation_entropy_weights.csv",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 496863,
+      "sha256": "ee808ab4ebe5e12b4999bcf695af0288441fe07ff7319b1adc769a38c14b88aa",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/iscx_tor/encoder2022_train2025/known_validation_logits.npz",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 167526,
+      "sha256": "223f02f17b332fea8f72f17ca5435de0dceb5b7de3e8f9cdd61c78192e26f6b0",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/iscx_tor/encoder2022_train2025/known_validation_predictions.csv",
+      "scope": "bundle",
+      "role": "predictions",
+      "size_bytes": 259945,
+      "sha256": "32d98562e491273e4cdbfb4e5794d3ca50590b3dc66294858cfa06414d6909aa",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/iscx_tor/encoder2022_train2025/manifest.json",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 5280,
+      "sha256": "726d2c94231b402d00c8214971abc03b9023273f433eb47986d36734362831e2",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/iscx_tor/encoder2022_train2025/per_class.csv",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 1247,
+      "sha256": "43ce637de30e66b64b1461f6ef2a3743ce6b3a6c39af104d06f49f2585ad1d6c",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/iscx_tor/encoder2022_train2025/run_metrics.csv",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 286,
+      "sha256": "6f1790bd3eb7ccd9c66b1b2545818eed9e6fa3c574ca3b02aee06cc6400480d4",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/iscx_tor/encoder2022_train2025/source_hashes_after.json",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 855,
+      "sha256": "93550b3a5b5658ba93992066dd14dec0f77d557108649974f5c101aecaafda71",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/iscx_tor/encoder2022_train2025/source_hashes_before.json",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 855,
+      "sha256": "93550b3a5b5658ba93992066dd14dec0f77d557108649974f5c101aecaafda71",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/iscx_tor/encoder2022_train2025/training_history.csv",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 16789,
+      "sha256": "85d6246ae02cf291451f1b410e356445417d4589880e8c4cf0f0b0216b0a0c5d",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/iscx_tor/encoder2022_train2025/verification.json",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 744,
+      "sha256": "1370b9101b1787099704a5a8c59f62ccc0b51ce72e74c433907c02dce81a41d7",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/iscx_tor/encoder2022_train2026/RESULTS.md",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 1302,
+      "sha256": "4e350e864e96ca3894b9fdd885fafd869ef5c8b95e4dd111d487702fc544ffbf",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/iscx_tor/encoder2022_train2026/SUCCESS",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 8,
+      "sha256": "1f513d4ecec4e91ddd48da1a59b6d96f1b76c374dc1da641980782a34f43b102",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/iscx_tor/encoder2022_train2026/T0_equal_best.pt",
+      "scope": "bundle",
+      "role": "checkpoint",
+      "size_bytes": 172257,
+      "sha256": "fc2166dc7366311e000589c604e49626b80b6eee2c2919c892e138de8236ea98",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/iscx_tor/encoder2022_train2026/T1_three_entropy_best.pt",
+      "scope": "bundle",
+      "role": "checkpoint",
+      "size_bytes": 172635,
+      "sha256": "ea565c2aed40276c2cf227cc6c7a14c53ab8767d7f8162d10870cae0b9f2b958",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/iscx_tor/encoder2022_train2026/adapters_best.pt",
+      "scope": "bundle",
+      "role": "checkpoint",
+      "size_bytes": 970081,
+      "sha256": "f9d0e7d7010e350c2d0a2093503c0f7fe41d4e16b35687660ed2063bbbd2f42b",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/iscx_tor/encoder2022_train2026/counterfactual.json",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 488,
+      "sha256": "afff7e9fab22ddf7d0135e431413ac060e26920c5ec1ee5fd0c57ec6a9d18abb",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/iscx_tor/encoder2022_train2026/independent_replay.json",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 668,
+      "sha256": "2039866847be3ba99bf5b0f9e0d0f42932b147be12132bc7bc1cbe695bf2a4ac",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/iscx_tor/encoder2022_train2026/known_validation_entropy_weights.csv",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 496762,
+      "sha256": "33d1da80ab04f2ccf82401b48c8b31af6c475251c953759b1a228b84492795c5",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/iscx_tor/encoder2022_train2026/known_validation_logits.npz",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 165941,
+      "sha256": "e60b19672a19b697a0a83582cec200c627b147e7196b0716fcba7792993198e2",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/iscx_tor/encoder2022_train2026/known_validation_predictions.csv",
+      "scope": "bundle",
+      "role": "predictions",
+      "size_bytes": 259957,
+      "sha256": "b80857620e46d128d67491128952964f538e2ceb1323e5e6358972b03db90d1c",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/iscx_tor/encoder2022_train2026/manifest.json",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 5280,
+      "sha256": "43ef042da286341a18caf9f1c9223bd621ca19ead9fada7beee56ac6fd3f4711",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/iscx_tor/encoder2022_train2026/per_class.csv",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 1246,
+      "sha256": "40ecddbf69e9ef362e5a15f94848ea77dfc49ae553d498bb7c7d1f2bb8777b8d",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/iscx_tor/encoder2022_train2026/run_metrics.csv",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 286,
+      "sha256": "24133e8026a7dfbc165496276036ec526c9f65154268cbb42dd6aa481aaf1bc6",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/iscx_tor/encoder2022_train2026/source_hashes_after.json",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 855,
+      "sha256": "93550b3a5b5658ba93992066dd14dec0f77d557108649974f5c101aecaafda71",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/iscx_tor/encoder2022_train2026/source_hashes_before.json",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 855,
+      "sha256": "93550b3a5b5658ba93992066dd14dec0f77d557108649974f5c101aecaafda71",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/iscx_tor/encoder2022_train2026/training_history.csv",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 16801,
+      "sha256": "a0c15874a5a015e972ddeecb645ebe9aeaa06e2b839ab70f03b5ae5c867aa19c",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/iscx_tor/encoder2022_train2026/verification.json",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 744,
+      "sha256": "3823382592c9ad41f207b638cd89a8e4fc1e3ec3dc9dbf51b882c48ce185ec59",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/iscx_tor/encoder2023_train2022/RESULTS.md",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 1302,
+      "sha256": "9e919b53b5fa577e668b144ccc6efe0c0c861fd5819570a5a0b14a94b4c9c1da",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/iscx_tor/encoder2023_train2022/SUCCESS",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 8,
+      "sha256": "1f513d4ecec4e91ddd48da1a59b6d96f1b76c374dc1da641980782a34f43b102",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/iscx_tor/encoder2023_train2022/T0_equal_best.pt",
+      "scope": "bundle",
+      "role": "checkpoint",
+      "size_bytes": 172257,
+      "sha256": "aab04e86062fc89c3d12f4f5141169b83631a1b793a8c1fd88c2f0670957a033",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/iscx_tor/encoder2023_train2022/T1_three_entropy_best.pt",
+      "scope": "bundle",
+      "role": "checkpoint",
+      "size_bytes": 172635,
+      "sha256": "eefa32223f326f5e22e86243f3614aaee8b6d01d7fde7e6414fc7bb123f74a96",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/iscx_tor/encoder2023_train2022/adapters_best.pt",
+      "scope": "bundle",
+      "role": "checkpoint",
+      "size_bytes": 970081,
+      "sha256": "72487eb9ca7b94ecaed15df27139163f7c7821a17a1739ac5be0e3273b62f9a6",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/iscx_tor/encoder2023_train2022/counterfactual.json",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 490,
+      "sha256": "a5c2d01b5b9e46287ee33de2f57751703c85a0b6e90a35c8b47bb124293ead54",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/iscx_tor/encoder2023_train2022/independent_replay.json",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 664,
+      "sha256": "e63b22ffec9342c4c15782f56ebf0686103850afc42b85acffb24f359c838ca7",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/iscx_tor/encoder2023_train2022/known_validation_entropy_weights.csv",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 496761,
+      "sha256": "afb99b09b00c2050d9b83f31f0c3a82ebcacc2408aa3cd137650789b37cc7d81",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/iscx_tor/encoder2023_train2022/known_validation_logits.npz",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 166302,
+      "sha256": "d7dc61ebfb486e1e40e09bfa6f03e623bd68b2988488fda0a0baa2bef47d1690",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/iscx_tor/encoder2023_train2022/known_validation_predictions.csv",
+      "scope": "bundle",
+      "role": "predictions",
+      "size_bytes": 259943,
+      "sha256": "de405018749fdcf510948e60a798cbb991f85216b250a7de06cbc67d6e539f86",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/iscx_tor/encoder2023_train2022/manifest.json",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 5279,
+      "sha256": "8fed3cdf9b60c8112fe1da2d04e53e487793d5d925605cb9f4bbf925c2393aaf",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/iscx_tor/encoder2023_train2022/per_class.csv",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 1268,
+      "sha256": "311a16e7ff3f13332afa657a7c8af94cb567a19c00585361b49c19f027ff1dbc",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/iscx_tor/encoder2023_train2022/run_metrics.csv",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 286,
+      "sha256": "39817a32a29a9d29d93a22aa2eb36b47520d92afef28e13893a469667c405a58",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/iscx_tor/encoder2023_train2022/source_hashes_after.json",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 855,
+      "sha256": "e2016d88b030ea307a88b784cb1efb176d789205895aa343fa07cd7a35da7b26",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/iscx_tor/encoder2023_train2022/source_hashes_before.json",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 855,
+      "sha256": "e2016d88b030ea307a88b784cb1efb176d789205895aa343fa07cd7a35da7b26",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/iscx_tor/encoder2023_train2022/training_history.csv",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 16783,
+      "sha256": "50737c3469b482e58be83199bf49ed4c33abfde83202753758d84dd82a41c8bc",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/iscx_tor/encoder2023_train2022/verification.json",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 744,
+      "sha256": "15b20dc684afe3369c3b71d4b626b54ce186aeb9513b02460db5c944322f8a1f",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/iscx_tor/encoder2023_train2023/RESULTS.md",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 1302,
+      "sha256": "583ebeb3c8f9e74e19b10fa4d42852852c343f909c80e804d90def89e61ca72f",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/iscx_tor/encoder2023_train2023/SUCCESS",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 8,
+      "sha256": "1f513d4ecec4e91ddd48da1a59b6d96f1b76c374dc1da641980782a34f43b102",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/iscx_tor/encoder2023_train2023/T0_equal_best.pt",
+      "scope": "bundle",
+      "role": "checkpoint",
+      "size_bytes": 172257,
+      "sha256": "c89ae853ad137aa6fda7593e43253723dcd6b2ff1f9cd157487fb2bee6d257f6",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/iscx_tor/encoder2023_train2023/T1_three_entropy_best.pt",
+      "scope": "bundle",
+      "role": "checkpoint",
+      "size_bytes": 172635,
+      "sha256": "19543d536fe28a0a048c2e4c854261eb78dee01783e88c3de2441424c047a8b3",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/iscx_tor/encoder2023_train2023/adapters_best.pt",
+      "scope": "bundle",
+      "role": "checkpoint",
+      "size_bytes": 970081,
+      "sha256": "e37217191b5f196bf885ce722238877523f691b0df247ace29b01d4f7098a958",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/iscx_tor/encoder2023_train2023/counterfactual.json",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 489,
+      "sha256": "b82feca19c4484243cb846ee1ab6731209b44dd4442e6c9eba30e73d362a5797",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/iscx_tor/encoder2023_train2023/independent_replay.json",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 667,
+      "sha256": "fb0d970bff62dd28656c7fe5e340517dbb34164a56edf24e6100fffe75849da4",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/iscx_tor/encoder2023_train2023/known_validation_entropy_weights.csv",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 496766,
+      "sha256": "b6c190a0fedf1bf7c684e7c12c6c9143348914d5d5a4fb45c5101869f9869d79",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/iscx_tor/encoder2023_train2023/known_validation_logits.npz",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 166596,
+      "sha256": "0a56abd7ae8cb77492b266cd2afaa581a859c5c70fd816cf805241e9d4eda5b2",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/iscx_tor/encoder2023_train2023/known_validation_predictions.csv",
+      "scope": "bundle",
+      "role": "predictions",
+      "size_bytes": 259891,
+      "sha256": "c6c92be6b77094799c21d2c5578af3ca17bc535bf6448e9980356f0120bf0eae",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/iscx_tor/encoder2023_train2023/manifest.json",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 5279,
+      "sha256": "d61c2655026ab624eee460cb328c49021e67d5992ee8a4099574389a452b6cf1",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/iscx_tor/encoder2023_train2023/per_class.csv",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 1252,
+      "sha256": "d6a7f942c27f5cd3f1c609e5c88a2e510416fec4a9b71cdabe2235e076a73917",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/iscx_tor/encoder2023_train2023/run_metrics.csv",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 286,
+      "sha256": "34caa0f1a46c2367f194d3485b78920083735e4586c8dd226bf398f12ede8613",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/iscx_tor/encoder2023_train2023/source_hashes_after.json",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 855,
+      "sha256": "e2016d88b030ea307a88b784cb1efb176d789205895aa343fa07cd7a35da7b26",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/iscx_tor/encoder2023_train2023/source_hashes_before.json",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 855,
+      "sha256": "e2016d88b030ea307a88b784cb1efb176d789205895aa343fa07cd7a35da7b26",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/iscx_tor/encoder2023_train2023/training_history.csv",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 16792,
+      "sha256": "595e56928d3a0f578472b736332c993d8af0276374068739aa02b53a872a7644",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/iscx_tor/encoder2023_train2023/verification.json",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 744,
+      "sha256": "c62477c290fe3e986193633e31c54702efcb0e58c1e973b43c5c5a2ce15a86ab",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/iscx_tor/encoder2023_train2024/RESULTS.md",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 1302,
+      "sha256": "8b563cedddc97179753f03a557e04ea5b2a30525b654f61209d78e0770219a99",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/iscx_tor/encoder2023_train2024/SUCCESS",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 8,
+      "sha256": "1f513d4ecec4e91ddd48da1a59b6d96f1b76c374dc1da641980782a34f43b102",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/iscx_tor/encoder2023_train2024/T0_equal_best.pt",
+      "scope": "bundle",
+      "role": "checkpoint",
+      "size_bytes": 172257,
+      "sha256": "6a9580a613a9dc2a0a4528938c6ddca4c15f1252d6f73c4ca1b493fa2bed3f29",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/iscx_tor/encoder2023_train2024/T1_three_entropy_best.pt",
+      "scope": "bundle",
+      "role": "checkpoint",
+      "size_bytes": 172635,
+      "sha256": "632130ec5552084abd64e02e8cc280af0d0785f597eb5f0a3d93fba3d494b061",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/iscx_tor/encoder2023_train2024/adapters_best.pt",
+      "scope": "bundle",
+      "role": "checkpoint",
+      "size_bytes": 970081,
+      "sha256": "81fa2bb51e5db955a6526d7014215012c8eb2d0df0f71f4b97d503c0ee97df1f",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/iscx_tor/encoder2023_train2024/counterfactual.json",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 489,
+      "sha256": "74a6e1c9d161deef0e49940199f52ef1551bd1f5980bfaf49d118bc30e9c3be5",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/iscx_tor/encoder2023_train2024/independent_replay.json",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 666,
+      "sha256": "c6a83c15efc1ca86acace8b628b6786a42976fd5c5331b5be04d8c35b62dcfec",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/iscx_tor/encoder2023_train2024/known_validation_entropy_weights.csv",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 496706,
+      "sha256": "797278631f93445d8eeb892060baab555965ba9656072728cfe1165d434b46f6",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/iscx_tor/encoder2023_train2024/known_validation_logits.npz",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 165383,
+      "sha256": "6623b74f60eb3c61027ec838cd6d3b79850c7e97881b6309c548f078e0c4f73b",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/iscx_tor/encoder2023_train2024/known_validation_predictions.csv",
+      "scope": "bundle",
+      "role": "predictions",
+      "size_bytes": 259957,
+      "sha256": "ff844f901902f77964c6a087ee3b4ab2f120523fd90def682712e00b92a39ffd",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/iscx_tor/encoder2023_train2024/manifest.json",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 5280,
+      "sha256": "36af336c6c7ee7043025adef92f7c62b1dddcba6af3375ed142d18219aca2193",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/iscx_tor/encoder2023_train2024/per_class.csv",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 1303,
+      "sha256": "e57d099a60df07ca56b228fbef734e8f533599fac1822e76d42494b74df8c223",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/iscx_tor/encoder2023_train2024/run_metrics.csv",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 287,
+      "sha256": "96c7c7964f672e250d8a096843509657ddf9bb8b551dd775a5d1025fbe63c352",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/iscx_tor/encoder2023_train2024/source_hashes_after.json",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 855,
+      "sha256": "e2016d88b030ea307a88b784cb1efb176d789205895aa343fa07cd7a35da7b26",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/iscx_tor/encoder2023_train2024/source_hashes_before.json",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 855,
+      "sha256": "e2016d88b030ea307a88b784cb1efb176d789205895aa343fa07cd7a35da7b26",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/iscx_tor/encoder2023_train2024/training_history.csv",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 16798,
+      "sha256": "a2d8eaeaa8c9a53637f3d74df1d98b59423b9b517a745da0d98e803a3eab6b39",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/iscx_tor/encoder2023_train2024/verification.json",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 743,
+      "sha256": "4e0269c035839cb75089742972e599dfe7c2963c3584e76ba2efb4c7976e4d67",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/iscx_tor/encoder2023_train2025/RESULTS.md",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 1302,
+      "sha256": "917c04497113ee62b1b154289ff31c1ff699948e0edb510880c3ce522d2965a0",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/iscx_tor/encoder2023_train2025/SUCCESS",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 8,
+      "sha256": "1f513d4ecec4e91ddd48da1a59b6d96f1b76c374dc1da641980782a34f43b102",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/iscx_tor/encoder2023_train2025/T0_equal_best.pt",
+      "scope": "bundle",
+      "role": "checkpoint",
+      "size_bytes": 172257,
+      "sha256": "749fd8865e0ebd41db7e258f6c3d3b820b59fe85b84a66fd09bd591cc589266f",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/iscx_tor/encoder2023_train2025/T1_three_entropy_best.pt",
+      "scope": "bundle",
+      "role": "checkpoint",
+      "size_bytes": 172635,
+      "sha256": "18adcc55c34ddac7c7a6f9f1f2e589897b142d0aa07e28b8a01b290f31e3725f",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/iscx_tor/encoder2023_train2025/adapters_best.pt",
+      "scope": "bundle",
+      "role": "checkpoint",
+      "size_bytes": 970081,
+      "sha256": "f67c43ea93fd59dbd932a11e28484d929014cfc0d9ceb91c4df6edb96b9f9ad3",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/iscx_tor/encoder2023_train2025/counterfactual.json",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 488,
+      "sha256": "f62ce63afeefad023f40490404f7ba00e71ec3f8bc0dac083289577903a41062",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/iscx_tor/encoder2023_train2025/independent_replay.json",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 665,
+      "sha256": "a5449d67f8684a8c0dcd79ae035fe88c16ae1ed5eb67d62837bb1bff7ab8cbc4",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/iscx_tor/encoder2023_train2025/known_validation_entropy_weights.csv",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 496778,
+      "sha256": "eeec9011d71cc291a9335ece0c21d5f9b268a834bb384bc11bbe00bd54c2e569",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/iscx_tor/encoder2023_train2025/known_validation_logits.npz",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 166148,
+      "sha256": "8242664d095285cfcb6ca4e3304fb7571365dede7eb891f67a8b2fe106768a39",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/iscx_tor/encoder2023_train2025/known_validation_predictions.csv",
+      "scope": "bundle",
+      "role": "predictions",
+      "size_bytes": 259887,
+      "sha256": "e5bd45d8918d67c293d017dabd5d616309e422005354621b90beec6e4f4a232c",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/iscx_tor/encoder2023_train2025/manifest.json",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 5279,
+      "sha256": "b6a374d51f3cde869185f3c47541936f625ca7526451181115b60cab625fc61f",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/iscx_tor/encoder2023_train2025/per_class.csv",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 1305,
+      "sha256": "dfcb45f3e71150dfc4b8c10cf86aeab877879d0f20c435bb9af07df953133cf1",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/iscx_tor/encoder2023_train2025/run_metrics.csv",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 286,
+      "sha256": "0636c892c44608082fa5ac95125f2a5dfcfa2bba03923d02eaee80a222e4049b",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/iscx_tor/encoder2023_train2025/source_hashes_after.json",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 855,
+      "sha256": "e2016d88b030ea307a88b784cb1efb176d789205895aa343fa07cd7a35da7b26",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/iscx_tor/encoder2023_train2025/source_hashes_before.json",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 855,
+      "sha256": "e2016d88b030ea307a88b784cb1efb176d789205895aa343fa07cd7a35da7b26",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/iscx_tor/encoder2023_train2025/training_history.csv",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 16780,
+      "sha256": "c84f6a2a01019223be17c76f90254e6edd01b1a01ab3af87e902100fc47ff020",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/iscx_tor/encoder2023_train2025/verification.json",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 744,
+      "sha256": "ef105d4736d213117b00ed32d275473dd67685f03d511bb5b76ca739e91e749a",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/iscx_tor/encoder2023_train2026/RESULTS.md",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 1302,
+      "sha256": "d177602383c34a3a1a03f2fbd2ba1546e54e3308c7d8324b7e69b8ace2fc03b2",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/iscx_tor/encoder2023_train2026/SUCCESS",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 8,
+      "sha256": "1f513d4ecec4e91ddd48da1a59b6d96f1b76c374dc1da641980782a34f43b102",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/iscx_tor/encoder2023_train2026/T0_equal_best.pt",
+      "scope": "bundle",
+      "role": "checkpoint",
+      "size_bytes": 172257,
+      "sha256": "fc02c153e6073f677efd7350cd0550649006f2050177ff42d9566818b0c88310",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/iscx_tor/encoder2023_train2026/T1_three_entropy_best.pt",
+      "scope": "bundle",
+      "role": "checkpoint",
+      "size_bytes": 172635,
+      "sha256": "17ea254b96a0b3efa3eeb8262c2d832cec115a0035e60a4e76039d494cd031ea",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/iscx_tor/encoder2023_train2026/adapters_best.pt",
+      "scope": "bundle",
+      "role": "checkpoint",
+      "size_bytes": 970081,
+      "sha256": "da48189c5703c80df1092bc06a3704f42876881a4214a5d0f7ec1d18bc180e7c",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/iscx_tor/encoder2023_train2026/counterfactual.json",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 489,
+      "sha256": "db0af217cf6ea00280c3a4b3905bc2b1758aff96cc2afa43939159c7c39d599e",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/iscx_tor/encoder2023_train2026/independent_replay.json",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 666,
+      "sha256": "0b421edd7aca2b58671445703eff0627458119c005f8758328eade715c42a13f",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/iscx_tor/encoder2023_train2026/known_validation_entropy_weights.csv",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 496758,
+      "sha256": "9cb163fc4efebb663806a49b42ef531e6dd274d163bc0b12cd21b797a7db9337",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/iscx_tor/encoder2023_train2026/known_validation_logits.npz",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 165749,
+      "sha256": "b6f7202941e6fc1167904a8f8ceabd2cb1bed1daed4671908ca5fc52468e9b01",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/iscx_tor/encoder2023_train2026/known_validation_predictions.csv",
+      "scope": "bundle",
+      "role": "predictions",
+      "size_bytes": 259866,
+      "sha256": "da83ac2dc7c6efde1fd9e35cad148caa2354c24e7d781915013b8c3a15e5525b",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/iscx_tor/encoder2023_train2026/manifest.json",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 5279,
+      "sha256": "003a9c4ba94fc47db052246bb13c9bd11f86bc7babd51fa6beafe8066bc3fd49",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/iscx_tor/encoder2023_train2026/per_class.csv",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 1277,
+      "sha256": "0df870ca837b3fd66d118aba474833282b9dd14543cbb5cbdfdd5d1e5e0976ec",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/iscx_tor/encoder2023_train2026/run_metrics.csv",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 286,
+      "sha256": "2cf1f933b672d3819ee137cb5f39652bf16a56244e1ae094c1f60a1eba3d976c",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/iscx_tor/encoder2023_train2026/source_hashes_after.json",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 855,
+      "sha256": "e2016d88b030ea307a88b784cb1efb176d789205895aa343fa07cd7a35da7b26",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/iscx_tor/encoder2023_train2026/source_hashes_before.json",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 855,
+      "sha256": "e2016d88b030ea307a88b784cb1efb176d789205895aa343fa07cd7a35da7b26",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/iscx_tor/encoder2023_train2026/training_history.csv",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 16789,
+      "sha256": "ba120fbcd5a6160e6069c01d7e5d27ba1a602e600c610b672d5b2880d397fd91",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/iscx_tor/encoder2023_train2026/verification.json",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 743,
+      "sha256": "21297eb845ec1d6d8d2190eb29e6c2dd957305ebc0aa960dce70ccf41e5741c1",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/iscx_vpn/encoder2022_train2022/RESULTS.md",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 1302,
+      "sha256": "cd18a1e0efc1978f35ba918e5309f298a7c8f2e0b6380b8466ff42527ffb31cb",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/iscx_vpn/encoder2022_train2022/SUCCESS",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 8,
+      "sha256": "1f513d4ecec4e91ddd48da1a59b6d96f1b76c374dc1da641980782a34f43b102",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/iscx_vpn/encoder2022_train2022/T0_equal_best.pt",
+      "scope": "bundle",
+      "role": "checkpoint",
+      "size_bytes": 171745,
+      "sha256": "15575a086e383c03b32b6073b7ee3036818a5286ecde2ddf4a029e2290b76594",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/iscx_vpn/encoder2022_train2022/T1_three_entropy_best.pt",
+      "scope": "bundle",
+      "role": "checkpoint",
+      "size_bytes": 172123,
+      "sha256": "588e3ca3a85cb690ef9de917cabd7e0fcdf494346367ae283f345d54ec30b8ba",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/iscx_vpn/encoder2022_train2022/adapters_best.pt",
+      "scope": "bundle",
+      "role": "checkpoint",
+      "size_bytes": 969313,
+      "sha256": "b3de9861a82de390a9c2c4c89ceae9d5d82fb73b94b2b20e0a942a7c819166ee",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/iscx_vpn/encoder2022_train2022/counterfactual.json",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 488,
+      "sha256": "67cc779092d2b66f1269563116323ad40b83b17ad65f30497b17c5a77185406e",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/iscx_vpn/encoder2022_train2022/independent_replay.json",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 669,
+      "sha256": "48d85afc1d5a27cc293e62ce167f1ff84e3005cd9748b7a63985477076c1cc3a",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/iscx_vpn/encoder2022_train2022/known_validation_entropy_weights.csv",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 486909,
+      "sha256": "ce41d4cbd4ae40cb07d49dd44091c913f96992463f4346f90b7a23468d98f1cb",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/iscx_vpn/encoder2022_train2022/known_validation_logits.npz",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 148761,
+      "sha256": "b1310691e2e8e6f59f8ea18eb13a26784ae3a2658cae8110891a82cabf6c5b6a",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/iscx_vpn/encoder2022_train2022/known_validation_predictions.csv",
+      "scope": "bundle",
+      "role": "predictions",
+      "size_bytes": 253055,
+      "sha256": "df013e8f8c013febc4fb86cf330b57dcad243c9c62f849ea5c058854b260bc5f",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/iscx_vpn/encoder2022_train2022/manifest.json",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 5280,
+      "sha256": "adf237f24aa15a3707a7540b1aa5bddbbffc699c8f26f0848a71a02bd3214790",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/iscx_vpn/encoder2022_train2022/per_class.csv",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 1121,
+      "sha256": "4403d31b79527f0eb19f15dff7756cddec0ed1ebba14bf3f8a1b642c538894d3",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/iscx_vpn/encoder2022_train2022/run_metrics.csv",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 287,
+      "sha256": "d5735f85925ba9db1f521ef7b98b8de9795c914182a6f5b72b9abac79a18560b",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/iscx_vpn/encoder2022_train2022/source_hashes_after.json",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 855,
+      "sha256": "f70c7f9c0cb826036d3aa26ac0b6150dd4fa18631a3f2acc8e20e05d43b4fc86",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/iscx_vpn/encoder2022_train2022/source_hashes_before.json",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 855,
+      "sha256": "f70c7f9c0cb826036d3aa26ac0b6150dd4fa18631a3f2acc8e20e05d43b4fc86",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/iscx_vpn/encoder2022_train2022/training_history.csv",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 16813,
+      "sha256": "fa18f0587a617c8b46a20371330990b429ee22120ea056a5f0209565cd6ab501",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/iscx_vpn/encoder2022_train2022/verification.json",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 742,
+      "sha256": "1b3d98c1f219a49f3a559f548ecd2df087b838b08bde37cd0767a7d5f9f60268",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/iscx_vpn/encoder2022_train2023/RESULTS.md",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 1302,
+      "sha256": "be45b14975968be88df48a67b535e9a5fe1073e63daecf0daa8307630fa81783",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/iscx_vpn/encoder2022_train2023/SUCCESS",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 8,
+      "sha256": "1f513d4ecec4e91ddd48da1a59b6d96f1b76c374dc1da641980782a34f43b102",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/iscx_vpn/encoder2022_train2023/T0_equal_best.pt",
+      "scope": "bundle",
+      "role": "checkpoint",
+      "size_bytes": 171745,
+      "sha256": "116cc5c3c6b41073ba4c2168531216e9242e3faca391ef6ed0cd95b89d1412c9",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/iscx_vpn/encoder2022_train2023/T1_three_entropy_best.pt",
+      "scope": "bundle",
+      "role": "checkpoint",
+      "size_bytes": 172123,
+      "sha256": "914b7f4ae5f9b08e1cde25a9224c6f95f189908996703b1ba0f564736b22a8ce",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/iscx_vpn/encoder2022_train2023/adapters_best.pt",
+      "scope": "bundle",
+      "role": "checkpoint",
+      "size_bytes": 969313,
+      "sha256": "93b588e2132e82c14cc32daac4bd698ca31ecb0cd68d9575a969e3b84a3fe120",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/iscx_vpn/encoder2022_train2023/counterfactual.json",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 487,
+      "sha256": "e474b7f9964e6a8917d14014590fdc194bb5d1d3bd825677095ccdf0fc0db47b",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/iscx_vpn/encoder2022_train2023/independent_replay.json",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 666,
+      "sha256": "7af9a71435ef30023241db328974b85bfd992d0f65738eecc0d75adbee5e6144",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/iscx_vpn/encoder2022_train2023/known_validation_entropy_weights.csv",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 486957,
+      "sha256": "ca4d43f3b800259c59fa55b04f23ded6fddebb894d9c76f34b2b9eeffb7364d3",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/iscx_vpn/encoder2022_train2023/known_validation_logits.npz",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 149236,
+      "sha256": "ff560a0fd24c523240d0a424288bad98f6709b5f77e357be8b80ae9f75e3286d",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/iscx_vpn/encoder2022_train2023/known_validation_predictions.csv",
+      "scope": "bundle",
+      "role": "predictions",
+      "size_bytes": 253254,
+      "sha256": "559436dff3bf9d713255072f190d05db4474b17a855568533f9902806da86aa7",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/iscx_vpn/encoder2022_train2023/manifest.json",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 5280,
+      "sha256": "b524122324162de1b2d6c3246b75f8ad899d3b4f4fa89f6164538b5432ad38ed",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/iscx_vpn/encoder2022_train2023/per_class.csv",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 1096,
+      "sha256": "87d9193d3146bf92b7f64393a20256beb55b3c5075a7c3c0c7a06b16b425862e",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/iscx_vpn/encoder2022_train2023/run_metrics.csv",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 286,
+      "sha256": "2e24d5adacacf2aca2bdf5420e443d804b1a69121cddbd918d5136837ed6ceca",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/iscx_vpn/encoder2022_train2023/source_hashes_after.json",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 855,
+      "sha256": "f70c7f9c0cb826036d3aa26ac0b6150dd4fa18631a3f2acc8e20e05d43b4fc86",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/iscx_vpn/encoder2022_train2023/source_hashes_before.json",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 855,
+      "sha256": "f70c7f9c0cb826036d3aa26ac0b6150dd4fa18631a3f2acc8e20e05d43b4fc86",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/iscx_vpn/encoder2022_train2023/training_history.csv",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 16856,
+      "sha256": "a8e491c062201e86799a56943507add054e61cd8b0c38ec9f78ee105d090a82a",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/iscx_vpn/encoder2022_train2023/verification.json",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 744,
+      "sha256": "df4cb57d5474e34ac79c199909e7f3d7ce07a7c46f74603e0643b903ab3c5daa",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/iscx_vpn/encoder2022_train2024/RESULTS.md",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 1302,
+      "sha256": "80c347c0640220e9ee0375968378554c3df26fc372639c22b852c9b496bdcaf5",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/iscx_vpn/encoder2022_train2024/SUCCESS",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 8,
+      "sha256": "1f513d4ecec4e91ddd48da1a59b6d96f1b76c374dc1da641980782a34f43b102",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/iscx_vpn/encoder2022_train2024/T0_equal_best.pt",
+      "scope": "bundle",
+      "role": "checkpoint",
+      "size_bytes": 171745,
+      "sha256": "033caa784a62f140a5a99e88bcca82873c339dbe8037634f584d37353d09414c",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/iscx_vpn/encoder2022_train2024/T1_three_entropy_best.pt",
+      "scope": "bundle",
+      "role": "checkpoint",
+      "size_bytes": 172123,
+      "sha256": "f6b2dab0ec9664c02e955f42a3ca370ccdd90c8219263ea6550fd7c4da3771b5",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/iscx_vpn/encoder2022_train2024/adapters_best.pt",
+      "scope": "bundle",
+      "role": "checkpoint",
+      "size_bytes": 969313,
+      "sha256": "abbe355e245e68b5ea11fe87522896171f03677b8509efd2a0b58c51aec0fcc0",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/iscx_vpn/encoder2022_train2024/counterfactual.json",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 490,
+      "sha256": "23fc5ad470927344fb97c5f54a48aeafedb77bb5037d21ed5b81db15b349c088",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/iscx_vpn/encoder2022_train2024/independent_replay.json",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 668,
+      "sha256": "2ac47d65d2abea3158aa0bbe88c1454c19e1d1e810365fbb070b3d086ecba3f4",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/iscx_vpn/encoder2022_train2024/known_validation_entropy_weights.csv",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 486985,
+      "sha256": "fab2f31db384ee84cd96245fed6452c2e2e4fb1cbd720b50c4929101d9093b77",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/iscx_vpn/encoder2022_train2024/known_validation_logits.npz",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 149013,
+      "sha256": "f33338273e08d6cc956902a89ee758e880882d8ccf8c3deaf947f735c28cba8d",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/iscx_vpn/encoder2022_train2024/known_validation_predictions.csv",
+      "scope": "bundle",
+      "role": "predictions",
+      "size_bytes": 253233,
+      "sha256": "7bfff855d0e66e0dd29a1b7cc3221259648a772d5fd4dc26edcbd69eeb443412",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/iscx_vpn/encoder2022_train2024/manifest.json",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 5280,
+      "sha256": "d5a7e8881481add0f581dbaeea6d8967a056b3cb8640660757b29d6c9e070ba2",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/iscx_vpn/encoder2022_train2024/per_class.csv",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 1145,
+      "sha256": "8789fd34b5b22bdf9bca0f096692a24541df91b3febf40f75a36f0767b1e33b7",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/iscx_vpn/encoder2022_train2024/run_metrics.csv",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 286,
+      "sha256": "e688ee8d95a6e0f989a38ce128c60e1f41ff848a3ac924f9035294b95ef99cc8",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/iscx_vpn/encoder2022_train2024/source_hashes_after.json",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 855,
+      "sha256": "f70c7f9c0cb826036d3aa26ac0b6150dd4fa18631a3f2acc8e20e05d43b4fc86",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/iscx_vpn/encoder2022_train2024/source_hashes_before.json",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 855,
+      "sha256": "f70c7f9c0cb826036d3aa26ac0b6150dd4fa18631a3f2acc8e20e05d43b4fc86",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/iscx_vpn/encoder2022_train2024/training_history.csv",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 16843,
+      "sha256": "32040eabd1ff6fb5f36499a9beca577752d87211f84368d6ce2858dcf1a5aa8d",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/iscx_vpn/encoder2022_train2024/verification.json",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 742,
+      "sha256": "e7f4db89db1f1c2c100ae4c10187cf1322ecc82e7152646937057e857a314d80",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/iscx_vpn/encoder2022_train2025/RESULTS.md",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 1302,
+      "sha256": "354ada54b4218cf6ebdc07e97074fe10c49239df00221af073b591a8d74513d1",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/iscx_vpn/encoder2022_train2025/SUCCESS",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 8,
+      "sha256": "1f513d4ecec4e91ddd48da1a59b6d96f1b76c374dc1da641980782a34f43b102",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/iscx_vpn/encoder2022_train2025/T0_equal_best.pt",
+      "scope": "bundle",
+      "role": "checkpoint",
+      "size_bytes": 171745,
+      "sha256": "0588829a3c271d675462ec79d71f4d08f7fc407353841f8fd41abb906488e93c",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/iscx_vpn/encoder2022_train2025/T1_three_entropy_best.pt",
+      "scope": "bundle",
+      "role": "checkpoint",
+      "size_bytes": 172123,
+      "sha256": "28cf80bdd62bf2b963c25d6ad98090db09de7ee608e88ed138dcb0212104b851",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/iscx_vpn/encoder2022_train2025/adapters_best.pt",
+      "scope": "bundle",
+      "role": "checkpoint",
+      "size_bytes": 969313,
+      "sha256": "aa064d0945c66d924175212c3e75bb48d32e84d6ee0c54c4f56cfdc54b99dccf",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/iscx_vpn/encoder2022_train2025/counterfactual.json",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 491,
+      "sha256": "126b0e4634be9d30feb05ae443d87c4970c4ab6fdf03b0def6461aaabf08156c",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/iscx_vpn/encoder2022_train2025/independent_replay.json",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 667,
+      "sha256": "9481d06e2b6f01c01c7ccf12840a3dfd4556773558b9aa39033dbe5be65364ea",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/iscx_vpn/encoder2022_train2025/known_validation_entropy_weights.csv",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 486870,
+      "sha256": "a7be8abe024adc397bef49a59669d98ca265e524ae664dacb7d12580fa88c165",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/iscx_vpn/encoder2022_train2025/known_validation_logits.npz",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 150488,
+      "sha256": "34a8d3fcd520a1fb3bc206caa1958bd1e8a2945d6103050bc735c38ab2716eeb",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/iscx_vpn/encoder2022_train2025/known_validation_predictions.csv",
+      "scope": "bundle",
+      "role": "predictions",
+      "size_bytes": 253081,
+      "sha256": "e8bbdf01fa6e37511b51d201aafedc2b5b7573dacb4b37071fbfb94c30c8db0a",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/iscx_vpn/encoder2022_train2025/manifest.json",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 5279,
+      "sha256": "f82cfb5ed8fed01068212dbf106de2ff583a7a95bb37d0005ddbd065eb8b298f",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/iscx_vpn/encoder2022_train2025/per_class.csv",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 1117,
+      "sha256": "eba31e0aa0368204b6c5232c6a2ddbc0777e5cf3a7ff7bc1d8c0e1cea2df244a",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/iscx_vpn/encoder2022_train2025/run_metrics.csv",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 285,
+      "sha256": "0df3c61640c673cd8897d33ef731ad72c3418f092a2c851cf884429ff7baa4bc",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/iscx_vpn/encoder2022_train2025/source_hashes_after.json",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 855,
+      "sha256": "f70c7f9c0cb826036d3aa26ac0b6150dd4fa18631a3f2acc8e20e05d43b4fc86",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/iscx_vpn/encoder2022_train2025/source_hashes_before.json",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 855,
+      "sha256": "f70c7f9c0cb826036d3aa26ac0b6150dd4fa18631a3f2acc8e20e05d43b4fc86",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/iscx_vpn/encoder2022_train2025/training_history.csv",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 16854,
+      "sha256": "4fc911fa2bcc2c610db74e8ecf9502c967a2277d849cbae6edc63762f4cd6e23",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/iscx_vpn/encoder2022_train2025/verification.json",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 744,
+      "sha256": "baa94bb720d4671f647c3206dabb20220691b985f2a2bbf0dcbb7ae768d8f1c2",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/iscx_vpn/encoder2022_train2026/RESULTS.md",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 1302,
+      "sha256": "f94b52bb162a93f0f39c6b17a72b1fde83dc01b746837533984190f2fba33123",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/iscx_vpn/encoder2022_train2026/SUCCESS",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 8,
+      "sha256": "1f513d4ecec4e91ddd48da1a59b6d96f1b76c374dc1da641980782a34f43b102",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/iscx_vpn/encoder2022_train2026/T0_equal_best.pt",
+      "scope": "bundle",
+      "role": "checkpoint",
+      "size_bytes": 171745,
+      "sha256": "3090377e868bb735b473b730aec0cf557f0448933bcdc89a8bbe6a54b7c49f80",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/iscx_vpn/encoder2022_train2026/T1_three_entropy_best.pt",
+      "scope": "bundle",
+      "role": "checkpoint",
+      "size_bytes": 172123,
+      "sha256": "e87c922adfcc663217d3b777b0f17c0e48b8647b6145e1e71c58e209fe1583b9",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/iscx_vpn/encoder2022_train2026/adapters_best.pt",
+      "scope": "bundle",
+      "role": "checkpoint",
+      "size_bytes": 969313,
+      "sha256": "6ce841e48fb5d76669acd606515879367bef9524b893117939b94f8b0a8795bd",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/iscx_vpn/encoder2022_train2026/counterfactual.json",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 487,
+      "sha256": "251f44a919a3fb3bdae5ed7f0923bcf3284dfba170ff6a1db03d46bcb1536fb9",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/iscx_vpn/encoder2022_train2026/independent_replay.json",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 668,
+      "sha256": "085cbe85792782f0703ff4aa5fafde9d30cc5c13bc922c7941cf892723c85c6c",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/iscx_vpn/encoder2022_train2026/known_validation_entropy_weights.csv",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 486901,
+      "sha256": "e8f5053db3b116ae95e5af2e685806d6d885f65542b08fc4cb435a7a4a4c1531",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/iscx_vpn/encoder2022_train2026/known_validation_logits.npz",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 148449,
+      "sha256": "25d6be677ccdc25de1cbef4fbc6810a822282763835b51a0f5f06e0d83a7ff6d",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/iscx_vpn/encoder2022_train2026/known_validation_predictions.csv",
+      "scope": "bundle",
+      "role": "predictions",
+      "size_bytes": 253123,
+      "sha256": "46078a2ad3cb7aac3919b7f5f113e036881b0b35d50a192630537faac4d5a250",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/iscx_vpn/encoder2022_train2026/manifest.json",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 5280,
+      "sha256": "ded9a7141bd3827898b86ac396b7e9f54695e31118f24f54ae6190dacebea4cd",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/iscx_vpn/encoder2022_train2026/per_class.csv",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 1091,
+      "sha256": "f052a006f1f66ac5c7e1d40e74a28060031d30f047c7a626ffd5500dfc453f1a",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/iscx_vpn/encoder2022_train2026/run_metrics.csv",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 287,
+      "sha256": "4c74456d78f81c503e2518f2668a12df3efd0c0e6c79f86126db6e5ea72a6b05",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/iscx_vpn/encoder2022_train2026/source_hashes_after.json",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 855,
+      "sha256": "f70c7f9c0cb826036d3aa26ac0b6150dd4fa18631a3f2acc8e20e05d43b4fc86",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/iscx_vpn/encoder2022_train2026/source_hashes_before.json",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 855,
+      "sha256": "f70c7f9c0cb826036d3aa26ac0b6150dd4fa18631a3f2acc8e20e05d43b4fc86",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/iscx_vpn/encoder2022_train2026/training_history.csv",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 16840,
+      "sha256": "d1d2862f01a3aa998bb205f9f7f7889313b39f03b476367e0905d6d97f13cde5",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/iscx_vpn/encoder2022_train2026/verification.json",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 744,
+      "sha256": "f9189ce3a0a8c766508d59c82436081cf896f503455d5f78d2d57df22d10c3d9",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/iscx_vpn/encoder2023_train2022/RESULTS.md",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 1302,
+      "sha256": "20b9f98ad41f59230c1e0a501a5666a0a8c559c75b71b16622bd79f440d95117",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/iscx_vpn/encoder2023_train2022/SUCCESS",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 8,
+      "sha256": "1f513d4ecec4e91ddd48da1a59b6d96f1b76c374dc1da641980782a34f43b102",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/iscx_vpn/encoder2023_train2022/T0_equal_best.pt",
+      "scope": "bundle",
+      "role": "checkpoint",
+      "size_bytes": 171745,
+      "sha256": "2d1eb942aef3a7601d2df938fb70577bd4e67ffe1166105fd979e357f5fc580e",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/iscx_vpn/encoder2023_train2022/T1_three_entropy_best.pt",
+      "scope": "bundle",
+      "role": "checkpoint",
+      "size_bytes": 172123,
+      "sha256": "e9e02127a84228d755347b3c3fdc48b45ca0ccb54f3e2aaf89768d0a2c525161",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/iscx_vpn/encoder2023_train2022/adapters_best.pt",
+      "scope": "bundle",
+      "role": "checkpoint",
+      "size_bytes": 969313,
+      "sha256": "1d3801547693c80d57f6d153acfb76837fedc03e9c1991083555e3caa14736cd",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/iscx_vpn/encoder2023_train2022/counterfactual.json",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 488,
+      "sha256": "6b9b94f633d499aaf03abe624e31412e4673aa89d09065651c02882e1dde810a",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/iscx_vpn/encoder2023_train2022/independent_replay.json",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 666,
+      "sha256": "e0acb76ae46f0afb21cea42e084d9b58605910c3750e090400a90890ee3914f0",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/iscx_vpn/encoder2023_train2022/known_validation_entropy_weights.csv",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 486875,
+      "sha256": "2c0e7b8068b967e961c58927f711443fa8befcd2271387e6541bbda04e9e6224",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/iscx_vpn/encoder2023_train2022/known_validation_logits.npz",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 149411,
+      "sha256": "e6dda6dda6ebf1ab7ed92ed0550b878419708e6f84a2289d3ea8080607c03592",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/iscx_vpn/encoder2023_train2022/known_validation_predictions.csv",
+      "scope": "bundle",
+      "role": "predictions",
+      "size_bytes": 253043,
+      "sha256": "f81f071438f7a37cd1e5e0cfbf3d9df4f570e67b9c17f1ff0ae923f16440f70b",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/iscx_vpn/encoder2023_train2022/manifest.json",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 5278,
+      "sha256": "1a1401c341dc7006026018888a4f9abd8c15ef263642c8ceef2c4ca7f3587f00",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/iscx_vpn/encoder2023_train2022/per_class.csv",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 1098,
+      "sha256": "1282b93f0e437c582c0b57c15b7160939b4430dfc1c8da9321b328b3faad2641",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/iscx_vpn/encoder2023_train2022/run_metrics.csv",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 284,
+      "sha256": "e6625997a44712c3aff0cc7a5f6c75444378b65e27d395bd3192bdb620ef1fbb",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/iscx_vpn/encoder2023_train2022/source_hashes_after.json",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 855,
+      "sha256": "6fde4a42f1fb33960e04d0363e68155c810adc094951c3721f28b2749ae6ce31",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/iscx_vpn/encoder2023_train2022/source_hashes_before.json",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 855,
+      "sha256": "6fde4a42f1fb33960e04d0363e68155c810adc094951c3721f28b2749ae6ce31",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/iscx_vpn/encoder2023_train2022/training_history.csv",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 16815,
+      "sha256": "bb1e82c4c5d0cdbbf9bc8cdf005de2a27a9c275547aa6ea5d5f90867bc2da434",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/iscx_vpn/encoder2023_train2022/verification.json",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 743,
+      "sha256": "8f9cf00e70caf94e84065dfd1bb3391b9ef1cd12433ce5815e71b36d80d37649",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/iscx_vpn/encoder2023_train2023/RESULTS.md",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 1302,
+      "sha256": "e221a53fe0710befc058b1797beed19d201ec4204eb991d0ca1a5546510574cc",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/iscx_vpn/encoder2023_train2023/SUCCESS",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 8,
+      "sha256": "1f513d4ecec4e91ddd48da1a59b6d96f1b76c374dc1da641980782a34f43b102",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/iscx_vpn/encoder2023_train2023/T0_equal_best.pt",
+      "scope": "bundle",
+      "role": "checkpoint",
+      "size_bytes": 171745,
+      "sha256": "b977fae787081f2df64bca05cec52f0d76aaa0176114c49bb07132de5f355c36",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/iscx_vpn/encoder2023_train2023/T1_three_entropy_best.pt",
+      "scope": "bundle",
+      "role": "checkpoint",
+      "size_bytes": 172123,
+      "sha256": "b6d942d2e0fb6bbb19c3361ee3d84dc79423aa671c3e5a913f72389a8de6685b",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/iscx_vpn/encoder2023_train2023/adapters_best.pt",
+      "scope": "bundle",
+      "role": "checkpoint",
+      "size_bytes": 969313,
+      "sha256": "7a198c81a56b1ed59420cabd8e1ef2fbe74ab9cb677e32b31cbfcb667ea39cae",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/iscx_vpn/encoder2023_train2023/counterfactual.json",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 491,
+      "sha256": "9b51d9b72c6a6def040ec60f21f954eab87bbeea7228596f4333babffdf2a390",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/iscx_vpn/encoder2023_train2023/independent_replay.json",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 667,
+      "sha256": "8a0720e545bf470ebba041fe90c4089423eb51e7fa458cc5d9722540b63a244c",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/iscx_vpn/encoder2023_train2023/known_validation_entropy_weights.csv",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 486925,
+      "sha256": "f135f0726d9db4503c6eb6372b41daeb663c1941706135566fe10e929af646f2",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/iscx_vpn/encoder2023_train2023/known_validation_logits.npz",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 149743,
+      "sha256": "c83dd60a311787ce6b228011d00c981f4cc52f19bf1a716fc6886890f19895cc",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/iscx_vpn/encoder2023_train2023/known_validation_predictions.csv",
+      "scope": "bundle",
+      "role": "predictions",
+      "size_bytes": 253149,
+      "sha256": "99d6dcd98c75cd98890233aa1442ff553070e1167a173860507d72c7ec3c4a84",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/iscx_vpn/encoder2023_train2023/manifest.json",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 5280,
+      "sha256": "d564faee816a8d726f8a30fdf75f4ad2447663bb89673001dac0780b5819a398",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/iscx_vpn/encoder2023_train2023/per_class.csv",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 1092,
+      "sha256": "c35ba409653056b37b39e2a821b879db091a88f7e02d387eec8d2eca8942715f",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/iscx_vpn/encoder2023_train2023/run_metrics.csv",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 286,
+      "sha256": "d63bb5d2fb09839e754678788876dcb4bd4a57f702330819fc497fd7e393e9ee",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/iscx_vpn/encoder2023_train2023/source_hashes_after.json",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 855,
+      "sha256": "6fde4a42f1fb33960e04d0363e68155c810adc094951c3721f28b2749ae6ce31",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/iscx_vpn/encoder2023_train2023/source_hashes_before.json",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 855,
+      "sha256": "6fde4a42f1fb33960e04d0363e68155c810adc094951c3721f28b2749ae6ce31",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/iscx_vpn/encoder2023_train2023/training_history.csv",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 16813,
+      "sha256": "c97b073f4652d72f82813c60dff252cf73e6dd82680838fa367ad3bac7e12f10",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/iscx_vpn/encoder2023_train2023/verification.json",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 744,
+      "sha256": "393fa7c4aac16515ecd279c82b1f1709dc841eb70e1f59018514f9445885bdd0",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/iscx_vpn/encoder2023_train2024/RESULTS.md",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 1302,
+      "sha256": "9d4a1b16a26bc6078529bb3fbbe78e254b6071d526528291453058555e0f2738",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/iscx_vpn/encoder2023_train2024/SUCCESS",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 8,
+      "sha256": "1f513d4ecec4e91ddd48da1a59b6d96f1b76c374dc1da641980782a34f43b102",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/iscx_vpn/encoder2023_train2024/T0_equal_best.pt",
+      "scope": "bundle",
+      "role": "checkpoint",
+      "size_bytes": 171745,
+      "sha256": "cb17ecd13b97a8c5331d3f8aec96de64442b7477e02cbee38da42a23d9556252",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/iscx_vpn/encoder2023_train2024/T1_three_entropy_best.pt",
+      "scope": "bundle",
+      "role": "checkpoint",
+      "size_bytes": 172123,
+      "sha256": "bcde9412b8c704694c20aaaba9fcdde361d803b9d50082a3d16947136668c31f",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/iscx_vpn/encoder2023_train2024/adapters_best.pt",
+      "scope": "bundle",
+      "role": "checkpoint",
+      "size_bytes": 969313,
+      "sha256": "2d4ab8a11a44b97f218f3854366991fbc5df7ed625b136a86a831f6d09035a5a",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/iscx_vpn/encoder2023_train2024/counterfactual.json",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 491,
+      "sha256": "ce8c46c98b8e6497b338a11add20dd526681e1c4fe8f6a93e8b0e038f4ea03c5",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/iscx_vpn/encoder2023_train2024/independent_replay.json",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 666,
+      "sha256": "c2beafa06d220172a3dbe028f4af4ed7407d4221c7897c7f7dedf1842f7dc35a",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/iscx_vpn/encoder2023_train2024/known_validation_entropy_weights.csv",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 486699,
+      "sha256": "152930cd8c86289810f3693ae00c487f35eca4ff5f69adb52f2a72f40e94c6c3",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/iscx_vpn/encoder2023_train2024/known_validation_logits.npz",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 150022,
+      "sha256": "3e3ac305c1c141ba96fc7105c8e2988a2713979e73b64580b73743cbfefff59e",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/iscx_vpn/encoder2023_train2024/known_validation_predictions.csv",
+      "scope": "bundle",
+      "role": "predictions",
+      "size_bytes": 253006,
+      "sha256": "ab5753ce53a00ff913682e9b8b3da6afc1997353eba2bb68010ee6ebe3c10552",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/iscx_vpn/encoder2023_train2024/manifest.json",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 5280,
+      "sha256": "06570eddabdb1a330ec82b50fc040c9560a066fd1a640e3944bb08f06e511a8b",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/iscx_vpn/encoder2023_train2024/per_class.csv",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 1111,
+      "sha256": "ce79fc7d30d6c99af713687aa454da55f63ffc6c22326884dfa1ac3995d75bbe",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/iscx_vpn/encoder2023_train2024/run_metrics.csv",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 286,
+      "sha256": "69a9a89fd4573ada2ce0cfdc1ac6a702316d1f230814fa474a0db14f9096678c",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/iscx_vpn/encoder2023_train2024/source_hashes_after.json",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 855,
+      "sha256": "6fde4a42f1fb33960e04d0363e68155c810adc094951c3721f28b2749ae6ce31",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/iscx_vpn/encoder2023_train2024/source_hashes_before.json",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 855,
+      "sha256": "6fde4a42f1fb33960e04d0363e68155c810adc094951c3721f28b2749ae6ce31",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/iscx_vpn/encoder2023_train2024/training_history.csv",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 16808,
+      "sha256": "e013a3c6052e6dd3232e074a8a58f29dba630ee9e8b3b60d45406d13c7b13f31",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/iscx_vpn/encoder2023_train2024/verification.json",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 744,
+      "sha256": "e6cf890c356316af32e07abe26b83bd9ab67475d844ff467ea11702c7cd82215",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/iscx_vpn/encoder2023_train2025/RESULTS.md",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 1302,
+      "sha256": "beea4497b264b855f8ac17fa348a5e8fb76920c24f6a279eb780ccff1a074b36",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/iscx_vpn/encoder2023_train2025/SUCCESS",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 8,
+      "sha256": "1f513d4ecec4e91ddd48da1a59b6d96f1b76c374dc1da641980782a34f43b102",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/iscx_vpn/encoder2023_train2025/T0_equal_best.pt",
+      "scope": "bundle",
+      "role": "checkpoint",
+      "size_bytes": 171745,
+      "sha256": "21cd25fbc3b02085b3cd5df63b24c7b8eb18f1f43ea025e7241a5bc8d9e2fa1c",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/iscx_vpn/encoder2023_train2025/T1_three_entropy_best.pt",
+      "scope": "bundle",
+      "role": "checkpoint",
+      "size_bytes": 172123,
+      "sha256": "204428b5606d1bf3f5d9abf37afc25c9e9010a049c900ccbd899d8c622aecb09",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/iscx_vpn/encoder2023_train2025/adapters_best.pt",
+      "scope": "bundle",
+      "role": "checkpoint",
+      "size_bytes": 969313,
+      "sha256": "d5d31e80408a851d661c9ef48ce36541b71f435a7cd1c6a2dcd35c0ddf895edb",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/iscx_vpn/encoder2023_train2025/counterfactual.json",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 488,
+      "sha256": "68fcf23cc18725e86b2b042857d0682fd942e7c21c40cdd958b2b0972ff241e4",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/iscx_vpn/encoder2023_train2025/independent_replay.json",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 663,
+      "sha256": "863bcf5eebd7d1cb9e49a5a276ea48fd672d9d61f6c46fa6485a9a196ce761aa",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/iscx_vpn/encoder2023_train2025/known_validation_entropy_weights.csv",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 486815,
+      "sha256": "f2f4fb2087e42ad1d028e59bed3ca932f103fade562f1958373bec099a235cc6",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/iscx_vpn/encoder2023_train2025/known_validation_logits.npz",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 148688,
+      "sha256": "e1289b88bdfc198f18940f69a84cf76bb16f55249f1cd93b4d2cad642e1fd720",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/iscx_vpn/encoder2023_train2025/known_validation_predictions.csv",
+      "scope": "bundle",
+      "role": "predictions",
+      "size_bytes": 252942,
+      "sha256": "94720dfd8cde98f570f8981e8476ae87a4c1c1ef6c45389be58f297a4fec1b11",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/iscx_vpn/encoder2023_train2025/manifest.json",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 5278,
+      "sha256": "d14dc94c1f671e46e5bda2ea3e16dc244f1b499e432283d5cb1deb12f981dc35",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/iscx_vpn/encoder2023_train2025/per_class.csv",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 1088,
+      "sha256": "46396ab16309996698d60562767207ddb477a6c8ebd59b0d83dca4193f458a81",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/iscx_vpn/encoder2023_train2025/run_metrics.csv",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 286,
+      "sha256": "2e12b73cce7c9710e3544c78a148ce275e911dac8dea52494f8950c72c18e8c4",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/iscx_vpn/encoder2023_train2025/source_hashes_after.json",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 855,
+      "sha256": "6fde4a42f1fb33960e04d0363e68155c810adc094951c3721f28b2749ae6ce31",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/iscx_vpn/encoder2023_train2025/source_hashes_before.json",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 855,
+      "sha256": "6fde4a42f1fb33960e04d0363e68155c810adc094951c3721f28b2749ae6ce31",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/iscx_vpn/encoder2023_train2025/training_history.csv",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 16818,
+      "sha256": "da32e431ea617f3583a5386472ffd738255135f3a2533dd72174c9d86e7bca88",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/iscx_vpn/encoder2023_train2025/verification.json",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 744,
+      "sha256": "ed968924286562fc079a4d2c10e7152be5a14480bc65284a0036c90cbf11c7ad",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/iscx_vpn/encoder2023_train2026/RESULTS.md",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 1302,
+      "sha256": "af23cd21506995deeed31ffb9b96cce251454ea9c4dbbf0076dcd6f84769aaca",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/iscx_vpn/encoder2023_train2026/SUCCESS",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 8,
+      "sha256": "1f513d4ecec4e91ddd48da1a59b6d96f1b76c374dc1da641980782a34f43b102",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/iscx_vpn/encoder2023_train2026/T0_equal_best.pt",
+      "scope": "bundle",
+      "role": "checkpoint",
+      "size_bytes": 171745,
+      "sha256": "f0a44ec284ea8011dd27550c1876267c72f8661227dd3a966b10e2ea9df88e15",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/iscx_vpn/encoder2023_train2026/T1_three_entropy_best.pt",
+      "scope": "bundle",
+      "role": "checkpoint",
+      "size_bytes": 172123,
+      "sha256": "0973d702a639c1c49b064d041decdd8f45fd9143ada9556cd29b7258bf233d38",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/iscx_vpn/encoder2023_train2026/adapters_best.pt",
+      "scope": "bundle",
+      "role": "checkpoint",
+      "size_bytes": 969313,
+      "sha256": "2685e239651c68cf23711fe29940480e45d48011f5e1e3b20737f19155511247",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/iscx_vpn/encoder2023_train2026/counterfactual.json",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 490,
+      "sha256": "3dee36bac4be954a5e421efa4264e73d0e4d0eedd9475664c97d35b524138fa5",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/iscx_vpn/encoder2023_train2026/independent_replay.json",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 667,
+      "sha256": "36208a627e8353212d834c05f8213dd0c60abe4fd46c15a4f16665e2e0a03bc6",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/iscx_vpn/encoder2023_train2026/known_validation_entropy_weights.csv",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 486930,
+      "sha256": "cf4eeb31a1b5d1ed128c9fc03d83612a0d2697cb603b82186d393867fe80b976",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/iscx_vpn/encoder2023_train2026/known_validation_logits.npz",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 148326,
+      "sha256": "3e90804553cb8f10bf3a2b6385473899f9bda07df6ad5f2802280ac75104097c",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/iscx_vpn/encoder2023_train2026/known_validation_predictions.csv",
+      "scope": "bundle",
+      "role": "predictions",
+      "size_bytes": 253233,
+      "sha256": "d255fa07667e465ab8b10210242107ad2719fb462364a36f6c58456ae9ea66de",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/iscx_vpn/encoder2023_train2026/manifest.json",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 5280,
+      "sha256": "22ad951fdbe510f70d95873d5f3f4fb68bb01ff41d9d5e71d00341d65c523b12",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/iscx_vpn/encoder2023_train2026/per_class.csv",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 1150,
+      "sha256": "8020fc6ae3e25e1d0867d71d9ae6542e226a723e827205d6ef1fd1874d64e239",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/iscx_vpn/encoder2023_train2026/run_metrics.csv",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 288,
+      "sha256": "0fb83cb89475b08b5c1ed57babc5d6ba3ce0858434198300f8c7f22067149a5d",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/iscx_vpn/encoder2023_train2026/source_hashes_after.json",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 855,
+      "sha256": "6fde4a42f1fb33960e04d0363e68155c810adc094951c3721f28b2749ae6ce31",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/iscx_vpn/encoder2023_train2026/source_hashes_before.json",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 855,
+      "sha256": "6fde4a42f1fb33960e04d0363e68155c810adc094951c3721f28b2749ae6ce31",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/iscx_vpn/encoder2023_train2026/training_history.csv",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 16827,
+      "sha256": "f94ab27353ae56166ffd2ed4cea6ab79b710b1b243e402081d48ce567fcdbb81",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/iscx_vpn/encoder2023_train2026/verification.json",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 744,
+      "sha256": "a3cc8c526c0069b93e74c0b3ce2c9440d7eb8547f7f2d6d28313fb874e8848f8",
+      "hash_status": "verified"
+    },
+    {
+      "path": "stage30_counterfactual.csv",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 2997,
+      "sha256": "33e9d6eb2f3b90efada44c3d06210d94e8139c56a7b1c22ae5e2d982dc55e9ed",
+      "hash_status": "verified"
+    },
+    {
+      "path": "stage30_dataset_summary.csv",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 695,
+      "sha256": "a8a3360d0d623a853e0e6edeb32fe1ca22d5a57d7ac7e64d510a65f03d46808b",
+      "hash_status": "verified"
+    },
+    {
+      "path": "stage30_entropy_diagnostics.csv",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 5554,
+      "sha256": "a4810e8875f60155349f670ea162d32374cbe0c65d5a32ae8fb8aa58e44284c4",
+      "hash_status": "verified"
+    },
+    {
+      "path": "stage30_historical_stage27_reference.csv",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 1180,
+      "sha256": "e1d6438202d4c93fff273926a4a41f5ef9a1d519d07c9099b6960a77268c6fe1",
+      "hash_status": "verified"
+    },
+    {
+      "path": "stage30_paired_comparison.csv",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 1785,
+      "sha256": "8717084994249b51ea2be537c49800a871b52a99b205ecf1b7b32b9c4a4f8e27",
+      "hash_status": "verified"
+    },
+    {
+      "path": "stage30_per_class.csv",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 22403,
+      "sha256": "77110c10b91ce6e0806c02688af8e720f5e319041e178b6ccc939d2152681eed",
+      "hash_status": "verified"
+    },
+    {
+      "path": "stage30_prediction_rescue.csv",
+      "scope": "bundle",
+      "role": "predictions",
+      "size_bytes": 759,
+      "sha256": "e15fb5c3d272e3cdbb7689482330498679258847b6ba6c2b9f8e33dd3aa0d38b",
+      "hash_status": "verified"
+    },
+    {
+      "path": "stage30_report.md",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 2533,
+      "sha256": "1ae5c50aeb2a5531a6a88152a7981fd67001531ecb1d0febe18437b6e168c06d",
+      "hash_status": "verified"
+    },
+    {
+      "path": "stage30_run_metrics.csv",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 3974,
+      "sha256": "1e93ab547d6a9139c4e400fbf9b5f5ba4f40f923830b4b98d71a0df257fbe18c",
+      "hash_status": "verified"
+    }
+  ],
+  "limitations": [
+    "Known-Val development only; frozen encoders; repeated validation flows"
+  ],
+  "next_step": "stop; no Test-guided tuning"
+}

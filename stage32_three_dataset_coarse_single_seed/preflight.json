@@ -1,0 +1,238 @@
+{
+  "rows": [
+    {
+      "coarse_classes": [
+        "Communication",
+        "File-Transfer",
+        "P2P",
+        "Streaming"
+      ],
+      "dataset": "iscx_vpn",
+      "historical_alignment": {
+        "known_test": {
+          "coarse_head_predictions.csv": 1093,
+          "remap_predictions.csv": 1093
+        },
+        "known_validation": {
+          "coarse_head_predictions.csv": 1098,
+          "remap_predictions.csv": 1098
+        }
+      },
+      "roles": {
+        "known_test_metadata_only": {
+          "class_counts": {
+            "Communication": 595,
+            "File-Transfer": 200,
+            "P2P": 100,
+            "Streaming": 198
+          },
+          "samples": 1093
+        },
+        "known_train": {
+          "class_counts": {
+            "Communication": 4759,
+            "File-Transfer": 1600,
+            "P2P": 805,
+            "Streaming": 1600
+          },
+          "samples": 8764,
+          "views": {
+            "graph": [
+              8764,
+              128
+            ],
+            "trafficformer": [
+              8764,
+              768
+            ],
+            "yatc": [
+              8764,
+              192
+            ]
+          }
+        },
+        "known_validation": {
+          "class_counts": {
+            "Communication": 595,
+            "File-Transfer": 200,
+            "P2P": 101,
+            "Streaming": 202
+          },
+          "samples": 1098,
+          "views": {
+            "graph": [
+              1098,
+              128
+            ],
+            "trafficformer": [
+              1098,
+              768
+            ],
+            "yatc": [
+              1098,
+              192
+            ]
+          }
+        }
+      }
+    },
+    {
+      "coarse_classes": [
+        "Browsing",
+        "Communication",
+        "File-Transfer",
+        "P2P",
+        "Streaming"
+      ],
+      "dataset": "iscx_tor",
+      "historical_alignment": {
+        "known_test": {
+          "coarse_head_predictions.csv": 1117,
+          "remap_predictions.csv": 1117
+        },
+        "known_validation": {
+          "coarse_head_predictions.csv": 1118,
+          "remap_predictions.csv": 1118
+        }
+      },
+      "roles": {
+        "known_test_metadata_only": {
+          "class_counts": {
+            "Browsing": 200,
+            "Communication": 318,
+            "File-Transfer": 200,
+            "P2P": 200,
+            "Streaming": 199
+          },
+          "samples": 1117
+        },
+        "known_train": {
+          "class_counts": {
+            "Browsing": 1600,
+            "Communication": 2545,
+            "File-Transfer": 1600,
+            "P2P": 1600,
+            "Streaming": 1601
+          },
+          "samples": 8946,
+          "views": {
+            "graph": [
+              8946,
+              128
+            ],
+            "trafficformer": [
+              8946,
+              768
+            ],
+            "yatc": [
+              8946,
+              192
+            ]
+          }
+        },
+        "known_validation": {
+          "class_counts": {
+            "Browsing": 200,
+            "Communication": 318,
+            "File-Transfer": 200,
+            "P2P": 200,
+            "Streaming": 200
+          },
+          "samples": 1118,
+          "views": {
+            "graph": [
+              1118,
+              128
+            ],
+            "trafficformer": [
+              1118,
+              768
+            ],
+            "yatc": [
+              1118,
+              192
+            ]
+          }
+        }
+      }
+    },
+    {
+      "coarse_classes": [
+        "Chat",
+        "Command & Control",
+        "File Transfer",
+        "Streaming"
+      ],
+      "dataset": "vnat",
+      "historical_alignment": {
+        "prediction_file": "/home/birkenwald/data/SEU-WXY/WXY-SEU/TrafficClassifier/Projects/unknown_traffic_project/stage14c6_cleaned_pipeline_full15_closed_set/runs/medium_seed2025/validation_predictions.npy",
+        "test_pairing": "UNAVAILABLE_UNLESS_FROZEN_CHECKPOINT_REPLAY_PASSES",
+        "training_seed_different_from_stage32": true,
+        "validation_samples": 1960
+      },
+      "roles": {
+        "known_test_metadata_only": {
+          "class_counts": {
+            "Chat": 126,
+            "Command & Control": 1360,
+            "File Transfer": 420,
+            "Streaming": 54
+          },
+          "samples": 1960
+        },
+        "known_train": {
+          "class_counts": {
+            "Chat": 1017,
+            "Command & Control": 10887,
+            "File Transfer": 3362,
+            "Streaming": 438
+          },
+          "samples": 15704,
+          "views": {
+            "graph": [
+              15704,
+              128
+            ],
+            "trafficformer": [
+              15704,
+              768
+            ],
+            "yatc": [
+              15704,
+              192
+            ]
+          }
+        },
+        "known_validation": {
+          "class_counts": {
+            "Chat": 126,
+            "Command & Control": 1360,
+            "File Transfer": 420,
+            "Streaming": 54
+          },
+          "samples": 1960,
+          "views": {
+            "graph": [
+              1960,
+              128
+            ],
+            "trafficformer": [
+              1960,
+              768
+            ],
+            "yatc": [
+              1960,
+              192
+            ]
+          }
+        }
+      }
+    }
+  ],
+  "source_hash_count": 19,
+  "status": "PASS",
+  "test_feature_values_loaded": 0,
+  "train_seed": 2022,
+  "units": 3,
+  "unknown_feature_values_loaded": 0
+}

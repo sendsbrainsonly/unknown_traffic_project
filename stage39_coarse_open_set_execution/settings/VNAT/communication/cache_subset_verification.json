@@ -1,0 +1,17 @@
+{
+  "dataset": "VNAT",
+  "fold": "communication",
+  "known_train": 14687,
+  "known_validation": 1834,
+  "original_known_train_val_cache_only": true,
+  "role_manifest_sha256": "f4e66d24b9c62101b8c1efa3ed655b9dc5678c22391a5d7e4d8b6c892d17517d",
+  "source_cache_audit_sha256": {
+    "tf_fig": "fb2db23a5c7773b0299984caf3849284b058ff434efcf650098f25272b8c47bf",
+    "yatc_mfr": "2ac905a72420a01473d7091814f53d57a1999f222f972bc41aad8487f1fcca36"
+  },
+  "status": "PASS",
+  "test_feature_values_loaded": 0,
+  "unknown_feature_values_loaded": 0,
+  "unknown_training_samples": 0,
+  "unknown_validation_samples": 0
+}

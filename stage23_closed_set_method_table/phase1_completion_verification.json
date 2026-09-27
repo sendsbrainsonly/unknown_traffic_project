@@ -1,0 +1,92 @@
+{
+  "checks": 40025,
+  "failures": [],
+  "other_methods_pending": true,
+  "run_audit": [
+    {
+      "best_epoch": 90,
+      "checkpoint_sha256": "095b62ccbe3d8a273fb992534a934bd5ddf31e5cedc0b1ed1dbf7bb590888fce",
+      "completed_epochs": 100,
+      "dataset": "iscx_vpn",
+      "peak_gpu_memory_bytes": 2127700992,
+      "predictions_sha256": "6b14fd57c9a1bc1305a2bff32de09bc416f902c9807792a6384a6f0609e19d31",
+      "runtime_seconds": 495.28914308547974,
+      "seed": 2022,
+      "test": {
+        "accuracy": 0.7429094236047575,
+        "macro_f1": 0.7585056772140031,
+        "weighted_f1": 0.738984745300491
+      },
+      "validation": {
+        "accuracy": 0.7431693989071039,
+        "macro_f1": 0.7600458104813574,
+        "weighted_f1": 0.7416604944925271
+      }
+    },
+    {
+      "best_epoch": 90,
+      "checkpoint_sha256": "deeb88026e0891f92300a0f82ada5489c5ed2423999439a6aad4114aa8ea209b",
+      "completed_epochs": 100,
+      "dataset": "iscx_vpn",
+      "peak_gpu_memory_bytes": 2127700992,
+      "predictions_sha256": "fdbe987253c1f941929d783017068019de9be42e2bd006b39d7b9639ad7d928b",
+      "runtime_seconds": 492.91119289398193,
+      "seed": 2023,
+      "test": {
+        "accuracy": 0.7145471180237878,
+        "macro_f1": 0.73002368639985,
+        "weighted_f1": 0.7119020713892252
+      },
+      "validation": {
+        "accuracy": 0.7249544626593807,
+        "macro_f1": 0.7407919250347823,
+        "weighted_f1": 0.720302770100881
+      }
+    },
+    {
+      "best_epoch": 79,
+      "checkpoint_sha256": "3a51b78258ca4b5d9228fcf3c593c7cc7023bcce2155f4bdb29bea48b8d770cb",
+      "completed_epochs": 99,
+      "dataset": "iscx_tor",
+      "peak_gpu_memory_bytes": 2127703552,
+      "predictions_sha256": "e89508160fc7d29c669108749cc0db5c831797af12e90d8bc78308b4a078bba7",
+      "runtime_seconds": 499.1259524822235,
+      "seed": 2022,
+      "test": {
+        "accuracy": 0.711727842435094,
+        "macro_f1": 0.6762636174403391,
+        "weighted_f1": 0.7060593523795661
+      },
+      "validation": {
+        "accuracy": 0.7441860465116279,
+        "macro_f1": 0.7212937208336243,
+        "weighted_f1": 0.7382720728440917
+      }
+    },
+    {
+      "best_epoch": 89,
+      "checkpoint_sha256": "1e3efe6c7fac57f695307ccdc6286eed7153ca2af439a87dc7cb2388b9496324",
+      "completed_epochs": 99,
+      "dataset": "iscx_tor",
+      "peak_gpu_memory_bytes": 2127703552,
+      "predictions_sha256": "561f42b63abee765c2529fefbbc7bd3994640afa81d3f15ee3b0a7131beddc72",
+      "runtime_seconds": 475.5256013870239,
+      "seed": 2023,
+      "test": {
+        "accuracy": 0.5452103849597135,
+        "macro_f1": 0.4768617767444492,
+        "weighted_f1": 0.5234652175298512
+      },
+      "validation": {
+        "accuracy": 0.5813953488372093,
+        "macro_f1": 0.5183443825790117,
+        "weighted_f1": 0.5602081687169425
+      }
+    }
+  ],
+  "stage20_manifest_sha256": "6404d496f50a6f7f6f397d125ad0cd653c9df152d8db1b9ed2ad2310967950bb",
+  "status": "PASS_OPENDETECT_PHASE_ONLY",
+  "total_verified_method_rows": 12,
+  "verified_baseline_rows": 8,
+  "verified_opendetect_runs": 4
+}

@@ -1,0 +1,40 @@
+{
+  "status": "PASS",
+  "frozen_input_hashes_unchanged": true,
+  "source_sha256": {
+    "sample_scores.csv": "1210e33b9b216e302afbe9c94ca5f9818e7176c44c8a0e6160cb9468cbf15eb1",
+    "open_set_results.csv": "299e5d45eb9dd3d529744588104943d06f3e656a7e5a5388f80f0cd08a81b7a7",
+    "calibration.json": "ca31475f8de1b0976497e2c53944a45c76ab8a8cc484b5700291697803ff3b55",
+    "known_test_closed_set.json": "2e9eece31a39b3bac2a822d5aab8610b1b8d7b6684a967a3946a436db8f5ef68"
+  },
+  "sample_id_unique": true,
+  "samples": 4891,
+  "known_test": 4333,
+  "unknown_test": 558,
+  "method_checks": [
+    {
+      "method": "msp",
+      "stored_p95_decisions_equal": true,
+      "existing_formal_metrics_replayed": true
+    },
+    {
+      "method": "energy",
+      "stored_p95_decisions_equal": true,
+      "existing_formal_metrics_replayed": true
+    },
+    {
+      "method": "centroid",
+      "stored_p95_decisions_equal": true,
+      "existing_formal_metrics_replayed": true
+    },
+    {
+      "method": "des_v1",
+      "stored_p95_decisions_equal": true,
+      "existing_formal_metrics_replayed": true
+    }
+  ],
+  "model_training": false,
+  "threshold_refit_for_formal_metrics": false,
+  "test_oracle_is_non_independent_retrospective_only": true,
+  "cic_open_set_scores_available": false
+}

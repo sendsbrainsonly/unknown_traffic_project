@@ -1,0 +1,64 @@
+{
+  "checkpoint_hashes": {
+    "T0_equal/T0_equal_best.pt": "7effdbca065a10290495b316170598b220799b407d3eaf5c406c2befda001ee6",
+    "T0_equal/adapters_best.pt": "8eaf8de8d97981f44a6587578a7784d0a4afaf5f2fd949b29305401a34959d3b",
+    "graph/model_best.pt": "1ac87702bc788146f13362d6d3a83db912b8e01be93a977d35cb22c6d4edfd00",
+    "role_manifest.csv": "4316c79d0aee11388907083c1c7e350a4afef2d676256988a183efa70ff82d8e",
+    "trafficformer/model_best.pt": "598a800a8179bb976d8c144a8b362e094594b1f5a5b3118e7e1992588221740d",
+    "yatc/model_best.pt": "10467936052cd2c7dfe3ed7d8e80f1a8a85bba76fc58d18f9a5a40bf22376171"
+  },
+  "classes": [
+    "Communication",
+    "P2P",
+    "Streaming"
+  ],
+  "dataset": "iscx_vpn",
+  "decision_rule": "score > threshold",
+  "fold": "file_transfer",
+  "global_local_weights": [
+    0.5,
+    0.5
+  ],
+  "knn_k": 10,
+  "known_train": 9459,
+  "known_validation": 1180,
+  "known_validation_metrics": {
+    "accuracy": 0.997457627118644,
+    "macro_f1": 0.9977855942655093,
+    "weighted_f1": 0.9974610441218432
+  },
+  "mad": {
+    "centroid": 0.6694893700952029,
+    "local": 0.005424984535784461
+  },
+  "median": {
+    "centroid": 1.0487080275493614,
+    "local": 0.006702527776360512
+  },
+  "methods": [
+    "msp",
+    "des_v1"
+  ],
+  "percentiles": [
+    90,
+    95,
+    99
+  ],
+  "quantile_method": "higher",
+  "role_manifest_sha256": "4316c79d0aee11388907083c1c7e350a4afef2d676256988a183efa70ff82d8e",
+  "status": "PASS",
+  "test_used_for_fitting": 0,
+  "thresholds": {
+    "des_v1": {
+      "90": 22.145327916224023,
+      "95": 29.181040311241855,
+      "99": 111.17381556560679
+    },
+    "msp": {
+      "90": 2.5090210249434364e-06,
+      "95": 6.175539161157317e-06,
+      "99": 1.885472082241435e-05
+    }
+  },
+  "unknown_used_for_fitting": 0
+}

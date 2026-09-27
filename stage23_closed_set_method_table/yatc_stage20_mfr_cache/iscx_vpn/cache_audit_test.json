@@ -1,0 +1,720 @@
+{
+  "capture_audit": [
+    {
+      "last_required_packet": 58,
+      "packets_scanned": 58,
+      "pcap": "/home/birkenwald/data/SEU-WXY/WXY-SEU/TrafficClassifier/Dataset/ISCX-VPN/ISCX-VPN/NonVPN-PCAPs-01/AIMchat1.pcapng",
+      "pcap_size_bytes": 67108,
+      "selected_packet_numbers": 10,
+      "selected_references": 10
+    },
+    {
+      "last_required_packet": 279,
+      "packets_scanned": 279,
+      "pcap": "/home/birkenwald/data/SEU-WXY/WXY-SEU/TrafficClassifier/Dataset/ISCX-VPN/ISCX-VPN/NonVPN-PCAPs-01/AIMchat2.pcapng",
+      "pcap_size_bytes": 66484,
+      "selected_packet_numbers": 9,
+      "selected_references": 9
+    },
+    {
+      "last_required_packet": 1201,
+      "packets_scanned": 1201,
+      "pcap": "/home/birkenwald/data/SEU-WXY/WXY-SEU/TrafficClassifier/Dataset/ISCX-VPN/ISCX-VPN/NonVPN-PCAPs-01/aim_chat_3a.pcap",
+      "pcap_size_bytes": 766138,
+      "selected_packet_numbers": 28,
+      "selected_references": 28
+    },
+    {
+      "last_required_packet": 2850,
+      "packets_scanned": 2850,
+      "pcap": "/home/birkenwald/data/SEU-WXY/WXY-SEU/TrafficClassifier/Dataset/ISCX-VPN/ISCX-VPN/NonVPN-PCAPs-01/aim_chat_3b.pcap",
+      "pcap_size_bytes": 450816,
+      "selected_packet_numbers": 57,
+      "selected_references": 57
+    },
+    {
+      "last_required_packet": 29755,
+      "packets_scanned": 29755,
+      "pcap": "/home/birkenwald/data/SEU-WXY/WXY-SEU/TrafficClassifier/Dataset/ISCX-VPN/ISCX-VPN/NonVPN-PCAPs-01/email1a.pcap",
+      "pcap_size_bytes": 3207205,
+      "selected_packet_numbers": 177,
+      "selected_references": 177
+    },
+    {
+      "last_required_packet": 32535,
+      "packets_scanned": 32535,
+      "pcap": "/home/birkenwald/data/SEU-WXY/WXY-SEU/TrafficClassifier/Dataset/ISCX-VPN/ISCX-VPN/NonVPN-PCAPs-01/email1b.pcap",
+      "pcap_size_bytes": 3259057,
+      "selected_packet_numbers": 124,
+      "selected_references": 124
+    },
+    {
+      "last_required_packet": 4298,
+      "packets_scanned": 4298,
+      "pcap": "/home/birkenwald/data/SEU-WXY/WXY-SEU/TrafficClassifier/Dataset/ISCX-VPN/ISCX-VPN/NonVPN-PCAPs-01/email2a.pcap",
+      "pcap_size_bytes": 808096,
+      "selected_packet_numbers": 24,
+      "selected_references": 24
+    },
+    {
+      "last_required_packet": 7620,
+      "packets_scanned": 7620,
+      "pcap": "/home/birkenwald/data/SEU-WXY/WXY-SEU/TrafficClassifier/Dataset/ISCX-VPN/ISCX-VPN/NonVPN-PCAPs-01/email2b.pcap",
+      "pcap_size_bytes": 967539,
+      "selected_packet_numbers": 53,
+      "selected_references": 53
+    },
+    {
+      "last_required_packet": 623029,
+      "packets_scanned": 623029,
+      "pcap": "/home/birkenwald/data/SEU-WXY/WXY-SEU/TrafficClassifier/Dataset/ISCX-VPN/ISCX-VPN/NonVPN-PCAPs-01/facebook_audio3.pcapng",
+      "pcap_size_bytes": 105311908,
+      "selected_packet_numbers": 8,
+      "selected_references": 8
+    },
+    {
+      "last_required_packet": 1037514,
+      "packets_scanned": 1037514,
+      "pcap": "/home/birkenwald/data/SEU-WXY/WXY-SEU/TrafficClassifier/Dataset/ISCX-VPN/ISCX-VPN/NonVPN-PCAPs-01/facebook_audio4.pcapng",
+      "pcap_size_bytes": 150194420,
+      "selected_packet_numbers": 95,
+      "selected_references": 95
+    },
+    {
+      "last_required_packet": 165814,
+      "packets_scanned": 165814,
+      "pcap": "/home/birkenwald/data/SEU-WXY/WXY-SEU/TrafficClassifier/Dataset/ISCX-VPN/ISCX-VPN/NonVPN-PCAPs-01/facebook_video2a.pcap",
+      "pcap_size_bytes": 230631530,
+      "selected_packet_numbers": 11,
+      "selected_references": 11
+    },
+    {
+      "last_required_packet": 479,
+      "packets_scanned": 479,
+      "pcap": "/home/birkenwald/data/SEU-WXY/WXY-SEU/TrafficClassifier/Dataset/ISCX-VPN/ISCX-VPN/NonVPN-PCAPs-02/ICQchat1.pcapng",
+      "pcap_size_bytes": 58700,
+      "selected_packet_numbers": 18,
+      "selected_references": 18
+    },
+    {
+      "last_required_packet": 252,
+      "packets_scanned": 252,
+      "pcap": "/home/birkenwald/data/SEU-WXY/WXY-SEU/TrafficClassifier/Dataset/ISCX-VPN/ISCX-VPN/NonVPN-PCAPs-02/ICQchat2.pcapng",
+      "pcap_size_bytes": 47620,
+      "selected_packet_numbers": 29,
+      "selected_references": 29
+    },
+    {
+      "last_required_packet": 5563526,
+      "packets_scanned": 5563526,
+      "pcap": "/home/birkenwald/data/SEU-WXY/WXY-SEU/TrafficClassifier/Dataset/ISCX-VPN/ISCX-VPN/NonVPN-PCAPs-02/ftps_down_1a.pcap",
+      "pcap_size_bytes": 5835295240,
+      "selected_packet_numbers": 105,
+      "selected_references": 105
+    },
+    {
+      "last_required_packet": 870992,
+      "packets_scanned": 870992,
+      "pcap": "/home/birkenwald/data/SEU-WXY/WXY-SEU/TrafficClassifier/Dataset/ISCX-VPN/ISCX-VPN/NonVPN-PCAPs-02/ftps_down_1b.pcap",
+      "pcap_size_bytes": 4544763906,
+      "selected_packet_numbers": 9,
+      "selected_references": 9
+    },
+    {
+      "last_required_packet": 93337,
+      "packets_scanned": 93337,
+      "pcap": "/home/birkenwald/data/SEU-WXY/WXY-SEU/TrafficClassifier/Dataset/ISCX-VPN/ISCX-VPN/NonVPN-PCAPs-02/ftps_up_2a.pcap",
+      "pcap_size_bytes": 90256484,
+      "selected_packet_numbers": 40,
+      "selected_references": 40
+    },
+    {
+      "last_required_packet": 93052,
+      "packets_scanned": 93052,
+      "pcap": "/home/birkenwald/data/SEU-WXY/WXY-SEU/TrafficClassifier/Dataset/ISCX-VPN/ISCX-VPN/NonVPN-PCAPs-02/ftps_up_2b.pcap",
+      "pcap_size_bytes": 90760090,
+      "selected_packet_numbers": 23,
+      "selected_references": 23
+    },
+    {
+      "last_required_packet": 1548,
+      "packets_scanned": 1548,
+      "pcap": "/home/birkenwald/data/SEU-WXY/WXY-SEU/TrafficClassifier/Dataset/ISCX-VPN/ISCX-VPN/NonVPN-PCAPs-02/gmailchat1.pcapng",
+      "pcap_size_bytes": 785160,
+      "selected_packet_numbers": 26,
+      "selected_references": 26
+    },
+    {
+      "last_required_packet": 3088,
+      "packets_scanned": 3088,
+      "pcap": "/home/birkenwald/data/SEU-WXY/WXY-SEU/TrafficClassifier/Dataset/ISCX-VPN/ISCX-VPN/NonVPN-PCAPs-02/gmailchat2.pcapng",
+      "pcap_size_bytes": 1494044,
+      "selected_packet_numbers": 57,
+      "selected_references": 57
+    },
+    {
+      "last_required_packet": 7219,
+      "packets_scanned": 7219,
+      "pcap": "/home/birkenwald/data/SEU-WXY/WXY-SEU/TrafficClassifier/Dataset/ISCX-VPN/ISCX-VPN/NonVPN-PCAPs-02/gmailchat3.pcapng",
+      "pcap_size_bytes": 3133312,
+      "selected_packet_numbers": 100,
+      "selected_references": 100
+    },
+    {
+      "last_required_packet": 80421,
+      "packets_scanned": 80421,
+      "pcap": "/home/birkenwald/data/SEU-WXY/WXY-SEU/TrafficClassifier/Dataset/ISCX-VPN/ISCX-VPN/NonVPN-PCAPs-02/hangouts_audio1b.pcapng",
+      "pcap_size_bytes": 17941580,
+      "selected_packet_numbers": 5,
+      "selected_references": 5
+    },
+    {
+      "last_required_packet": 52647,
+      "packets_scanned": 52647,
+      "pcap": "/home/birkenwald/data/SEU-WXY/WXY-SEU/TrafficClassifier/Dataset/ISCX-VPN/ISCX-VPN/NonVPN-PCAPs-02/hangouts_audio2a.pcap",
+      "pcap_size_bytes": 17458173,
+      "selected_packet_numbers": 2,
+      "selected_references": 2
+    },
+    {
+      "last_required_packet": 947112,
+      "packets_scanned": 947112,
+      "pcap": "/home/birkenwald/data/SEU-WXY/WXY-SEU/TrafficClassifier/Dataset/ISCX-VPN/ISCX-VPN/NonVPN-PCAPs-02/hangouts_audio4.pcapng",
+      "pcap_size_bytes": 165147312,
+      "selected_packet_numbers": 91,
+      "selected_references": 91
+    },
+    {
+      "last_required_packet": 808325,
+      "packets_scanned": 808325,
+      "pcap": "/home/birkenwald/data/SEU-WXY/WXY-SEU/TrafficClassifier/Dataset/ISCX-VPN/ISCX-VPN/NonVPN-PCAPs-02/hangouts_video2a.pcap",
+      "pcap_size_bytes": 732534042,
+      "selected_packet_numbers": 14,
+      "selected_references": 14
+    },
+    {
+      "last_required_packet": 610,
+      "packets_scanned": 610,
+      "pcap": "/home/birkenwald/data/SEU-WXY/WXY-SEU/TrafficClassifier/Dataset/ISCX-VPN/ISCX-VPN/NonVPN-PCAPs-02/icq_chat_3a.pcap",
+      "pcap_size_bytes": 125759,
+      "selected_packet_numbers": 19,
+      "selected_references": 19
+    },
+    {
+      "last_required_packet": 2692,
+      "packets_scanned": 2692,
+      "pcap": "/home/birkenwald/data/SEU-WXY/WXY-SEU/TrafficClassifier/Dataset/ISCX-VPN/ISCX-VPN/NonVPN-PCAPs-02/icq_chat_3b.pcap",
+      "pcap_size_bytes": 366438,
+      "selected_packet_numbers": 76,
+      "selected_references": 76
+    },
+    {
+      "last_required_packet": 36048,
+      "packets_scanned": 36048,
+      "pcap": "/home/birkenwald/data/SEU-WXY/WXY-SEU/TrafficClassifier/Dataset/ISCX-VPN/ISCX-VPN/NonVPN-PCAPs-02/netflix1.pcap",
+      "pcap_size_bytes": 110248111,
+      "selected_packet_numbers": 15,
+      "selected_references": 15
+    },
+    {
+      "last_required_packet": 47470,
+      "packets_scanned": 47470,
+      "pcap": "/home/birkenwald/data/SEU-WXY/WXY-SEU/TrafficClassifier/Dataset/ISCX-VPN/ISCX-VPN/NonVPN-PCAPs-02/netflix2.pcap",
+      "pcap_size_bytes": 118957137,
+      "selected_packet_numbers": 18,
+      "selected_references": 18
+    },
+    {
+      "last_required_packet": 122354,
+      "packets_scanned": 122354,
+      "pcap": "/home/birkenwald/data/SEU-WXY/WXY-SEU/TrafficClassifier/Dataset/ISCX-VPN/ISCX-VPN/NonVPN-PCAPs-02/netflix3.pcap",
+      "pcap_size_bytes": 248582655,
+      "selected_packet_numbers": 13,
+      "selected_references": 13
+    },
+    {
+      "last_required_packet": 58500,
+      "packets_scanned": 58500,
+      "pcap": "/home/birkenwald/data/SEU-WXY/WXY-SEU/TrafficClassifier/Dataset/ISCX-VPN/ISCX-VPN/NonVPN-PCAPs-02/netflix4.pcap",
+      "pcap_size_bytes": 165131367,
+      "selected_packet_numbers": 23,
+      "selected_references": 23
+    },
+    {
+      "last_required_packet": 391200,
+      "packets_scanned": 391200,
+      "pcap": "/home/birkenwald/data/SEU-WXY/WXY-SEU/TrafficClassifier/Dataset/ISCX-VPN/ISCX-VPN/NonVPN-PCAPs-03/scp1.pcapng",
+      "pcap_size_bytes": 3262427124,
+      "selected_packet_numbers": 136,
+      "selected_references": 136
+    },
+    {
+      "last_required_packet": 29,
+      "packets_scanned": 29,
+      "pcap": "/home/birkenwald/data/SEU-WXY/WXY-SEU/TrafficClassifier/Dataset/ISCX-VPN/ISCX-VPN/NonVPN-PCAPs-03/scpDown5.pcap",
+      "pcap_size_bytes": 382679400,
+      "selected_packet_numbers": 2,
+      "selected_references": 2
+    },
+    {
+      "last_required_packet": 188335,
+      "packets_scanned": 188335,
+      "pcap": "/home/birkenwald/data/SEU-WXY/WXY-SEU/TrafficClassifier/Dataset/ISCX-VPN/ISCX-VPN/NonVPN-PCAPs-03/sftp1.pcapng",
+      "pcap_size_bytes": 916865496,
+      "selected_packet_numbers": 5,
+      "selected_references": 5
+    },
+    {
+      "last_required_packet": 1741,
+      "packets_scanned": 1741,
+      "pcap": "/home/birkenwald/data/SEU-WXY/WXY-SEU/TrafficClassifier/Dataset/ISCX-VPN/ISCX-VPN/NonVPN-PCAPs-03/sftpDown1.pcap",
+      "pcap_size_bytes": 6302021,
+      "selected_packet_numbers": 7,
+      "selected_references": 7
+    },
+    {
+      "last_required_packet": 4204,
+      "packets_scanned": 4204,
+      "pcap": "/home/birkenwald/data/SEU-WXY/WXY-SEU/TrafficClassifier/Dataset/ISCX-VPN/ISCX-VPN/NonVPN-PCAPs-03/sftpDown2.pcap",
+      "pcap_size_bytes": 22320455,
+      "selected_packet_numbers": 11,
+      "selected_references": 11
+    },
+    {
+      "last_required_packet": 95732,
+      "packets_scanned": 95732,
+      "pcap": "/home/birkenwald/data/SEU-WXY/WXY-SEU/TrafficClassifier/Dataset/ISCX-VPN/ISCX-VPN/NonVPN-PCAPs-03/sftp_up_2b.pcap",
+      "pcap_size_bytes": 93324250,
+      "selected_packet_numbers": 7,
+      "selected_references": 7
+    },
+    {
+      "last_required_packet": 398701,
+      "packets_scanned": 398701,
+      "pcap": "/home/birkenwald/data/SEU-WXY/WXY-SEU/TrafficClassifier/Dataset/ISCX-VPN/ISCX-VPN/NonVPN-PCAPs-03/skype_audio3.pcapng",
+      "pcap_size_bytes": 61792924,
+      "selected_packet_numbers": 33,
+      "selected_references": 33
+    },
+    {
+      "last_required_packet": 54288,
+      "packets_scanned": 54288,
+      "pcap": "/home/birkenwald/data/SEU-WXY/WXY-SEU/TrafficClassifier/Dataset/ISCX-VPN/ISCX-VPN/NonVPN-PCAPs-03/skype_audio4.pcapng",
+      "pcap_size_bytes": 43842068,
+      "selected_packet_numbers": 10,
+      "selected_references": 10
+    },
+    {
+      "last_required_packet": 41083,
+      "packets_scanned": 41083,
+      "pcap": "/home/birkenwald/data/SEU-WXY/WXY-SEU/TrafficClassifier/Dataset/ISCX-VPN/ISCX-VPN/NonVPN-PCAPs-03/skype_chat1a.pcap",
+      "pcap_size_bytes": 9632453,
+      "selected_packet_numbers": 13,
+      "selected_references": 13
+    },
+    {
+      "last_required_packet": 43186,
+      "packets_scanned": 43186,
+      "pcap": "/home/birkenwald/data/SEU-WXY/WXY-SEU/TrafficClassifier/Dataset/ISCX-VPN/ISCX-VPN/NonVPN-PCAPs-03/skype_chat1b.pcap",
+      "pcap_size_bytes": 9679510,
+      "selected_packet_numbers": 7,
+      "selected_references": 7
+    },
+    {
+      "last_required_packet": 11006,
+      "packets_scanned": 11006,
+      "pcap": "/home/birkenwald/data/SEU-WXY/WXY-SEU/TrafficClassifier/Dataset/ISCX-VPN/ISCX-VPN/NonVPN-PCAPs-03/skype_file7.pcapng",
+      "pcap_size_bytes": 391279452,
+      "selected_packet_numbers": 4,
+      "selected_references": 4
+    },
+    {
+      "last_required_packet": 770538,
+      "packets_scanned": 770538,
+      "pcap": "/home/birkenwald/data/SEU-WXY/WXY-SEU/TrafficClassifier/Dataset/ISCX-VPN/ISCX-VPN/NonVPN-PCAPs-03/skype_file8.pcapng",
+      "pcap_size_bytes": 420476360,
+      "selected_packet_numbers": 64,
+      "selected_references": 64
+    },
+    {
+      "last_required_packet": 13049,
+      "packets_scanned": 13049,
+      "pcap": "/home/birkenwald/data/SEU-WXY/WXY-SEU/TrafficClassifier/Dataset/ISCX-VPN/ISCX-VPN/NonVPN-PCAPs-03/spotify1.pcap",
+      "pcap_size_bytes": 25782652,
+      "selected_packet_numbers": 20,
+      "selected_references": 20
+    },
+    {
+      "last_required_packet": 675,
+      "packets_scanned": 675,
+      "pcap": "/home/birkenwald/data/SEU-WXY/WXY-SEU/TrafficClassifier/Dataset/ISCX-VPN/ISCX-VPN/NonVPN-PCAPs-03/spotify2.pcap",
+      "pcap_size_bytes": 482825,
+      "selected_packet_numbers": 8,
+      "selected_references": 8
+    },
+    {
+      "last_required_packet": 18444,
+      "packets_scanned": 18444,
+      "pcap": "/home/birkenwald/data/SEU-WXY/WXY-SEU/TrafficClassifier/Dataset/ISCX-VPN/ISCX-VPN/NonVPN-PCAPs-03/spotify4.pcap",
+      "pcap_size_bytes": 40693798,
+      "selected_packet_numbers": 20,
+      "selected_references": 20
+    },
+    {
+      "last_required_packet": 41018,
+      "packets_scanned": 41018,
+      "pcap": "/home/birkenwald/data/SEU-WXY/WXY-SEU/TrafficClassifier/Dataset/ISCX-VPN/ISCX-VPN/NonVPN-PCAPs-03/vimeo1.pcap",
+      "pcap_size_bytes": 297256384,
+      "selected_packet_numbers": 31,
+      "selected_references": 31
+    },
+    {
+      "last_required_packet": 2979,
+      "packets_scanned": 2979,
+      "pcap": "/home/birkenwald/data/SEU-WXY/WXY-SEU/TrafficClassifier/Dataset/ISCX-VPN/ISCX-VPN/NonVPN-PCAPs-03/vimeo2.pcap",
+      "pcap_size_bytes": 8475918,
+      "selected_packet_numbers": 15,
+      "selected_references": 15
+    },
+    {
+      "last_required_packet": 19278,
+      "packets_scanned": 19278,
+      "pcap": "/home/birkenwald/data/SEU-WXY/WXY-SEU/TrafficClassifier/Dataset/ISCX-VPN/ISCX-VPN/NonVPN-PCAPs-03/vimeo3.pcap",
+      "pcap_size_bytes": 112365310,
+      "selected_packet_numbers": 10,
+      "selected_references": 10
+    },
+    {
+      "last_required_packet": 13755,
+      "packets_scanned": 13755,
+      "pcap": "/home/birkenwald/data/SEU-WXY/WXY-SEU/TrafficClassifier/Dataset/ISCX-VPN/ISCX-VPN/NonVPN-PCAPs-03/vimeo4.pcap",
+      "pcap_size_bytes": 53739782,
+      "selected_packet_numbers": 31,
+      "selected_references": 31
+    },
+    {
+      "last_required_packet": 33122,
+      "packets_scanned": 33122,
+      "pcap": "/home/birkenwald/data/SEU-WXY/WXY-SEU/TrafficClassifier/Dataset/ISCX-VPN/ISCX-VPN/NonVPN-PCAPs-03/voipbuster1b.pcapng",
+      "pcap_size_bytes": 5840116,
+      "selected_packet_numbers": 21,
+      "selected_references": 21
+    },
+    {
+      "last_required_packet": 32567,
+      "packets_scanned": 32567,
+      "pcap": "/home/birkenwald/data/SEU-WXY/WXY-SEU/TrafficClassifier/Dataset/ISCX-VPN/ISCX-VPN/NonVPN-PCAPs-03/voipbuster2b.pcapng",
+      "pcap_size_bytes": 5576024,
+      "selected_packet_numbers": 15,
+      "selected_references": 15
+    },
+    {
+      "last_required_packet": 32666,
+      "packets_scanned": 32666,
+      "pcap": "/home/birkenwald/data/SEU-WXY/WXY-SEU/TrafficClassifier/Dataset/ISCX-VPN/ISCX-VPN/NonVPN-PCAPs-03/voipbuster3b.pcapng",
+      "pcap_size_bytes": 5551940,
+      "selected_packet_numbers": 13,
+      "selected_references": 13
+    },
+    {
+      "last_required_packet": 224762,
+      "packets_scanned": 224762,
+      "pcap": "/home/birkenwald/data/SEU-WXY/WXY-SEU/TrafficClassifier/Dataset/ISCX-VPN/ISCX-VPN/NonVPN-PCAPs-03/voipbuster_4a.pcap",
+      "pcap_size_bytes": 52230444,
+      "selected_packet_numbers": 16,
+      "selected_references": 16
+    },
+    {
+      "last_required_packet": 369242,
+      "packets_scanned": 369242,
+      "pcap": "/home/birkenwald/data/SEU-WXY/WXY-SEU/TrafficClassifier/Dataset/ISCX-VPN/ISCX-VPN/NonVPN-PCAPs-03/voipbuster_4b.pcap",
+      "pcap_size_bytes": 52123941,
+      "selected_packet_numbers": 41,
+      "selected_references": 41
+    },
+    {
+      "last_required_packet": 7800,
+      "packets_scanned": 7800,
+      "pcap": "/home/birkenwald/data/SEU-WXY/WXY-SEU/TrafficClassifier/Dataset/ISCX-VPN/ISCX-VPN/NonVPN-PCAPs-03/youtube1.pcap",
+      "pcap_size_bytes": 12139573,
+      "selected_packet_numbers": 23,
+      "selected_references": 23
+    },
+    {
+      "last_required_packet": 1478,
+      "packets_scanned": 1478,
+      "pcap": "/home/birkenwald/data/SEU-WXY/WXY-SEU/TrafficClassifier/Dataset/ISCX-VPN/ISCX-VPN/NonVPN-PCAPs-03/youtube2.pcap",
+      "pcap_size_bytes": 22540747,
+      "selected_packet_numbers": 15,
+      "selected_references": 15
+    },
+    {
+      "last_required_packet": 6953,
+      "packets_scanned": 6953,
+      "pcap": "/home/birkenwald/data/SEU-WXY/WXY-SEU/TrafficClassifier/Dataset/ISCX-VPN/ISCX-VPN/NonVPN-PCAPs-03/youtube3.pcap",
+      "pcap_size_bytes": 12437561,
+      "selected_packet_numbers": 8,
+      "selected_references": 8
+    },
+    {
+      "last_required_packet": 39468,
+      "packets_scanned": 39468,
+      "pcap": "/home/birkenwald/data/SEU-WXY/WXY-SEU/TrafficClassifier/Dataset/ISCX-VPN/ISCX-VPN/NonVPN-PCAPs-03/youtube4.pcap",
+      "pcap_size_bytes": 65084037,
+      "selected_packet_numbers": 26,
+      "selected_references": 26
+    },
+    {
+      "last_required_packet": 134392,
+      "packets_scanned": 134392,
+      "pcap": "/home/birkenwald/data/SEU-WXY/WXY-SEU/TrafficClassifier/Dataset/ISCX-VPN/ISCX-VPN/NonVPN-PCAPs-03/youtube5.pcap",
+      "pcap_size_bytes": 253263531,
+      "selected_packet_numbers": 4,
+      "selected_references": 4
+    },
+    {
+      "last_required_packet": 3735,
+      "packets_scanned": 3735,
+      "pcap": "/home/birkenwald/data/SEU-WXY/WXY-SEU/TrafficClassifier/Dataset/ISCX-VPN/ISCX-VPN/NonVPN-PCAPs-03/youtube6.pcap",
+      "pcap_size_bytes": 13822693,
+      "selected_packet_numbers": 2,
+      "selected_references": 2
+    },
+    {
+      "last_required_packet": 32670,
+      "packets_scanned": 32670,
+      "pcap": "/home/birkenwald/data/SEU-WXY/WXY-SEU/TrafficClassifier/Dataset/ISCX-VPN/ISCX-VPN/NonVPN-PCAPs-03/youtubeHTML5_1.pcap",
+      "pcap_size_bytes": 77298864,
+      "selected_packet_numbers": 26,
+      "selected_references": 26
+    },
+    {
+      "last_required_packet": 1040,
+      "packets_scanned": 1040,
+      "pcap": "/home/birkenwald/data/SEU-WXY/WXY-SEU/TrafficClassifier/Dataset/ISCX-VPN/ISCX-VPN/VPN-PCAPS-01/vpn_aim_chat1a.pcap",
+      "pcap_size_bytes": 178417,
+      "selected_packet_numbers": 19,
+      "selected_references": 19
+    },
+    {
+      "last_required_packet": 778,
+      "packets_scanned": 778,
+      "pcap": "/home/birkenwald/data/SEU-WXY/WXY-SEU/TrafficClassifier/Dataset/ISCX-VPN/ISCX-VPN/VPN-PCAPS-01/vpn_aim_chat1b.pcap",
+      "pcap_size_bytes": 190525,
+      "selected_packet_numbers": 2,
+      "selected_references": 2
+    },
+    {
+      "last_required_packet": 422078,
+      "packets_scanned": 422078,
+      "pcap": "/home/birkenwald/data/SEU-WXY/WXY-SEU/TrafficClassifier/Dataset/ISCX-VPN/ISCX-VPN/VPN-PCAPS-01/vpn_bittorrent.pcap",
+      "pcap_size_bytes": 376187475,
+      "selected_packet_numbers": 259,
+      "selected_references": 259
+    },
+    {
+      "last_required_packet": 2535,
+      "packets_scanned": 2535,
+      "pcap": "/home/birkenwald/data/SEU-WXY/WXY-SEU/TrafficClassifier/Dataset/ISCX-VPN/ISCX-VPN/VPN-PCAPS-01/vpn_email2a.pcap",
+      "pcap_size_bytes": 559048,
+      "selected_packet_numbers": 23,
+      "selected_references": 23
+    },
+    {
+      "last_required_packet": 17699,
+      "packets_scanned": 17699,
+      "pcap": "/home/birkenwald/data/SEU-WXY/WXY-SEU/TrafficClassifier/Dataset/ISCX-VPN/ISCX-VPN/VPN-PCAPS-01/vpn_email2b.pcap",
+      "pcap_size_bytes": 7626146,
+      "selected_packet_numbers": 25,
+      "selected_references": 25
+    },
+    {
+      "last_required_packet": 9182,
+      "packets_scanned": 9182,
+      "pcap": "/home/birkenwald/data/SEU-WXY/WXY-SEU/TrafficClassifier/Dataset/ISCX-VPN/ISCX-VPN/VPN-PCAPS-01/vpn_facebook_audio2.pcap",
+      "pcap_size_bytes": 6501918,
+      "selected_packet_numbers": 2,
+      "selected_references": 2
+    },
+    {
+      "last_required_packet": 6288,
+      "packets_scanned": 6288,
+      "pcap": "/home/birkenwald/data/SEU-WXY/WXY-SEU/TrafficClassifier/Dataset/ISCX-VPN/ISCX-VPN/VPN-PCAPS-01/vpn_facebook_chat1a.pcap",
+      "pcap_size_bytes": 3396317,
+      "selected_packet_numbers": 4,
+      "selected_references": 4
+    },
+    {
+      "last_required_packet": 5726,
+      "packets_scanned": 5726,
+      "pcap": "/home/birkenwald/data/SEU-WXY/WXY-SEU/TrafficClassifier/Dataset/ISCX-VPN/ISCX-VPN/VPN-PCAPS-01/vpn_facebook_chat1b.pcap",
+      "pcap_size_bytes": 2594284,
+      "selected_packet_numbers": 4,
+      "selected_references": 4
+    },
+    {
+      "last_required_packet": 95562,
+      "packets_scanned": 95562,
+      "pcap": "/home/birkenwald/data/SEU-WXY/WXY-SEU/TrafficClassifier/Dataset/ISCX-VPN/ISCX-VPN/VPN-PCAPS-01/vpn_ftps_A.pcap",
+      "pcap_size_bytes": 94380369,
+      "selected_packet_numbers": 16,
+      "selected_references": 16
+    },
+    {
+      "last_required_packet": 88683,
+      "packets_scanned": 88683,
+      "pcap": "/home/birkenwald/data/SEU-WXY/WXY-SEU/TrafficClassifier/Dataset/ISCX-VPN/ISCX-VPN/VPN-PCAPS-01/vpn_ftps_B.pcap",
+      "pcap_size_bytes": 82635430,
+      "selected_packet_numbers": 3,
+      "selected_references": 3
+    },
+    {
+      "last_required_packet": 435264,
+      "packets_scanned": 435264,
+      "pcap": "/home/birkenwald/data/SEU-WXY/WXY-SEU/TrafficClassifier/Dataset/ISCX-VPN/ISCX-VPN/VPN-PCAPS-01/vpn_hangouts_audio1.pcap",
+      "pcap_size_bytes": 71870096,
+      "selected_packet_numbers": 10,
+      "selected_references": 10
+    },
+    {
+      "last_required_packet": 248575,
+      "packets_scanned": 248575,
+      "pcap": "/home/birkenwald/data/SEU-WXY/WXY-SEU/TrafficClassifier/Dataset/ISCX-VPN/ISCX-VPN/VPN-PCAPS-01/vpn_hangouts_audio2.pcap",
+      "pcap_size_bytes": 97785336,
+      "selected_packet_numbers": 5,
+      "selected_references": 5
+    },
+    {
+      "last_required_packet": 27406,
+      "packets_scanned": 27406,
+      "pcap": "/home/birkenwald/data/SEU-WXY/WXY-SEU/TrafficClassifier/Dataset/ISCX-VPN/ISCX-VPN/VPN-PCAPS-01/vpn_hangouts_chat1a.pcap",
+      "pcap_size_bytes": 13708539,
+      "selected_packet_numbers": 18,
+      "selected_references": 18
+    },
+    {
+      "last_required_packet": 11207,
+      "packets_scanned": 11207,
+      "pcap": "/home/birkenwald/data/SEU-WXY/WXY-SEU/TrafficClassifier/Dataset/ISCX-VPN/ISCX-VPN/VPN-PCAPS-01/vpn_hangouts_chat1b.pcap",
+      "pcap_size_bytes": 6194348,
+      "selected_packet_numbers": 8,
+      "selected_references": 8
+    },
+    {
+      "last_required_packet": 4143,
+      "packets_scanned": 4143,
+      "pcap": "/home/birkenwald/data/SEU-WXY/WXY-SEU/TrafficClassifier/Dataset/ISCX-VPN/ISCX-VPN/VPN-PCAPs-02/vpn_icq_chat1a.pcap",
+      "pcap_size_bytes": 486616,
+      "selected_packet_numbers": 12,
+      "selected_references": 12
+    },
+    {
+      "last_required_packet": 3399,
+      "packets_scanned": 3399,
+      "pcap": "/home/birkenwald/data/SEU-WXY/WXY-SEU/TrafficClassifier/Dataset/ISCX-VPN/ISCX-VPN/VPN-PCAPs-02/vpn_icq_chat1b.pcap",
+      "pcap_size_bytes": 419214,
+      "selected_packet_numbers": 2,
+      "selected_references": 2
+    },
+    {
+      "last_required_packet": 790465,
+      "packets_scanned": 790465,
+      "pcap": "/home/birkenwald/data/SEU-WXY/WXY-SEU/TrafficClassifier/Dataset/ISCX-VPN/ISCX-VPN/VPN-PCAPs-02/vpn_netflix_A.pcap",
+      "pcap_size_bytes": 806459199,
+      "selected_packet_numbers": 24,
+      "selected_references": 24
+    },
+    {
+      "last_required_packet": 301,
+      "packets_scanned": 301,
+      "pcap": "/home/birkenwald/data/SEU-WXY/WXY-SEU/TrafficClassifier/Dataset/ISCX-VPN/ISCX-VPN/VPN-PCAPs-02/vpn_sftp_B.pcap",
+      "pcap_size_bytes": 17982779,
+      "selected_packet_numbers": 6,
+      "selected_references": 6
+    },
+    {
+      "last_required_packet": 354738,
+      "packets_scanned": 354738,
+      "pcap": "/home/birkenwald/data/SEU-WXY/WXY-SEU/TrafficClassifier/Dataset/ISCX-VPN/ISCX-VPN/VPN-PCAPs-02/vpn_skype_audio1.pcap",
+      "pcap_size_bytes": 49536856,
+      "selected_packet_numbers": 12,
+      "selected_references": 12
+    },
+    {
+      "last_required_packet": 26168,
+      "packets_scanned": 26168,
+      "pcap": "/home/birkenwald/data/SEU-WXY/WXY-SEU/TrafficClassifier/Dataset/ISCX-VPN/ISCX-VPN/VPN-PCAPs-02/vpn_skype_files1b.pcap",
+      "pcap_size_bytes": 6690677,
+      "selected_packet_numbers": 2,
+      "selected_references": 2
+    },
+    {
+      "last_required_packet": 99452,
+      "packets_scanned": 99452,
+      "pcap": "/home/birkenwald/data/SEU-WXY/WXY-SEU/TrafficClassifier/Dataset/ISCX-VPN/ISCX-VPN/VPN-PCAPs-02/vpn_spotify_A.pcap",
+      "pcap_size_bytes": 103342155,
+      "selected_packet_numbers": 38,
+      "selected_references": 38
+    },
+    {
+      "last_required_packet": 81301,
+      "packets_scanned": 81301,
+      "pcap": "/home/birkenwald/data/SEU-WXY/WXY-SEU/TrafficClassifier/Dataset/ISCX-VPN/ISCX-VPN/VPN-PCAPs-02/vpn_vimeo_A.pcap",
+      "pcap_size_bytes": 124614526,
+      "selected_packet_numbers": 14,
+      "selected_references": 14
+    },
+    {
+      "last_required_packet": 99798,
+      "packets_scanned": 99798,
+      "pcap": "/home/birkenwald/data/SEU-WXY/WXY-SEU/TrafficClassifier/Dataset/ISCX-VPN/ISCX-VPN/VPN-PCAPs-02/vpn_vimeo_B.pcap",
+      "pcap_size_bytes": 254576115,
+      "selected_packet_numbers": 36,
+      "selected_references": 36
+    },
+    {
+      "last_required_packet": 322086,
+      "packets_scanned": 322086,
+      "pcap": "/home/birkenwald/data/SEU-WXY/WXY-SEU/TrafficClassifier/Dataset/ISCX-VPN/ISCX-VPN/VPN-PCAPs-02/vpn_voipbuster1a.pcap",
+      "pcap_size_bytes": 51729420,
+      "selected_packet_numbers": 23,
+      "selected_references": 23
+    },
+    {
+      "last_required_packet": 334680,
+      "packets_scanned": 334680,
+      "pcap": "/home/birkenwald/data/SEU-WXY/WXY-SEU/TrafficClassifier/Dataset/ISCX-VPN/ISCX-VPN/VPN-PCAPs-02/vpn_voipbuster1b.pcap",
+      "pcap_size_bytes": 51572271,
+      "selected_packet_numbers": 20,
+      "selected_references": 20
+    },
+    {
+      "last_required_packet": 204508,
+      "packets_scanned": 204508,
+      "pcap": "/home/birkenwald/data/SEU-WXY/WXY-SEU/TrafficClassifier/Dataset/ISCX-VPN/ISCX-VPN/VPN-PCAPs-02/vpn_youtube_A.pcap",
+      "pcap_size_bytes": 182232350,
+      "selected_packet_numbers": 57,
+      "selected_references": 57
+    }
+  ],
+  "dataset": "iscx_vpn",
+  "phase": "test",
+  "raw_pcap_modified": false,
+  "representation": "YaTC original first-5-packet 40x40 MFR hex rule",
+  "roles": {
+    "known_test": {
+      "flow_ids_sha256": "ffc9b78f6b4bf50a9d5c8c1cb1142b5f782ae844ff6d676eb92f197aabd8b605",
+      "flows": 1093,
+      "mfr_sha256": "3091f81a63dedc77c3fcb15283266accc5a90f35c47623859779d8335b2b7f82",
+      "mfr_shape": [
+        1093,
+        40,
+        40
+      ],
+      "padded_flows": 915,
+      "selected_packet_references": 2567
+    }
+  },
+  "stage20_manifest_sha256": "6404d496f50a6f7f6f397d125ad0cd653c9df152d8db1b9ed2ad2310967950bb",
+  "status": "PASS"
+}

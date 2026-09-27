@@ -34,6 +34,7 @@
 **/run_logs/
 **/queue_logs/
 **/feature_cache/
+**/input_caches/
 **/flow_image_cache/
 **/sequence_cache/
 **/behavior_cache/
@@ -68,10 +69,14 @@
 
 # Live queue/progress files are mutable runtime state.
 progress.txt
+**/progress.json
+**/*_progress.json
 queue_status.json
 SUCCESS
 COMPLETED
 STOP_QUEUE
+**/QUEUE_COMPLETE
+**/POST_VERIFICATION_COMPLETE
 **/execution_commands.txt
 **/*_inventory.txt
 **/open_detect_paper.txt

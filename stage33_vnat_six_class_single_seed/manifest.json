@@ -1,0 +1,354 @@
+{
+  "schema_version": 1,
+  "experiment_id": "stage33-vnat-six-class-single-seed-20260925-v1",
+  "created_at_utc": "2026-09-25T11:34:02Z",
+  "updated_at_utc": "2026-09-25T11:42:54Z",
+  "status": "success",
+  "experiment_type": "closed-set-label-granularity-benchmark",
+  "claim_scope": "post-hoc exploratory diagnostic; exposed Test, not independent validation",
+  "objective": "VNAT Medium-2025 frozen known-flow six-class equal-feature fusion closed-set evaluation",
+  "inputs": [
+    {
+      "path": "../stage14b_vnat_protocol_freeze/vnat_split_manifest.csv",
+      "sha256": "66bf155e6906231b316c384a52f4b46dabd9d3aee76d5f66d86a3941eb172c4e",
+      "role": "frozen split and application truth"
+    },
+    {
+      "path": "../stage31_four_dataset_three_view_equal/runs/vnat/medium_seed2025",
+      "role": "frozen three-branch Known Train/Validation representations and checkpoints",
+      "hashes_file": "frozen_source_hashes_before.json"
+    },
+    {
+      "path": "../stage32_three_dataset_coarse_single_seed/input_caches/vnat/medium_seed2025",
+      "role": "read-only frozen Known Test input cache",
+      "hashes_file": "runs/vnat/known_test_evaluation/results.json"
+    }
+  ],
+  "code": {
+    "revision": "e0a4c77dd4ca5e69ec702562cd5d99ec2ce2185c",
+    "dirty": true,
+    "changes": [
+      "new isolated stage33_vnat_six_class_single_seed/run_six.py and verify_six.py; Stage14B/31/32 not modified"
+    ]
+  },
+  "execution": {
+    "tmux_session": "codex_stage33_vnat6_train_20260925",
+    "command": "run_six.py preflight; select_gpu.py --min-free-gb 4 -- python run_six.py train; select_gpu.py --min-free-gb 12 -- python run_six.py evaluate; verify_six.py",
+    "exit_code": 0,
+    "environment": "/home/birkenwald/data/SEU-WXY/conda_envs/2025-10-8-WXY-dgl_py310",
+    "physical_gpu_ids": [
+      0
+    ],
+    "evaluation_tmux_session": "codex_stage33_vnat6_eval_20260925",
+    "training_log": "../.tmux-task/codex_stage33_vnat6_train_20260925/output.log",
+    "evaluation_log": "../.tmux-task/codex_stage33_vnat6_eval_20260925/output.log",
+    "training_and_evaluation_exit_codes": [
+      0,
+      0
+    ]
+  },
+  "configuration": {
+    "files": [
+      "README.md",
+      "runs/vnat/config.json",
+      "preflight.json"
+    ],
+    "parameters": {
+      "protocol": "medium_seed2025",
+      "known_train_validation_test_flows": [
+        15704,
+        1960,
+        1960
+      ],
+      "six_class_mapping": {
+        "netflix": "streaming",
+        "youtube": "streaming",
+        "rdp": "rdp",
+        "rsync": "rsync",
+        "scp": "scp",
+        "skype": "skype",
+        "ssh": "ssh"
+      },
+      "encoder_updates": 0,
+      "adapter_epochs_completed": 30,
+      "head_epochs_completed": 30,
+      "batch_size": 256,
+      "optimizer": "Adam(lr=1e-3)",
+      "selection": "Known Validation Macro-F1",
+      "unknown_feature_values_loaded": 0,
+      "test_parameter_selection": 0
+    },
+    "seeds": [
+      2022
+    ]
+  },
+  "core_results": [
+    {
+      "dataset": "VNAT",
+      "split": "Known Validation",
+      "n": 1960,
+      "accuracy": 0.9724489795918367,
+      "macro_f1": 0.9567099567099566,
+      "weighted_f1": 0.9724224754837
+    },
+    {
+      "dataset": "VNAT",
+      "split": "Known Test",
+      "n": 1960,
+      "accuracy": 0.9637755102040816,
+      "macro_f1": 0.9431086487445555,
+      "weighted_f1": 0.9637500086144154,
+      "rsync_to_scp_errors": 37,
+      "scp_to_rsync_errors": 34
+    }
+  ],
+  "artifacts": [
+    {
+      "path": "../.tmux-task/codex_vnat6_preflight_20260925/output.log",
+      "scope": "external",
+      "role": "preflight-log"
+    },
+    {
+      "path": "../.tmux-task/codex_vnat6_preflight_20260925/exit.status",
+      "scope": "external",
+      "role": "preflight-exit-status"
+    },
+    {
+      "path": "../.tmux-task/codex_stage33_vnat6_train_20260925/output.log",
+      "scope": "external",
+      "role": "training-log"
+    },
+    {
+      "path": "../.tmux-task/codex_stage33_vnat6_train_20260925/exit.status",
+      "scope": "external",
+      "role": "training-exit-status"
+    },
+    {
+      "path": "../.tmux-task/codex_stage33_vnat6_eval_20260925/output.log",
+      "scope": "external",
+      "role": "evaluation-log"
+    },
+    {
+      "path": "../.tmux-task/codex_stage33_vnat6_eval_20260925/exit.status",
+      "scope": "external",
+      "role": "evaluation-exit-status"
+    },
+    {
+      "path": "../.tmux-task/codex_vnat6_verify_20260925/output.log",
+      "scope": "external",
+      "role": "replay-verification-log"
+    },
+    {
+      "path": "../.tmux-task/codex_vnat6_verify_20260925/exit.status",
+      "scope": "external",
+      "role": "replay-verification-exit-status"
+    },
+    {
+      "path": "README.md",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 1414,
+      "sha256": "7650c7364c2a8ff2b2248fb50b7dff9c93d353dce6fc4cfec07fd8afe5e15d6a",
+      "hash_status": "verified"
+    },
+    {
+      "path": "__pycache__/run_six.cpython-310.pyc",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 9805,
+      "sha256": "62347967fa68fc7e4bdaf1ac8438a6c34cf44860374eaacecbcdec8734ccbb49",
+      "hash_status": "verified"
+    },
+    {
+      "path": "completion_verification.json",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 594,
+      "sha256": "92ac66c769f49adbd5bcec47c82f89c5b16c86192ef2cae1617bee6b535617fd",
+      "hash_status": "verified"
+    },
+    {
+      "path": "frozen_source_hashes_before.json",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 1954,
+      "sha256": "02c42b322e8c22b7a090db686c6fd21c1bb53f86e0c10aa61068b8bed1a32ef0",
+      "hash_status": "verified"
+    },
+    {
+      "path": "preflight.json",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 1811,
+      "sha256": "c31a0e03c7496d68334e4360d2d2fcb284e2003464335d67c09c625fbf2ec550",
+      "hash_status": "verified"
+    },
+    {
+      "path": "run_six.py",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 10612,
+      "sha256": "2f72e90ad18e733d92d0c610476d98c404ef00801cdd00b9c480b6a81217f183",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/vnat/SUCCESS",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 8,
+      "sha256": "1f513d4ecec4e91ddd48da1a59b6d96f1b76c374dc1da641980782a34f43b102",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/vnat/T0_equal_best.pt",
+      "scope": "bundle",
+      "role": "checkpoint",
+      "size_bytes": 173601,
+      "sha256": "df70ada8838b5bac35f5af17f9c436ba4306b0a5db114631702e323e76959d63",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/vnat/adapters_best.pt",
+      "scope": "bundle",
+      "role": "checkpoint",
+      "size_bytes": 971361,
+      "sha256": "f3422fe62c96cc21475e59e65cfbfbadbda94df8ff9020f4b040b5d33ad4c7cc",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/vnat/config.json",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 2751,
+      "sha256": "7b9416c161a6106ba826af6ec234035fc16b7866ddbbe73b80e772ec05dfb210",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/vnat/known_test_evaluation/SUCCESS",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 8,
+      "sha256": "1f513d4ecec4e91ddd48da1a59b6d96f1b76c374dc1da641980782a34f43b102",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/vnat/known_test_evaluation/confusion_matrix.csv",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 169,
+      "sha256": "2370c7ef1b2e8030b2577c60dce4b3b22d155a4e4c683bb6ca55c85977bbdfb2",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/vnat/known_test_evaluation/logits.npy",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 47168,
+      "sha256": "cb3ecbf172baafe21e434fe1c89b28d254cbd557091bb127489670a8461ede4d",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/vnat/known_test_evaluation/per_class.csv",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 257,
+      "sha256": "febf614340a90a42fde73a335b3e957a23a72722f3f7e7cf62761faeb9bfa05d",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/vnat/known_test_evaluation/results.json",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 3052,
+      "sha256": "9c2b33c8f36c738b82d947931fd17fae3882eeef9a66dfaffa6a37b411d17ffe",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/vnat/known_test_evaluation/sample_predictions.csv",
+      "scope": "bundle",
+      "role": "predictions",
+      "size_bytes": 195760,
+      "sha256": "3ba1072cb57008fd7d6330e79468a2a4e4b9b1248aed60776e0ea724615ef11e",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/vnat/known_train_view_scalers.npz",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 10260,
+      "sha256": "29a1f39ae2211fc31a0ba5b53a3fd02b6b5cc20579473b9b20fb1148d3ec688f",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/vnat/known_validation_logits.npy",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 47168,
+      "sha256": "316427104432755137a105db56bd0e515097bc3ff5605d44e45e8ce298bde9a1",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/vnat/known_validation_metrics.json",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 1220,
+      "sha256": "101d6638b9e9d1bee3934d318f2e6d85077673d458e033dcf70ac406429e3bc1",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/vnat/known_validation_predictions.csv",
+      "scope": "bundle",
+      "role": "predictions",
+      "size_bytes": 195862,
+      "sha256": "90730f81d3fafcb74475c000e0485aab8c1cd08e7e899e4d8ed211da791ebe4f",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/vnat/training_history.csv",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 6356,
+      "sha256": "14d67b2b43995fa1d0aa17b30cc17d340b42acc4ac56c30992d067021e9caf32",
+      "hash_status": "verified"
+    },
+    {
+      "path": "runs/vnat/verification.json",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 287,
+      "sha256": "fcdc397780dc7430ccf3aa84770ecd9c34378081adfb99f2ac5a44dd56c21fcf",
+      "hash_status": "verified"
+    },
+    {
+      "path": "selected_head_before_test.json",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 2327,
+      "sha256": "a3f3cbc56288c2df4fe9d388bbf5625b72561e388c3abc64958d6ef7f144b3f0",
+      "hash_status": "verified"
+    },
+    {
+      "path": "stage33_report.md",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 2926,
+      "sha256": "1adc5a5be4527f8effbcf1dbbafcb0b3653db60d28dcc964f2dc93be7ee3645f",
+      "hash_status": "verified"
+    },
+    {
+      "path": "verify_six.py",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 4856,
+      "sha256": "c789ab356f3311feaaf658df08c853a3917f02f3a5193ced3e688f552267cc98",
+      "hash_status": "verified"
+    }
+  ],
+  "limitations": [
+    "Six-class taxonomy chosen after Stage32 four-class Test was observed; development evidence only.",
+    "Four-class and six-class scores reflect different tasks; their difference is not model regression.",
+    "VNAT flow-random split may share captures across Train/Validation/Test; labels are capture-derived.",
+    "RDP has only four Known Test flows; one training seed and no open-set evaluation."
+  ],
+  "next_step": "Stop Stage33; if needed, separately preregister a capture-disjoint sensitivity protocol."
+}

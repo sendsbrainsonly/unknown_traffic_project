@@ -1,0 +1,16 @@
+{
+  "checkpoint_hashes_unchanged": true,
+  "dataset": "iscx_vpn",
+  "fold": "communication",
+  "known_test_used_for_fitting": 0,
+  "known_train_support_count": 6823,
+  "known_validation_calibration_count": 851,
+  "role_counts": {
+    "auxiliary_known_service_unseen_app": 3082,
+    "known_test": 858,
+    "unknown_eval": 10528
+  },
+  "score_rows": 14468,
+  "status": "PASS",
+  "unknown_used_for_fitting": 0
+}

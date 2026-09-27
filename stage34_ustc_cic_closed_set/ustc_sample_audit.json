@@ -1,0 +1,319 @@
+{
+  "status": "PASS",
+  "seed": 2022,
+  "fraction": 0.1,
+  "source_manifest": "/home/birkenwald/data/SEU-WXY/WXY-SEU/TrafficClassifier/Projects/unknown_traffic_project/opendetect_ustc_encoder_audit/outputs/input_alignment_manifest.csv",
+  "source_sha256": "6e5f4964af78a45811bc74cafa5f20e9e59199e5377f3d5366ae45bfeac83dd7",
+  "a2_config_sha256": "3f8cb6f2c22770faec3ca2522366b3686eab3d99b793e2553b2dce86781d60ea",
+  "sample_manifest_sha256": "73f7eecef25ee91015d557f7f9f8e7eecd7560cd995c5cc7ec21c9390d45246d",
+  "per_class_split": [
+    {
+      "class": "BitTorrent",
+      "split": "test",
+      "source": 751,
+      "sampled": 75
+    },
+    {
+      "class": "BitTorrent",
+      "split": "train",
+      "source": 6014,
+      "sampled": 601
+    },
+    {
+      "class": "BitTorrent",
+      "split": "val",
+      "source": 752,
+      "sampled": 75
+    },
+    {
+      "class": "Cridex",
+      "split": "test",
+      "source": 1639,
+      "sampled": 164
+    },
+    {
+      "class": "Cridex",
+      "split": "train",
+      "source": 13108,
+      "sampled": 1311
+    },
+    {
+      "class": "Cridex",
+      "split": "val",
+      "source": 1638,
+      "sampled": 164
+    },
+    {
+      "class": "FTP",
+      "split": "test",
+      "source": 10104,
+      "sampled": 1010
+    },
+    {
+      "class": "FTP",
+      "split": "train",
+      "source": 80830,
+      "sampled": 8083
+    },
+    {
+      "class": "FTP",
+      "split": "val",
+      "source": 10103,
+      "sampled": 1010
+    },
+    {
+      "class": "Facetime",
+      "split": "test",
+      "source": 600,
+      "sampled": 60
+    },
+    {
+      "class": "Facetime",
+      "split": "train",
+      "source": 4800,
+      "sampled": 480
+    },
+    {
+      "class": "Facetime",
+      "split": "val",
+      "source": 600,
+      "sampled": 60
+    },
+    {
+      "class": "Gmail",
+      "split": "test",
+      "source": 863,
+      "sampled": 86
+    },
+    {
+      "class": "Gmail",
+      "split": "train",
+      "source": 6903,
+      "sampled": 690
+    },
+    {
+      "class": "Gmail",
+      "split": "val",
+      "source": 863,
+      "sampled": 86
+    },
+    {
+      "class": "Miuref",
+      "split": "test",
+      "source": 1348,
+      "sampled": 135
+    },
+    {
+      "class": "Miuref",
+      "split": "train",
+      "source": 10782,
+      "sampled": 1078
+    },
+    {
+      "class": "Miuref",
+      "split": "val",
+      "source": 1348,
+      "sampled": 135
+    },
+    {
+      "class": "MySQL",
+      "split": "test",
+      "source": 8609,
+      "sampled": 861
+    },
+    {
+      "class": "MySQL",
+      "split": "train",
+      "source": 68871,
+      "sampled": 6887
+    },
+    {
+      "class": "MySQL",
+      "split": "val",
+      "source": 8609,
+      "sampled": 861
+    },
+    {
+      "class": "Neris",
+      "split": "test",
+      "source": 3379,
+      "sampled": 338
+    },
+    {
+      "class": "Neris",
+      "split": "train",
+      "source": 27033,
+      "sampled": 2703
+    },
+    {
+      "class": "Neris",
+      "split": "val",
+      "source": 3379,
+      "sampled": 338
+    },
+    {
+      "class": "Nsis-ay",
+      "split": "test",
+      "source": 607,
+      "sampled": 61
+    },
+    {
+      "class": "Nsis-ay",
+      "split": "train",
+      "source": 4855,
+      "sampled": 486
+    },
+    {
+      "class": "Nsis-ay",
+      "split": "val",
+      "source": 607,
+      "sampled": 61
+    },
+    {
+      "class": "Outlook",
+      "split": "test",
+      "source": 752,
+      "sampled": 75
+    },
+    {
+      "class": "Outlook",
+      "split": "train",
+      "source": 6019,
+      "sampled": 602
+    },
+    {
+      "class": "Outlook",
+      "split": "val",
+      "source": 753,
+      "sampled": 75
+    },
+    {
+      "class": "SMB",
+      "split": "test",
+      "source": 3894,
+      "sampled": 389
+    },
+    {
+      "class": "SMB",
+      "split": "train",
+      "source": 31150,
+      "sampled": 3115
+    },
+    {
+      "class": "SMB",
+      "split": "val",
+      "source": 3893,
+      "sampled": 389
+    },
+    {
+      "class": "Shifu",
+      "split": "test",
+      "source": 963,
+      "sampled": 96
+    },
+    {
+      "class": "Shifu",
+      "split": "train",
+      "source": 7705,
+      "sampled": 770
+    },
+    {
+      "class": "Shifu",
+      "split": "val",
+      "source": 963,
+      "sampled": 96
+    },
+    {
+      "class": "Skype",
+      "split": "test",
+      "source": 632,
+      "sampled": 63
+    },
+    {
+      "class": "Skype",
+      "split": "train",
+      "source": 5057,
+      "sampled": 506
+    },
+    {
+      "class": "Skype",
+      "split": "val",
+      "source": 632,
+      "sampled": 63
+    },
+    {
+      "class": "Virut",
+      "split": "test",
+      "source": 3311,
+      "sampled": 331
+    },
+    {
+      "class": "Virut",
+      "split": "train",
+      "source": 26482,
+      "sampled": 2648
+    },
+    {
+      "class": "Virut",
+      "split": "val",
+      "source": 3310,
+      "sampled": 331
+    },
+    {
+      "class": "Weibo",
+      "split": "test",
+      "source": 3995,
+      "sampled": 400
+    },
+    {
+      "class": "Weibo",
+      "split": "train",
+      "source": 31960,
+      "sampled": 3196
+    },
+    {
+      "class": "Weibo",
+      "split": "val",
+      "source": 3995,
+      "sampled": 400
+    },
+    {
+      "class": "WorldOfWarcraft",
+      "split": "test",
+      "source": 788,
+      "sampled": 79
+    },
+    {
+      "class": "WorldOfWarcraft",
+      "split": "train",
+      "source": 6306,
+      "sampled": 631
+    },
+    {
+      "class": "WorldOfWarcraft",
+      "split": "val",
+      "source": 789,
+      "sampled": 79
+    },
+    {
+      "class": "Zeus",
+      "split": "test",
+      "source": 1097,
+      "sampled": 110
+    },
+    {
+      "class": "Zeus",
+      "split": "train",
+      "source": 8776,
+      "sampled": 878
+    },
+    {
+      "class": "Zeus",
+      "split": "val",
+      "source": 1097,
+      "sampled": 110
+    }
+  ],
+  "unknown_samples": 0,
+  "test_features_read": 0
+}

@@ -1,0 +1,132 @@
+{
+  "datasets": [
+    {
+      "capture_audit": [],
+      "copied_from_stage19": 10955,
+      "dataset": "iscx_vpn",
+      "flow_uids_sha256": "211951278fda0527d6c0671303a9a8307a64fc25e670a27d6a0aa72c8c7d45b9",
+      "packet_counts_sha256": "16cbf669cd316366aaa9c8bbd66db8ff75beaaabfeabc5b92686d27dd05eb9f6",
+      "raw_pcap_modified": false,
+      "recovered_from_exact_packet_refs": 0,
+      "stage19_flow_uids_sha256": "41e6bf1717765acbb0a4f4e17b343b9467e6b3650a1c6ce1e4bdc389a06c54e8",
+      "stage19_views_sha256": "3ab24391387d04cc8636d1dfc60ad43e5d306d7066bb76c24950403a82b223f2",
+      "stage20_flows": 10955,
+      "stage20_manifest_sha256": "6404d496f50a6f7f6f397d125ad0cd653c9df152d8db1b9ed2ad2310967950bb",
+      "status": "PASS",
+      "view_shape": [
+        10955,
+        3,
+        8,
+        64
+      ],
+      "views_sha256": "0c43644547cad9fbbce2305032995b5480d1a05a10820b0c82c61d17fd10a4b0",
+      "zero_packet_flows": 0
+    },
+    {
+      "capture_audit": [
+        {
+          "last_required_packet": 10,
+          "packets_scanned": 10,
+          "pcap": "/home/birkenwald/data/SEU-WXY/WXY-SEU/TrafficClassifier/Dataset/ISCXTor2016/ISCXTor2016（whole）/raw/pcap/NonTor/AIM_Chat.pcap",
+          "pcap_sha256": "60a8ecb66c9c1ab1dec51ea1a871aea4860f2e813cb906b7628fbbc0527ca021",
+          "selected_packet_numbers": 8,
+          "selected_packet_references": 8
+        },
+        {
+          "last_required_packet": 190,
+          "packets_scanned": 190,
+          "pcap": "/home/birkenwald/data/SEU-WXY/WXY-SEU/TrafficClassifier/Dataset/ISCXTor2016/ISCXTor2016（whole）/raw/pcap/NonTor/ICQ_Chat.pcap",
+          "pcap_sha256": "6d175e3178007159c0ee0e33f30a70b1823c8d7af3c39b0a9c78d3f7b7098cec",
+          "selected_packet_numbers": 110,
+          "selected_packet_references": 110
+        },
+        {
+          "last_required_packet": 452273,
+          "packets_scanned": 452273,
+          "pcap": "/home/birkenwald/data/SEU-WXY/WXY-SEU/TrafficClassifier/Dataset/ISCXTor2016/ISCXTor2016（whole）/raw/pcap/NonTor/SFTP_filetransfer.pcap",
+          "pcap_sha256": "7eccfd8d2fc3e4fd28bd134c534a969cedd1929ee0e4d1b1dab7751a39e41ff4",
+          "selected_packet_numbers": 133,
+          "selected_packet_references": 133
+        },
+        {
+          "last_required_packet": 10,
+          "packets_scanned": 10,
+          "pcap": "/home/birkenwald/data/SEU-WXY/WXY-SEU/TrafficClassifier/Dataset/ISCXTor2016/ISCXTor2016（whole）/raw/pcap/NonTor/aimchat.pcap",
+          "pcap_sha256": "eb2353900d973fa20c1c550d679df26751fd53efc51e8c7571b1d67f935e8792",
+          "selected_packet_numbers": 8,
+          "selected_packet_references": 8
+        },
+        {
+          "last_required_packet": 340,
+          "packets_scanned": 340,
+          "pcap": "/home/birkenwald/data/SEU-WXY/WXY-SEU/TrafficClassifier/Dataset/ISCXTor2016/ISCXTor2016（whole）/raw/pcap/NonTor/icqchat.pcap",
+          "pcap_sha256": "2bc6b03fd5390442539c86a0ef794ffe673b6802fe2ef62a6f2e4ac61f3e8846",
+          "selected_packet_numbers": 148,
+          "selected_packet_references": 148
+        },
+        {
+          "last_required_packet": 10,
+          "packets_scanned": 10,
+          "pcap": "/home/birkenwald/data/SEU-WXY/WXY-SEU/TrafficClassifier/Dataset/ISCXTor2016/ISCXTor2016（whole）/raw/pcap/Tor/Tor/CHAT_aimchatgateway.pcap",
+          "pcap_sha256": "81b0b18b5f76004589b4d97a9c7a680ee6d5f541d9825fad431c0c333d0ff215",
+          "selected_packet_numbers": 8,
+          "selected_packet_references": 8
+        },
+        {
+          "last_required_packet": 106,
+          "packets_scanned": 106,
+          "pcap": "/home/birkenwald/data/SEU-WXY/WXY-SEU/TrafficClassifier/Dataset/ISCXTor2016/ISCXTor2016（whole）/raw/pcap/Tor/Tor/CHAT_gate_AIM_chat.pcap",
+          "pcap_sha256": "4657595c789b6494ae414233bfb04016f838f6982fe1e1d3fb4bbb8a9704581d",
+          "selected_packet_numbers": 14,
+          "selected_packet_references": 14
+        },
+        {
+          "last_required_packet": 10,
+          "packets_scanned": 10,
+          "pcap": "/home/birkenwald/data/SEU-WXY/WXY-SEU/TrafficClassifier/Dataset/ISCXTor2016/ISCXTor2016（whole）/raw/pcap/Tor/Tor/CHAT_gate_ICQ_chat.pcap",
+          "pcap_sha256": "59f5a2a34bb35901b121edef4cdc609832a9ca3714cf276f9067333e3db6f788",
+          "selected_packet_numbers": 8,
+          "selected_packet_references": 8
+        },
+        {
+          "last_required_packet": 10,
+          "packets_scanned": 10,
+          "pcap": "/home/birkenwald/data/SEU-WXY/WXY-SEU/TrafficClassifier/Dataset/ISCXTor2016/ISCXTor2016（whole）/raw/pcap/Tor/Tor/CHAT_icqchatgateway.pcap",
+          "pcap_sha256": "181051bb1b2735e98a0f51c759bca004a37b2a80913d0ead6c9fca3e6bc691c1",
+          "selected_packet_numbers": 8,
+          "selected_packet_references": 8
+        },
+        {
+          "last_required_packet": 8,
+          "packets_scanned": 8,
+          "pcap": "/home/birkenwald/data/SEU-WXY/WXY-SEU/TrafficClassifier/Dataset/ISCXTor2016/ISCXTor2016（whole）/raw/pcap/Tor/Tor/FILE-TRANSFER_gate_SFTP_filetransfer.pcap",
+          "pcap_sha256": "b390315c17b036806f654c5d2b3814c4bf93b1dd6107f0654c6f7ae177ddd00d",
+          "selected_packet_numbers": 8,
+          "selected_packet_references": 8
+        }
+      ],
+      "copied_from_stage19": 11044,
+      "dataset": "iscx_tor",
+      "flow_uids_sha256": "21b27e6f80f6f041156cd709b39d6677b22935f94f7ce0dd39fdb802474a3e8f",
+      "packet_counts_sha256": "36fbb912e56a412445ce96eec6895a20d0f6375f6b256e9629b5dcc89dc2bfee",
+      "raw_pcap_modified": false,
+      "recovered_from_exact_packet_refs": 137,
+      "stage19_flow_uids_sha256": "806415f94aa8d24ea22be48041a2590daff2543ad6a264137ab14707a7ca56da",
+      "stage19_views_sha256": "2a4ec4be2bd8fcbbac0c7a76ea0c90117eb0b1bd410b90a41c8ad1c9022cd1a2",
+      "stage20_flows": 11181,
+      "stage20_manifest_sha256": "6404d496f50a6f7f6f397d125ad0cd653c9df152d8db1b9ed2ad2310967950bb",
+      "status": "PASS",
+      "view_shape": [
+        11181,
+        3,
+        8,
+        64
+      ],
+      "views_sha256": "a1eac805a9dd779d5158d2320762890768fb6330df0739ffe126c814098c2149",
+      "zero_packet_flows": 0
+    }
+  ],
+  "source_assets_modified": false,
+  "stage20_manifest_sha256": "6404d496f50a6f7f6f397d125ad0cd653c9df152d8db1b9ed2ad2310967950bb",
+  "status": "PASS"
+}

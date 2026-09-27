@@ -1,0 +1,810 @@
+{
+  "schema_version": 1,
+  "experiment_id": "stage34b-cic-benign-malicious-1to1-20260926",
+  "created_at_utc": "2026-09-26T03:18:51Z",
+  "updated_at_utc": "2026-09-26T07:03:51Z",
+  "status": "success",
+  "experiment_type": "benchmark",
+  "claim_scope": "diagnostic",
+  "objective": "CIC-IDS-2017 1:1 benign versus malicious resampling, three-view matched closed-set retest",
+  "inputs": [
+    {
+      "path": "stage34_ustc_cic_closed_set/cicids2017_three_class_manifest_v2.csv",
+      "sha256": "9734812c102266e88c58364d499c4f1494c24d0f012ac45e33e6292c93f7bd53",
+      "role": "immutable grouped source sample manifest"
+    },
+    {
+      "path": "stage34_ustc_cic_closed_set/cicids2017/input_caches/ustc/A-2",
+      "role": "exact-flow packet input cache; source remains read-only"
+    }
+  ],
+  "code": {
+    "revision": null,
+    "dirty": null,
+    "changes": []
+  },
+  "execution": {
+    "tmux_session": "stage34b_balanced_queue_0926",
+    "command": "python stage34b_cic_balanced_retest/run_queue.py",
+    "exit_code": 0,
+    "environment": "/home/birkenwald/data/SEU-WXY/conda_envs/2025-10-8-WXY-dgl_py310",
+    "physical_gpu_ids": [
+      0,
+      1
+    ]
+  },
+  "configuration": {
+    "files": [
+      "stage34b_cic_balanced_retest/balanced_manifest.csv",
+      "stage34b_cic_balanced_retest/balanced_manifest_audit.json"
+    ],
+    "parameters": {
+      "benign_to_total_malicious_ratio_per_split": 1,
+      "retain_all_attack_rows": true,
+      "group_assignment_unchanged": true,
+      "training_recipe": "Stage31/34 exact reuse; only flow membership changes",
+      "balanced_train_samples": 35516,
+      "balanced_validation_samples": 3912,
+      "balanced_test_samples": 2536,
+      "balanced_manifest_sha256": "35e99d89ad4eddc828c9d67529ea1b527d1fd511cb39db8c509461b5bf38e25d"
+    },
+    "seeds": [
+      2022
+    ]
+  },
+  "core_results": [
+    {
+      "dataset": "CIC-IDS-2017",
+      "protocol": "balanced 3-class group-disjoint",
+      "test_samples": 2536,
+      "accuracy": 0.9980283911671924,
+      "macro_f1": 0.9974820179795193,
+      "weighted_f1": 0.9980282028800223
+    }
+  ],
+  "artifacts": [
+    {
+      "path": "__pycache__/build_test_inputs.cpython-310.pyc",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 1248,
+      "sha256": "ecc126c5fdac4834bd7bae3c2da42cd084e82921ffc96327b7a80783024976ae",
+      "hash_status": "verified"
+    },
+    {
+      "path": "__pycache__/compare_results.cpython-310.pyc",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 5177,
+      "sha256": "0a51523060ae16fe628327b3848c941ff68da8b1b123397feaa39be6e7460baa",
+      "hash_status": "verified"
+    },
+    {
+      "path": "__pycache__/finalize_balanced.cpython-310.pyc",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 11956,
+      "sha256": "969b538042c8b5dc36fd28aafa4ea8392493bb76b40577014db168afedd2639e",
+      "hash_status": "verified"
+    },
+    {
+      "path": "__pycache__/postqueue_verify.cpython-310.pyc",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 2026,
+      "sha256": "f77e8f39de10a615d77441e02c13ec028a50b421932840bbb327890ddc9580a9",
+      "hash_status": "verified"
+    },
+    {
+      "path": "__pycache__/prepare_balanced.cpython-310.pyc",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 10677,
+      "sha256": "b7e25e8783b5c8c81d683f1431e3c34a55c700d9bd721684616882a7e1fbf1e6",
+      "hash_status": "verified"
+    },
+    {
+      "path": "__pycache__/progress.cpython-310.pyc",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 2505,
+      "sha256": "d2101bedf633436e8c10efd24395ded8f15028d1fdb872a1e7c7162b0da48f85",
+      "hash_status": "verified"
+    },
+    {
+      "path": "__pycache__/run_balanced.cpython-310.pyc",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 4404,
+      "sha256": "239bdbf24d5b1b027fa51702354d447eb45e4b5ab6b57d09ff9439c15c10f0c3",
+      "hash_status": "verified"
+    },
+    {
+      "path": "__pycache__/run_queue.cpython-310.pyc",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 6023,
+      "sha256": "47d039fc8b71a1d1143dab021842f4415501257313eea18f4e6d1e09d975a103",
+      "hash_status": "verified"
+    },
+    {
+      "path": "__pycache__/verify_trainval_cache.cpython-310.pyc",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 2817,
+      "sha256": "2f431e3fd4e0d203cf0edd5a3c20021bf1898d44a7893e5cebeaf3aaf7f5bc73",
+      "hash_status": "verified"
+    },
+    {
+      "path": "balanced_manifest.csv",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 7746478,
+      "sha256": "35e99d89ad4eddc828c9d67529ea1b527d1fd511cb39db8c509461b5bf38e25d",
+      "hash_status": "verified"
+    },
+    {
+      "path": "balanced_manifest_audit.json",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 1591,
+      "sha256": "9fc3781a22545efa04052b003ea9c73e0fe3378f298da4d8f09a066a32de30b5",
+      "hash_status": "verified"
+    },
+    {
+      "path": "build_test_inputs.py",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 1071,
+      "sha256": "1fc7a95ff0d0857624ee370175cbc6b293f582d13d19741cda4e2cd6b2a7dcdc",
+      "hash_status": "verified"
+    },
+    {
+      "path": "cicids2017/COMPATIBILITY_ALIAS.json",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 615,
+      "sha256": "87cffaba0a7b169d32ec123061e508917b10b07f2ce84e9679d2668b80a2bcbd",
+      "hash_status": "verified"
+    },
+    {
+      "path": "cicids2017/input_caches/ustc/A-2/tf_fig/cache_audit.json",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 711,
+      "sha256": "798c3f6fa0a6ddbc783034ac0a4f79ee3b7a993216f46af224a8068c2eed1e46",
+      "hash_status": "verified"
+    },
+    {
+      "path": "cicids2017/input_caches/ustc/A-2/tf_fig/fig_adj.npy",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 35485328,
+      "sha256": "12dd6b9f469ca3298bc686115d424d119d3b7e76f64aa061f9c8709f60adda81",
+      "hash_status": "verified"
+    },
+    {
+      "path": "cicids2017/input_caches/ustc/A-2/tf_fig/fig_mask.npy",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 1182968,
+      "sha256": "1b91e8817d10169cceedc095fdb3f3c07b02d5accd55bcc49187d692a9b7b0d9",
+      "hash_status": "verified"
+    },
+    {
+      "path": "cicids2017/input_caches/ustc/A-2/tf_fig/fig_x.npy",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 33119648,
+      "sha256": "cd58eff300417cead728b35578247145889eafa666cf93f1ec97b75d05bf8cba",
+      "hash_status": "verified"
+    },
+    {
+      "path": "cicids2017/input_caches/ustc/A-2/tf_fig/flow_ids.npy",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 12617088,
+      "sha256": "c284534f0a958d824446f63ea4d14bc936aa52e4f33b0ece3af88d42322e8b6e",
+      "hash_status": "verified"
+    },
+    {
+      "path": "cicids2017/input_caches/ustc/A-2/tf_fig/segments.npy",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 12617088,
+      "sha256": "db84ec7220a6c0fdd86847fb81fc3582be13a3f5a80e78f7017fe9a99648e5e8",
+      "hash_status": "verified"
+    },
+    {
+      "path": "cicids2017/input_caches/ustc/A-2/tf_fig/token_ids.npy",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 50467968,
+      "sha256": "8315132cc88f6cbc5ccd7fd5e0068e9efbfd4a575e7715746a83e2532f8910a1",
+      "hash_status": "verified"
+    },
+    {
+      "path": "cicids2017/input_caches/ustc/A-2/tf_fig_test/cache_audit.json",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 1819,
+      "sha256": "100789c85c32bd8d6b8dcf157cae7d46f9fc540a4cda26859b7aeb9013301eab",
+      "hash_status": "verified"
+    },
+    {
+      "path": "cicids2017/input_caches/ustc/A-2/tf_fig_test/fig_adj.npy",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 2282528,
+      "sha256": "15295731034247452c9ce12c8ed53d07e22ed3ca87e1d6cf712a4a2356ff887e",
+      "hash_status": "verified"
+    },
+    {
+      "path": "cicids2017/input_caches/ustc/A-2/tf_fig_test/fig_mask.npy",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 76208,
+      "sha256": "d8d2392f8131e91c59edeca8dfc6a0de85deda8b7bb2adf36a388cc487da8be6",
+      "hash_status": "verified"
+    },
+    {
+      "path": "cicids2017/input_caches/ustc/A-2/tf_fig_test/fig_x.npy",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 2130368,
+      "sha256": "3f789da4595eec18f0afc4b7182248a08441f96c6b6c4d430f524e3ff1a8e84e",
+      "hash_status": "verified"
+    },
+    {
+      "path": "cicids2017/input_caches/ustc/A-2/tf_fig_test/flow_ids.npy",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 811648,
+      "sha256": "e1646f49a21c41de58bcd9223909df83f6ede0266e3b85ae7b5e066d59e99f8f",
+      "hash_status": "verified"
+    },
+    {
+      "path": "cicids2017/input_caches/ustc/A-2/tf_fig_test/segments.npy",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 811648,
+      "sha256": "53704735746b6db8c32cf5e8c8f647f044a2bc99fba5003f931a8ccd7ce1e860",
+      "hash_status": "verified"
+    },
+    {
+      "path": "cicids2017/input_caches/ustc/A-2/tf_fig_test/token_ids.npy",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 3246208,
+      "sha256": "7580f3e18a36e887ebf64d33d7a838f61eca65932c7d8767ff5a111d25ae788f",
+      "hash_status": "verified"
+    },
+    {
+      "path": "cicids2017/input_caches/ustc/A-2/yatc_mfr/cache_audit.json",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 711,
+      "sha256": "798c3f6fa0a6ddbc783034ac0a4f79ee3b7a993216f46af224a8068c2eed1e46",
+      "hash_status": "verified"
+    },
+    {
+      "path": "cicids2017/input_caches/ustc/A-2/yatc_mfr/known_train_flow_ids.npy",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 11365248,
+      "sha256": "2397dd7c126d6a15273cfa5d8ff1a86a1612a8761c8ba7383f2e5cc355146ed5",
+      "hash_status": "verified"
+    },
+    {
+      "path": "cicids2017/input_caches/ustc/A-2/yatc_mfr/known_train_mfr.npy",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 56825728,
+      "sha256": "be27b60d1b1a637f44e4bb39ccbede1ff0b7e59ac916868d2c1c35c51664a7b3",
+      "hash_status": "verified"
+    },
+    {
+      "path": "cicids2017/input_caches/ustc/A-2/yatc_mfr/known_validation_flow_ids.npy",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 1251968,
+      "sha256": "32ee2eb75f466ef691c285ca6f7ec896115a12720c27a9103a36698c6aa822a4",
+      "hash_status": "verified"
+    },
+    {
+      "path": "cicids2017/input_caches/ustc/A-2/yatc_mfr/known_validation_mfr.npy",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 6259328,
+      "sha256": "9d66bd769e10790c29e70e2a10f06ae92c373ed2fbce7bb7e589f691a41e0a2f",
+      "hash_status": "verified"
+    },
+    {
+      "path": "cicids2017/input_caches/ustc/A-2/yatc_mfr_test/cache_audit.json",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 1819,
+      "sha256": "100789c85c32bd8d6b8dcf157cae7d46f9fc540a4cda26859b7aeb9013301eab",
+      "hash_status": "verified"
+    },
+    {
+      "path": "cicids2017/input_caches/ustc/A-2/yatc_mfr_test/known_test_flow_ids.npy",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 811648,
+      "sha256": "e1646f49a21c41de58bcd9223909df83f6ede0266e3b85ae7b5e066d59e99f8f",
+      "hash_status": "verified"
+    },
+    {
+      "path": "cicids2017/input_caches/ustc/A-2/yatc_mfr_test/known_test_mfr.npy",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 4057728,
+      "sha256": "4537d46661e555b154cbaa4b2d38c345571d90c5b67a84a3b47835ae7065bacd",
+      "hash_status": "verified"
+    },
+    {
+      "path": "cicids2017/runs/ustc/A-2/T0_equal/SUCCESS",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 8,
+      "sha256": "1f513d4ecec4e91ddd48da1a59b6d96f1b76c374dc1da641980782a34f43b102",
+      "hash_status": "verified"
+    },
+    {
+      "path": "cicids2017/runs/ustc/A-2/T0_equal/T0_equal_best.pt",
+      "scope": "bundle",
+      "role": "checkpoint",
+      "size_bytes": 170593,
+      "sha256": "d83f57933d54299a2361f87f83d4b45074b5a85dacccf0f1d1fee41a4e77365d",
+      "hash_status": "verified"
+    },
+    {
+      "path": "cicids2017/runs/ustc/A-2/T0_equal/adapters_best.pt",
+      "scope": "bundle",
+      "role": "checkpoint",
+      "size_bytes": 967521,
+      "sha256": "4f2dfbabf3129b91a8faa27af27d2a6254bcaecdcd596a5c4d7995bf0df8e1c3",
+      "hash_status": "verified"
+    },
+    {
+      "path": "cicids2017/runs/ustc/A-2/T0_equal/config.json",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 1342,
+      "sha256": "fc149f53b30908de46c200f787ed1f26e0f9d1c7b17d2382b2022da825a6eca2",
+      "hash_status": "verified"
+    },
+    {
+      "path": "cicids2017/runs/ustc/A-2/T0_equal/known_train_view_scalers.npz",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 10260,
+      "sha256": "494e6ea3b0d69d924e15ec573deb9df6c57b18dcc0183be9da5f930511116e18",
+      "hash_status": "verified"
+    },
+    {
+      "path": "cicids2017/runs/ustc/A-2/T0_equal/known_validation_metrics.json",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 854,
+      "sha256": "052031c02c3d090ce36b8695052d42f596cc0e77f6dc7bd53dfe0995fd21d15d",
+      "hash_status": "verified"
+    },
+    {
+      "path": "cicids2017/runs/ustc/A-2/T0_equal/known_validation_predictions.csv",
+      "scope": "bundle",
+      "role": "predictions",
+      "size_bytes": 163511,
+      "sha256": "ff2e2d08b23f2d28825b38334916232335f8cb0894e675835c109a1954f92747",
+      "hash_status": "verified"
+    },
+    {
+      "path": "cicids2017/runs/ustc/A-2/T0_equal/training_history.csv",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 5950,
+      "sha256": "73839531612a609105dd6dce232d51e2fa6bb503aae84e307ed6ec219d0f498a",
+      "hash_status": "verified"
+    },
+    {
+      "path": "cicids2017/runs/ustc/A-2/T0_equal/verification.json",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 223,
+      "sha256": "79ee3969438fbb053da4c4aa242e0602c29c131e331d2ce98b715c05198d1a65",
+      "hash_status": "verified"
+    },
+    {
+      "path": "cicids2017/runs/ustc/A-2/graph/SUCCESS",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 8,
+      "sha256": "1f513d4ecec4e91ddd48da1a59b6d96f1b76c374dc1da641980782a34f43b102",
+      "hash_status": "verified"
+    },
+    {
+      "path": "cicids2017/runs/ustc/A-2/graph/config.json",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 586,
+      "sha256": "09ce8ee7a8edafb37c037636f4aa0653200445f426fed531b223f6bcf504e419",
+      "hash_status": "verified"
+    },
+    {
+      "path": "cicids2017/runs/ustc/A-2/graph/known_train_features.npy",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 18184320,
+      "sha256": "bf457dbc0cfbeb8346254390898ba1748be85baaa50db800cc2eed94812ff1c6",
+      "hash_status": "verified"
+    },
+    {
+      "path": "cicids2017/runs/ustc/A-2/graph/known_train_flow_ids.npy",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 11365248,
+      "sha256": "2397dd7c126d6a15273cfa5d8ff1a86a1612a8761c8ba7383f2e5cc355146ed5",
+      "hash_status": "verified"
+    },
+    {
+      "path": "cicids2017/runs/ustc/A-2/graph/known_train_node_scaler.npz",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 556,
+      "sha256": "5234d37a706f4cbb9b37b04e8ad9bfc8108a82d5098a52d80458d7804aaec89f",
+      "hash_status": "verified"
+    },
+    {
+      "path": "cicids2017/runs/ustc/A-2/graph/known_validation_features.npy",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 2003072,
+      "sha256": "988e07a2be27d1bb6aff664f6966201030266de58111d18f1838542f2e27dd46",
+      "hash_status": "verified"
+    },
+    {
+      "path": "cicids2017/runs/ustc/A-2/graph/known_validation_flow_ids.npy",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 1251968,
+      "sha256": "32ee2eb75f466ef691c285ca6f7ec896115a12720c27a9103a36698c6aa822a4",
+      "hash_status": "verified"
+    },
+    {
+      "path": "cicids2017/runs/ustc/A-2/graph/metrics.json",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 201,
+      "sha256": "0158d73addce628b6ad8a1bef2adcf3567151c1c98c27b53861b58a408632a16",
+      "hash_status": "verified"
+    },
+    {
+      "path": "cicids2017/runs/ustc/A-2/graph/model_best.pt",
+      "scope": "bundle",
+      "role": "checkpoint",
+      "size_bytes": 15929,
+      "sha256": "fa713672220c9d79d05a6f554d7ea14702ae1c7a97721de16e61cea65e70a2e0",
+      "hash_status": "verified"
+    },
+    {
+      "path": "cicids2017/runs/ustc/A-2/graph/training_history.json",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 7196,
+      "sha256": "ecaaef5e20e7b5d16cf24a3fb5d8a4e322bd767726861f980b2d98666477034b",
+      "hash_status": "verified"
+    },
+    {
+      "path": "cicids2017/runs/ustc/A-2/known_test_evaluation/SUCCESS",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 8,
+      "sha256": "1f513d4ecec4e91ddd48da1a59b6d96f1b76c374dc1da641980782a34f43b102",
+      "hash_status": "verified"
+    },
+    {
+      "path": "cicids2017/runs/ustc/A-2/known_test_evaluation/balanced_protocol_audit.json",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 338,
+      "sha256": "2739a278e63281109cc2f21de87be4cdb1daae1defd91d821906d802ee237785",
+      "hash_status": "verified"
+    },
+    {
+      "path": "cicids2017/runs/ustc/A-2/known_test_evaluation/logits.npy",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 30560,
+      "sha256": "bd654b2541d729bad4f08c053ebe5615c06c8133ce01600bd58220f76eb4acf5",
+      "hash_status": "verified"
+    },
+    {
+      "path": "cicids2017/runs/ustc/A-2/known_test_evaluation/results.json",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 1589,
+      "sha256": "20796b19523b93c37348041c7de0acae1cefb0e2a8bc13f84f79c5f78000511c",
+      "hash_status": "verified"
+    },
+    {
+      "path": "cicids2017/runs/ustc/A-2/known_test_evaluation/sample_predictions.csv",
+      "scope": "bundle",
+      "role": "predictions",
+      "size_bytes": 94839,
+      "sha256": "663d788a2b64ea098d2fdd76d5b624b202537f2b58dae2b24ee317559867a805",
+      "hash_status": "verified"
+    },
+    {
+      "path": "cicids2017/runs/ustc/A-2/trafficformer/SUCCESS",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 8,
+      "sha256": "1f513d4ecec4e91ddd48da1a59b6d96f1b76c374dc1da641980782a34f43b102",
+      "hash_status": "verified"
+    },
+    {
+      "path": "cicids2017/runs/ustc/A-2/trafficformer/config.json",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 610,
+      "sha256": "2bd372920268526b7909612f8993d3b56a43a7287582eecd8628cfe3329e07d1",
+      "hash_status": "verified"
+    },
+    {
+      "path": "cicids2017/runs/ustc/A-2/trafficformer/known_train_features.npy",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 109105280,
+      "sha256": "5644bd09a03f0f75b7b02c72e3d3e3c7b09b6b60b353b49a33be915d21d08265",
+      "hash_status": "verified"
+    },
+    {
+      "path": "cicids2017/runs/ustc/A-2/trafficformer/known_train_flow_ids.npy",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 11365248,
+      "sha256": "2397dd7c126d6a15273cfa5d8ff1a86a1612a8761c8ba7383f2e5cc355146ed5",
+      "hash_status": "verified"
+    },
+    {
+      "path": "cicids2017/runs/ustc/A-2/trafficformer/known_validation_features.npy",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 12017792,
+      "sha256": "98af31762c74236f2454f9ee4d2306e79de76ce624c2d45f554a3d2a6df5f495",
+      "hash_status": "verified"
+    },
+    {
+      "path": "cicids2017/runs/ustc/A-2/trafficformer/known_validation_flow_ids.npy",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 1251968,
+      "sha256": "32ee2eb75f466ef691c285ca6f7ec896115a12720c27a9103a36698c6aa822a4",
+      "hash_status": "verified"
+    },
+    {
+      "path": "cicids2017/runs/ustc/A-2/trafficformer/metrics.json",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 201,
+      "sha256": "6a315f71d1cf74401fb4d040e5b6852c9b8bddf9a95020a9bd7873e1e11197e8",
+      "hash_status": "verified"
+    },
+    {
+      "path": "cicids2017/runs/ustc/A-2/trafficformer/model_best.pt",
+      "scope": "bundle",
+      "role": "checkpoint",
+      "size_bytes": 528580442,
+      "sha256": "692038dde575d2891630317e3385b3fbb267f1356aebde6ef52f1e864a216534",
+      "hash_status": "verified"
+    },
+    {
+      "path": "cicids2017/runs/ustc/A-2/trafficformer/pretrained_load_report.json",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 739,
+      "sha256": "6fc35700085218c033f4aa24427e350215400c49562c9aec6221aebeb13ab7b5",
+      "hash_status": "verified"
+    },
+    {
+      "path": "cicids2017/runs/ustc/A-2/trafficformer/training_history.json",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 4481,
+      "sha256": "f5cc98869cdbf2a5f56b314b42ddb5c8293c8c5e7b015e8174dbffca99a68c13",
+      "hash_status": "verified"
+    },
+    {
+      "path": "cicids2017/runs/ustc/A-2/yatc/SUCCESS",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 8,
+      "sha256": "1f513d4ecec4e91ddd48da1a59b6d96f1b76c374dc1da641980782a34f43b102",
+      "hash_status": "verified"
+    },
+    {
+      "path": "cicids2017/runs/ustc/A-2/yatc/config.json",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 790,
+      "sha256": "97c55c1498e7d7b4526cd36acf8799e945c69d3764e4044e73c859a6b3fd64cb",
+      "hash_status": "verified"
+    },
+    {
+      "path": "cicids2017/runs/ustc/A-2/yatc/known_train_features.npy",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 27276416,
+      "sha256": "1df8fe504e8fde5f4c0cd759b9ff1c9918735e2c95f9fd38c20400670c5a78d0",
+      "hash_status": "verified"
+    },
+    {
+      "path": "cicids2017/runs/ustc/A-2/yatc/known_train_flow_ids.npy",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 11365248,
+      "sha256": "2397dd7c126d6a15273cfa5d8ff1a86a1612a8761c8ba7383f2e5cc355146ed5",
+      "hash_status": "verified"
+    },
+    {
+      "path": "cicids2017/runs/ustc/A-2/yatc/known_validation_features.npy",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 3004544,
+      "sha256": "36658aa8b3fc71ecba454d57649c4aa6c4ad6b8c1fa98e0a5f1a156d0ede794c",
+      "hash_status": "verified"
+    },
+    {
+      "path": "cicids2017/runs/ustc/A-2/yatc/known_validation_flow_ids.npy",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 1251968,
+      "sha256": "32ee2eb75f466ef691c285ca6f7ec896115a12720c27a9103a36698c6aa822a4",
+      "hash_status": "verified"
+    },
+    {
+      "path": "cicids2017/runs/ustc/A-2/yatc/metrics.json",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 380,
+      "sha256": "f073fe069dfdec1d26dd7e9d37f247ca3ab421ee7ce9262348a02acac9725ef2",
+      "hash_status": "verified"
+    },
+    {
+      "path": "cicids2017/runs/ustc/A-2/yatc/model_best.pt",
+      "scope": "bundle",
+      "role": "checkpoint",
+      "size_bytes": 7454901,
+      "sha256": "63c41d8dfaa33668ca5763bf2d22cb5627f6f4102ece710340870bd8c7dfd0cc",
+      "hash_status": "verified"
+    },
+    {
+      "path": "cicids2017/runs/ustc/A-2/yatc/pretrained_load.json",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 1277,
+      "sha256": "d81a94ffebb3625b64d707cee2b4317d71f47bdb2602e91ac6d688f9a2eda116",
+      "hash_status": "verified"
+    },
+    {
+      "path": "cicids2017/runs/ustc/A-2/yatc/training_history.jsonl",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 61994,
+      "sha256": "f7fbab6a4c06447d41e299c3c60a6b508f55a185102890965c3db3dcab1f2a4c",
+      "hash_status": "verified"
+    },
+    {
+      "path": "cicids2017_protocol_v2_audit.json",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 404,
+      "sha256": "250b74eb1f2b5ac41c38575810777ab90a984839af6294ee53ccb013b94b1d8d",
+      "hash_status": "verified"
+    },
+    {
+      "path": "compare_results.py",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 4421,
+      "sha256": "a2858752aab022a1daedabce0951b5f4c4424fd5670abb1215bf3d37919eb56d",
+      "hash_status": "verified"
+    },
+    {
+      "path": "completion_verification.json",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 366,
+      "sha256": "85a8ef4286776d99a51dae68ec3aa5903b09ef7f438cb43d3c5193285599a1ee",
+      "hash_status": "verified"
+    },
+    {
+      "path": "finalize_balanced.py",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 12534,
+      "sha256": "bb2aa72ccdcd1ce30decd5ae4956661a51f125fbc39d1ce589268940d6c6fba2",
+      "hash_status": "verified"
+    },
+    {
+      "path": "input_parity.json",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 384,
+      "sha256": "ea5121708f2491a98f8255fe3aaa73901318ce40cdbb4344717cda2cbf779611",
+      "hash_status": "verified"
+    },
+    {
+      "path": "postqueue_verification.json",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 134,
+      "sha256": "fa47f60c7c42bb34661ba86e19e781032b4c5af44e3c7a9fc73db2de46ef19a5",
+      "hash_status": "verified"
+    },
+    {
+      "path": "postqueue_verify.py",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 1940,
+      "sha256": "e2e32eb1abcfdc2952014d46da9a7c276544c5462d791435755746cf7a4a565e",
+      "hash_status": "verified"
+    },
+    {
+      "path": "prepare_balanced.py",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 9917,
+      "sha256": "1ba35b9bb5c044c6cbd9b6371fd7ec843d253e77400f452ce3c270489c07bead",
+      "hash_status": "verified"
+    },
+    {
+      "path": "progress.py",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 2754,
+      "sha256": "bc98f8d9240dbda2a91c285aa87b3fdd25e696d86d8caf9937f9dc7cf0b3feea",
+      "hash_status": "verified"
+    },
+    {
+      "path": "queue_progress.json",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 615,
+      "sha256": "adb349202ec59558134291b4041a798d1c95f1a4c16bd3a15b9800e2252d087a",
+      "hash_status": "verified"
+    },
+    {
+      "path": "run_balanced.py",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 4452,
+      "sha256": "38a6194ecd86b0f2709bbe7d1a220af859b1a67870af13cadaeb8be49aff80a0",
+      "hash_status": "verified"
+    },
+    {
+      "path": "run_queue.py",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 5527,
+      "sha256": "23726c4048b9c90f2748e6d9287ede64d5900f896779022db3a212045d08c2fa",
+      "hash_status": "verified"
+    },
+    {
+      "path": "verify_trainval_cache.py",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 2838,
+      "sha256": "2b38ffc4efc1ca1def566871b61798da87e2650898f92ee666806b9f79ae99ba",
+      "hash_status": "verified"
+    }
+  ],
+  "limitations": [
+    "single seed",
+    "capture/day confound",
+    "Slowhttptest Test has 132 flows",
+    "balanced Test prior differs from original full Test"
+  ],
+  "next_step": "Stop; interpret one-seed balanced Test result and preserve old interrupted evidence."
+}

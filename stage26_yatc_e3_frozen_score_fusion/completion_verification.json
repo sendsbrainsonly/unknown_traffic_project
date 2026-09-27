@@ -1,0 +1,19 @@
+{
+  "gate": "FUSION_NOT_CONFIRMED",
+  "primary_coarse_delta_vs_yatc_by_dataset": {
+    "iscx_vpn": -0.016804863074426024,
+    "iscx_tor": 0.0015061784246605536
+  },
+  "positive_primary_cells": 1,
+  "total_primary_cells": 4,
+  "fine_delta_vs_yatc_by_dataset": {
+    "iscx_vpn": -0.008610464570375953,
+    "iscx_tor": 0.021419977046957472
+  },
+  "weight_search": false,
+  "unknown_usage": 0,
+  "weight_updates": 0,
+  "frozen_checkpoint_argmax_parity": "PASS",
+  "source_hashes_unchanged": true,
+  "stage20_test_previously_exposed": true
+}

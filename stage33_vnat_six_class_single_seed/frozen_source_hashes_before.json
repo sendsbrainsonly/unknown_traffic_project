@@ -1,0 +1,21 @@
+{
+  "iscx_tor_stage22_representations": "93949bbb8c1049205f22631224ebcc2f823aff9a762264ac8802c24f58c53bdc",
+  "iscx_tor_stage27_yatc_features": "a52bcf58b120a69bf573f7289358858b06886e518ff46b39b494bd77e90cdeb8",
+  "iscx_vpn_stage22_representations": "50906b181a769edd503f1622fdb51dccf68365b3df52bf91197114bd6087517d",
+  "iscx_vpn_stage27_yatc_features": "beaad74b95d64fa8fc15328dce3ef0e0817322efacb4cb710d9f345d00ec4295",
+  "stage20_manifest": "6404d496f50a6f7f6f397d125ad0cd653c9df152d8db1b9ed2ad2310967950bb",
+  "stage25_coarse_head_predictions": "95fbb3185027d7d15ec5e6c7adbb2527a12ba9e617e57099c1246df03616903f",
+  "stage25_remap_predictions": "18f637f394917782017df2a8ad1bbb8df2a8513692523cbc3bccd7d61888119d",
+  "vnat_f2_input_manifest": "885c671e67563baeeb29cbeaa13b7db0e5e230434bbee80e7636b5394a66f8a8",
+  "vnat_f2_val_predictions": "45c7bcdf16c498b5a4af98bd8ef7cbb5d15b39778612455edc494e7c41363c44",
+  "vnat_graph_checkpoint": "4bac1fe49a3fa30d4ebf46a540724a8417d8b2cd15f27f30ee5a0a292a172520",
+  "vnat_graph_known_train_features": "6fc41d606f50820afddf469bf35a036ae638202439e16dde00dd9d61aceb113c",
+  "vnat_graph_known_validation_features": "8e274459dd7a777c68036a1cb1531222cab36bd58ddfa20dc64f7c28cb2541cf",
+  "vnat_split_manifest": "66bf155e6906231b316c384a52f4b46dabd9d3aee76d5f66d86a3941eb172c4e",
+  "vnat_trafficformer_checkpoint": "63c3b49b629681a834b5848206a9c1bffff3eade0ed8987dcd497ccae8081e78",
+  "vnat_trafficformer_known_train_features": "25656af7a644a31dba16f229728761367ffd10dcb8e13e91e9a0e855b9567613",
+  "vnat_trafficformer_known_validation_features": "612e508a5c78b91a2bb684864db5386e352e7ff693df8329b3637cdd86c4ce8c",
+  "vnat_yatc_checkpoint": "deaee0143fa0dbf9de6b75f20ffeec9b9e06fce31a3ddc49a017ea84d5a036a7",
+  "vnat_yatc_known_train_features": "bad58e6babdbdfa482cc53862baa2c736f6c3198b5929c5d19f1385459407cc4",
+  "vnat_yatc_known_validation_features": "653701f684525f24390e95ba45963c0349b7b80aab1f803de9741e57ecba661c"
+}

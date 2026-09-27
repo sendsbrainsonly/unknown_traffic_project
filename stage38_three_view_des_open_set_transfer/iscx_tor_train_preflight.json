@@ -1,0 +1,18 @@
+{
+  "status": "PASS",
+  "dataset": "iscx_tor",
+  "protocol": "medium_seed2022",
+  "classes": [
+    "Browsing",
+    "Communication",
+    "File-Transfer",
+    "Streaming"
+  ],
+  "known_train": 8876,
+  "known_validation": 1107,
+  "split_sha256": "7de5289ef75966fb360dc743778ba90a31f72c2eaf6694dc3a33291a794bc0d7",
+  "input_reference": "/home/birkenwald/data/SEU-WXY/WXY-SEU/TrafficClassifier/Projects/unknown_traffic_project/stage31_four_dataset_three_view_equal/input_caches/iscx_tor",
+  "unknown_training_samples": 0,
+  "known_test_feature_values_loaded": 0,
+  "unknown_test_feature_values_loaded": 0
+}

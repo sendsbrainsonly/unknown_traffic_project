@@ -1,0 +1,23 @@
+{
+  "calibration_sha256": "393369ee59cd4133bdf016ea5c0fd7dafd2de893be61b3b5af663b01c12887f8",
+  "dataset": "iscx_vpn",
+  "eval_input_reconstruction": "subset/union of already frozen Stage31 Train/Val and Stage38 Test caches",
+  "flows": 10509,
+  "fold": "streaming",
+  "model_and_threshold_frozen_before_read": true,
+  "role_counts": {
+    "auxiliary_known_service_unseen_app": 4000,
+    "known_test": 1297,
+    "unknown_eval": 5212
+  },
+  "role_manifest_sha256": "74759cf7b0bbb8fdbcb6d2692c64c128261dca2402261d3e6330a5644fbb316b",
+  "source_cache_audit_sha256": {
+    "stage31_four_dataset_three_view_equal/input_caches/iscx_vpn/tf_fig": "c8b72665346aea347e05becb1a7b1a89fb96e5f3575474169defd4c523a1204f",
+    "stage31_four_dataset_three_view_equal/input_caches/iscx_vpn/yatc_mfr": "771aa64b8700ab0b5973fa7bd006e99c65f04feef90ab076e992a34af1f8fc68",
+    "stage38_three_view_des_open_set_transfer/input_caches/iscx_vpn/tf_fig_eval": "3c412833049f4a3dbac631d95c09e993748625fb922e150cb6b9416f87ac6f38",
+    "stage38_three_view_des_open_set_transfer/input_caches/iscx_vpn/yatc_mfr_eval": "5bf0190223d573b78b3c702463ab4afbe7408e647c11bb11311ec99bea3e3849"
+  },
+  "status": "PASS",
+  "test_used_for_training_or_calibration": 0,
+  "unknown_used_for_training_or_calibration": 0
+}

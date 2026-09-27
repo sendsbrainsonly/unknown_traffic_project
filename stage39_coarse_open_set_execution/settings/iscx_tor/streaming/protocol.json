@@ -1,0 +1,50 @@
+{
+  "all_input_samples_accounted_for": true,
+  "checkpoint_reuse": false,
+  "counts": {
+    "auxiliary_known_service_unseen_app": 2000,
+    "known_test": 611,
+    "known_train": 4874,
+    "known_validation": 608,
+    "unknown_eval": 7003
+  },
+  "dataset": "iscx_tor",
+  "frozen_at_utc": "2026-09-26T08:28:33.359977+00:00",
+  "heldout_service": "Streaming",
+  "historical_test_promoted_to_training": 0,
+  "known_classifier_labels": [
+    "Browsing",
+    "Communication",
+    "File-Transfer"
+  ],
+  "known_services": [
+    "Browsing",
+    "Communication",
+    "File-Transfer"
+  ],
+  "prior_unknown_promoted_to_training": 0,
+  "protocol_id": "medium_seed2022",
+  "role_manifest_sha256": "5fa514e13f61da68fd26f9ca031ebf388f256187049f9359e5179a683d0d824f",
+  "slug": "streaming",
+  "source_manifest": "/home/birkenwald/data/SEU-WXY/WXY-SEU/TrafficClassifier/Projects/unknown_traffic_project/stage12_dual_external_validation/protocol/iscx_tor/split_manifest.csv",
+  "source_manifest_sha256": "7de5289ef75966fb360dc743778ba90a31f72c2eaf6694dc3a33291a794bc0d7",
+  "source_training_code_sha256": {
+    "STAGE38_THREE_VIEW_DES_OPEN_SET_TRANSFER_PLAN.md": "580d24ee2d5be0165a82a47a4fd4fc3db17a9289f68d6793044d97a471436003",
+    "stage22_pretrained_trafficformer_e3_closed_set_comparison/config.json": "c3c894566a752800d435b4663ef4e9695ee3d68154bd78a4dc553790cf23433d",
+    "stage22_pretrained_trafficformer_e3_closed_set_comparison/scripts/stage22_common.py": "bc5ad4b164ff1c6a659f5dfecc393f01ff5fe87288ce3a8b18337fa02311003e",
+    "stage22_pretrained_trafficformer_e3_closed_set_comparison/scripts/train_closed_run.py": "87312277e3d9c0835cf5b40c411b65ce1a0750515265dd8dd1461df0e794640c",
+    "stage23_closed_set_method_table/scripts/train_yatc_closed.py": "e9d532db2c7c8e41759e3b381a2f5ac558b2e02e07fe7dbea650813cbdd7922f",
+    "stage31_four_dataset_three_view_equal/preflight.py": "83e4c56471c927289c0548c46a7c355ef1d5068d69d67c1e69b02b8312ffce2e",
+    "stage31_four_dataset_three_view_equal/train_equal_fusion.py": "27153e71570b193bd37c640d702dbbc5a5435a3612a34993485ca110c5498310",
+    "stage31_four_dataset_three_view_equal/train_tf_fig_branch.py": "f97f20f059f4fe6c768da4a389ad5fb6a692ffc89e72beeff65ce23aca234ff4",
+    "stage31_four_dataset_three_view_equal/train_yatc_branch.py": "d3bc72b56a97c8bfe5c5358a0585512175898128fffecfb4b8a0ed1e408e3381"
+  },
+  "stage38_training_lock_sha256": "1c45f093620e0b090ed5ba561e35c2d97b01c8bc6886e39a9447d063b0239bde",
+  "stage39_plan_sha256": "09ad17dd46774dbf3d674c902e22c4dcba48e4ef1b0f023c1b0c011cd189e803",
+  "status": "FROZEN_PRETRAIN",
+  "training_seed": 2022,
+  "unknown_services": [
+    "P2P",
+    "Streaming"
+  ]
+}

@@ -1,0 +1,7 @@
+{
+  "stage12_dual_external_validation/protocol/iscx_tor/split_manifest.csv": "7de5289ef75966fb360dc743778ba90a31f72c2eaf6694dc3a33291a794bc0d7",
+  "stage12_dual_external_validation/protocol/iscx_vpn/split_manifest.csv": "618670af28797d9ceffc7138dcb9d2622552cdfc4712c38bd5da0886ec95c793",
+  "stage14b_vnat_protocol_freeze/vnat_split_manifest.csv": "66bf155e6906231b316c384a52f4b46dabd9d3aee76d5f66d86a3941eb172c4e",
+  "stage15r_protocol_audit": "f404b0302ed3a25059b591dc525f2f0ddd4f1bd44d51b849e2dc4cdfaff4ae7d",
+  "stage3_protocol/split_manifest.csv": "fbe3292d7a170e0dad98ad74a8c016bddac9072c77caf0ae83441338b98cc278"
+}

@@ -1,0 +1,128 @@
+{
+  "schema_version": 1,
+  "experiment_id": "stage39-coarse-open-set-task-design-20260926",
+  "created_at_utc": "2026-09-26T08:14:05Z",
+  "updated_at_utc": "2026-09-26T08:21:26Z",
+  "status": "success",
+  "experiment_type": "metadata-audit-and-protocol-design",
+  "claim_scope": "diagnostic",
+  "objective": "Align coarse Unknown semantics with the current strong Known classifier and audit service-holdout feasibility without retraining",
+  "inputs": [
+    {
+      "path": "/home/birkenwald/data/SEU-WXY/WXY-SEU/TrafficClassifier/Projects/unknown_traffic_project/stage12_dual_external_validation/protocol/iscx_vpn/split_manifest.csv",
+      "sha256": "618670af28797d9ceffc7138dcb9d2622552cdfc4712c38bd5da0886ec95c793",
+      "access": "CSV metadata only"
+    },
+    {
+      "path": "/home/birkenwald/data/SEU-WXY/WXY-SEU/TrafficClassifier/Projects/unknown_traffic_project/stage12_dual_external_validation/protocol/iscx_tor/split_manifest.csv",
+      "sha256": "7de5289ef75966fb360dc743778ba90a31f72c2eaf6694dc3a33291a794bc0d7",
+      "access": "CSV metadata only"
+    },
+    {
+      "path": "/home/birkenwald/data/SEU-WXY/WXY-SEU/TrafficClassifier/Projects/unknown_traffic_project/stage14b_vnat_protocol_freeze/vnat_split_manifest.csv",
+      "sha256": "66bf155e6906231b316c384a52f4b46dabd9d3aee76d5f66d86a3941eb172c4e",
+      "access": "CSV metadata only"
+    }
+  ],
+  "code": {
+    "revision": null,
+    "dirty": null,
+    "changes": []
+  },
+  "execution": {
+    "command": "python stage39_coarse_open_set_task_design/audit_semantics.py",
+    "tmux_session": "stage39_design_audit_0926",
+    "environment": "2025-10-8-WXY-dgl_py310",
+    "physical_gpu_ids": [],
+    "exit_code": 0
+  },
+  "configuration": {
+    "files": [
+      "audit_semantics.py",
+      "PLAN.md"
+    ],
+    "seeds": [
+      2022
+    ],
+    "parameters": {
+      "training_launched": false,
+      "unknown_unit": "service"
+    }
+  },
+  "core_results": [
+    {
+      "dataset": "iscx_vpn",
+      "old_unknown_flows": 6000,
+      "old_unknown_in_known_services": 6000,
+      "overlap_ratio": 1.0
+    },
+    {
+      "dataset": "iscx_tor",
+      "old_unknown_flows": 4000,
+      "old_unknown_in_known_services": 2000,
+      "overlap_ratio": 0.5
+    },
+    {
+      "dataset": "VNAT",
+      "old_unknown_flows": 3825,
+      "old_unknown_in_known_services": 3825,
+      "overlap_ratio": 1.0
+    }
+  ],
+  "artifacts": [
+    {
+      "path": "PLAN.md",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 10716,
+      "sha256": "09ad17dd46774dbf3d674c902e22c4dcba48e4ef1b0f023c1b0c011cd189e803",
+      "hash_status": "verified"
+    },
+    {
+      "path": "audit_semantics.py",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 8742,
+      "sha256": "056484724d5d5bfd7de5fd9b2bd866852cdbcf39fab520d0d72f07adfee2a62e",
+      "hash_status": "verified"
+    },
+    {
+      "path": "completion_verification.json",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 1636,
+      "sha256": "e728258b637df961b22aac6a12a0234de82ea6c19be30b0180ab014ea74e9c5a",
+      "hash_status": "verified"
+    },
+    {
+      "path": "semantic_overlap_audit.csv",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 803,
+      "sha256": "1d8ab4686ba2e21382c710d0ffa2a02863b84ccbe391dd7f6622d9ec34c8432c",
+      "hash_status": "verified"
+    },
+    {
+      "path": "service_holdout_feasibility.csv",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 2730,
+      "sha256": "8d111fee9a43f38ef97c5e59a934ddcc242d75b20eef6cea3efef2b215316743",
+      "hash_status": "verified"
+    },
+    {
+      "path": "service_support.csv",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 1095,
+      "sha256": "41d76017bd2160c1f340700e78863d48fe834d7aa53d745e25a3617b9f866468",
+      "hash_status": "verified"
+    }
+  ],
+  "limitations": [
+    "Proposed VNAT taxonomy; ISCX capture-level weak labels",
+    "Metadata feasibility is not evidence of improved detection",
+    "Flow splits may share capture groups; exposed development datasets"
+  ],
+  "next_step": "Freeze service-role derivations and source training config before training; see PLAN.md"
+}

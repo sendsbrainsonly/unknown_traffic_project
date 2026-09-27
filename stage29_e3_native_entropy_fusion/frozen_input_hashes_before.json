@@ -1,0 +1,30 @@
+{
+  "iscx_vpn/2022": {
+    "stage20_manifest": "6404d496f50a6f7f6f397d125ad0cd653c9df152d8db1b9ed2ad2310967950bb",
+    "stage22_config": "c3c894566a752800d435b4663ef4e9695ee3d68154bd78a4dc553790cf23433d",
+    "e3_representations": "50906b181a769edd503f1622fdb51dccf68365b3df52bf91197114bd6087517d",
+    "e3_checkpoint": "3162936603d95214fa0c7c834772ed59cc25a22b89fe85d1ef941791371a7a09",
+    "stage22_run_manifest": "d082852df2414720166493fa2c742bd4bb4d21f312c11c41ffafe222cf5898db"
+  },
+  "iscx_vpn/2023": {
+    "stage20_manifest": "6404d496f50a6f7f6f397d125ad0cd653c9df152d8db1b9ed2ad2310967950bb",
+    "stage22_config": "c3c894566a752800d435b4663ef4e9695ee3d68154bd78a4dc553790cf23433d",
+    "e3_representations": "f161264ac353cdea7a6b4113a23a2eb8158d4571f5879345c595658499003f68",
+    "e3_checkpoint": "22a8ee7ec77eaad2c0c44b85eebdf56d4d21bd5dcd98ea7f080ae31fb3268ceb",
+    "stage22_run_manifest": "1368172c0cbab3cbc8077e222fc590db81b4ebce066c1c004c9b906637bebb1a"
+  },
+  "iscx_tor/2022": {
+    "stage20_manifest": "6404d496f50a6f7f6f397d125ad0cd653c9df152d8db1b9ed2ad2310967950bb",
+    "stage22_config": "c3c894566a752800d435b4663ef4e9695ee3d68154bd78a4dc553790cf23433d",
+    "e3_representations": "93949bbb8c1049205f22631224ebcc2f823aff9a762264ac8802c24f58c53bdc",
+    "e3_checkpoint": "6264e00e13adefd39bb92c02e512d756dc30147ebdce006c87d5f2f960eef2a8",
+    "stage22_run_manifest": "9982a538a52a18fc4aa1a6c8f7eb25cb5ac2c99f8c3caf43c101a181d4204e1b"
+  },
+  "iscx_tor/2023": {
+    "stage20_manifest": "6404d496f50a6f7f6f397d125ad0cd653c9df152d8db1b9ed2ad2310967950bb",
+    "stage22_config": "c3c894566a752800d435b4663ef4e9695ee3d68154bd78a4dc553790cf23433d",
+    "e3_representations": "62e3127854ab435ea78a832c8936655da54f738729de43f8b5d9bd236d6d211e",
+    "e3_checkpoint": "9b558ce08660fbd6f35a5a3559d4a3e94f48fe0324ad13ce5191379c20b609c9",
+    "stage22_run_manifest": "beb394a86a171596a35a721378d9e7b8b5cb7c3bcd07c353d796f8fca6651962"
+  }
+}

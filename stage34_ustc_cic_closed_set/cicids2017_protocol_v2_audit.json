@@ -1,0 +1,29 @@
+{
+  "status": "PASS",
+  "amendment_reason": "v1 Slowhttptest Test count 13 after 10% sampling",
+  "basis": "pre-training metadata-only sample-support audit",
+  "large_class_sample_source": "/home/birkenwald/data/SEU-WXY/WXY-SEU/TrafficClassifier/Projects/unknown_traffic_project/stage34_ustc_cic_closed_set/cicids2017_three_class_10pct_manifest.csv",
+  "large_class_sample_source_sha256": "0a094ecacd07243783e490b43245335af461e59a2ec06406c9c2b46b31f5402a",
+  "group_assignments": "/home/birkenwald/data/SEU-WXY/WXY-SEU/TrafficClassifier/Projects/unknown_traffic_project/stage34_ustc_cic_closed_set/cicids2017_group_assignments.csv",
+  "group_assignments_sha256": "607f16147d5a3b05ebdae14ac5e3944f58e9b3680190b3847ef771390bf2e6bd",
+  "sample_rates": {
+    "BENIGN": 0.1,
+    "PortScan": 0.1,
+    "DoS Slowhttptest": 1.0
+  },
+  "sample_counts": {
+    "BENIGN|test": 16793,
+    "BENIGN|train": 133189,
+    "BENIGN|validation": 16849,
+    "DoS Slowhttptest|test": 132,
+    "DoS Slowhttptest|train": 3909,
+    "DoS Slowhttptest|validation": 1055,
+    "PortScan|test": 1136,
+    "PortScan|train": 13849,
+    "PortScan|validation": 901
+  },
+  "v2_manifest_sha256": "9734812c102266e88c58364d499c4f1494c24d0f012ac45e33e6292c93f7bd53",
+  "unknown_used": 0,
+  "test_feature_values_read": 0,
+  "test_outcomes_read": 0
+}

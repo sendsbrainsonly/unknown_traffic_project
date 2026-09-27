@@ -1,0 +1,7 @@
+{
+  "status": "PASS",
+  "initial_weights_equal": true,
+  "shared_lambda_initial_gradient": -0.14622600376605988,
+  "sample_dependent_weight_std": 0.15464361011981964,
+  "batch_cross_sample_effect": 0.0
+}

@@ -1,0 +1,44 @@
+{
+  "cache_sha256": {
+    "tf_fig/fig_adj.npy": "c44a1aa248794bbf84a03c2a5a9a2d8591a5ee8b7678a711eec4bea572c82fce",
+    "tf_fig/fig_mask.npy": "60c1bcd0a24b328aa8067ad7e222edb5194122264a2c3640d9bdb941502bbb12",
+    "tf_fig/fig_x.npy": "972677e7451239d14f7febe610e1286a7f4664fc54fd71b2bb1749d2ae855615",
+    "tf_fig/segments.npy": "3b79d2682f780c54c6beb86cf2abd9a045787a5955d4da2084148695cd9a65a3",
+    "tf_fig/token_ids.npy": "f110873aed7a48d37b554e988951cbe5ddf6479bbec7ac5ccaf5d9bdc4a6df5d",
+    "yatc_mfr/known_train_mfr.npy": "8623b8a3b9d1029797fc3462b1aab8295905bfec58aeb847575c0ef7264ddb97",
+    "yatc_mfr/known_validation_mfr.npy": "083a5a35bb71b9bd1e64a078eba599351b353d901757578e4a9b2d9c0397492e"
+  },
+  "classes": [
+    "BitTorrent",
+    "Cridex",
+    "FTP",
+    "Facetime",
+    "Gmail",
+    "Miuref",
+    "MySQL",
+    "Neris",
+    "Nsis-ay",
+    "Outlook",
+    "SMB",
+    "Shifu",
+    "Skype",
+    "Virut",
+    "Weibo",
+    "WorldOfWarcraft",
+    "Zeus"
+  ],
+  "counts": {
+    "known_train": 34665,
+    "known_validation": 4333
+  },
+  "dataset": "USTC-TFC2016",
+  "protocol": "A-2_17class_10pct",
+  "sample_manifest_sha256": "73f7eecef25ee91015d557f7f9f8e7eecd7560cd995c5cc7ec21c9390d45246d",
+  "selection_seed": 2022,
+  "split_sha256": "73f7eecef25ee91015d557f7f9f8e7eecd7560cd995c5cc7ec21c9390d45246d",
+  "status": "PASS",
+  "test_feature_values_loaded": 0,
+  "trafficformer_pretrained_sha256": "be9dcc1e0c6b68db005e506adf13a2d937a2f3982539a2c8a58f78c55af0d5ce",
+  "unknown_feature_values_loaded": 0,
+  "yatc_pretrained_sha256": "66314aa57d4364bad0228835a181158f819d10c857936fbbdbae6dc483211fc6"
+}

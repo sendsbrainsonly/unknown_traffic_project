@@ -1,0 +1,12 @@
+{
+  "status": "PASS",
+  "source_hash_entries_checked": 60,
+  "probability_decisions_replayed": 26556,
+  "metric_rows_replayed": 96,
+  "fusion_weight": [
+    0.5,
+    0.5
+  ],
+  "unknown_usage": 0,
+  "weight_updates": 0
+}

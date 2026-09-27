@@ -1,0 +1,12 @@
+{
+  "models_trained": 0,
+  "new_thresholds_fitted": 0,
+  "role_manifest_sha256": "a7b1417e030adea050da4276ecce49fe2738b8a602fd76b81ac2924f861229e6",
+  "sample_decisions": 20452,
+  "score_rows": 4,
+  "source_calibration_sha256": "19ac9f3349e51e85cec33e03abed041fc3f6f10bbdd756267540f53075fcba87",
+  "source_scores_sha256": "2cc2a2e63142f331870e23a52859d650e6c440ffdfdbc67684bb6b38a0219731",
+  "status": "PASS",
+  "test_for_selection": 0,
+  "unknown_for_fitting": 0
+}

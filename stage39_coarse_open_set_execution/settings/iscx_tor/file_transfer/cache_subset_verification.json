@@ -1,0 +1,17 @@
+{
+  "dataset": "iscx_tor",
+  "fold": "file_transfer",
+  "known_train": 7276,
+  "known_validation": 907,
+  "original_known_train_val_cache_only": true,
+  "role_manifest_sha256": "47eff2cef1efa4fe4ff23f5600f5d799f34613628e90ec7bb5b050ab11a64313",
+  "source_cache_audit_sha256": {
+    "tf_fig": "63a08c514e8aea57f30c16bc9882f891837eeda20ce62a6d3a4a3ca8a4a62ab4",
+    "yatc_mfr": "c83fde245e22a04144de48375ae4378df723666e43e85275e8efe286daeab357"
+  },
+  "status": "PASS",
+  "test_feature_values_loaded": 0,
+  "unknown_feature_values_loaded": 0,
+  "unknown_training_samples": 0,
+  "unknown_validation_samples": 0
+}

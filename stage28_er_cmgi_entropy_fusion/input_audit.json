@@ -1,0 +1,222 @@
+{
+  "status": "PASS",
+  "stage20_sha256": "6404d496f50a6f7f6f397d125ad0cd653c9df152d8db1b9ed2ad2310967950bb",
+  "matched_pairs": 4,
+  "known_roles_checked": 8,
+  "test_feature_values_loaded": 0,
+  "unknown_usage": 0,
+  "rows": [
+    {
+      "dataset": "iscx_vpn",
+      "encoder_seed": 2022,
+      "role": "known_train",
+      "samples": 8764,
+      "classes": 6,
+      "semantic_shape": [
+        8764,
+        960
+      ],
+      "behavioral_shape": [
+        8764,
+        128
+      ],
+      "class_counts": {
+        "Chat": 1559,
+        "Email": 1600,
+        "File-Transfer": 1600,
+        "P2P": 805,
+        "Streaming": 1600,
+        "VoIP": 1600
+      },
+      "flow_id_first": "00044a872ccd72515c2853f6f422366efe05815a0c0bffe0e07d9ac95b000ef0",
+      "flow_id_last": "ffff31d5bd6eb7ab57f6a63a9778bee28491a5b05f23716e26e613022f29ebaa",
+      "finite": true
+    },
+    {
+      "dataset": "iscx_vpn",
+      "encoder_seed": 2022,
+      "role": "known_validation",
+      "samples": 1098,
+      "classes": 6,
+      "semantic_shape": [
+        1098,
+        960
+      ],
+      "behavioral_shape": [
+        1098,
+        128
+      ],
+      "class_counts": {
+        "Chat": 195,
+        "Email": 200,
+        "File-Transfer": 200,
+        "P2P": 101,
+        "Streaming": 202,
+        "VoIP": 200
+      },
+      "flow_id_first": "00528131cd357d501f09db83ec7b2595adc9a4a4ec1f32dc20136baffdf95e49",
+      "flow_id_last": "fff3d5dd2c872a6b732f9c76339a0bcd98a947c369effe63236a451d2437a13a",
+      "finite": true
+    },
+    {
+      "dataset": "iscx_vpn",
+      "encoder_seed": 2023,
+      "role": "known_train",
+      "samples": 8764,
+      "classes": 6,
+      "semantic_shape": [
+        8764,
+        960
+      ],
+      "behavioral_shape": [
+        8764,
+        128
+      ],
+      "class_counts": {
+        "Chat": 1559,
+        "Email": 1600,
+        "File-Transfer": 1600,
+        "P2P": 805,
+        "Streaming": 1600,
+        "VoIP": 1600
+      },
+      "flow_id_first": "00044a872ccd72515c2853f6f422366efe05815a0c0bffe0e07d9ac95b000ef0",
+      "flow_id_last": "ffff31d5bd6eb7ab57f6a63a9778bee28491a5b05f23716e26e613022f29ebaa",
+      "finite": true
+    },
+    {
+      "dataset": "iscx_vpn",
+      "encoder_seed": 2023,
+      "role": "known_validation",
+      "samples": 1098,
+      "classes": 6,
+      "semantic_shape": [
+        1098,
+        960
+      ],
+      "behavioral_shape": [
+        1098,
+        128
+      ],
+      "class_counts": {
+        "Chat": 195,
+        "Email": 200,
+        "File-Transfer": 200,
+        "P2P": 101,
+        "Streaming": 202,
+        "VoIP": 200
+      },
+      "flow_id_first": "00528131cd357d501f09db83ec7b2595adc9a4a4ec1f32dc20136baffdf95e49",
+      "flow_id_last": "fff3d5dd2c872a6b732f9c76339a0bcd98a947c369effe63236a451d2437a13a",
+      "finite": true
+    },
+    {
+      "dataset": "iscx_tor",
+      "encoder_seed": 2022,
+      "role": "known_train",
+      "samples": 8946,
+      "classes": 7,
+      "semantic_shape": [
+        8946,
+        960
+      ],
+      "behavioral_shape": [
+        8946,
+        128
+      ],
+      "class_counts": {
+        "Browsing": 1600,
+        "Chat": 513,
+        "Email": 432,
+        "File-Transfer": 1600,
+        "P2P": 1600,
+        "Streaming": 1601,
+        "VoIP": 1600
+      },
+      "flow_id_first": "0000bc4d5548f87f8a837413fecbf12c03c2fec246a003ba5def1787289c5574",
+      "flow_id_last": "ffff527b0ac62fd4c47f79324dbd86d5c57cb12c2768cf0d5e4433e2554c71f5",
+      "finite": true
+    },
+    {
+      "dataset": "iscx_tor",
+      "encoder_seed": 2022,
+      "role": "known_validation",
+      "samples": 1118,
+      "classes": 7,
+      "semantic_shape": [
+        1118,
+        960
+      ],
+      "behavioral_shape": [
+        1118,
+        128
+      ],
+      "class_counts": {
+        "Browsing": 200,
+        "Chat": 64,
+        "Email": 54,
+        "File-Transfer": 200,
+        "P2P": 200,
+        "Streaming": 200,
+        "VoIP": 200
+      },
+      "flow_id_first": "002d917e222801469830f1ee049ba73128113675c70d961c61ccda113783c4f1",
+      "flow_id_last": "fffd5890c099f969021c30d2117b2ba77aa81d1b61c9d3a4ff6923dea3ba4af1",
+      "finite": true
+    },
+    {
+      "dataset": "iscx_tor",
+      "encoder_seed": 2023,
+      "role": "known_train",
+      "samples": 8946,
+      "classes": 7,
+      "semantic_shape": [
+        8946,
+        960
+      ],
+      "behavioral_shape": [
+        8946,
+        128
+      ],
+      "class_counts": {
+        "Browsing": 1600,
+        "Chat": 513,
+        "Email": 432,
+        "File-Transfer": 1600,
+        "P2P": 1600,
+        "Streaming": 1601,
+        "VoIP": 1600
+      },
+      "flow_id_first": "0000bc4d5548f87f8a837413fecbf12c03c2fec246a003ba5def1787289c5574",
+      "flow_id_last": "ffff527b0ac62fd4c47f79324dbd86d5c57cb12c2768cf0d5e4433e2554c71f5",
+      "finite": true
+    },
+    {
+      "dataset": "iscx_tor",
+      "encoder_seed": 2023,
+      "role": "known_validation",
+      "samples": 1118,
+      "classes": 7,
+      "semantic_shape": [
+        1118,
+        960
+      ],
+      "behavioral_shape": [
+        1118,
+        128
+      ],
+      "class_counts": {
+        "Browsing": 200,
+        "Chat": 64,
+        "Email": 54,
+        "File-Transfer": 200,
+        "P2P": 200,
+        "Streaming": 200,
+        "VoIP": 200
+      },
+      "flow_id_first": "002d917e222801469830f1ee049ba73128113675c70d961c61ccda113783c4f1",
+      "flow_id_last": "fffd5890c099f969021c30d2117b2ba77aa81d1b61c9d3a4ff6923dea3ba4af1",
+      "finite": true
+    }
+  ]
+}
