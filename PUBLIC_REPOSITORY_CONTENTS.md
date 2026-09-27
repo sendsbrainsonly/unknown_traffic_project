@@ -25,7 +25,7 @@ These files are not deleted. Their paths, hashes and roles remain recorded in st
 
 ## Model release policy
 
-No checkpoint is designated as the final project model at this snapshot because Stage 22 is still running. Once a final model is selected, publish only the minimum reproducibility set through Git LFS or a versioned GitHub Release, together with:
+No checkpoint is designated as the final project model in the 2026-09-27 source refresh. Once a final model is selected, publish only the minimum reproducibility set through Git LFS or a versioned GitHub Release, together with:
 
 - exact experiment ID and configuration;
 - source commit;
