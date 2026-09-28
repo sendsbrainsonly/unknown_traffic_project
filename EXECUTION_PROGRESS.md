@@ -2,7 +2,7 @@
 
 ## 2026-09-28 — Stage 42/43 代码与轻量结果重新发布
 
-状态：`in_progress / PRE_PUSH_AUDIT_PASS`。用户要求重新推送当前代码。已确认 Git 根目录为本项目、分支为 `main`，GitHub `main` 与本地已提交 HEAD 同为 `affc1241968e0cb9a13045c6d9a0c839eac560d8`。当前 Git 可见未跟踪文件 134 个、约 560 KiB；磁盘上更大的 checkpoint、数据、缓存、CSV/逐样本预测和 tmux 日志均被 `.gitignore` 排除。本轮计划发布 Stage40 完成补充、Stage42-S–Y、Stage43 的源码、协议、`RESULTS.md`、`manifest.json` 和小型核验元数据，并同步 README/CURRENT_PROGRESS/结果索引。推送前还需执行暂存区大文件、权重后缀、敏感模式、Python/JSON 解析与 diff 检查；不强制推送。
+状态：`complete / REMOTE_SHA_VERIFIED`。用户要求重新推送当前代码。起点核验确认 Git 根目录为本项目、分支为 `main`，GitHub `main` 与本地已提交 HEAD 同为 `affc1241968e0cb9a13045c6d9a0c839eac560d8`。Git 可见的本轮内容只有轻量源码、协议、报告与核验元数据；磁盘上的 checkpoint、原始/派生数据、缓存、CSV/逐样本预测和 tmux 日志均未进入暂存区。Stage40/42/43 共 9 个实验包的全部已记录哈希复核 PASS；暂存区 135 个文件、约 842 KiB，35 个 Python 文件语法解析、82 个 JSON 解析、入口链接、敏感模式、权重/数据后缀和 `git diff --check` 均 PASS。内容提交 `c6cf3d6f96a89fb2a8ad4c35201cb774b03b5d43` 已通过 GitHub SSH 443 非强制推送，并与远端 `main` SHA 逐字符一致。本记录作为发布交接收尾；不需要运行新实验。
 
 ## 2026-09-28 — Stage43 CIC 混合未知类别与比例鲁棒性实验
 
