@@ -1,0 +1,21 @@
+{
+  "balanced_unknown_selection": "SHA256(seed=2022, flow_id), score-blind",
+  "candidate_manifest_sha256": "201484d82866188ca89530dc4d5c1e6b79e8f6ca918bbe1c0d79a94077f5f39e",
+  "checkpoint_hashes": {
+    "T0_equal_best.pt": "75aeced1c57aa7e1daea192640ff3baa36433d47cd7571c8ea9171e10c567048",
+    "adapters_best.pt": "35a224544be313333ac2a41967fb3bb6113d7daf62793398f2175e2bf91b2ef6",
+    "graph": "a7f4842eb61b4a3aee92384635214761e041ae27d7cf37823b1a591fb9e7e693",
+    "trafficformer": "94faf24de521c13bb4ac480a17d7e501559a9d41e9771ea4a1810dfb0b4ff74f",
+    "yatc": "d52534030cfebbebf0304a6a22110cc8d8a2f3ef885cbdbc5f2f9c0d0a668462"
+  },
+  "checkpoint_hashes_unchanged": true,
+  "known_calibration_sha256": "ac686f5d225fd5eeb031c8943c55778282cc10bccba26da310e44a67d7376650",
+  "known_test": 2272,
+  "known_test_sample_scores_sha256": "99636e7817dca07ef75b1b48c7f71855cccc61a3ab5f50f4364350bfe09a80b4",
+  "status": "PASS",
+  "test_fit_count": 0,
+  "threshold_source": "Stage40 Known Validation P95",
+  "unit": "unknown_slowhttptest_full",
+  "unknown_fit_count": 0,
+  "unknown_test": 5096
+}

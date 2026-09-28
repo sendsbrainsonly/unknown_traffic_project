@@ -1,0 +1,549 @@
+{
+  "schema_version": 1,
+  "experiment_id": "stage42w-cic-bot-fifth-candidate-20260928",
+  "created_at_utc": "2026-09-28T07:53:32Z",
+  "updated_at_utc": "2026-09-28T08:15:18Z",
+  "status": "success",
+  "experiment_type": "open-set-evaluation",
+  "claim_scope": "diagnostic",
+  "objective": "Evaluate all matched Friday Bot flows as Unknown with frozen Stage40 Known-only encoder/support/calibration",
+  "inputs": [
+    {
+      "path": "candidate_protocol.json",
+      "role": "frozen_candidate_protocol"
+    },
+    {
+      "path": "candidate_unknown_manifest.csv",
+      "role": "frozen_unknown_test_manifest",
+      "sha256": "b304556ae0de5043ef58cb1207f234bbb7fe08c7d784c51af51b611695aba24b"
+    },
+    {
+      "path": "balanced_known_manifest.csv",
+      "role": "frozen_balanced_known_test_manifest",
+      "sha256": "6f00684e6d5565c10ce04d9e5c8727c7b49fbefc57bd2d0f635602d715e1124d"
+    },
+    {
+      "path": "balanced_view_implementation_audit.json",
+      "role": "pre_feature_access_balanced_view_correction"
+    },
+    {
+      "path": "../stage40_ustc_cic_open_set/unknown_slowhttptest_roles.csv",
+      "role": "frozen_known_roles",
+      "sha256": "6b6d78e3abd34eab2a3a2797d1fe9376b2a9a364078fa8ce677e2a6a876dd99a"
+    }
+  ],
+  "code": {
+    "revision": null,
+    "dirty": null,
+    "changes": [
+      "Added isolated Bot candidate freeze and Friday path adapter",
+      "Frozen score-blind Known Test membership to implement the already-stated 1:1 view when Unknown Test < Known Test"
+    ]
+  },
+  "execution": {
+    "tmux_session": "stage42w-freeze-20260928; stage42w-balanced-freeze-20260928; stage42w-cache-20260928; stage42w-finish-queue-20260928",
+    "command": "freeze all matched Bot IDs and balanced Known IDs before feature access; build full Unknown packet cache; queued live GPU selection, frozen scoring, balanced-view correction, and independent replay",
+    "exit_code": 0,
+    "environment": "/home/birkenwald/data/SEU-WXY/conda_envs/2025-10-8-WXY-dgl_py310",
+    "physical_gpu_ids": [
+      0
+    ]
+  },
+  "configuration": {
+    "files": [
+      "candidate_protocol.json",
+      "candidate_unknown_manifest.csv",
+      "balanced_known_manifest.csv",
+      "balanced_view_implementation_audit.json",
+      "freeze_candidate.py",
+      "freeze_balanced_known.py",
+      "build_friday_cache.py",
+      "run_frozen.py",
+      "fix_balanced_view.py",
+      "finish_after_cache.py",
+      "stage42w_common.py"
+    ],
+    "parameters": {
+      "known_classes": [
+        "BENIGN",
+        "PortScan"
+      ],
+      "unknown_class": "Bot",
+      "unknown_test": 1228,
+      "unknown_groups": 37,
+      "threshold": "reused Stage40 Known-Validation P95",
+      "des_v1_k": 10,
+      "des_v1_weights": [
+        0.5,
+        0.5
+      ],
+      "balanced_known_test": 1228,
+      "balanced_unknown_test": 1228,
+      "unknown_fit_count": 0
+    },
+    "seeds": [
+      2022
+    ]
+  },
+  "core_results": [
+    {
+      "method": "des_v1",
+      "view": "natural",
+      "auroc": 0.946432923682158,
+      "auprc": 0.8757579220076063,
+      "ufar": 0.508957654723127,
+      "known_frr": 0.07130281690140845
+    },
+    {
+      "method": "des_v1",
+      "view": "balanced_1to1",
+      "auroc": 0.9506228182792391,
+      "auprc": 0.9362570846415896,
+      "ufar": 0.508957654723127,
+      "known_frr": 0.06270358306188925
+    },
+    {
+      "verification": "PASS",
+      "metrics_replayed": 8,
+      "candidate_manifest_unchanged": true,
+      "unknown_fit_count": 0,
+      "test_fit_count": 0,
+      "balanced_known_test": 1228,
+      "balanced_unknown_test": 1228,
+      "favorable_screen_pass": false
+    }
+  ],
+  "artifacts": [
+    {
+      "path": ".tmux-task/stage42w-balanced-freeze-20260928/exit.status",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 2,
+      "sha256": "9a271f2a916b0b6ee6cecb2426f0b3206ef074578be55d9bc94f6f3fe3ab86aa",
+      "hash_status": "verified"
+    },
+    {
+      "path": ".tmux-task/stage42w-balanced-freeze-20260928/output.log",
+      "scope": "bundle",
+      "role": "log",
+      "size_bytes": 907,
+      "sha256": "8a3aea61e74d3bddd2429fbd58a826f799e61e17b4891c87f5856f7f74d1d214",
+      "hash_status": "verified"
+    },
+    {
+      "path": ".tmux-task/stage42w-balanced-preflight-20260928/exit.status",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 2,
+      "sha256": "9a271f2a916b0b6ee6cecb2426f0b3206ef074578be55d9bc94f6f3fe3ab86aa",
+      "hash_status": "verified"
+    },
+    {
+      "path": ".tmux-task/stage42w-balanced-preflight-20260928/output.log",
+      "scope": "bundle",
+      "role": "log",
+      "size_bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "hash_status": "verified"
+    },
+    {
+      "path": ".tmux-task/stage42w-cache-20260928/exit.status",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 2,
+      "sha256": "9a271f2a916b0b6ee6cecb2426f0b3206ef074578be55d9bc94f6f3fe3ab86aa",
+      "hash_status": "verified"
+    },
+    {
+      "path": ".tmux-task/stage42w-cache-20260928/output.log",
+      "scope": "bundle",
+      "role": "log",
+      "size_bytes": 560,
+      "sha256": "1ec739f7224f481ff20630470117b0414148bcba938072f9760967593449bab4",
+      "hash_status": "verified"
+    },
+    {
+      "path": ".tmux-task/stage42w-finish-queue-20260928/exit.status",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 2,
+      "sha256": "9a271f2a916b0b6ee6cecb2426f0b3206ef074578be55d9bc94f6f3fe3ab86aa",
+      "hash_status": "verified"
+    },
+    {
+      "path": ".tmux-task/stage42w-finish-queue-20260928/output.log",
+      "scope": "bundle",
+      "role": "log",
+      "size_bytes": 9500,
+      "sha256": "f517d88272961bfe193412c8c5026fb38f71b8e6bf2f9053b446d247cc00caa6",
+      "hash_status": "verified"
+    },
+    {
+      "path": ".tmux-task/stage42w-freeze-20260928/exit.status",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 2,
+      "sha256": "9a271f2a916b0b6ee6cecb2426f0b3206ef074578be55d9bc94f6f3fe3ab86aa",
+      "hash_status": "verified"
+    },
+    {
+      "path": ".tmux-task/stage42w-freeze-20260928/output.log",
+      "scope": "bundle",
+      "role": "log",
+      "size_bytes": 148,
+      "sha256": "a8594246816483759d10a260979ee8ac673fadced12c8131d22a76df9b26e662",
+      "hash_status": "verified"
+    },
+    {
+      "path": ".tmux-task/stage42w-freezecheck-20260928/exit.status",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 2,
+      "sha256": "9a271f2a916b0b6ee6cecb2426f0b3206ef074578be55d9bc94f6f3fe3ab86aa",
+      "hash_status": "verified"
+    },
+    {
+      "path": ".tmux-task/stage42w-freezecheck-20260928/output.log",
+      "scope": "bundle",
+      "role": "log",
+      "size_bytes": 1386,
+      "sha256": "c38d37ca6267bcf51e4a0ae877aec77c5feb2ada396c73abea6ce5c8296c0318",
+      "hash_status": "verified"
+    },
+    {
+      "path": ".tmux-task/stage42w-knownrole-audit-20260928/exit.status",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 2,
+      "sha256": "9a271f2a916b0b6ee6cecb2426f0b3206ef074578be55d9bc94f6f3fe3ab86aa",
+      "hash_status": "verified"
+    },
+    {
+      "path": ".tmux-task/stage42w-knownrole-audit-20260928/output.log",
+      "scope": "bundle",
+      "role": "log",
+      "size_bytes": 4438,
+      "sha256": "5dd89d1cad4dcd3179be09f4f3587eefe5bbc0da552edeb7f945b358b5e993e4",
+      "hash_status": "verified"
+    },
+    {
+      "path": ".tmux-task/stage42w-resultread-20260928/exit.status",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 2,
+      "sha256": "9a271f2a916b0b6ee6cecb2426f0b3206ef074578be55d9bc94f6f3fe3ab86aa",
+      "hash_status": "verified"
+    },
+    {
+      "path": ".tmux-task/stage42w-resultread-20260928/output.log",
+      "scope": "bundle",
+      "role": "log",
+      "size_bytes": 3875,
+      "sha256": "d5a14e683ab4cca5dad08fbd40a99c501962b2f79d70ffbf7cafde8a53bbc742",
+      "hash_status": "verified"
+    },
+    {
+      "path": "__pycache__/build_friday_cache.cpython-310.pyc",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 1385,
+      "sha256": "ad93f12230bbd02808328a15a635e3690e147b21254eeec45cdd570bbdf84d0f",
+      "hash_status": "verified"
+    },
+    {
+      "path": "__pycache__/finish_after_cache.cpython-310.pyc",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 4142,
+      "sha256": "b822fd78063150f3dfc306ae323b55574b51f3a7292e1711ec21e019a2764310",
+      "hash_status": "verified"
+    },
+    {
+      "path": "__pycache__/fix_balanced_view.cpython-310.pyc",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 3967,
+      "sha256": "7ffa7c185a55d4f324a99c12789624b0293ecb494e646913fb60fe356d176e49",
+      "hash_status": "verified"
+    },
+    {
+      "path": "__pycache__/freeze_balanced_known.cpython-310.pyc",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 2968,
+      "sha256": "7bf6af713ab203b9b091ecdd21d324ee34c4daf052bae253f7c2b897d63901a1",
+      "hash_status": "verified"
+    },
+    {
+      "path": "__pycache__/freeze_candidate.cpython-310.pyc",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 6751,
+      "sha256": "fe68519586a14665e036d896c9fc4d1fda5968453ea445dbfccf283f3fdd9e63",
+      "hash_status": "verified"
+    },
+    {
+      "path": "__pycache__/run_frozen.cpython-310.pyc",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 1456,
+      "sha256": "46e4c8f3eb6952ab037efb99842eeb1778dbd2f8d3647ae9bf284464bbed3dab",
+      "hash_status": "verified"
+    },
+    {
+      "path": "__pycache__/stage42w_common.cpython-310.pyc",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 2488,
+      "sha256": "7d4b41e16f020d35a67eda877c356b67d5c335f8a36c87d0dfb5c00be6460862",
+      "hash_status": "verified"
+    },
+    {
+      "path": "balanced_known_manifest.csv",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 22544,
+      "sha256": "6f00684e6d5565c10ce04d9e5c8727c7b49fbefc57bd2d0f635602d715e1124d",
+      "hash_status": "verified"
+    },
+    {
+      "path": "balanced_view_implementation_audit.json",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 933,
+      "sha256": "9fd59175f84633d5ac5c87ac4f6c160a99aede981234cb9e9a6936fa55bf0d68",
+      "hash_status": "verified"
+    },
+    {
+      "path": "build_friday_cache.py",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 1168,
+      "sha256": "aee799aff5d678d66674274bdab96f860b4307c58c84e93cfcf3c3ec4dd2a0fd",
+      "hash_status": "verified"
+    },
+    {
+      "path": "candidate_protocol.json",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 3680,
+      "sha256": "7dc8b004a0027f1c26a64cae5edff7f235801383008334cf407ddb6a7cec91be",
+      "hash_status": "verified"
+    },
+    {
+      "path": "candidate_unknown_manifest.csv",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 227422,
+      "sha256": "b304556ae0de5043ef58cb1207f234bbb7fe08c7d784c51af51b611695aba24b",
+      "hash_status": "verified"
+    },
+    {
+      "path": "cicids2017_protocol_v2_audit.json",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 178,
+      "sha256": "e13193d857c094757b39308578b8717c8eabca76ecd6796be4f29486dd17ab58",
+      "hash_status": "verified"
+    },
+    {
+      "path": "finish_after_cache.py",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 4486,
+      "sha256": "b37205579f81f0e0663facc40254815d881a409a9bf6501f7a563e1782b2d780",
+      "hash_status": "verified"
+    },
+    {
+      "path": "fix_balanced_view.py",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 3958,
+      "sha256": "12e2822352a754d2c3f30b1e1d0585ab5c4d35254462652b3e895879d27ca1de",
+      "hash_status": "verified"
+    },
+    {
+      "path": "freeze_balanced_known.py",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 2790,
+      "sha256": "79c393a1e3c1a97523fa583a29cd321d7b10ea6e1f2e4d67c839481650c0c7f7",
+      "hash_status": "verified"
+    },
+    {
+      "path": "freeze_candidate.py",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 6825,
+      "sha256": "243e81c637604d599fdec6f698c1b2704d4ee625174c7b93c0f2c9cff6d6b7ac",
+      "hash_status": "verified"
+    },
+    {
+      "path": "progress.json",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 544,
+      "sha256": "ef98b85e5c062a10b32ba64d9d909c273c182190c23d78420da3a80a90460150",
+      "hash_status": "verified"
+    },
+    {
+      "path": "queue_progress.json",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 545,
+      "sha256": "7a0480c3cc911c19ec9c90e0dcc12e93b635edd652784f18009024880f000597",
+      "hash_status": "verified"
+    },
+    {
+      "path": "run_frozen.py",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 1383,
+      "sha256": "9eaccc6873e54b0b71cced12cbb4d12a63308e159da8f3186f93eaabac229874",
+      "hash_status": "verified"
+    },
+    {
+      "path": "stage42w_common.py",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 1727,
+      "sha256": "c73445a591e8c57ff8374b8cf67eed32bf2c8fe95353e657e17b13bdae9b7f5f",
+      "hash_status": "verified"
+    },
+    {
+      "path": "unknown_bot/detection/SUCCESS",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 8,
+      "sha256": "1f513d4ecec4e91ddd48da1a59b6d96f1b76c374dc1da641980782a34f43b102",
+      "hash_status": "verified"
+    },
+    {
+      "path": "unknown_bot/detection/evaluation_audit.json",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 1442,
+      "sha256": "c1144a1ead406a1a13daccbb146c8a3d0ad33699f12bd473988096adfa268340",
+      "hash_status": "verified"
+    },
+    {
+      "path": "unknown_bot/detection/independent_verification.json",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 358,
+      "sha256": "be02a264a590eb97ff5645b008c80792974fc1df89729a1032043ebbd308d9cf",
+      "hash_status": "verified"
+    },
+    {
+      "path": "unknown_bot/detection/known_test_closed_set.json",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 107,
+      "sha256": "ec2f4ec29aee406452c093d7de0bc4c7afc00196dc38cc4e079220af1582b872",
+      "hash_status": "verified"
+    },
+    {
+      "path": "unknown_bot/detection/open_set_results.csv",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 2242,
+      "sha256": "593fc5f86db1cca646603f239ef7047bfddd3213e015b99cea25e30398f8d92b",
+      "hash_status": "verified"
+    },
+    {
+      "path": "unknown_bot/detection/sample_scores.csv",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 478081,
+      "sha256": "6fae1d37f0f5de521e2bf26c85ff062c1223c2edd0bf3f4b8ae24832f2aa820f",
+      "hash_status": "verified"
+    },
+    {
+      "path": "unknown_bot/input_caches/ustc/A-2/tf_fig_test/cache_audit.json",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 604,
+      "sha256": "9f3eaf8ea312177a0b5a242e92fca7db8acfefd013958e5748f41e2629245595",
+      "hash_status": "verified"
+    },
+    {
+      "path": "unknown_bot/input_caches/ustc/A-2/tf_fig_test/fig_adj.npy",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 1105328,
+      "sha256": "8be99866710a5e71a8af82ebcaf36268ddf81b42a70eb09434eed83355d90f75",
+      "hash_status": "verified"
+    },
+    {
+      "path": "unknown_bot/input_caches/ustc/A-2/tf_fig_test/fig_mask.npy",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 36968,
+      "sha256": "1948aef40e63b763739a1d1bbc2e1437c2c87c5c049159d6ccca57b71e60dbbd",
+      "hash_status": "verified"
+    },
+    {
+      "path": "unknown_bot/input_caches/ustc/A-2/tf_fig_test/fig_x.npy",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 1031648,
+      "sha256": "dbf2984f827f00465fc5fa1b5b37bc5bacb326c251c897d1c94925e622b2d24c",
+      "hash_status": "verified"
+    },
+    {
+      "path": "unknown_bot/input_caches/ustc/A-2/tf_fig_test/flow_ids.npy",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 393088,
+      "sha256": "790955ac9d597497488cb6cc330273ccdbc5737ca0e1f0d0f562d4ac6537b06a",
+      "hash_status": "verified"
+    },
+    {
+      "path": "unknown_bot/input_caches/ustc/A-2/tf_fig_test/segments.npy",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 393088,
+      "sha256": "837ca5c27ad09d0a4a97a025c593841e8c6bd2bceeeb5d8897b455737195a9d7",
+      "hash_status": "verified"
+    },
+    {
+      "path": "unknown_bot/input_caches/ustc/A-2/tf_fig_test/token_ids.npy",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 1571968,
+      "sha256": "9a3658f801b402f94a92a8c0a4b76d0bb71c9a0def2ec1a91212da15a0f70827",
+      "hash_status": "verified"
+    },
+    {
+      "path": "unknown_bot/input_caches/ustc/A-2/yatc_mfr_test/cache_audit.json",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 604,
+      "sha256": "9f3eaf8ea312177a0b5a242e92fca7db8acfefd013958e5748f41e2629245595",
+      "hash_status": "verified"
+    },
+    {
+      "path": "unknown_bot/input_caches/ustc/A-2/yatc_mfr_test/known_test_flow_ids.npy",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 393088,
+      "sha256": "790955ac9d597497488cb6cc330273ccdbc5737ca0e1f0d0f562d4ac6537b06a",
+      "hash_status": "verified"
+    },
+    {
+      "path": "unknown_bot/input_caches/ustc/A-2/yatc_mfr_test/known_test_mfr.npy",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 1964928,
+      "sha256": "1d219b445b14ca59789a6cca36353460d2e9c53f1161c8698f9e4226fa5f7de1",
+      "hash_status": "verified"
+    }
+  ],
+  "limitations": [
+    "Post-hoc favorable-setting development diagnostic",
+    "Bot tied to one Friday PCAP, despite 37 five-minute groups",
+    "Time-window and endpoint shortcuts may inflate performance",
+    "Single known encoder and single protocol seed"
+  ],
+  "next_step": "Stop at this completed diagnostic result; review favorable and failed CIC settings before any new protocol"
+}

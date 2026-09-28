@@ -1,5 +1,67 @@
 # Unknown Traffic / Unknown Attack Detection 项目过程、实验计划修订与当前进度
 
+## 2026-09-28 — Stage 42/43 代码与轻量结果重新发布
+
+状态：`in_progress / PRE_PUSH_AUDIT_PASS`。用户要求重新推送当前代码。已确认 Git 根目录为本项目、分支为 `main`，GitHub `main` 与本地已提交 HEAD 同为 `affc1241968e0cb9a13045c6d9a0c839eac560d8`。当前 Git 可见未跟踪文件 134 个、约 560 KiB；磁盘上更大的 checkpoint、数据、缓存、CSV/逐样本预测和 tmux 日志均被 `.gitignore` 排除。本轮计划发布 Stage40 完成补充、Stage42-S–Y、Stage43 的源码、协议、`RESULTS.md`、`manifest.json` 和小型核验元数据，并同步 README/CURRENT_PROGRESS/结果索引。推送前还需执行暂存区大文件、权重后缀、敏感模式、Python/JSON 解析与 diff 检查；不强制推送。
+
+## 2026-09-28 — Stage43 CIC 混合未知类别与比例鲁棒性实验
+
+状态：`in_progress / INPUT_AUDIT`。目标是在不重训、不重拟合阈值、不读取原始 PCAP 的条件下，复用 Stage42-S 至 Stage42-Y 已保存的 10 个 Unknown 类逐样本分数，检查 Known:Unknown 比例、Unknown 类别组成和 BENIGN:PortScan 组成变化。固定 Known Test 为 Stage40 的 2,272 条 `BENIGN + PortScan`，方法为 MSP、Energy、centroid、DES-v1，阈值继续使用原 Known-Val P95。计划先冻结源文件哈希、重复/对齐审计、5 个 prevalence 设置、7 个 composition 设置、3 个 Known-composition 设置以及 seeds 2022–2041，再生成完整 membership manifest、指标和独立重放。输出目录：`stage43_cic_mixed_prevalence/`；本实验为已暴露候选上的 post-hoc diagnostic，不是 untouched validation。
+
+Stage43 terminal update 2026-09-28 09:43 UTC: `success / COMPOSITION_SENSITIVE`。10 个来源的 2,272 条 Known 分数完全一致；260,220 条 Unknown 无跨类重复，Known/Unknown 无重叠，阈值与保存决策全部重放 PASS。完成 15 settings × 20 seeds = 300 个混合测试、600,000 membership、1,200 方法指标；独立脚本逐行重算最大误差 0。DES-v1 在 5 个 class-balanced prevalence 设置中 AUROC `0.980384–0.981316`、UFAR `0.067250–0.069500`，比例本身稳定；但 all-balanced UFAR `0.067100` 掩盖 Bot `0.495000` 与 DDoS `0.169500`，Bot+DDoS-only AUROC/UFAR 为 `0.947600/0.338350`。Known 组成也改变聚合 FRR：BENIGN:PortScan 3:1 为 `0.091250`，1:3 为 `0.050250`。完整结果见 `stage43_cic_mixed_prevalence/RESULTS.md`。只作事后诊断，不自动调参。
+
+Stage43 completion verification 2026-09-28 09:44 UTC: 独立重放再次 PASS（300 mixtures、1,200 metric rows、600,000 memberships、max absolute error=0）；项目 bundle 哈希校验通过：`status=success artifacts=51 bundle_files=51`。无 Stage43 运行进程，无 GPU 使用。
+
+Stage43 reporting addendum 2026-09-28: 按用户要求将 Binary Accuracy 和 Unknown-positive Binary F1 加入 prevalence、Unknown composition 和 Known composition 三组主表。全均衡 Acc/F1=`0.931125/0.931247`，Authentication/Web=`0.964575/0.965790`，Bot+DDoS=`0.795325/0.763697`。Known:Unknown 从 9:1 改为 1:9 时 Accuracy 仍约 `0.93`，但 F1 从 `0.725275` 升至 `0.960223`，因此明确标注 F1 的 prevalence dependence；模型分数、样本成员和阈值未改动。
+
+## 2026-09-28 — Stage42-Y CIC 四类顺序诊断
+
+状态：`in_progress / FOUR_PROTOCOLS_FROZEN`。在访问这四类新包特征前，已按用户指定顺序固定 SSH-Patator（2,987）、Web Attack - Brute Force（1,364）、Web Attack - XSS（629）、DoS Slowhttptest 全量（5,096）MATCHED 流及其协议；保留 Stage40 `BENIGN + PortScan` Known 模型、支持集、Known-Val P95 阈值。Brute Force/XSS 因 Unknown 数少于 2,272 Known Test，额外预先固定真正 1:1 的 Known 子集。Slowhttptest 与历史 Stage40 Unknown Test 重合 132 流，明确为事后诊断。命名 tmux 队列 `stage42y-sequential-20260928` 按固定顺序执行缓存、冻结推理和独立重放；进度看 `stage42y_cic_remaining_four_open_set/queue_progress.json`。所有候选均需报告，不因指标不佳跳过。
+
+Stage42-Y terminal update 2026-09-28 09:21 UTC: `complete / four independent replays PASS`。队列 exit 0；四类均按冻结顺序完成包缓存、GPU3 冻结推理与 8 行方法×视图指标重算，Unknown/Test fitting=0。DES-v1 自然比例 AUROC/AUPRC/UFAR：SSH-Patator `0.991275/0.989281/0`；Web Brute Force `0.995652/0.991421/0`；Web XSS `0.997489/0.988430/0`；全量 Slowhttptest `0.993400/0.996257/0.001374`。四组 Known FRR 均为 `0.071303`。完整结果见 `stage42y_cic_remaining_four_open_set/RESULTS.md`；只作事后诊断，不再自动启动新候选。
+
+Stage42-Y handoff verification 2026-09-28 09:22 UTC: 首次 bundle 校验因手工使用不被接受的状态值 `complete`、且刷新程序在 bundle 内运行时把自身尚未结束的 tmux 日志/临时文件纳入清单而失败，失败日志保留。已将 manifest 状态修正为规范的 `success`，从项目根目录执行刷新与校验；最终 `validation passed: status=success artifacts=130 bundle_files=130`，128+ 文件哈希重新核对通过。此为归档元数据修正，未改动模型分数、样本划分和阈值。
+
+## 2026-09-28 — Stage42-X CIC 第六个候选：Unknown FTP-Patator
+
+状态：`in_progress / FULL_PACKET_CACHE_RUNNING`。按未完整测试过的攻击标签匹配流数量排序，选择 Tuesday 的 `FTP-Patator`，全部 3,985 条 matched flows、15 个五分钟 group，使用与先前完全相同的 Stage40 `BENIGN + PortScan` 冻结 encoder、Known-Train support 与 Known-Val P95 阈值。候选 manifest SHA256=`f031cbdf6ce8721854ca4f4c55834f60fd703ae664ca9d16b4b0a0c60c9be1b7`，在 Tuesday 包特征访问前冻结，与 Known role ID 无交集。Stage42-X 只新建 Tuesday 缓存路径适配，复用哈希固定的 Stage42-S 评分与独立复核。`stage42x-cache-20260928` 于 08:21 UTC 启动全量包缓存，`stage42x-finish-queue-20260928` 已启动并报告 `WAITING_FOR_CACHE`；缓存成功后顺序进行实时 GPU 选择、冻结推理和独立重放。完成前不得报告开集指标。该第六候选仍属连续查看先前结果后的 post-hoc development diagnostic，不能宣称独立验证。下一步只读检查两个 tmux session 与 `queue_progress.json`，完成后更新 bundle 并做哈希验证。
+
+Stage42-X terminal update 2026-09-28 08:24 UTC: status `complete / PASS` for extraction, frozen evaluation and independent replay; DES-v1 **favorable-screen PASS**. All 3,985 matched Tuesday FTP-Patator flows were evaluated against the unchanged 2,272 Known Test flows; eight method × view metric rows replayed, checkpoint/candidate hashes unchanged, Unknown/Test fit counts zero. DES-v1 natural AUROC/AUPRC/UFAR/Known-FRR = `0.998342/0.998596/0.000000/0.071303`; true 1:1 AUPRC=`0.997596`. It accepts zero FTP-Patator Unknown flows as Known, but MSP/Energy/Centroid also show AUROC 0.984–0.988 and UFAR 0.35–1.51%, so the result is not uniquely evidence of DES-v1. Stage42-X remains a post-hoc diagnostic with Tuesday capture/attack-schedule confounding. See `stage42x_cic_ftp_patator_open_set/RESULTS.md`; no further candidate launched.
+
+## 2026-09-28 — Stage42-W CIC 第五个候选：Unknown Bot
+
+状态：`in_progress / FULL_PACKET_CACHE_RUNNING`。继续使用 Stage40 `BENIGN + PortScan` 冻结模型与 Known-Val P95 阈值。Friday PCAP 中剩余未测攻击标签 `Bot` 的全部 1,228 条 matched flows（37 个五分钟 group）已在包特征访问前冻结，manifest SHA256=`b304556ae0de5043ef58cb1207f234bbb7fe08c7d784c51af51b611695aba24b`。预检发现旧评估器在 Unknown 数小于 Known Test 数时，名义 1:1 视图会保留全部 2,272 个 Known；因此在本实验中另行按固定 SHA256 规则冻结 1,228 个 Known Test ID（SHA256=`6f00684e6d5565c10ce04d9e5c8727c7b49fbefc57bd2d0f635602d715e1124d`），仅隔离修正均衡视图 membership 和派生指标，保持自然比例分数、模型、阈值不变。`stage42w-cache-20260928` 于 07:57 UTC 开始全量 Friday 包缓存；`stage42w-finish-queue-20260928` 已启动并报告 `WAITING_FOR_CACHE`，缓存成功后顺序执行冻结 GPU 推理、均衡视图修正和独立重放。复核必须确认 1,228:1,228、8 行指标重放、Unknown/Test fitting=0。此为连续查看既有结果后的探索性诊断，不能称独立验证。下一步只读查看两个 tmux session 和 `queue_progress.json`；结束后更新 bundle 核心结果并做哈希验证。
+
+Stage42-W terminal update 2026-09-28 07:59 UTC: status `complete / PASS` for extraction, frozen inference, exact 1:1 implementation correction, and independent replay; **favorable-screen FAIL**. All 1,228 Bot Unknown flows were extracted; checkpoint hashes and both frozen membership hashes stayed unchanged, Unknown/Test fit counts were zero, and all eight metric rows replayed. DES-v1 natural AUROC/AUPRC/UFAR/Known-FRR = `0.946433/0.875758/0.508958/0.071303`; 1:1 AUROC/AUPRC = `0.950623/0.936257`. The frozen P95 threshold accepts 625/1,228 Bot flows as Known, so the operating point is poor despite high rank discrimination. See `stage42w_cic_bot_open_set/RESULTS.md`; no further candidate launched.
+
+## 2026-09-28 — Stage42-V CIC 第四个候选：Unknown DDoS
+
+状态：`in_progress / FULL_PACKET_CACHE_RUNNING`。继续使用 Stage40 `BENIGN + PortScan` 冻结三路 encoder、Known-Train support 与 Known-Val P95 阈值。仅按已匹配流元数据选择与 Known PortScan 同属 Friday PCAP、尚未测试且规模最大的攻击标签 `DDoS`；全部 76,613 条 flow、5 个五分钟 group 已冻结，manifest SHA256=`9300363ccdfc786e7524705446455b2a2ac117deced5fc94367c37f5a6f2359a`，无 Known role-ID 交集。原始 packet 特征在冻结前未打开。新目录 `stage42v_cic_ddos_open_set/` 仅增加 Friday 缓存适配，复用哈希固定的 Stage42-S 评分和独立重放。`stage42v-cache-20260928` 已在 07:11 UTC 启动全量缓存，`stage42v-finish-queue-20260928` 已启动并报告 `WAITING_FOR_CACHE`；缓存审计通过后队列会实时选一张符合容量约束的 GPU，顺序做冻结推理与独立重放。该选择发生在前三个候选结果已可见之后，仅属 post-hoc development diagnostic；同 PCAP 也无法排除时间段和端点混杂。下一步只读检查两个 tmux session 与 `queue_progress.json`，完成后更新 bundle 核心结果并做哈希验证。
+
+Stage42-V terminal update 2026-09-28 07:24 UTC: status `complete / PASS` for execution and independent replay, but **favorable-screen FAIL**. Friday extraction emitted 76,613/76,613 DDoS flows; the frozen model on physical GPU0 and the independent score/decision replay both exited 0. All eight method × view metrics were verified, checkpoint/candidate hashes were unchanged, and Unknown/Test fit counts stayed zero. DES-v1 natural AUROC/AUPRC/UFAR/Known-FRR = `0.948990/0.994485/0.166134/0.071303`; balanced AUPRC = `0.882042`. DES-v1 accepted 12,728/76,613 DDoS Unknown flows as Known. Thus this candidate fails the previously used AUROC ≥ 0.95 and UFAR ≤ 0.10 screen despite high prevalence-inflated natural AUPRC. See `stage42v_cic_ddos_open_set/RESULTS.md`; no new candidate should be inferred as pre-registered independent validation.
+
+## 2026-09-28 — Stage42-U CIC 第三个候选：Unknown Hulk
+
+状态：`in_progress / PROTOCOL_FROZEN_BEFORE_FEATURE_ACCESS`。第三个候选使用 Stage40 `BENIGN + PortScan` 冻结模型、Known-Train support 与 Known-Val P95 阈值，Unknown=`DoS Hulk`；Wednesday 映射表中全部 155,168 条 `MATCHED` flow 已冻结，覆盖同一 PCAP 的 6 个五分钟 group，未下采样。候选 manifest SHA256=`b158b2bb751fa5fd61c18f34149411583b8ba3515d4ad0dc5d9d822a573cb37f`。这是尚未在该模型下作为 Unknown 评估的新攻击类；只按标签和数量选择。全量 Unknown Test 包特征缓存正在 `stage42u-cache-20260928` 运行；`stage42u-finish-queue-20260928` 已启动，将在缓存审计 PASS 后依次做实时 GPU 选择、冻结推理和独立重放。进度见 `stage42u_cic_hulk_open_set/queue_progress.json` 与 `progress.json`。
+
+## 2026-09-28 — Stage42-T CIC 第二个候选：Unknown GoldenEye
+
+状态：`complete / INDEPENDENT_REPLAY_PASS`。将 `BENIGN + PortScan` 冻结模型的第二个候选确定为 `DoS GoldenEye`：Wednesday 映射表中全部 7,441 条 `MATCHED` flow，覆盖同一 PCAP 的 2 个五分钟 group；与 Stage40 role IDs 无重叠。候选 manifest SHA256=`630fd0b2ddf41b92670447f7a330023ce7585f2155b908feef9cb5521c05e0bf`，在读取包特征前冻结。复用 Stage40 Known-Val P95 阈值与 Stage42-S 已验证的提取、推理、复核代码。缓存 7,441/7,441、GPU 冻结推理、8 行指标独立重放均 PASS，Unknown/Test fitting=0。DES-v1 自然比例 AUROC/AUPRC/UFAR/Known-FRR=`0.969958/0.977195/0.002419/0.071303`；均衡视图=`0.970014/0.930666/0.002201/0.071303`。结果仅属单 PCAP、2 个时间组的诊断性有利划分；存在 endpoint/time/capture shortcut 风险。详见 `stage42t_cic_goldeneye_open_set/RESULTS.md` 与 `progress.json`。
+
+## 2026-09-28 — Stage42-S CIC favorable protocol：Unknown slowloris
+
+状态：`complete / INDEPENDENT_REPLAY_PASS`。第一个候选固定复用 Stage40 `BENIGN + PortScan` 的三路 encoder、Known-Train support 与 Known-Val P95 阈值，不重新训练/校准。Unknown=`DoS slowloris`；冻结的 5,709 条 MATCHED flow 覆盖 Wednesday 的 8 个五分钟 group；manifest SHA256=`908208f25c3e88a2b4153e538090ec222e24b8d21ce91cc6a08f447df4eca3f4`。缓存构建完成；GPU 冻结推理及 8 行指标独立重放均已完成，`unknown_fit_count=0`、`test_fit_count=0`。DES-v1 在自然比例下 AUROC/AUPRC/UFAR/Known-FRR=`0.993050/0.996724/0.000350/0.071303`；均衡视图对应=`0.992970/0.991799/0.000440/0.071303`。结果仅属单 PCAP、8 个时间组的诊断性有利划分；存在 endpoint/time/capture shortcut 风险。不自动启动第二个候选。详见 `stage42s_cic_favorable_open_set/RESULTS.md` 与 `progress.json`。
+
+## 2026-09-27 — Stage40 CIC 冻结开集实验独立续跑
+
+状态：`complete / BOTH_CIC_ROLES_INDEPENDENTLY_VERIFIED`。v2 顺序队列于 14:32 UTC 报告 `CIC_PILOTS_COMPLETE / all_verified`，tmux 退出码 0；最大并发 GPU workload=1。两套冻结角色、源文件 SHA256 均未变化；Known-Val P95 校准；两个 evaluation audit 均为 PASS，`unknown_fit_count=0`、`test_fit_count=0`、checkpoint hashes unchanged。两个独立重放均 PASS：PortScan 1,400 rows（Known/Unknown Test 264/1,136），Slowhttptest 2,404 rows（2,272/132）。四个分数为 MSP/Energy/centroid/DES-v1。DES-v1：PortScan AUROC/AUPRC/UFAR/Known-FRR=`0.463178/0.761719/0.948063/0.166667`；Slowhttptest=`0.997753/0.955759/0.000000/0.071303`。两项结果明显依赖 Unknown role，不应合并成普遍性能结论；单 seed、两 Known 类，Slowhttptest Unknown Test 仅 132 flows，且 CIC attack/day/capture 混杂。完整报告：`stage40_ustc_cic_open_set/RESULTS.md`；续跑包：`stage40_ustc_cic_open_set/cic_resume_20260927_v2/RESULTS.md`。
+
+结果分布补记（2026-09-28）：`unknown_slowhttptest` 的 Known 类明确为 `BENIGN + PortScan`，Unknown 类为 `Slowhttptest`；Known Train/Validation/Test=`27,698/1,802/2,272`，Unknown Test=`132`。Slowhttptest 未进入训练、支持集构建、归一化或 P95 阈值校准。
+
+### Current handoff
+
+本轮 CIC 开集试运行已完成；没有待启动的训练或评估子任务。可直接查看上述报告和 CSV。若继续研究，应另立预注册协议，不基于这两个 Test 结果回调当前阈值或 detector。
+
 ## 2026-09-27 — Stage 23–41 代码发布
 
 状态：`complete`。用户要求将当前主项目代码重新推送到 GitHub。起点核验：仓库根目录为本项目、分支 `main`，原本地与远端均为 `e0a4c77dd4ca5e69ec702562cd5d99ec2ce2185c`；Stage 23–41 此前尚未纳入普通 Git。原有本地改动包括本文档及 `EXPERIMENT_RESULTS.md`，其中后者删去了旧索引条目，故本次发布未暂存该文件，也未覆盖其本地内容。首个发布提交 `b2821a5598e2b3231947dbd587ebbb457d854a81` 纳入 451 个文件、约 3.26 MB；敏感特征扫描、禁止扩展名/子仓库检查均未发现问题；165 个 Python 文件 AST 解析、222 个 JSON 文件解析以及 `git diff --cached --check` 均通过。使用 GitHub SSH 443 非强制推送后，远端 `main` 与本地提交 SHA 完全一致。README、Stage39/40 结果状态及当前进度页面已纠正；权重、数据、缓存、逐样本预测、运行日志与可变队列状态仍留在本地。下一步仅需提交本交接文档收尾并再次核对远端 SHA；`EXPERIMENT_RESULTS.md` 的原有本地改动仍须由其所有者决定如何处理。
@@ -1165,3 +1227,5 @@ Stage41 concurrency correction 2026-09-27: user reduced Stage41 to at most two p
 Stage41 terminal record 2026-09-27: status `complete / PASS`, single seed 2022. The two-GPU queue and all A-1/A-3 branch, fusion, calibration, frozen Test evaluation, comparison and finalizer sessions exited 0; `completion_verification.json` reports same-flow Test IDs, 3 scenarios × 2 methods, Unknown Train/Validation use 0, and Known Validation P95 as the formal threshold. Balanced Test AUROC OD/three-view is A-1 `0.9907/0.9769`, A-2 `0.9290/0.9406`, A-3 `0.9782/0.9609`; balanced Unknown F1 is `0.9659/0.9605`, `0.5038/0.6741`, `0.9191/0.9231`. In A-2, Geodo accounts for 337/257 OD/three-view false negatives out of the same 410 Geodo Test flows; natural-prevalence F1 is recorded separately in `stage41_a123_matched_open_set_comparison/RESULTS.md`. Final claims are diagnostic for this local 10% matched subset, not the paper's exact five-fold result. Final files: `comparison_run_results.csv`, `per_unknown_class.csv`, `completion_verification.json`, `RESULTS.md`, and `manifest.json`; no Stage41 workers remain on GPUs6/7. Next action: stop at Stage41 and review the recorded comparison before any further experiment.
 
 Stage41 closed/open documentation addendum 2026-09-27: status remains `complete / PASS`. On the frozen Known Test flows, Open-Detect versus three-view Macro-F1 is A-1 `0.977538/0.988065`, A-2 `0.978454/0.987649`, A-3 `0.996973/1.000000`. Open-Detect Macro-F1 was reconstructed from its existing per-flow Known Test predictions; stored Accuracy and Weighted-F1 matched the original `test_metrics.json` exactly. The paired closed/open table and balanced AUPRC values are now in `stage41_a123_matched_open_set_comparison/RESULTS.md`; source prediction files and `.tmux-task/stage41_closed_metrics_0927/output.log` remain available. No model or frozen score was rerun.
+
+Stage42-U terminal update 2026-09-28 03:54 UTC: status `complete / PASS`. The all-flow DoS Hulk cache emitted 155,168 Unknown Test flows, and frozen inference on physical GPU0 evaluated four methods against the unchanged 2,272 Known Test flows. DES-v1 natural AUROC/AUPRC/UFAR = `0.973767/0.998806/0.001134`; balanced 1:1 AUPRC = `0.928132`. Independent replay verified all eight method × view rows, the candidate manifest hash, and zero Unknown/Test fitting. The tmux cache and finish queue both exited 0. Results remain a post-hoc favorable-setting diagnostic; see `stage42u_cic_hulk_open_set/RESULTS.md` and its preserved score, CSV, cache, and log artifacts. No further experiment was launched.

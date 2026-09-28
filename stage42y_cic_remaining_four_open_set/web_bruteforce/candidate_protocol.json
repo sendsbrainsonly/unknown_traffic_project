@@ -1,0 +1,49 @@
+{
+  "balanced_view_selection": "SHA256(seed=2022, flow_id), n=min(Known Test, Unknown Test)",
+  "candidate_manifest": "/home/birkenwald/data/SEU-WXY/WXY-SEU/TrafficClassifier/Projects/unknown_traffic_project/stage42y_cic_remaining_four_open_set/web_bruteforce/candidate_unknown_manifest.csv",
+  "candidate_manifest_sha256": "c86e720d6c4a76cb6e461c2ef002b26bd2d5268f4196c5b74d70883031001106",
+  "candidate_order_index": 2,
+  "claim_scope": "post-hoc development diagnostic",
+  "frozen_before_candidate_packet_feature_access": true,
+  "known_calibration": "/home/birkenwald/data/SEU-WXY/WXY-SEU/TrafficClassifier/Projects/unknown_traffic_project/stage40_ustc_cic_open_set/unknown_slowhttptest/detection/calibration.json",
+  "known_calibration_sha256": "ac686f5d225fd5eeb031c8943c55778282cc10bccba26da310e44a67d7376650",
+  "known_classes": [
+    "BENIGN",
+    "PortScan"
+  ],
+  "known_model_source": "/home/birkenwald/data/SEU-WXY/WXY-SEU/TrafficClassifier/Projects/unknown_traffic_project/stage40_ustc_cic_open_set/unknown_slowhttptest/runs/ustc/A-2",
+  "known_role_manifest_sha256": "6b6d78e3abd34eab2a3a2797d1fe9376b2a9a364078fa8ce677e2a6a876dd99a",
+  "known_roles": "/home/birkenwald/data/SEU-WXY/WXY-SEU/TrafficClassifier/Projects/unknown_traffic_project/stage40_ustc_cic_open_set/unknown_slowhttptest_roles.csv",
+  "known_test_sample_scores": "/home/birkenwald/data/SEU-WXY/WXY-SEU/TrafficClassifier/Projects/unknown_traffic_project/stage40_ustc_cic_open_set/unknown_slowhttptest/detection/sample_scores.csv",
+  "known_test_sample_scores_sha256": "99636e7817dca07ef75b1b48c7f71855cccc61a3ab5f50f4364350bfe09a80b4",
+  "methods": [
+    "msp",
+    "energy",
+    "centroid",
+    "des_v1"
+  ],
+  "prior_unknown_test_overlap": 0,
+  "reused_stage42s_code_sha256": {
+    "build_unknown_cache.py": "669d999018bbb51d66fb17ac75c65230768d2e079860f3e330c277d4865e1943",
+    "evaluate_candidate.py": "5d7ba682fc039d40f7f12a0b080c1646e46a802cf7ff23b1c9bf76985003eed9",
+    "stage42s_common.py": "523ced51373dbeee7874f79a4d4ed52eea81a1c46a5417601b8e422a4806f4c1",
+    "verify_candidate.py": "ab2e728ecb940bd47b71efbe727315bf36a1c809a7ebcff451b9c8d1d8aed386"
+  },
+  "source_parquet": "/home/birkenwald/data/SEU-WXY/WXY-SEU/TrafficClassifier/Dataset/CIC-IDS-2017/CIC-IDS-2017(whole)/outputs/cicids2017_pcap_label_mapping/flows/Thursday_flows.parquet",
+  "source_parquet_sha256": "79eff12da8eefc28df1eb0b42ba29bbca9ae8aaeafbd4962fc86a016dca5a343",
+  "source_pcap": "/home/birkenwald/data/SEU-WXY/WXY-SEU/TrafficClassifier/Dataset/CIC-IDS-2017/CIC-IDS-2017(whole)/PCAPs/Thursday-WorkingHours.pcap",
+  "source_pcap_md5_sidecar": "/home/birkenwald/data/SEU-WXY/WXY-SEU/TrafficClassifier/Dataset/CIC-IDS-2017/CIC-IDS-2017(whole)/PCAPs/Thursday-WorkingHours.md5",
+  "source_pcap_md5_sidecar_sha256": "d3e506c28fd5992d8ef04c5552f0d705f4a2bfe33c7264a37b248b69e65b5a9c",
+  "source_pcap_size_bytes": 8302500180,
+  "status": "PASS",
+  "threshold_rule": "reuse Stage40 BENIGN+PortScan Known-Validation P95",
+  "unit": "unknown_web_bruteforce",
+  "unknown_classes": [
+    "Web Attack - Brute Force"
+  ],
+  "unknown_fitting_count": 0,
+  "unknown_groups": 10,
+  "unknown_selection": "all MATCHED flows for the prelisted class; no feature/outcome filtering",
+  "unknown_test": 1364,
+  "unknown_threshold_calibration_count": 0
+}

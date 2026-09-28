@@ -1,0 +1,516 @@
+{
+  "status": "PASS",
+  "frozen_at_utc": "2026-09-28T09:41:20.545277+00:00",
+  "claim_scope": "post-hoc diagnostic",
+  "dataset": "CIC-IDS-2017",
+  "known_classes": [
+    "BENIGN",
+    "PortScan"
+  ],
+  "known_test_unique": 2272,
+  "unknown_classes": [
+    "DoS slowloris",
+    "DoS GoldenEye",
+    "DoS Hulk",
+    "DDoS",
+    "Bot",
+    "FTP-Patator",
+    "SSH-Patator",
+    "Web Attack - Brute Force",
+    "Web Attack - XSS",
+    "DoS Slowhttptest"
+  ],
+  "unknown_pool_counts": {
+    "DoS slowloris": 5709,
+    "DoS GoldenEye": 7441,
+    "DoS Hulk": 155168,
+    "DDoS": 76613,
+    "Bot": 1228,
+    "FTP-Patator": 3985,
+    "SSH-Patator": 2987,
+    "Web Attack - Brute Force": 1364,
+    "Web Attack - XSS": 629,
+    "DoS Slowhttptest": 5096
+  },
+  "methods": [
+    "msp",
+    "energy",
+    "centroid",
+    "des_v1"
+  ],
+  "threshold_source": "unchanged Stage40 Known Validation P95",
+  "thresholds": {
+    "msp": 3.907900424404698e-05,
+    "energy": -4.9543356686655535,
+    "centroid": 0.6127115000943677,
+    "des_v1": 3.7212303254514656
+  },
+  "total_samples_per_mixture": 2000,
+  "resampling_seeds": [
+    2022,
+    2023,
+    2024,
+    2025,
+    2026,
+    2027,
+    2028,
+    2029,
+    2030,
+    2031,
+    2032,
+    2033,
+    2034,
+    2035,
+    2036,
+    2037,
+    2038,
+    2039,
+    2040,
+    2041
+  ],
+  "scenarios": [
+    {
+      "experiment": "prevalence",
+      "setting": "known9_unknown1",
+      "ratio": "9:1",
+      "known_quotas": {
+        "BENIGN": 900,
+        "PortScan": 900
+      },
+      "unknown_quotas": {
+        "DoS slowloris": 20,
+        "DoS GoldenEye": 20,
+        "DoS Hulk": 20,
+        "DDoS": 20,
+        "Bot": 20,
+        "FTP-Patator": 20,
+        "SSH-Patator": 20,
+        "Web Attack - Brute Force": 20,
+        "Web Attack - XSS": 20,
+        "DoS Slowhttptest": 20
+      },
+      "primary": true
+    },
+    {
+      "experiment": "prevalence",
+      "setting": "known3_unknown1",
+      "ratio": "3:1",
+      "known_quotas": {
+        "BENIGN": 750,
+        "PortScan": 750
+      },
+      "unknown_quotas": {
+        "DoS slowloris": 50,
+        "DoS GoldenEye": 50,
+        "DoS Hulk": 50,
+        "DDoS": 50,
+        "Bot": 50,
+        "FTP-Patator": 50,
+        "SSH-Patator": 50,
+        "Web Attack - Brute Force": 50,
+        "Web Attack - XSS": 50,
+        "DoS Slowhttptest": 50
+      },
+      "primary": true
+    },
+    {
+      "experiment": "prevalence",
+      "setting": "known1_unknown1",
+      "ratio": "1:1",
+      "known_quotas": {
+        "BENIGN": 500,
+        "PortScan": 500
+      },
+      "unknown_quotas": {
+        "DoS slowloris": 100,
+        "DoS GoldenEye": 100,
+        "DoS Hulk": 100,
+        "DDoS": 100,
+        "Bot": 100,
+        "FTP-Patator": 100,
+        "SSH-Patator": 100,
+        "Web Attack - Brute Force": 100,
+        "Web Attack - XSS": 100,
+        "DoS Slowhttptest": 100
+      },
+      "primary": true
+    },
+    {
+      "experiment": "prevalence",
+      "setting": "known1_unknown3",
+      "ratio": "1:3",
+      "known_quotas": {
+        "BENIGN": 250,
+        "PortScan": 250
+      },
+      "unknown_quotas": {
+        "DoS slowloris": 150,
+        "DoS GoldenEye": 150,
+        "DoS Hulk": 150,
+        "DDoS": 150,
+        "Bot": 150,
+        "FTP-Patator": 150,
+        "SSH-Patator": 150,
+        "Web Attack - Brute Force": 150,
+        "Web Attack - XSS": 150,
+        "DoS Slowhttptest": 150
+      },
+      "primary": true
+    },
+    {
+      "experiment": "prevalence",
+      "setting": "known1_unknown9",
+      "ratio": "1:9",
+      "known_quotas": {
+        "BENIGN": 100,
+        "PortScan": 100
+      },
+      "unknown_quotas": {
+        "DoS slowloris": 180,
+        "DoS GoldenEye": 180,
+        "DoS Hulk": 180,
+        "DDoS": 180,
+        "Bot": 180,
+        "FTP-Patator": 180,
+        "SSH-Patator": 180,
+        "Web Attack - Brute Force": 180,
+        "Web Attack - XSS": 180,
+        "DoS Slowhttptest": 180
+      },
+      "primary": true
+    },
+    {
+      "experiment": "composition",
+      "setting": "all_balanced",
+      "ratio": "1:1",
+      "known_quotas": {
+        "BENIGN": 500,
+        "PortScan": 500
+      },
+      "unknown_quotas": {
+        "DoS slowloris": 100,
+        "DoS GoldenEye": 100,
+        "DoS Hulk": 100,
+        "DDoS": 100,
+        "Bot": 100,
+        "FTP-Patator": 100,
+        "SSH-Patator": 100,
+        "Web Attack - Brute Force": 100,
+        "Web Attack - XSS": 100,
+        "DoS Slowhttptest": 100
+      },
+      "primary": true
+    },
+    {
+      "experiment": "composition",
+      "setting": "authentication_web",
+      "ratio": "1:1",
+      "known_quotas": {
+        "BENIGN": 500,
+        "PortScan": 500
+      },
+      "unknown_quotas": {
+        "FTP-Patator": 250,
+        "SSH-Patator": 250,
+        "Web Attack - Brute Force": 250,
+        "Web Attack - XSS": 250
+      },
+      "primary": false
+    },
+    {
+      "experiment": "composition",
+      "setting": "dos",
+      "ratio": "1:1",
+      "known_quotas": {
+        "BENIGN": 500,
+        "PortScan": 500
+      },
+      "unknown_quotas": {
+        "DoS slowloris": 200,
+        "DoS GoldenEye": 200,
+        "DoS Hulk": 200,
+        "DDoS": 200,
+        "DoS Slowhttptest": 200
+      },
+      "primary": false
+    },
+    {
+      "experiment": "composition",
+      "setting": "previously_easy",
+      "ratio": "1:1",
+      "known_quotas": {
+        "BENIGN": 500,
+        "PortScan": 500
+      },
+      "unknown_quotas": {
+        "DoS slowloris": 125,
+        "DoS GoldenEye": 125,
+        "DoS Hulk": 125,
+        "FTP-Patator": 125,
+        "SSH-Patator": 125,
+        "Web Attack - Brute Force": 125,
+        "Web Attack - XSS": 125,
+        "DoS Slowhttptest": 125
+      },
+      "primary": false
+    },
+    {
+      "experiment": "composition",
+      "setting": "previously_hard",
+      "ratio": "1:1",
+      "known_quotas": {
+        "BENIGN": 500,
+        "PortScan": 500
+      },
+      "unknown_quotas": {
+        "Bot": 500,
+        "DDoS": 500
+      },
+      "primary": true
+    },
+    {
+      "experiment": "composition",
+      "setting": "easy_hard_mixed",
+      "ratio": "1:1",
+      "known_quotas": {
+        "BENIGN": 500,
+        "PortScan": 500
+      },
+      "unknown_quotas": {
+        "DoS slowloris": 63,
+        "DoS GoldenEye": 63,
+        "DoS Hulk": 63,
+        "FTP-Patator": 62,
+        "SSH-Patator": 62,
+        "Web Attack - Brute Force": 62,
+        "Web Attack - XSS": 62,
+        "DoS Slowhttptest": 63,
+        "Bot": 250,
+        "DDoS": 250
+      },
+      "primary": true
+    },
+    {
+      "experiment": "composition",
+      "setting": "natural_frequency",
+      "ratio": "1:1",
+      "known_quotas": {
+        "BENIGN": 500,
+        "PortScan": 500
+      },
+      "unknown_quotas": {
+        "DoS slowloris": 22,
+        "DoS GoldenEye": 29,
+        "DoS Hulk": 596,
+        "DDoS": 294,
+        "Bot": 5,
+        "FTP-Patator": 15,
+        "SSH-Patator": 12,
+        "Web Attack - Brute Force": 5,
+        "Web Attack - XSS": 2,
+        "DoS Slowhttptest": 20
+      },
+      "primary": false
+    },
+    {
+      "experiment": "known_composition",
+      "setting": "benign1_portscan1",
+      "ratio": "1:1",
+      "known_quotas": {
+        "BENIGN": 500,
+        "PortScan": 500
+      },
+      "unknown_quotas": {
+        "DoS slowloris": 100,
+        "DoS GoldenEye": 100,
+        "DoS Hulk": 100,
+        "DDoS": 100,
+        "Bot": 100,
+        "FTP-Patator": 100,
+        "SSH-Patator": 100,
+        "Web Attack - Brute Force": 100,
+        "Web Attack - XSS": 100,
+        "DoS Slowhttptest": 100
+      },
+      "primary": true
+    },
+    {
+      "experiment": "known_composition",
+      "setting": "benign3_portscan1",
+      "ratio": "1:1",
+      "known_quotas": {
+        "BENIGN": 750,
+        "PortScan": 250
+      },
+      "unknown_quotas": {
+        "DoS slowloris": 100,
+        "DoS GoldenEye": 100,
+        "DoS Hulk": 100,
+        "DDoS": 100,
+        "Bot": 100,
+        "FTP-Patator": 100,
+        "SSH-Patator": 100,
+        "Web Attack - Brute Force": 100,
+        "Web Attack - XSS": 100,
+        "DoS Slowhttptest": 100
+      },
+      "primary": true
+    },
+    {
+      "experiment": "known_composition",
+      "setting": "benign1_portscan3",
+      "ratio": "1:1",
+      "known_quotas": {
+        "BENIGN": 250,
+        "PortScan": 750
+      },
+      "unknown_quotas": {
+        "DoS slowloris": 100,
+        "DoS GoldenEye": 100,
+        "DoS Hulk": 100,
+        "DDoS": 100,
+        "Bot": 100,
+        "FTP-Patator": 100,
+        "SSH-Patator": 100,
+        "Web Attack - Brute Force": 100,
+        "Web Attack - XSS": 100,
+        "DoS Slowhttptest": 100
+      },
+      "primary": true
+    }
+  ],
+  "source_files": [
+    {
+      "source_key": "slowloris",
+      "unknown_class": "DoS slowloris",
+      "score_path": "/home/birkenwald/data/SEU-WXY/WXY-SEU/TrafficClassifier/Projects/unknown_traffic_project/stage42s_cic_favorable_open_set/unknown_slowloris/detection/sample_scores.csv",
+      "score_sha256": "97612010841301cd205308a14d9baa2010aa4d682def00548ca7aaa981edb691",
+      "result_path": "/home/birkenwald/data/SEU-WXY/WXY-SEU/TrafficClassifier/Projects/unknown_traffic_project/stage42s_cic_favorable_open_set/unknown_slowloris/detection/open_set_results.csv",
+      "result_sha256": "fae284a8504359551056110d3859cb6fccb8de03be963cb1fc3ef127e443456c",
+      "known_rows": 2272,
+      "unknown_rows": 5709,
+      "total_rows": 7981,
+      "independent_verification_path": "/home/birkenwald/data/SEU-WXY/WXY-SEU/TrafficClassifier/Projects/unknown_traffic_project/stage42s_cic_favorable_open_set/unknown_slowloris/detection/independent_verification.json"
+    },
+    {
+      "source_key": "goldeneye",
+      "unknown_class": "DoS GoldenEye",
+      "score_path": "/home/birkenwald/data/SEU-WXY/WXY-SEU/TrafficClassifier/Projects/unknown_traffic_project/stage42t_cic_goldeneye_open_set/unknown_goldeneye/detection/sample_scores.csv",
+      "score_sha256": "61d44c2c2decc367e8b09d4615c906f6de3ded0dc5be9e7b03e1a1c8ff58c31d",
+      "result_path": "/home/birkenwald/data/SEU-WXY/WXY-SEU/TrafficClassifier/Projects/unknown_traffic_project/stage42t_cic_goldeneye_open_set/unknown_goldeneye/detection/open_set_results.csv",
+      "result_sha256": "a5b0b1144b4bdb726d031631aa1e810b54188d4c6d4d444b4f898eec8941da44",
+      "known_rows": 2272,
+      "unknown_rows": 7441,
+      "total_rows": 9713,
+      "independent_verification_path": "/home/birkenwald/data/SEU-WXY/WXY-SEU/TrafficClassifier/Projects/unknown_traffic_project/stage42t_cic_goldeneye_open_set/unknown_goldeneye/detection/independent_verification.json"
+    },
+    {
+      "source_key": "hulk",
+      "unknown_class": "DoS Hulk",
+      "score_path": "/home/birkenwald/data/SEU-WXY/WXY-SEU/TrafficClassifier/Projects/unknown_traffic_project/stage42u_cic_hulk_open_set/unknown_hulk/detection/sample_scores.csv",
+      "score_sha256": "37bab6b20c60acb0697fe8852fb440995ecbd25a6df6cd002b153f2ccf83fb42",
+      "result_path": "/home/birkenwald/data/SEU-WXY/WXY-SEU/TrafficClassifier/Projects/unknown_traffic_project/stage42u_cic_hulk_open_set/unknown_hulk/detection/open_set_results.csv",
+      "result_sha256": "9df2221f85d518607842d73e5b6af2206a95c0f6ebaaeda82ee76db65d0009df",
+      "known_rows": 2272,
+      "unknown_rows": 155168,
+      "total_rows": 157440,
+      "independent_verification_path": "/home/birkenwald/data/SEU-WXY/WXY-SEU/TrafficClassifier/Projects/unknown_traffic_project/stage42u_cic_hulk_open_set/unknown_hulk/detection/independent_verification.json"
+    },
+    {
+      "source_key": "ddos",
+      "unknown_class": "DDoS",
+      "score_path": "/home/birkenwald/data/SEU-WXY/WXY-SEU/TrafficClassifier/Projects/unknown_traffic_project/stage42v_cic_ddos_open_set/unknown_ddos/detection/sample_scores.csv",
+      "score_sha256": "317f77a1f64bbb7ea820fcda8fe0718b98695435d1206b22aff899e2ed5a2a13",
+      "result_path": "/home/birkenwald/data/SEU-WXY/WXY-SEU/TrafficClassifier/Projects/unknown_traffic_project/stage42v_cic_ddos_open_set/unknown_ddos/detection/open_set_results.csv",
+      "result_sha256": "7f46610170361bc1a5dabddf8cd73266ff1a3095e486c472a66772b7a347fc84",
+      "known_rows": 2272,
+      "unknown_rows": 76613,
+      "total_rows": 78885,
+      "independent_verification_path": "/home/birkenwald/data/SEU-WXY/WXY-SEU/TrafficClassifier/Projects/unknown_traffic_project/stage42v_cic_ddos_open_set/unknown_ddos/detection/independent_verification.json"
+    },
+    {
+      "source_key": "bot",
+      "unknown_class": "Bot",
+      "score_path": "/home/birkenwald/data/SEU-WXY/WXY-SEU/TrafficClassifier/Projects/unknown_traffic_project/stage42w_cic_bot_open_set/unknown_bot/detection/sample_scores.csv",
+      "score_sha256": "6fae1d37f0f5de521e2bf26c85ff062c1223c2edd0bf3f4b8ae24832f2aa820f",
+      "result_path": "/home/birkenwald/data/SEU-WXY/WXY-SEU/TrafficClassifier/Projects/unknown_traffic_project/stage42w_cic_bot_open_set/unknown_bot/detection/open_set_results.csv",
+      "result_sha256": "593fc5f86db1cca646603f239ef7047bfddd3213e015b99cea25e30398f8d92b",
+      "known_rows": 2272,
+      "unknown_rows": 1228,
+      "total_rows": 3500,
+      "independent_verification_path": "/home/birkenwald/data/SEU-WXY/WXY-SEU/TrafficClassifier/Projects/unknown_traffic_project/stage42w_cic_bot_open_set/unknown_bot/detection/independent_verification.json"
+    },
+    {
+      "source_key": "ftp_patator",
+      "unknown_class": "FTP-Patator",
+      "score_path": "/home/birkenwald/data/SEU-WXY/WXY-SEU/TrafficClassifier/Projects/unknown_traffic_project/stage42x_cic_ftp_patator_open_set/unknown_ftp_patator/detection/sample_scores.csv",
+      "score_sha256": "4fbfb7fe17b9cbd501a6ffcae57af3bd83e7b4bf0b2760adca779c6bd024cb14",
+      "result_path": "/home/birkenwald/data/SEU-WXY/WXY-SEU/TrafficClassifier/Projects/unknown_traffic_project/stage42x_cic_ftp_patator_open_set/unknown_ftp_patator/detection/open_set_results.csv",
+      "result_sha256": "048f93de2a58c723542e8b2a0732f9fb9420955f046c48d70e55fa1abee0e7a8",
+      "known_rows": 2272,
+      "unknown_rows": 3985,
+      "total_rows": 6257,
+      "independent_verification_path": "/home/birkenwald/data/SEU-WXY/WXY-SEU/TrafficClassifier/Projects/unknown_traffic_project/stage42x_cic_ftp_patator_open_set/unknown_ftp_patator/detection/independent_verification.json"
+    },
+    {
+      "source_key": "ssh_patator",
+      "unknown_class": "SSH-Patator",
+      "score_path": "/home/birkenwald/data/SEU-WXY/WXY-SEU/TrafficClassifier/Projects/unknown_traffic_project/stage42y_cic_remaining_four_open_set/ssh_patator/unknown_ssh_patator/detection/sample_scores.csv",
+      "score_sha256": "2f2da26045294941b949cedd100e41f0619c4d4b0f06a9b5968980f6758492d3",
+      "result_path": "/home/birkenwald/data/SEU-WXY/WXY-SEU/TrafficClassifier/Projects/unknown_traffic_project/stage42y_cic_remaining_four_open_set/ssh_patator/unknown_ssh_patator/detection/open_set_results.csv",
+      "result_sha256": "0fa7815f194064b284441f1cf11efe3b78f9467db7f58b9086c4604198417cfe",
+      "known_rows": 2272,
+      "unknown_rows": 2987,
+      "total_rows": 5259,
+      "independent_verification_path": "/home/birkenwald/data/SEU-WXY/WXY-SEU/TrafficClassifier/Projects/unknown_traffic_project/stage42y_cic_remaining_four_open_set/ssh_patator/unknown_ssh_patator/detection/independent_verification.json"
+    },
+    {
+      "source_key": "web_bruteforce",
+      "unknown_class": "Web Attack - Brute Force",
+      "score_path": "/home/birkenwald/data/SEU-WXY/WXY-SEU/TrafficClassifier/Projects/unknown_traffic_project/stage42y_cic_remaining_four_open_set/web_bruteforce/unknown_web_bruteforce/detection/sample_scores.csv",
+      "score_sha256": "9966a92d0cfe26b1cd35471983c8832284de55f4dae0288c69b1bdd721de44b5",
+      "result_path": "/home/birkenwald/data/SEU-WXY/WXY-SEU/TrafficClassifier/Projects/unknown_traffic_project/stage42y_cic_remaining_four_open_set/web_bruteforce/unknown_web_bruteforce/detection/open_set_results.csv",
+      "result_sha256": "80b7e7bf95c427a11b20f0342b0c0e725fc4025941402b1ea05318554fa339e7",
+      "known_rows": 2272,
+      "unknown_rows": 1364,
+      "total_rows": 3636,
+      "independent_verification_path": "/home/birkenwald/data/SEU-WXY/WXY-SEU/TrafficClassifier/Projects/unknown_traffic_project/stage42y_cic_remaining_four_open_set/web_bruteforce/unknown_web_bruteforce/detection/independent_verification.json"
+    },
+    {
+      "source_key": "web_xss",
+      "unknown_class": "Web Attack - XSS",
+      "score_path": "/home/birkenwald/data/SEU-WXY/WXY-SEU/TrafficClassifier/Projects/unknown_traffic_project/stage42y_cic_remaining_four_open_set/web_xss/unknown_web_xss/detection/sample_scores.csv",
+      "score_sha256": "c36c878a97900939bbc76c5d1e5b56dde6688c891cb662558691ac0ef7e91384",
+      "result_path": "/home/birkenwald/data/SEU-WXY/WXY-SEU/TrafficClassifier/Projects/unknown_traffic_project/stage42y_cic_remaining_four_open_set/web_xss/unknown_web_xss/detection/open_set_results.csv",
+      "result_sha256": "84dd4bf899d2a55bcd8aeb507f3b7be71424f7fe1ef3ca2482e1d37eba9fdcb8",
+      "known_rows": 2272,
+      "unknown_rows": 629,
+      "total_rows": 2901,
+      "independent_verification_path": "/home/birkenwald/data/SEU-WXY/WXY-SEU/TrafficClassifier/Projects/unknown_traffic_project/stage42y_cic_remaining_four_open_set/web_xss/unknown_web_xss/detection/independent_verification.json"
+    },
+    {
+      "source_key": "slowhttptest",
+      "unknown_class": "DoS Slowhttptest",
+      "score_path": "/home/birkenwald/data/SEU-WXY/WXY-SEU/TrafficClassifier/Projects/unknown_traffic_project/stage42y_cic_remaining_four_open_set/slowhttptest_full/unknown_slowhttptest_full/detection/sample_scores.csv",
+      "score_sha256": "9f6f778ac3cf39737a1a1f9532bdbae6f57cf6de39356867391d99be890a55ab",
+      "result_path": "/home/birkenwald/data/SEU-WXY/WXY-SEU/TrafficClassifier/Projects/unknown_traffic_project/stage42y_cic_remaining_four_open_set/slowhttptest_full/unknown_slowhttptest_full/detection/open_set_results.csv",
+      "result_sha256": "8c5627ea9d877bd51522238c0fc9fe0ce94dcf1b795b1e40b7b701086770018f",
+      "known_rows": 2272,
+      "unknown_rows": 5096,
+      "total_rows": 7368,
+      "independent_verification_path": "/home/birkenwald/data/SEU-WXY/WXY-SEU/TrafficClassifier/Projects/unknown_traffic_project/stage42y_cic_remaining_four_open_set/slowhttptest_full/unknown_slowhttptest_full/detection/independent_verification.json"
+    }
+  ],
+  "runner_sha256": "d9349bc5a63c7b14b50ae9d7bcc8a8e03e3a86c7aa868ba694d481e18bfc53d7",
+  "verifier_sha256": "ca2390f168a9a8d985227b4f04c36937f8684e4c771b25e109e363289025e48c",
+  "unknown_fitting_count": 0,
+  "test_fitting_count": 0,
+  "encoder_training_count": 0,
+  "pcap_reads": 0,
+  "limitations": [
+    "All candidate classes and their scores were already exposed before Stage43.",
+    "CIC attack day, endpoint and capture confounding remain.",
+    "DoS Slowhttptest contains 132 flows previously used in Stage40 Unknown Test.",
+    "Resampling quantiles measure mixture-sampling variability, not training uncertainty."
+  ]
+}

@@ -1,0 +1,21 @@
+{
+  "candidate_manifest_unchanged": true,
+  "known_test": 2272,
+  "methods": [
+    "msp",
+    "energy",
+    "centroid",
+    "des_v1"
+  ],
+  "metrics_replayed": 8,
+  "sample_rows": 7981,
+  "status": "PASS",
+  "test_fit_count": 0,
+  "unit": "unknown_slowloris",
+  "unknown_fit_count": 0,
+  "unknown_test": 5709,
+  "views": [
+    "natural",
+    "balanced_1to1"
+  ]
+}

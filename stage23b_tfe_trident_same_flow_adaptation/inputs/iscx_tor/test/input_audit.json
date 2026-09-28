@@ -1,0 +1,380 @@
+{
+  "status": "PASS",
+  "dataset": "iscx_tor",
+  "phase": "test",
+  "flows": 1117,
+  "roles": {
+    "known_test": 1117
+  },
+  "stage20_manifest_sha256": "6404d496f50a6f7f6f397d125ad0cd653c9df152d8db1b9ed2ad2310967950bb",
+  "packet_references": 3804,
+  "packet_count_distribution": {
+    "4": 82,
+    "1": 522,
+    "8": 283,
+    "2": 147,
+    "6": 33,
+    "3": 26,
+    "5": 24
+  },
+  "protocol_packet_counts": {
+    "protocol_17": 652,
+    "protocol_6": 3152,
+    "empty_payload": 1515
+  },
+  "trident_feature_names": [
+    "protocol",
+    "duration",
+    "fwd_packets",
+    "fwd_bytes",
+    "fwd_payload_bytes",
+    "fwd_packet_len_min",
+    "fwd_packet_len_max",
+    "fwd_packet_len_mean",
+    "fwd_packet_len_std",
+    "fwd_iat_min",
+    "fwd_iat_max",
+    "fwd_iat_mean",
+    "fwd_iat_std",
+    "fwd_ttl_min",
+    "fwd_ttl_max",
+    "fwd_ttl_mean",
+    "fwd_ttl_std",
+    "fwd_tcp_window_min",
+    "fwd_tcp_window_max",
+    "fwd_tcp_window_mean",
+    "fwd_tcp_window_std",
+    "fwd_tcp_fin_count",
+    "fwd_tcp_syn_count",
+    "fwd_tcp_rst_count",
+    "fwd_tcp_psh_count",
+    "fwd_tcp_ack_count",
+    "fwd_tcp_urg_count",
+    "fwd_tcp_ece_count",
+    "fwd_tcp_cwr_count",
+    "fwd_fragment_count",
+    "bwd_packets",
+    "bwd_bytes",
+    "bwd_payload_bytes",
+    "bwd_packet_len_min",
+    "bwd_packet_len_max",
+    "bwd_packet_len_mean",
+    "bwd_packet_len_std",
+    "bwd_iat_min",
+    "bwd_iat_max",
+    "bwd_iat_mean",
+    "bwd_iat_std",
+    "bwd_ttl_min",
+    "bwd_ttl_max",
+    "bwd_ttl_mean",
+    "bwd_ttl_std",
+    "bwd_tcp_window_min",
+    "bwd_tcp_window_max",
+    "bwd_tcp_window_mean",
+    "bwd_tcp_window_std",
+    "bwd_tcp_fin_count",
+    "bwd_tcp_syn_count",
+    "bwd_tcp_rst_count",
+    "bwd_tcp_psh_count",
+    "bwd_tcp_ack_count",
+    "bwd_tcp_urg_count",
+    "bwd_tcp_ece_count",
+    "bwd_tcp_cwr_count",
+    "bwd_fragment_count",
+    "bidir_packets",
+    "bidir_bytes",
+    "bidir_payload_bytes",
+    "bidir_packet_len_min",
+    "bidir_packet_len_max",
+    "bidir_packet_len_mean",
+    "bidir_packet_len_std",
+    "bidir_iat_min",
+    "bidir_iat_max",
+    "bidir_iat_mean",
+    "bidir_iat_std",
+    "bidir_ttl_min",
+    "bidir_ttl_max",
+    "bidir_ttl_mean",
+    "bidir_ttl_std",
+    "bidir_tcp_window_min",
+    "bidir_tcp_window_max",
+    "bidir_tcp_window_mean",
+    "bidir_tcp_window_std",
+    "bidir_tcp_fin_count",
+    "bidir_tcp_syn_count",
+    "bidir_tcp_rst_count",
+    "bidir_tcp_psh_count",
+    "bidir_tcp_ack_count",
+    "bidir_tcp_urg_count",
+    "bidir_tcp_ece_count",
+    "bidir_tcp_cwr_count",
+    "bidir_fragment_count"
+  ],
+  "provenance_hashes": {
+    "/home/birkenwald/data/SEU-WXY/WXY-SEU/TrafficClassifier/Projects/unknown_traffic_project/stage12_dual_external_validation/artifacts/iscx_tor/preprocessing_pool/raw_prepared_parallel_v2/provenance_test.jsonl": "6fc1e0730ba2028b4b88d381f2e81c51cb9536718c60c1a5edbb48f1ec290693",
+    "/home/birkenwald/data/SEU-WXY/WXY-SEU/TrafficClassifier/Projects/unknown_traffic_project/stage12_dual_external_validation/artifacts/iscx_tor/preprocessing_pool/raw_prepared_parallel_v2/provenance_train.jsonl": "08ed70932bd4d2b3712766cbe30dcfadc1eab5d77326892cbb18d6c0dc59d8de",
+    "/home/birkenwald/data/SEU-WXY/WXY-SEU/TrafficClassifier/Projects/unknown_traffic_project/stage12_dual_external_validation/artifacts/iscx_tor/preprocessing_pool/raw_prepared_parallel_v2/provenance_validation.jsonl": "74a6504b6a89dd06d0a878c82a6578a24e9115dc1ce35b44f1731003a502c713"
+  },
+  "capture_audit": [
+    {
+      "pcap": "/home/birkenwald/data/SEU-WXY/WXY-SEU/TrafficClassifier/Dataset/ISCXTor2016/ISCXTor2016（whole）/raw/pcap/NonTor/Email_IMAP_filetransfer.pcap",
+      "scanned_packets": 63665,
+      "selected_packet_numbers": 82
+    },
+    {
+      "pcap": "/home/birkenwald/data/SEU-WXY/WXY-SEU/TrafficClassifier/Dataset/ISCXTor2016/ISCXTor2016（whole）/raw/pcap/NonTor/FTP_filetransfer.pcap",
+      "scanned_packets": 1708140,
+      "selected_packet_numbers": 788
+    },
+    {
+      "pcap": "/home/birkenwald/data/SEU-WXY/WXY-SEU/TrafficClassifier/Dataset/ISCXTor2016/ISCXTor2016（whole）/raw/pcap/NonTor/Facebook_Voice_Workstation.pcap",
+      "scanned_packets": 253659,
+      "selected_packet_numbers": 58
+    },
+    {
+      "pcap": "/home/birkenwald/data/SEU-WXY/WXY-SEU/TrafficClassifier/Dataset/ISCXTor2016/ISCXTor2016（whole）/raw/pcap/NonTor/Hangout_Audio.pcap",
+      "scanned_packets": 231537,
+      "selected_packet_numbers": 33
+    },
+    {
+      "pcap": "/home/birkenwald/data/SEU-WXY/WXY-SEU/TrafficClassifier/Dataset/ISCXTor2016/ISCXTor2016（whole）/raw/pcap/NonTor/Hangouts_voice_Workstation.pcap",
+      "scanned_packets": 261864,
+      "selected_packet_numbers": 91
+    },
+    {
+      "pcap": "/home/birkenwald/data/SEU-WXY/WXY-SEU/TrafficClassifier/Dataset/ISCXTor2016/ISCXTor2016（whole）/raw/pcap/NonTor/ICQ_Chat.pcap",
+      "scanned_packets": 179,
+      "selected_packet_numbers": 12
+    },
+    {
+      "pcap": "/home/birkenwald/data/SEU-WXY/WXY-SEU/TrafficClassifier/Dataset/ISCXTor2016/ISCXTor2016（whole）/raw/pcap/NonTor/POP_filetransfer.pcap",
+      "scanned_packets": 58901,
+      "selected_packet_numbers": 54
+    },
+    {
+      "pcap": "/home/birkenwald/data/SEU-WXY/WXY-SEU/TrafficClassifier/Dataset/ISCXTor2016/ISCXTor2016（whole）/raw/pcap/NonTor/SFTP_filetransfer.pcap",
+      "scanned_packets": 144366,
+      "selected_packet_numbers": 1
+    },
+    {
+      "pcap": "/home/birkenwald/data/SEU-WXY/WXY-SEU/TrafficClassifier/Dataset/ISCXTor2016/ISCXTor2016（whole）/raw/pcap/NonTor/Skype_Audio.pcap",
+      "scanned_packets": 194932,
+      "selected_packet_numbers": 261
+    },
+    {
+      "pcap": "/home/birkenwald/data/SEU-WXY/WXY-SEU/TrafficClassifier/Dataset/ISCXTor2016/ISCXTor2016（whole）/raw/pcap/NonTor/Skype_Voice_Workstation.pcap",
+      "scanned_packets": 194268,
+      "selected_packet_numbers": 88
+    },
+    {
+      "pcap": "/home/birkenwald/data/SEU-WXY/WXY-SEU/TrafficClassifier/Dataset/ISCXTor2016/ISCXTor2016（whole）/raw/pcap/NonTor/Vimeo_Workstation.pcap",
+      "scanned_packets": 984208,
+      "selected_packet_numbers": 169
+    },
+    {
+      "pcap": "/home/birkenwald/data/SEU-WXY/WXY-SEU/TrafficClassifier/Dataset/ISCXTor2016/ISCXTor2016（whole）/raw/pcap/NonTor/Workstation_Thunderbird_POP.pcap",
+      "scanned_packets": 110828,
+      "selected_packet_numbers": 34
+    },
+    {
+      "pcap": "/home/birkenwald/data/SEU-WXY/WXY-SEU/TrafficClassifier/Dataset/ISCXTor2016/ISCXTor2016（whole）/raw/pcap/NonTor/Youtube_Flash_Workstation.pcap",
+      "scanned_packets": 494686,
+      "selected_packet_numbers": 115
+    },
+    {
+      "pcap": "/home/birkenwald/data/SEU-WXY/WXY-SEU/TrafficClassifier/Dataset/ISCXTor2016/ISCXTor2016（whole）/raw/pcap/NonTor/Youtube_HTML5_Workstation.pcap",
+      "scanned_packets": 262733,
+      "selected_packet_numbers": 103
+    },
+    {
+      "pcap": "/home/birkenwald/data/SEU-WXY/WXY-SEU/TrafficClassifier/Dataset/ISCXTor2016/ISCXTor2016（whole）/raw/pcap/NonTor/browsing.pcap",
+      "scanned_packets": 219176,
+      "selected_packet_numbers": 151
+    },
+    {
+      "pcap": "/home/birkenwald/data/SEU-WXY/WXY-SEU/TrafficClassifier/Dataset/ISCXTor2016/ISCXTor2016（whole）/raw/pcap/NonTor/browsing2-1.pcap",
+      "scanned_packets": 218322,
+      "selected_packet_numbers": 206
+    },
+    {
+      "pcap": "/home/birkenwald/data/SEU-WXY/WXY-SEU/TrafficClassifier/Dataset/ISCXTor2016/ISCXTor2016（whole）/raw/pcap/NonTor/browsing2-2.pcap",
+      "scanned_packets": 50950,
+      "selected_packet_numbers": 37
+    },
+    {
+      "pcap": "/home/birkenwald/data/SEU-WXY/WXY-SEU/TrafficClassifier/Dataset/ISCXTor2016/ISCXTor2016（whole）/raw/pcap/NonTor/browsing2.pcap",
+      "scanned_packets": 52685,
+      "selected_packet_numbers": 75
+    },
+    {
+      "pcap": "/home/birkenwald/data/SEU-WXY/WXY-SEU/TrafficClassifier/Dataset/ISCXTor2016/ISCXTor2016（whole）/raw/pcap/NonTor/browsing_ara.pcap",
+      "scanned_packets": 94017,
+      "selected_packet_numbers": 63
+    },
+    {
+      "pcap": "/home/birkenwald/data/SEU-WXY/WXY-SEU/TrafficClassifier/Dataset/ISCXTor2016/ISCXTor2016（whole）/raw/pcap/NonTor/browsing_ara2.pcap",
+      "scanned_packets": 87523,
+      "selected_packet_numbers": 60
+    },
+    {
+      "pcap": "/home/birkenwald/data/SEU-WXY/WXY-SEU/TrafficClassifier/Dataset/ISCXTor2016/ISCXTor2016（whole）/raw/pcap/NonTor/browsing_ger.pcap",
+      "scanned_packets": 175861,
+      "selected_packet_numbers": 67
+    },
+    {
+      "pcap": "/home/birkenwald/data/SEU-WXY/WXY-SEU/TrafficClassifier/Dataset/ISCXTor2016/ISCXTor2016（whole）/raw/pcap/NonTor/facebook_Audio.pcap",
+      "scanned_packets": 193886,
+      "selected_packet_numbers": 82
+    },
+    {
+      "pcap": "/home/birkenwald/data/SEU-WXY/WXY-SEU/TrafficClassifier/Dataset/ISCXTor2016/ISCXTor2016（whole）/raw/pcap/NonTor/facebook_chat.pcap",
+      "scanned_packets": 2780,
+      "selected_packet_numbers": 18
+    },
+    {
+      "pcap": "/home/birkenwald/data/SEU-WXY/WXY-SEU/TrafficClassifier/Dataset/ISCXTor2016/ISCXTor2016（whole）/raw/pcap/NonTor/facebookchat.pcap",
+      "scanned_packets": 5190,
+      "selected_packet_numbers": 43
+    },
+    {
+      "pcap": "/home/birkenwald/data/SEU-WXY/WXY-SEU/TrafficClassifier/Dataset/ISCXTor2016/ISCXTor2016（whole）/raw/pcap/NonTor/hangout_chat.pcap",
+      "scanned_packets": 3189,
+      "selected_packet_numbers": 31
+    },
+    {
+      "pcap": "/home/birkenwald/data/SEU-WXY/WXY-SEU/TrafficClassifier/Dataset/ISCXTor2016/ISCXTor2016（whole）/raw/pcap/NonTor/hangoutschat.pcap",
+      "scanned_packets": 2970,
+      "selected_packet_numbers": 33
+    },
+    {
+      "pcap": "/home/birkenwald/data/SEU-WXY/WXY-SEU/TrafficClassifier/Dataset/ISCXTor2016/ISCXTor2016（whole）/raw/pcap/NonTor/icqchat.pcap",
+      "scanned_packets": 336,
+      "selected_packet_numbers": 14
+    },
+    {
+      "pcap": "/home/birkenwald/data/SEU-WXY/WXY-SEU/TrafficClassifier/Dataset/ISCXTor2016/ISCXTor2016（whole）/raw/pcap/NonTor/p2p_multipleSpeed.pcap",
+      "scanned_packets": 1317838,
+      "selected_packet_numbers": 208
+    },
+    {
+      "pcap": "/home/birkenwald/data/SEU-WXY/WXY-SEU/TrafficClassifier/Dataset/ISCXTor2016/ISCXTor2016（whole）/raw/pcap/NonTor/p2p_multipleSpeed2-1.pcap",
+      "scanned_packets": 1327032,
+      "selected_packet_numbers": 265
+    },
+    {
+      "pcap": "/home/birkenwald/data/SEU-WXY/WXY-SEU/TrafficClassifier/Dataset/ISCXTor2016/ISCXTor2016（whole）/raw/pcap/NonTor/p2p_vuze.pcap",
+      "scanned_packets": 961627,
+      "selected_packet_numbers": 59
+    },
+    {
+      "pcap": "/home/birkenwald/data/SEU-WXY/WXY-SEU/TrafficClassifier/Dataset/ISCXTor2016/ISCXTor2016（whole）/raw/pcap/NonTor/p2p_vuze2-1.pcap",
+      "scanned_packets": 1106827,
+      "selected_packet_numbers": 87
+    },
+    {
+      "pcap": "/home/birkenwald/data/SEU-WXY/WXY-SEU/TrafficClassifier/Dataset/ISCXTor2016/ISCXTor2016（whole）/raw/pcap/NonTor/skype_chat.pcap",
+      "scanned_packets": 1338,
+      "selected_packet_numbers": 15
+    },
+    {
+      "pcap": "/home/birkenwald/data/SEU-WXY/WXY-SEU/TrafficClassifier/Dataset/ISCXTor2016/ISCXTor2016（whole）/raw/pcap/NonTor/skype_transfer.pcap",
+      "scanned_packets": 132147,
+      "selected_packet_numbers": 60
+    },
+    {
+      "pcap": "/home/birkenwald/data/SEU-WXY/WXY-SEU/TrafficClassifier/Dataset/ISCXTor2016/ISCXTor2016（whole）/raw/pcap/NonTor/skypechat.pcap",
+      "scanned_packets": 2317,
+      "selected_packet_numbers": 20
+    },
+    {
+      "pcap": "/home/birkenwald/data/SEU-WXY/WXY-SEU/TrafficClassifier/Dataset/ISCXTor2016/ISCXTor2016（whole）/raw/pcap/NonTor/spotify2-2.pcap",
+      "scanned_packets": 163804,
+      "selected_packet_numbers": 127
+    },
+    {
+      "pcap": "/home/birkenwald/data/SEU-WXY/WXY-SEU/TrafficClassifier/Dataset/ISCXTor2016/ISCXTor2016（whole）/raw/pcap/NonTor/spotify2.pcap",
+      "scanned_packets": 163819,
+      "selected_packet_numbers": 94
+    },
+    {
+      "pcap": "/home/birkenwald/data/SEU-WXY/WXY-SEU/TrafficClassifier/Dataset/ISCXTor2016/ISCXTor2016（whole）/raw/pcap/Tor/Tor/AUDIO_tor_spotify2.pcap",
+      "scanned_packets": 145361,
+      "selected_packet_numbers": 9
+    },
+    {
+      "pcap": "/home/birkenwald/data/SEU-WXY/WXY-SEU/TrafficClassifier/Dataset/ISCXTor2016/ISCXTor2016（whole）/raw/pcap/Tor/Tor/CHAT_gate_AIM_chat.pcap",
+      "scanned_packets": 79,
+      "selected_packet_numbers": 1
+    },
+    {
+      "pcap": "/home/birkenwald/data/SEU-WXY/WXY-SEU/TrafficClassifier/Dataset/ISCXTor2016/ISCXTor2016（whole）/raw/pcap/Tor/Tor/CHAT_gate_hangout_chat.pcap",
+      "scanned_packets": 12,
+      "selected_packet_numbers": 4
+    },
+    {
+      "pcap": "/home/birkenwald/data/SEU-WXY/WXY-SEU/TrafficClassifier/Dataset/ISCXTor2016/ISCXTor2016（whole）/raw/pcap/Tor/Tor/FILE-TRANSFER_gate_FTP_transfer.pcap",
+      "scanned_packets": 1158400,
+      "selected_packet_numbers": 16
+    },
+    {
+      "pcap": "/home/birkenwald/data/SEU-WXY/WXY-SEU/TrafficClassifier/Dataset/ISCXTor2016/ISCXTor2016（whole）/raw/pcap/Tor/Tor/Torrent01.pcapng",
+      "scanned_packets": 106403,
+      "selected_packet_numbers": 11
+    },
+    {
+      "pcap": "/home/birkenwald/data/SEU-WXY/WXY-SEU/TrafficClassifier/Dataset/ISCXTor2016/ISCXTor2016（whole）/raw/pcap/Tor/Tor/VIDEO_Youtube_Flash_Gateway.pcap",
+      "scanned_packets": 414127,
+      "selected_packet_numbers": 1
+    },
+    {
+      "pcap": "/home/birkenwald/data/SEU-WXY/WXY-SEU/TrafficClassifier/Dataset/ISCXTor2016/ISCXTor2016（whole）/raw/pcap/Tor/Tor/VIDEO_Youtube_HTML5_Gateway.pcap",
+      "scanned_packets": 44650,
+      "selected_packet_numbers": 2
+    },
+    {
+      "pcap": "/home/birkenwald/data/SEU-WXY/WXY-SEU/TrafficClassifier/Dataset/ISCXTor2016/ISCXTor2016（whole）/raw/pcap/Tor/Tor/VOIP_Hangouts_voice_Gateway.pcap",
+      "scanned_packets": 8,
+      "selected_packet_numbers": 8
+    },
+    {
+      "pcap": "/home/birkenwald/data/SEU-WXY/WXY-SEU/TrafficClassifier/Dataset/ISCXTor2016/ISCXTor2016（whole）/raw/pcap/Tor/Tor/VOIP_gate_facebook_Audio.pcap",
+      "scanned_packets": 213539,
+      "selected_packet_numbers": 2
+    },
+    {
+      "pcap": "/home/birkenwald/data/SEU-WXY/WXY-SEU/TrafficClassifier/Dataset/ISCXTor2016/ISCXTor2016（whole）/raw/pcap/Tor/Tor/torFacebook.pcap",
+      "scanned_packets": 5771,
+      "selected_packet_numbers": 8
+    },
+    {
+      "pcap": "/home/birkenwald/data/SEU-WXY/WXY-SEU/TrafficClassifier/Dataset/ISCXTor2016/ISCXTor2016（whole）/raw/pcap/Tor/Tor/torVimeo1.pcap",
+      "scanned_packets": 34509,
+      "selected_packet_numbers": 9
+    },
+    {
+      "pcap": "/home/birkenwald/data/SEU-WXY/WXY-SEU/TrafficClassifier/Dataset/ISCXTor2016/ISCXTor2016（whole）/raw/pcap/Tor/Tor/torYoutube1.pcap",
+      "scanned_packets": 10089,
+      "selected_packet_numbers": 6
+    },
+    {
+      "pcap": "/home/birkenwald/data/SEU-WXY/WXY-SEU/TrafficClassifier/Dataset/ISCXTor2016/ISCXTor2016（whole）/raw/pcap/Tor/Tor/torYoutube2.pcap",
+      "scanned_packets": 54205,
+      "selected_packet_numbers": 19
+    },
+    {
+      "pcap": "/home/birkenwald/data/SEU-WXY/WXY-SEU/TrafficClassifier/Dataset/ISCXTor2016/ISCXTor2016（whole）/raw/pcap/Tor/Tor/tor_spotify2-2.pcap",
+      "scanned_packets": 91652,
+      "selected_packet_numbers": 4
+    }
+  ],
+  "file_hashes": {
+    "header.npy": "6acf92eae31ac982c30f212b8912498c646a3cde8190212f87f3d2c1e7a4189f",
+    "payload.npy": "64044b16ad35d39e7039f93b9ecf1d52e3531cbc84ceab78918a14bc0eafc981",
+    "trident86.npy": "5cd3bff42e989f14c16cf50010a883177e3d21b4a1dad31c40e05527782ec011",
+    "flow_ids.npy": "7ce85ebf950c943975d04696cc80f063588a56e729f62bbdc88dd304dd858168",
+    "packet_counts.npy": "8f0be188cf7965a924fe2d92db06dae7588eeff4deef7978939a1cf691947213",
+    "membership.csv": "0028e44d1d6fa914d2fd58f7b45dfe9708ff21ce367778ed864ef32287ffabcd"
+  },
+  "known_test_loaded_before_selection": null,
+  "unknown_loaded": false
+}

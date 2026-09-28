@@ -1,0 +1,67 @@
+{
+  "candidates": [
+    {
+      "balanced_known_manifest_sha256": null,
+      "candidate_manifest_sha256": "d73acb4c893838c1b5130c5b0317954b242ab7f30b05aaa1805f23dfc037f0e1",
+      "candidate_protocol_sha256": "2f1d977ac5d7e9ad1b512cf08ab8a46627b6bc91272a3653f8b233221de089b8",
+      "day": "Tuesday",
+      "key": "ssh_patator",
+      "label": "SSH-Patator",
+      "prior_unknown_test_overlap": 0,
+      "unknown_groups": 14,
+      "unknown_test": 2987
+    },
+    {
+      "balanced_known_manifest_sha256": "4bb67be8acaa97ffcca4ac8186bd1694e82928cd579f445287fd94123bc01a7d",
+      "candidate_manifest_sha256": "c86e720d6c4a76cb6e461c2ef002b26bd2d5268f4196c5b74d70883031001106",
+      "candidate_protocol_sha256": "bbba862e2a5e9da13f891ec743271b8156dc8510dd2cddbe9e3fa009174f3fdc",
+      "day": "Thursday",
+      "key": "web_bruteforce",
+      "label": "Web Attack - Brute Force",
+      "prior_unknown_test_overlap": 0,
+      "unknown_groups": 10,
+      "unknown_test": 1364
+    },
+    {
+      "balanced_known_manifest_sha256": "e8e16ab33b9df1fe83faa0d33751348afd9efd32c123b3b5e31e69a571062d1f",
+      "candidate_manifest_sha256": "af8803c02d95b704384f0a4e38b9adb2fa60ab154e19d06067b3551bcea76afb",
+      "candidate_protocol_sha256": "2e26af207664ec6df78f32ac91dc6ed4d7a80b686f399863f009cbf7abbd4f6c",
+      "day": "Thursday",
+      "key": "web_xss",
+      "label": "Web Attack - XSS",
+      "prior_unknown_test_overlap": 0,
+      "unknown_groups": 5,
+      "unknown_test": 629
+    },
+    {
+      "balanced_known_manifest_sha256": null,
+      "candidate_manifest_sha256": "201484d82866188ca89530dc4d5c1e6b79e8f6ca918bbe1c0d79a94077f5f39e",
+      "candidate_protocol_sha256": "097ff8d337a10f0e54f5b9d9121a2d4df29beb9d2eabbe7fae7a483735c6cec5",
+      "day": "Wednesday",
+      "key": "slowhttptest_full",
+      "label": "DoS Slowhttptest",
+      "prior_unknown_test_overlap": 132,
+      "unknown_groups": 5,
+      "unknown_test": 5096
+    }
+  ],
+  "checkpoint_and_threshold_rule": "reuse frozen Stage40 BENIGN+PortScan Known-only model and Known-Val P95",
+  "claim_scope": "post-hoc sequential development diagnostic",
+  "fixed_order": [
+    "ssh_patator",
+    "web_bruteforce",
+    "web_xss",
+    "slowhttptest_full"
+  ],
+  "frozen_before_any_new_candidate_packet_feature_access": true,
+  "runner_sha256": "986020453f59155100abaae00ed1fbf363515e0806fc053125d6f731749f029d",
+  "source_parquet_sha256": {
+    "Thursday": "79eff12da8eefc28df1eb0b42ba29bbca9ae8aaeafbd4962fc86a016dca5a343",
+    "Tuesday": "c033dad11fa5be524bf949b13534657542db98850379ba93e4d4213a6dce652d",
+    "Wednesday": "212325f65a10ea98ef4434b9a8741d9acc0c1de9ded960c6543cfde2c3f909f1"
+  },
+  "stage40_known_role_manifest_sha256": "6b6d78e3abd34eab2a3a2797d1fe9376b2a9a364078fa8ce677e2a6a876dd99a",
+  "status": "PASS",
+  "test_fit_count": 0,
+  "unknown_fit_count": 0
+}

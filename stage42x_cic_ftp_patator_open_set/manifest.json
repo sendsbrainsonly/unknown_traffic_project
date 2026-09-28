@@ -1,0 +1,435 @@
+{
+  "schema_version": 1,
+  "experiment_id": "stage42x-cic-ftp-patator-sixth-candidate-20260928",
+  "created_at_utc": "2026-09-28T08:20:21Z",
+  "updated_at_utc": "2026-09-28T08:35:04Z",
+  "status": "success",
+  "experiment_type": "open-set-evaluation",
+  "claim_scope": "diagnostic",
+  "objective": "Evaluate all matched Tuesday FTP-Patator flows as Unknown with frozen Stage40 Known-only encoder/support/calibration",
+  "inputs": [
+    {
+      "path": "candidate_protocol.json",
+      "role": "frozen_candidate_protocol"
+    },
+    {
+      "path": "candidate_unknown_manifest.csv",
+      "role": "frozen_unknown_test_manifest",
+      "sha256": "f031cbdf6ce8721854ca4f4c55834f60fd703ae664ca9d16b4b0a0c60c9be1b7"
+    },
+    {
+      "path": "../stage40_ustc_cic_open_set/unknown_slowhttptest_roles.csv",
+      "role": "frozen_known_roles",
+      "sha256": "6b6d78e3abd34eab2a3a2797d1fe9376b2a9a364078fa8ce677e2a6a876dd99a"
+    }
+  ],
+  "code": {
+    "revision": null,
+    "dirty": null,
+    "changes": [
+      "Added isolated FTP-Patator candidate freeze and Tuesday packet-day adapter; reused hash-pinned Stage42-S scoring/replay"
+    ]
+  },
+  "execution": {
+    "tmux_session": "stage42x-freeze-20260928; stage42x-cache-20260928; stage42x-finish-queue-20260928",
+    "command": "freeze all matched FTP-Patator IDs before feature access; build Tuesday Unknown packet views; queued live GPU selection, frozen scoring, and independent replay",
+    "exit_code": 0,
+    "environment": "/home/birkenwald/data/SEU-WXY/conda_envs/2025-10-8-WXY-dgl_py310",
+    "physical_gpu_ids": [
+      0
+    ]
+  },
+  "configuration": {
+    "files": [
+      "candidate_protocol.json",
+      "candidate_unknown_manifest.csv",
+      "freeze_candidate.py",
+      "build_tuesday_cache.py",
+      "run_frozen.py",
+      "finish_after_cache.py",
+      "stage42x_common.py"
+    ],
+    "parameters": {
+      "known_classes": [
+        "BENIGN",
+        "PortScan"
+      ],
+      "unknown_class": "FTP-Patator",
+      "unknown_test": 3985,
+      "unknown_groups": 15,
+      "threshold": "reused Stage40 Known-Validation P95",
+      "des_v1_k": 10,
+      "des_v1_weights": [
+        0.5,
+        0.5
+      ],
+      "unknown_fit_count": 0
+    },
+    "seeds": [
+      2022
+    ]
+  },
+  "core_results": [
+    {
+      "method": "des_v1",
+      "view": "natural",
+      "auroc": 0.9983422650078639,
+      "auprc": 0.998595553966777,
+      "ufar": 0.0,
+      "known_frr": 0.07130281690140845
+    },
+    {
+      "method": "des_v1",
+      "view": "balanced_1to1",
+      "auroc": 0.9983812425609998,
+      "auprc": 0.9975964041363958,
+      "ufar": 0.0,
+      "known_frr": 0.07130281690140845
+    },
+    {
+      "verification": "PASS",
+      "metrics_replayed": 8,
+      "candidate_manifest_unchanged": true,
+      "unknown_fit_count": 0,
+      "test_fit_count": 0,
+      "favorable_screen_pass": true
+    }
+  ],
+  "artifacts": [
+    {
+      "path": ".tmux-task/stage42x-cache-20260928/exit.status",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 2,
+      "sha256": "9a271f2a916b0b6ee6cecb2426f0b3206ef074578be55d9bc94f6f3fe3ab86aa",
+      "hash_status": "verified"
+    },
+    {
+      "path": ".tmux-task/stage42x-cache-20260928/output.log",
+      "scope": "bundle",
+      "role": "log",
+      "size_bytes": 563,
+      "sha256": "d0feddb5b186ac77001324dc4e7af57d9b47c71e933d4b9819c0220e2156b67c",
+      "hash_status": "verified"
+    },
+    {
+      "path": ".tmux-task/stage42x-finish-queue-20260928/exit.status",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 2,
+      "sha256": "9a271f2a916b0b6ee6cecb2426f0b3206ef074578be55d9bc94f6f3fe3ab86aa",
+      "hash_status": "verified"
+    },
+    {
+      "path": ".tmux-task/stage42x-finish-queue-20260928/output.log",
+      "scope": "bundle",
+      "role": "log",
+      "size_bytes": 9272,
+      "sha256": "a3e461061dd64f60a4eab6e8aadcd09d303164e079ba040619bc2a9cb539ab8e",
+      "hash_status": "verified"
+    },
+    {
+      "path": ".tmux-task/stage42x-freeze-20260928/exit.status",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 2,
+      "sha256": "9a271f2a916b0b6ee6cecb2426f0b3206ef074578be55d9bc94f6f3fe3ab86aa",
+      "hash_status": "verified"
+    },
+    {
+      "path": ".tmux-task/stage42x-freeze-20260928/output.log",
+      "scope": "bundle",
+      "role": "log",
+      "size_bytes": 148,
+      "sha256": "416c32de7c1196d9f42a783c0f500142825695b04402eebd7fdd0665a75d7ca8",
+      "hash_status": "verified"
+    },
+    {
+      "path": ".tmux-task/stage42x-freezecheck-20260928/exit.status",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 2,
+      "sha256": "9a271f2a916b0b6ee6cecb2426f0b3206ef074578be55d9bc94f6f3fe3ab86aa",
+      "hash_status": "verified"
+    },
+    {
+      "path": ".tmux-task/stage42x-freezecheck-20260928/output.log",
+      "scope": "bundle",
+      "role": "log",
+      "size_bytes": 1270,
+      "sha256": "1770dbd1f6641e77dd322e5d711993ffdd08c48811cd82b612642a531dec661c",
+      "hash_status": "verified"
+    },
+    {
+      "path": ".tmux-task/stage42x-resultread-20260928/exit.status",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 2,
+      "sha256": "9a271f2a916b0b6ee6cecb2426f0b3206ef074578be55d9bc94f6f3fe3ab86aa",
+      "hash_status": "verified"
+    },
+    {
+      "path": ".tmux-task/stage42x-resultread-20260928/output.log",
+      "scope": "bundle",
+      "role": "log",
+      "size_bytes": 3430,
+      "sha256": "3c0c9dfc1e3e3d3fb5bf0537e3f1a11e329d60abe5e3112c86c4d9408f83f69d",
+      "hash_status": "verified"
+    },
+    {
+      "path": "__pycache__/build_tuesday_cache.cpython-310.pyc",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 2977,
+      "sha256": "4fb76696a7688eb745d652f318a9b160ffc0d75cc85d180edb0948a704a3ad0c",
+      "hash_status": "verified"
+    },
+    {
+      "path": "__pycache__/finish_after_cache.cpython-310.pyc",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 4070,
+      "sha256": "ae79e5a02b00c122aceee3c550b27c381b208693508c86867f9ab6662c022ece",
+      "hash_status": "verified"
+    },
+    {
+      "path": "__pycache__/freeze_candidate.cpython-310.pyc",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 6624,
+      "sha256": "63e201bb672bbc695b9dcf57f021eedd2807cefd54e15a96ba8b160740450014",
+      "hash_status": "verified"
+    },
+    {
+      "path": "__pycache__/run_frozen.cpython-310.pyc",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 1938,
+      "sha256": "576b12901302d36b324bf8ffaff8492aad934e780e8ab1023527b8c4c387e446",
+      "hash_status": "verified"
+    },
+    {
+      "path": "__pycache__/stage42x_common.cpython-310.pyc",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 2504,
+      "sha256": "2540276fa625813310f5792f3881cfa07d3b9de5ae362da018e76e205c1b8256",
+      "hash_status": "verified"
+    },
+    {
+      "path": "build_tuesday_cache.py",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 3123,
+      "sha256": "0223bf0d7ca0152878590a732534afd3c3f934eb8fe724cdfa868823cf443277",
+      "hash_status": "verified"
+    },
+    {
+      "path": "candidate_protocol.json",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 3503,
+      "sha256": "359ecae2b26c3b91502c84b6d4ac86832b4cf4bb4ca2e33252d2f6c88cbcbe56",
+      "hash_status": "verified"
+    },
+    {
+      "path": "candidate_unknown_manifest.csv",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 768596,
+      "sha256": "f031cbdf6ce8721854ca4f4c55834f60fd703ae664ca9d16b4b0a0c60c9be1b7",
+      "hash_status": "verified"
+    },
+    {
+      "path": "cicids2017_protocol_v2_audit.json",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 186,
+      "sha256": "7238d528bae134fdac1f6418267ea5f9502ad8634f038d61c9e463c2882ab6ea",
+      "hash_status": "verified"
+    },
+    {
+      "path": "finish_after_cache.py",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 4312,
+      "sha256": "407c144236ee1d59539d36830dc774c3388a1ac17a08694cccd4610c95a99bb2",
+      "hash_status": "verified"
+    },
+    {
+      "path": "freeze_candidate.py",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 6717,
+      "sha256": "0bdd0563264a0d69729f2fe77cacc79e7bbbcaf945564cca8f7dbf7d2e470191",
+      "hash_status": "verified"
+    },
+    {
+      "path": "progress.json",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 552,
+      "sha256": "9769de001072066f6effc19d5debd9152be0151c8c044518d7cc5398728b1d9f",
+      "hash_status": "verified"
+    },
+    {
+      "path": "queue_progress.json",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 553,
+      "sha256": "b3cd3eb760d3fb7699933a8f82a35facfb942f8ede1b485fd1901a12448dddfe",
+      "hash_status": "verified"
+    },
+    {
+      "path": "run_frozen.py",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 1918,
+      "sha256": "0652f7eb988df037c438136cc0107ba64edf496c2b8a7ef1106ee535bb5278cf",
+      "hash_status": "verified"
+    },
+    {
+      "path": "stage42x_common.py",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 1735,
+      "sha256": "3fc6cf7f2ec573f17e5808fdbe9cdd35a227b54bf8ed02d729b133c9b34853b0",
+      "hash_status": "verified"
+    },
+    {
+      "path": "unknown_ftp_patator/detection/SUCCESS",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 8,
+      "sha256": "1f513d4ecec4e91ddd48da1a59b6d96f1b76c374dc1da641980782a34f43b102",
+      "hash_status": "verified"
+    },
+    {
+      "path": "unknown_ftp_patator/detection/evaluation_audit.json",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 1084,
+      "sha256": "8a3da7de0ebf85869adb23134ce2b680910a09e871bd976c774a28c58d08fd70",
+      "hash_status": "verified"
+    },
+    {
+      "path": "unknown_ftp_patator/detection/independent_verification.json",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 366,
+      "sha256": "48d921ddbe41e7e956843d6e26bdd82f68d2142ab594ad143d2f5614c1b40f27",
+      "hash_status": "verified"
+    },
+    {
+      "path": "unknown_ftp_patator/detection/known_test_closed_set.json",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 107,
+      "sha256": "ec2f4ec29aee406452c093d7de0bc4c7afc00196dc38cc4e079220af1582b872",
+      "hash_status": "verified"
+    },
+    {
+      "path": "unknown_ftp_patator/detection/open_set_results.csv",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 2249,
+      "sha256": "048f93de2a58c723542e8b2a0732f9fb9420955f046c48d70e55fa1abee0e7a8",
+      "hash_status": "verified"
+    },
+    {
+      "path": "unknown_ftp_patator/detection/sample_scores.csv",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 876785,
+      "sha256": "4fbfb7fe17b9cbd501a6ffcae57af3bd83e7b4bf0b2760adca779c6bd024cb14",
+      "hash_status": "verified"
+    },
+    {
+      "path": "unknown_ftp_patator/input_caches/ustc/A-2/tf_fig_test/cache_audit.json",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 612,
+      "sha256": "e8d51b95db6a51167a7bdd83426ac716b367f6bca17f1aaf5db8a40f3f616ea2",
+      "hash_status": "verified"
+    },
+    {
+      "path": "unknown_ftp_patator/input_caches/ustc/A-2/tf_fig_test/fig_adj.npy",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 3586628,
+      "sha256": "8502cad504a8484749f9971837ff600fd627a8e96059147d7137fb45d94792d8",
+      "hash_status": "verified"
+    },
+    {
+      "path": "unknown_ftp_patator/input_caches/ustc/A-2/tf_fig_test/fig_mask.npy",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 119678,
+      "sha256": "3b3a8cea11b57c1a5aed7f3bd06a604b2ace645c88545a9f10f66f490cac6c64",
+      "hash_status": "verified"
+    },
+    {
+      "path": "unknown_ftp_patator/input_caches/ustc/A-2/tf_fig_test/fig_x.npy",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 3347528,
+      "sha256": "c0b351232c56efc87bb109e15b209ad464295c662a861fa4c2aa4cfac09f61fd",
+      "hash_status": "verified"
+    },
+    {
+      "path": "unknown_ftp_patator/input_caches/ustc/A-2/tf_fig_test/flow_ids.npy",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 1275328,
+      "sha256": "7ef8a3ce34dc7767c026463d8c743d8170c6685768bd9be5669efc641f373176",
+      "hash_status": "verified"
+    },
+    {
+      "path": "unknown_ftp_patator/input_caches/ustc/A-2/tf_fig_test/segments.npy",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 1275328,
+      "sha256": "0b26bfee92b3156025249627b169f710ec7de6f93b2b140d4adba4d276271dbb",
+      "hash_status": "verified"
+    },
+    {
+      "path": "unknown_ftp_patator/input_caches/ustc/A-2/tf_fig_test/token_ids.npy",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 5100928,
+      "sha256": "a53c69686d322c52bfd0329d95c017fe585acaeb01709f8cd5a61cdd94b6201b",
+      "hash_status": "verified"
+    },
+    {
+      "path": "unknown_ftp_patator/input_caches/ustc/A-2/yatc_mfr_test/cache_audit.json",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 612,
+      "sha256": "e8d51b95db6a51167a7bdd83426ac716b367f6bca17f1aaf5db8a40f3f616ea2",
+      "hash_status": "verified"
+    },
+    {
+      "path": "unknown_ftp_patator/input_caches/ustc/A-2/yatc_mfr_test/known_test_flow_ids.npy",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 1275328,
+      "sha256": "7ef8a3ce34dc7767c026463d8c743d8170c6685768bd9be5669efc641f373176",
+      "hash_status": "verified"
+    },
+    {
+      "path": "unknown_ftp_patator/input_caches/ustc/A-2/yatc_mfr_test/known_test_mfr.npy",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 6376128,
+      "sha256": "658f7021359fda0b94009c80f7ef3debbd7e209c4e2eb55be51b1798c69234b9",
+      "hash_status": "verified"
+    }
+  ],
+  "limitations": [
+    "Post-hoc favorable-setting development diagnostic",
+    "FTP-Patator tied to one Tuesday PCAP and 15 five-minute groups",
+    "Attack schedule and endpoint shortcuts may inflate performance",
+    "Single known encoder and single protocol seed"
+  ],
+  "next_step": "Stop at this completed diagnostic result; compare all favorable and failed CIC settings and investigate schedule/capture shortcuts before any new protocol"
+}

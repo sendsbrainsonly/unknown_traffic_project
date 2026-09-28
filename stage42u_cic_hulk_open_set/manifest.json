@@ -1,0 +1,562 @@
+{
+  "schema_version": 1,
+  "experiment_id": "stage42u-cic-hulk-third-candidate-20260928",
+  "created_at_utc": "2026-09-28T02:26:47Z",
+  "updated_at_utc": "2026-09-28T07:00:14Z",
+  "status": "success",
+  "experiment_type": "open-set-evaluation",
+  "claim_scope": "diagnostic",
+  "objective": "Evaluate frozen BENIGN+PortScan three-view encoder with all matched DoS Hulk flows as Unknown using Known-Val-only calibration",
+  "inputs": [
+    {
+      "path": "candidate_protocol.json",
+      "role": "frozen_candidate_protocol"
+    },
+    {
+      "path": "candidate_unknown_manifest.csv",
+      "role": "frozen_unknown_test_manifest",
+      "sha256": "b158b2bb751fa5fd61c18f34149411583b8ba3515d4ad0dc5d9d822a573cb37f"
+    },
+    {
+      "path": "../stage40_ustc_cic_open_set/unknown_slowhttptest_roles.csv",
+      "role": "frozen_known_roles",
+      "sha256": "6b6d78e3abd34eab2a3a2797d1fe9376b2a9a364078fa8ce677e2a6a876dd99a"
+    }
+  ],
+  "code": {
+    "revision": null,
+    "dirty": null,
+    "changes": [
+      "Added an isolated full-population Hulk protocol and a path adapter for the previously verified Stage42-S extraction, scoring, and replay code"
+    ]
+  },
+  "execution": {
+    "tmux_session": "stage42u-freeze-20260928; stage42u-cache-20260928; stage42u-finish-queue-20260928",
+    "command": "freeze all matched Hulk IDs before feature access; build full Unknown Test packet views; queued live GPU selection, frozen scoring, and independent replay",
+    "exit_code": 0,
+    "environment": "/home/birkenwald/data/SEU-WXY/conda_envs/2025-10-8-WXY-dgl_py310",
+    "physical_gpu_ids": [
+      0
+    ]
+  },
+  "configuration": {
+    "files": [
+      "candidate_protocol.json",
+      "candidate_unknown_manifest.csv",
+      "freeze_candidate.py",
+      "run_reused_stage42s.py",
+      "finish_after_cache.py",
+      "stage42u_common.py"
+    ],
+    "parameters": {
+      "known_classes": [
+        "BENIGN",
+        "PortScan"
+      ],
+      "unknown_class": "DoS Hulk",
+      "unknown_test": 155168,
+      "unknown_groups": 6,
+      "threshold": "reused Stage40 Known-Validation P95",
+      "des_v1_k": 10,
+      "des_v1_weights": [
+        0.5,
+        0.5
+      ],
+      "unknown_fit_count": 0
+    },
+    "seeds": [
+      2022
+    ]
+  },
+  "core_results": [
+    {
+      "method": "des_v1",
+      "view": "natural",
+      "auroc": 0.9737666888628118,
+      "auprc": 0.9988059823314217,
+      "ufar": 0.0011342544854609198,
+      "known_frr": 0.07130281690140845
+    },
+    {
+      "method": "des_v1",
+      "view": "balanced_1to1",
+      "auroc": 0.9735797321340013,
+      "auprc": 0.9281322360389546,
+      "ufar": 0.0017605633802816902,
+      "known_frr": 0.07130281690140845
+    },
+    {
+      "verification": "PASS",
+      "metrics_replayed": 8,
+      "candidate_manifest_unchanged": true,
+      "unknown_fit_count": 0,
+      "test_fit_count": 0
+    }
+  ],
+  "artifacts": [
+    {
+      "path": ".tmux-task/stage42u-cache-20260928/exit.status",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 2,
+      "sha256": "9a271f2a916b0b6ee6cecb2426f0b3206ef074578be55d9bc94f6f3fe3ab86aa",
+      "hash_status": "verified"
+    },
+    {
+      "path": ".tmux-task/stage42u-cache-20260928/output.log",
+      "scope": "bundle",
+      "role": "log",
+      "size_bytes": 574,
+      "sha256": "b426ee0aad31ad475043522c647af2d96719c041407d1cd2e65b34124b29f037",
+      "hash_status": "verified"
+    },
+    {
+      "path": ".tmux-task/stage42u-cache-io-20260928/exit.status",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 2,
+      "sha256": "9a271f2a916b0b6ee6cecb2426f0b3206ef074578be55d9bc94f6f3fe3ab86aa",
+      "hash_status": "verified"
+    },
+    {
+      "path": ".tmux-task/stage42u-cache-io-20260928/output.log",
+      "scope": "bundle",
+      "role": "log",
+      "size_bytes": 251,
+      "sha256": "3d7f98f29acebe748421a4adb7f333c931903b3147b1b58600a6bd954ec42601",
+      "hash_status": "verified"
+    },
+    {
+      "path": ".tmux-task/stage42u-cache-io2-20260928/exit.status",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 2,
+      "sha256": "9a271f2a916b0b6ee6cecb2426f0b3206ef074578be55d9bc94f6f3fe3ab86aa",
+      "hash_status": "verified"
+    },
+    {
+      "path": ".tmux-task/stage42u-cache-io2-20260928/output.log",
+      "scope": "bundle",
+      "role": "log",
+      "size_bytes": 202,
+      "sha256": "6c1bb72fd4d5214ea6b4200d800023ffab14241062538527803f5dc22db948a2",
+      "hash_status": "verified"
+    },
+    {
+      "path": ".tmux-task/stage42u-cache-liveness-20260928/exit.status",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 2,
+      "sha256": "9a271f2a916b0b6ee6cecb2426f0b3206ef074578be55d9bc94f6f3fe3ab86aa",
+      "hash_status": "verified"
+    },
+    {
+      "path": ".tmux-task/stage42u-cache-liveness-20260928/output.log",
+      "scope": "bundle",
+      "role": "log",
+      "size_bytes": 2540,
+      "sha256": "8efbcfabb531e0f97db118f93d6857096dbdc99def904ce25c216ce48d87612a",
+      "hash_status": "verified"
+    },
+    {
+      "path": ".tmux-task/stage42u-cache-resource-20260928/exit.status",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 2,
+      "sha256": "9a271f2a916b0b6ee6cecb2426f0b3206ef074578be55d9bc94f6f3fe3ab86aa",
+      "hash_status": "verified"
+    },
+    {
+      "path": ".tmux-task/stage42u-cache-resource-20260928/output.log",
+      "scope": "bundle",
+      "role": "log",
+      "size_bytes": 199,
+      "sha256": "b6d269cdb5a9479c403bd1f120e433f2bc7f1f0b436d7abc4d127b4fbe07f7ef",
+      "hash_status": "verified"
+    },
+    {
+      "path": ".tmux-task/stage42u-csv-20260928-0700/exit.status",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 2,
+      "sha256": "9a271f2a916b0b6ee6cecb2426f0b3206ef074578be55d9bc94f6f3fe3ab86aa",
+      "hash_status": "verified"
+    },
+    {
+      "path": ".tmux-task/stage42u-csv-20260928-0700/output.log",
+      "scope": "bundle",
+      "role": "log",
+      "size_bytes": 4699,
+      "sha256": "fec9fe4b5b7371149b4df5985adb8655cec5f63ed6651a66ce0cf2e43be28c16",
+      "hash_status": "verified"
+    },
+    {
+      "path": ".tmux-task/stage42u-finish-queue-20260928/exit.status",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 2,
+      "sha256": "9a271f2a916b0b6ee6cecb2426f0b3206ef074578be55d9bc94f6f3fe3ab86aa",
+      "hash_status": "verified"
+    },
+    {
+      "path": ".tmux-task/stage42u-finish-queue-20260928/output.log",
+      "scope": "bundle",
+      "role": "log",
+      "size_bytes": 16047,
+      "sha256": "45c316ac9c8d11ef56758521d477cf64ffa386735d569708203370cc00d3f6fe",
+      "hash_status": "verified"
+    },
+    {
+      "path": ".tmux-task/stage42u-progresscheck-20260928-0325/exit.status",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 2,
+      "sha256": "9a271f2a916b0b6ee6cecb2426f0b3206ef074578be55d9bc94f6f3fe3ab86aa",
+      "hash_status": "verified"
+    },
+    {
+      "path": ".tmux-task/stage42u-progresscheck-20260928-0325/output.log",
+      "scope": "bundle",
+      "role": "log",
+      "size_bytes": 275,
+      "sha256": "bb2e05931a5a6e780689351fd2dc2294763602d192e220e56306e66015957924",
+      "hash_status": "verified"
+    },
+    {
+      "path": ".tmux-task/stage42u-protocol-read2-20260928/exit.status",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 2,
+      "sha256": "9a271f2a916b0b6ee6cecb2426f0b3206ef074578be55d9bc94f6f3fe3ab86aa",
+      "hash_status": "verified"
+    },
+    {
+      "path": ".tmux-task/stage42u-protocol-read2-20260928/output.log",
+      "scope": "bundle",
+      "role": "log",
+      "size_bytes": 74,
+      "sha256": "aaf0b63275183bb17e14c057bfe469511f1449f077cbb033ff6e832330be52bf",
+      "hash_status": "verified"
+    },
+    {
+      "path": ".tmux-task/stage42u-queue-smoke-20260928/exit.status",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 2,
+      "sha256": "9a271f2a916b0b6ee6cecb2426f0b3206ef074578be55d9bc94f6f3fe3ab86aa",
+      "hash_status": "verified"
+    },
+    {
+      "path": ".tmux-task/stage42u-queue-smoke-20260928/output.log",
+      "scope": "bundle",
+      "role": "log",
+      "size_bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "hash_status": "verified"
+    },
+    {
+      "path": ".tmux-task/stage42u-resultcheck-20260928-0400/exit.status",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 2,
+      "sha256": "9a271f2a916b0b6ee6cecb2426f0b3206ef074578be55d9bc94f6f3fe3ab86aa",
+      "hash_status": "verified"
+    },
+    {
+      "path": ".tmux-task/stage42u-resultcheck-20260928-0400/output.log",
+      "scope": "bundle",
+      "role": "log",
+      "size_bytes": 2121,
+      "sha256": "ef75cbf13483cbfb03795a8d81db2f9533bb3eeb3e07d0a026c768d15f5807bf",
+      "hash_status": "verified"
+    },
+    {
+      "path": ".tmux-task/stage42u-resultfiles-20260928-0700/exit.status",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 2,
+      "sha256": "9a271f2a916b0b6ee6cecb2426f0b3206ef074578be55d9bc94f6f3fe3ab86aa",
+      "hash_status": "verified"
+    },
+    {
+      "path": ".tmux-task/stage42u-resultfiles-20260928-0700/output.log",
+      "scope": "bundle",
+      "role": "log",
+      "size_bytes": 295,
+      "sha256": "402f0f05f656c0911c6cc66d42548cb57200af5178876b695faab2b26338e229",
+      "hash_status": "verified"
+    },
+    {
+      "path": ".tmux-task/stage42u-resultfiles2-20260928-0700/exit.status",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 2,
+      "sha256": "9a271f2a916b0b6ee6cecb2426f0b3206ef074578be55d9bc94f6f3fe3ab86aa",
+      "hash_status": "verified"
+    },
+    {
+      "path": ".tmux-task/stage42u-resultfiles2-20260928-0700/output.log",
+      "scope": "bundle",
+      "role": "log",
+      "size_bytes": 940,
+      "sha256": "1af37a07ed73165725c375449449e968f8dedaab52c9eb59e814fc39f357fa6a",
+      "hash_status": "verified"
+    },
+    {
+      "path": ".tmux-task/stage42u-status-file-probe-20260928/exit.status",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 2,
+      "sha256": "9a271f2a916b0b6ee6cecb2426f0b3206ef074578be55d9bc94f6f3fe3ab86aa",
+      "hash_status": "verified"
+    },
+    {
+      "path": ".tmux-task/stage42u-status-file-probe-20260928/output.log",
+      "scope": "bundle",
+      "role": "log",
+      "size_bytes": 6,
+      "sha256": "31d3e05408b1ffd971aa4df89007835d24ac28c177f5a47005baa6307ddc9499",
+      "hash_status": "verified"
+    },
+    {
+      "path": "__pycache__/finish_after_cache.cpython-310.pyc",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 3970,
+      "sha256": "03005c9a9a61a3c63a51a3bcd96d6625e75584e7ff5f82409512338430d14793",
+      "hash_status": "verified"
+    },
+    {
+      "path": "__pycache__/freeze_candidate.cpython-310.pyc",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 6383,
+      "sha256": "03627cbaa632744c3d77c7250db90fc2b0f3886fd99d8a62e55f918cbf6f8ac7",
+      "hash_status": "verified"
+    },
+    {
+      "path": "__pycache__/run_reused_stage42s.cpython-310.pyc",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 1476,
+      "sha256": "85142827ea65b41f355b2e3615ae31a1c8d962a02b9fc744ebf2f8f860ad086c",
+      "hash_status": "verified"
+    },
+    {
+      "path": "__pycache__/stage42u_common.cpython-310.pyc",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 2475,
+      "sha256": "8ae751ce9560d4d27cd2a150cbecee9908deca813f22dba56c76526b66b56cc7",
+      "hash_status": "verified"
+    },
+    {
+      "path": "candidate_protocol.json",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 3489,
+      "sha256": "89276f63f746c6b2ad7ab837776fcaed6e3570b985a24e77cc6cec700ed17cf2",
+      "hash_status": "verified"
+    },
+    {
+      "path": "candidate_unknown_manifest.csv",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 30705626,
+      "sha256": "b158b2bb751fa5fd61c18f34149411583b8ba3515d4ad0dc5d9d822a573cb37f",
+      "hash_status": "verified"
+    },
+    {
+      "path": "cicids2017_protocol_v2_audit.json",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 179,
+      "sha256": "d7aee546edbb84da45178495dc6c445da21eb0308aabb6c0c969b5fbee56ce5b",
+      "hash_status": "verified"
+    },
+    {
+      "path": "finish_after_cache.py",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 4270,
+      "sha256": "2e9d3b509edeb55c82175717fa915e2ddbaeaaf5c77b3c28e40ddcbaa721227a",
+      "hash_status": "verified"
+    },
+    {
+      "path": "freeze_candidate.py",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 6627,
+      "sha256": "a9c2dded4fc9be52641860e26d989dc9d931c7ba409acd12829559d7f6897ed9",
+      "hash_status": "verified"
+    },
+    {
+      "path": "progress.json",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 549,
+      "sha256": "fbe3e6dec014031577a96e6ee669fb99b0713a595edc6fed0c924f4fa8bd47c9",
+      "hash_status": "verified"
+    },
+    {
+      "path": "queue_progress.json",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 550,
+      "sha256": "d6a47991d9bb89169c4a54155f78abd214a1f903c0d785018e0982b451e933be",
+      "hash_status": "verified"
+    },
+    {
+      "path": "run_reused_stage42s.py",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 1296,
+      "sha256": "75de9fa043f1ff91b7977f50c3e26bd86a009b364f21639b29bd94ae0286cba3",
+      "hash_status": "verified"
+    },
+    {
+      "path": "stage42u_common.py",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 1733,
+      "sha256": "60a35899b6f0d45afaccdde20a4f69cb48b06de8c7f0f3e8e7d894d835e04694",
+      "hash_status": "verified"
+    },
+    {
+      "path": "unknown_hulk/detection/SUCCESS",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 8,
+      "sha256": "1f513d4ecec4e91ddd48da1a59b6d96f1b76c374dc1da641980782a34f43b102",
+      "hash_status": "verified"
+    },
+    {
+      "path": "unknown_hulk/detection/evaluation_audit.json",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 1079,
+      "sha256": "f01dd6d777962d14584af7c8f2f9b6faa8b58705f0a44b5031b9f57c749c22f1",
+      "hash_status": "verified"
+    },
+    {
+      "path": "unknown_hulk/detection/independent_verification.json",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 363,
+      "sha256": "236410cbbcf3ce29a343ea0171aa751177eabfb9de4b83d1b515026a54e00d1d",
+      "hash_status": "verified"
+    },
+    {
+      "path": "unknown_hulk/detection/known_test_closed_set.json",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 107,
+      "sha256": "ec2f4ec29aee406452c093d7de0bc4c7afc00196dc38cc4e079220af1582b872",
+      "hash_status": "verified"
+    },
+    {
+      "path": "unknown_hulk/detection/open_set_results.csv",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 2277,
+      "sha256": "9df2221f85d518607842d73e5b6af2206a95c0f6ebaaeda82ee76db65d0009df",
+      "hash_status": "verified"
+    },
+    {
+      "path": "unknown_hulk/detection/sample_scores.csv",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 22200445,
+      "sha256": "37bab6b20c60acb0697fe8852fb440995ecbd25a6df6cd002b153f2ccf83fb42",
+      "hash_status": "verified"
+    },
+    {
+      "path": "unknown_hulk/input_caches/ustc/A-2/tf_fig_test/cache_audit.json",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 609,
+      "sha256": "518aeafe4fc9eeaebc58592bff6acf12803dbc2adc4da9e4dc7e9647408b73b9",
+      "hash_status": "verified"
+    },
+    {
+      "path": "unknown_hulk/input_caches/ustc/A-2/tf_fig_test/fig_adj.npy",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 139651328,
+      "sha256": "0bf31ea5154f929fb6c8a9b4eb3f05884dae3b633fdcf22aa437392b7193e07b",
+      "hash_status": "verified"
+    },
+    {
+      "path": "unknown_hulk/input_caches/ustc/A-2/tf_fig_test/fig_mask.npy",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 4655168,
+      "sha256": "12613e31fc813941b6eac1ae3b8b57d247b572d6867c5f03c0eac57c520dd28d",
+      "hash_status": "verified"
+    },
+    {
+      "path": "unknown_hulk/input_caches/ustc/A-2/tf_fig_test/fig_x.npy",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 130341248,
+      "sha256": "358ef32999f91c47ed13aeb09233c37f723a057e36950e68be30e57296ec1a86",
+      "hash_status": "verified"
+    },
+    {
+      "path": "unknown_hulk/input_caches/ustc/A-2/tf_fig_test/flow_ids.npy",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 49653888,
+      "sha256": "ab2fa9091d45a8758e4d23383c71a39bf3ffa3c5c1121a749644660cf93c46cc",
+      "hash_status": "verified"
+    },
+    {
+      "path": "unknown_hulk/input_caches/ustc/A-2/tf_fig_test/segments.npy",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 49653888,
+      "sha256": "a5b1050257c6677b225c3caef244a10e9b18974483506870c871563391e38e82",
+      "hash_status": "verified"
+    },
+    {
+      "path": "unknown_hulk/input_caches/ustc/A-2/tf_fig_test/token_ids.npy",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 198615168,
+      "sha256": "33b50552b13ea1e484f16d29262ffb060110561eeef4b2f84ee2a3ef186685cd",
+      "hash_status": "verified"
+    },
+    {
+      "path": "unknown_hulk/input_caches/ustc/A-2/yatc_mfr_test/cache_audit.json",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 609,
+      "sha256": "518aeafe4fc9eeaebc58592bff6acf12803dbc2adc4da9e4dc7e9647408b73b9",
+      "hash_status": "verified"
+    },
+    {
+      "path": "unknown_hulk/input_caches/ustc/A-2/yatc_mfr_test/known_test_flow_ids.npy",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 49653888,
+      "sha256": "ab2fa9091d45a8758e4d23383c71a39bf3ffa3c5c1121a749644660cf93c46cc",
+      "hash_status": "verified"
+    },
+    {
+      "path": "unknown_hulk/input_caches/ustc/A-2/yatc_mfr_test/known_test_mfr.npy",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 248268928,
+      "sha256": "915ccc7ec79fb54d0895e3df29d4392ba0f2d63b5a9526ea827d2f48ed49ebec",
+      "hash_status": "verified"
+    }
+  ],
+  "limitations": [
+    "Post-hoc favorable-setting development diagnostic",
+    "Hulk is tied to one Wednesday PCAP and six five-minute groups",
+    "Capture/time/endpoint shortcuts may inflate performance",
+    "Natural AUPRC will have high Unknown prevalence",
+    "Single known encoder and single protocol seed"
+  ],
+  "next_step": "Stop at this completed diagnostic result; review all favorable CIC settings with their limitations before any new protocol"
+}

@@ -1,0 +1,46 @@
+{
+  "calibration_runtime": "CPU; same frozen adapters and head",
+  "checkpoint_hashes": {
+    "T0_equal_best.pt": "75aeced1c57aa7e1daea192640ff3baa36433d47cd7571c8ea9171e10c567048",
+    "adapters_best.pt": "35a224544be313333ac2a41967fb3bb6113d7daf62793398f2175e2bf91b2ef6",
+    "graph": "a7f4842eb61b4a3aee92384635214761e041ae27d7cf37823b1a591fb9e7e693",
+    "trafficformer": "94faf24de521c13bb4ac480a17d7e501559a9d41e9771ea4a1810dfb0b4ff74f",
+    "yatc": "d52534030cfebbebf0304a6a22110cc8d8a2f3ef885cbdbc5f2f9c0d0a668462"
+  },
+  "classes": [
+    "BENIGN",
+    "PortScan"
+  ],
+  "global_local_weights": [
+    0.5,
+    0.5
+  ],
+  "k": 10,
+  "known_train": 27698,
+  "known_validation": 1802,
+  "known_validation_metrics_replay": {
+    "accuracy": 0.9977802441731409,
+    "macro_f1": 0.9977802332356488,
+    "weighted_f1": 0.9977802332356488
+  },
+  "mad": {
+    "centroid": 0.2150297249188342,
+    "local": 0.0017655625357292594
+  },
+  "median": {
+    "centroid": 0.34396129159252276,
+    "local": 0.005631538550369441
+  },
+  "role_manifest_sha256": "6b6d78e3abd34eab2a3a2797d1fe9376b2a9a364078fa8ce677e2a6a876dd99a",
+  "status": "PASS",
+  "test_fitting_count": 0,
+  "threshold_rule": "Known-Val P95 method=higher; reject score>threshold",
+  "thresholds": {
+    "centroid": 0.6127115000943677,
+    "des_v1": 3.7212303254514656,
+    "energy": -4.9543356686655535,
+    "msp": 3.907900424404698e-05
+  },
+  "unit": "unknown_slowhttptest",
+  "unknown_fitting_count": 0
+}

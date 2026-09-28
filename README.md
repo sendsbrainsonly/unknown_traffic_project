@@ -1,6 +1,6 @@
 # Unknown Traffic / Unknown Attack Detection
 
-> **代码快照（2026-09-27）**：Stage 23–41 的新增实现与阶段性说明已纳入普通 Git；模型权重、原始/派生数据、逐样本预测和运行缓存仍只保留在本地。最新已核验的同流开集对照为 [Stage 41 单 seed USTC A-1/A-2/A-3](stage41_a123_matched_open_set_comparison/RESULTS.md)：三路方法仅在 A-2 的 AUROC/AUPRC 同时高于 Open-Detect，A-1/A-3 未形成稳定优势。[Stage 39](stage39_coarse_open_set_execution/RESULTS.md) 与依赖它的 [Stage 40 CIC 试验](stage40_ustc_cic_open_set/RESULTS.md) 尚未完成，不能把已有闭集指标写成 CIC 开集结果。下方“当前状态（2026-09-23）”为历史快照。
+> **代码快照（2026-09-28）**：Stage 23–43 的新增实现、轻量结果与完成性说明已纳入普通 Git；模型权重、原始/派生数据、逐样本预测和运行缓存仍只保留在本地。最新同流方法对照仍是 [Stage 41 单 seed USTC A-1/A-2/A-3](stage41_a123_matched_open_set_comparison/RESULTS.md)：三路方法仅在 A-2 的 AUROC/AUPRC 同时高于 Open-Detect，A-1/A-3 未形成稳定优势。随后 [Stage 40 CIC 两套角色](stage40_ustc_cic_open_set/RESULTS.md) 已完成，Stage 42 扩展到多个攻击类，[Stage 43](stage43_cic_mixed_prevalence/RESULTS.md) 完成了 300 个冻结分数组合的比例与类别组成压力测试；这些 CIC 结果均属于已暴露候选上的诊断性开发证据，不能称为 untouched external validation。下方“当前状态（2026-09-23）”为历史快照。
 
 面向未知流量 / 未知攻击检测（Open-Set）的研究项目。当前 evidence-based 主线为 **Persistent Local-Support Modeling**：
 

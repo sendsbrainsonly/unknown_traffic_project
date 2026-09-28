@@ -1,0 +1,14 @@
+{
+  "balanced_known_manifest_sha256": "6f00684e6d5565c10ce04d9e5c8727c7b49fbefc57bd2d0f635602d715e1124d",
+  "balanced_known_selected": 1228,
+  "balanced_unknown_selected": 1228,
+  "candidate_manifest_sha256": "b304556ae0de5043ef58cb1207f234bbb7fe08c7d784c51af51b611695aba24b",
+  "fix_code_sha256": "12e2822352a754d2c3f30b1e1d0585ab5c4d35254462652b3e895879d27ca1de",
+  "frozen_before_bot_packet_feature_access": true,
+  "known_role_manifest_sha256": "6b6d78e3abd34eab2a3a2797d1fe9376b2a9a364078fa8ce677e2a6a876dd99a",
+  "known_test_population": 2272,
+  "reason": "Earlier evaluator keeps all Known Test when Unknown Test < Known Test; this isolated implementation correction enforces the already-frozen 1:1 view without changing candidate IDs, natural scores, thresholds, or model.",
+  "selection_rule": "lowest SHA256(2022|balanced|flow_id), score-blind; Known Test IDs only",
+  "status": "PASS",
+  "unknown_test_population": 1228
+}

@@ -1,0 +1,15 @@
+{
+  "status": "PASS",
+  "unit": "unknown_portscan",
+  "replayed_methods": [
+    "msp",
+    "energy",
+    "centroid",
+    "des_v1"
+  ],
+  "sample_rows": 1400,
+  "known_test": 264,
+  "unknown_test": 1136,
+  "per_unknown_class_rows": 4,
+  "role_and_source_hashes_unchanged": true
+}

@@ -1,0 +1,180 @@
+{
+  "schema_version": 1,
+  "experiment_id": "stage40-cic-independent-resume-v2-20260927",
+  "created_at_utc": "2026-09-27T10:09:45Z",
+  "updated_at_utc": "2026-09-27T14:51:23Z",
+  "status": "success",
+  "experiment_type": "open-set-evaluation",
+  "claim_scope": "diagnostic",
+  "objective": "Finish both frozen CIC open-set pilots while correctly waiting for long-running child training jobs",
+  "inputs": [
+    {
+      "path": "../protocols.json",
+      "role": "frozen_protocol"
+    },
+    {
+      "path": "../unknown_portscan_roles.csv",
+      "role": "frozen_role_manifest"
+    },
+    {
+      "path": "../unknown_slowhttptest_roles.csv",
+      "role": "frozen_role_manifest"
+    }
+  ],
+  "code": {
+    "revision": "affc1241968e0cb9a13045c6d9a0c839eac560d8",
+    "dirty": true,
+    "changes": [
+      "../run_cic_independent.py (child-job polling fix)"
+    ]
+  },
+  "execution": {
+    "tmux_session": "stage40_cic_independent_v2_0927",
+    "command": "/home/birkenwald/data/SEU-WXY/conda_envs/2025-10-8-WXY-dgl_py310/bin/python stage40_ustc_cic_open_set/run_cic_independent.py --attempt-dir stage40_ustc_cic_open_set/cic_resume_20260927_v2 --wait-session stage40cic_unknown_portscan_trafficformer_1_0927",
+    "exit_code": 0,
+    "environment": "/home/birkenwald/data/SEU-WXY/conda_envs/2025-10-8-WXY-dgl_py310",
+    "physical_gpu_ids": [
+      0
+    ]
+  },
+  "configuration": {
+    "files": [
+      "../protocols.json",
+      "../run_cic_queue.py",
+      "../run_cic_independent.py"
+    ],
+    "parameters": {
+      "folds": [
+        "unknown_portscan",
+        "unknown_slowhttptest"
+      ],
+      "scores": [
+        "msp",
+        "energy",
+        "centroid",
+        "des_v1"
+      ],
+      "threshold": "Known-Val P95",
+      "max_concurrent_gpu_workloads": 1,
+      "unknown_fitting_count": 0
+    },
+    "seeds": [
+      2022
+    ]
+  },
+  "core_results": [
+    {
+      "dataset": "CIC-IDS-2017",
+      "unit": "unknown_portscan",
+      "method": "msp",
+      "known_test": 264,
+      "unknown_test": 1136,
+      "auroc": 0.8472444515578317,
+      "auprc": 0.9218735376732875,
+      "ufar_p95": 0.9515845070422535,
+      "known_frr_p95": 0.041666666666666664,
+      "status": "independent_replay_pass"
+    },
+    {
+      "dataset": "CIC-IDS-2017",
+      "unit": "unknown_portscan",
+      "method": "energy",
+      "known_test": 264,
+      "unknown_test": 1136,
+      "auroc": 0.719676963294921,
+      "auprc": 0.8676250866999835,
+      "ufar_p95": 0.9630281690140845,
+      "known_frr_p95": 0.01893939393939394,
+      "status": "independent_replay_pass"
+    },
+    {
+      "dataset": "CIC-IDS-2017",
+      "unit": "unknown_portscan",
+      "method": "centroid",
+      "known_test": 264,
+      "unknown_test": 1136,
+      "auroc": 0.28541133162612037,
+      "auprc": 0.7148048618128564,
+      "ufar_p95": 0.9568661971830986,
+      "known_frr_p95": 0.16287878787878787,
+      "status": "independent_replay_pass"
+    },
+    {
+      "dataset": "CIC-IDS-2017",
+      "unit": "unknown_portscan",
+      "method": "des_v1",
+      "known_test": 264,
+      "unknown_test": 1136,
+      "auroc": 0.46317821702944945,
+      "auprc": 0.7617193138048006,
+      "ufar_p95": 0.9480633802816901,
+      "known_frr_p95": 0.16666666666666666,
+      "status": "independent_replay_pass"
+    },
+    {
+      "dataset": "CIC-IDS-2017",
+      "unit": "unknown_slowhttptest",
+      "method": "msp",
+      "known_test": 2272,
+      "unknown_test": 132,
+      "auroc": 0.9548455505761844,
+      "auprc": 0.64637238485476,
+      "ufar_p95": 0.045454545454545456,
+      "known_frr_p95": 0.04929577464788732,
+      "status": "independent_replay_pass"
+    },
+    {
+      "dataset": "CIC-IDS-2017",
+      "unit": "unknown_slowhttptest",
+      "method": "energy",
+      "known_test": 2272,
+      "unknown_test": 132,
+      "auroc": 0.9504608141275755,
+      "auprc": 0.6198153571073372,
+      "ufar_p95": 0.07575757575757576,
+      "known_frr_p95": 0.0488556338028169,
+      "status": "independent_replay_pass"
+    },
+    {
+      "dataset": "CIC-IDS-2017",
+      "unit": "unknown_slowhttptest",
+      "method": "centroid",
+      "known_test": 2272,
+      "unknown_test": 132,
+      "auroc": 0.9625880281690141,
+      "auprc": 0.6305029935480375,
+      "ufar_p95": 0.045454545454545456,
+      "known_frr_p95": 0.05457746478873239,
+      "status": "independent_replay_pass"
+    },
+    {
+      "dataset": "CIC-IDS-2017",
+      "unit": "unknown_slowhttptest",
+      "method": "des_v1",
+      "known_test": 2272,
+      "unknown_test": 132,
+      "auroc": 0.9977526141698677,
+      "auprc": 0.9557590950728448,
+      "ufar_p95": 0.0,
+      "known_frr_p95": 0.07130281690140845,
+      "status": "independent_replay_pass"
+    }
+  ],
+  "artifacts": [
+    {
+      "path": "progress.json",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 313,
+      "sha256": "b0c2d6c1f37ac65144d626c262496e6ed4b500cd5945d5fd985fe16620a68092",
+      "hash_status": "verified"
+    }
+  ],
+  "limitations": [
+    "Single seed",
+    "Two Known classes per role",
+    "Attack/date/endpoint confounding possible",
+    "Slowhttptest Unknown Test contains 132 flows"
+  ],
+  "next_step": "No further experiment started; interpret as two single-seed diagnostic pilots and retain protocol unchanged"
+}

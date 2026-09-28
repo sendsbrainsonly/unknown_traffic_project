@@ -1,0 +1,6 @@
+{
+  "status": "FAILED",
+  "error": "RuntimeError('CIC worker failed; inspect stage40cic_unknown_portscan_trafficformer_1_0927: exit=124')",
+  "traceback": "Traceback (most recent call last):\n  File \"/home/birkenwald/data/SEU-WXY/WXY-SEU/TrafficClassifier/Projects/unknown_traffic_project/stage40_ustc_cic_open_set/run_cic_independent.py\", line 99, in execute\n    original.one(fold)\n  File \"/home/birkenwald/data/SEU-WXY/WXY-SEU/TrafficClassifier/Projects/unknown_traffic_project/stage40_ustc_cic_open_set/run_cic_queue.py\", line 107, in one\n    run(fold, component, [\"train_cic.py\", \"--key\", fold,\n  File \"/home/birkenwald/data/SEU-WXY/WXY-SEU/TrafficClassifier/Projects/unknown_traffic_project/stage40_ustc_cic_open_set/run_cic_independent.py\", line 72, in run\n    raise RuntimeError(f\"CIC worker failed; inspect {name}: exit={result.returncode}\")\nRuntimeError: CIC worker failed; inspect stage40cic_unknown_portscan_trafficformer_1_0927: exit=124\n",
+  "updated_at_utc": "2026-09-27T09:51:14.963928+00:00"
+}

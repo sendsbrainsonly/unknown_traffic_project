@@ -1,0 +1,46 @@
+{
+  "calibration_runtime": "CPU; same frozen adapters and head",
+  "checkpoint_hashes": {
+    "T0_equal_best.pt": "04d4a18f5ceb72eb58a4af196d8789d9cd8711010f1daa7a3b0b0378d95a8ea2",
+    "adapters_best.pt": "a923e4fe546865b3979f8ca949c6f2274752df18205613339f191f0d856e23d3",
+    "graph": "2d5c34c61922aea182c1c675c11f2d3fd06125d91c264e90d86d9211f80b25bd",
+    "trafficformer": "b1bb327e5ee37adc8606e8da758d84fb5c96fee6fb6e813844d82dce90c6ea7a",
+    "yatc": "b7c13f54ddfb1eb329616f6c9fe6dcfaecd8864aec9ed6018b174a41a4e1abcc"
+  },
+  "classes": [
+    "BENIGN",
+    "DoS Slowhttptest"
+  ],
+  "global_local_weights": [
+    0.5,
+    0.5
+  ],
+  "k": 10,
+  "known_train": 7818,
+  "known_validation": 2110,
+  "known_validation_metrics_replay": {
+    "accuracy": 1.0,
+    "macro_f1": 1.0,
+    "weighted_f1": 1.0
+  },
+  "mad": {
+    "centroid": 0.07249880509848824,
+    "local": 0.006236180081032216
+  },
+  "median": {
+    "centroid": 0.07759112175185057,
+    "local": 0.01373320510610938
+  },
+  "role_manifest_sha256": "ca0eb9bae57662b41342ec44e5e25006c8dd6105b74da95a4895018123043c89",
+  "status": "PASS",
+  "test_fitting_count": 0,
+  "threshold_rule": "Known-Val P95 method=higher; reject score>threshold",
+  "thresholds": {
+    "centroid": 1.4200118382766667,
+    "des_v1": 12.143955957767822,
+    "energy": -3.5382569122297207,
+    "msp": 0.001009955136005991
+  },
+  "unit": "unknown_portscan",
+  "unknown_fitting_count": 0
+}

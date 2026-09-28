@@ -1,0 +1,14 @@
+{
+  "status": "PASS",
+  "source_hashes_unchanged": true,
+  "runner_and_verifier_hashes_unchanged": true,
+  "mixtures_replayed": 300,
+  "metric_rows_replayed": 1200,
+  "membership_rows_checked": 600000,
+  "maximum_absolute_metric_error": 0.0,
+  "final_gate": "COMPOSITION_SENSITIVE",
+  "unknown_fitting_count": 0,
+  "test_fitting_count": 0,
+  "encoder_training_count": 0,
+  "pcap_reads": 0
+}

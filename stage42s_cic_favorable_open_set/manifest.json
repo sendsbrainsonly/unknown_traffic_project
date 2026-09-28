@@ -1,0 +1,385 @@
+{
+  "schema_version": 1,
+  "experiment_id": "stage42s-cic-slowloris-first-candidate-20260928",
+  "created_at_utc": "2026-09-28T01:47:14Z",
+  "updated_at_utc": "2026-09-28T10:01:55Z",
+  "status": "success",
+  "experiment_type": "open-set-evaluation",
+  "claim_scope": "diagnostic",
+  "objective": "Evaluate frozen BENIGN+PortScan three-view encoder with DoS slowloris as Unknown using Known-Val-only calibration",
+  "inputs": [
+    {
+      "path": "candidate_protocol.json",
+      "role": "frozen_candidate_protocol"
+    },
+    {
+      "path": "candidate_unknown_manifest.csv",
+      "role": "frozen_unknown_test_manifest",
+      "sha256": "908208f25c3e88a2b4153e538090ec222e24b8d21ce91cc6a08f447df4eca3f4"
+    },
+    {
+      "path": "../stage40_ustc_cic_open_set/unknown_slowhttptest_roles.csv",
+      "role": "frozen_known_roles",
+      "sha256": "6b6d78e3abd34eab2a3a2797d1fe9376b2a9a364078fa8ce677e2a6a876dd99a"
+    }
+  ],
+  "code": {
+    "revision": null,
+    "dirty": null,
+    "changes": [
+      "New isolated Stage42-S slowloris protocol freeze, raw-PCAP packet cache adapter, frozen evaluator, and independent replay; candidate module uses a unique namespace after a preserved failed import attempt; no Stage40 artifact modification"
+    ]
+  },
+  "execution": {
+    "tmux_session": "stage42s_slowloris_queue_20260928 (cache); stage42s_slowloris_eval_retry1_20260928 (inference; terminal after replay status-write bug); stage42s_slowloris-replay-20260928",
+    "command": "freeze protocol; build slowloris packet cache; frozen inference on physical GPU 0; independent metric replay. Cache and inference artifacts were produced, then two post-processing failures (namespace collision before inference on first attempt; duplicate status keyword after inference on retry) were preserved and repaired; final replay/completion session succeeded.",
+    "exit_code": 0,
+    "environment": "/home/birkenwald/data/SEU-WXY/conda_envs/2025-10-8-WXY-dgl_py310",
+    "physical_gpu_ids": [
+      0
+    ],
+    "sessions": [
+      {
+        "name": "stage42s_slowloris_queue_20260928",
+        "purpose": "cache build and first inference orchestration",
+        "status": "cache complete; queue exited nonzero after preserved import-collision failure",
+        "log": "../.tmux-task/stage42s_slowloris_queue_20260928/output.log"
+      },
+      {
+        "name": "stage42s_slowloris_eval_retry1_20260928",
+        "purpose": "resumed frozen inference",
+        "status": "scores written; orchestration exited nonzero on duplicate status argument",
+        "log": "../.tmux-task/stage42s_slowloris_eval_retry1_20260928/output.log"
+      },
+      {
+        "name": "stage42s-slowloris-replay-20260928",
+        "purpose": "independent metric replay and completion write",
+        "status": "PASS",
+        "exit_code": 0,
+        "log": "../.tmux-task/stage42s-slowloris-replay-20260928/output.log"
+      }
+    ]
+  },
+  "configuration": {
+    "files": [
+      "candidate_protocol.json",
+      "candidate_unknown_manifest.csv",
+      "freeze_candidate.py",
+      "build_unknown_cache.py",
+      "evaluate_candidate.py",
+      "verify_candidate.py"
+    ],
+    "parameters": {
+      "known_classes": [
+        "BENIGN",
+        "PortScan"
+      ],
+      "unknown_class": "DoS slowloris",
+      "unknown_test": 5709,
+      "threshold": "reused Stage40 Known-Validation P95",
+      "des_v1_k": 10,
+      "des_v1_weights": [
+        0.5,
+        0.5
+      ],
+      "unknown_fit_count": 0
+    },
+    "seeds": [
+      2022
+    ]
+  },
+  "core_results": [
+    {
+      "dataset": "CIC-IDS-2017",
+      "candidate": "DoS slowloris",
+      "view": "natural",
+      "method": "des_v1",
+      "known_test": 2272,
+      "unknown_test": 5709,
+      "auroc": 0.993049721961124,
+      "auprc": 0.9967240808159352,
+      "ufar": 0.0003503240497460151,
+      "known_frr": 0.07130281690140845,
+      "independent_replay": "PASS"
+    },
+    {
+      "dataset": "CIC-IDS-2017",
+      "candidate": "DoS slowloris",
+      "view": "balanced_1to1",
+      "method": "des_v1",
+      "known_test": 2272,
+      "unknown_test": 2272,
+      "auroc": 0.9929703385365007,
+      "auprc": 0.9917988662394329,
+      "ufar": 0.00044014084507042255,
+      "known_frr": 0.07130281690140845,
+      "independent_replay": "PASS"
+    }
+  ],
+  "artifacts": [
+    {
+      "path": "__pycache__/build_unknown_cache.cpython-310.pyc",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 2879,
+      "sha256": "005213d4d0cfa1345b39f43a3b877cda4136074370fc06277697f5f381e3edbe",
+      "hash_status": "verified"
+    },
+    {
+      "path": "__pycache__/common.cpython-310.pyc",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 2911,
+      "sha256": "e157f2977ed50795225be9132324bca008aab6fc093bd7236c689b185569562c",
+      "hash_status": "verified"
+    },
+    {
+      "path": "__pycache__/evaluate_candidate.cpython-310.pyc",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 7245,
+      "sha256": "23b0f65574a5b59ed0851a43874e6664421af8aedf3e28af1a737f60c3744d40",
+      "hash_status": "verified"
+    },
+    {
+      "path": "__pycache__/freeze_candidate.cpython-310.pyc",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 5159,
+      "sha256": "c1964c0296c17a50966d54c8579bc9a1f1786d2dad56870cc7ffcf28028a1d67",
+      "hash_status": "verified"
+    },
+    {
+      "path": "__pycache__/stage42s_common.cpython-310.pyc",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 3101,
+      "sha256": "43f741f285d39f01e698d222afe2beed6f8725a5c4bc5a8954dde8c8e57a8090",
+      "hash_status": "verified"
+    },
+    {
+      "path": "__pycache__/verify_candidate.cpython-310.pyc",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 4031,
+      "sha256": "6a16e821f0548f5874e5cf60f1a65a352bb9d799e0b4d5de7e99d7d0491d4a10",
+      "hash_status": "verified"
+    },
+    {
+      "path": "build_unknown_cache.py",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 2878,
+      "sha256": "669d999018bbb51d66fb17ac75c65230768d2e079860f3e330c277d4865e1943",
+      "hash_status": "verified"
+    },
+    {
+      "path": "candidate_protocol.json",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 2784,
+      "sha256": "1211175a220622093ce7ce1e424b3b8402812b6b73556e00dbe3ace5b63aa815",
+      "hash_status": "verified"
+    },
+    {
+      "path": "candidate_results.csv",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 1497,
+      "sha256": "bdff4c9a799500502c5ad916b19faf6cf20cc5c0f56dc213dce2d415c83664cd",
+      "hash_status": "verified"
+    },
+    {
+      "path": "candidate_unknown_manifest.csv",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 1154627,
+      "sha256": "908208f25c3e88a2b4153e538090ec222e24b8d21ce91cc6a08f447df4eca3f4",
+      "hash_status": "verified"
+    },
+    {
+      "path": "cicids2017_protocol_v2_audit.json",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 184,
+      "sha256": "abb8c6a35fa519df1736a24523665ec36679c125a73430b6c995d59a999634e2",
+      "hash_status": "verified"
+    },
+    {
+      "path": "evaluate_candidate.py",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 8185,
+      "sha256": "5d7ba682fc039d40f7f12a0b080c1646e46a802cf7ff23b1c9bf76985003eed9",
+      "hash_status": "verified"
+    },
+    {
+      "path": "freeze_candidate.py",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 5417,
+      "sha256": "e031784bd952a777012aab06e46d3141aec198200d2cc50f3860d116676af3b4",
+      "hash_status": "verified"
+    },
+    {
+      "path": "progress.json",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 550,
+      "sha256": "34beaf8a4e2e8f966f3111158f9852ba804d9f03f3b77ef2281d017a28ac4639",
+      "hash_status": "verified"
+    },
+    {
+      "path": "stage42s_common.py",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 2145,
+      "sha256": "eb3fd8d9ab255d4d5dd459ce7a9bf8d66dabed52017fc320195c12ba24fbf9ef",
+      "hash_status": "verified"
+    },
+    {
+      "path": "unknown_slowloris/detection/SUCCESS",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 8,
+      "sha256": "1f513d4ecec4e91ddd48da1a59b6d96f1b76c374dc1da641980782a34f43b102",
+      "hash_status": "verified"
+    },
+    {
+      "path": "unknown_slowloris/detection/evaluation_audit.json",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 1082,
+      "sha256": "6dd792a33b6f4ca5ee379f5242f81000c7c6083eba62111586cb82ab0ba2acda",
+      "hash_status": "verified"
+    },
+    {
+      "path": "unknown_slowloris/detection/independent_verification.json",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 364,
+      "sha256": "bb5183692873ebc92efa8849b991d4ddb6d556365b52199515420be59076cc6d",
+      "hash_status": "verified"
+    },
+    {
+      "path": "unknown_slowloris/detection/known_test_closed_set.json",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 107,
+      "sha256": "ec2f4ec29aee406452c093d7de0bc4c7afc00196dc38cc4e079220af1582b872",
+      "hash_status": "verified"
+    },
+    {
+      "path": "unknown_slowloris/detection/open_set_results.csv",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 2289,
+      "sha256": "fae284a8504359551056110d3859cb6fccb8de03be963cb1fc3ef127e443456c",
+      "hash_status": "verified"
+    },
+    {
+      "path": "unknown_slowloris/detection/sample_scores.csv",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 1145251,
+      "sha256": "97612010841301cd205308a14d9baa2010aa4d682def00548ca7aaa981edb691",
+      "hash_status": "verified"
+    },
+    {
+      "path": "unknown_slowloris/input_caches/ustc/A-2/tf_fig_test/cache_audit.json",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 610,
+      "sha256": "d58a03f99233d39b0979dac6e396e614c01b9033b468f2f451263557ad14954a",
+      "hash_status": "verified"
+    },
+    {
+      "path": "unknown_slowloris/input_caches/ustc/A-2/tf_fig_test/fig_adj.npy",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 5138228,
+      "sha256": "a6698fb06d001a2fbe3f0fa9ba06ee0500c6f755e0104856a0e776b0b7aab3ae",
+      "hash_status": "verified"
+    },
+    {
+      "path": "unknown_slowloris/input_caches/ustc/A-2/tf_fig_test/fig_mask.npy",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 171398,
+      "sha256": "631bf854155398fde6d639396df5553ddf5ced37db9da60ce3a31631d60cac56",
+      "hash_status": "verified"
+    },
+    {
+      "path": "unknown_slowloris/input_caches/ustc/A-2/tf_fig_test/fig_x.npy",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 4795688,
+      "sha256": "b72eb2a3fb2dcba866e95e78ea0d304f639a7fbce978589aa068d1b8fc6e6e1d",
+      "hash_status": "verified"
+    },
+    {
+      "path": "unknown_slowloris/input_caches/ustc/A-2/tf_fig_test/flow_ids.npy",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 1827008,
+      "sha256": "94621eb8647bbc7081011e4ef584dbc9b6757946d0d55bbca7daa5b331ef4011",
+      "hash_status": "verified"
+    },
+    {
+      "path": "unknown_slowloris/input_caches/ustc/A-2/tf_fig_test/segments.npy",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 1827008,
+      "sha256": "a3c891590b8b6b83650e877709e17fbd697da19b28a19670da84082e3f570b5d",
+      "hash_status": "verified"
+    },
+    {
+      "path": "unknown_slowloris/input_caches/ustc/A-2/tf_fig_test/token_ids.npy",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 7307648,
+      "sha256": "780c6d75102896472ac156f0e4d3b0ab70ed6f1d37d6472694a97f24944cb473",
+      "hash_status": "verified"
+    },
+    {
+      "path": "unknown_slowloris/input_caches/ustc/A-2/yatc_mfr_test/cache_audit.json",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 610,
+      "sha256": "d58a03f99233d39b0979dac6e396e614c01b9033b468f2f451263557ad14954a",
+      "hash_status": "verified"
+    },
+    {
+      "path": "unknown_slowloris/input_caches/ustc/A-2/yatc_mfr_test/known_test_flow_ids.npy",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 1827008,
+      "sha256": "94621eb8647bbc7081011e4ef584dbc9b6757946d0d55bbca7daa5b331ef4011",
+      "hash_status": "verified"
+    },
+    {
+      "path": "unknown_slowloris/input_caches/ustc/A-2/yatc_mfr_test/known_test_mfr.npy",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 9134528,
+      "sha256": "b11568f197a2222600c61d2d9a2f112207a93afa2b1366303716b53917234582",
+      "hash_status": "verified"
+    },
+    {
+      "path": "verify_candidate.py",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 3535,
+      "sha256": "ab2e728ecb940bd47b71efbe727315bf36a1c809a7ebcff451b9c8d1d8aed386",
+      "hash_status": "verified"
+    }
+  ],
+  "limitations": [
+    "Post-hoc favorable-setting development diagnostic",
+    "Slowloris is tied to one source PCAP and eight five-minute groups",
+    "Capture/time/endpoint shortcuts may inflate performance",
+    "Single known encoder and single protocol seed",
+    "Slowloris observed under the natural view is one test capture rather than independent capture replicates"
+  ],
+  "next_step": "Candidate 1 is complete; wait for user direction before starting another Unknown class"
+}

@@ -1,10 +1,10 @@
 # Current Project Status
 
-## 2026-09-27 status correction
+## 2026-09-28 status correction
 
-The newest verified same-flow comparison is [Stage 41](stage41_a123_matched_open_set_comparison/RESULTS.md), a single-seed USTC A-1/A-2/A-3 Open-Detect versus three-view DES-v1 diagnostic. The three-view method improves AUROC/AUPRC together only on A-2, not on A-1 or A-3. [Stage 39](stage39_coarse_open_set_execution/RESULTS.md) and its dependent [Stage 40 CIC queue](stage40_ustc_cic_open_set/RESULTS.md) stopped after an upstream VNAT fusion-worker failure; CIC open-set results do not yet exist. Stage 23–41 source and lightweight reports have been published without checkpoints, raw data, or prediction dumps. The 2026-09-23 sections below are preserved as a historical snapshot, not live status.
+The newest verified same-flow method comparison is [Stage 41](stage41_a123_matched_open_set_comparison/RESULTS.md), a single-seed USTC A-1/A-2/A-3 Open-Detect versus three-view DES-v1 diagnostic. The three-view method improves AUROC/AUPRC together only on A-2, not on A-1 or A-3. [Stage 40](stage40_ustc_cic_open_set/RESULTS.md) subsequently completed both frozen CIC roles, and Stage 42 evaluated additional CIC attack classes under the unchanged `BENIGN + PortScan` Known model and Known-Val P95 threshold. [Stage 43](stage43_cic_mixed_prevalence/RESULTS.md) independently replayed 300 frozen-score mixtures and found DES-v1 prevalence-stable but composition-sensitive (`COMPOSITION_SENSITIVE`). Stage 42/43 are post-hoc development diagnostics with attack/day/capture shortcut risk, not untouched external validation. Stage 23–43 source and lightweight reports are being published without checkpoints, raw data, caches, or prediction dumps. The 2026-09-23 sections below are preserved as a historical snapshot, not live status.
 
-Updated: 2026-09-23 UTC
+Historical snapshot updated: 2026-09-23 UTC
 
 ## Executive summary
 

@@ -1,0 +1,15 @@
+{
+  "status": "PASS",
+  "unit": "unknown_slowhttptest",
+  "replayed_methods": [
+    "msp",
+    "energy",
+    "centroid",
+    "des_v1"
+  ],
+  "sample_rows": 2404,
+  "known_test": 2272,
+  "unknown_test": 132,
+  "per_unknown_class_rows": 4,
+  "role_and_source_hashes_unchanged": true
+}

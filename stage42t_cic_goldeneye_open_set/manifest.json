@@ -1,0 +1,367 @@
+{
+  "schema_version": 1,
+  "experiment_id": "stage42t-cic-goldeneye-second-candidate-20260928",
+  "created_at_utc": "2026-09-28T02:10:25Z",
+  "updated_at_utc": "2026-09-28T02:23:42Z",
+  "status": "success",
+  "experiment_type": "open-set-evaluation",
+  "claim_scope": "diagnostic",
+  "objective": "Evaluate frozen BENIGN+PortScan three-view encoder with DoS GoldenEye as Unknown using Known-Val-only calibration",
+  "inputs": [
+    {
+      "path": "candidate_protocol.json",
+      "role": "frozen_candidate_protocol"
+    },
+    {
+      "path": "candidate_unknown_manifest.csv",
+      "role": "frozen_unknown_test_manifest",
+      "sha256": "630fd0b2ddf41b92670447f7a330023ce7585f2155b908feef9cb5521c05e0bf"
+    },
+    {
+      "path": "../stage40_ustc_cic_open_set/unknown_slowhttptest_roles.csv",
+      "role": "frozen_known_roles",
+      "sha256": "6b6d78e3abd34eab2a3a2797d1fe9376b2a9a364078fa8ce677e2a6a876dd99a"
+    }
+  ],
+  "code": {
+    "revision": null,
+    "dirty": null,
+    "changes": [
+      "Added isolated Stage42-T GoldenEye protocol freeze and path-rebinding runner; unchanged frozen Stage42-S extraction, scoring, and replay modules are reused by recorded SHA256",
+      "After completion, the runner was guarded against writing Stage42-S Python bytecode; prior/current cache hashes and unchanged source hashes are recorded in stage42s_cache_drift_audit.md"
+    ]
+  },
+  "execution": {
+    "tmux_session": "stage42t-freeze-20260928; stage42t-cache-20260928; stage42t-gpu-evaluate-20260928; stage42t-replay-20260928",
+    "command": "freeze GoldenEye candidate; build unchanged packet-view cache; select one live GPU for frozen inference; independently replay all method-by-view metrics",
+    "exit_code": 0,
+    "environment": "/home/birkenwald/data/SEU-WXY/conda_envs/2025-10-8-WXY-dgl_py310",
+    "physical_gpu_ids": [
+      0
+    ],
+    "sessions": [
+      {
+        "name": "stage42t-freeze-20260928",
+        "purpose": "freeze candidate protocol",
+        "exit_code": 0,
+        "log": "../.tmux-task/stage42t-freeze-20260928/output.log"
+      },
+      {
+        "name": "stage42t-cache-20260928",
+        "purpose": "build Unknown packet views",
+        "exit_code": 0,
+        "log": "../.tmux-task/stage42t-cache-20260928/output.log"
+      },
+      {
+        "name": "stage42t-gpu-evaluate-20260928",
+        "purpose": "frozen GPU scoring",
+        "exit_code": 0,
+        "log": "../.tmux-task/stage42t-gpu-evaluate-20260928/output.log"
+      },
+      {
+        "name": "stage42t-replay-20260928",
+        "purpose": "independent metric replay",
+        "exit_code": 0,
+        "log": "../.tmux-task/stage42t-replay-20260928/output.log"
+      }
+    ]
+  },
+  "configuration": {
+    "files": [
+      "candidate_protocol.json",
+      "candidate_unknown_manifest.csv",
+      "freeze_candidate.py",
+      "run_reused_stage42s.py",
+      "stage42t_common.py",
+      "verify_summary.py"
+    ],
+    "parameters": {
+      "known_classes": [
+        "BENIGN",
+        "PortScan"
+      ],
+      "unknown_class": "DoS GoldenEye",
+      "unknown_test": 7441,
+      "unknown_groups": 2,
+      "threshold": "reused Stage40 Known-Validation P95",
+      "des_v1_k": 10,
+      "des_v1_weights": [
+        0.5,
+        0.5
+      ],
+      "unknown_fit_count": 0
+    },
+    "seeds": [
+      2022
+    ]
+  },
+  "core_results": [
+    {
+      "dataset": "CIC-IDS-2017",
+      "candidate": "DoS GoldenEye",
+      "view": "natural",
+      "method": "des_v1",
+      "known_test": 2272,
+      "unknown_test": 7441,
+      "auroc": 0.969958450136378,
+      "auprc": 0.9771947301624287,
+      "ufar": 0.002419029700309098,
+      "known_frr": 0.07130281690140845,
+      "independent_replay": "PASS"
+    },
+    {
+      "dataset": "CIC-IDS-2017",
+      "candidate": "DoS GoldenEye",
+      "view": "balanced_1to1",
+      "method": "des_v1",
+      "known_test": 2272,
+      "unknown_test": 2272,
+      "auroc": 0.9700138551378695,
+      "auprc": 0.930665874829404,
+      "ufar": 0.0022007042253521128,
+      "known_frr": 0.07130281690140845,
+      "independent_replay": "PASS"
+    }
+  ],
+  "artifacts": [
+    {
+      "path": "__pycache__/freeze_candidate.cpython-310.pyc",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 6248,
+      "sha256": "b78d863b02bab65b41acff2f866833314ca017c3697d8e358d2b6b540280fc2a",
+      "hash_status": "verified"
+    },
+    {
+      "path": "__pycache__/run_reused_stage42s.cpython-310.pyc",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 1848,
+      "sha256": "8681d4d89a150d9ea9d8f9908e5341e2c75e02e18d63238bbe975ae06d847200",
+      "hash_status": "verified"
+    },
+    {
+      "path": "__pycache__/stage42t_common.cpython-310.pyc",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 2485,
+      "sha256": "2aa2f9625315c781fc472b5453f67214f72c51f39cb5ee5a537f203245fc075d",
+      "hash_status": "verified"
+    },
+    {
+      "path": "candidate_protocol.json",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 3357,
+      "sha256": "8b65024b9bea46a0491cf2d468a807dda68ada10297bd483d2d69e9882f8a807",
+      "hash_status": "verified"
+    },
+    {
+      "path": "candidate_results.csv",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 1473,
+      "sha256": "026238fcca476a5950ae295d8b9789f3b919f6c5c6823d46c8be3fbb39d94077",
+      "hash_status": "verified"
+    },
+    {
+      "path": "candidate_unknown_manifest.csv",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 1521216,
+      "sha256": "630fd0b2ddf41b92670447f7a330023ce7585f2155b908feef9cb5521c05e0bf",
+      "hash_status": "verified"
+    },
+    {
+      "path": "cicids2017_protocol_v2_audit.json",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 185,
+      "sha256": "f24d138c141483aab862c90858ceb1632048265eb0bfa6f168bd726feeb56e28",
+      "hash_status": "verified"
+    },
+    {
+      "path": "freeze_candidate.py",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 6465,
+      "sha256": "f0290cb02b1cff23277862006edd004f592c26129ce93a1f2626961020596c53",
+      "hash_status": "verified"
+    },
+    {
+      "path": "progress.json",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 550,
+      "sha256": "8f3c98bd13ade0e59126b5e0bf9336951a839191642ec815f745ea3c84692d37",
+      "hash_status": "verified"
+    },
+    {
+      "path": "run_reused_stage42s.py",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 1854,
+      "sha256": "70adb57274ec925e874c5484b6539199a6cfd50af6a6e86c912f7e3554d51e11",
+      "hash_status": "verified"
+    },
+    {
+      "path": "stage42s_cache_drift_audit.md",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 1714,
+      "sha256": "cd5c4cb509e4443184c4853229150fc3a941330e4c626d798d920b588f5b6f3b",
+      "hash_status": "verified"
+    },
+    {
+      "path": "stage42t_common.py",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 1738,
+      "sha256": "e1aaebed3c5969dee5fbbb945a2a466d58cb58d1686a5351b4a86bbf387bf460",
+      "hash_status": "verified"
+    },
+    {
+      "path": "unknown_goldeneye/detection/SUCCESS",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 8,
+      "sha256": "1f513d4ecec4e91ddd48da1a59b6d96f1b76c374dc1da641980782a34f43b102",
+      "hash_status": "verified"
+    },
+    {
+      "path": "unknown_goldeneye/detection/evaluation_audit.json",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 1082,
+      "sha256": "bd60b4efec649c0712580b5f50605fd54801d3eadd569b57f2dd13b89a7f0a75",
+      "hash_status": "verified"
+    },
+    {
+      "path": "unknown_goldeneye/detection/independent_verification.json",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 364,
+      "sha256": "8bdf77a3a7928d4e67cb12d9d6965b2d9b02319c5b5db14c1b1f1e4cfa5719d3",
+      "hash_status": "verified"
+    },
+    {
+      "path": "unknown_goldeneye/detection/known_test_closed_set.json",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 107,
+      "sha256": "ec2f4ec29aee406452c093d7de0bc4c7afc00196dc38cc4e079220af1582b872",
+      "hash_status": "verified"
+    },
+    {
+      "path": "unknown_goldeneye/detection/open_set_results.csv",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 2277,
+      "sha256": "a5b0b1144b4bdb726d031631aa1e810b54188d4c6d4d444b4f898eec8941da44",
+      "hash_status": "verified"
+    },
+    {
+      "path": "unknown_goldeneye/detection/sample_scores.csv",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 1404661,
+      "sha256": "61d44c2c2decc367e8b09d4615c906f6de3ded0dc5be9e7b03e1a1c8ff58c31d",
+      "hash_status": "verified"
+    },
+    {
+      "path": "unknown_goldeneye/input_caches/ustc/A-2/tf_fig_test/cache_audit.json",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 610,
+      "sha256": "138e61fb37e7f9a06ab8b60a00fcf5272df76a831536a5e6741a563ae75c12d1",
+      "hash_status": "verified"
+    },
+    {
+      "path": "unknown_goldeneye/input_caches/ustc/A-2/tf_fig_test/fig_adj.npy",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 6697028,
+      "sha256": "729e36df89a4ff116d5607e0e62b15acc3167220a4cb3cd1e27458e2702d3eb7",
+      "hash_status": "verified"
+    },
+    {
+      "path": "unknown_goldeneye/input_caches/ustc/A-2/tf_fig_test/fig_mask.npy",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 223358,
+      "sha256": "9f88952952ed51be76b7679ebb2a4f8cedcd4ffa0167c868e5d0552644adbeb0",
+      "hash_status": "verified"
+    },
+    {
+      "path": "unknown_goldeneye/input_caches/ustc/A-2/tf_fig_test/fig_x.npy",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 6250568,
+      "sha256": "17465d015702f2261da1192da4647c1d153746922f3d9c39e4068aff2a41995f",
+      "hash_status": "verified"
+    },
+    {
+      "path": "unknown_goldeneye/input_caches/ustc/A-2/tf_fig_test/flow_ids.npy",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 2381248,
+      "sha256": "6dbe57c9d967956ca38107ed2687a0246cf4d7c838d99001a9653e0f7f05d59a",
+      "hash_status": "verified"
+    },
+    {
+      "path": "unknown_goldeneye/input_caches/ustc/A-2/tf_fig_test/segments.npy",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 2381248,
+      "sha256": "446ace3a4d352bd9fab52db4fe3a5a3ee1bc539cb46cf72cc72f6276d7d9b930",
+      "hash_status": "verified"
+    },
+    {
+      "path": "unknown_goldeneye/input_caches/ustc/A-2/tf_fig_test/token_ids.npy",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 9524608,
+      "sha256": "747db637229ef2066c4317182103bc88bb838a61d40a4cc3e00e5eb1e3233776",
+      "hash_status": "verified"
+    },
+    {
+      "path": "unknown_goldeneye/input_caches/ustc/A-2/yatc_mfr_test/cache_audit.json",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 610,
+      "sha256": "138e61fb37e7f9a06ab8b60a00fcf5272df76a831536a5e6741a563ae75c12d1",
+      "hash_status": "verified"
+    },
+    {
+      "path": "unknown_goldeneye/input_caches/ustc/A-2/yatc_mfr_test/known_test_flow_ids.npy",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 2381248,
+      "sha256": "6dbe57c9d967956ca38107ed2687a0246cf4d7c838d99001a9653e0f7f05d59a",
+      "hash_status": "verified"
+    },
+    {
+      "path": "unknown_goldeneye/input_caches/ustc/A-2/yatc_mfr_test/known_test_mfr.npy",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 11905728,
+      "sha256": "53a73ab48a3e6f9234a596290586023dbefe68d067a7001f4e02caf57b8193bc",
+      "hash_status": "verified"
+    },
+    {
+      "path": "verify_summary.py",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 2903,
+      "sha256": "5e85b904b5c2a3eb6086413f40329f17341338e0902b73838630df777abf80c5",
+      "hash_status": "verified"
+    }
+  ],
+  "limitations": [
+    "Post-hoc favorable-setting development diagnostic",
+    "GoldenEye is tied to one Wednesday PCAP and two five-minute groups",
+    "Capture/time/endpoint shortcuts may inflate performance",
+    "Single known encoder and single protocol seed"
+  ],
+  "next_step": "Candidate 2 is complete; compare with first candidate and decide whether any later Unknown role merits testing"
+}

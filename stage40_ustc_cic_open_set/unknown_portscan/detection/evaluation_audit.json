@@ -1,0 +1,12 @@
+{
+  "checkpoint_hashes_unchanged": true,
+  "known_test": 264,
+  "known_train_support": 7818,
+  "known_validation_threshold": 2110,
+  "role_manifest_sha256": "ca0eb9bae57662b41342ec44e5e25006c8dd6105b74da95a4895018123043c89",
+  "status": "PASS",
+  "test_fit_count": 0,
+  "unit": "unknown_portscan",
+  "unknown_fit_count": 0,
+  "unknown_test": 1136
+}

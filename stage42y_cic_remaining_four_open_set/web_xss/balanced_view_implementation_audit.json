@@ -1,0 +1,11 @@
+{
+  "balanced_known_manifest_sha256": "e8e16ab33b9df1fe83faa0d33751348afd9efd32c123b3b5e31e69a571062d1f",
+  "balanced_known_selected": 629,
+  "balanced_unknown_selected": 629,
+  "candidate_manifest_sha256": "af8803c02d95b704384f0a4e38b9adb2fa60ab154e19d06067b3551bcea76afb",
+  "frozen_before_candidate_packet_feature_access": true,
+  "known_role_manifest_sha256": "6b6d78e3abd34eab2a3a2797d1fe9376b2a9a364078fa8ce677e2a6a876dd99a",
+  "reason": "frozen Stage42-S evaluator retains all Known rows when Unknown < Known; isolated correction enforces predeclared 1:1 view",
+  "selection_rule": "lowest SHA256(2022|balanced|flow_id), score-blind Known Test IDs",
+  "status": "PASS"
+}

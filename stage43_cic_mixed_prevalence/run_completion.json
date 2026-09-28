@@ -1,0 +1,22 @@
+{
+  "status": "PASS",
+  "completed_at_utc": "2026-09-28T09:42:28.646603+00:00",
+  "final_gate": "COMPOSITION_SENSITIVE",
+  "gate_checks": {
+    "prevalence_cells_pass": true,
+    "composition_cells_pass": false,
+    "all_balanced_pass": true,
+    "criteria": "mean AUROC>=0.95, mean UFAR<=0.10, mean Known FRR<=0.10"
+  },
+  "scenarios": 15,
+  "seeds": 20,
+  "mixtures": 300,
+  "mixture_membership_rows": 600000,
+  "run_metric_rows": 1200,
+  "per_unknown_class_rows": 10320,
+  "known_class_rows": 2400,
+  "unknown_fitting_count": 0,
+  "test_fitting_count": 0,
+  "encoder_training_count": 0,
+  "pcap_reads": 0
+}

@@ -1,0 +1,99 @@
+{
+  "schema_version": 1,
+  "experiment_id": "stage40-cic-independent-resume-20260927",
+  "created_at_utc": "2026-09-27T09:49:00Z",
+  "updated_at_utc": "2026-09-27T10:11:38Z",
+  "status": "failed",
+  "experiment_type": "open-set-evaluation",
+  "claim_scope": "diagnostic",
+  "objective": "Run both pre-frozen CIC-IDS-2017 leave-one-attack-out open-set pilots with Known-only training and validation P95 calibration",
+  "inputs": [
+    {
+      "path": "../protocols.json",
+      "role": "frozen_protocol"
+    },
+    {
+      "path": "../unknown_portscan_roles.csv",
+      "role": "frozen_role_manifest"
+    },
+    {
+      "path": "../unknown_slowhttptest_roles.csv",
+      "role": "frozen_role_manifest"
+    },
+    {
+      "path": "../unknown_portscan/input_caches/ustc/A-2",
+      "role": "known_train_validation_cache"
+    },
+    {
+      "path": "../unknown_slowhttptest/input_caches/ustc/A-2",
+      "role": "known_train_validation_cache"
+    }
+  ],
+  "code": {
+    "revision": "affc1241968e0cb9a13045c6d9a0c839eac560d8",
+    "dirty": true,
+    "changes": [
+      "../run_cic_independent.py (new isolated queue only)"
+    ]
+  },
+  "execution": {
+    "tmux_session": "stage40_cic_independent_0927",
+    "command": "/home/birkenwald/data/SEU-WXY/conda_envs/2025-10-8-WXY-dgl_py310/bin/python stage40_ustc_cic_open_set/run_cic_independent.py",
+    "exit_code": 124,
+    "environment": "/home/birkenwald/data/SEU-WXY/conda_envs/2025-10-8-WXY-dgl_py310",
+    "physical_gpu_ids": [
+      0
+    ]
+  },
+  "configuration": {
+    "files": [
+      "../protocols.json",
+      "../run_cic_queue.py",
+      "../run_cic_independent.py"
+    ],
+    "parameters": {
+      "folds": [
+        "unknown_portscan",
+        "unknown_slowhttptest"
+      ],
+      "unknown_scores": [
+        "msp",
+        "energy",
+        "centroid",
+        "des_v1"
+      ],
+      "threshold": "Known-Val P95",
+      "maximum_concurrent_gpu_workloads": 1,
+      "unknown_fitting_count": 0
+    },
+    "seeds": [
+      2022
+    ]
+  },
+  "core_results": [],
+  "artifacts": [
+    {
+      "path": "failure.json",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 1029,
+      "sha256": "0586562bb74ceda923937f31194fd3eff5d0a198b37e08669e89bf1517e6a974",
+      "hash_status": "verified"
+    },
+    {
+      "path": "progress.json",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 354,
+      "sha256": "d59647676524121baebb3ac4ed3ad3d6f0c75b0d203ef6817bdc87b18e3cda98",
+      "hash_status": "verified"
+    }
+  ],
+  "limitations": [
+    "Single seed",
+    "Two Known classes per role",
+    "Attack label may correlate with capture date/endpoint",
+    "Unknown Slowhttptest Test has 132 flows"
+  ],
+  "next_step": "Retain this failed coordinator attempt and resume its still-running child through the v2 coordinator"
+}
