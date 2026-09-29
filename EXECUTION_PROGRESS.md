@@ -2,7 +2,7 @@
 
 ## 2026-09-29 — Stage 44/44B 轻量代码重新发布
 
-状态：`in_progress / PUBLICATION_PREFLIGHT`。用户要求重新推送当前代码。已核对 Git 根目录为本项目、分支 `main`，本地 HEAD 与 GitHub SSH-443 远端 `main` 均为 `a600124ad0081123c33eeffbab863399f30f0b1a`。待发布范围限定 Stage44/44B 的新增源码、协议定义、实验报告、完成性元数据及小型汇总 CSV，并同步 README/CURRENT_PROGRESS/EXPERIMENT_RESULTS/PUBLIC_REPOSITORY_CONTENTS；明确排除 checkpoint、缓存、原始/派生数据、逐样本预测、tmux 日志和其他阶段的本地完成标记。下一步：精确暂存、大小与敏感信息检查、提交、非强制推送并核验远端 SHA。
+状态：`complete / CONTENT_SHA_REMOTE_VERIFIED`。用户要求重新推送当前代码。已核对 Git 根目录为本项目、分支 `main`，推送前本地与远端均为 `a600124ad0081123c33eeffbab863399f30f0b1a`。精确发布 54 个文件：Stage44/44B 的源码、协议定义、实验报告、完成性元数据及小型汇总 CSV，并同步 README/CURRENT_PROGRESS/EXPERIMENT_RESULTS/PUBLIC_REPOSITORY_CONTENTS；暂存 diff 约 419 KiB。19 个 Python 与 14 个 JSON 可解析，两份本地实验包 `--verify-hashes` PASS，敏感信息与禁用类型扫描通过。CSV 保持原始 CRLF 与实验哈希，Git 空白检查以 `core.whitespace=cr-at-eol` PASS。非强制推送内容提交 `4b4802eb09d684455c4096c61a2ed54d328ed237`，`git ls-remote` 已证实远端 `main` 与其一致。权重、缓存、原始/派生数据、逐样本预测、tmux 日志以及其他阶段完成标记均未发布、未删除。本进度记录作为后续轻量元数据提交同步；最终远端 SHA 仍以该提交推送后的独立核验为准。
 
 ## 2026-09-29 — Stage 44B 同协议 Open-Detect Native 对照
 
@@ -30,7 +30,7 @@ Stage44 terminal update 2026-09-29 UTC: `complete / INDEPENDENT_REPLAY_PASS`。�
 
 ### Current handoff (2026-09-29)
 
-Stage 44 与 Stage 44B 均已完成，队列无待运行组件。Stage 44B 的同协议 Open-Detect 对照数据已固定在 `stage44b_vnat_matched_opendetect/COMPARISON_RECORD.md`，四折原始 CSV、逐样本分数和核验文件仍在同目录；记录已通过数据/链接/哈希校验。后续如需新的研究结论，应先独立预注册协议，并结合 `split_audit.csv` 解释本次诊断结果。
+Stage 44 与 Stage 44B 均已完成，队列无待运行组件。Stage 44B 的同协议 Open-Detect 对照数据已固定在 `stage44b_vnat_matched_opendetect/COMPARISON_RECORD.md`；轻量源码/汇总已发布，逐样本分数、权重、缓存和日志仍留本地。内容提交 `4b4802eb09d684455c4096c61a2ed54d328ed237` 已与远端 `main` 一致；发布元数据补记提交后须再次核对最终远端 SHA。后续如需新的研究结论，应先独立预注册协议，并结合 `split_audit.csv` 解释本次诊断结果。
 
 ## 2026-09-28 — Stage 42/43 代码与轻量结果重新发布
 
