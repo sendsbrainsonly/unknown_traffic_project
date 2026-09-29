@@ -1,0 +1,18 @@
+{
+  "capture_overlap_count": 0,
+  "folds": 4,
+  "group_overlap_count": 0,
+  "protocol_sha256": "0fd8e1bea6a326fc31fb0ee8405c47d6551df131e2694d34a11869a935667792",
+  "role_manifest_sha256": "9d50cfe973c4d61be85232b6cc8472d008fc6081e2a8dc2b5ad1262ff64889a1",
+  "services": {
+    "communication": 2208,
+    "file_transfer": 5870,
+    "remote_access": 13607,
+    "streaming": 1764
+  },
+  "source_manifest_sha256": "66bf155e6906231b316c384a52f4b46dabd9d3aee76d5f66d86a3941eb172c4e",
+  "status": "PASS",
+  "unique_flows": 23449,
+  "unknown_train_usage": 0,
+  "unknown_validation_usage": 0
+}

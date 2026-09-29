@@ -1,0 +1,13 @@
+service,split,flows,flow_ratio,groups,captures,applications,vpn_flows,nonvpn_flows
+communication,train,1766,0.7998188405797102,47,90,skype;zoiper,344,1422
+communication,validation,221,0.10009057971014493,5,10,skype,5,216
+communication,test,221,0.10009057971014493,7,14,skype,7,214
+file_transfer,train,4514,0.7689948892674616,11,15,rsync;scp;sftp,8,4506
+file_transfer,validation,709,0.12078364565587735,1,1,sftp,0,709
+file_transfer,test,647,0.11022146507666099,2,2,rsync;sftp,1,646
+remote_access,train,11413,0.8387594620415962,6,10,rdp;ssh,7,11406
+remote_access,validation,1601,0.11766002792680239,1,2,ssh,1,1600
+remote_access,test,593,0.043580510031601384,3,6,ssh,3,590
+streaming,train,1425,0.8078231292517006,4,8,netflix;vimeo;youtube,4,1421
+streaming,validation,199,0.11281179138321995,2,3,youtube,1,198
+streaming,test,140,0.07936507936507936,1,1,netflix,0,140

@@ -1,0 +1,26 @@
+{
+  "folds_completed": 4,
+  "matched_test_flow_ids": true,
+  "native_metric_rows": 24,
+  "native_sample_score_rows": 36442,
+  "paired_metric_rows": 24,
+  "source_freeze_after": {
+    "freeze_hash": "0fd8e1bea6a326fc31fb0ee8405c47d6551df131e2694d34a11869a935667792",
+    "image_cache_sha256": "7f77952379e2462886f97a3434a725b4ce5508b0f37cb5020239a35c98d8eeee",
+    "image_uid_cache_sha256": "2d5a6f4cbe4bd3302c067a892c43a061ec89f5d2590059b294399b9fe5dcd358",
+    "role_manifest_sha256": "9d50cfe973c4d61be85232b6cc8472d008fc6081e2a8dc2b5ad1262ff64889a1",
+    "stage14b_source_manifest_sha256": "66bf155e6906231b316c384a52f4b46dabd9d3aee76d5f66d86a3941eb172c4e"
+  },
+  "source_freeze_before": {
+    "freeze_hash": "0fd8e1bea6a326fc31fb0ee8405c47d6551df131e2694d34a11869a935667792",
+    "image_cache_sha256": "7f77952379e2462886f97a3434a725b4ce5508b0f37cb5020239a35c98d8eeee",
+    "image_uid_cache_sha256": "2d5a6f4cbe4bd3302c067a892c43a061ec89f5d2590059b294399b9fe5dcd358",
+    "role_manifest_sha256": "9d50cfe973c4d61be85232b6cc8472d008fc6081e2a8dc2b5ad1262ff64889a1",
+    "stage14b_source_manifest_sha256": "66bf155e6906231b316c384a52f4b46dabd9d3aee76d5f66d86a3941eb172c4e"
+  },
+  "status": "PASS",
+  "test_threshold_samples": 0,
+  "unknown_threshold_samples": 0,
+  "unknown_training_samples": 0,
+  "unknown_validation_samples": 0
+}

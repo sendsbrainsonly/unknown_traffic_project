@@ -1,5 +1,37 @@
 # Unknown Traffic / Unknown Attack Detection 项目过程、实验计划修订与当前进度
 
+## 2026-09-29 — Stage 44/44B 轻量代码重新发布
+
+状态：`in_progress / PUBLICATION_PREFLIGHT`。用户要求重新推送当前代码。已核对 Git 根目录为本项目、分支 `main`，本地 HEAD 与 GitHub SSH-443 远端 `main` 均为 `a600124ad0081123c33eeffbab863399f30f0b1a`。待发布范围限定 Stage44/44B 的新增源码、协议定义、实验报告、完成性元数据及小型汇总 CSV，并同步 README/CURRENT_PROGRESS/EXPERIMENT_RESULTS/PUBLIC_REPOSITORY_CONTENTS；明确排除 checkpoint、缓存、原始/派生数据、逐样本预测、tmux 日志和其他阶段的本地完成标记。下一步：精确暂存、大小与敏感信息检查、提交、非强制推送并核验远端 SHA。
+
+## 2026-09-29 — Stage 44B 同协议 Open-Detect Native 对照
+
+数据记录追加（2026-09-29 UTC）：用户要求固定本次对照数据；已在实验目录新增 `COMPARISON_RECORD.md`，逐折记录样本数、Known Macro-F1、AUROC、AUPRC、Unknown F1、UFAR、Known FRR、四折均值、1:1 比例复核和结论边界，并从项目 `EXPERIMENT_RESULTS.md` 链接。仅整理已验证的 Stage44B CSV/核验文件，未重新训练、评估或修改冻结协议。状态：`complete / documented`。
+
+终态（2026-09-29 UTC）：`COMPLETE / INDEPENDENT_REPLAY_PASS`。四折 Native 训练均完成 100 epoch，最佳 checkpoint 保存；同 Stage44 逐流配对、Known-Val P95，四折自然比例均值 AUROC OD `0.7417` vs 三路 DES-v1 `0.9922`，Unknown F1 `0.3273` vs `0.9840`，UFAR `0.7219` vs `0.0109`。四折 Known Test Macro-F1 均值 `0.9958` vs `0.9987`。首次评估因 Native PIL/ToTensor 与适配层直接转 Tensor 的 1 条临界样本预测差异失败；保留 `queue_failure.json`、`evaluation_attempt1/`，仅修复 Stage44B 评估适配层，前三折 checkpoint 未重训，第四折按原 Native 配置训练。恢复 tmux `stage44b_od_native_exact_20260929` exit 0；独立重放 24 Native 指标行、24 配对行、36,442 样本分数，最大差 0；4 checkpoint 哈希和 Stage44 协议 freeze hash 前后 PASS。最终数据及限制见 `stage44b_vnat_matched_opendetect/RESULTS.md`。
+
+状态：`in_progress / KNOWN_INPUTS_VERIFIED`。用户要求在 Stage 44 的四个冻结 VNAT Service LOSO fold 上重新训练 Open-Detect，以便与三路 DES-v1 进行同流、同标签、同阈值规则配对比较。新实验目录 `stage44b_vnat_matched_opendetect/`，不修改 Stage 14B/44 的协议、模型和分数。Open-Detect 官方 F0 32×32 图像缓存与 Stage 44 的 23,449 个 flow UID 全量一一对应；四折 Known Train/Validation 数分别为 Communication `17,352/2,509`、File-Transfer `14,604/2,021`、Remote-Access `7,705/1,129`、Streaming `17,693/2,531`，输入审计均 PASS，Unknown/Test 未写入训练输入。复用 Stage 14C 已验证的 native Open-Detect 训练循环和 100 epoch 配置，只把输入角色及 service 标签路由到新目录；训练后用同一 Stage 44 Test flow ID 与 Known-Val P95 `score > threshold` 比较。当前尚未启动 GPU 训练、没有 Stage 44B Test 指标。下一步：实时选一张足够容量的物理 GPU，启动串行四折队列，完成后逐样本重放与哈希验收。
+
+Stage44B launch update 2026-09-29 UTC: `stage44b_od_single_gpu_20260929` 已在实时 GPU 选择后启动，物理 GPU0，最低可用显存要求 20 GiB；启动时 GPU0 空闲显存 45,469 MiB。串行队列进入 Communication native training，`queue_progress.json` 为 `RUNNING / 0 of 8 components`。四折 Known-only 输入审核及 Stage 14B/44 源哈希保持 PASS，尚无 Test 结果。只读监控：`stage44b_vnat_matched_opendetect/queue_progress.json` 与 `.tmux-task/stage44b_od_single_gpu_20260929/output.log`。
+
+Stage44B first-fold milestone 2026-09-29 UTC: Communication native training/evaluation 两个组件 PASS，100 epochs，best epoch 13，Known-Test Macro-F1 `0.996769`；在与 Stage44 完全相同的 1,380 Known Test + 2,208 Unknown Test flow 上，Native AUROC/AUPRC/Unknown-F1/UFAR/Known-FRR 为 `0.817614/0.859073/0.342395/0.788949/0.034783`，三路 DES-v1 为 `0.995450/0.995545/0.984828/0.000453/0.048551`。验证 checkpoint SHA256、角色哈希与输入源哈希一致，Unknown/Test 阈值拟合用量 0。File-Transfer 已启动；当前为首折临时结果，不写总体结论。
+
+## 2026-09-28 — Stage 44 VNAT 粗粒度 Service LOSO 开集实验
+
+状态：`in_progress / PROTOCOL_FREEZE`。按用户要求改为严格单卡串行执行。任务不覆盖 Stage 14/39：将 10 个 application 固定映射为 Streaming、File-Transfer、Communication、Remote-Access 四个语义 Service；建立四个 leave-one-service-out fold。Known 的 Train/Validation/Test 按 `group_id` 整组分配，禁止同一 capture/group 跨集合；Unknown Service 的全部 application、VPN/non-VPN flow 整体进入 Unknown Test。已确认旧 Stage 39 的 VNAT 失败不是模型错误，而是队列硬限制 GPU1 且当时空闲显存不足 25 GiB；旧协议同时仍以 application 为分类标签且使用 Stage14B 流级随机 split，因此只复用代码和可验证的底层缓存，不复用其正式结论。Stage44 独立目录：`stage44_vnat_coarse_service_loso_open_set/`。下一步为协议冻结、缓存覆盖审计、单卡分支训练、融合与 Known-Val-only P95 开集评估。
+
+Stage44 update 2026-09-28: protocol freeze and full 23,449-flow cache both PASS. All four folds are group/capture-disjoint and Unknown-Free. Initial training stopped before epoch 1 because Stage31 rejects a new protocol ID; failure evidence is preserved. Stage44 adapter now uses `medium_seed2025` only as a legacy path alias beneath each fold's isolated `stage44_native_runs/`; labels, membership and role hash still come from Stage44's `service_seed2022` manifest. The controller is being restarted on one live-selected GPU; no metrics are available yet.
+
+Stage44 live update 2026-09-28 12:29 UTC: cache alias and output namespace aligned; active tmux session `stage44_single_gpu_queue_v5_20260928`, selected physical GPU 5, serial queue 0/20 completed. Communication TrafficFormer is actively training (PID 296178, GPU5 ~32.7 GiB, 100% utilization; epoch metrics are only written when the 20-epoch training routine finishes). Source cache audits and all four frozen role manifests remain PASS. No Unknown/Test samples entered training.
+
+Stage44 live update 2026-09-28 12:35 UTC: Communication TrafficFormer has logged epochs 1 and 2; Known Validation Accuracy/Macro-F1 at epoch 2 are both 1.0000. This is a validation-only progress signal, not final Test evidence. GPU5 worker remains live and queue remains serial at job 1/20.
+
+Stage44 terminal update 2026-09-29 UTC: `complete / INDEPENDENT_REPLAY_PASS`。单卡 GPU5 串行队列在 2026-09-28 19:59 UTC 完成 20/20 个训练与评估组件，tmux 退出码 0；四个 Service LOSO fold 均 PASS。独立脚本 `stage44_vnat_coarse_service_loso_open_set/scripts/replay_saved_results.py` 从冻结 role manifest、Known Validation 和 36,442 条逐样本分数重算全部 96 行指标，最大绝对差 0；20 个 checkpoint SHA256 一致，group/capture 无跨 Known split，Unknown/Test 校准用量 0。Known Test Macro-F1 范围 `0.996908–1.000000`；DES-v1 自然比例四折平均 AUROC/AUPRC/UFAR/Known-FRR 为 `0.992224/0.994998/0.010907/0.044550`。结果属已开发 VNAT 上单 seed 的粗粒度诊断；Remote-Access 与 Streaming 的 group 分布失衡。文件见 `stage44_vnat_coarse_service_loso_open_set/RESULTS.md`、`completion_verification.json`、`independent_replay_verification.json`；未启动后续实验。
+
+### Current handoff (2026-09-29)
+
+Stage 44 与 Stage 44B 均已完成，队列无待运行组件。Stage 44B 的同协议 Open-Detect 对照数据已固定在 `stage44b_vnat_matched_opendetect/COMPARISON_RECORD.md`，四折原始 CSV、逐样本分数和核验文件仍在同目录；记录已通过数据/链接/哈希校验。后续如需新的研究结论，应先独立预注册协议，并结合 `split_audit.csv` 解释本次诊断结果。
+
 ## 2026-09-28 — Stage 42/43 代码与轻量结果重新发布
 
 状态：`complete / REMOTE_SHA_VERIFIED`。用户要求重新推送当前代码。起点核验确认 Git 根目录为本项目、分支为 `main`，GitHub `main` 与本地已提交 HEAD 同为 `affc1241968e0cb9a13045c6d9a0c839eac560d8`。Git 可见的本轮内容只有轻量源码、协议、报告与核验元数据；磁盘上的 checkpoint、原始/派生数据、缓存、CSV/逐样本预测和 tmux 日志均未进入暂存区。Stage40/42/43 共 9 个实验包的全部已记录哈希复核 PASS；暂存区 135 个文件、约 842 KiB，35 个 Python 文件语法解析、82 个 JSON 解析、入口链接、敏感模式、权重/数据后缀和 `git diff --check` 均 PASS。内容提交 `c6cf3d6f96a89fb2a8ad4c35201cb774b03b5d43` 已通过 GitHub SSH 443 非强制推送，并与远端 `main` SHA 逐字符一致。本记录作为发布交接收尾；不需要运行新实验。
@@ -1229,3 +1261,7 @@ Stage41 terminal record 2026-09-27: status `complete / PASS`, single seed 2022. 
 Stage41 closed/open documentation addendum 2026-09-27: status remains `complete / PASS`. On the frozen Known Test flows, Open-Detect versus three-view Macro-F1 is A-1 `0.977538/0.988065`, A-2 `0.978454/0.987649`, A-3 `0.996973/1.000000`. Open-Detect Macro-F1 was reconstructed from its existing per-flow Known Test predictions; stored Accuracy and Weighted-F1 matched the original `test_metrics.json` exactly. The paired closed/open table and balanced AUPRC values are now in `stage41_a123_matched_open_set_comparison/RESULTS.md`; source prediction files and `.tmux-task/stage41_closed_metrics_0927/output.log` remain available. No model or frozen score was rerun.
 
 Stage42-U terminal update 2026-09-28 03:54 UTC: status `complete / PASS`. The all-flow DoS Hulk cache emitted 155,168 Unknown Test flows, and frozen inference on physical GPU0 evaluated four methods against the unchanged 2,272 Known Test flows. DES-v1 natural AUROC/AUPRC/UFAR = `0.973767/0.998806/0.001134`; balanced 1:1 AUPRC = `0.928132`. Independent replay verified all eight method × view rows, the candidate manifest hash, and zero Unknown/Test fitting. The tmux cache and finish queue both exited 0. Results remain a post-hoc favorable-setting diagnostic; see `stage42u_cic_hulk_open_set/RESULTS.md` and its preserved score, CSV, cache, and log artifacts. No further experiment was launched.
+
+# 2026-09-28 — Stage44 single-GPU queue progress
+
+Status: `in_progress / FILE_TRANSFER_TF_TRAINING`. Active queue session is `stage44_single_gpu_queue_v5_20260928`, selected physical GPU 5, serial one-GPU policy. The frozen Stage44 protocol and full cache audit remain PASS (23,449 flows, full TF/MFR coverage, unknown/test used for training = 0). Communication's four training components and final evaluation passed; its verification reports 24 open-set metric rows, 6,097 score rows, Known-Test Accuracy/Macro-F1/Weighted-F1 all 1.000, Known-Val P95 calibration, and zero Unknown/Test threshold use. Queue progress is 5/20 components. File-Transfer TrafficFormer is at epoch 12/20 with Known-Val Accuracy/Macro-F1 both 1.000; physical GPU5 utilization is about 98% and memory use is 32.7 GiB. These are one-fold provisional results only. Continue existing process; do not restart or add GPUs. `RESULTS.md` and `manifest.json` record the current snapshot.

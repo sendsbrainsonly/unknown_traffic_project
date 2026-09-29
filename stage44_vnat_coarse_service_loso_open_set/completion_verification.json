@@ -1,0 +1,10 @@
+{
+  "expected_run_metric_rows": 96,
+  "folds_completed": 4,
+  "protocol_freeze_status": "PASS",
+  "run_metric_rows": 96,
+  "status": "PASS",
+  "test_threshold_samples": 0,
+  "unknown_training_samples": 0,
+  "unknown_validation_samples": 0
+}

@@ -1,0 +1,14 @@
+{
+  "folds": 4,
+  "matched_train_val_test_unknown_flow_ids": true,
+  "max_absolute_metric_difference": 0.0,
+  "replayed_native_metric_rows": 24,
+  "replayed_score_rows": 36442,
+  "status": "PASS",
+  "test_threshold_samples": 0,
+  "unknown_threshold_samples": 0,
+  "unknown_training_samples": 0,
+  "unknown_validation_samples": 0,
+  "verified_checkpoint_hashes": 4,
+  "verified_paired_rows": 24
+}

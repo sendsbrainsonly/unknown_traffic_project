@@ -1,0 +1,38 @@
+{
+  "fold_role_counts": {
+    "communication": {
+      "known_test": 1380,
+      "known_train": 17352,
+      "known_validation": 2509,
+      "unknown_test": 2208
+    },
+    "file_transfer": {
+      "known_test": 954,
+      "known_train": 14604,
+      "known_validation": 2021,
+      "unknown_test": 5870
+    },
+    "remote_access": {
+      "known_test": 1008,
+      "known_train": 7705,
+      "known_validation": 1129,
+      "unknown_test": 13607
+    },
+    "streaming": {
+      "known_test": 1461,
+      "known_train": 17693,
+      "known_validation": 2531,
+      "unknown_test": 1764
+    }
+  },
+  "folds": 4,
+  "max_absolute_metric_difference": 0.0,
+  "replayed_metric_rows": 96,
+  "score_rows": 36442,
+  "source": "saved scores, frozen membership and Known Validation only",
+  "status": "PASS",
+  "test_threshold_samples": 0,
+  "unknown_training_samples": 0,
+  "unknown_validation_samples": 0,
+  "verified_checkpoint_hashes": 20
+}

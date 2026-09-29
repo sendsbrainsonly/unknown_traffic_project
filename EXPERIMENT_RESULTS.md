@@ -1,5 +1,9 @@
 # Experiment result index
 
+- Stage44B matched Open-Detect Native versus Stage44 three-view DES-v1: **complete**. Four frozen VNAT Service-LOSO folds, seed 2022, same Test flow IDs and Known-Val P95: mean AUROC `0.7417 / 0.9922`, Unknown F1 `0.3273 / 0.9840`, UFAR `0.7219 / 0.0109` (OD / three-view). Independent replay and source hashes PASS; first-pass inference-adapter failure retained. [Data record](stage44b_vnat_matched_opendetect/COMPARISON_RECORD.md) · [Full experiment](stage44b_vnat_matched_opendetect/RESULTS.md).
+
+- Stage44 VNAT four-service LOSO open-set diagnostic (2026-09-29): single GPU5 serial run 20/20 PASS; all 96 metric rows and 20 checkpoint hashes independently verified. Known Test Macro-F1 `0.996908–1.000000`; DES-v1 natural four-fold mean AUROC/AUPRC/UFAR/Known-FRR `0.992224/0.994998/0.010907/0.044550`. Single seed and group imbalance limit interpretation. [Full results](stage44_vnat_coarse_service_loso_open_set/RESULTS.md).
+
 - Stage43 completion addendum (2026-09-28): 300 frozen-score mixtures and 600,000 memberships independently replayed PASS (1,200 metrics, max error 0). DES-v1 was prevalence-stable but composition-sensitive: all-balanced AUROC/UFAR `0.980976/0.067100`, authentication/web `0.995600/0`, Bot+DDoS `0.947600/0.338350`. Final Gate `COMPOSITION_SENSITIVE`. [Full results](stage43_cic_mixed_prevalence/RESULTS.md).
 
 - Stage43 CIC mixed-Unknown composition/prevalence stress test: running; score-only reuse of frozen Stage42-S–Y sample scores, no encoder/threshold fitting and no PCAP access. [Progress and eventual results](stage43_cic_mixed_prevalence/RESULTS.md).

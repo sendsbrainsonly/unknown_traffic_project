@@ -1,0 +1,41 @@
+{
+  "completed_components": [
+    {
+      "component": "training",
+      "elapsed_seconds": 767.7037162780762,
+      "fold": "communication",
+      "status": "PASS"
+    },
+    {
+      "component": "evaluation",
+      "elapsed_seconds": 5.033548355102539,
+      "fold": "communication",
+      "status": "PASS"
+    },
+    {
+      "component": "training",
+      "elapsed_seconds": 655.0435960292816,
+      "fold": "file_transfer",
+      "status": "PASS"
+    },
+    {
+      "component": "evaluation",
+      "elapsed_seconds": 5.320153474807739,
+      "fold": "file_transfer",
+      "status": "PASS"
+    },
+    {
+      "component": "training",
+      "elapsed_seconds": 372.2492723464966,
+      "fold": "remote_access",
+      "status": "PASS"
+    }
+  ],
+  "current": {
+    "component": "evaluation",
+    "fold": "remote_access"
+  },
+  "exception": "RuntimeError(\"evaluate_fold.py ('--fold', 'remote_access') exited 1\")",
+  "status": "FAILED",
+  "traceback": "Traceback (most recent call last):\n  File \"/home/birkenwald/data/SEU-WXY/WXY-SEU/TrafficClassifier/Projects/unknown_traffic_project/stage44b_vnat_matched_opendetect/scripts/run_single_gpu_queue.py\", line 70, in main\n    run(script, *arguments)\n  File \"/home/birkenwald/data/SEU-WXY/WXY-SEU/TrafficClassifier/Projects/unknown_traffic_project/stage44b_vnat_matched_opendetect/scripts/run_single_gpu_queue.py\", line 29, in run\n    raise RuntimeError(f\"{script} {args} exited {completed.returncode}\")\nRuntimeError: evaluate_fold.py ('--fold', 'remote_access') exited 1\n"
+}

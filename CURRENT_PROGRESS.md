@@ -1,5 +1,9 @@
 # Current Project Status
 
+## 2026-09-29 status correction
+
+The latest completed same-protocol comparison is [Stage 44B](stage44b_vnat_matched_opendetect/COMPARISON_RECORD.md) against the frozen [Stage 44](stage44_vnat_coarse_service_loso_open_set/RESULTS.md) VNAT four-service LOSO experiment. On identical Test flow IDs with separate Known-Validation P95 calibration, four-fold mean AUROC is Open-Detect Native `0.7417` versus three-view DES-v1 `0.9922`; Unknown F1 is `0.3273` versus `0.9840`. Both experiments completed independent score replay and freeze-hash checks. This is a single-seed development diagnostic, not an untouched external validation or a same-encoder detector ablation. The older 2026-09-28 and 2026-09-23 sections below remain historical snapshots. No Stage 44/44B training queue is active.
+
 ## 2026-09-28 status correction
 
 The newest verified same-flow method comparison is [Stage 41](stage41_a123_matched_open_set_comparison/RESULTS.md), a single-seed USTC A-1/A-2/A-3 Open-Detect versus three-view DES-v1 diagnostic. The three-view method improves AUROC/AUPRC together only on A-2, not on A-1 or A-3. [Stage 40](stage40_ustc_cic_open_set/RESULTS.md) subsequently completed both frozen CIC roles, and Stage 42 evaluated additional CIC attack classes under the unchanged `BENIGN + PortScan` Known model and Known-Val P95 threshold. [Stage 43](stage43_cic_mixed_prevalence/RESULTS.md) independently replayed 300 frozen-score mixtures and found DES-v1 prevalence-stable but composition-sensitive (`COMPOSITION_SENSITIVE`). Stage 42/43 are post-hoc development diagnostics with attack/day/capture shortcut risk, not untouched external validation. Stage 23–43 source and lightweight reports have been published without checkpoints, raw data, caches, or prediction dumps. The 2026-09-23 sections below are preserved as a historical snapshot, not live status.

@@ -1,0 +1,115 @@
+{
+  "dataset": "VNAT",
+  "folds": {
+    "communication": {
+      "capture_overlap_count": 0,
+      "counts": {
+        "known_test": 1380,
+        "known_train": 17352,
+        "known_validation": 2509,
+        "unknown_test": 2208
+      },
+      "fold": "communication",
+      "group_overlap_count": 0,
+      "known_services": [
+        "file_transfer",
+        "remote_access",
+        "streaming"
+      ],
+      "role_manifest_sha256": "3c0bf2030df975add1826b754b3051dfd78c905717dd999c633408da5b2bec0f",
+      "status": "FROZEN_PRETRAIN",
+      "unknown_service": "communication",
+      "unknown_training_samples": 0,
+      "unknown_validation_samples": 0
+    },
+    "file_transfer": {
+      "capture_overlap_count": 0,
+      "counts": {
+        "known_test": 954,
+        "known_train": 14604,
+        "known_validation": 2021,
+        "unknown_test": 5870
+      },
+      "fold": "file_transfer",
+      "group_overlap_count": 0,
+      "known_services": [
+        "communication",
+        "remote_access",
+        "streaming"
+      ],
+      "role_manifest_sha256": "d1d0b05ea3674f672695a0b073e74562f2d14c0d6d1c92debe9bc9e6c26bebe8",
+      "status": "FROZEN_PRETRAIN",
+      "unknown_service": "file_transfer",
+      "unknown_training_samples": 0,
+      "unknown_validation_samples": 0
+    },
+    "remote_access": {
+      "capture_overlap_count": 0,
+      "counts": {
+        "known_test": 1008,
+        "known_train": 7705,
+        "known_validation": 1129,
+        "unknown_test": 13607
+      },
+      "fold": "remote_access",
+      "group_overlap_count": 0,
+      "known_services": [
+        "communication",
+        "file_transfer",
+        "streaming"
+      ],
+      "role_manifest_sha256": "f0a1f2a4e9a7849abd4bac766d5bc7b316e06e5979e4aebacf6ea3236e71cecd",
+      "status": "FROZEN_PRETRAIN",
+      "unknown_service": "remote_access",
+      "unknown_training_samples": 0,
+      "unknown_validation_samples": 0
+    },
+    "streaming": {
+      "capture_overlap_count": 0,
+      "counts": {
+        "known_test": 1461,
+        "known_train": 17693,
+        "known_validation": 2531,
+        "unknown_test": 1764
+      },
+      "fold": "streaming",
+      "group_overlap_count": 0,
+      "known_services": [
+        "communication",
+        "file_transfer",
+        "remote_access"
+      ],
+      "role_manifest_sha256": "514e98aad2c608aef0be8cead41d38d2bc1f0951e09d417bae959bf6a75dd7d4",
+      "status": "FROZEN_PRETRAIN",
+      "unknown_service": "streaming",
+      "unknown_training_samples": 0,
+      "unknown_validation_samples": 0
+    }
+  },
+  "seed": 2022,
+  "service_manifest_sha256": "f0b29754d2e9f7d257a1865c4aaa4036530e4975ab4e7e5fffa57fc5f18a01e8",
+  "source_manifest": "/home/birkenwald/data/SEU-WXY/WXY-SEU/TrafficClassifier/Projects/unknown_traffic_project/stage14b_vnat_protocol_freeze/vnat_split_manifest.csv",
+  "source_manifest_sha256": "66bf155e6906231b316c384a52f4b46dabd9d3aee76d5f66d86a3941eb172c4e",
+  "split_unit": "group_id",
+  "status": "FROZEN_PRETRAIN",
+  "taxonomy": {
+    "communication": [
+      "skype",
+      "zoiper"
+    ],
+    "file_transfer": [
+      "rsync",
+      "scp",
+      "sftp"
+    ],
+    "remote_access": [
+      "ssh",
+      "rdp"
+    ],
+    "streaming": [
+      "netflix",
+      "vimeo",
+      "youtube"
+    ]
+  }
+}

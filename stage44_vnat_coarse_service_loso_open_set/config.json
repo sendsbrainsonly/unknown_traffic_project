@@ -1,0 +1,24 @@
+{
+  "experiment_id": "STAGE44",
+  "dataset": "VNAT",
+  "seed": 2022,
+  "execution": "single_gpu_serial",
+  "source_manifest": "stage14b_vnat_protocol_freeze/vnat_split_manifest.csv",
+  "source_protocol_id_for_unique_pool": "low_seed2022",
+  "service_taxonomy": {
+    "streaming": ["netflix", "vimeo", "youtube"],
+    "file_transfer": ["rsync", "scp", "sftp"],
+    "communication": ["skype", "zoiper"],
+    "remote_access": ["ssh", "rdp"]
+  },
+  "known_split_target": {
+    "train": 0.8,
+    "validation": 0.1,
+    "test": 0.1
+  },
+  "split_unit": "group_id",
+  "folds": ["streaming", "file_transfer", "communication", "remote_access"],
+  "thresholds": [90, 95, 99],
+  "primary_threshold": 95,
+  "evaluation_views": ["natural", "balanced_1to1"]
+}

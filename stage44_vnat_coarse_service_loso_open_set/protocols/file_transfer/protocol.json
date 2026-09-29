@@ -1,0 +1,21 @@
+{
+  "capture_overlap_count": 0,
+  "counts": {
+    "known_test": 954,
+    "known_train": 14604,
+    "known_validation": 2021,
+    "unknown_test": 5870
+  },
+  "fold": "file_transfer",
+  "group_overlap_count": 0,
+  "known_services": [
+    "communication",
+    "remote_access",
+    "streaming"
+  ],
+  "role_manifest_sha256": "d1d0b05ea3674f672695a0b073e74562f2d14c0d6d1c92debe9bc9e6c26bebe8",
+  "status": "FROZEN_PRETRAIN",
+  "unknown_service": "file_transfer",
+  "unknown_training_samples": 0,
+  "unknown_validation_samples": 0
+}
