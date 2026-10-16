@@ -1,0 +1,46 @@
+{
+  "status": "COMPLETE",
+  "verified_in": "VS Code Markdown Preview",
+  "files": [
+    {
+      "path": "/Volumes/wxybboy-1T/Ph.D/unknown traffic/paper/md/ch4/1.md",
+      "bytes": 38019,
+      "sha256": "f59f4bac895215686602432591e81d80d6a572087d498acc316c2785cc4b854e"
+    },
+    {
+      "path": "/Volumes/wxybboy-1T/Ph.D/unknown traffic/paper/picture/ch4/20261016-experiment-figures-v1/verify_figures.py",
+      "bytes": 9131,
+      "sha256": "4b7cf1db814afd11145428297aa74ff56662d877f43e9616bd0d754749c1bc75"
+    },
+    {
+      "path": "/Volumes/wxybboy-1T/Ph.D/unknown traffic/paper/picture/ch4/20261016-experiment-figures-v1/EXPERIMENT_README.md",
+      "bytes": 8472,
+      "sha256": "1a918212e72ff6750c813b8e5ebe14d188ca5e4b5520698a009caf0a44391848"
+    },
+    {
+      "path": "/Volumes/wxybboy-1T/Ph.D/unknown traffic/paper/picture/ch4/20261016-experiment-figures-v1/display-fix-20261016/README.md",
+      "bytes": 1927,
+      "sha256": "89609bd2eb00c6b588e7d586153898772d2e0430e746859742a4428c58406a8d"
+    },
+    {
+      "path": "/Volumes/wxybboy-1T/Ph.D/unknown traffic/paper/picture/ch4/20261016-experiment-figures-v1/display-fix-20261016/manuscript-before.md",
+      "bytes": 38320,
+      "sha256": "9893626406812c904dda1edb3c13cf3d63e8ed2d524ba7c7e9155ed4969038da"
+    },
+    {
+      "path": "/Volumes/wxybboy-1T/Ph.D/unknown traffic/paper/picture/ch4/20261016-experiment-figures-v1/display-fix-20261016/verification.json",
+      "bytes": 4905,
+      "sha256": "2e6ee1dc6105f8ef52640ac10729272471c464f78681121efc1717f0a73e6db4"
+    },
+    {
+      "path": "/Volumes/wxybboy-1T/Ph.D/unknown traffic/paper/picture/ch4/20261016-experiment-figures-v1/display-fix-20261016/verification.log",
+      "bytes": 392,
+      "sha256": "698cbae59b6f2624f30563bbe7da49776837412121e5feca5985844d1b2bd362"
+    },
+    {
+      "path": "/Volumes/wxybboy-1T/Ph.D/unknown traffic/paper/picture/ch4/20261016-experiment-figures-v1/display-fix-20261016/verify_figures-before.py",
+      "bytes": 8941,
+      "sha256": "0780d778d87dd27270e9fcf7be448969fb2e7110995c2127f90f993a27dd9b78"
+    }
+  ]
+}

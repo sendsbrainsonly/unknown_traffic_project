@@ -1,5 +1,7 @@
 # Unknown Traffic / Unknown Attack Detection
 
+> **论文更新（2026-10-16）**：新增[第3章方法稿](paper/md/ch3/1.md)、[第4章实验结果与分析](paper/md/ch4/1.md)及[实验图件与绘图源码](paper/picture/ch4/20261016-experiment-figures-v1/EXPERIMENT_README.md)。第4章包含已知类别识别、六种外部方法对照、未知类识别、11张结果表和7幅数据图；图件提供PDF、SVG与300 dpi PNG，并保留汇总数据及核验回执。当前正文使用相对图片路径，便于在GitHub和本地Markdown预览中查看。此次更新整理已有实验，未新增模型训练。
+
 > **代码快照（2026-09-29）**：新增 [Stage 44 VNAT 四服务 LOSO 三路方法](stage44_vnat_coarse_service_loso_open_set/RESULTS.md)及 [Stage 44B 同协议 Open-Detect Native 对照](stage44b_vnat_matched_opendetect/COMPARISON_RECORD.md)。两者使用相同的冻结 Test flow ID、单 seed 和 Known-Val P95；四折 AUROC 均值为 Open-Detect `0.7417`、三路 DES-v1 `0.9922`，但输入特征与 encoder 不同，不能把全部差距归因于检测头。VNAT 已用于方法开发，不是 untouched external validation。普通 Git 仅收录源码、协议、轻量汇总与核验说明；模型权重、原始/派生数据、逐样本分数和运行缓存仍留在本地。下方“当前状态（2026-09-23）”为历史快照。
 
 面向未知流量 / 未知攻击检测（Open-Set）的研究项目。当前 evidence-based 主线为 **Persistent Local-Support Modeling**：

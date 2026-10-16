@@ -10,6 +10,8 @@ This repository is a reproducibility and evidence index, not a copy of the compl
 - stage-level `README.md` and `RESULTS.md` files;
 - stage-level `manifest.json`, completion verification and small summary metadata;
 - selected small aggregate metrics needed to support claims in the documentation.
+- authored paper drafts, the method Word document, scientific figure exports,
+  plotting/verification scripts, and small frozen aggregate chart data under `paper/`.
 
 ## Kept project-local
 
@@ -20,6 +22,8 @@ This repository is a reproducibility and evidence index, not a copy of the compl
 - complete per-run directories, optimizer histories and launcher logs;
 - failed/interrupted binary artifacts;
 - tmux runtime logs and mutable queue/progress files.
+- local session/context records, installed skill libraries, reference-paper PDFs,
+  operating-system metadata and figure-generation console logs.
 
 These files are not deleted. Their paths, hashes and roles remain recorded in stage manifests and result documents where available.
 

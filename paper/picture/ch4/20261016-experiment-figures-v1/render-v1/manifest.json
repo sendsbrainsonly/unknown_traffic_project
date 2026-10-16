@@ -1,0 +1,147 @@
+{
+  "status": "RENDERED_AWAITING_VISUAL_REVIEW",
+  "created_utc": "2026-10-16T13:21:19.821337+00:00",
+  "python": "3.12.14",
+  "matplotlib": "3.11.2",
+  "numpy": "2.3.5",
+  "figure_count": 7,
+  "numeric_records": 173,
+  "records_per_figure": {
+    "fig4_1": 14,
+    "fig4_2": 8,
+    "fig4_3": 32,
+    "fig4_4": 48,
+    "fig4_5": 30,
+    "fig4_6": 23,
+    "fig4_7": 18
+  },
+  "source_hash_checks": {
+    "stage23b_tfe_trident_same_flow_adaptation/stage23b_all_methods_comparison.md": true,
+    "stage32_three_dataset_coarse_single_seed/stage32_report.md": true,
+    "stage44b_vnat_matched_opendetect/matched_comparison.csv": true,
+    "stage44_vnat_coarse_service_loso_open_set/stage44_run_results.csv": true,
+    "stage42s_cic_favorable_open_set/RESULTS.md": true,
+    "stage42t_cic_goldeneye_open_set/RESULTS.md": true,
+    "stage42u_cic_hulk_open_set/RESULTS.md": true,
+    "stage42x_cic_ftp_patator_open_set/RESULTS.md": true,
+    "stage42v_cic_ddos_open_set/RESULTS.md": true,
+    "stage42w_cic_bot_open_set/RESULTS.md": true,
+    "stage42y_cic_remaining_four_open_set/RESULTS.md": true,
+    "stage43_cic_mixed_prevalence/stage43_mixed_open_set_report.md": true,
+    "stage41_a123_matched_open_set_comparison/comparison_report.md": true
+  },
+  "script_sha256": "9214b8cc283fea1da789299ef89a4005fc954ce926e318fff152e96d6c2ab424",
+  "outputs": [
+    {
+      "path": "fig4_1_closed_baselines.pdf",
+      "sha256": "d6fa06cacd9b52907bd08ec6f095fc1cba3f3716f4d0a4cb208beb034fab7c3f",
+      "bytes": 20456
+    },
+    {
+      "path": "fig4_1_closed_baselines.svg",
+      "sha256": "8a0cb161f9e309bf6d1f6484356aeab06b8bbab61a1be84ea0340f7795bec044",
+      "bytes": 24933
+    },
+    {
+      "path": "fig4_1_closed_baselines.png",
+      "sha256": "e6e25d61eece88062489a14ccc5a41a1ae786d5b42096cdfd7bb680579b954c3",
+      "bytes": 143432
+    },
+    {
+      "path": "fig4_2_current_closed.pdf",
+      "sha256": "11904f8f91a9023621fd9f03f6ecfe4e581b9075c7b1f5e3711cd1e54d0d9c8b",
+      "bytes": 14145
+    },
+    {
+      "path": "fig4_2_current_closed.svg",
+      "sha256": "fad014785ebc1df284478c9bd2515e0c8ac73eb997e328adc85ccad706bb949b",
+      "bytes": 15513
+    },
+    {
+      "path": "fig4_2_current_closed.png",
+      "sha256": "f480554c91208c6555d2d3e3521aaafce39858722ff9fb55e656d216e848cd61",
+      "bytes": 107637
+    },
+    {
+      "path": "fig4_3_vnat_matched.pdf",
+      "sha256": "c9d87f375c89c9aa6773997c8d775915d073a57c3677aabc4ea646dc32b6723c",
+      "bytes": 18122
+    },
+    {
+      "path": "fig4_3_vnat_matched.svg",
+      "sha256": "316c015cbb54b8b72e84bc28fc68320f03b7f0baa73d2d06860a774ddc9a3604",
+      "bytes": 40135
+    },
+    {
+      "path": "fig4_3_vnat_matched.png",
+      "sha256": "598e6308e4ec25552b3a805d16e04ab9e5c1439c8e93871d76684c828822acf0",
+      "bytes": 230820
+    },
+    {
+      "path": "fig4_4_vnat_ablation.pdf",
+      "sha256": "3c240124050420db82b6d8651a9486337b7820cb9a3207cc43f6889e9657848a",
+      "bytes": 29939
+    },
+    {
+      "path": "fig4_4_vnat_ablation.svg",
+      "sha256": "d407daede896227bde96164d3c150a41f75594fd54577efda2d2f0241ec74946",
+      "bytes": 50114
+    },
+    {
+      "path": "fig4_4_vnat_ablation.png",
+      "sha256": "8d6fbec2c6c353018ba8574272bb61975fc5eef154b0ec81e9df2bed4c379b91",
+      "bytes": 191488
+    },
+    {
+      "path": "fig4_5_cic_attack_profiles.pdf",
+      "sha256": "77cbcb496734ed99d6a452bd84aab0c36ce2ca9ad64dbffc2d7fd8c1b2ad80f2",
+      "bytes": 17874
+    },
+    {
+      "path": "fig4_5_cic_attack_profiles.svg",
+      "sha256": "86b7b236ac8dc84ed017217ac72812a5e52f21ed50629451ebd8229314da700d",
+      "bytes": 25380
+    },
+    {
+      "path": "fig4_5_cic_attack_profiles.png",
+      "sha256": "29efd7759cfab63a1b5a7256aa0cb1e3e3a14c9e9cf5380084040b12d438eb8c",
+      "bytes": 155314
+    },
+    {
+      "path": "fig4_6_cic_mixture_sensitivity.pdf",
+      "sha256": "a313f4434af9405896fda21670a3ebb6d6bae12a862316aa7236aa1585bf5841",
+      "bytes": 17805
+    },
+    {
+      "path": "fig4_6_cic_mixture_sensitivity.svg",
+      "sha256": "4ee66257b869163e649d872c667405183797cf4071cc979976b2bd72e40004fa",
+      "bytes": 34617
+    },
+    {
+      "path": "fig4_6_cic_mixture_sensitivity.png",
+      "sha256": "afdb9fa57646c7b939a3654db793d689d95ea692329c09defb93bbc3de79c849",
+      "bytes": 152734
+    },
+    {
+      "path": "fig4_7_ustc_matched.pdf",
+      "sha256": "f2ef701a154ce62a58f0f20d0b42f93cc8063963888ed34234cb2a1a1301fa2a",
+      "bytes": 15498
+    },
+    {
+      "path": "fig4_7_ustc_matched.svg",
+      "sha256": "94b76fd22b0aa13acc2d4a6977cab42ae3a4871b048612456a63f5bf2d8f85d8",
+      "bytes": 26757
+    },
+    {
+      "path": "fig4_7_ustc_matched.png",
+      "sha256": "c59a60c57bfe2d03683e33623a6234e1e9840f6742b74764420fb67bb396a3b4",
+      "bytes": 146836
+    }
+  ],
+  "limits": [
+    "No new model evaluations",
+    "Report-precision values where CSVs absent",
+    "No uncertainty bars for single-seed results",
+    "No synthetic ROC/PR curves"
+  ]
+}

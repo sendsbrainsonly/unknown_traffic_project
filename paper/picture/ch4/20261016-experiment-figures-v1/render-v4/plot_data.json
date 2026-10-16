@@ -1,0 +1,2370 @@
+{
+  "schema_version": 1,
+  "unit": "fraction; plots display percent",
+  "records": [
+    {
+      "figure": "fig4_1",
+      "setting": "VPN6",
+      "method": "OURS-E3-T8-pretrained",
+      "metric": "macro_f1",
+      "value": 0.8595,
+      "sd": 0.007,
+      "source_path": "stage23b_tfe_trident_same_flow_adaptation/stage23b_all_methods_comparison.md",
+      "source_locator": "VPN6:Macro-F1 mean±populationSD:OURS-E3-T8-pretrained",
+      "seeds": [
+        2022,
+        2023
+      ],
+      "n_test": 1093
+    },
+    {
+      "figure": "fig4_1",
+      "setting": "VPN6",
+      "method": "Open-Detect corrected-paper",
+      "metric": "macro_f1",
+      "value": 0.7443,
+      "sd": 0.0142,
+      "source_path": "stage23b_tfe_trident_same_flow_adaptation/stage23b_all_methods_comparison.md",
+      "source_locator": "VPN6:Macro-F1 mean±populationSD:Open-Detect corrected-paper",
+      "seeds": [
+        2022,
+        2023
+      ],
+      "n_test": 1093
+    },
+    {
+      "figure": "fig4_1",
+      "setting": "VPN6",
+      "method": "RoNeTC-runnable-reconstruction",
+      "metric": "macro_f1",
+      "value": 0.7157,
+      "sd": 0.0081,
+      "source_path": "stage23b_tfe_trident_same_flow_adaptation/stage23b_all_methods_comparison.md",
+      "source_locator": "VPN6:Macro-F1 mean±populationSD:RoNeTC-runnable-reconstruction",
+      "seeds": [
+        2022,
+        2023
+      ],
+      "n_test": 1093
+    },
+    {
+      "figure": "fig4_1",
+      "setting": "VPN6",
+      "method": "TFE-GNN-8-UDP-short",
+      "metric": "macro_f1",
+      "value": 0.6585,
+      "sd": 0.0146,
+      "source_path": "stage23b_tfe_trident_same_flow_adaptation/stage23b_all_methods_comparison.md",
+      "source_locator": "VPN6:Macro-F1 mean±populationSD:TFE-GNN-8-UDP-short",
+      "seeds": [
+        2022,
+        2023
+      ],
+      "n_test": 1093
+    },
+    {
+      "figure": "fig4_1",
+      "setting": "VPN6",
+      "method": "TrafficFormer-pretrained",
+      "metric": "macro_f1",
+      "value": 0.8606,
+      "sd": 0.004,
+      "source_path": "stage23b_tfe_trident_same_flow_adaptation/stage23b_all_methods_comparison.md",
+      "source_locator": "VPN6:Macro-F1 mean±populationSD:TrafficFormer-pretrained",
+      "seeds": [
+        2022,
+        2023
+      ],
+      "n_test": 1093
+    },
+    {
+      "figure": "fig4_1",
+      "setting": "VPN6",
+      "method": "Trident-early8-86D",
+      "metric": "macro_f1",
+      "value": 0.6322,
+      "sd": 0.0006,
+      "source_path": "stage23b_tfe_trident_same_flow_adaptation/stage23b_all_methods_comparison.md",
+      "source_locator": "VPN6:Macro-F1 mean±populationSD:Trident-early8-86D",
+      "seeds": [
+        2022,
+        2023
+      ],
+      "n_test": 1093
+    },
+    {
+      "figure": "fig4_1",
+      "setting": "VPN6",
+      "method": "YaTC-official-pretrained-Stage20",
+      "metric": "macro_f1",
+      "value": 0.8871,
+      "sd": 0.0116,
+      "source_path": "stage23b_tfe_trident_same_flow_adaptation/stage23b_all_methods_comparison.md",
+      "source_locator": "VPN6:Macro-F1 mean±populationSD:YaTC-official-pretrained-Stage20",
+      "seeds": [
+        2022,
+        2023
+      ],
+      "n_test": 1093
+    },
+    {
+      "figure": "fig4_1",
+      "setting": "Tor7",
+      "method": "OURS-E3-T8-pretrained",
+      "metric": "macro_f1",
+      "value": 0.8222,
+      "sd": 0.0076,
+      "source_path": "stage23b_tfe_trident_same_flow_adaptation/stage23b_all_methods_comparison.md",
+      "source_locator": "Tor7:Macro-F1 mean±populationSD:OURS-E3-T8-pretrained",
+      "seeds": [
+        2022,
+        2023
+      ],
+      "n_test": 1117
+    },
+    {
+      "figure": "fig4_1",
+      "setting": "Tor7",
+      "method": "Open-Detect corrected-paper",
+      "metric": "macro_f1",
+      "value": 0.5766,
+      "sd": 0.0997,
+      "source_path": "stage23b_tfe_trident_same_flow_adaptation/stage23b_all_methods_comparison.md",
+      "source_locator": "Tor7:Macro-F1 mean±populationSD:Open-Detect corrected-paper",
+      "seeds": [
+        2022,
+        2023
+      ],
+      "n_test": 1117
+    },
+    {
+      "figure": "fig4_1",
+      "setting": "Tor7",
+      "method": "RoNeTC-runnable-reconstruction",
+      "metric": "macro_f1",
+      "value": 0.534,
+      "sd": 0.0198,
+      "source_path": "stage23b_tfe_trident_same_flow_adaptation/stage23b_all_methods_comparison.md",
+      "source_locator": "Tor7:Macro-F1 mean±populationSD:RoNeTC-runnable-reconstruction",
+      "seeds": [
+        2022,
+        2023
+      ],
+      "n_test": 1117
+    },
+    {
+      "figure": "fig4_1",
+      "setting": "Tor7",
+      "method": "TFE-GNN-8-UDP-short",
+      "metric": "macro_f1",
+      "value": 0.5536,
+      "sd": 0.0138,
+      "source_path": "stage23b_tfe_trident_same_flow_adaptation/stage23b_all_methods_comparison.md",
+      "source_locator": "Tor7:Macro-F1 mean±populationSD:TFE-GNN-8-UDP-short",
+      "seeds": [
+        2022,
+        2023
+      ],
+      "n_test": 1117
+    },
+    {
+      "figure": "fig4_1",
+      "setting": "Tor7",
+      "method": "TrafficFormer-pretrained",
+      "metric": "macro_f1",
+      "value": 0.8213,
+      "sd": 0.0064,
+      "source_path": "stage23b_tfe_trident_same_flow_adaptation/stage23b_all_methods_comparison.md",
+      "source_locator": "Tor7:Macro-F1 mean±populationSD:TrafficFormer-pretrained",
+      "seeds": [
+        2022,
+        2023
+      ],
+      "n_test": 1117
+    },
+    {
+      "figure": "fig4_1",
+      "setting": "Tor7",
+      "method": "Trident-early8-86D",
+      "metric": "macro_f1",
+      "value": 0.6053,
+      "sd": 0.0019,
+      "source_path": "stage23b_tfe_trident_same_flow_adaptation/stage23b_all_methods_comparison.md",
+      "source_locator": "Tor7:Macro-F1 mean±populationSD:Trident-early8-86D",
+      "seeds": [
+        2022,
+        2023
+      ],
+      "n_test": 1117
+    },
+    {
+      "figure": "fig4_1",
+      "setting": "Tor7",
+      "method": "YaTC-official-pretrained-Stage20",
+      "metric": "macro_f1",
+      "value": 0.8274,
+      "sd": 0.0008,
+      "source_path": "stage23b_tfe_trident_same_flow_adaptation/stage23b_all_methods_comparison.md",
+      "source_locator": "Tor7:Macro-F1 mean±populationSD:YaTC-official-pretrained-Stage20",
+      "seeds": [
+        2022,
+        2023
+      ],
+      "n_test": 1117
+    },
+    {
+      "figure": "fig4_2",
+      "setting": "iscx_vpn",
+      "method": "E3_hard_remap",
+      "metric": "macro_f1",
+      "value": 0.899913,
+      "sd": null,
+      "source_path": "stage32_three_dataset_coarse_single_seed/stage32_report.md",
+      "source_locator": "same-flow paired:iscx_vpn:E3_hard_remap",
+      "seeds": [
+        2022
+      ]
+    },
+    {
+      "figure": "fig4_2",
+      "setting": "iscx_vpn",
+      "method": "three_view",
+      "metric": "macro_f1",
+      "value": 0.91935,
+      "sd": null,
+      "source_path": "stage32_three_dataset_coarse_single_seed/stage32_report.md",
+      "source_locator": "same-flow paired:iscx_vpn:T0",
+      "seeds": [
+        2022
+      ]
+    },
+    {
+      "figure": "fig4_2",
+      "setting": "iscx_vpn",
+      "method": "E3_coarse_head",
+      "metric": "macro_f1",
+      "value": 0.9001,
+      "sd": null,
+      "source_path": "stage32_three_dataset_coarse_single_seed/stage32_report.md",
+      "source_locator": "same-flow paired:iscx_vpn:E3_coarse_head",
+      "seeds": [
+        2022
+      ]
+    },
+    {
+      "figure": "fig4_2",
+      "setting": "iscx_vpn",
+      "method": "YaTC_hard_remap_context",
+      "metric": "macro_f1",
+      "value": 0.929493,
+      "sd": null,
+      "source_path": "stage32_three_dataset_coarse_single_seed/stage32_report.md",
+      "source_locator": "same-flow paired:iscx_vpn:YaTC_hard_remap_context",
+      "seeds": [
+        2022
+      ]
+    },
+    {
+      "figure": "fig4_2",
+      "setting": "iscx_tor",
+      "method": "E3_hard_remap",
+      "metric": "macro_f1",
+      "value": 0.853614,
+      "sd": null,
+      "source_path": "stage32_three_dataset_coarse_single_seed/stage32_report.md",
+      "source_locator": "same-flow paired:iscx_tor:E3_hard_remap",
+      "seeds": [
+        2022
+      ]
+    },
+    {
+      "figure": "fig4_2",
+      "setting": "iscx_tor",
+      "method": "three_view",
+      "metric": "macro_f1",
+      "value": 0.899375,
+      "sd": null,
+      "source_path": "stage32_three_dataset_coarse_single_seed/stage32_report.md",
+      "source_locator": "same-flow paired:iscx_tor:T0",
+      "seeds": [
+        2022
+      ]
+    },
+    {
+      "figure": "fig4_2",
+      "setting": "iscx_tor",
+      "method": "E3_coarse_head",
+      "metric": "macro_f1",
+      "value": 0.855214,
+      "sd": null,
+      "source_path": "stage32_three_dataset_coarse_single_seed/stage32_report.md",
+      "source_locator": "same-flow paired:iscx_tor:E3_coarse_head",
+      "seeds": [
+        2022
+      ]
+    },
+    {
+      "figure": "fig4_2",
+      "setting": "iscx_tor",
+      "method": "YaTC_hard_remap_context",
+      "metric": "macro_f1",
+      "value": 0.871463,
+      "sd": null,
+      "source_path": "stage32_three_dataset_coarse_single_seed/stage32_report.md",
+      "source_locator": "same-flow paired:iscx_tor:YaTC_hard_remap_context",
+      "seeds": [
+        2022
+      ]
+    },
+    {
+      "figure": "fig4_3",
+      "setting": "communication",
+      "method": "od",
+      "metric": "auroc",
+      "value": 0.817614799936988,
+      "sd": null,
+      "source_path": "stage44b_vnat_matched_opendetect/matched_comparison.csv",
+      "source_locator": "communication:natural:P95:od_auroc",
+      "n_known": 1380,
+      "n_unknown": 2208,
+      "seeds": [
+        2022
+      ],
+      "threshold": "Known-Val P95"
+    },
+    {
+      "figure": "fig4_3",
+      "setting": "communication",
+      "method": "od",
+      "metric": "binary_f1",
+      "value": 0.3423952975753123,
+      "sd": null,
+      "source_path": "stage44b_vnat_matched_opendetect/matched_comparison.csv",
+      "source_locator": "communication:natural:P95:od_binary_f1",
+      "n_known": 1380,
+      "n_unknown": 2208,
+      "seeds": [
+        2022
+      ],
+      "threshold": "Known-Val P95"
+    },
+    {
+      "figure": "fig4_3",
+      "setting": "communication",
+      "method": "od",
+      "metric": "ufar",
+      "value": 0.7889492753623188,
+      "sd": null,
+      "source_path": "stage44b_vnat_matched_opendetect/matched_comparison.csv",
+      "source_locator": "communication:natural:P95:od_ufar",
+      "n_known": 1380,
+      "n_unknown": 2208,
+      "seeds": [
+        2022
+      ],
+      "threshold": "Known-Val P95"
+    },
+    {
+      "figure": "fig4_3",
+      "setting": "communication",
+      "method": "od",
+      "metric": "known_frr",
+      "value": 0.034782608695652174,
+      "sd": null,
+      "source_path": "stage44b_vnat_matched_opendetect/matched_comparison.csv",
+      "source_locator": "communication:natural:P95:od_known_frr",
+      "n_known": 1380,
+      "n_unknown": 2208,
+      "seeds": [
+        2022
+      ],
+      "threshold": "Known-Val P95"
+    },
+    {
+      "figure": "fig4_3",
+      "setting": "communication",
+      "method": "three_view_des_v1",
+      "metric": "auroc",
+      "value": 0.9954496823146398,
+      "sd": null,
+      "source_path": "stage44b_vnat_matched_opendetect/matched_comparison.csv",
+      "source_locator": "communication:natural:P95:three_view_des_v1_auroc",
+      "n_known": 1380,
+      "n_unknown": 2208,
+      "seeds": [
+        2022
+      ],
+      "threshold": "Known-Val P95"
+    },
+    {
+      "figure": "fig4_3",
+      "setting": "communication",
+      "method": "three_view_des_v1",
+      "metric": "binary_f1",
+      "value": 0.9848282016956715,
+      "sd": null,
+      "source_path": "stage44b_vnat_matched_opendetect/matched_comparison.csv",
+      "source_locator": "communication:natural:P95:three_view_des_v1_binary_f1",
+      "n_known": 1380,
+      "n_unknown": 2208,
+      "seeds": [
+        2022
+      ],
+      "threshold": "Known-Val P95"
+    },
+    {
+      "figure": "fig4_3",
+      "setting": "communication",
+      "method": "three_view_des_v1",
+      "metric": "ufar",
+      "value": 0.0004528985507246377,
+      "sd": null,
+      "source_path": "stage44b_vnat_matched_opendetect/matched_comparison.csv",
+      "source_locator": "communication:natural:P95:three_view_des_v1_ufar",
+      "n_known": 1380,
+      "n_unknown": 2208,
+      "seeds": [
+        2022
+      ],
+      "threshold": "Known-Val P95"
+    },
+    {
+      "figure": "fig4_3",
+      "setting": "communication",
+      "method": "three_view_des_v1",
+      "metric": "known_frr",
+      "value": 0.04855072463768116,
+      "sd": null,
+      "source_path": "stage44b_vnat_matched_opendetect/matched_comparison.csv",
+      "source_locator": "communication:natural:P95:three_view_des_v1_known_frr",
+      "n_known": 1380,
+      "n_unknown": 2208,
+      "seeds": [
+        2022
+      ],
+      "threshold": "Known-Val P95"
+    },
+    {
+      "figure": "fig4_3",
+      "setting": "file_transfer",
+      "method": "od",
+      "metric": "auroc",
+      "value": 0.5997316061843078,
+      "sd": null,
+      "source_path": "stage44b_vnat_matched_opendetect/matched_comparison.csv",
+      "source_locator": "file_transfer:natural:P95:od_auroc",
+      "n_known": 954,
+      "n_unknown": 5870,
+      "seeds": [
+        2022
+      ],
+      "threshold": "Known-Val P95"
+    },
+    {
+      "figure": "fig4_3",
+      "setting": "file_transfer",
+      "method": "od",
+      "metric": "binary_f1",
+      "value": 0.003013056578506863,
+      "sd": null,
+      "source_path": "stage44b_vnat_matched_opendetect/matched_comparison.csv",
+      "source_locator": "file_transfer:natural:P95:od_binary_f1",
+      "n_known": 954,
+      "n_unknown": 5870,
+      "seeds": [
+        2022
+      ],
+      "threshold": "Known-Val P95"
+    },
+    {
+      "figure": "fig4_3",
+      "setting": "file_transfer",
+      "method": "od",
+      "metric": "ufar",
+      "value": 0.9984667802385009,
+      "sd": null,
+      "source_path": "stage44b_vnat_matched_opendetect/matched_comparison.csv",
+      "source_locator": "file_transfer:natural:P95:od_ufar",
+      "n_known": 954,
+      "n_unknown": 5870,
+      "seeds": [
+        2022
+      ],
+      "threshold": "Known-Val P95"
+    },
+    {
+      "figure": "fig4_3",
+      "setting": "file_transfer",
+      "method": "od",
+      "metric": "known_frr",
+      "value": 0.09958071278825996,
+      "sd": null,
+      "source_path": "stage44b_vnat_matched_opendetect/matched_comparison.csv",
+      "source_locator": "file_transfer:natural:P95:od_known_frr",
+      "n_known": 954,
+      "n_unknown": 5870,
+      "seeds": [
+        2022
+      ],
+      "threshold": "Known-Val P95"
+    },
+    {
+      "figure": "fig4_3",
+      "setting": "file_transfer",
+      "method": "three_view_des_v1",
+      "metric": "auroc",
+      "value": 0.9947596241415148,
+      "sd": null,
+      "source_path": "stage44b_vnat_matched_opendetect/matched_comparison.csv",
+      "source_locator": "file_transfer:natural:P95:three_view_des_v1_auroc",
+      "n_known": 954,
+      "n_unknown": 5870,
+      "seeds": [
+        2022
+      ],
+      "threshold": "Known-Val P95"
+    },
+    {
+      "figure": "fig4_3",
+      "setting": "file_transfer",
+      "method": "three_view_des_v1",
+      "metric": "binary_f1",
+      "value": 0.9934473661816016,
+      "sd": null,
+      "source_path": "stage44b_vnat_matched_opendetect/matched_comparison.csv",
+      "source_locator": "file_transfer:natural:P95:three_view_des_v1_binary_f1",
+      "n_known": 954,
+      "n_unknown": 5870,
+      "seeds": [
+        2022
+      ],
+      "threshold": "Known-Val P95"
+    },
+    {
+      "figure": "fig4_3",
+      "setting": "file_transfer",
+      "method": "three_view_des_v1",
+      "metric": "ufar",
+      "value": 0.005621805792163544,
+      "sd": null,
+      "source_path": "stage44b_vnat_matched_opendetect/matched_comparison.csv",
+      "source_locator": "file_transfer:natural:P95:three_view_des_v1_ufar",
+      "n_known": 954,
+      "n_unknown": 5870,
+      "seeds": [
+        2022
+      ],
+      "threshold": "Known-Val P95"
+    },
+    {
+      "figure": "fig4_3",
+      "setting": "file_transfer",
+      "method": "three_view_des_v1",
+      "metric": "known_frr",
+      "value": 0.04612159329140461,
+      "sd": null,
+      "source_path": "stage44b_vnat_matched_opendetect/matched_comparison.csv",
+      "source_locator": "file_transfer:natural:P95:three_view_des_v1_known_frr",
+      "n_known": 954,
+      "n_unknown": 5870,
+      "seeds": [
+        2022
+      ],
+      "threshold": "Known-Val P95"
+    },
+    {
+      "figure": "fig4_3",
+      "setting": "remote_access",
+      "method": "od",
+      "metric": "auroc",
+      "value": 0.5888152369053744,
+      "sd": null,
+      "source_path": "stage44b_vnat_matched_opendetect/matched_comparison.csv",
+      "source_locator": "remote_access:natural:P95:od_auroc",
+      "n_known": 1008,
+      "n_unknown": 13607,
+      "seeds": [
+        2022
+      ],
+      "threshold": "Known-Val P95"
+    },
+    {
+      "figure": "fig4_3",
+      "setting": "remote_access",
+      "method": "od",
+      "metric": "binary_f1",
+      "value": 0.05743195097620066,
+      "sd": null,
+      "source_path": "stage44b_vnat_matched_opendetect/matched_comparison.csv",
+      "source_locator": "remote_access:natural:P95:od_binary_f1",
+      "n_known": 1008,
+      "n_unknown": 13607,
+      "seeds": [
+        2022
+      ],
+      "threshold": "Known-Val P95"
+    },
+    {
+      "figure": "fig4_3",
+      "setting": "remote_access",
+      "method": "od",
+      "metric": "ufar",
+      "value": 0.9703828911589623,
+      "sd": null,
+      "source_path": "stage44b_vnat_matched_opendetect/matched_comparison.csv",
+      "source_locator": "remote_access:natural:P95:od_ufar",
+      "n_known": 1008,
+      "n_unknown": 13607,
+      "seeds": [
+        2022
+      ],
+      "threshold": "Known-Val P95"
+    },
+    {
+      "figure": "fig4_3",
+      "setting": "remote_access",
+      "method": "od",
+      "metric": "known_frr",
+      "value": 0.023809523809523808,
+      "sd": null,
+      "source_path": "stage44b_vnat_matched_opendetect/matched_comparison.csv",
+      "source_locator": "remote_access:natural:P95:od_known_frr",
+      "n_known": 1008,
+      "n_unknown": 13607,
+      "seeds": [
+        2022
+      ],
+      "threshold": "Known-Val P95"
+    },
+    {
+      "figure": "fig4_3",
+      "setting": "remote_access",
+      "method": "three_view_des_v1",
+      "metric": "auroc",
+      "value": 0.9876271666894141,
+      "sd": null,
+      "source_path": "stage44b_vnat_matched_opendetect/matched_comparison.csv",
+      "source_locator": "remote_access:natural:P95:three_view_des_v1_auroc",
+      "n_known": 1008,
+      "n_unknown": 13607,
+      "seeds": [
+        2022
+      ],
+      "threshold": "Known-Val P95"
+    },
+    {
+      "figure": "fig4_3",
+      "setting": "remote_access",
+      "method": "three_view_des_v1",
+      "metric": "binary_f1",
+      "value": 0.9797994912464462,
+      "sd": null,
+      "source_path": "stage44b_vnat_matched_opendetect/matched_comparison.csv",
+      "source_locator": "remote_access:natural:P95:three_view_des_v1_binary_f1",
+      "n_known": 1008,
+      "n_unknown": 13607,
+      "seeds": [
+        2022
+      ],
+      "threshold": "Known-Val P95"
+    },
+    {
+      "figure": "fig4_3",
+      "setting": "remote_access",
+      "method": "three_view_des_v1",
+      "metric": "ufar",
+      "value": 0.03755420004409495,
+      "sd": null,
+      "source_path": "stage44b_vnat_matched_opendetect/matched_comparison.csv",
+      "source_locator": "remote_access:natural:P95:three_view_des_v1_ufar",
+      "n_known": 1008,
+      "n_unknown": 13607,
+      "seeds": [
+        2022
+      ],
+      "threshold": "Known-Val P95"
+    },
+    {
+      "figure": "fig4_3",
+      "setting": "remote_access",
+      "method": "three_view_des_v1",
+      "metric": "known_frr",
+      "value": 0.028769841269841268,
+      "sd": null,
+      "source_path": "stage44b_vnat_matched_opendetect/matched_comparison.csv",
+      "source_locator": "remote_access:natural:P95:three_view_des_v1_known_frr",
+      "n_known": 1008,
+      "n_unknown": 13607,
+      "seeds": [
+        2022
+      ],
+      "threshold": "Known-Val P95"
+    },
+    {
+      "figure": "fig4_3",
+      "setting": "streaming",
+      "method": "od",
+      "metric": "auroc",
+      "value": 0.9606876289187818,
+      "sd": null,
+      "source_path": "stage44b_vnat_matched_opendetect/matched_comparison.csv",
+      "source_locator": "streaming:natural:P95:od_auroc",
+      "n_known": 1461,
+      "n_unknown": 1764,
+      "seeds": [
+        2022
+      ],
+      "threshold": "Known-Val P95"
+    },
+    {
+      "figure": "fig4_3",
+      "setting": "streaming",
+      "method": "od",
+      "metric": "binary_f1",
+      "value": 0.9064068497195158,
+      "sd": null,
+      "source_path": "stage44b_vnat_matched_opendetect/matched_comparison.csv",
+      "source_locator": "streaming:natural:P95:od_binary_f1",
+      "n_known": 1461,
+      "n_unknown": 1764,
+      "seeds": [
+        2022
+      ],
+      "threshold": "Known-Val P95"
+    },
+    {
+      "figure": "fig4_3",
+      "setting": "streaming",
+      "method": "od",
+      "metric": "ufar",
+      "value": 0.12981859410430838,
+      "sd": null,
+      "source_path": "stage44b_vnat_matched_opendetect/matched_comparison.csv",
+      "source_locator": "streaming:natural:P95:od_ufar",
+      "n_known": 1461,
+      "n_unknown": 1764,
+      "seeds": [
+        2022
+      ],
+      "threshold": "Known-Val P95"
+    },
+    {
+      "figure": "fig4_3",
+      "setting": "streaming",
+      "method": "od",
+      "metric": "known_frr",
+      "value": 0.06023271731690623,
+      "sd": null,
+      "source_path": "stage44b_vnat_matched_opendetect/matched_comparison.csv",
+      "source_locator": "streaming:natural:P95:od_known_frr",
+      "n_known": 1461,
+      "n_unknown": 1764,
+      "seeds": [
+        2022
+      ],
+      "threshold": "Known-Val P95"
+    },
+    {
+      "figure": "fig4_3",
+      "setting": "streaming",
+      "method": "three_view_des_v1",
+      "metric": "auroc",
+      "value": 0.9910600790624258,
+      "sd": null,
+      "source_path": "stage44b_vnat_matched_opendetect/matched_comparison.csv",
+      "source_locator": "streaming:natural:P95:three_view_des_v1_auroc",
+      "n_known": 1461,
+      "n_unknown": 1764,
+      "seeds": [
+        2022
+      ],
+      "threshold": "Known-Val P95"
+    },
+    {
+      "figure": "fig4_3",
+      "setting": "streaming",
+      "method": "three_view_des_v1",
+      "metric": "binary_f1",
+      "value": 0.9778270509977827,
+      "sd": null,
+      "source_path": "stage44b_vnat_matched_opendetect/matched_comparison.csv",
+      "source_locator": "streaming:natural:P95:three_view_des_v1_binary_f1",
+      "n_known": 1461,
+      "n_unknown": 1764,
+      "seeds": [
+        2022
+      ],
+      "threshold": "Known-Val P95"
+    },
+    {
+      "figure": "fig4_3",
+      "setting": "streaming",
+      "method": "three_view_des_v1",
+      "metric": "ufar",
+      "value": 0.0,
+      "sd": null,
+      "source_path": "stage44b_vnat_matched_opendetect/matched_comparison.csv",
+      "source_locator": "streaming:natural:P95:three_view_des_v1_ufar",
+      "n_known": 1461,
+      "n_unknown": 1764,
+      "seeds": [
+        2022
+      ],
+      "threshold": "Known-Val P95"
+    },
+    {
+      "figure": "fig4_3",
+      "setting": "streaming",
+      "method": "three_view_des_v1",
+      "metric": "known_frr",
+      "value": 0.05475701574264202,
+      "sd": null,
+      "source_path": "stage44b_vnat_matched_opendetect/matched_comparison.csv",
+      "source_locator": "streaming:natural:P95:three_view_des_v1_known_frr",
+      "n_known": 1461,
+      "n_unknown": 1764,
+      "seeds": [
+        2022
+      ],
+      "threshold": "Known-Val P95"
+    },
+    {
+      "figure": "fig4_4",
+      "setting": "communication",
+      "method": "msp",
+      "metric": "auroc",
+      "value": 0.7783255224742701,
+      "sd": null,
+      "source_path": "stage44_vnat_coarse_service_loso_open_set/stage44_run_results.csv",
+      "source_locator": "communication:msp:natural:P95:auroc",
+      "seeds": [
+        2022
+      ]
+    },
+    {
+      "figure": "fig4_4",
+      "setting": "communication",
+      "method": "msp",
+      "metric": "ufar",
+      "value": 0.3446557971014493,
+      "sd": null,
+      "source_path": "stage44_vnat_coarse_service_loso_open_set/stage44_run_results.csv",
+      "source_locator": "communication:msp:natural:P95:ufar",
+      "seeds": [
+        2022
+      ]
+    },
+    {
+      "figure": "fig4_4",
+      "setting": "communication",
+      "method": "msp",
+      "metric": "known_frr",
+      "value": 0.041304347826086954,
+      "sd": null,
+      "source_path": "stage44_vnat_coarse_service_loso_open_set/stage44_run_results.csv",
+      "source_locator": "communication:msp:natural:P95:known_frr",
+      "seeds": [
+        2022
+      ]
+    },
+    {
+      "figure": "fig4_4",
+      "setting": "communication",
+      "method": "energy",
+      "metric": "auroc",
+      "value": 0.7712501312749421,
+      "sd": null,
+      "source_path": "stage44_vnat_coarse_service_loso_open_set/stage44_run_results.csv",
+      "source_locator": "communication:energy:natural:P95:auroc",
+      "seeds": [
+        2022
+      ]
+    },
+    {
+      "figure": "fig4_4",
+      "setting": "communication",
+      "method": "energy",
+      "metric": "ufar",
+      "value": 0.37817028985507245,
+      "sd": null,
+      "source_path": "stage44_vnat_coarse_service_loso_open_set/stage44_run_results.csv",
+      "source_locator": "communication:energy:natural:P95:ufar",
+      "seeds": [
+        2022
+      ]
+    },
+    {
+      "figure": "fig4_4",
+      "setting": "communication",
+      "method": "energy",
+      "metric": "known_frr",
+      "value": 0.042028985507246375,
+      "sd": null,
+      "source_path": "stage44_vnat_coarse_service_loso_open_set/stage44_run_results.csv",
+      "source_locator": "communication:energy:natural:P95:known_frr",
+      "seeds": [
+        2022
+      ]
+    },
+    {
+      "figure": "fig4_4",
+      "setting": "communication",
+      "method": "centroid",
+      "metric": "auroc",
+      "value": 0.9824367254778408,
+      "sd": null,
+      "source_path": "stage44_vnat_coarse_service_loso_open_set/stage44_run_results.csv",
+      "source_locator": "communication:centroid:natural:P95:auroc",
+      "seeds": [
+        2022
+      ]
+    },
+    {
+      "figure": "fig4_4",
+      "setting": "communication",
+      "method": "centroid",
+      "metric": "ufar",
+      "value": 0.05570652173913043,
+      "sd": null,
+      "source_path": "stage44_vnat_coarse_service_loso_open_set/stage44_run_results.csv",
+      "source_locator": "communication:centroid:natural:P95:ufar",
+      "seeds": [
+        2022
+      ]
+    },
+    {
+      "figure": "fig4_4",
+      "setting": "communication",
+      "method": "centroid",
+      "metric": "known_frr",
+      "value": 0.06884057971014493,
+      "sd": null,
+      "source_path": "stage44_vnat_coarse_service_loso_open_set/stage44_run_results.csv",
+      "source_locator": "communication:centroid:natural:P95:known_frr",
+      "seeds": [
+        2022
+      ]
+    },
+    {
+      "figure": "fig4_4",
+      "setting": "communication",
+      "method": "des_v1",
+      "metric": "auroc",
+      "value": 0.9954496823146398,
+      "sd": null,
+      "source_path": "stage44_vnat_coarse_service_loso_open_set/stage44_run_results.csv",
+      "source_locator": "communication:des_v1:natural:P95:auroc",
+      "seeds": [
+        2022
+      ]
+    },
+    {
+      "figure": "fig4_4",
+      "setting": "communication",
+      "method": "des_v1",
+      "metric": "ufar",
+      "value": 0.0004528985507246377,
+      "sd": null,
+      "source_path": "stage44_vnat_coarse_service_loso_open_set/stage44_run_results.csv",
+      "source_locator": "communication:des_v1:natural:P95:ufar",
+      "seeds": [
+        2022
+      ]
+    },
+    {
+      "figure": "fig4_4",
+      "setting": "communication",
+      "method": "des_v1",
+      "metric": "known_frr",
+      "value": 0.04855072463768116,
+      "sd": null,
+      "source_path": "stage44_vnat_coarse_service_loso_open_set/stage44_run_results.csv",
+      "source_locator": "communication:des_v1:natural:P95:known_frr",
+      "seeds": [
+        2022
+      ]
+    },
+    {
+      "figure": "fig4_4",
+      "setting": "file_transfer",
+      "method": "msp",
+      "metric": "auroc",
+      "value": 0.9925440805145732,
+      "sd": null,
+      "source_path": "stage44_vnat_coarse_service_loso_open_set/stage44_run_results.csv",
+      "source_locator": "file_transfer:msp:natural:P95:auroc",
+      "seeds": [
+        2022
+      ]
+    },
+    {
+      "figure": "fig4_4",
+      "setting": "file_transfer",
+      "method": "msp",
+      "metric": "ufar",
+      "value": 0.017546848381601362,
+      "sd": null,
+      "source_path": "stage44_vnat_coarse_service_loso_open_set/stage44_run_results.csv",
+      "source_locator": "file_transfer:msp:natural:P95:ufar",
+      "seeds": [
+        2022
+      ]
+    },
+    {
+      "figure": "fig4_4",
+      "setting": "file_transfer",
+      "method": "msp",
+      "metric": "known_frr",
+      "value": 0.06184486373165619,
+      "sd": null,
+      "source_path": "stage44_vnat_coarse_service_loso_open_set/stage44_run_results.csv",
+      "source_locator": "file_transfer:msp:natural:P95:known_frr",
+      "seeds": [
+        2022
+      ]
+    },
+    {
+      "figure": "fig4_4",
+      "setting": "file_transfer",
+      "method": "energy",
+      "metric": "auroc",
+      "value": 0.9941206932881903,
+      "sd": null,
+      "source_path": "stage44_vnat_coarse_service_loso_open_set/stage44_run_results.csv",
+      "source_locator": "file_transfer:energy:natural:P95:auroc",
+      "seeds": [
+        2022
+      ]
+    },
+    {
+      "figure": "fig4_4",
+      "setting": "file_transfer",
+      "method": "energy",
+      "metric": "ufar",
+      "value": 0.015843270868824533,
+      "sd": null,
+      "source_path": "stage44_vnat_coarse_service_loso_open_set/stage44_run_results.csv",
+      "source_locator": "file_transfer:energy:natural:P95:ufar",
+      "seeds": [
+        2022
+      ]
+    },
+    {
+      "figure": "fig4_4",
+      "setting": "file_transfer",
+      "method": "energy",
+      "metric": "known_frr",
+      "value": 0.05660377358490566,
+      "sd": null,
+      "source_path": "stage44_vnat_coarse_service_loso_open_set/stage44_run_results.csv",
+      "source_locator": "file_transfer:energy:natural:P95:known_frr",
+      "seeds": [
+        2022
+      ]
+    },
+    {
+      "figure": "fig4_4",
+      "setting": "file_transfer",
+      "method": "centroid",
+      "metric": "auroc",
+      "value": 0.9940794431408685,
+      "sd": null,
+      "source_path": "stage44_vnat_coarse_service_loso_open_set/stage44_run_results.csv",
+      "source_locator": "file_transfer:centroid:natural:P95:auroc",
+      "seeds": [
+        2022
+      ]
+    },
+    {
+      "figure": "fig4_4",
+      "setting": "file_transfer",
+      "method": "centroid",
+      "metric": "ufar",
+      "value": 0.003577512776831346,
+      "sd": null,
+      "source_path": "stage44_vnat_coarse_service_loso_open_set/stage44_run_results.csv",
+      "source_locator": "file_transfer:centroid:natural:P95:ufar",
+      "seeds": [
+        2022
+      ]
+    },
+    {
+      "figure": "fig4_4",
+      "setting": "file_transfer",
+      "method": "centroid",
+      "metric": "known_frr",
+      "value": 0.050314465408805034,
+      "sd": null,
+      "source_path": "stage44_vnat_coarse_service_loso_open_set/stage44_run_results.csv",
+      "source_locator": "file_transfer:centroid:natural:P95:known_frr",
+      "seeds": [
+        2022
+      ]
+    },
+    {
+      "figure": "fig4_4",
+      "setting": "file_transfer",
+      "method": "des_v1",
+      "metric": "auroc",
+      "value": 0.9947596241415148,
+      "sd": null,
+      "source_path": "stage44_vnat_coarse_service_loso_open_set/stage44_run_results.csv",
+      "source_locator": "file_transfer:des_v1:natural:P95:auroc",
+      "seeds": [
+        2022
+      ]
+    },
+    {
+      "figure": "fig4_4",
+      "setting": "file_transfer",
+      "method": "des_v1",
+      "metric": "ufar",
+      "value": 0.005621805792163544,
+      "sd": null,
+      "source_path": "stage44_vnat_coarse_service_loso_open_set/stage44_run_results.csv",
+      "source_locator": "file_transfer:des_v1:natural:P95:ufar",
+      "seeds": [
+        2022
+      ]
+    },
+    {
+      "figure": "fig4_4",
+      "setting": "file_transfer",
+      "method": "des_v1",
+      "metric": "known_frr",
+      "value": 0.04612159329140461,
+      "sd": null,
+      "source_path": "stage44_vnat_coarse_service_loso_open_set/stage44_run_results.csv",
+      "source_locator": "file_transfer:des_v1:natural:P95:known_frr",
+      "seeds": [
+        2022
+      ]
+    },
+    {
+      "figure": "fig4_4",
+      "setting": "remote_access",
+      "method": "msp",
+      "metric": "auroc",
+      "value": 0.9448656358013674,
+      "sd": null,
+      "source_path": "stage44_vnat_coarse_service_loso_open_set/stage44_run_results.csv",
+      "source_locator": "remote_access:msp:natural:P95:auroc",
+      "seeds": [
+        2022
+      ]
+    },
+    {
+      "figure": "fig4_4",
+      "setting": "remote_access",
+      "method": "msp",
+      "metric": "ufar",
+      "value": 0.1522010729771441,
+      "sd": null,
+      "source_path": "stage44_vnat_coarse_service_loso_open_set/stage44_run_results.csv",
+      "source_locator": "remote_access:msp:natural:P95:ufar",
+      "seeds": [
+        2022
+      ]
+    },
+    {
+      "figure": "fig4_4",
+      "setting": "remote_access",
+      "method": "msp",
+      "metric": "known_frr",
+      "value": 0.03670634920634921,
+      "sd": null,
+      "source_path": "stage44_vnat_coarse_service_loso_open_set/stage44_run_results.csv",
+      "source_locator": "remote_access:msp:natural:P95:known_frr",
+      "seeds": [
+        2022
+      ]
+    },
+    {
+      "figure": "fig4_4",
+      "setting": "remote_access",
+      "method": "energy",
+      "metric": "auroc",
+      "value": 0.9466253509806462,
+      "sd": null,
+      "source_path": "stage44_vnat_coarse_service_loso_open_set/stage44_run_results.csv",
+      "source_locator": "remote_access:energy:natural:P95:auroc",
+      "seeds": [
+        2022
+      ]
+    },
+    {
+      "figure": "fig4_4",
+      "setting": "remote_access",
+      "method": "energy",
+      "metric": "ufar",
+      "value": 0.15102520761372823,
+      "sd": null,
+      "source_path": "stage44_vnat_coarse_service_loso_open_set/stage44_run_results.csv",
+      "source_locator": "remote_access:energy:natural:P95:ufar",
+      "seeds": [
+        2022
+      ]
+    },
+    {
+      "figure": "fig4_4",
+      "setting": "remote_access",
+      "method": "energy",
+      "metric": "known_frr",
+      "value": 0.03670634920634921,
+      "sd": null,
+      "source_path": "stage44_vnat_coarse_service_loso_open_set/stage44_run_results.csv",
+      "source_locator": "remote_access:energy:natural:P95:known_frr",
+      "seeds": [
+        2022
+      ]
+    },
+    {
+      "figure": "fig4_4",
+      "setting": "remote_access",
+      "method": "centroid",
+      "metric": "auroc",
+      "value": 0.9446665960914141,
+      "sd": null,
+      "source_path": "stage44_vnat_coarse_service_loso_open_set/stage44_run_results.csv",
+      "source_locator": "remote_access:centroid:natural:P95:auroc",
+      "seeds": [
+        2022
+      ]
+    },
+    {
+      "figure": "fig4_4",
+      "setting": "remote_access",
+      "method": "centroid",
+      "metric": "ufar",
+      "value": 0.09046814139780995,
+      "sd": null,
+      "source_path": "stage44_vnat_coarse_service_loso_open_set/stage44_run_results.csv",
+      "source_locator": "remote_access:centroid:natural:P95:ufar",
+      "seeds": [
+        2022
+      ]
+    },
+    {
+      "figure": "fig4_4",
+      "setting": "remote_access",
+      "method": "centroid",
+      "metric": "known_frr",
+      "value": 0.04265873015873016,
+      "sd": null,
+      "source_path": "stage44_vnat_coarse_service_loso_open_set/stage44_run_results.csv",
+      "source_locator": "remote_access:centroid:natural:P95:known_frr",
+      "seeds": [
+        2022
+      ]
+    },
+    {
+      "figure": "fig4_4",
+      "setting": "remote_access",
+      "method": "des_v1",
+      "metric": "auroc",
+      "value": 0.9876271666894141,
+      "sd": null,
+      "source_path": "stage44_vnat_coarse_service_loso_open_set/stage44_run_results.csv",
+      "source_locator": "remote_access:des_v1:natural:P95:auroc",
+      "seeds": [
+        2022
+      ]
+    },
+    {
+      "figure": "fig4_4",
+      "setting": "remote_access",
+      "method": "des_v1",
+      "metric": "ufar",
+      "value": 0.03755420004409495,
+      "sd": null,
+      "source_path": "stage44_vnat_coarse_service_loso_open_set/stage44_run_results.csv",
+      "source_locator": "remote_access:des_v1:natural:P95:ufar",
+      "seeds": [
+        2022
+      ]
+    },
+    {
+      "figure": "fig4_4",
+      "setting": "remote_access",
+      "method": "des_v1",
+      "metric": "known_frr",
+      "value": 0.028769841269841268,
+      "sd": null,
+      "source_path": "stage44_vnat_coarse_service_loso_open_set/stage44_run_results.csv",
+      "source_locator": "remote_access:des_v1:natural:P95:known_frr",
+      "seeds": [
+        2022
+      ]
+    },
+    {
+      "figure": "fig4_4",
+      "setting": "streaming",
+      "method": "msp",
+      "metric": "auroc",
+      "value": 0.9573821086728097,
+      "sd": null,
+      "source_path": "stage44_vnat_coarse_service_loso_open_set/stage44_run_results.csv",
+      "source_locator": "streaming:msp:natural:P95:auroc",
+      "seeds": [
+        2022
+      ]
+    },
+    {
+      "figure": "fig4_4",
+      "setting": "streaming",
+      "method": "msp",
+      "metric": "ufar",
+      "value": 0.07086167800453515,
+      "sd": null,
+      "source_path": "stage44_vnat_coarse_service_loso_open_set/stage44_run_results.csv",
+      "source_locator": "streaming:msp:natural:P95:ufar",
+      "seeds": [
+        2022
+      ]
+    },
+    {
+      "figure": "fig4_4",
+      "setting": "streaming",
+      "method": "msp",
+      "metric": "known_frr",
+      "value": 0.057494866529774126,
+      "sd": null,
+      "source_path": "stage44_vnat_coarse_service_loso_open_set/stage44_run_results.csv",
+      "source_locator": "streaming:msp:natural:P95:known_frr",
+      "seeds": [
+        2022
+      ]
+    },
+    {
+      "figure": "fig4_4",
+      "setting": "streaming",
+      "method": "energy",
+      "metric": "auroc",
+      "value": 0.9570526818986778,
+      "sd": null,
+      "source_path": "stage44_vnat_coarse_service_loso_open_set/stage44_run_results.csv",
+      "source_locator": "streaming:energy:natural:P95:auroc",
+      "seeds": [
+        2022
+      ]
+    },
+    {
+      "figure": "fig4_4",
+      "setting": "streaming",
+      "method": "energy",
+      "metric": "ufar",
+      "value": 0.07086167800453515,
+      "sd": null,
+      "source_path": "stage44_vnat_coarse_service_loso_open_set/stage44_run_results.csv",
+      "source_locator": "streaming:energy:natural:P95:ufar",
+      "seeds": [
+        2022
+      ]
+    },
+    {
+      "figure": "fig4_4",
+      "setting": "streaming",
+      "method": "energy",
+      "metric": "known_frr",
+      "value": 0.059548254620123205,
+      "sd": null,
+      "source_path": "stage44_vnat_coarse_service_loso_open_set/stage44_run_results.csv",
+      "source_locator": "streaming:energy:natural:P95:known_frr",
+      "seeds": [
+        2022
+      ]
+    },
+    {
+      "figure": "fig4_4",
+      "setting": "streaming",
+      "method": "centroid",
+      "metric": "auroc",
+      "value": 0.9758412605288522,
+      "sd": null,
+      "source_path": "stage44_vnat_coarse_service_loso_open_set/stage44_run_results.csv",
+      "source_locator": "streaming:centroid:natural:P95:auroc",
+      "seeds": [
+        2022
+      ]
+    },
+    {
+      "figure": "fig4_4",
+      "setting": "streaming",
+      "method": "centroid",
+      "metric": "ufar",
+      "value": 0.07369614512471655,
+      "sd": null,
+      "source_path": "stage44_vnat_coarse_service_loso_open_set/stage44_run_results.csv",
+      "source_locator": "streaming:centroid:natural:P95:ufar",
+      "seeds": [
+        2022
+      ]
+    },
+    {
+      "figure": "fig4_4",
+      "setting": "streaming",
+      "method": "centroid",
+      "metric": "known_frr",
+      "value": 0.03285420944558522,
+      "sd": null,
+      "source_path": "stage44_vnat_coarse_service_loso_open_set/stage44_run_results.csv",
+      "source_locator": "streaming:centroid:natural:P95:known_frr",
+      "seeds": [
+        2022
+      ]
+    },
+    {
+      "figure": "fig4_4",
+      "setting": "streaming",
+      "method": "des_v1",
+      "metric": "auroc",
+      "value": 0.9910600790624258,
+      "sd": null,
+      "source_path": "stage44_vnat_coarse_service_loso_open_set/stage44_run_results.csv",
+      "source_locator": "streaming:des_v1:natural:P95:auroc",
+      "seeds": [
+        2022
+      ]
+    },
+    {
+      "figure": "fig4_4",
+      "setting": "streaming",
+      "method": "des_v1",
+      "metric": "ufar",
+      "value": 0.0,
+      "sd": null,
+      "source_path": "stage44_vnat_coarse_service_loso_open_set/stage44_run_results.csv",
+      "source_locator": "streaming:des_v1:natural:P95:ufar",
+      "seeds": [
+        2022
+      ]
+    },
+    {
+      "figure": "fig4_4",
+      "setting": "streaming",
+      "method": "des_v1",
+      "metric": "known_frr",
+      "value": 0.05475701574264202,
+      "sd": null,
+      "source_path": "stage44_vnat_coarse_service_loso_open_set/stage44_run_results.csv",
+      "source_locator": "streaming:des_v1:natural:P95:known_frr",
+      "seeds": [
+        2022
+      ]
+    },
+    {
+      "figure": "fig4_5",
+      "setting": "DoS slowloris",
+      "method": "MSP",
+      "metric": "auroc",
+      "value": 0.814714,
+      "sd": null,
+      "source_path": "stage42s_cic_favorable_open_set/RESULTS.md",
+      "source_locator": "natural:MSP:AUROC",
+      "n_unknown": 5709,
+      "n_known": 2272
+    },
+    {
+      "figure": "fig4_5",
+      "setting": "DoS slowloris",
+      "method": "DES-v1",
+      "metric": "auroc",
+      "value": 0.99305,
+      "sd": null,
+      "source_path": "stage42s_cic_favorable_open_set/RESULTS.md",
+      "source_locator": "natural:DES-v1:AUROC",
+      "n_unknown": 5709,
+      "n_known": 2272
+    },
+    {
+      "figure": "fig4_5",
+      "setting": "DoS slowloris",
+      "method": "DES-v1",
+      "metric": "ufar",
+      "value": 0.00035,
+      "sd": null,
+      "source_path": "stage42s_cic_favorable_open_set/RESULTS.md",
+      "source_locator": "natural:DES-v1:UFAR",
+      "n_unknown": 5709,
+      "n_known": 2272
+    },
+    {
+      "figure": "fig4_5",
+      "setting": "DoS GoldenEye",
+      "method": "MSP",
+      "metric": "auroc",
+      "value": 0.331679,
+      "sd": null,
+      "source_path": "stage42t_cic_goldeneye_open_set/RESULTS.md",
+      "source_locator": "natural:MSP:AUROC",
+      "n_unknown": 7441,
+      "n_known": 2272
+    },
+    {
+      "figure": "fig4_5",
+      "setting": "DoS GoldenEye",
+      "method": "DES-v1",
+      "metric": "auroc",
+      "value": 0.969958,
+      "sd": null,
+      "source_path": "stage42t_cic_goldeneye_open_set/RESULTS.md",
+      "source_locator": "natural:DES-v1:AUROC",
+      "n_unknown": 7441,
+      "n_known": 2272
+    },
+    {
+      "figure": "fig4_5",
+      "setting": "DoS GoldenEye",
+      "method": "DES-v1",
+      "metric": "ufar",
+      "value": 0.002419,
+      "sd": null,
+      "source_path": "stage42t_cic_goldeneye_open_set/RESULTS.md",
+      "source_locator": "natural:DES-v1:UFAR",
+      "n_unknown": 7441,
+      "n_known": 2272
+    },
+    {
+      "figure": "fig4_5",
+      "setting": "DoS Hulk",
+      "method": "MSP",
+      "metric": "auroc",
+      "value": 0.093804,
+      "sd": null,
+      "source_path": "stage42u_cic_hulk_open_set/RESULTS.md",
+      "source_locator": "natural:MSP:AUROC",
+      "n_unknown": 155168,
+      "n_known": 2272
+    },
+    {
+      "figure": "fig4_5",
+      "setting": "DoS Hulk",
+      "method": "DES-v1",
+      "metric": "auroc",
+      "value": 0.973767,
+      "sd": null,
+      "source_path": "stage42u_cic_hulk_open_set/RESULTS.md",
+      "source_locator": "natural:DES-v1:AUROC",
+      "n_unknown": 155168,
+      "n_known": 2272
+    },
+    {
+      "figure": "fig4_5",
+      "setting": "DoS Hulk",
+      "method": "DES-v1",
+      "metric": "ufar",
+      "value": 0.001134,
+      "sd": null,
+      "source_path": "stage42u_cic_hulk_open_set/RESULTS.md",
+      "source_locator": "natural:DES-v1:UFAR",
+      "n_unknown": 155168,
+      "n_known": 2272
+    },
+    {
+      "figure": "fig4_5",
+      "setting": "FTP-Patator",
+      "method": "MSP",
+      "metric": "auroc",
+      "value": 0.98746,
+      "sd": null,
+      "source_path": "stage42x_cic_ftp_patator_open_set/RESULTS.md",
+      "source_locator": "natural:MSP:AUROC",
+      "n_unknown": 3985,
+      "n_known": 2272
+    },
+    {
+      "figure": "fig4_5",
+      "setting": "FTP-Patator",
+      "method": "DES-v1",
+      "metric": "auroc",
+      "value": 0.998342,
+      "sd": null,
+      "source_path": "stage42x_cic_ftp_patator_open_set/RESULTS.md",
+      "source_locator": "natural:DES-v1:AUROC",
+      "n_unknown": 3985,
+      "n_known": 2272
+    },
+    {
+      "figure": "fig4_5",
+      "setting": "FTP-Patator",
+      "method": "DES-v1",
+      "metric": "ufar",
+      "value": 0.0,
+      "sd": null,
+      "source_path": "stage42x_cic_ftp_patator_open_set/RESULTS.md",
+      "source_locator": "natural:DES-v1:UFAR",
+      "n_unknown": 3985,
+      "n_known": 2272
+    },
+    {
+      "figure": "fig4_5",
+      "setting": "DDoS",
+      "method": "MSP",
+      "metric": "auroc",
+      "value": 0.05817,
+      "sd": null,
+      "source_path": "stage42v_cic_ddos_open_set/RESULTS.md",
+      "source_locator": "natural:MSP:AUROC",
+      "n_unknown": 76613,
+      "n_known": 2272
+    },
+    {
+      "figure": "fig4_5",
+      "setting": "DDoS",
+      "method": "DES-v1",
+      "metric": "auroc",
+      "value": 0.94899,
+      "sd": null,
+      "source_path": "stage42v_cic_ddos_open_set/RESULTS.md",
+      "source_locator": "natural:DES-v1:AUROC",
+      "n_unknown": 76613,
+      "n_known": 2272
+    },
+    {
+      "figure": "fig4_5",
+      "setting": "DDoS",
+      "method": "DES-v1",
+      "metric": "ufar",
+      "value": 0.166134,
+      "sd": null,
+      "source_path": "stage42v_cic_ddos_open_set/RESULTS.md",
+      "source_locator": "natural:DES-v1:UFAR",
+      "n_unknown": 76613,
+      "n_known": 2272
+    },
+    {
+      "figure": "fig4_5",
+      "setting": "Bot",
+      "method": "MSP",
+      "metric": "auroc",
+      "value": 0.629074,
+      "sd": null,
+      "source_path": "stage42w_cic_bot_open_set/RESULTS.md",
+      "source_locator": "natural:MSP:AUROC",
+      "n_unknown": 1228,
+      "n_known": 2272
+    },
+    {
+      "figure": "fig4_5",
+      "setting": "Bot",
+      "method": "DES-v1",
+      "metric": "auroc",
+      "value": 0.946433,
+      "sd": null,
+      "source_path": "stage42w_cic_bot_open_set/RESULTS.md",
+      "source_locator": "natural:DES-v1:AUROC",
+      "n_unknown": 1228,
+      "n_known": 2272
+    },
+    {
+      "figure": "fig4_5",
+      "setting": "Bot",
+      "method": "DES-v1",
+      "metric": "ufar",
+      "value": 0.508958,
+      "sd": null,
+      "source_path": "stage42w_cic_bot_open_set/RESULTS.md",
+      "source_locator": "natural:DES-v1:UFAR",
+      "n_unknown": 1228,
+      "n_known": 2272
+    },
+    {
+      "figure": "fig4_5",
+      "setting": "SSH-Patator",
+      "method": "MSP",
+      "metric": "auroc",
+      "value": 0.869745,
+      "sd": null,
+      "source_path": "stage42y_cic_remaining_four_open_set/RESULTS.md",
+      "source_locator": "natural:SSH-Patator:MSP:auroc",
+      "n_unknown": 2987,
+      "n_known": 2272
+    },
+    {
+      "figure": "fig4_5",
+      "setting": "SSH-Patator",
+      "method": "DES-v1",
+      "metric": "auroc",
+      "value": 0.991275,
+      "sd": null,
+      "source_path": "stage42y_cic_remaining_four_open_set/RESULTS.md",
+      "source_locator": "natural:SSH-Patator:DES-v1:auroc",
+      "n_unknown": 2987,
+      "n_known": 2272
+    },
+    {
+      "figure": "fig4_5",
+      "setting": "SSH-Patator",
+      "method": "DES-v1",
+      "metric": "ufar",
+      "value": 0.0,
+      "sd": null,
+      "source_path": "stage42y_cic_remaining_four_open_set/RESULTS.md",
+      "source_locator": "natural:SSH-Patator:DES-v1:ufar",
+      "n_unknown": 2987,
+      "n_known": 2272
+    },
+    {
+      "figure": "fig4_5",
+      "setting": "Web Attack - Brute Force",
+      "method": "MSP",
+      "metric": "auroc",
+      "value": 0.916091,
+      "sd": null,
+      "source_path": "stage42y_cic_remaining_four_open_set/RESULTS.md",
+      "source_locator": "natural:Web Attack - Brute Force:MSP:auroc",
+      "n_unknown": 1364,
+      "n_known": 2272
+    },
+    {
+      "figure": "fig4_5",
+      "setting": "Web Attack - Brute Force",
+      "method": "DES-v1",
+      "metric": "auroc",
+      "value": 0.995652,
+      "sd": null,
+      "source_path": "stage42y_cic_remaining_four_open_set/RESULTS.md",
+      "source_locator": "natural:Web Attack - Brute Force:DES-v1:auroc",
+      "n_unknown": 1364,
+      "n_known": 2272
+    },
+    {
+      "figure": "fig4_5",
+      "setting": "Web Attack - Brute Force",
+      "method": "DES-v1",
+      "metric": "ufar",
+      "value": 0.0,
+      "sd": null,
+      "source_path": "stage42y_cic_remaining_four_open_set/RESULTS.md",
+      "source_locator": "natural:Web Attack - Brute Force:DES-v1:ufar",
+      "n_unknown": 1364,
+      "n_known": 2272
+    },
+    {
+      "figure": "fig4_5",
+      "setting": "Web Attack - XSS",
+      "method": "MSP",
+      "metric": "auroc",
+      "value": 0.977971,
+      "sd": null,
+      "source_path": "stage42y_cic_remaining_four_open_set/RESULTS.md",
+      "source_locator": "natural:Web Attack - XSS:MSP:auroc",
+      "n_unknown": 629,
+      "n_known": 2272
+    },
+    {
+      "figure": "fig4_5",
+      "setting": "Web Attack - XSS",
+      "method": "DES-v1",
+      "metric": "auroc",
+      "value": 0.997489,
+      "sd": null,
+      "source_path": "stage42y_cic_remaining_four_open_set/RESULTS.md",
+      "source_locator": "natural:Web Attack - XSS:DES-v1:auroc",
+      "n_unknown": 629,
+      "n_known": 2272
+    },
+    {
+      "figure": "fig4_5",
+      "setting": "Web Attack - XSS",
+      "method": "DES-v1",
+      "metric": "ufar",
+      "value": 0.0,
+      "sd": null,
+      "source_path": "stage42y_cic_remaining_four_open_set/RESULTS.md",
+      "source_locator": "natural:Web Attack - XSS:DES-v1:ufar",
+      "n_unknown": 629,
+      "n_known": 2272
+    },
+    {
+      "figure": "fig4_5",
+      "setting": "DoS Slowhttptest",
+      "method": "MSP",
+      "metric": "auroc",
+      "value": 0.859683,
+      "sd": null,
+      "source_path": "stage42y_cic_remaining_four_open_set/RESULTS.md",
+      "source_locator": "natural:DoS Slowhttptest:MSP:auroc",
+      "n_unknown": 5096,
+      "n_known": 2272
+    },
+    {
+      "figure": "fig4_5",
+      "setting": "DoS Slowhttptest",
+      "method": "DES-v1",
+      "metric": "auroc",
+      "value": 0.9934,
+      "sd": null,
+      "source_path": "stage42y_cic_remaining_four_open_set/RESULTS.md",
+      "source_locator": "natural:DoS Slowhttptest:DES-v1:auroc",
+      "n_unknown": 5096,
+      "n_known": 2272
+    },
+    {
+      "figure": "fig4_5",
+      "setting": "DoS Slowhttptest",
+      "method": "DES-v1",
+      "metric": "ufar",
+      "value": 0.001374,
+      "sd": null,
+      "source_path": "stage42y_cic_remaining_four_open_set/RESULTS.md",
+      "source_locator": "natural:DoS Slowhttptest:DES-v1:ufar",
+      "n_unknown": 5096,
+      "n_known": 2272
+    },
+    {
+      "figure": "fig4_6",
+      "setting": "known1_unknown1",
+      "method": "DES-v1",
+      "metric": "auroc",
+      "value": 0.981011,
+      "sd": null,
+      "source_path": "stage43_cic_mixed_prevalence/stage43_mixed_open_set_report.md",
+      "source_locator": "prevalence:known1_unknown1:auroc",
+      "sampling_repeats": 20
+    },
+    {
+      "figure": "fig4_6",
+      "setting": "known1_unknown1",
+      "method": "DES-v1",
+      "metric": "auprc",
+      "value": 0.977296,
+      "sd": null,
+      "source_path": "stage43_cic_mixed_prevalence/stage43_mixed_open_set_report.md",
+      "source_locator": "prevalence:known1_unknown1:auprc",
+      "sampling_repeats": 20
+    },
+    {
+      "figure": "fig4_6",
+      "setting": "known1_unknown1",
+      "method": "DES-v1",
+      "metric": "ufar",
+      "value": 0.06835,
+      "sd": null,
+      "source_path": "stage43_cic_mixed_prevalence/stage43_mixed_open_set_report.md",
+      "source_locator": "prevalence:known1_unknown1:ufar",
+      "sampling_repeats": 20
+    },
+    {
+      "figure": "fig4_6",
+      "setting": "known1_unknown1",
+      "method": "DES-v1",
+      "metric": "known_frr",
+      "value": 0.07125,
+      "sd": null,
+      "source_path": "stage43_cic_mixed_prevalence/stage43_mixed_open_set_report.md",
+      "source_locator": "prevalence:known1_unknown1:known_frr",
+      "sampling_repeats": 20
+    },
+    {
+      "figure": "fig4_6",
+      "setting": "known1_unknown3",
+      "method": "DES-v1",
+      "metric": "auroc",
+      "value": 0.980384,
+      "sd": null,
+      "source_path": "stage43_cic_mixed_prevalence/stage43_mixed_open_set_report.md",
+      "source_locator": "prevalence:known1_unknown3:auroc",
+      "sampling_repeats": 20
+    },
+    {
+      "figure": "fig4_6",
+      "setting": "known1_unknown3",
+      "method": "DES-v1",
+      "metric": "auprc",
+      "value": 0.991864,
+      "sd": null,
+      "source_path": "stage43_cic_mixed_prevalence/stage43_mixed_open_set_report.md",
+      "source_locator": "prevalence:known1_unknown3:auprc",
+      "sampling_repeats": 20
+    },
+    {
+      "figure": "fig4_6",
+      "setting": "known1_unknown3",
+      "method": "DES-v1",
+      "metric": "ufar",
+      "value": 0.068867,
+      "sd": null,
+      "source_path": "stage43_cic_mixed_prevalence/stage43_mixed_open_set_report.md",
+      "source_locator": "prevalence:known1_unknown3:ufar",
+      "sampling_repeats": 20
+    },
+    {
+      "figure": "fig4_6",
+      "setting": "known1_unknown3",
+      "method": "DES-v1",
+      "metric": "known_frr",
+      "value": 0.0723,
+      "sd": null,
+      "source_path": "stage43_cic_mixed_prevalence/stage43_mixed_open_set_report.md",
+      "source_locator": "prevalence:known1_unknown3:known_frr",
+      "sampling_repeats": 20
+    },
+    {
+      "figure": "fig4_6",
+      "setting": "known1_unknown9",
+      "method": "DES-v1",
+      "metric": "auroc",
+      "value": 0.980961,
+      "sd": null,
+      "source_path": "stage43_cic_mixed_prevalence/stage43_mixed_open_set_report.md",
+      "source_locator": "prevalence:known1_unknown9:auroc",
+      "sampling_repeats": 20
+    },
+    {
+      "figure": "fig4_6",
+      "setting": "known1_unknown9",
+      "method": "DES-v1",
+      "metric": "auprc",
+      "value": 0.997304,
+      "sd": null,
+      "source_path": "stage43_cic_mixed_prevalence/stage43_mixed_open_set_report.md",
+      "source_locator": "prevalence:known1_unknown9:auprc",
+      "sampling_repeats": 20
+    },
+    {
+      "figure": "fig4_6",
+      "setting": "known1_unknown9",
+      "method": "DES-v1",
+      "metric": "ufar",
+      "value": 0.0695,
+      "sd": null,
+      "source_path": "stage43_cic_mixed_prevalence/stage43_mixed_open_set_report.md",
+      "source_locator": "prevalence:known1_unknown9:ufar",
+      "sampling_repeats": 20
+    },
+    {
+      "figure": "fig4_6",
+      "setting": "known1_unknown9",
+      "method": "DES-v1",
+      "metric": "known_frr",
+      "value": 0.06825,
+      "sd": null,
+      "source_path": "stage43_cic_mixed_prevalence/stage43_mixed_open_set_report.md",
+      "source_locator": "prevalence:known1_unknown9:known_frr",
+      "sampling_repeats": 20
+    },
+    {
+      "figure": "fig4_6",
+      "setting": "known3_unknown1",
+      "method": "DES-v1",
+      "metric": "auroc",
+      "value": 0.981316,
+      "sd": null,
+      "source_path": "stage43_cic_mixed_prevalence/stage43_mixed_open_set_report.md",
+      "source_locator": "prevalence:known3_unknown1:auroc",
+      "sampling_repeats": 20
+    },
+    {
+      "figure": "fig4_6",
+      "setting": "known3_unknown1",
+      "method": "DES-v1",
+      "metric": "auprc",
+      "value": 0.939144,
+      "sd": null,
+      "source_path": "stage43_cic_mixed_prevalence/stage43_mixed_open_set_report.md",
+      "source_locator": "prevalence:known3_unknown1:auprc",
+      "sampling_repeats": 20
+    },
+    {
+      "figure": "fig4_6",
+      "setting": "known3_unknown1",
+      "method": "DES-v1",
+      "metric": "ufar",
+      "value": 0.0691,
+      "sd": null,
+      "source_path": "stage43_cic_mixed_prevalence/stage43_mixed_open_set_report.md",
+      "source_locator": "prevalence:known3_unknown1:ufar",
+      "sampling_repeats": 20
+    },
+    {
+      "figure": "fig4_6",
+      "setting": "known3_unknown1",
+      "method": "DES-v1",
+      "metric": "known_frr",
+      "value": 0.070367,
+      "sd": null,
+      "source_path": "stage43_cic_mixed_prevalence/stage43_mixed_open_set_report.md",
+      "source_locator": "prevalence:known3_unknown1:known_frr",
+      "sampling_repeats": 20
+    },
+    {
+      "figure": "fig4_6",
+      "setting": "known9_unknown1",
+      "method": "DES-v1",
+      "metric": "auroc",
+      "value": 0.981042,
+      "sd": null,
+      "source_path": "stage43_cic_mixed_prevalence/stage43_mixed_open_set_report.md",
+      "source_locator": "prevalence:known9_unknown1:auroc",
+      "sampling_repeats": 20
+    },
+    {
+      "figure": "fig4_6",
+      "setting": "known9_unknown1",
+      "method": "DES-v1",
+      "metric": "auprc",
+      "value": 0.852588,
+      "sd": null,
+      "source_path": "stage43_cic_mixed_prevalence/stage43_mixed_open_set_report.md",
+      "source_locator": "prevalence:known9_unknown1:auprc",
+      "sampling_repeats": 20
+    },
+    {
+      "figure": "fig4_6",
+      "setting": "known9_unknown1",
+      "method": "DES-v1",
+      "metric": "ufar",
+      "value": 0.06725,
+      "sd": null,
+      "source_path": "stage43_cic_mixed_prevalence/stage43_mixed_open_set_report.md",
+      "source_locator": "prevalence:known9_unknown1:ufar",
+      "sampling_repeats": 20
+    },
+    {
+      "figure": "fig4_6",
+      "setting": "known9_unknown1",
+      "method": "DES-v1",
+      "metric": "known_frr",
+      "value": 0.071056,
+      "sd": null,
+      "source_path": "stage43_cic_mixed_prevalence/stage43_mixed_open_set_report.md",
+      "source_locator": "prevalence:known9_unknown1:known_frr",
+      "sampling_repeats": 20
+    },
+    {
+      "figure": "fig4_6",
+      "setting": "all_balanced",
+      "method": "DES-v1",
+      "metric": "ufar",
+      "value": 0.0671,
+      "sd": null,
+      "source_path": "stage43_cic_mixed_prevalence/stage43_mixed_open_set_report.md",
+      "source_locator": "composition:all_balanced:UFAR",
+      "sampling_repeats": 20
+    },
+    {
+      "figure": "fig4_6",
+      "setting": "authentication_web",
+      "method": "DES-v1",
+      "metric": "ufar",
+      "value": 0.0,
+      "sd": null,
+      "source_path": "stage43_cic_mixed_prevalence/stage43_mixed_open_set_report.md",
+      "source_locator": "composition:authentication_web:UFAR",
+      "sampling_repeats": 20
+    },
+    {
+      "figure": "fig4_6",
+      "setting": "previously_hard",
+      "method": "DES-v1",
+      "metric": "ufar",
+      "value": 0.33835,
+      "sd": null,
+      "source_path": "stage43_cic_mixed_prevalence/stage43_mixed_open_set_report.md",
+      "source_locator": "composition:previously_hard:UFAR",
+      "sampling_repeats": 20
+    },
+    {
+      "figure": "fig4_7",
+      "setting": "A-1",
+      "method": "Open-Detect",
+      "metric": "auroc",
+      "value": 0.9907,
+      "sd": null,
+      "source_path": "stage41_a123_matched_open_set_comparison/comparison_report.md",
+      "source_locator": "A-1:balanced1to1:P95:Open-Detect:auroc",
+      "seeds": [
+        2022
+      ]
+    },
+    {
+      "figure": "fig4_7",
+      "setting": "A-1",
+      "method": "Open-Detect",
+      "metric": "binary_f1",
+      "value": 0.9659,
+      "sd": null,
+      "source_path": "stage41_a123_matched_open_set_comparison/comparison_report.md",
+      "source_locator": "A-1:balanced1to1:P95:Open-Detect:binary_f1",
+      "seeds": [
+        2022
+      ]
+    },
+    {
+      "figure": "fig4_7",
+      "setting": "A-1",
+      "method": "Open-Detect",
+      "metric": "ufar",
+      "value": 0.0,
+      "sd": null,
+      "source_path": "stage41_a123_matched_open_set_comparison/comparison_report.md",
+      "source_locator": "A-1:balanced1to1:P95:Open-Detect:ufar",
+      "seeds": [
+        2022
+      ]
+    },
+    {
+      "figure": "fig4_7",
+      "setting": "A-1",
+      "method": "Three-view DES-v1",
+      "metric": "auroc",
+      "value": 0.9769,
+      "sd": null,
+      "source_path": "stage41_a123_matched_open_set_comparison/comparison_report.md",
+      "source_locator": "A-1:balanced1to1:P95:Three-view DES-v1:auroc",
+      "seeds": [
+        2022
+      ]
+    },
+    {
+      "figure": "fig4_7",
+      "setting": "A-1",
+      "method": "Three-view DES-v1",
+      "metric": "binary_f1",
+      "value": 0.9605,
+      "sd": null,
+      "source_path": "stage41_a123_matched_open_set_comparison/comparison_report.md",
+      "source_locator": "A-1:balanced1to1:P95:Three-view DES-v1:binary_f1",
+      "seeds": [
+        2022
+      ]
+    },
+    {
+      "figure": "fig4_7",
+      "setting": "A-1",
+      "method": "Three-view DES-v1",
+      "metric": "ufar",
+      "value": 0.0,
+      "sd": null,
+      "source_path": "stage41_a123_matched_open_set_comparison/comparison_report.md",
+      "source_locator": "A-1:balanced1to1:P95:Three-view DES-v1:ufar",
+      "seeds": [
+        2022
+      ]
+    },
+    {
+      "figure": "fig4_7",
+      "setting": "A-2",
+      "method": "Open-Detect",
+      "metric": "auroc",
+      "value": 0.929,
+      "sd": null,
+      "source_path": "stage41_a123_matched_open_set_comparison/comparison_report.md",
+      "source_locator": "A-2:balanced1to1:P95:Open-Detect:auroc",
+      "seeds": [
+        2022
+      ]
+    },
+    {
+      "figure": "fig4_7",
+      "setting": "A-2",
+      "method": "Open-Detect",
+      "metric": "binary_f1",
+      "value": 0.5038,
+      "sd": null,
+      "source_path": "stage41_a123_matched_open_set_comparison/comparison_report.md",
+      "source_locator": "A-2:balanced1to1:P95:Open-Detect:binary_f1",
+      "seeds": [
+        2022
+      ]
+    },
+    {
+      "figure": "fig4_7",
+      "setting": "A-2",
+      "method": "Open-Detect",
+      "metric": "ufar",
+      "value": 0.6434,
+      "sd": null,
+      "source_path": "stage41_a123_matched_open_set_comparison/comparison_report.md",
+      "source_locator": "A-2:balanced1to1:P95:Open-Detect:ufar",
+      "seeds": [
+        2022
+      ]
+    },
+    {
+      "figure": "fig4_7",
+      "setting": "A-2",
+      "method": "Three-view DES-v1",
+      "metric": "auroc",
+      "value": 0.9406,
+      "sd": null,
+      "source_path": "stage41_a123_matched_open_set_comparison/comparison_report.md",
+      "source_locator": "A-2:balanced1to1:P95:Three-view DES-v1:auroc",
+      "seeds": [
+        2022
+      ]
+    },
+    {
+      "figure": "fig4_7",
+      "setting": "A-2",
+      "method": "Three-view DES-v1",
+      "metric": "binary_f1",
+      "value": 0.6741,
+      "sd": null,
+      "source_path": "stage41_a123_matched_open_set_comparison/comparison_report.md",
+      "source_locator": "A-2:balanced1to1:P95:Three-view DES-v1:binary_f1",
+      "seeds": [
+        2022
+      ]
+    },
+    {
+      "figure": "fig4_7",
+      "setting": "A-2",
+      "method": "Three-view DES-v1",
+      "metric": "ufar",
+      "value": 0.4606,
+      "sd": null,
+      "source_path": "stage41_a123_matched_open_set_comparison/comparison_report.md",
+      "source_locator": "A-2:balanced1to1:P95:Three-view DES-v1:ufar",
+      "seeds": [
+        2022
+      ]
+    },
+    {
+      "figure": "fig4_7",
+      "setting": "A-3",
+      "method": "Open-Detect",
+      "metric": "auroc",
+      "value": 0.9782,
+      "sd": null,
+      "source_path": "stage41_a123_matched_open_set_comparison/comparison_report.md",
+      "source_locator": "A-3:balanced1to1:P95:Open-Detect:auroc",
+      "seeds": [
+        2022
+      ]
+    },
+    {
+      "figure": "fig4_7",
+      "setting": "A-3",
+      "method": "Open-Detect",
+      "metric": "binary_f1",
+      "value": 0.9191,
+      "sd": null,
+      "source_path": "stage41_a123_matched_open_set_comparison/comparison_report.md",
+      "source_locator": "A-3:balanced1to1:P95:Open-Detect:binary_f1",
+      "seeds": [
+        2022
+      ]
+    },
+    {
+      "figure": "fig4_7",
+      "setting": "A-3",
+      "method": "Open-Detect",
+      "metric": "ufar",
+      "value": 0.1125,
+      "sd": null,
+      "source_path": "stage41_a123_matched_open_set_comparison/comparison_report.md",
+      "source_locator": "A-3:balanced1to1:P95:Open-Detect:ufar",
+      "seeds": [
+        2022
+      ]
+    },
+    {
+      "figure": "fig4_7",
+      "setting": "A-3",
+      "method": "Three-view DES-v1",
+      "metric": "auroc",
+      "value": 0.9609,
+      "sd": null,
+      "source_path": "stage41_a123_matched_open_set_comparison/comparison_report.md",
+      "source_locator": "A-3:balanced1to1:P95:Three-view DES-v1:auroc",
+      "seeds": [
+        2022
+      ]
+    },
+    {
+      "figure": "fig4_7",
+      "setting": "A-3",
+      "method": "Three-view DES-v1",
+      "metric": "binary_f1",
+      "value": 0.9231,
+      "sd": null,
+      "source_path": "stage41_a123_matched_open_set_comparison/comparison_report.md",
+      "source_locator": "A-3:balanced1to1:P95:Three-view DES-v1:binary_f1",
+      "seeds": [
+        2022
+      ]
+    },
+    {
+      "figure": "fig4_7",
+      "setting": "A-3",
+      "method": "Three-view DES-v1",
+      "metric": "ufar",
+      "value": 0.0921,
+      "sd": null,
+      "source_path": "stage41_a123_matched_open_set_comparison/comparison_report.md",
+      "source_locator": "A-3:balanced1to1:P95:Three-view DES-v1:ufar",
+      "seeds": [
+        2022
+      ]
+    }
+  ],
+  "sources": {
+    "stage23b_tfe_trident_same_flow_adaptation/stage23b_all_methods_comparison.md": {
+      "path": "stage23b_tfe_trident_same_flow_adaptation/stage23b_all_methods_comparison.md",
+      "sha256": "1f161089ef20ac39f429147717bd2f9e82552bac178c0fa8c3f2a8c00bb07f26",
+      "bytes": 6699
+    },
+    "stage32_three_dataset_coarse_single_seed/stage32_report.md": {
+      "path": "stage32_three_dataset_coarse_single_seed/stage32_report.md",
+      "sha256": "d031a0046d37d7e90f3513f31b523da69261dfbbf83f8d5c46dadccb0877104f",
+      "bytes": 2416
+    },
+    "stage44b_vnat_matched_opendetect/matched_comparison.csv": {
+      "path": "stage44b_vnat_matched_opendetect/matched_comparison.csv",
+      "sha256": "77e60836ab5c063902d820bbc47042587eecca45f2790268f92aba11a081957a",
+      "bytes": 12804
+    },
+    "stage44_vnat_coarse_service_loso_open_set/stage44_run_results.csv": {
+      "path": "stage44_vnat_coarse_service_loso_open_set/stage44_run_results.csv",
+      "sha256": "43ef56b0b61a618823c5e68d7316c79fbf263e6309c2d899c4bedcfe4550cddf",
+      "bytes": 27042
+    },
+    "stage42s_cic_favorable_open_set/RESULTS.md": {
+      "path": "stage42s_cic_favorable_open_set/RESULTS.md",
+      "sha256": "65a66785085a2c2f168addb6124aa71e7466d5ffae170086872bb64cf280b4e7",
+      "bytes": 4573
+    },
+    "stage42t_cic_goldeneye_open_set/RESULTS.md": {
+      "path": "stage42t_cic_goldeneye_open_set/RESULTS.md",
+      "sha256": "858e9e0b52ae6c8ca5e94e330d0fb0083dbb4a2f2e6fdc2b0f925768f9cb047c",
+      "bytes": 4778
+    },
+    "stage42u_cic_hulk_open_set/RESULTS.md": {
+      "path": "stage42u_cic_hulk_open_set/RESULTS.md",
+      "sha256": "c22e47710b4236bb07dcea441b17724179cc5c4dff305311488bdeb858ce94c5",
+      "bytes": 3493
+    },
+    "stage42x_cic_ftp_patator_open_set/RESULTS.md": {
+      "path": "stage42x_cic_ftp_patator_open_set/RESULTS.md",
+      "sha256": "5e86e65a590acfc1e0454382a0419c9a0bd60e2c6bf473c493a48cd306bb7112",
+      "bytes": 3981
+    },
+    "stage42v_cic_ddos_open_set/RESULTS.md": {
+      "path": "stage42v_cic_ddos_open_set/RESULTS.md",
+      "sha256": "37cc749f56ef8d2a9bc30ee0b3d75d0e13e1f52763eb3a89d9413160ff322c73",
+      "bytes": 4408
+    },
+    "stage42w_cic_bot_open_set/RESULTS.md": {
+      "path": "stage42w_cic_bot_open_set/RESULTS.md",
+      "sha256": "35c2d513ec223d1d4580dfefbafc3294f905c6dd55ee0f17525c3bf7e79128af",
+      "bytes": 4326
+    },
+    "stage42y_cic_remaining_four_open_set/RESULTS.md": {
+      "path": "stage42y_cic_remaining_four_open_set/RESULTS.md",
+      "sha256": "31766847a0d184bad989edba08deaca90c7a48ce4bb2d791ea858cb89f5b025e",
+      "bytes": 3799
+    },
+    "stage43_cic_mixed_prevalence/stage43_mixed_open_set_report.md": {
+      "path": "stage43_cic_mixed_prevalence/stage43_mixed_open_set_report.md",
+      "sha256": "6b0fd89477827634f63b81e104d2e28c9ab3e09362c771fbc7d49d93ec41da84",
+      "bytes": 3963
+    },
+    "stage41_a123_matched_open_set_comparison/comparison_report.md": {
+      "path": "stage41_a123_matched_open_set_comparison/comparison_report.md",
+      "sha256": "a0e7b71eed8d202b8ce393ced10ebcb846a7f919391ba43e5809807e0f46dfbb",
+      "bytes": 1207
+    }
+  }
+}

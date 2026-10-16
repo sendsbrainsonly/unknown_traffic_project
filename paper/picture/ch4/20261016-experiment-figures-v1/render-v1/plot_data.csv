@@ -1,0 +1,174 @@
+figure,setting,method,metric,value,sd,source_path,source_locator
+fig4_1,VPN6,OURS-E3-T8-pretrained,macro_f1,0.8595,0.007,stage23b_tfe_trident_same_flow_adaptation/stage23b_all_methods_comparison.md,VPN6:Macro-F1 mean±populationSD:OURS-E3-T8-pretrained
+fig4_1,VPN6,Open-Detect corrected-paper,macro_f1,0.7443,0.0142,stage23b_tfe_trident_same_flow_adaptation/stage23b_all_methods_comparison.md,VPN6:Macro-F1 mean±populationSD:Open-Detect corrected-paper
+fig4_1,VPN6,RoNeTC-runnable-reconstruction,macro_f1,0.7157,0.0081,stage23b_tfe_trident_same_flow_adaptation/stage23b_all_methods_comparison.md,VPN6:Macro-F1 mean±populationSD:RoNeTC-runnable-reconstruction
+fig4_1,VPN6,TFE-GNN-8-UDP-short,macro_f1,0.6585,0.0146,stage23b_tfe_trident_same_flow_adaptation/stage23b_all_methods_comparison.md,VPN6:Macro-F1 mean±populationSD:TFE-GNN-8-UDP-short
+fig4_1,VPN6,TrafficFormer-pretrained,macro_f1,0.8606,0.004,stage23b_tfe_trident_same_flow_adaptation/stage23b_all_methods_comparison.md,VPN6:Macro-F1 mean±populationSD:TrafficFormer-pretrained
+fig4_1,VPN6,Trident-early8-86D,macro_f1,0.6322,0.0006,stage23b_tfe_trident_same_flow_adaptation/stage23b_all_methods_comparison.md,VPN6:Macro-F1 mean±populationSD:Trident-early8-86D
+fig4_1,VPN6,YaTC-official-pretrained-Stage20,macro_f1,0.8871,0.0116,stage23b_tfe_trident_same_flow_adaptation/stage23b_all_methods_comparison.md,VPN6:Macro-F1 mean±populationSD:YaTC-official-pretrained-Stage20
+fig4_1,Tor7,OURS-E3-T8-pretrained,macro_f1,0.8222,0.0076,stage23b_tfe_trident_same_flow_adaptation/stage23b_all_methods_comparison.md,Tor7:Macro-F1 mean±populationSD:OURS-E3-T8-pretrained
+fig4_1,Tor7,Open-Detect corrected-paper,macro_f1,0.5766,0.0997,stage23b_tfe_trident_same_flow_adaptation/stage23b_all_methods_comparison.md,Tor7:Macro-F1 mean±populationSD:Open-Detect corrected-paper
+fig4_1,Tor7,RoNeTC-runnable-reconstruction,macro_f1,0.534,0.0198,stage23b_tfe_trident_same_flow_adaptation/stage23b_all_methods_comparison.md,Tor7:Macro-F1 mean±populationSD:RoNeTC-runnable-reconstruction
+fig4_1,Tor7,TFE-GNN-8-UDP-short,macro_f1,0.5536,0.0138,stage23b_tfe_trident_same_flow_adaptation/stage23b_all_methods_comparison.md,Tor7:Macro-F1 mean±populationSD:TFE-GNN-8-UDP-short
+fig4_1,Tor7,TrafficFormer-pretrained,macro_f1,0.8213,0.0064,stage23b_tfe_trident_same_flow_adaptation/stage23b_all_methods_comparison.md,Tor7:Macro-F1 mean±populationSD:TrafficFormer-pretrained
+fig4_1,Tor7,Trident-early8-86D,macro_f1,0.6053,0.0019,stage23b_tfe_trident_same_flow_adaptation/stage23b_all_methods_comparison.md,Tor7:Macro-F1 mean±populationSD:Trident-early8-86D
+fig4_1,Tor7,YaTC-official-pretrained-Stage20,macro_f1,0.8274,0.0008,stage23b_tfe_trident_same_flow_adaptation/stage23b_all_methods_comparison.md,Tor7:Macro-F1 mean±populationSD:YaTC-official-pretrained-Stage20
+fig4_2,iscx_vpn,E3_hard_remap,macro_f1,0.899913,,stage32_three_dataset_coarse_single_seed/stage32_report.md,same-flow paired:iscx_vpn:E3_hard_remap
+fig4_2,iscx_vpn,three_view,macro_f1,0.91935,,stage32_three_dataset_coarse_single_seed/stage32_report.md,same-flow paired:iscx_vpn:T0
+fig4_2,iscx_vpn,E3_coarse_head,macro_f1,0.9001,,stage32_three_dataset_coarse_single_seed/stage32_report.md,same-flow paired:iscx_vpn:E3_coarse_head
+fig4_2,iscx_vpn,YaTC_hard_remap_context,macro_f1,0.929493,,stage32_three_dataset_coarse_single_seed/stage32_report.md,same-flow paired:iscx_vpn:YaTC_hard_remap_context
+fig4_2,iscx_tor,E3_hard_remap,macro_f1,0.853614,,stage32_three_dataset_coarse_single_seed/stage32_report.md,same-flow paired:iscx_tor:E3_hard_remap
+fig4_2,iscx_tor,three_view,macro_f1,0.899375,,stage32_three_dataset_coarse_single_seed/stage32_report.md,same-flow paired:iscx_tor:T0
+fig4_2,iscx_tor,E3_coarse_head,macro_f1,0.855214,,stage32_three_dataset_coarse_single_seed/stage32_report.md,same-flow paired:iscx_tor:E3_coarse_head
+fig4_2,iscx_tor,YaTC_hard_remap_context,macro_f1,0.871463,,stage32_three_dataset_coarse_single_seed/stage32_report.md,same-flow paired:iscx_tor:YaTC_hard_remap_context
+fig4_3,communication,od,auroc,0.817614799936988,,stage44b_vnat_matched_opendetect/matched_comparison.csv,communication:natural:P95:od_auroc
+fig4_3,communication,od,binary_f1,0.3423952975753123,,stage44b_vnat_matched_opendetect/matched_comparison.csv,communication:natural:P95:od_binary_f1
+fig4_3,communication,od,ufar,0.7889492753623188,,stage44b_vnat_matched_opendetect/matched_comparison.csv,communication:natural:P95:od_ufar
+fig4_3,communication,od,known_frr,0.034782608695652174,,stage44b_vnat_matched_opendetect/matched_comparison.csv,communication:natural:P95:od_known_frr
+fig4_3,communication,three_view_des_v1,auroc,0.9954496823146398,,stage44b_vnat_matched_opendetect/matched_comparison.csv,communication:natural:P95:three_view_des_v1_auroc
+fig4_3,communication,three_view_des_v1,binary_f1,0.9848282016956715,,stage44b_vnat_matched_opendetect/matched_comparison.csv,communication:natural:P95:three_view_des_v1_binary_f1
+fig4_3,communication,three_view_des_v1,ufar,0.0004528985507246377,,stage44b_vnat_matched_opendetect/matched_comparison.csv,communication:natural:P95:three_view_des_v1_ufar
+fig4_3,communication,three_view_des_v1,known_frr,0.04855072463768116,,stage44b_vnat_matched_opendetect/matched_comparison.csv,communication:natural:P95:three_view_des_v1_known_frr
+fig4_3,file_transfer,od,auroc,0.5997316061843078,,stage44b_vnat_matched_opendetect/matched_comparison.csv,file_transfer:natural:P95:od_auroc
+fig4_3,file_transfer,od,binary_f1,0.003013056578506863,,stage44b_vnat_matched_opendetect/matched_comparison.csv,file_transfer:natural:P95:od_binary_f1
+fig4_3,file_transfer,od,ufar,0.9984667802385009,,stage44b_vnat_matched_opendetect/matched_comparison.csv,file_transfer:natural:P95:od_ufar
+fig4_3,file_transfer,od,known_frr,0.09958071278825996,,stage44b_vnat_matched_opendetect/matched_comparison.csv,file_transfer:natural:P95:od_known_frr
+fig4_3,file_transfer,three_view_des_v1,auroc,0.9947596241415148,,stage44b_vnat_matched_opendetect/matched_comparison.csv,file_transfer:natural:P95:three_view_des_v1_auroc
+fig4_3,file_transfer,three_view_des_v1,binary_f1,0.9934473661816016,,stage44b_vnat_matched_opendetect/matched_comparison.csv,file_transfer:natural:P95:three_view_des_v1_binary_f1
+fig4_3,file_transfer,three_view_des_v1,ufar,0.005621805792163544,,stage44b_vnat_matched_opendetect/matched_comparison.csv,file_transfer:natural:P95:three_view_des_v1_ufar
+fig4_3,file_transfer,three_view_des_v1,known_frr,0.04612159329140461,,stage44b_vnat_matched_opendetect/matched_comparison.csv,file_transfer:natural:P95:three_view_des_v1_known_frr
+fig4_3,remote_access,od,auroc,0.5888152369053744,,stage44b_vnat_matched_opendetect/matched_comparison.csv,remote_access:natural:P95:od_auroc
+fig4_3,remote_access,od,binary_f1,0.05743195097620066,,stage44b_vnat_matched_opendetect/matched_comparison.csv,remote_access:natural:P95:od_binary_f1
+fig4_3,remote_access,od,ufar,0.9703828911589623,,stage44b_vnat_matched_opendetect/matched_comparison.csv,remote_access:natural:P95:od_ufar
+fig4_3,remote_access,od,known_frr,0.023809523809523808,,stage44b_vnat_matched_opendetect/matched_comparison.csv,remote_access:natural:P95:od_known_frr
+fig4_3,remote_access,three_view_des_v1,auroc,0.9876271666894141,,stage44b_vnat_matched_opendetect/matched_comparison.csv,remote_access:natural:P95:three_view_des_v1_auroc
+fig4_3,remote_access,three_view_des_v1,binary_f1,0.9797994912464462,,stage44b_vnat_matched_opendetect/matched_comparison.csv,remote_access:natural:P95:three_view_des_v1_binary_f1
+fig4_3,remote_access,three_view_des_v1,ufar,0.03755420004409495,,stage44b_vnat_matched_opendetect/matched_comparison.csv,remote_access:natural:P95:three_view_des_v1_ufar
+fig4_3,remote_access,three_view_des_v1,known_frr,0.028769841269841268,,stage44b_vnat_matched_opendetect/matched_comparison.csv,remote_access:natural:P95:three_view_des_v1_known_frr
+fig4_3,streaming,od,auroc,0.9606876289187818,,stage44b_vnat_matched_opendetect/matched_comparison.csv,streaming:natural:P95:od_auroc
+fig4_3,streaming,od,binary_f1,0.9064068497195158,,stage44b_vnat_matched_opendetect/matched_comparison.csv,streaming:natural:P95:od_binary_f1
+fig4_3,streaming,od,ufar,0.12981859410430838,,stage44b_vnat_matched_opendetect/matched_comparison.csv,streaming:natural:P95:od_ufar
+fig4_3,streaming,od,known_frr,0.06023271731690623,,stage44b_vnat_matched_opendetect/matched_comparison.csv,streaming:natural:P95:od_known_frr
+fig4_3,streaming,three_view_des_v1,auroc,0.9910600790624258,,stage44b_vnat_matched_opendetect/matched_comparison.csv,streaming:natural:P95:three_view_des_v1_auroc
+fig4_3,streaming,three_view_des_v1,binary_f1,0.9778270509977827,,stage44b_vnat_matched_opendetect/matched_comparison.csv,streaming:natural:P95:three_view_des_v1_binary_f1
+fig4_3,streaming,three_view_des_v1,ufar,0.0,,stage44b_vnat_matched_opendetect/matched_comparison.csv,streaming:natural:P95:three_view_des_v1_ufar
+fig4_3,streaming,three_view_des_v1,known_frr,0.05475701574264202,,stage44b_vnat_matched_opendetect/matched_comparison.csv,streaming:natural:P95:three_view_des_v1_known_frr
+fig4_4,communication,msp,auroc,0.7783255224742701,,stage44_vnat_coarse_service_loso_open_set/stage44_run_results.csv,communication:msp:natural:P95:auroc
+fig4_4,communication,msp,ufar,0.3446557971014493,,stage44_vnat_coarse_service_loso_open_set/stage44_run_results.csv,communication:msp:natural:P95:ufar
+fig4_4,communication,msp,known_frr,0.041304347826086954,,stage44_vnat_coarse_service_loso_open_set/stage44_run_results.csv,communication:msp:natural:P95:known_frr
+fig4_4,communication,energy,auroc,0.7712501312749421,,stage44_vnat_coarse_service_loso_open_set/stage44_run_results.csv,communication:energy:natural:P95:auroc
+fig4_4,communication,energy,ufar,0.37817028985507245,,stage44_vnat_coarse_service_loso_open_set/stage44_run_results.csv,communication:energy:natural:P95:ufar
+fig4_4,communication,energy,known_frr,0.042028985507246375,,stage44_vnat_coarse_service_loso_open_set/stage44_run_results.csv,communication:energy:natural:P95:known_frr
+fig4_4,communication,centroid,auroc,0.9824367254778408,,stage44_vnat_coarse_service_loso_open_set/stage44_run_results.csv,communication:centroid:natural:P95:auroc
+fig4_4,communication,centroid,ufar,0.05570652173913043,,stage44_vnat_coarse_service_loso_open_set/stage44_run_results.csv,communication:centroid:natural:P95:ufar
+fig4_4,communication,centroid,known_frr,0.06884057971014493,,stage44_vnat_coarse_service_loso_open_set/stage44_run_results.csv,communication:centroid:natural:P95:known_frr
+fig4_4,communication,des_v1,auroc,0.9954496823146398,,stage44_vnat_coarse_service_loso_open_set/stage44_run_results.csv,communication:des_v1:natural:P95:auroc
+fig4_4,communication,des_v1,ufar,0.0004528985507246377,,stage44_vnat_coarse_service_loso_open_set/stage44_run_results.csv,communication:des_v1:natural:P95:ufar
+fig4_4,communication,des_v1,known_frr,0.04855072463768116,,stage44_vnat_coarse_service_loso_open_set/stage44_run_results.csv,communication:des_v1:natural:P95:known_frr
+fig4_4,file_transfer,msp,auroc,0.9925440805145732,,stage44_vnat_coarse_service_loso_open_set/stage44_run_results.csv,file_transfer:msp:natural:P95:auroc
+fig4_4,file_transfer,msp,ufar,0.017546848381601362,,stage44_vnat_coarse_service_loso_open_set/stage44_run_results.csv,file_transfer:msp:natural:P95:ufar
+fig4_4,file_transfer,msp,known_frr,0.06184486373165619,,stage44_vnat_coarse_service_loso_open_set/stage44_run_results.csv,file_transfer:msp:natural:P95:known_frr
+fig4_4,file_transfer,energy,auroc,0.9941206932881903,,stage44_vnat_coarse_service_loso_open_set/stage44_run_results.csv,file_transfer:energy:natural:P95:auroc
+fig4_4,file_transfer,energy,ufar,0.015843270868824533,,stage44_vnat_coarse_service_loso_open_set/stage44_run_results.csv,file_transfer:energy:natural:P95:ufar
+fig4_4,file_transfer,energy,known_frr,0.05660377358490566,,stage44_vnat_coarse_service_loso_open_set/stage44_run_results.csv,file_transfer:energy:natural:P95:known_frr
+fig4_4,file_transfer,centroid,auroc,0.9940794431408685,,stage44_vnat_coarse_service_loso_open_set/stage44_run_results.csv,file_transfer:centroid:natural:P95:auroc
+fig4_4,file_transfer,centroid,ufar,0.003577512776831346,,stage44_vnat_coarse_service_loso_open_set/stage44_run_results.csv,file_transfer:centroid:natural:P95:ufar
+fig4_4,file_transfer,centroid,known_frr,0.050314465408805034,,stage44_vnat_coarse_service_loso_open_set/stage44_run_results.csv,file_transfer:centroid:natural:P95:known_frr
+fig4_4,file_transfer,des_v1,auroc,0.9947596241415148,,stage44_vnat_coarse_service_loso_open_set/stage44_run_results.csv,file_transfer:des_v1:natural:P95:auroc
+fig4_4,file_transfer,des_v1,ufar,0.005621805792163544,,stage44_vnat_coarse_service_loso_open_set/stage44_run_results.csv,file_transfer:des_v1:natural:P95:ufar
+fig4_4,file_transfer,des_v1,known_frr,0.04612159329140461,,stage44_vnat_coarse_service_loso_open_set/stage44_run_results.csv,file_transfer:des_v1:natural:P95:known_frr
+fig4_4,remote_access,msp,auroc,0.9448656358013674,,stage44_vnat_coarse_service_loso_open_set/stage44_run_results.csv,remote_access:msp:natural:P95:auroc
+fig4_4,remote_access,msp,ufar,0.1522010729771441,,stage44_vnat_coarse_service_loso_open_set/stage44_run_results.csv,remote_access:msp:natural:P95:ufar
+fig4_4,remote_access,msp,known_frr,0.03670634920634921,,stage44_vnat_coarse_service_loso_open_set/stage44_run_results.csv,remote_access:msp:natural:P95:known_frr
+fig4_4,remote_access,energy,auroc,0.9466253509806462,,stage44_vnat_coarse_service_loso_open_set/stage44_run_results.csv,remote_access:energy:natural:P95:auroc
+fig4_4,remote_access,energy,ufar,0.15102520761372823,,stage44_vnat_coarse_service_loso_open_set/stage44_run_results.csv,remote_access:energy:natural:P95:ufar
+fig4_4,remote_access,energy,known_frr,0.03670634920634921,,stage44_vnat_coarse_service_loso_open_set/stage44_run_results.csv,remote_access:energy:natural:P95:known_frr
+fig4_4,remote_access,centroid,auroc,0.9446665960914141,,stage44_vnat_coarse_service_loso_open_set/stage44_run_results.csv,remote_access:centroid:natural:P95:auroc
+fig4_4,remote_access,centroid,ufar,0.09046814139780995,,stage44_vnat_coarse_service_loso_open_set/stage44_run_results.csv,remote_access:centroid:natural:P95:ufar
+fig4_4,remote_access,centroid,known_frr,0.04265873015873016,,stage44_vnat_coarse_service_loso_open_set/stage44_run_results.csv,remote_access:centroid:natural:P95:known_frr
+fig4_4,remote_access,des_v1,auroc,0.9876271666894141,,stage44_vnat_coarse_service_loso_open_set/stage44_run_results.csv,remote_access:des_v1:natural:P95:auroc
+fig4_4,remote_access,des_v1,ufar,0.03755420004409495,,stage44_vnat_coarse_service_loso_open_set/stage44_run_results.csv,remote_access:des_v1:natural:P95:ufar
+fig4_4,remote_access,des_v1,known_frr,0.028769841269841268,,stage44_vnat_coarse_service_loso_open_set/stage44_run_results.csv,remote_access:des_v1:natural:P95:known_frr
+fig4_4,streaming,msp,auroc,0.9573821086728097,,stage44_vnat_coarse_service_loso_open_set/stage44_run_results.csv,streaming:msp:natural:P95:auroc
+fig4_4,streaming,msp,ufar,0.07086167800453515,,stage44_vnat_coarse_service_loso_open_set/stage44_run_results.csv,streaming:msp:natural:P95:ufar
+fig4_4,streaming,msp,known_frr,0.057494866529774126,,stage44_vnat_coarse_service_loso_open_set/stage44_run_results.csv,streaming:msp:natural:P95:known_frr
+fig4_4,streaming,energy,auroc,0.9570526818986778,,stage44_vnat_coarse_service_loso_open_set/stage44_run_results.csv,streaming:energy:natural:P95:auroc
+fig4_4,streaming,energy,ufar,0.07086167800453515,,stage44_vnat_coarse_service_loso_open_set/stage44_run_results.csv,streaming:energy:natural:P95:ufar
+fig4_4,streaming,energy,known_frr,0.059548254620123205,,stage44_vnat_coarse_service_loso_open_set/stage44_run_results.csv,streaming:energy:natural:P95:known_frr
+fig4_4,streaming,centroid,auroc,0.9758412605288522,,stage44_vnat_coarse_service_loso_open_set/stage44_run_results.csv,streaming:centroid:natural:P95:auroc
+fig4_4,streaming,centroid,ufar,0.07369614512471655,,stage44_vnat_coarse_service_loso_open_set/stage44_run_results.csv,streaming:centroid:natural:P95:ufar
+fig4_4,streaming,centroid,known_frr,0.03285420944558522,,stage44_vnat_coarse_service_loso_open_set/stage44_run_results.csv,streaming:centroid:natural:P95:known_frr
+fig4_4,streaming,des_v1,auroc,0.9910600790624258,,stage44_vnat_coarse_service_loso_open_set/stage44_run_results.csv,streaming:des_v1:natural:P95:auroc
+fig4_4,streaming,des_v1,ufar,0.0,,stage44_vnat_coarse_service_loso_open_set/stage44_run_results.csv,streaming:des_v1:natural:P95:ufar
+fig4_4,streaming,des_v1,known_frr,0.05475701574264202,,stage44_vnat_coarse_service_loso_open_set/stage44_run_results.csv,streaming:des_v1:natural:P95:known_frr
+fig4_5,DoS slowloris,MSP,auroc,0.814714,,stage42s_cic_favorable_open_set/RESULTS.md,natural:MSP:AUROC
+fig4_5,DoS slowloris,DES-v1,auroc,0.99305,,stage42s_cic_favorable_open_set/RESULTS.md,natural:DES-v1:AUROC
+fig4_5,DoS slowloris,DES-v1,ufar,0.00035,,stage42s_cic_favorable_open_set/RESULTS.md,natural:DES-v1:UFAR
+fig4_5,DoS GoldenEye,MSP,auroc,0.331679,,stage42t_cic_goldeneye_open_set/RESULTS.md,natural:MSP:AUROC
+fig4_5,DoS GoldenEye,DES-v1,auroc,0.969958,,stage42t_cic_goldeneye_open_set/RESULTS.md,natural:DES-v1:AUROC
+fig4_5,DoS GoldenEye,DES-v1,ufar,0.002419,,stage42t_cic_goldeneye_open_set/RESULTS.md,natural:DES-v1:UFAR
+fig4_5,DoS Hulk,MSP,auroc,0.093804,,stage42u_cic_hulk_open_set/RESULTS.md,natural:MSP:AUROC
+fig4_5,DoS Hulk,DES-v1,auroc,0.973767,,stage42u_cic_hulk_open_set/RESULTS.md,natural:DES-v1:AUROC
+fig4_5,DoS Hulk,DES-v1,ufar,0.001134,,stage42u_cic_hulk_open_set/RESULTS.md,natural:DES-v1:UFAR
+fig4_5,FTP-Patator,MSP,auroc,0.98746,,stage42x_cic_ftp_patator_open_set/RESULTS.md,natural:MSP:AUROC
+fig4_5,FTP-Patator,DES-v1,auroc,0.998342,,stage42x_cic_ftp_patator_open_set/RESULTS.md,natural:DES-v1:AUROC
+fig4_5,FTP-Patator,DES-v1,ufar,0.0,,stage42x_cic_ftp_patator_open_set/RESULTS.md,natural:DES-v1:UFAR
+fig4_5,DDoS,MSP,auroc,0.05817,,stage42v_cic_ddos_open_set/RESULTS.md,natural:MSP:AUROC
+fig4_5,DDoS,DES-v1,auroc,0.94899,,stage42v_cic_ddos_open_set/RESULTS.md,natural:DES-v1:AUROC
+fig4_5,DDoS,DES-v1,ufar,0.166134,,stage42v_cic_ddos_open_set/RESULTS.md,natural:DES-v1:UFAR
+fig4_5,Bot,MSP,auroc,0.629074,,stage42w_cic_bot_open_set/RESULTS.md,natural:MSP:AUROC
+fig4_5,Bot,DES-v1,auroc,0.946433,,stage42w_cic_bot_open_set/RESULTS.md,natural:DES-v1:AUROC
+fig4_5,Bot,DES-v1,ufar,0.508958,,stage42w_cic_bot_open_set/RESULTS.md,natural:DES-v1:UFAR
+fig4_5,SSH-Patator,MSP,auroc,0.869745,,stage42y_cic_remaining_four_open_set/RESULTS.md,natural:SSH-Patator:MSP:auroc
+fig4_5,SSH-Patator,DES-v1,auroc,0.991275,,stage42y_cic_remaining_four_open_set/RESULTS.md,natural:SSH-Patator:DES-v1:auroc
+fig4_5,SSH-Patator,DES-v1,ufar,0.0,,stage42y_cic_remaining_four_open_set/RESULTS.md,natural:SSH-Patator:DES-v1:ufar
+fig4_5,Web Attack - Brute Force,MSP,auroc,0.916091,,stage42y_cic_remaining_four_open_set/RESULTS.md,natural:Web Attack - Brute Force:MSP:auroc
+fig4_5,Web Attack - Brute Force,DES-v1,auroc,0.995652,,stage42y_cic_remaining_four_open_set/RESULTS.md,natural:Web Attack - Brute Force:DES-v1:auroc
+fig4_5,Web Attack - Brute Force,DES-v1,ufar,0.0,,stage42y_cic_remaining_four_open_set/RESULTS.md,natural:Web Attack - Brute Force:DES-v1:ufar
+fig4_5,Web Attack - XSS,MSP,auroc,0.977971,,stage42y_cic_remaining_four_open_set/RESULTS.md,natural:Web Attack - XSS:MSP:auroc
+fig4_5,Web Attack - XSS,DES-v1,auroc,0.997489,,stage42y_cic_remaining_four_open_set/RESULTS.md,natural:Web Attack - XSS:DES-v1:auroc
+fig4_5,Web Attack - XSS,DES-v1,ufar,0.0,,stage42y_cic_remaining_four_open_set/RESULTS.md,natural:Web Attack - XSS:DES-v1:ufar
+fig4_5,DoS Slowhttptest,MSP,auroc,0.859683,,stage42y_cic_remaining_four_open_set/RESULTS.md,natural:DoS Slowhttptest:MSP:auroc
+fig4_5,DoS Slowhttptest,DES-v1,auroc,0.9934,,stage42y_cic_remaining_four_open_set/RESULTS.md,natural:DoS Slowhttptest:DES-v1:auroc
+fig4_5,DoS Slowhttptest,DES-v1,ufar,0.001374,,stage42y_cic_remaining_four_open_set/RESULTS.md,natural:DoS Slowhttptest:DES-v1:ufar
+fig4_6,known1_unknown1,DES-v1,auroc,0.981011,,stage43_cic_mixed_prevalence/stage43_mixed_open_set_report.md,prevalence:known1_unknown1:auroc
+fig4_6,known1_unknown1,DES-v1,auprc,0.977296,,stage43_cic_mixed_prevalence/stage43_mixed_open_set_report.md,prevalence:known1_unknown1:auprc
+fig4_6,known1_unknown1,DES-v1,ufar,0.06835,,stage43_cic_mixed_prevalence/stage43_mixed_open_set_report.md,prevalence:known1_unknown1:ufar
+fig4_6,known1_unknown1,DES-v1,known_frr,0.07125,,stage43_cic_mixed_prevalence/stage43_mixed_open_set_report.md,prevalence:known1_unknown1:known_frr
+fig4_6,known1_unknown3,DES-v1,auroc,0.980384,,stage43_cic_mixed_prevalence/stage43_mixed_open_set_report.md,prevalence:known1_unknown3:auroc
+fig4_6,known1_unknown3,DES-v1,auprc,0.991864,,stage43_cic_mixed_prevalence/stage43_mixed_open_set_report.md,prevalence:known1_unknown3:auprc
+fig4_6,known1_unknown3,DES-v1,ufar,0.068867,,stage43_cic_mixed_prevalence/stage43_mixed_open_set_report.md,prevalence:known1_unknown3:ufar
+fig4_6,known1_unknown3,DES-v1,known_frr,0.0723,,stage43_cic_mixed_prevalence/stage43_mixed_open_set_report.md,prevalence:known1_unknown3:known_frr
+fig4_6,known1_unknown9,DES-v1,auroc,0.980961,,stage43_cic_mixed_prevalence/stage43_mixed_open_set_report.md,prevalence:known1_unknown9:auroc
+fig4_6,known1_unknown9,DES-v1,auprc,0.997304,,stage43_cic_mixed_prevalence/stage43_mixed_open_set_report.md,prevalence:known1_unknown9:auprc
+fig4_6,known1_unknown9,DES-v1,ufar,0.0695,,stage43_cic_mixed_prevalence/stage43_mixed_open_set_report.md,prevalence:known1_unknown9:ufar
+fig4_6,known1_unknown9,DES-v1,known_frr,0.06825,,stage43_cic_mixed_prevalence/stage43_mixed_open_set_report.md,prevalence:known1_unknown9:known_frr
+fig4_6,known3_unknown1,DES-v1,auroc,0.981316,,stage43_cic_mixed_prevalence/stage43_mixed_open_set_report.md,prevalence:known3_unknown1:auroc
+fig4_6,known3_unknown1,DES-v1,auprc,0.939144,,stage43_cic_mixed_prevalence/stage43_mixed_open_set_report.md,prevalence:known3_unknown1:auprc
+fig4_6,known3_unknown1,DES-v1,ufar,0.0691,,stage43_cic_mixed_prevalence/stage43_mixed_open_set_report.md,prevalence:known3_unknown1:ufar
+fig4_6,known3_unknown1,DES-v1,known_frr,0.070367,,stage43_cic_mixed_prevalence/stage43_mixed_open_set_report.md,prevalence:known3_unknown1:known_frr
+fig4_6,known9_unknown1,DES-v1,auroc,0.981042,,stage43_cic_mixed_prevalence/stage43_mixed_open_set_report.md,prevalence:known9_unknown1:auroc
+fig4_6,known9_unknown1,DES-v1,auprc,0.852588,,stage43_cic_mixed_prevalence/stage43_mixed_open_set_report.md,prevalence:known9_unknown1:auprc
+fig4_6,known9_unknown1,DES-v1,ufar,0.06725,,stage43_cic_mixed_prevalence/stage43_mixed_open_set_report.md,prevalence:known9_unknown1:ufar
+fig4_6,known9_unknown1,DES-v1,known_frr,0.071056,,stage43_cic_mixed_prevalence/stage43_mixed_open_set_report.md,prevalence:known9_unknown1:known_frr
+fig4_6,all_balanced,DES-v1,ufar,0.0671,,stage43_cic_mixed_prevalence/stage43_mixed_open_set_report.md,composition:all_balanced:UFAR
+fig4_6,authentication_web,DES-v1,ufar,0.0,,stage43_cic_mixed_prevalence/stage43_mixed_open_set_report.md,composition:authentication_web:UFAR
+fig4_6,previously_hard,DES-v1,ufar,0.33835,,stage43_cic_mixed_prevalence/stage43_mixed_open_set_report.md,composition:previously_hard:UFAR
+fig4_7,A-1,Open-Detect,auroc,0.9907,,stage41_a123_matched_open_set_comparison/comparison_report.md,A-1:balanced1to1:P95:Open-Detect:auroc
+fig4_7,A-1,Open-Detect,binary_f1,0.9659,,stage41_a123_matched_open_set_comparison/comparison_report.md,A-1:balanced1to1:P95:Open-Detect:binary_f1
+fig4_7,A-1,Open-Detect,ufar,0.0,,stage41_a123_matched_open_set_comparison/comparison_report.md,A-1:balanced1to1:P95:Open-Detect:ufar
+fig4_7,A-1,Three-view DES-v1,auroc,0.9769,,stage41_a123_matched_open_set_comparison/comparison_report.md,A-1:balanced1to1:P95:Three-view DES-v1:auroc
+fig4_7,A-1,Three-view DES-v1,binary_f1,0.9605,,stage41_a123_matched_open_set_comparison/comparison_report.md,A-1:balanced1to1:P95:Three-view DES-v1:binary_f1
+fig4_7,A-1,Three-view DES-v1,ufar,0.0,,stage41_a123_matched_open_set_comparison/comparison_report.md,A-1:balanced1to1:P95:Three-view DES-v1:ufar
+fig4_7,A-2,Open-Detect,auroc,0.929,,stage41_a123_matched_open_set_comparison/comparison_report.md,A-2:balanced1to1:P95:Open-Detect:auroc
+fig4_7,A-2,Open-Detect,binary_f1,0.5038,,stage41_a123_matched_open_set_comparison/comparison_report.md,A-2:balanced1to1:P95:Open-Detect:binary_f1
+fig4_7,A-2,Open-Detect,ufar,0.6434,,stage41_a123_matched_open_set_comparison/comparison_report.md,A-2:balanced1to1:P95:Open-Detect:ufar
+fig4_7,A-2,Three-view DES-v1,auroc,0.9406,,stage41_a123_matched_open_set_comparison/comparison_report.md,A-2:balanced1to1:P95:Three-view DES-v1:auroc
+fig4_7,A-2,Three-view DES-v1,binary_f1,0.6741,,stage41_a123_matched_open_set_comparison/comparison_report.md,A-2:balanced1to1:P95:Three-view DES-v1:binary_f1
+fig4_7,A-2,Three-view DES-v1,ufar,0.4606,,stage41_a123_matched_open_set_comparison/comparison_report.md,A-2:balanced1to1:P95:Three-view DES-v1:ufar
+fig4_7,A-3,Open-Detect,auroc,0.9782,,stage41_a123_matched_open_set_comparison/comparison_report.md,A-3:balanced1to1:P95:Open-Detect:auroc
+fig4_7,A-3,Open-Detect,binary_f1,0.9191,,stage41_a123_matched_open_set_comparison/comparison_report.md,A-3:balanced1to1:P95:Open-Detect:binary_f1
+fig4_7,A-3,Open-Detect,ufar,0.1125,,stage41_a123_matched_open_set_comparison/comparison_report.md,A-3:balanced1to1:P95:Open-Detect:ufar
+fig4_7,A-3,Three-view DES-v1,auroc,0.9609,,stage41_a123_matched_open_set_comparison/comparison_report.md,A-3:balanced1to1:P95:Three-view DES-v1:auroc
+fig4_7,A-3,Three-view DES-v1,binary_f1,0.9231,,stage41_a123_matched_open_set_comparison/comparison_report.md,A-3:balanced1to1:P95:Three-view DES-v1:binary_f1
+fig4_7,A-3,Three-view DES-v1,ufar,0.0921,,stage41_a123_matched_open_set_comparison/comparison_report.md,A-3:balanced1to1:P95:Three-view DES-v1:ufar

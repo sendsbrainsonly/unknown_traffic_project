@@ -16,6 +16,18 @@
 .idea/
 .vscode/
 
+# Machine-local session records, installed skills and operating-system files
+.DS_Store
+/.execution-records/
+/.skill-library/
+/SESSION_HANDOFF.md
+/REMOTE_EXECUTION_POLICY.md
+/docs/agents/
+
+# Local reference-paper library and figure-generation console logs
+/paper/cite/
+/paper/**/*.log
+
 # Generated experiment trees. Root-level RESULTS.md, manifest.json and small
 # summaries are curated and force-added when they are suitable for publication.
 **/runs/
@@ -56,6 +68,7 @@
 *.jsonl
 *.tsv
 *.csv
+!/paper/picture/ch4/20261016-experiment-figures-v1/render-v*/plot_data.csv
 *.pcap
 *.pcapng
 *.so
