@@ -1,0 +1,23 @@
+{
+  "checkpoint_sha256": {
+    "runs/communication/full/head_best.pt": "e516c0e3223b90d76841ca3f1ef33dec12b6fb45db83ddd8b77c7b605718fd5f",
+    "runs/communication/without_fig/head_best.pt": "44883f8787f16574051f83634d4228ad05cc5bff5984b785cdb4024c704ab7cd",
+    "runs/communication/without_trafficformer/head_best.pt": "18bf64bfcc85a2cbe04101a34bfc79cc4808c8fa4b2f319277152b70b6bdfb90",
+    "runs/communication/without_yatc/head_best.pt": "20fd91bd86e6e365c0896437e422dd52224797e2a76c6d167fbc1593c926a1f0",
+    "runs/file_transfer/full/head_best.pt": "dc0597bd05daa81638d339675ca074253b903790530794e53a9b7758c97127cb",
+    "runs/file_transfer/without_fig/head_best.pt": "2a3f0717d69d98ef38ba89c12c6d29ebc3ff8e385234ae4240eaeca2c6a96635",
+    "runs/file_transfer/without_trafficformer/head_best.pt": "0444084691ecc7fe1219d752e9d4f5bccfe6e15be6cb6a3be21d595f9ea07e2d",
+    "runs/file_transfer/without_yatc/head_best.pt": "03e1bf8342dbed9b3f05dc238226115bb8655ac0a3329d12f3e307b9b54ef1ea",
+    "runs/remote_access/full/head_best.pt": "b9e697aaf5799cd7349721bf9e3a8a0228ee0c890b6183f7796d3bb195954a84",
+    "runs/remote_access/without_fig/head_best.pt": "18a6176b3474135826c5ea2ff3fe6ad75764e01b747835172bb7af05f36bc71f",
+    "runs/remote_access/without_trafficformer/head_best.pt": "67eadb0f5473a70e37e3654a843fb6d8eb851ce3db4d44d134cc1fb5b17170fd",
+    "runs/remote_access/without_yatc/head_best.pt": "4913d903a3b218fb6b25ed9b07cc12ffe5ee5daa4b0c3dee590b3391512a86d9",
+    "runs/streaming/full/head_best.pt": "7bcf655c7518a1489410d7d5dbbb0b0539316e239de5a263bc87544a8078bb87",
+    "runs/streaming/without_fig/head_best.pt": "83abbd8a5fb487be1da0429685d8510a4a263544fabc3ac5726de4a7adffed71",
+    "runs/streaming/without_trafficformer/head_best.pt": "394dda6890d76d4236381d6326a38e166bbc90d9e4419200ea9d0533953cced1",
+    "runs/streaming/without_yatc/head_best.pt": "ea15c39da8969366b4ac3b7229e845e339cd56ab3be07122f736c7cf9ce4c288"
+  },
+  "config_sha256": "e949c7c310727c53119e0f66d24c13ae865f6b1a26fbe5e2036256d0a0348c7a",
+  "known_only_selection": true,
+  "new_test_feature_access_before_this_gate": 0
+}

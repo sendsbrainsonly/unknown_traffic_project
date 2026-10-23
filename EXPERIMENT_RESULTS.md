@@ -1,5 +1,9 @@
 # Experiment result index
 
+- 2026-10-23 [agent:codex] Stage44C VNAT controlled branch ablation **complete / independent replay PASS**:16heads,128metric rows,145,768sample scores. DES-v1 natural four-fold mean AUROC Full/withoutFIG/withoutYaTC/withoutTF=`0.992224/0.994513/0.969187/0.983478`;UFAR=`0.010907/0.014051/0.148026/0.085304`. Full exactly reproduces Stage44; frozen sources/cache hashes unchanged. FIG gains are not uniform; the other two leave-outs reduceAUROC4/4folds. [Report](stage44c_vnat_controlled_view_ablation/stage44c_ablation_report.md) · [Results](stage44c_vnat_controlled_view_ablation/RESULTS.md).
+
+- 2026-10-23 [agent:codex] Stage44C VNAT controlled frozen-view ablation: **planned**; four frozen service folds × Full/without-FIG/without-YaTC/without-TrafficFormer, shared frozen encoders/adapters and identical fusion-head recipe, closed/open evaluation. [Plan](stage44c_vnat_controlled_view_ablation/PLAN.md) · [Results](stage44c_vnat_controlled_view_ablation/RESULTS.md).
+
 - Stage44B matched Open-Detect Native versus Stage44 three-view DES-v1: **complete**. Four frozen VNAT Service-LOSO folds, seed 2022, same Test flow IDs and Known-Val P95: mean AUROC `0.7417 / 0.9922`, Unknown F1 `0.3273 / 0.9840`, UFAR `0.7219 / 0.0109` (OD / three-view). Independent replay and source hashes PASS; first-pass inference-adapter failure retained. [Data record](stage44b_vnat_matched_opendetect/COMPARISON_RECORD.md) · [Full experiment](stage44b_vnat_matched_opendetect/RESULTS.md).
 
 - Stage44 VNAT four-service LOSO open-set diagnostic (2026-09-29): single GPU5 serial run 20/20 PASS; all 96 metric rows and 20 checkpoint hashes independently verified. Known Test Macro-F1 `0.996908–1.000000`; DES-v1 natural four-fold mean AUROC/AUPRC/UFAR/Known-FRR `0.992224/0.994998/0.010907/0.044550`. Single seed and group imbalance limit interpretation. [Full results](stage44_vnat_coarse_service_loso_open_set/RESULTS.md).

@@ -1,5 +1,9 @@
 # Current Project Status
 
+## 2026-10-23 status correction
+
+The latest completed result is [Stage 44C](stage44c_vnat_controlled_view_ablation/stage44c_ablation_report.md), a controlled three-view leave-one-view-out ablation on the four frozen VNAT Service-LOSO folds. Sixteen heads were trained with frozen encoders/adapters; independent replay passed for 128 metric rows and 145,768 sample-score rows. Mean DES-v1 AUROC was Full `0.9922`, without FIG `0.9945`, without YaTC `0.9692`, and without TrafficFormer `0.9835`; removing YaTC and TrafficFormer reduced AUROC in all four folds. FIG showed a ranking/operating-point tradeoff. The run used one seed and VNAT is a development dataset, so these results do not establish untouched external validity. We are publishing the lightweight source, reports and aggregate metrics; checkpoints, caches and sample-level score files remain local.
+
 ## 2026-09-29 status correction
 
 The latest completed same-protocol comparison is [Stage 44B](stage44b_vnat_matched_opendetect/COMPARISON_RECORD.md) against the frozen [Stage 44](stage44_vnat_coarse_service_loso_open_set/RESULTS.md) VNAT four-service LOSO experiment. On identical Test flow IDs with separate Known-Validation P95 calibration, four-fold mean AUROC is Open-Detect Native `0.7417` versus three-view DES-v1 `0.9922`; Unknown F1 is `0.3273` versus `0.9840`. Both experiments completed independent score replay and freeze-hash checks. This is a single-seed development diagnostic, not an untouched external validation or a same-encoder detector ablation. The older 2026-09-28 and 2026-09-23 sections below remain historical snapshots. No Stage 44/44B training queue is active.

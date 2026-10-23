@@ -1,5 +1,41 @@
 # Unknown Traffic / Unknown Attack Detection 项目过程、实验计划修订与当前进度
 
+## 2026-10-23 — Stage44C 结果归档与 GitHub 发布
+
+- Agent: [agent:codex]
+- Status: in_progress.
+- Objective: 将已完成 Stage44C 的可公开实验记录、复现代码和小型汇总指标提交并推送到 GitHub，同时排除模型权重、特征缓存和逐样本分数。
+- Starting state: Stage44C 已完成并有独立重放核验；`main` 与 `origin/main` 起点一致。工作树另有 Stage23/25/44/44B 未跟踪产物，均不属于本次发布范围。
+- Actions performed: 复核实验结果、仓库排除规则、候选文件尺寸及 Git 状态；更新项目首页、当前进度和公开仓库内容说明；精确暂存40个文件，包括代码、报告、验证元数据和聚合/逐类指标。
+- Commands run: 通过 project-local tmux、固定 DGL Conda 环境完成 Stage44C bundle 校验、JSON/Python/CSV 检查、CRLF-aware whitespace 检查和 staged 文件类型审计。
+- Files changed: README.md、CURRENT_PROGRESS.md、PUBLIC_REPOSITORY_CONTENTS.md、EXECUTION_PROGRESS.md、EXPERIMENT_RESULTS.md及stage44c_vnat_controlled_view_ablation/精选文件。
+- Validation and observed results: Stage44C bundle 298/298 hash PASS；run_results/closed_results/variant_summary/paired_comparison/historical_full_comparison分别128/16/4/96/32行；16个逐类表加入发布清单。暂存40文件、约293,521字节；权重、缓存、逐样本分数及其他阶段未跟踪文件均未暂存。当前本地与远端无提交差异。
+- Decisions and assumptions: “记录数据”按发布结果摘要及协议/运行级聚合表理解；不发布 per-sample CSV 和模型文件。
+- Errors or blockers: 无；尚待提交、推送及远端 SHA 核验。
+- Next step: 提交当前 allowlist，非强制推送到 origin/main，并核对 GitHub main SHA 与本地提交一致。
+
+### Current handoff (2026-10-23)
+
+- 2026-10-23 — [agent:codex] Stage44C 轻量归档与 GitHub 推送进行中；起点 `637cb72` 与 `origin/main` 一致。298/298实验包hash通过，精确暂存40个文件约293.5KB；未包含权重、缓存或逐样本分数，待提交和推送核验。
+
+## 2026-10-23 — Stage44C 同配置三视图分支消融
+
+- Agent: [agent:codex]
+- Status: complete / INDEPENDENT_REPLAY_PASS.
+- Objective: 在Stage44四个冻结VNAT Service LOSO协议上补充Full、去FIG、去YaTC、去TrafficFormer四种配置的闭集与开集对照。
+- Starting state: Stage44/44B已完成；现有分支权重、适配器、Known-Train scaler和逐流角色清单保留。应用覆盖及VPN失衡是已确认的原协议限制，本轮不同时改变划分。
+- Actions performed: 核查原训练和评估调用；登记配置、控制条件和16-head计划；完成16/16分类头训练与冻结评估。冻结编码器和适配器，仅重训相同192→128→128→C分类头，缺失槽置零而保留1/3缩放；保存逐run闭集/开集、逐类和逐样本数据，并新增中文分析报告。
+- Commands run: 通过project-local tmux和固定DGL Conda环境执行预检及实验包初始化；`stage44c_serial_20261023`通过实时容量选择在物理GPU6启动，最低12GiB空闲要求，单进程串行。
+- Files changed: stage44c_vnat_controlled_view_ablation/；本条进度记录。
+- Validation and observed results: 四折新Full权重逐参数复现原Stage44，32条历史Full配对指标差值0；16个checkpoint哈希PASS；独立重放128行指标、145,768条分数记录（最大误差0）及384个头前向/几何距离样本PASS。97个登记文件及7个原始缓存数组（124,046,106bytes）前后哈希一致。自然比例DES-v1平均AUROC：Full0.992224、去FIG0.994513、去YaTC0.969187、去TF0.983478；UFAR分别0.010907/0.014051/0.148026/0.085304。去YaTC和去TF均4/4折降低AUROC；FIG存在排序与工作点取舍。
+- Decisions and assumptions: seed2022、30epochs、batch256、Adam1e-3、Known-Val Macro-F1选模；全部16头冻结后才进入新Test推理；单卡串行。
+- Errors or blockers: 本轮队列退出码0，完整训练/评估和重放无失败；原协议应用覆盖、VPN失衡及单seed限制仍存在。
+- Next step: 向用户报告同配置消融及结论边界；不自动删分支、修改协议或调参。
+
+### Current handoff (2026-10-23)
+
+- 2026-10-23 — [agent:codex] Stage44C在tmux `stage44c_serial_20261023`、物理GPU6完成16/16训练和评估，约319秒，退出码0；128行指标与145,768条分数重放PASS。结论见stage44c_vnat_controlled_view_ablation/stage44c_ablation_report.md；暂无下一阶段队列。
+
 ## 2026-09-29 — Stage 44/44B 轻量代码重新发布
 
 状态：`complete / CONTENT_SHA_REMOTE_VERIFIED`。用户要求重新推送当前代码。已核对 Git 根目录为本项目、分支 `main`，推送前本地与远端均为 `a600124ad0081123c33eeffbab863399f30f0b1a`。精确发布 54 个文件：Stage44/44B 的源码、协议定义、实验报告、完成性元数据及小型汇总 CSV，并同步 README/CURRENT_PROGRESS/EXPERIMENT_RESULTS/PUBLIC_REPOSITORY_CONTENTS；暂存 diff 约 419 KiB。19 个 Python 与 14 个 JSON 可解析，两份本地实验包 `--verify-hashes` PASS，敏感信息与禁用类型扫描通过。CSV 保持原始 CRLF 与实验哈希，Git 空白检查以 `core.whitespace=cr-at-eol` PASS。非强制推送内容提交 `4b4802eb09d684455c4096c61a2ed54d328ed237`，`git ls-remote` 已证实远端 `main` 与其一致。权重、缓存、原始/派生数据、逐样本预测、tmux 日志以及其他阶段完成标记均未发布、未删除。本进度记录作为后续轻量元数据提交同步；最终远端 SHA 仍以该提交推送后的独立核验为准。

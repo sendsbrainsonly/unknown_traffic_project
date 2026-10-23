@@ -12,6 +12,9 @@ This repository is a reproducibility and evidence index, not a copy of the compl
 - selected small aggregate metrics needed to support claims in the documentation.
 - authored paper drafts, the method Word document, scientific figure exports,
   plotting/verification scripts, and small frozen aggregate chart data under `paper/`.
+- Stage 44C VNAT controlled-view ablation source, frozen configuration, reports,
+  verification metadata and small aggregate CSV tables; its model weights,
+  feature caches and per-sample scores remain project-local.
 
 ## Kept project-local
 
@@ -29,7 +32,7 @@ These files are not deleted. Their paths, hashes and roles remain recorded in st
 
 ## Model release policy
 
-No checkpoint is designated as the final project model in the 2026-09-29 source refresh through Stage 44B. Once a final model is selected, publish only the minimum reproducibility set through Git LFS or a versioned GitHub Release, together with:
+No checkpoint is designated as the final project model through Stage 44C. Once a final model is selected, publish only the minimum reproducibility set through Git LFS or a versioned GitHub Release, together with:
 
 - exact experiment ID and configuration;
 - source commit;

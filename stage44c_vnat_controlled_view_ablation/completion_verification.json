@@ -1,0 +1,18 @@
+{
+  "status": "PASS",
+  "heads": 16,
+  "evaluations": 16,
+  "source_files_unchanged": 97,
+  "protocol_unchanged": true,
+  "checkpoint_hashes_unchanged": true,
+  "unknown_training_samples": 0,
+  "unknown_validation_samples": 0,
+  "test_selection_samples": 0,
+  "detector_unknown_fitting_samples": 0,
+  "independent_replay": "PASS",
+  "input_cache_files_unchanged": 7,
+  "input_cache_bytes_verified": 124046106,
+  "historical_full_max_metric_delta": 0.0,
+  "historical_full_max_head_parameter_delta": 0.0,
+  "tmux_exit_code": 0
+}
