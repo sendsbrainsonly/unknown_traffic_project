@@ -3,20 +3,20 @@
 ## 2026-10-23 — Stage44C 结果归档与 GitHub 发布
 
 - Agent: [agent:codex]
-- Status: in_progress.
+- Status: complete / REMOTE_SHA_VERIFIED.
 - Objective: 将已完成 Stage44C 的可公开实验记录、复现代码和小型汇总指标提交并推送到 GitHub，同时排除模型权重、特征缓存和逐样本分数。
 - Starting state: Stage44C 已完成并有独立重放核验；`main` 与 `origin/main` 起点一致。工作树另有 Stage23/25/44/44B 未跟踪产物，均不属于本次发布范围。
 - Actions performed: 复核实验结果、仓库排除规则、候选文件尺寸及 Git 状态；更新项目首页、当前进度和公开仓库内容说明；精确暂存40个文件，包括代码、报告、验证元数据和聚合/逐类指标。
-- Commands run: 通过 project-local tmux、固定 DGL Conda 环境完成 Stage44C bundle 校验、JSON/Python/CSV 检查、CRLF-aware whitespace 检查和 staged 文件类型审计。
+- Commands run: 通过 project-local tmux、固定 DGL Conda 环境完成 Stage44C bundle 校验、JSON/Python/CSV 检查、CRLF-aware whitespace 检查和 staged 文件类型审计；使用一次性 SSH-over-443 push URL 非强制推送。
 - Files changed: README.md、CURRENT_PROGRESS.md、PUBLIC_REPOSITORY_CONTENTS.md、EXECUTION_PROGRESS.md、EXPERIMENT_RESULTS.md及stage44c_vnat_controlled_view_ablation/精选文件。
-- Validation and observed results: Stage44C bundle 298/298 hash PASS；run_results/closed_results/variant_summary/paired_comparison/historical_full_comparison分别128/16/4/96/32行；16个逐类表加入发布清单。暂存40文件、约293,521字节；权重、缓存、逐样本分数及其他阶段未跟踪文件均未暂存。当前本地与远端无提交差异。
+- Validation and observed results: Stage44C bundle 298/298 hash PASS；run_results/closed_results/variant_summary/paired_comparison/historical_full_comparison分别128/16/4/96/32行；16个逐类表加入发布清单。40文件约293,816字节；权重、缓存、逐样本分数及其他阶段未跟踪文件均未暂存。提交`21d47f4704ee20334e77bcba61a14243070a3bca`已通过SSH-over-443推送；推送后`git ls-remote`显示origin/main与本地HEAD均为该SHA。公开manifest已移除本机绝对路径。
 - Decisions and assumptions: “记录数据”按发布结果摘要及协议/运行级聚合表理解；不发布 per-sample CSV 和模型文件。
-- Errors or blockers: 无；尚待提交、推送及远端 SHA 核验。
-- Next step: 提交当前 allowlist，非强制推送到 origin/main，并核对 GitHub main SHA 与本地提交一致。
+- Errors or blockers: 初次 HTTPS push要求交互式用户名，已关闭该等待命令；SSH-over-443非强制push成功，仓库remote配置未修改。
+- Next step: 本次归档和发布完成；其他阶段的本地未跟踪文件保持原样。
 
 ### Current handoff (2026-10-23)
 
-- 2026-10-23 — [agent:codex] Stage44C 轻量归档与 GitHub 推送进行中；起点 `637cb72` 与 `origin/main` 一致。298/298实验包hash通过，精确暂存40个文件约293.5KB；未包含权重、缓存或逐样本分数，待提交和推送核验。
+- 2026-10-23 — [agent:codex] Stage44C轻量归档已推送；提交`21d47f4704ee20334e77bcba61a14243070a3bca`，远端`main`与本地HEAD核验一致。40个文件约293.8KB；模型权重、缓存和逐样本分数未发布。
 
 ## 2026-10-23 — Stage44C 同配置三视图分支消融
 
