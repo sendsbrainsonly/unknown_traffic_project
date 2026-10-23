@@ -3,16 +3,16 @@
 ## 2026-10-23 — GitHub 同步 Stage47 论文与轻量证据
 
 - Agent: [agent:codex]
-- Status: in_progress.
+- Status: complete / REMOTE_SHA_VERIFIED.
 - Objective: 用户要求重新推送当前项目；将已完成的 Stage47 表4-2正文、修订记录、图表和经筛选的轻量复核材料发布到现有 GitHub `main`。
 - Starting state: 本地 `main` 与 `origin/main` 同为 `02c319eb50af0c65948c4d364a97cc203c1e1cbd`；工作树含论文/索引改动及多个未跟踪阶段目录。Stage46 是独立长程任务，本次不触碰。
-- Actions performed: 通过项目 tmux helper 检查 Git 根目录、远端、状态、ignore 规则、Stage47 论文图包/结果文件范围与尺寸；确认新文稿和修订记录应随图表发布。候选项尚未暂存或推送。
-- Commands run: `repush_audit_20261023`、`repush_context_20261023`、`repush_git_audit_20261023`、`repush_skills_20261023`、`repush_detail_audit_20261023`、`repush_publish_scope_20261023`、`repush_source_refs_20261023` 均经项目 tmux helper 与固定环境执行。
-- Files changed: 本次尚未新增/改写文件；工作区既有 `paper/md/ch4/1.md`、`EXECUTION_PROGRESS.md`、`EXPERIMENT_RESULTS.md` 修改，以及论文修订记录、Stage47 图包和实验目录未跟踪产物。
-- Validation and observed results: 远端 `main` 可读且与本地 HEAD 一致；新图包约412 KiB，Stage47 公开候选统计/报告/脚本约55 KiB。权重、缓存、逐样本预测、运行日志和其他阶段产物不在暂存范围。
-- Decisions and assumptions: 本次发布目标限于最近完成的 Stage47 论文更新及足以复核其汇总结论的代码/小型聚合表；普通非强制推送，不改 remote URL，不发布任何模型权重或数据缓存。
-- Errors or blockers: 暂无；仍需完成逐文件暂存审计、提交、推送与远端 SHA 验证。
-- Next step: 准备并核验精确暂存清单，确认 staged 内容/大小/敏感信息后提交并推送 `main`。
+- Actions performed: 逐文件暂存并发布第4章正文、修订记录、图4-1 PNG/PDF和绘图数据、Stage47计划/报告/运行脚本及小型聚合CSV；更新README、当前进度和公开内容说明。模型权重、缓存、逐样本数据、tmux日志、SVG和其他阶段未跟踪产物保持本地。
+- Commands run: 所有检查/提交经项目 tmux helper 与固定环境执行；`git -c core.whitespace=cr-at-eol diff --cached --check`通过；使用非强制 `git push ssh://git@ssh.github.com:443/sendsbrainsonly/unknown_traffic_project.git main`，未修改remote URL。
+- Files changed: 提交 `b66acef416536338fc80d01caebd3ccddd7c8c08` 包含25个文件，合计约623.4 KiB；具体清单可由该提交查看。
+- Validation and observed results: 六个CSV结构/行列数检查、三个JSON解析、论文图文件引用检查、敏感信息与禁用扩展名扫描均PASS；远端 `refs/heads/main` SHA 与提交SHA一致。保留其他阶段的dirty/untracked工作树内容。
+- Decisions and assumptions: 发布范围是Stage47论文更新和支持表格主张的精简证据；没有推送模型权重、数据缓存、逐样本预测或本机运行日志。图表SVG及完整本地图包manifest留在本地。
+- Errors or blockers: 初次通用空白检查将原始CRLF CSV回车误报；按仓库已有策略用 `cr-at-eol`复核通过，未重写结果CSV。无推送阻断。
+- Next step: 完成后停止；本地保留的其他未跟踪实验目录不在本次发布范围。
 
 ## 2026-10-23 — Stage47论文正文与图表回填
 
