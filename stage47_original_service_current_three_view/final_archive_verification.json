@@ -1,0 +1,12 @@
+{
+  "status": "PASS",
+  "metric_rows": 8,
+  "per_class_rows": 52,
+  "summary_rows": 16,
+  "frozen_checkpoints": 8,
+  "source_files_unchanged": 62,
+  "all_phases_30epochs": true,
+  "test_after_all_checkpoint_freeze": true,
+  "archive_schema_repair_only": true,
+  "timestamp_utc": "2026-10-23T13:46:44.416471+00:00"
+}

@@ -1,0 +1,5 @@
+dataset,seed,method,accuracy,macro_f1,weighted_f1,adapter_best_epoch,head_best_epoch,train_flows,validation_flows,test_flows,sample_parity,method_scope
+iscx_vpn,2022,OURS-current-threeview-equal,0.8911253430924062,0.8991430880326728,0.8895955869738693,23,1,8764,1098,1093,PASS,"current three-view architecture, original fine service, CPU adapter/head retrain"
+iscx_vpn,2023,OURS-current-threeview-equal,0.8783165599268069,0.8882420774446649,0.877676748147968,25,30,8764,1098,1093,PASS,"current three-view architecture, original fine service, CPU adapter/head retrain"
+iscx_tor,2022,OURS-current-threeview-equal,0.8746642793196061,0.8648368354912469,0.8754009917173304,26,3,8946,1118,1117,PASS,"current three-view architecture, original fine service, CPU adapter/head retrain"
+iscx_tor,2023,OURS-current-threeview-equal,0.8818263205013429,0.8677981683899417,0.8822359002833657,28,5,8946,1118,1117,PASS,"current three-view architecture, original fine service, CPU adapter/head retrain"

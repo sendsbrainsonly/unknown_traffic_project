@@ -1,5 +1,9 @@
 # Current Project Status
 
+## 2026-10-23 update — Stage47 original-service matched closed-set comparison
+
+The current three-view method is now included in the original-service VPN-6 / Tor-7 comparison used for Table 4-2. Across seeds 2022 and 2023, mean ± population SD Macro-F1 is VPN `89.37±0.55%` and Tor `86.63±0.15%`; the corresponding YaTC differences are `+0.66` and `+3.89` percentage points. The 4-run supplement and independent checks are recorded in [Stage47](stage47_original_service_current_three_view/RESULTS.md). Chapter 4 and Figure 4-1 were updated. This is a two-seed development comparison on previously exposed Test data; it does not establish statistical significance or open-set improvement. The separate Stage46 long-budget run remains its own task; consult its execution record for the latest live status.
+
 ## 2026-10-23 status correction
 
 The latest completed result is [Stage 44C](stage44c_vnat_controlled_view_ablation/stage44c_ablation_report.md), a controlled three-view leave-one-view-out ablation on the four frozen VNAT Service-LOSO folds. Sixteen heads were trained with frozen encoders/adapters; independent replay passed for 128 metric rows and 145,768 sample-score rows. Mean DES-v1 AUROC was Full `0.9922`, without FIG `0.9945`, without YaTC `0.9692`, and without TrafficFormer `0.9835`; removing YaTC and TrafficFormer reduced AUROC in all four folds. FIG showed a ranking/operating-point tradeoff. The run used one seed and VNAT is a development dataset, so these results do not establish untouched external validity. We are publishing the lightweight source, reports and aggregate metrics; checkpoints, caches and sample-level score files remain local.

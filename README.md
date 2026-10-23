@@ -1,5 +1,7 @@
 # Unknown Traffic / Unknown Attack Detection
 
+> **论文更新（2026-10-23）**：表4-2已补入当前三视图方法在原服务标签（VPN六类、Tor七类）下的双seed闭集结果，并同步更新第4章分析和图4-1。当前方法 Macro-F1 为 VPN `89.37±0.55%`、Tor `86.63±0.15%`；相对 YaTC 的双seed均值差为 `+0.66/+3.89` 个百分点。结果来自两个seed且Test此前已暴露，属于开发阶段闭集对照，不代表统计显著性或开集收益。详见[第4章正文](paper/md/ch4/1.md)、[修订记录](paper/md/ch4/修订记录_20261023_Stage47原服务闭集补充.md)、[Stage47报告与汇总证据](stage47_original_service_current_three_view/RESULTS.md)和[图4-1及绘图数据](paper/picture/ch4/20261023-stage47-original-service-eight-configs/README.md)。
+
 > **实验更新（2026-10-23）**：Stage 44C 已完成 VNAT 四个冻结 Service-LOSO fold 的三视图消融，比较 Full、去 FIG、去 YaTC、去 TrafficFormer。DES-v1 平均 AUROC 分别为 `0.9922/0.9945/0.9692/0.9835`；移除 YaTC 或 TrafficFormer 后四折均下降。FIG 的影响存在排序指标与拒识工作点的取舍。完整方法、限制和轻量结果表见 [Stage 44C 报告](stage44c_vnat_controlled_view_ablation/stage44c_ablation_report.md)。该结果属于已用于方法开发的 VNAT 单 seed 诊断；普通 Git 不包含权重、逐样本分数或特征缓存。
 
 > **论文更新（2026-10-16）**：新增[第3章方法稿](paper/md/ch3/1.md)、[第4章实验结果与分析](paper/md/ch4/1.md)及[实验图件与绘图源码](paper/picture/ch4/20261016-experiment-figures-v1/EXPERIMENT_README.md)。第4章包含已知类别识别、六种外部方法对照、未知类识别、11张结果表和7幅数据图；图件提供PDF、SVG与300 dpi PNG，并保留汇总数据及核验回执。当前正文使用相对图片路径，便于在GitHub和本地Markdown预览中查看。此次更新整理已有实验，未新增模型训练。

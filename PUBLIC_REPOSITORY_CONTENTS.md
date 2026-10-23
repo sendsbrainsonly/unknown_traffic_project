@@ -15,6 +15,11 @@ This repository is a reproducibility and evidence index, not a copy of the compl
 - Stage 44C VNAT controlled-view ablation source, frozen configuration, reports,
   verification metadata and small aggregate CSV tables; its model weights,
   feature caches and per-sample scores remain project-local.
+- Stage 47 original-service matched closed-set supplement: the current three-view
+  training/evaluation source, plan/report, small run-level aggregate CSVs,
+  verification summaries, revised Chapter 4, revision record, and Figure 4-1
+  exports/data. Checkpoints, feature caches, per-sample predictions, and local
+  tmux logs remain project-local.
 
 ## Kept project-local
 

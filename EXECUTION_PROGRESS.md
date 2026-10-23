@@ -1,5 +1,125 @@
 # Unknown Traffic / Unknown Attack Detection 项目过程、实验计划修订与当前进度
 
+## 2026-10-23 — GitHub 同步 Stage47 论文与轻量证据
+
+- Agent: [agent:codex]
+- Status: in_progress.
+- Objective: 用户要求重新推送当前项目；将已完成的 Stage47 表4-2正文、修订记录、图表和经筛选的轻量复核材料发布到现有 GitHub `main`。
+- Starting state: 本地 `main` 与 `origin/main` 同为 `02c319eb50af0c65948c4d364a97cc203c1e1cbd`；工作树含论文/索引改动及多个未跟踪阶段目录。Stage46 是独立长程任务，本次不触碰。
+- Actions performed: 通过项目 tmux helper 检查 Git 根目录、远端、状态、ignore 规则、Stage47 论文图包/结果文件范围与尺寸；确认新文稿和修订记录应随图表发布。候选项尚未暂存或推送。
+- Commands run: `repush_audit_20261023`、`repush_context_20261023`、`repush_git_audit_20261023`、`repush_skills_20261023`、`repush_detail_audit_20261023`、`repush_publish_scope_20261023`、`repush_source_refs_20261023` 均经项目 tmux helper 与固定环境执行。
+- Files changed: 本次尚未新增/改写文件；工作区既有 `paper/md/ch4/1.md`、`EXECUTION_PROGRESS.md`、`EXPERIMENT_RESULTS.md` 修改，以及论文修订记录、Stage47 图包和实验目录未跟踪产物。
+- Validation and observed results: 远端 `main` 可读且与本地 HEAD 一致；新图包约412 KiB，Stage47 公开候选统计/报告/脚本约55 KiB。权重、缓存、逐样本预测、运行日志和其他阶段产物不在暂存范围。
+- Decisions and assumptions: 本次发布目标限于最近完成的 Stage47 论文更新及足以复核其汇总结论的代码/小型聚合表；普通非强制推送，不改 remote URL，不发布任何模型权重或数据缓存。
+- Errors or blockers: 暂无；仍需完成逐文件暂存审计、提交、推送与远端 SHA 验证。
+- Next step: 准备并核验精确暂存清单，确认 staged 内容/大小/敏感信息后提交并推送 `main`。
+
+## 2026-10-23 — Stage47论文正文与图表回填
+
+- Agent: [agent:codex]
+- Status: complete / MANUSCRIPT_FIGURE_AND_SOURCE_HASH_PASS.
+- Objective: 按用户要求调用论文写作skill，回填表4-2当前三视图原服务双seed结果、更新文字并持久记录。
+- Starting state: Stage47四run/113artifact已完成并独立核验；正文仍是七配置旧表与旧图4-1，粗4/5类单seed另列。Stage46既有长程队列未触动。
+- Actions performed: 主代理读取latex-paper-en及section-writing/experiment/tables/caption和experiments指南；对中文Markdown采用内容规范，不运行LaTeX解析器。备份原正文后回填新表、分析及溯源；按visualize-data静态图规范重绘图4-1，PNG/PDF/SVG、绘图数据/脚本与修订前后快照独立保留。
+- Commands run: 项目tmux/固定DGL环境；stage47_paper_render_20261023和stage47_paper_closeout_20261023退出0；stage47_paper_final_verify_20261023退出0，新图文包16artifacts(12内部/4外部)完整hash校验PASS，Stage47原包113artifacts再次PASS。
+- Files changed: paper/md/ch4/1.md、同目录修订记录_20261023_Stage47原服务闭集补充.md、新图文包（生成/核验脚本、PNG/PDF/SVG、数据、修订前后快照、QA、manifest）及执行/索引记录；不改变Stage47实验文件或Stage46锁定源码。
+- Validation and observed results: 32逐run→16汇总的48组mean/SD及表4-2全部48单元格PASS；粗表4-1/4-3/4-4及4.1.4后全部正文数值、其他6图引用不变；16图值与CSV一致。PNG3540×1650/300dpi及PDF预览实际目视无观察到的裁切/重叠；SVG结构/标签PASS。图文包16artifacts、原实验包113artifacts均全量hash复验PASS，源CSV/权重未改变。原文与新文快照保留，修订记录包含段落安排及claim-evidence map。
+- Decisions and assumptions: 沿用论文原有静态PNG/PDF/SVG输出，基于已存在CSV重绘，不新建网页、不启动训练/推理；写作强调观察到的完整配置收益，不增加显著性或单模块因果声明。
+- Errors or blockers: 暂无；不运行不适用于Markdown的LaTeX脚本。
+- Next step: 本次完成，交付正文/修订记录/新图；无后续自动训练、推理、文献添加、模型改动或GitHub推送。Stage46独立队列未触动。
+
+### Current handoff (2026-10-23 — Stage47论文回填)
+
+- 2026-10-23 — [agent:codex] 论文回填完成：表4-2当前三视图原6/7类双seed纳入八配置，新图4-1同步；48单元格/16图值与原精度CSV一致。图文包16artifacts与实验包113artifacts双hash核验PASS；修订记录和前后快照保留，未改开集数值、历史图或模型。
+
+## 2026-10-23 — Stage47 表4-2当前三视图原服务补跑
+
+- Agent: [agent:codex]
+- Status: complete / INDEPENDENT_REPLAY_AND_BUNDLE_PASS.
+- Objective: 按用户“补充跑一下”要求，在表4-2原VPN6/Tor7服务标签、2022/2023双seed下补充当前三视图主方法，填补横向对照缺口。
+- Starting state: 表4-2只有早期双视图E3；当前正式三视图Stage32为4/5类。四组同seed分支特征与权重已保存；Stage46两个长程worker另在GPU1/7运行，不触动。
+- Actions performed: 完成原标签/输入/模型parity审计与4项测试；CPU串行四run各adapter30/head30完整训练，Known-Val选模；统一冻结8checkpoint后完成Test、反序前向重放及独立指标/逐类/汇总复算；形成新增当前三视图的八配置同流对照表。旧Stage30缺额外view标准化，未搬其分数。
+- Commands run: 项目tmux固定DGL环境；stage47_cpu_tests_20261023退出0、4/4PASS；stage47_table42_fill_20261023完成全部数值流程，外层因归档schema校验退出1；仅修正文档/元数据后stage47_archive_verify_20261023退出0、全量hash校验PASS。CUDA_VISIBLE_DEVICES空、OMP/MKL4；未占额外GPU。
+- Files changed: Stage47目录、本记录、SESSION_HANDOFF.md、EXPERIMENT_RESULTS.md；历史论文/数据/代码/权重不修改。
+- Validation and observed results: 四run全完成。当前三视图双seedTest Accuracy/Macro/Weighted-F1均值±总体SD：VPN88.4721±0.6404/89.3693±0.5451/88.3636±0.5959%；Tor87.8245±0.3581/86.6318±0.1481/87.8818±0.3417%。相对YaTC平均Macro-F1+0.6608/+3.8924pp，相对旧E3+3.4200/+4.4140pp；本表八配置中两数据集三项均值均最高。原6/7类与样本均未变，不是4/5类粗化替换。8metric rows、52逐类行、16汇总行和4反序checkpoint重放PASS；8权重SHA/62源文件不变，Test冻结屏障PASS；最终实验包113artifacts(111内部/2外部)hash校验PASS。
+- Decisions and assumptions: 轻量缓存训练预先固定CPU4线程串行，避免新增GPU并行占用；保持原30＋30epoch/Adam1e-3/batch256/64D适配器/等权拼接及Known-Val选模，不是容量不足时静默fallback。
+- Errors or blockers: 无模型训练/数值异常。初次bundle校验因manifest不支持status=complete及RESULTS缺六个必需标题退出1；保持原脚本/数值/权重/失败日志，仅补齐归档schema，将terminal status改success并以closeout.py独立复验后PASS。非重训、非指标修改。
+- Next step: 向用户呈现补充表和当前方法结果，本任务停止；正文/旧图保持原样，table4_2_supplement.md供后续整合。Stage46既有独立队列未触动，不能将本补跑解释为其100epoch结果。
+
+### Current handoff (2026-10-23 — Stage47)
+
+- 2026-10-23 — [agent:codex] Stage47原6/7类当前三视图补跑完成，四run/8权重/独立重放/62源hash及113artifact包核验PASS。Macro-F1 VPN89.37±0.55%、Tor86.63±0.15%，均值分别比YaTC+0.66/+3.89pp；正文未覆盖，独立补充表保留，Stage46队列未触动。
+
+## 2026-10-23 — 表4-2当前主方法缺项只读核查
+
+- Agent: [agent:codex]
+- Status: complete / READ_ONLY_AUDIT.
+- Objective: 解释论文表4-2为何没有当前三视图主方法，核实是否属于漏填或协议不兼容。
+- Starting state: 项目内paper/md/ch4/1.md含原服务七方法表；Stage46长程联合训练为另一个既有任务，不在本次审计中改变或重启。
+- Actions performed: 按academic-research-suite核对正文4.1.3、Stage23B七方法源汇总、Stage32正式粗服务结果和Stage27历史三视图探索记录。
+- Commands run: 项目tmux helper、固定DGL环境；table42_evidence_read_20261023和table42_precise_lines_20261023只读取证。初始跨目录/CSV宽扫描被停止，改为精确正文及摘要读取；不操作训练会话。
+- Files changed: 仅本执行记录和SESSION_HANDOFF.md；未改正文、表格、模型、划分或实验结果。
+- Validation and observed results: 表4-2用VPN6类/Tor7类、2022/2023两个seed，含早期TF+FIG双视图E3而非当前TF+FIG+YaTC。表4-1/4-4当前主方法为VPN4类/Tor5类、seed2022，Macro-F1=91.94%/89.94%。正文第48、72、91行已说明标签/统计口径差异与完整直接粗标签基线缺口；Stage32原始结果核对一致。Stage27有原服务双seed三视图探索，不应等同于当前Stage32三视图适配器与头的正式配置。
+- Decisions and assumptions: 当前数值不能直接填进原6/7类双seed表；主方法的完整同协议多基线横向对比仍需补齐，不是当前方法已在该表被证实超越全部基线。
+- Errors or blockers: 无本次数据/实现修复；缺口为最终方法与完整基线的统一标签/seed训练评价证据。
+- Next step: 向用户解释差异；若之后要求补实验，可在原6/7类双seed协议补跑当前最终模型，或预注册统一4/5类直接训练的完整基线；本次不启动新实验。
+
+### Current handoff (2026-10-23 — 表4-2核查)
+
+- 2026-10-23 — [agent:codex] 表4-2协议差异核查完成：旧双视图、VPN6/Tor7、双seed，不是当前三视图、VPN4/Tor5、单seed。正文未修改；Stage46独立队列未触动，后续进度仍查看其自身日志与状态。
+
+## 2026-10-23 — Stage46 原始初始化联合训练100epoch预算诊断
+
+- Agent: [agent:codex]
+- Status: in_progress / TRAINING_STARTED.
+- Objective: 用户要求“那看看多轮”；VPN/Tor seed2022从Stage37相同官方初始权重开始，固定100epoch，登记20/50/100预算Known-Val选点，验证预算不足假设。
+- Starting state: Stage45 warm-start比较已完成，不能代替原始初始化长训练；Stage37/32与Stage20冻结数据保留。既有其他阶段工作树改动全部保留。
+- Actions performed: 核查原模型/优化器/调度；完成实验包、预注册、训练器/双GPU队列/监控/回归测试；CPU4/4和原Stage37数据/预训练/源码hash比对PASS。两组Known Train/Val membership与scaler冻结后提交tmux训练，实时选中GPU1/7。
+- Commands run: 项目tmux helper、固定DGL Conda环境；stage46_prepare_20261023退出0，stage46_train_20261023已启动python stage46_joint_long_budget/run_queue.py；两个worker分别执行train --dataset iscx_vpn/iscx_tor，每次经selector --min-free-gb26 --allowed核验容量。
+- Files changed: stage46_joint_long_budget/、本记录、SESSION_HANDOFF.md、EXPERIMENT_RESULTS.md；历史源代码/权重/划分不变。
+- Validation and observed results: CPU4/4回归PASS；VPN Train/Val8764/1098、Tor8946/1118，源hash与Stage37一致；100epoch总更新数13700/14000。原TF/YaTC调度依赖total_steps，拉长warmup/decay混杂已登记，不声称纯epoch/等FLOPs。队列START train_iscx_vpn gpu1 / train_iscx_tor gpu7；初始权重/归一化阶段，尚无长程效果结论。
+- Decisions and assumptions: 原优化器基础LR、模型/损失/batch和KnownTrain scaler；数值保护复用Stage45原子GradScaler修复；六选点统一冻结前新Test推理0。
+- Errors or blockers: 暂无训练失败；历史工作树改动保留。已核验两组真实优化器更新各100次（epoch1、6400个样本），原初始化/scaler校验通过，每卡约18GiB；运行中bundle结构校验37artifacts（36内部/1外部）PASS。不是仅有tmux空会话；长程效果仍待完成。
+- Next step: 查看stage46_joint_long_budget/progress.py及logs/train_*.log；两组100epoch后自动冻结六选点、Test评估/独立重放/哈希核验，完成后停止，不自动开集。
+- Startup epoch verification:两组均完成1/100epoch。VPN Known-Val Accuracy/Macro/Weighted-F1=0.8151/0.7825/0.7996；Tor=0.6601/0.6681/0.6505。首轮速度推算剩余训练230/235分钟，非保证结束时间；尚不解释长程性能。最新bundle结构51artifacts（50内部/1外部）PASS。
+
+### Current handoff (2026-10-23 — Stage46)
+
+- 2026-10-23 — [agent:codex] Stage46 CPU4/4及冻结源hash预检PASS；VPN/Tor100epoch在GPU1/7运行，已核验各100次真实更新、epoch1各6400样本，每卡约18GiB；20/50/100预算Known-Val选点，尚无长程效果结论。运行中bundle结构PASS；不读Unknown、不复用Stage45训练权重。
+
+## 2026-10-23 — Stage45 统一初始化分阶段续训与联合微调对照
+
+- Agent: [agent:codex]
+- Status: complete / INDEPENDENT_REPLAY_PASS / JOINT_FINETUNING_NOT_CONSISTENTLY_SUPPORTED.
+- Objective: 按用户批准方案，在Stage20冻结VPN/Tor粗粒度样本上复用Stage32分阶段模型，比较原模型A、冻结编码器续训B和联合微调C；单seed2022，新增训练各20epoch。
+- Starting state: Stage22三分支中TF20/FIG50、Stage23 YaTC200和Stage32 adapter30/head30权重及Known Train/Val输入仍存在。Stage37原始20epoch联合结果已审计，预算不对等且验证后期回落。工作树此前已有EXECUTION_PROGRESS.md审计记录和其他阶段未跟踪产物。
+- Actions performed: 完成源模型、样本、两级scaler和原始前向parity审计、3项CPU回归及GPU梯度/数值回归；四组B/C各完整20epoch；Known-Val选定四个checkpoint并统一冻结后，完成A/B/C同流Test推理、独立指标/身份/混淆矩阵重放与完整实验包哈希核验。
+- Commands run: 项目tmux/固定DGL Conda环境；stage45_train_v3_20261023在物理GPU1/2完成10/10组件并退出0；每组件启动前核验26GiB/95%容量限制。控制器终态bundle校验280个内部文件/3个外部引用PASS；补记完成说明后再次refresh/validate。
+- Files changed: stage45_staged_vs_joint_finetuning/完整实验包、本记录、SESSION_HANDOFF.md和EXPERIMENT_RESULTS.md；未更改历史实验协议、权重或源结果。
+- Validation and observed results: 原协议/source/checkpoint哈希保持一致；4/4完整训练，12行Val/Test指标及逐样本角色独立重放PASS，Test选参和Unknown使用均0。VPN原模型Test Acc/Macro/Weighted-F1=0.915828/0.919350/0.914487；联合epoch13=0.913998/0.918119/0.914294，Macro-F1−0.001231。Tor原模型Test=0.896150/0.899375/0.896717，C未超过原Val0.909662（新训练最佳0.893889@12），正式选点回退epoch0，因此Test相同；两组B也回退epoch0。代码起点HEAD为02c319eb50af0c65948c4d364a97cc203c1e1cbd。
+- Decisions and assumptions: 研究问题为分阶段初始化之后联合微调是否有效，不宣称等总FLOPs或从头联合训练优劣；相同融合损失、更新次数及数据顺序，记录额外编码器计算成本。Known-Val选择，新增Test访问仅在四组训练全部冻结后执行。
+- Errors or blockers: 初始queue.py标准库遮蔽和GPU利用率尾随统计已修复并留存。训练attempt1的VPN C在epoch1/microbatch209出现有限loss但YaTC缩放FP16梯度NaN，初版严格检查绕过了GradScaler正常backoff；仅停止本任务核验过的Tor剩余worker并归档全部attempt1。修正为所有优化器同步、同批/RNG重放的loss-scale backoff（最多8次，不丢样本/更新）；GPU回归已复现溢出并在3次backoff后恢复，两个optimizer各更新1次且匹配FP32参考。所有B/C从A重新训练，模型/LR/loss/batch/seed/epoch不变；修正前PLAN和代码均保留。
+- Next step: 本轮完成后停止；保留当前分阶段训练方案，不自动启动其他调参或开集实验。完整表见run_results.csv/paired_comparison.csv及stage45_report.md。
+- Startup verification: 修正后的真实VPN失败组epoch1/microbatch209已重复出现并恢复：同样的forward loss/其余分支梯度，loss scale65536→8192后YaTC梯度有限，所有optimizer同步1次、丢样本0；再次溢出亦按记录的同批重放恢复。两组C均完成epoch1（VPN ValMacro-F1=0.902482，Tor=0.887153），当前各约18GiB显存、150秒/epoch。运行中bundle193个内部文件/3个外部日志引用结构校验PASS；终态须待四组冻结/Test重放后再验hash与结果。
+
+### Current handoff (2026-10-23 — Stage45)
+
+- 2026-10-23 — [agent:codex] Stage45全部完成，控制器10/10且退出0，独立重放和哈希PASS。VPN联合Test Macro-F1=0.918119（原0.919350），Tor联合未超过原Val而回退epoch0；两组B亦回退。结论JOINT_FINETUNING_NOT_CONSISTENTLY_SUPPORTED；保留分阶段方案，无后续自动任务。
+
+## 2026-10-23 — Stage37 联合与分阶段训练预算审计
+
+- Agent: [agent:codex]
+- Status: complete / READ_ONLY_AUDIT.
+- Objective: 核对三分支联合训练20 epoch与分阶段分支训练20/50/200 epoch之间的预算差异，并判断现有结果是否支持继续增加联合训练轮数。
+- Starting state: Stage37 VPN/Tor 单seed联合训练结果及Stage32分阶段冻结分支/融合结果已存在；本任务仅检查代码、配置、历史曲线和报告，不重训、不评估Test。
+- Actions performed: 对照Stage31分支方案、Stage32 adapter/head实现、Stage37联合配置与逐epoch Known-Val曲线；核对batch、优化器更新步数、最佳epoch和末轮表现。
+- Commands run: 通过项目tmux helper，在固定DGL Conda环境内只读检查Stage31/32/37配置、源码和训练历史。
+- Files changed: 仅本进度记录及SESSION_HANDOFF.md；未更改实验代码、协议、权重或结果。
+- Validation and observed results: Stage37两组均20/20 epoch完成。VPN Known-Val Macro-F1最佳0.882000@epoch15、末轮0.871337；Tor最佳0.852184@epoch12、末轮0.846686；末轮train loss分别0.000595/0.000194。分阶段上游分支预算为TrafficFormer20、FIG/TAGCN50、YaTC200 epoch，Stage32 adapter和head另各30 epoch。联合与分阶段训练预算确有明显不等，现有Test差距不能单独归因为训练方式；但现有验证曲线不支持仅把相同联合配置延长并宣称会改善。
+- Decisions and assumptions: 训练epoch不能直接跨不同架构/优化器解释为等量计算；若要因果比较，应预先定义匹配的分支更新/FLOPs预算和选择规则。本次不启动补训。
+- Errors or blockers: Stage37只有一个seed；单seed不能判断稳定性或学习率/调度策略下的联合训练上限。
+- Next step: 若用户批准后续实验，再先冻结budget-matched对照方案；当前审计已完成。
+
 ## 2026-10-23 — Stage44C 结果归档与 GitHub 发布
 
 - Agent: [agent:codex]
