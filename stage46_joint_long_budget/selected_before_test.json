@@ -1,0 +1,56 @@
+{
+  "created_at_utc": "2026-10-24T02:49:04.055646+00:00",
+  "selections": [
+    {
+      "best_epoch": 6,
+      "best_val_macro_f1": 0.880098377828015,
+      "budget_epochs": 20,
+      "checkpoint_path": "runs/iscx_vpn/prefix020_best.pt",
+      "checkpoint_sha256": "eeaea9b67dbf865fcf6b041e3a1af3e8aa5b35f29143eb524eefd4da28b604e0",
+      "dataset": "iscx_vpn"
+    },
+    {
+      "best_epoch": 6,
+      "best_val_macro_f1": 0.880098377828015,
+      "budget_epochs": 50,
+      "checkpoint_path": "runs/iscx_vpn/prefix050_best.pt",
+      "checkpoint_sha256": "a95647ea8b17326ed95389a0ef545f7105d8a9a1ca902da07b4424a08af73f9f",
+      "dataset": "iscx_vpn"
+    },
+    {
+      "best_epoch": 6,
+      "best_val_macro_f1": 0.880098377828015,
+      "budget_epochs": 100,
+      "checkpoint_path": "resume_attempt1/runs/iscx_vpn/prefix100_best.pt",
+      "checkpoint_sha256": "782685fc7ccfe1c5fc659e80e631bef7193defa59228d860984b19c2366c9747",
+      "dataset": "iscx_vpn"
+    },
+    {
+      "best_epoch": 18,
+      "best_val_macro_f1": 0.8628309323727785,
+      "budget_epochs": 20,
+      "checkpoint_path": "runs/iscx_tor/prefix020_best.pt",
+      "checkpoint_sha256": "a958451fbf9adb5fcf863eeb25c7e9caa4049a356c5b866bac7517b9d6780077",
+      "dataset": "iscx_tor"
+    },
+    {
+      "best_epoch": 36,
+      "best_val_macro_f1": 0.8673217318909023,
+      "budget_epochs": 50,
+      "checkpoint_path": "runs/iscx_tor/prefix050_best.pt",
+      "checkpoint_sha256": "58f611f7de02a1b0e51e2d0228661ba37516327ee3c0a837a71d1ad57ee75ff1",
+      "dataset": "iscx_tor"
+    },
+    {
+      "best_epoch": 36,
+      "best_val_macro_f1": 0.8673217318909023,
+      "budget_epochs": 100,
+      "checkpoint_path": "resume_attempt1/runs/iscx_tor/prefix100_best.pt",
+      "checkpoint_sha256": "d4a7e0c4d57deb85b32ed293f90b5daa56d24cc31899004682bbdddaf9b26ca1",
+      "dataset": "iscx_tor"
+    }
+  ],
+  "status": "PASS",
+  "test_used_for_selection": 0,
+  "unknown_used": 0
+}

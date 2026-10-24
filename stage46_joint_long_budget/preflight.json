@@ -1,0 +1,93 @@
+{
+  "datasets": [
+    {
+      "class_counts": {
+        "known_train": {
+          "Communication": 4759,
+          "File-Transfer": 1600,
+          "P2P": 805,
+          "Streaming": 1600
+        },
+        "known_validation": {
+          "Communication": 595,
+          "File-Transfer": 200,
+          "P2P": 101,
+          "Streaming": 202
+        }
+      },
+      "dataset": "iscx_vpn",
+      "membership_sha256": "8ff2017929522c65d678c4ad6c564adabab55b8634479ed98367e35726cab0db",
+      "samples": {
+        "known_train": 8764,
+        "known_validation": 1098
+      },
+      "source_hashes": {
+        "e3_t8_input_sha256": "1b7f67b23393bc107b4060ae6bd27b40af0826a255a2cde6e623b634487b31cb",
+        "joint_model_source_sha256": "1bde9bcb4b086e8a90124f5732f659f0e90300bafef2489d11f80594ef44cc1b",
+        "stage20_manifest_sha256": "6404d496f50a6f7f6f397d125ad0cd653c9df152d8db1b9ed2ad2310967950bb",
+        "trafficformer_pretrained_sha256": "be9dcc1e0c6b68db005e506adf13a2d937a2f3982539a2c8a58f78c55af0d5ce",
+        "yatc_pretrained_sha256": "66314aa57d4364bad0228835a181158f819d10c857936fbbdbae6dc483211fc6",
+        "yatc_trainval_audit_sha256": "19cfc588edf50720a12f6611d648c28924b20bbf8dc4608ad0413f82cc13b84b"
+      },
+      "test_values_used": 0,
+      "tf_args": {
+        "learning_rate": 6e-05,
+        "optimizer": "adamw",
+        "scheduler": "linear",
+        "train_steps": 13700,
+        "warmup": 0.1
+      },
+      "unknown_used": 0
+    },
+    {
+      "class_counts": {
+        "known_train": {
+          "Browsing": 1600,
+          "Communication": 2545,
+          "File-Transfer": 1600,
+          "P2P": 1600,
+          "Streaming": 1601
+        },
+        "known_validation": {
+          "Browsing": 200,
+          "Communication": 318,
+          "File-Transfer": 200,
+          "P2P": 200,
+          "Streaming": 200
+        }
+      },
+      "dataset": "iscx_tor",
+      "membership_sha256": "0b3d4ebfb40e839f1f206325713c810efeb2804aad2a1420776f9ebcedfd6d91",
+      "samples": {
+        "known_train": 8946,
+        "known_validation": 1118
+      },
+      "source_hashes": {
+        "e3_t8_input_sha256": "344985e6e49a1b814ecf34daa7843264267b7ca7f7711b9c24a0546bfdbf120b",
+        "joint_model_source_sha256": "1bde9bcb4b086e8a90124f5732f659f0e90300bafef2489d11f80594ef44cc1b",
+        "stage20_manifest_sha256": "6404d496f50a6f7f6f397d125ad0cd653c9df152d8db1b9ed2ad2310967950bb",
+        "trafficformer_pretrained_sha256": "be9dcc1e0c6b68db005e506adf13a2d937a2f3982539a2c8a58f78c55af0d5ce",
+        "yatc_pretrained_sha256": "66314aa57d4364bad0228835a181158f819d10c857936fbbdbae6dc483211fc6",
+        "yatc_trainval_audit_sha256": "299b142aa17a8ad84ad1c4a67ccf82d51cdb52a1b1bac7fb4190c5f74b66e721"
+      },
+      "test_values_used": 0,
+      "tf_args": {
+        "learning_rate": 6e-05,
+        "optimizer": "adamw",
+        "scheduler": "linear",
+        "train_steps": 14000,
+        "warmup": 0.1
+      },
+      "unknown_used": 0
+    }
+  ],
+  "environment": "/home/birkenwald/data/SEU-WXY/conda_envs/2025-10-8-WXY-dgl_py310",
+  "epochs": 100,
+  "prefixes": [
+    20,
+    50,
+    100
+  ],
+  "seed": 2022,
+  "status": "PASS"
+}

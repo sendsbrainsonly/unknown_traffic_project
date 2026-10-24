@@ -1,0 +1,13 @@
+{
+  "checkpoints": 6,
+  "completed_at_utc": "2026-10-24T02:50:38.620287+00:00",
+  "conclusion": "LONGER_BUDGET_NOT_CONSISTENTLY_BETTER",
+  "epochs_each": 100,
+  "replayed_metric_rows": 12,
+  "runs_complete": 2,
+  "selection_file_sha256": "83a301f5a1f34580b8e99d5fac12506dc0fdf6142dad77c1fa8e0e38f98ee57f",
+  "source_hashes_unchanged": true,
+  "status": "PASS",
+  "test_used_for_selection": 0,
+  "unknown_used": 0
+}

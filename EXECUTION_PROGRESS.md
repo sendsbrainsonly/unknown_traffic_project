@@ -1,5 +1,31 @@
 # Unknown Traffic / Unknown Attack Detection 项目过程、实验计划修订与当前进度
 
+## Current handoff (2026-10-24 — Stage46 scoped GitHub re-push)
+
+- 2026-10-24 — [agent:codex] 用户要求重新推送。起始状态：`main` 的本地 HEAD 与远端 `origin/main` 均为 `36ef31aa4e58b067659ca2c746d1840574a41b35`；工作树共164项变化（2个tracked修改、162项untracked，涉及多阶段旧结果）。计划仅发布Stage46源代码/计划/简明结果与两个项目索引文件；不批量添加其他实验目录、缓存、逐样本数据、checkpoint/模型权重或机器运行状态。已完成清单和敏感路径/权重扩展名预审；下一步暂存后逐项复核，再提交、推送并核对远端SHA。
+
+## 2026-10-24 — Stage46 results and code GitHub re-push
+
+- Agent: [agent:codex]
+- Status: in_progress / PAYLOAD_SCOPED.
+- Objective: 按用户“重新推送”要求，将Stage46代码与轻量结果文档发布到当前项目GitHub，不上传模型权重或其他数据。
+- Starting state: 本地/远端main一致；工作树164项未提交变化，包含多个历史实验目录，不能整体添加。
+- Actions performed: 核对remote main SHA、工作树状态与Stage46文件；将发布范围限定为Stage46脚本/测试/计划/README/结果/完成验证及项目结果索引，不包含运行日志、manifest大清单、artifact inventory、GPU快照、数据缓存或权重。
+- Commands run: 通过项目tmux helper审计Git状态、remote HEAD、文件清单、ignore规则及发布候选文件。
+- Files changed: 仅待暂存Stage46所选文件、`EXECUTION_PROGRESS.md`、`EXPERIMENT_RESULTS.md`；其他未跟踪实验内容保持不动。
+- Validation and observed results: 远端HEAD与本地HEAD一致；候选Stage46非忽略文件约514 KB，但最终暂存会采用更小的显式清单；未发现Git可见的checkpoint或数据文件。
+- Decisions and assumptions: 沿用此前“代码发布不包含模型权重”的边界；只发布Stage46复现实验代码及核心结果，跳过包含绝对本机路径/运行状态的queue与GPU inventory文件。
+- Errors or blockers: 无。
+- Next step: 暂存精确文件清单，检查暂存区无权重/数据文件并统计体积，之后创建提交、推送main、用`git ls-remote`确认远端SHA。
+
+## Current handoff (2026-10-24 — Stage46 从 epoch75 安全续训)
+
+- 2026-10-24 — [agent:codex] Stage46暂停后安全续训并完成：CPU恢复预检4/4，GPU单步恢复smoke两组PASS；VPN/Tor从epoch75快照分别在GPU6/7完成epoch76–100，原始中断attempt保持不变。六个20/50/100选点冻结后才评估Known Test；逐指标独立重放12行PASS，Unknown/DES使用=0。VPN最佳Val Macro-F1 0.880098@6，Test Macro-F1均为0.884922；Tor最佳Val 0.867322@36，Test Macro-F1为0.851394@20、0.851864@50/100。结论`LONGER_BUDGET_NOT_CONSISTENTLY_BETTER`。完整曲线另合并epoch1–75原历史与76–100续训记录，避免误用中断attempt的根目录曲线。最终独立验证器核验337个文件/13,949,251,610字节及12行指标重放PASS；完整SHA256清单已记录在resume_attempt1。
+
+## Current handoff (2026-10-24 — Stage46 用户请求暂停)
+
+- 2026-10-24 — [agent:codex] Stage46 已按用户要求停止训练并释放本任务 GPU：只向已核验的 VPN/Tor worker PID 发送 SIGINT；两个 worker 均退出，GPU1/7 回到 0 MiB、0% 利用率，未触碰其他 GPU 进程。停止时 VPN 已完成93/100 epoch（中断发生于第94轮，step12802），Tor 已完成91/100 epoch（中断发生于第92轮，step12750）；两者各保存 `failure_state.pt` 和周期 `recovery_epoch075.pt`。日志记录 `KeyboardInterrupt`，这是用户要求的暂停，不是模型崩溃/训练异常。未冻结20/50/100预算、未评估Known Test、未读取Unknown或运行DES。队列初始记录为failed（worker收到SIGINT）；归档进程仍在刷新/哈希实验包，完成后需将运行状态明确标为paused并重新核验。GPU1/7已释放；其他GPU仍由无关进程占用，不作改动。恢复前先确认已有恢复快照能否按当前脚本恢复；`experiment.py train` 本身没有现成resume入口，禁止直接在已有run目录重启。
+
 ## 2026-10-23 — GitHub 同步 Stage47 论文与轻量证据
 
 - Agent: [agent:codex]
@@ -71,7 +97,7 @@
 ## 2026-10-23 — Stage46 原始初始化联合训练100epoch预算诊断
 
 - Agent: [agent:codex]
-- Status: in_progress / TRAINING_STARTED.
+- Status: complete / INDEPENDENT_REPLAY_PASS (2026-10-24); original attempt was paused on request, continuation attempt is a separate directory.
 - Objective: 用户要求“那看看多轮”；VPN/Tor seed2022从Stage37相同官方初始权重开始，固定100epoch，登记20/50/100预算Known-Val选点，验证预算不足假设。
 - Starting state: Stage45 warm-start比较已完成，不能代替原始初始化长训练；Stage37/32与Stage20冻结数据保留。既有其他阶段工作树改动全部保留。
 - Actions performed: 核查原模型/优化器/调度；完成实验包、预注册、训练器/双GPU队列/监控/回归测试；CPU4/4和原Stage37数据/预训练/源码hash比对PASS。两组Known Train/Val membership与scaler冻结后提交tmux训练，实时选中GPU1/7。
@@ -80,12 +106,13 @@
 - Validation and observed results: CPU4/4回归PASS；VPN Train/Val8764/1098、Tor8946/1118，源hash与Stage37一致；100epoch总更新数13700/14000。原TF/YaTC调度依赖total_steps，拉长warmup/decay混杂已登记，不声称纯epoch/等FLOPs。队列START train_iscx_vpn gpu1 / train_iscx_tor gpu7；初始权重/归一化阶段，尚无长程效果结论。
 - Decisions and assumptions: 原优化器基础LR、模型/损失/batch和KnownTrain scaler；数值保护复用Stage45原子GradScaler修复；六选点统一冻结前新Test推理0。
 - Errors or blockers: 暂无训练失败；历史工作树改动保留。已核验两组真实优化器更新各100次（epoch1、6400个样本），原初始化/scaler校验通过，每卡约18GiB；运行中bundle结构校验37artifacts（36内部/1外部）PASS。不是仅有tmux空会话；长程效果仍待完成。
-- Next step: 查看stage46_joint_long_budget/progress.py及logs/train_*.log；两组100epoch后自动冻结六选点、Test评估/独立重放/哈希核验，完成后停止，不自动开集。
+- Next step: Stage46已完成并停止；不自动启动开集或其他后续实验。
+- Final closeout: 2026-10-24 [agent:codex] `stage46_closeout_verify_20261024` exit 0；`completion_verification.json` status PASS，337 artifacts / 13,949,251,610 bytes SHA256 verified，6 selected checkpoints、12 replayed metric rows、Unknown=0。GPU6/7在收尾快照为空闲；续训attempt的manifest已更新为当前inventory SHA，父Stage46 manifest已索引续训RESULTS/manifest/inventory。
 - Startup epoch verification:两组均完成1/100epoch。VPN Known-Val Accuracy/Macro/Weighted-F1=0.8151/0.7825/0.7996；Tor=0.6601/0.6681/0.6505。首轮速度推算剩余训练230/235分钟，非保证结束时间；尚不解释长程性能。最新bundle结构51artifacts（50内部/1外部）PASS。
 
 ### Current handoff (2026-10-23 — Stage46)
 
-- 2026-10-23 — [agent:codex] Stage46 CPU4/4及冻结源hash预检PASS；VPN/Tor100epoch在GPU1/7运行，已核验各100次真实更新、epoch1各6400样本，每卡约18GiB；20/50/100预算Known-Val选点，尚无长程效果结论。运行中bundle结构PASS；不读Unknown、不复用Stage45训练权重。
+- 2026-10-24 correction — [agent:codex] Stage46 当前已按用户请求暂停，详见本文件顶部 Current handoff。不要沿用本条中的“仍运行”状态。
 
 ## 2026-10-23 — Stage45 统一初始化分阶段续训与联合微调对照
 
