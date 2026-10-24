@@ -2,21 +2,21 @@
 
 ## Current handoff (2026-10-24 — Stage46 scoped GitHub re-push)
 
-- 2026-10-24 — [agent:codex] 用户要求重新推送。起始状态：`main` 的本地 HEAD 与远端 `origin/main` 均为 `36ef31aa4e58b067659ca2c746d1840574a41b35`；工作树共164项变化（2个tracked修改、162项untracked，涉及多阶段旧结果）。计划仅发布Stage46源代码/计划/简明结果与两个项目索引文件；不批量添加其他实验目录、缓存、逐样本数据、checkpoint/模型权重或机器运行状态。已完成清单和敏感路径/权重扩展名预审；下一步暂存后逐项复核，再提交、推送并核对远端SHA。
+- 2026-10-24 — [agent:codex] 用户要求重新推送。Stage46代码/测试/计划/核心结果和项目索引已推送至GitHub；本地/远端`main`经`git ls-remote`核验一致。发布负载为21个Stage46文件、336,716 bytes；未包含模型权重、缓存、逐样本数据、运行日志、硬件快照或其他Stage目录。HTTPS交互式用户名提示未提交凭据，后续使用SSH 443完成推送。任务完成。
 
 ## 2026-10-24 — Stage46 results and code GitHub re-push
 
 - Agent: [agent:codex]
-- Status: in_progress / PAYLOAD_SCOPED.
+- Status: complete / REMOTE_SHA_VERIFIED.
 - Objective: 按用户“重新推送”要求，将Stage46代码与轻量结果文档发布到当前项目GitHub，不上传模型权重或其他数据。
 - Starting state: 本地/远端main一致；工作树164项未提交变化，包含多个历史实验目录，不能整体添加。
-- Actions performed: 核对remote main SHA、工作树状态与Stage46文件；将发布范围限定为Stage46脚本/测试/计划/README/结果/完成验证及项目结果索引，不包含运行日志、manifest大清单、artifact inventory、GPU快照、数据缓存或权重。
-- Commands run: 通过项目tmux helper审计Git状态、remote HEAD、文件清单、ignore规则及发布候选文件。
-- Files changed: 仅待暂存Stage46所选文件、`EXECUTION_PROGRESS.md`、`EXPERIMENT_RESULTS.md`；其他未跟踪实验内容保持不动。
-- Validation and observed results: 远端HEAD与本地HEAD一致；候选Stage46非忽略文件约514 KB，但最终暂存会采用更小的显式清单；未发现Git可见的checkpoint或数据文件。
-- Decisions and assumptions: 沿用此前“代码发布不包含模型权重”的边界；只发布Stage46复现实验代码及核心结果，跳过包含绝对本机路径/运行状态的queue与GPU inventory文件。
-- Errors or blockers: 无。
-- Next step: 暂存精确文件清单，检查暂存区无权重/数据文件并统计体积，之后创建提交、推送main、用`git ls-remote`确认远端SHA。
+- Actions performed: 核对remote main SHA、工作树状态与Stage46文件；显式暂存并提交21个Stage46源代码/测试/计划/README/结果/完成验证及项目索引文件；未批量添加其他实验目录、运行日志、manifest大清单、artifact inventory、GPU快照、数据缓存或权重。
+- Commands run: 项目tmux helper审计Git状态/remote HEAD并执行暂存、提交和SSH 443推送；HTTPS第一次因交互式用户名提示而中断，未输入或记录凭据。
+- Files changed: 提交包含21个文件、336,716 bytes。其他未跟踪实验内容保持不动。
+- Validation and observed results: 暂存区限定为本项目索引和Stage46；权重/数据扩展名扫描0项；`git diff --cached --check`通过。提交`2c86dd66a2126780fffbf1a4d9c97025e64f8e4e`推送成功，远端`main`经`git ls-remote`返回相同SHA。
+- Decisions and assumptions: 沿用此前“代码发布不包含模型权重”的边界；只发布Stage46复现实验代码及核心结果，跳过包含本机路径/运行状态的queue与GPU inventory文件。
+- Errors or blockers: HTTPS transport请求用户名；切换为仓库此前验证过的GitHub SSH 443端点后成功。
+- Next step: 无；远端发布已验证。
 
 ## Current handoff (2026-10-24 — Stage46 从 epoch75 安全续训)
 
