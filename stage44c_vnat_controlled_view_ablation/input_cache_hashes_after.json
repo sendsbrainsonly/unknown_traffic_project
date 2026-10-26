@@ -1,0 +1,34 @@
+{
+  "status": "PASS",
+  "unchanged": true,
+  "files": {
+    "stage44_vnat_coarse_service_loso_open_set/input_caches/full/fig_adj.npy": {
+      "sha256": "5a120855ffd1211321152468fad13119149708e483d2c6d92761d6e61362ef6d",
+      "size_bytes": 21104228
+    },
+    "stage44_vnat_coarse_service_loso_open_set/input_caches/full/fig_mask.npy": {
+      "sha256": "afd070d93766f4d13dd9aaa9f69ce6cede531aa2e2e5fda31293c3e5f255ab1b",
+      "size_bytes": 703598
+    },
+    "stage44_vnat_coarse_service_loso_open_set/input_caches/full/fig_x.npy": {
+      "sha256": "4466b37fb2dccadf60dca5f8f329b350961a7bb17cc1315dde4bb562b7e91636",
+      "size_bytes": 19697288
+    },
+    "stage44_vnat_coarse_service_loso_open_set/input_caches/full/flow_ids.npy": {
+      "sha256": "a287f084a35410c0240342e4e0f77764c372b9a54dbe1b02e93608b0ae0c5b2e",
+      "size_bytes": 7503808
+    },
+    "stage44_vnat_coarse_service_loso_open_set/input_caches/full/mfr.npy": {
+      "sha256": "291943e12daf6b3aec21968556cf033a7b06a10bc3c99681bd8dcc16849db4ca",
+      "size_bytes": 37518528
+    },
+    "stage44_vnat_coarse_service_loso_open_set/input_caches/full/segments.npy": {
+      "sha256": "3874b5fafedd0b90bd90310cd1f6a9cbb5ea3f41de33899dca50e99b8c526f5a",
+      "size_bytes": 7503808
+    },
+    "stage44_vnat_coarse_service_loso_open_set/input_caches/full/token_ids.npy": {
+      "sha256": "187d64ce8c3a00b74047c29b4f1ee89cb781e8a455d4363dfb54c94639ff0546",
+      "size_bytes": 30014848
+    }
+  }
+}

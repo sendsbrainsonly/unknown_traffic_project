@@ -1,0 +1,4 @@
+class,precision,recall,f1,support
+communication,1.0,1.0,1.0,221
+file_transfer,1.0,1.0,1.0,647
+streaming,1.0,1.0,1.0,140

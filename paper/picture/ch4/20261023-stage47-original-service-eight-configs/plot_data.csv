@@ -1,9 +1,17 @@
-method,vpn_macro_f1_mean,vpn_macro_f1_sd,tor_macro_f1_mean,tor_macro_f1_sd,seeds
-TrafficFormer,86.06,0.40,82.13,0.64,2022;2023
-YaTC,88.71,1.16,82.74,0.08,2022;2023
-Open-Detect (CP),74.43,1.42,57.66,9.97,2022;2023
-RoNeTC (recon.),71.57,0.81,53.40,1.98,2022;2023
-TFE-GNN (adapt.),65.85,1.46,55.36,1.38,2022;2023
-Trident (adapt.),63.22,0.06,60.53,0.19,2022;2023
-E3 (two-view),85.95,0.70,82.22,0.76,2022;2023
-Three-view (ours),89.37,0.55,86.63,0.15,2022;2023
+dataset,method,label,mean_macro_f1_percent,population_sd_percent,seeds,axis_min,axis_max
+iscx_vpn,TrafficFormer-pretrained,TrafficFormer (pretrained),86.06074342008692,0.396091212047911,"2022,2023",0,100
+iscx_vpn,YaTC-official-pretrained-Stage20,YaTC (pretrained),88.70850180189981,1.159258269823904,"2022,2023",0,100
+iscx_vpn,Open-Detect corrected-paper,Open-Detect (CP),74.42646818069265,1.4240995407076518,"2022,2023",0,100
+iscx_vpn,RoNeTC-runnable-reconstruction,RoNeTC (recon.),71.57320571747019,0.8050896339115932,"2022,2023",0,100
+iscx_vpn,TFE-GNN-8-UDP-short,TFE-GNN (adapt.),65.85492043663912,1.4646900148058528,"2022,2023",0,100
+iscx_vpn,Trident-early8-86D,Trident (adapt.),63.22065979756106,0.061539896558437945,"2022,2023",0,100
+iscx_vpn,OURS-E3-T8-pretrained,Early E3 (two-view),85.94926220789259,0.7014773974772404,"2022,2023",0,100
+iscx_vpn,OURS-current-threeview-equal,Ours (three-view),89.36925827386688,0.5450505294003982,"2022,2023",0,100
+iscx_tor,TrafficFormer-pretrained,TrafficFormer (pretrained),82.12590438545695,0.6375600625997069,"2022,2023",0,100
+iscx_tor,YaTC-official-pretrained-Stage20,YaTC (pretrained),82.7393373683675,0.07743638093026806,"2022,2023",0,100
+iscx_tor,Open-Detect corrected-paper,Open-Detect (CP),57.65626970923942,9.970092034794497,"2022,2023",0,100
+iscx_tor,RoNeTC-runnable-reconstruction,RoNeTC (recon.),53.40105825337778,1.9843961391050047,"2022,2023",0,100
+iscx_tor,TFE-GNN-8-UDP-short,TFE-GNN (adapt.),55.36112631951548,1.383316135148327,"2022,2023",0,100
+iscx_tor,Trident-early8-86D,Trident (adapt.),60.52582507376679,0.18748014693823478,"2022,2023",0,100
+iscx_tor,OURS-E3-T8-pretrained,Early E3 (two-view),82.21775012760784,0.7643452238053627,"2022,2023",0,100
+iscx_tor,OURS-current-threeview-equal,Ours (three-view),86.63175019405944,0.1480666449347412,"2022,2023",0,100

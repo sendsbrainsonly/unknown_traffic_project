@@ -1,0 +1,4 @@
+class,precision,recall,f1,support
+communication,0.9910313901345291,1.0,0.9954954954954955,221
+file_transfer,1.0,1.0,1.0,647
+remote_access,1.0,0.9966273187183811,0.9983108108108109,593

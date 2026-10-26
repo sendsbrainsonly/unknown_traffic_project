@@ -1,14 +1,11 @@
-# Figure 4-1: original service labels
+# Figure 4-1 — Stage47 original-service comparison
 
-This figure compares all eight configurations in Table 4-2 of
-`paper/md/ch4/4(1).md`. Bars show Macro-F1 means for seeds 2022 and 2023;
-error bars show the reported population standard deviations. The three-view
-result is orange with a hatch, E3 is gray, and the other six configurations are
-blue.
+This directory contains the published Figure 4-1 exports and the 16 aggregate points used to draw them. The chart compares eight configurations on the original ISCX-VPN six-service and ISCXTor2016 seven-service tasks, using two seeds and mean ± population standard deviation.
 
-`plot_data.csv` contains the plotted values and `generate_fig4_1.py` renders
-300-dpi PNG, PDF, and editable SVG files. The seven baseline means and standard
-deviations were cross-checked against the existing Figure 4-1 data in
-`paper/picture/ch4/20261016-experiment-figures-v1/render-v4/plot_data.json`.
-The three-view values are copied from Table 4-2; that row was not present in the
-older seven-baseline plot data.
+## Files
+
+- `fig4_1_closed_baselines.png` and `.pdf`: published figure exports. The SVG remains in the local archive.
+- `plot_data.csv` and `plot_data.json`: plotted means and standard deviations.
+- `VISUAL_QA.md`: visual and layout checks.
+
+The source run-level aggregates are in [`Stage47`](../../../../stage47_original_service_current_three_view/RESULTS.md). The full local figure-bundle manifest and tmux execution logs remain in the working project archive; they are not part of this GitHub publication. No checkpoint, cache, or per-sample prediction is included.

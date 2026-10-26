@@ -1,0 +1,16 @@
+{
+  "adapter_epochs_each": 30,
+  "all_method_run_rows": 32,
+  "completed_runs": 4,
+  "encoder_updates": 0,
+  "frozen_checkpoints": 8,
+  "head_epochs_each": 30,
+  "metric_replays": 8,
+  "paired_rows": 28,
+  "permutation_checkpoint_replays": 4,
+  "source_hashes_unchanged": true,
+  "status": "PASS",
+  "summary_rows": 16,
+  "test_parameter_selection": 0,
+  "unknown_used": 0
+}

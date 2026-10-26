@@ -1,0 +1,162 @@
+[
+  {
+    "dataset": "iscx_vpn",
+    "method": "TrafficFormer-pretrained",
+    "label": "TrafficFormer (pretrained)",
+    "mean_macro_f1_percent": 86.06074342008692,
+    "population_sd_percent": 0.396091212047911,
+    "seeds": "2022,2023",
+    "axis_min": 0,
+    "axis_max": 100
+  },
+  {
+    "dataset": "iscx_vpn",
+    "method": "YaTC-official-pretrained-Stage20",
+    "label": "YaTC (pretrained)",
+    "mean_macro_f1_percent": 88.70850180189981,
+    "population_sd_percent": 1.159258269823904,
+    "seeds": "2022,2023",
+    "axis_min": 0,
+    "axis_max": 100
+  },
+  {
+    "dataset": "iscx_vpn",
+    "method": "Open-Detect corrected-paper",
+    "label": "Open-Detect (CP)",
+    "mean_macro_f1_percent": 74.42646818069265,
+    "population_sd_percent": 1.4240995407076518,
+    "seeds": "2022,2023",
+    "axis_min": 0,
+    "axis_max": 100
+  },
+  {
+    "dataset": "iscx_vpn",
+    "method": "RoNeTC-runnable-reconstruction",
+    "label": "RoNeTC (recon.)",
+    "mean_macro_f1_percent": 71.57320571747019,
+    "population_sd_percent": 0.8050896339115932,
+    "seeds": "2022,2023",
+    "axis_min": 0,
+    "axis_max": 100
+  },
+  {
+    "dataset": "iscx_vpn",
+    "method": "TFE-GNN-8-UDP-short",
+    "label": "TFE-GNN (adapt.)",
+    "mean_macro_f1_percent": 65.85492043663912,
+    "population_sd_percent": 1.4646900148058528,
+    "seeds": "2022,2023",
+    "axis_min": 0,
+    "axis_max": 100
+  },
+  {
+    "dataset": "iscx_vpn",
+    "method": "Trident-early8-86D",
+    "label": "Trident (adapt.)",
+    "mean_macro_f1_percent": 63.22065979756106,
+    "population_sd_percent": 0.061539896558437945,
+    "seeds": "2022,2023",
+    "axis_min": 0,
+    "axis_max": 100
+  },
+  {
+    "dataset": "iscx_vpn",
+    "method": "OURS-E3-T8-pretrained",
+    "label": "Early E3 (two-view)",
+    "mean_macro_f1_percent": 85.94926220789259,
+    "population_sd_percent": 0.7014773974772404,
+    "seeds": "2022,2023",
+    "axis_min": 0,
+    "axis_max": 100
+  },
+  {
+    "dataset": "iscx_vpn",
+    "method": "OURS-current-threeview-equal",
+    "label": "Ours (three-view)",
+    "mean_macro_f1_percent": 89.36925827386688,
+    "population_sd_percent": 0.5450505294003982,
+    "seeds": "2022,2023",
+    "axis_min": 0,
+    "axis_max": 100
+  },
+  {
+    "dataset": "iscx_tor",
+    "method": "TrafficFormer-pretrained",
+    "label": "TrafficFormer (pretrained)",
+    "mean_macro_f1_percent": 82.12590438545695,
+    "population_sd_percent": 0.6375600625997069,
+    "seeds": "2022,2023",
+    "axis_min": 0,
+    "axis_max": 100
+  },
+  {
+    "dataset": "iscx_tor",
+    "method": "YaTC-official-pretrained-Stage20",
+    "label": "YaTC (pretrained)",
+    "mean_macro_f1_percent": 82.7393373683675,
+    "population_sd_percent": 0.07743638093026806,
+    "seeds": "2022,2023",
+    "axis_min": 0,
+    "axis_max": 100
+  },
+  {
+    "dataset": "iscx_tor",
+    "method": "Open-Detect corrected-paper",
+    "label": "Open-Detect (CP)",
+    "mean_macro_f1_percent": 57.65626970923942,
+    "population_sd_percent": 9.970092034794497,
+    "seeds": "2022,2023",
+    "axis_min": 0,
+    "axis_max": 100
+  },
+  {
+    "dataset": "iscx_tor",
+    "method": "RoNeTC-runnable-reconstruction",
+    "label": "RoNeTC (recon.)",
+    "mean_macro_f1_percent": 53.40105825337778,
+    "population_sd_percent": 1.9843961391050047,
+    "seeds": "2022,2023",
+    "axis_min": 0,
+    "axis_max": 100
+  },
+  {
+    "dataset": "iscx_tor",
+    "method": "TFE-GNN-8-UDP-short",
+    "label": "TFE-GNN (adapt.)",
+    "mean_macro_f1_percent": 55.36112631951548,
+    "population_sd_percent": 1.383316135148327,
+    "seeds": "2022,2023",
+    "axis_min": 0,
+    "axis_max": 100
+  },
+  {
+    "dataset": "iscx_tor",
+    "method": "Trident-early8-86D",
+    "label": "Trident (adapt.)",
+    "mean_macro_f1_percent": 60.52582507376679,
+    "population_sd_percent": 0.18748014693823478,
+    "seeds": "2022,2023",
+    "axis_min": 0,
+    "axis_max": 100
+  },
+  {
+    "dataset": "iscx_tor",
+    "method": "OURS-E3-T8-pretrained",
+    "label": "Early E3 (two-view)",
+    "mean_macro_f1_percent": 82.21775012760784,
+    "population_sd_percent": 0.7643452238053627,
+    "seeds": "2022,2023",
+    "axis_min": 0,
+    "axis_max": 100
+  },
+  {
+    "dataset": "iscx_tor",
+    "method": "OURS-current-threeview-equal",
+    "label": "Ours (three-view)",
+    "mean_macro_f1_percent": 86.63175019405944,
+    "population_sd_percent": 0.1480666449347412,
+    "seeds": "2022,2023",
+    "axis_min": 0,
+    "axis_max": 100
+  }
+]

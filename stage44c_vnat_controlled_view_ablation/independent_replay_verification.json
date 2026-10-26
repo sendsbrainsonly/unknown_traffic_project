@@ -1,0 +1,9 @@
+{
+  "status": "PASS",
+  "metric_rows": 128,
+  "sample_score_rows": 145768,
+  "max_metric_error": 0.0,
+  "sampled_head_and_geometry_replays": 384,
+  "shared_initialization_each_fold": true,
+  "known_only_calibration": true
+}
