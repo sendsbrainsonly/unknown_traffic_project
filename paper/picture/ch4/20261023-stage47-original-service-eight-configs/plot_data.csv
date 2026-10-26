@@ -1,0 +1,9 @@
+method,vpn_macro_f1_mean,vpn_macro_f1_sd,tor_macro_f1_mean,tor_macro_f1_sd,seeds
+TrafficFormer,86.06,0.40,82.13,0.64,2022;2023
+YaTC,88.71,1.16,82.74,0.08,2022;2023
+Open-Detect (CP),74.43,1.42,57.66,9.97,2022;2023
+RoNeTC (recon.),71.57,0.81,53.40,1.98,2022;2023
+TFE-GNN (adapt.),65.85,1.46,55.36,1.38,2022;2023
+Trident (adapt.),63.22,0.06,60.53,0.19,2022;2023
+E3 (two-view),85.95,0.70,82.22,0.76,2022;2023
+Three-view (ours),89.37,0.55,86.63,0.15,2022;2023
