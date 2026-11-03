@@ -2,20 +2,21 @@
 
 ## Current handoff (2026-11-04 — ISCX P/R manuscript integration and publication)
 
-- 2026-11-04 — [agent:codex] `iscx-pr-publish-20261104`: manuscript integration complete, GitHub publication in_progress. Chapter4 table4-5 now contains eight matched VPN6/Tor7 configurations with Accuracy/Macro-Precision/Macro-Recall/Macro-F1/Weighted-F1, uniformly seeds2022/2023 mean±populationSD. Corrected accompanying YaTC deltas to+0.66/+3.89pp.80display cells,31original source hashes, unrelated manuscript sections andCRLF conventionPASS. README/revision record and small result CSVs prepared for scoped publication; no model/cache/runtime logs or unrelated Stage48 files.
+- 2026-11-04 — [agent:codex] `iscx-pr-publish-20261104` complete: data/manuscript payload committed and non-force pushed as87606c81c498f9b30a5714be2e6de31fbfcbc3f2; remote main independently verified identical. Chapter4 table4-5 now contains eight matched VPN6/Tor7 configurations with Accuracy/Macro-Precision/Macro-Recall/Macro-F1/Weighted-F1, uniformly seeds2022/2023 mean±populationSD. Corrected YaTC deltas to+0.66/+3.89pp.80display cells/31source hashes/50artifact bundlePASS. Published26scoped files (638,975bytes of staged file content); models, caches, logs and unrelated Stage48 files excluded.
 
 ### Run iscx-pr-publish-20261104
 
 - Agent: [agent:codex]
-- Status: in_progress (integration verified; publication pending)
+- Status: complete
 - Objective: record and integrate the P/R supplement into the current manuscript and push the scoped evidence/code payload.
 - Starting state: local/remote main1ef066821ed6dff536eab804b8111396384d9d01; pre-existing Stage48/progress edits and untracked outputs retained.
 - Actions performed: invoked paper-writing table/caption guidance for Markdown; preserved prior chapter/README/manifest snapshots; unified table4-5 statistics, added P/R and earlyE3, corrected paired deltas and updated source links.
 - Files changed: chapter4 Markdown, README, revision note, isolated P/R supplement/publication evidence and scoped records.
 - Validation and observed results:80table display cells match sourceCSV;31source files unchanged; unrelated manuscript sections and originalCRLF preserved. Original32run/16summary metrics remain intact.
+- Publication:26file payload committed87606c81c498f9b30a5714be2e6de31fbfcbc3f2 and pushed viaSSH443; GitHub main SHA independently matched. Working-tree Stage48/progress edits were preserved with scoped index staging; no model/cache/per-sample predictions/runtime logs uploaded.50-artifact finalbundlePASS.
 - Decisions and assumptions: publish lightweight records/summary/per-class metrics/code only; preserve method adaptation labels and two-seed development scope.
-- Errors or blockers: none.
-- Next step: validate expanded artifact bundle, stage only P/R publication changes, commit/push without force, verify remoteHEAD.
+- Errors or blockers: HTTPS push exited128 because interactive credentials were unavailable; existingSSH443 authentication succeeded, without changing origin URL. Both command logs/statuses retained project-locally.
+- Next step: none for data/manuscript publication; publish this completion receipt as a small follow-up record. Stage48 remains separate.
 
 ## Current handoff (2026-11-03 — ISCX Precision/Recall supplement)
 

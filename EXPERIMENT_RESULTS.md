@@ -1,6 +1,6 @@
 # Experiment result index
 
-- 2026-11-04 [agent:codex] ISCX Precision/Recall manuscript integration **complete**: table4-5 unified to eight VPN6/Tor7 configurations and two-seed mean±populationSD;80display cells/31source hashes/unrelated sectionsPASS. [Current chapter](<paper/md/ch4/4(1).md>) · [Revision and provenance](paper/md/ch4/修订记录_20261104_Precision_Recall补充.md) · [Full metric table](stage47_precision_recall_supplement_20261103/table_precision_recall.md).
+- 2026-11-04 [agent:codex] ISCX Precision/Recall manuscript integration **complete / GitHub published**: payload87606c81c498f9b30a5714be2e6de31fbfcbc3f2 verified on remote main. Table4-5 unified to eight VPN6/Tor7 configurations and two-seed mean±populationSD;80display cells/31source hashes/50artifact bundlePASS. [Current chapter](<paper/md/ch4/4(1).md>) · [Revision and provenance](paper/md/ch4/修订记录_20261104_Precision_Recall补充.md) · [Full metric table](stage47_precision_recall_supplement_20261103/table_precision_recall.md).
 
 - 2026-11-03 [agent:codex] ISCX Known-Test Precision/Recall supplement **complete**: VPN6/Tor7, eight methods, seeds2022/2023;32runs/16summaries/208per-class rows; original Accuracy/F1 replay and31source hash checksPASS;43-artifact bundlePASS. No new training. [Full P/R table](stage47_precision_recall_supplement_20261103/table_precision_recall.md) · [Supplement results](stage47_precision_recall_supplement_20261103/RESULTS.md).
 
