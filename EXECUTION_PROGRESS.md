@@ -1,5 +1,40 @@
 # Unknown Traffic / Unknown Attack Detection 项目过程、实验计划修订与当前进度
 
+## Current handoff (2026-11-04 — ISCX P/R manuscript integration and publication)
+
+- 2026-11-04 — [agent:codex] `iscx-pr-publish-20261104`: manuscript integration complete, GitHub publication in_progress. Chapter4 table4-5 now contains eight matched VPN6/Tor7 configurations with Accuracy/Macro-Precision/Macro-Recall/Macro-F1/Weighted-F1, uniformly seeds2022/2023 mean±populationSD. Corrected accompanying YaTC deltas to+0.66/+3.89pp.80display cells,31original source hashes, unrelated manuscript sections andCRLF conventionPASS. README/revision record and small result CSVs prepared for scoped publication; no model/cache/runtime logs or unrelated Stage48 files.
+
+### Run iscx-pr-publish-20261104
+
+- Agent: [agent:codex]
+- Status: in_progress (integration verified; publication pending)
+- Objective: record and integrate the P/R supplement into the current manuscript and push the scoped evidence/code payload.
+- Starting state: local/remote main1ef066821ed6dff536eab804b8111396384d9d01; pre-existing Stage48/progress edits and untracked outputs retained.
+- Actions performed: invoked paper-writing table/caption guidance for Markdown; preserved prior chapter/README/manifest snapshots; unified table4-5 statistics, added P/R and earlyE3, corrected paired deltas and updated source links.
+- Files changed: chapter4 Markdown, README, revision note, isolated P/R supplement/publication evidence and scoped records.
+- Validation and observed results:80table display cells match sourceCSV;31source files unchanged; unrelated manuscript sections and originalCRLF preserved. Original32run/16summary metrics remain intact.
+- Decisions and assumptions: publish lightweight records/summary/per-class metrics/code only; preserve method adaptation labels and two-seed development scope.
+- Errors or blockers: none.
+- Next step: validate expanded artifact bundle, stage only P/R publication changes, commit/push without force, verify remoteHEAD.
+
+## Current handoff (2026-11-03 — ISCX Precision/Recall supplement)
+
+- 2026-11-03 — [agent:codex] `iscx-pr-supplement-20261103` complete: supplemented macro/weighted/micro Precision/Recall for all eight VPN6/Tor7 methods, seeds2022/2023. 32/32 run membership/labels and original Accuracy/F1 reproduced;16 summaries/208 per-class rows;31 source hashes unchanged. Independent confusion replay and final43-artifact archive verification PASS. New results are in `stage47_precision_recall_supplement_20261103/`; no training/GPU or historical-source changes. Stage48 is a separate unfinished benchmark.
+
+### Run iscx-pr-supplement-20261103
+
+- Agent: [agent:codex]
+- Status: complete
+- Objective: Supplement Precision/Recall for all eight matched closed-set methods on VPN6/Tor7, two seeds.
+- Starting state: Stage47 has 32 run results and original prediction sources; existing aggregate table lacks Precision/Recall.
+- Actions performed: audited source routes; computed metrics from frozen predictions; independently replayed all32 runs from confusion counts; saved full per-run/per-class/summary tables and before/after input hashes; verified the43-artifact bundle.
+- Commands run: project-local tmux `iscx_pr_audit_20261103`, `iscx_pr_source_routes_20261103`, `iscx_pr_headers_20261103`, `iscx_pr_init_20261103`.
+- Files changed: new supplement bundle, execution/handoff records and experiment index. Historical predictions, splits and metric tables are unchanged.
+- Validation and observed results: 32runs/16summaries/208per-class rows;96 original run metrics and96 original summary cells reproduced within1e-12.31source SHA256 unchanged; independent macro/weighted/micro confusion replay PASS;43artifacts verified.
+- Decisions and assumptions: Known-Test only, unchanged prediction/split inputs, macro/weighted and ddof0 conventions explicit.
+- Errors or blockers: initial archive validation rejected absolute external artifact paths; failed manifest/logs retained and only reference-path metadata corrected. Final `iscx_pr_archive_fixed_20261103` exited0 and validationPASS.
+- Next step: none for this supplement; report table/CSV. No new experiment started.
+
 ## Current handoff (2026-10-24 — Stage46 scoped GitHub re-push)
 
 - 2026-10-24 — [agent:codex] 用户要求重新推送。Stage46代码/测试/计划/核心结果和项目索引已推送至GitHub；本地/远端`main`经`git ls-remote`核验一致。发布负载为21个Stage46文件、336,716 bytes；未包含模型权重、缓存、逐样本数据、运行日志、硬件快照或其他Stage目录。HTTPS交互式用户名提示未提交凭据，后续使用SSH 443完成推送。任务完成。

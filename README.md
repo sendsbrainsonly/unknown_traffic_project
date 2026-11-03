@@ -1,5 +1,7 @@
 # Unknown Traffic / Unknown Attack Detection
 
+> **指标补充与论文同步（2026-11-04）**：ISCX-VPN六类／ISCXTor七类的八配置、双seed闭集对照已补全Macro和Weighted Precision／Recall，并并入[第4章表4-5](<paper/md/ch4/4(1).md>)。原Accuracy／F1与冻结预测一致重现；表格统一为seeds2022、2023的均值±总体标准差。详见[完整七指标表](stage47_precision_recall_supplement_20261103/table_precision_recall.md)、[逐run CSV](stage47_precision_recall_supplement_20261103/run_metrics.csv)、[汇总CSV](stage47_precision_recall_supplement_20261103/method_summary.csv)及[本次修订记录](paper/md/ch4/修订记录_20261104_Precision_Recall补充.md)。
+
 > **论文更新（2026-10-23）**：表4-2已补入当前三视图方法在原服务标签（VPN六类、Tor七类）下的双seed闭集结果，并同步更新第4章分析和图4-1。当前方法 Macro-F1 为 VPN `89.37±0.55%`、Tor `86.63±0.15%`；相对 YaTC 的双seed均值差为 `+0.66/+3.89` 个百分点。结果来自两个seed且Test此前已暴露，属于开发阶段闭集对照，不代表统计显著性或开集收益。详见[第4章正文](paper/md/ch4/1.md)、[修订记录](paper/md/ch4/修订记录_20261023_Stage47原服务闭集补充.md)、[Stage47报告与汇总证据](stage47_original_service_current_three_view/RESULTS.md)和[图4-1及绘图数据](paper/picture/ch4/20261023-stage47-original-service-eight-configs/README.md)。
 
 > **实验更新（2026-10-23）**：Stage 44C 已完成 VNAT 四个冻结 Service-LOSO fold 的三视图消融，比较 Full、去 FIG、去 YaTC、去 TrafficFormer。DES-v1 平均 AUROC 分别为 `0.9922/0.9945/0.9692/0.9835`；移除 YaTC 或 TrafficFormer 后四折均下降。FIG 的影响存在排序指标与拒识工作点的取舍。完整方法、限制和轻量结果表见 [Stage 44C 报告](stage44c_vnat_controlled_view_ablation/stage44c_ablation_report.md)。该结果属于已用于方法开发的 VNAT 单 seed 诊断；普通 Git 不包含权重、逐样本分数或特征缓存。

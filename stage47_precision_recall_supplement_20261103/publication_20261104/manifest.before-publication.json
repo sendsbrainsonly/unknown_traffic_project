@@ -1,0 +1,934 @@
+{
+  "schema_version": 1,
+  "experiment_id": "stage47-iscx-known-test-precision-recall-20261103",
+  "created_at_utc": "2026-11-03T15:53:35Z",
+  "updated_at_utc": "2026-11-03T15:57:52Z",
+  "status": "success",
+  "experiment_type": "posthoc-metric-supplement",
+  "claim_scope": "diagnostic",
+  "objective": "Recompute macro and weighted precision/recall from frozen ISCX-VPN/Tor 32-run Known-Test predictions and verify prior metrics",
+  "inputs": [
+    {
+      "path": "/home/birkenwald/data/SEU-WXY/WXY-SEU/TrafficClassifier/Projects/unknown_traffic_project/stage20_dual_coarse_service_protocol/closed_service_manifest.csv",
+      "sha256": "6404d496f50a6f7f6f397d125ad0cd653c9df152d8db1b9ed2ad2310967950bb"
+    },
+    {
+      "path": "/home/birkenwald/data/SEU-WXY/WXY-SEU/TrafficClassifier/Projects/unknown_traffic_project/stage22_pretrained_trafficformer_e3_closed_set_comparison/runs/iscx_tor/seed2022/predictions.csv",
+      "sha256": "e3c348c9e7b49b86d3603cb8ece97a393c945ebbd0e2c7a219f3b7d894953202"
+    },
+    {
+      "path": "/home/birkenwald/data/SEU-WXY/WXY-SEU/TrafficClassifier/Projects/unknown_traffic_project/stage22_pretrained_trafficformer_e3_closed_set_comparison/runs/iscx_tor/seed2023/predictions.csv",
+      "sha256": "f6be77bb302b26f19b57f37688431d9114ec136503b9bd2440ab56ceeb8e9405"
+    },
+    {
+      "path": "/home/birkenwald/data/SEU-WXY/WXY-SEU/TrafficClassifier/Projects/unknown_traffic_project/stage22_pretrained_trafficformer_e3_closed_set_comparison/runs/iscx_vpn/seed2022/predictions.csv",
+      "sha256": "7e2bcd8c410e6e195c8301e625287432fe51def7e64894bec984257ea4596732"
+    },
+    {
+      "path": "/home/birkenwald/data/SEU-WXY/WXY-SEU/TrafficClassifier/Projects/unknown_traffic_project/stage22_pretrained_trafficformer_e3_closed_set_comparison/runs/iscx_vpn/seed2023/predictions.csv",
+      "sha256": "f1fcf7ac98d50d2ce1ef660c5ca7400761cc8f4c634d28f41cba76fc1119c217"
+    },
+    {
+      "path": "/home/birkenwald/data/SEU-WXY/WXY-SEU/TrafficClassifier/Projects/unknown_traffic_project/stage23_closed_set_method_table/runs/opendetect_corrected_paper/iscx_tor/seed2022/predictions.csv",
+      "sha256": "e89508160fc7d29c669108749cc0db5c831797af12e90d8bc78308b4a078bba7"
+    },
+    {
+      "path": "/home/birkenwald/data/SEU-WXY/WXY-SEU/TrafficClassifier/Projects/unknown_traffic_project/stage23_closed_set_method_table/runs/opendetect_corrected_paper/iscx_tor/seed2023/predictions.csv",
+      "sha256": "561f42b63abee765c2529fefbbc7bd3994640afa81d3f15ee3b0a7131beddc72"
+    },
+    {
+      "path": "/home/birkenwald/data/SEU-WXY/WXY-SEU/TrafficClassifier/Projects/unknown_traffic_project/stage23_closed_set_method_table/runs/opendetect_corrected_paper/iscx_vpn/seed2022/predictions.csv",
+      "sha256": "6b14fd57c9a1bc1305a2bff32de09bc416f902c9807792a6384a6f0609e19d31"
+    },
+    {
+      "path": "/home/birkenwald/data/SEU-WXY/WXY-SEU/TrafficClassifier/Projects/unknown_traffic_project/stage23_closed_set_method_table/runs/opendetect_corrected_paper/iscx_vpn/seed2023/predictions.csv",
+      "sha256": "fdbe987253c1f941929d783017068019de9be42e2bd006b39d7b9639ad7d928b"
+    },
+    {
+      "path": "/home/birkenwald/data/SEU-WXY/WXY-SEU/TrafficClassifier/Projects/unknown_traffic_project/stage23_closed_set_method_table/runs/ronetc_stage20/iscx_tor/seed2022_formal/predictions.csv",
+      "sha256": "e2de9793333d77720d613636f88169f0316f5d72dcac1ad167d127cf36f374b8"
+    },
+    {
+      "path": "/home/birkenwald/data/SEU-WXY/WXY-SEU/TrafficClassifier/Projects/unknown_traffic_project/stage23_closed_set_method_table/runs/ronetc_stage20/iscx_tor/seed2023_formal/predictions.csv",
+      "sha256": "b01b5432e29d606b14dd2cbeeb502866867ef0ca543bfedb4812d2bc1ff5f36e"
+    },
+    {
+      "path": "/home/birkenwald/data/SEU-WXY/WXY-SEU/TrafficClassifier/Projects/unknown_traffic_project/stage23_closed_set_method_table/runs/ronetc_stage20/iscx_vpn/seed2022_formal/predictions.csv",
+      "sha256": "fc9231b403c9e7602d2665653442335ed33f9dd65f8cd17166b14d508946c7de"
+    },
+    {
+      "path": "/home/birkenwald/data/SEU-WXY/WXY-SEU/TrafficClassifier/Projects/unknown_traffic_project/stage23_closed_set_method_table/runs/ronetc_stage20/iscx_vpn/seed2023_formal/predictions.csv",
+      "sha256": "8a5f4c7b7463a23cb82b34d119eea5b4e830d52f3d3c5c6424ad061c6fd2c420"
+    },
+    {
+      "path": "/home/birkenwald/data/SEU-WXY/WXY-SEU/TrafficClassifier/Projects/unknown_traffic_project/stage23_closed_set_method_table/runs/yatc_stage20/iscx_tor/seed2022_formal/test_predictions_cuda.csv",
+      "sha256": "ee982fc30e0dbd9c2094561e2c9d520c9c05c75a851d592316fc0b1f57f874d8"
+    },
+    {
+      "path": "/home/birkenwald/data/SEU-WXY/WXY-SEU/TrafficClassifier/Projects/unknown_traffic_project/stage23_closed_set_method_table/runs/yatc_stage20/iscx_tor/seed2023_formal/test_predictions_cuda.csv",
+      "sha256": "9af4b0a13444fa326e05111b7879ded4d895f1e3f823b741b436baea8727dd46"
+    },
+    {
+      "path": "/home/birkenwald/data/SEU-WXY/WXY-SEU/TrafficClassifier/Projects/unknown_traffic_project/stage23_closed_set_method_table/runs/yatc_stage20/iscx_vpn/seed2022_formal/test_predictions_cuda.csv",
+      "sha256": "339006025c1f51936087d3258565df5332c2841e07f56ec52eaf78d8e30de6e4"
+    },
+    {
+      "path": "/home/birkenwald/data/SEU-WXY/WXY-SEU/TrafficClassifier/Projects/unknown_traffic_project/stage23_closed_set_method_table/runs/yatc_stage20/iscx_vpn/seed2023_formal/test_predictions_cuda.csv",
+      "sha256": "85137e6b345354ef6edf3486f3a4f19b3ce482aaadcb5d0c52bd9dbc369cf7bc"
+    },
+    {
+      "path": "/home/birkenwald/data/SEU-WXY/WXY-SEU/TrafficClassifier/Projects/unknown_traffic_project/stage23b_tfe_trident_same_flow_adaptation/runs/tfe/iscx_tor/seed2022/known_test_predictions.csv",
+      "sha256": "163d3755362dcd0d1f74e5419c0eda846c06f5c72264c88a6c65f4f9921bcbc1"
+    },
+    {
+      "path": "/home/birkenwald/data/SEU-WXY/WXY-SEU/TrafficClassifier/Projects/unknown_traffic_project/stage23b_tfe_trident_same_flow_adaptation/runs/tfe/iscx_tor/seed2023/known_test_predictions.csv",
+      "sha256": "9013932a9a9f5f7efb720e05559b9a902bb2624821f3ffbdcf0f1b0ca97d96de"
+    },
+    {
+      "path": "/home/birkenwald/data/SEU-WXY/WXY-SEU/TrafficClassifier/Projects/unknown_traffic_project/stage23b_tfe_trident_same_flow_adaptation/runs/tfe/iscx_vpn/seed2022/known_test_predictions.csv",
+      "sha256": "64f2f0007b58ec1cc6d9b5197a9ea2e573c1c928324f2ab98f964b5c60b8faa1"
+    },
+    {
+      "path": "/home/birkenwald/data/SEU-WXY/WXY-SEU/TrafficClassifier/Projects/unknown_traffic_project/stage23b_tfe_trident_same_flow_adaptation/runs/tfe/iscx_vpn/seed2023/known_test_predictions.csv",
+      "sha256": "13c1bf3443590682692d274dbaa8eb0a69030fbf014a477b248eb6f5bdb847e1"
+    },
+    {
+      "path": "/home/birkenwald/data/SEU-WXY/WXY-SEU/TrafficClassifier/Projects/unknown_traffic_project/stage23b_tfe_trident_same_flow_adaptation/runs/trident/iscx_tor/seed2022/known_test_predictions.csv",
+      "sha256": "16455db30ef10061c524de4312e87bf05c57ff6950ac34d8d0e0ed63fc064bf9"
+    },
+    {
+      "path": "/home/birkenwald/data/SEU-WXY/WXY-SEU/TrafficClassifier/Projects/unknown_traffic_project/stage23b_tfe_trident_same_flow_adaptation/runs/trident/iscx_tor/seed2023/known_test_predictions.csv",
+      "sha256": "e93a2db42fd2e65e1c13da96f3946c093ed83ad6b2e5da21edeb1963cab2cfab"
+    },
+    {
+      "path": "/home/birkenwald/data/SEU-WXY/WXY-SEU/TrafficClassifier/Projects/unknown_traffic_project/stage23b_tfe_trident_same_flow_adaptation/runs/trident/iscx_vpn/seed2022/known_test_predictions.csv",
+      "sha256": "d9e1cece21544a42d1e41d71c25d0bc5c6accbffa6f1b4895071b0eb289faf2b"
+    },
+    {
+      "path": "/home/birkenwald/data/SEU-WXY/WXY-SEU/TrafficClassifier/Projects/unknown_traffic_project/stage23b_tfe_trident_same_flow_adaptation/runs/trident/iscx_vpn/seed2023/known_test_predictions.csv",
+      "sha256": "60b18fbd1166cf6168d238b7bc8f0aad918381b7004fcb5a4da267f61e384256"
+    },
+    {
+      "path": "/home/birkenwald/data/SEU-WXY/WXY-SEU/TrafficClassifier/Projects/unknown_traffic_project/stage47_original_service_current_three_view/all_methods_run_results.csv",
+      "sha256": "41064a804b4e5aac812304cab5aa7fb930d29f9c174fde552d25c93f0f7b213b"
+    },
+    {
+      "path": "/home/birkenwald/data/SEU-WXY/WXY-SEU/TrafficClassifier/Projects/unknown_traffic_project/stage47_original_service_current_three_view/method_summary.csv",
+      "sha256": "14537be54f151d883ff68e54d29389b5d4a922f485fb0ed17e26ed6d56fe9f57"
+    },
+    {
+      "path": "/home/birkenwald/data/SEU-WXY/WXY-SEU/TrafficClassifier/Projects/unknown_traffic_project/stage47_original_service_current_three_view/runs/iscx_tor/seed2022/known_test/predictions.csv",
+      "sha256": "5c9de8cf01c9fb204b56eb977939b22e0f75a774dcac9215a30d2773b8c36c86"
+    },
+    {
+      "path": "/home/birkenwald/data/SEU-WXY/WXY-SEU/TrafficClassifier/Projects/unknown_traffic_project/stage47_original_service_current_three_view/runs/iscx_tor/seed2023/known_test/predictions.csv",
+      "sha256": "2c403ea9624fb3bec35e6f7060ba87d956813d5f14997b933e83d454e7fba628"
+    },
+    {
+      "path": "/home/birkenwald/data/SEU-WXY/WXY-SEU/TrafficClassifier/Projects/unknown_traffic_project/stage47_original_service_current_three_view/runs/iscx_vpn/seed2022/known_test/predictions.csv",
+      "sha256": "3aed35d387e9bb4909d83dc68cbccc575156ba157db0f2e994facaa063a7eff4"
+    },
+    {
+      "path": "/home/birkenwald/data/SEU-WXY/WXY-SEU/TrafficClassifier/Projects/unknown_traffic_project/stage47_original_service_current_three_view/runs/iscx_vpn/seed2023/known_test/predictions.csv",
+      "sha256": "54840761166a26ca539a9bfb8a48086dc649e1a6fb2d2eaaa741582d76e9018f"
+    }
+  ],
+  "code": {
+    "revision": "1ef066821ed6dff536eab804b8111396384d9d01",
+    "dirty": true,
+    "changes": [
+      "new isolated posthoc metric supplement; original experiment sources read-only"
+    ]
+  },
+  "execution": {
+    "tmux_session": "iscx_pr_compute_20261103",
+    "command": "python stage47_precision_recall_supplement_20261103/recompute.py compute",
+    "exit_code": 0,
+    "environment": "/home/birkenwald/data/SEU-WXY/conda_envs/2025-10-8-WXY-dgl_py310",
+    "physical_gpu_ids": [],
+    "log_path": "/home/birkenwald/data/SEU-WXY/WXY-SEU/TrafficClassifier/Projects/unknown_traffic_project/.tmux-task/iscx_pr_compute_20261103/output.log",
+    "exit_status_path": "/home/birkenwald/data/SEU-WXY/WXY-SEU/TrafficClassifier/Projects/unknown_traffic_project/.tmux-task/iscx_pr_compute_20261103/exit.status",
+    "verification_tmux_session": "iscx_pr_replay_20261103",
+    "archive_schema_correction": {
+      "failed_session": "iscx_pr_archive_20261103",
+      "exit_code": 1,
+      "reason": "validator requires relative artifact paths even for external references",
+      "repair": "metadata only: absolute input references changed to equivalent relative references",
+      "metrics_changed": false
+    }
+  },
+  "configuration": {
+    "files": [
+      "recompute.py"
+    ],
+    "seeds": [
+      2022,
+      2023
+    ],
+    "parameters": {
+      "role": "known_test",
+      "averages": [
+        "macro",
+        "weighted",
+        "micro"
+      ],
+      "zero_division": 0,
+      "std_ddof": 0,
+      "replay_absolute_tolerance": 1e-12
+    }
+  },
+  "core_results": [
+    {
+      "dataset": "iscx_vpn",
+      "method": "TrafficFormer-pretrained",
+      "num_seeds": 2,
+      "accuracy_mean": 0.853156450137237,
+      "accuracy_population_sd": 0.004117108874656883,
+      "macro_precision_mean": 0.8611561128461582,
+      "macro_precision_population_sd": 0.0032075371690306054,
+      "macro_recall_mean": 0.8659897047397047,
+      "macro_recall_population_sd": 0.0037927350427350293,
+      "macro_f1_mean": 0.8606074342008693,
+      "macro_f1_population_sd": 0.00396091212047911,
+      "weighted_precision_mean": 0.848238842891152,
+      "weighted_precision_population_sd": 0.0034050884093332345,
+      "weighted_recall_mean": 0.853156450137237,
+      "weighted_recall_population_sd": 0.004117108874656883,
+      "weighted_f1_mean": 0.8474491068457638,
+      "weighted_f1_population_sd": 0.0042640032453461485,
+      "micro_precision_mean": 0.853156450137237,
+      "micro_precision_population_sd": 0.004117108874656883,
+      "micro_recall_mean": 0.853156450137237,
+      "micro_recall_population_sd": 0.004117108874656883,
+      "micro_f1_mean": 0.853156450137237,
+      "micro_f1_population_sd": 0.004117108874656883
+    },
+    {
+      "dataset": "iscx_vpn",
+      "method": "YaTC-official-pretrained-Stage20",
+      "num_seeds": 2,
+      "accuracy_mean": 0.878316559926807,
+      "accuracy_population_sd": 0.011893870082342162,
+      "macro_precision_mean": 0.8863596529193765,
+      "macro_precision_population_sd": 0.0117513550144564,
+      "macro_recall_mean": 0.8888037425537425,
+      "macro_recall_population_sd": 0.01082912457912466,
+      "macro_f1_mean": 0.8870850180189982,
+      "macro_f1_population_sd": 0.011592582698238929,
+      "weighted_precision_mean": 0.8757975078591811,
+      "weighted_precision_population_sd": 0.012742951020148718,
+      "weighted_recall_mean": 0.878316559926807,
+      "weighted_recall_population_sd": 0.011893870082342162,
+      "weighted_f1_mean": 0.8765142246112441,
+      "weighted_f1_population_sd": 0.012648247156113512,
+      "micro_precision_mean": 0.878316559926807,
+      "micro_precision_population_sd": 0.011893870082342162,
+      "micro_recall_mean": 0.878316559926807,
+      "micro_recall_population_sd": 0.011893870082342162,
+      "micro_f1_mean": 0.878316559926807,
+      "micro_f1_population_sd": 0.011893870082342162
+    },
+    {
+      "dataset": "iscx_vpn",
+      "method": "Open-Detect corrected-paper",
+      "num_seeds": 2,
+      "accuracy_mean": 0.7287282708142726,
+      "accuracy_population_sd": 0.014181152790484874,
+      "macro_precision_mean": 0.7456797805524205,
+      "macro_precision_population_sd": 0.012753869085734004,
+      "macro_recall_mean": 0.7462943537943538,
+      "macro_recall_population_sd": 0.01501295001295,
+      "macro_f1_mean": 0.7442646818069265,
+      "macro_f1_population_sd": 0.014240995407076462,
+      "weighted_precision_mean": 0.7259033105640089,
+      "weighted_precision_population_sd": 0.012131285964022187,
+      "weighted_recall_mean": 0.7287282708142726,
+      "weighted_recall_population_sd": 0.014181152790484874,
+      "weighted_f1_mean": 0.7254434083448581,
+      "weighted_f1_population_sd": 0.013541336955632866,
+      "micro_precision_mean": 0.7287282708142726,
+      "micro_precision_population_sd": 0.014181152790484874,
+      "micro_recall_mean": 0.7287282708142726,
+      "micro_recall_population_sd": 0.014181152790484874,
+      "micro_f1_mean": 0.7287282708142726,
+      "micro_f1_population_sd": 0.014181152790484874
+    },
+    {
+      "dataset": "iscx_vpn",
+      "method": "RoNeTC-runnable-reconstruction",
+      "num_seeds": 2,
+      "accuracy_mean": 0.7067703568161026,
+      "accuracy_population_sd": 0.006861848124428194,
+      "macro_precision_mean": 0.7171759495151513,
+      "macro_precision_population_sd": 0.004094863234373247,
+      "macro_recall_mean": 0.7216815591815591,
+      "macro_recall_population_sd": 0.013059440559440581,
+      "macro_f1_mean": 0.715732057174702,
+      "macro_f1_population_sd": 0.008050896339115932,
+      "weighted_precision_mean": 0.703609962493407,
+      "weighted_precision_population_sd": 0.00446425132797057,
+      "weighted_recall_mean": 0.7067703568161026,
+      "weighted_recall_population_sd": 0.006861848124428194,
+      "weighted_f1_mean": 0.7013158638474188,
+      "weighted_f1_population_sd": 0.005142783628772685,
+      "micro_precision_mean": 0.7067703568161026,
+      "micro_precision_population_sd": 0.006861848124428194,
+      "micro_recall_mean": 0.7067703568161026,
+      "micro_recall_population_sd": 0.006861848124428194,
+      "micro_f1_mean": 0.7067703568161026,
+      "micro_f1_population_sd": 0.006861848124428194
+    },
+    {
+      "dataset": "iscx_vpn",
+      "method": "TFE-GNN-8-UDP-short",
+      "num_seeds": 2,
+      "accuracy_mean": 0.6486733760292772,
+      "accuracy_population_sd": 0.019213174748398898,
+      "macro_precision_mean": 0.6600392791668834,
+      "macro_precision_population_sd": 0.014939446785948607,
+      "macro_recall_mean": 0.667184990934991,
+      "macro_recall_population_sd": 0.019607938357938393,
+      "macro_f1_mean": 0.6585492043663912,
+      "macro_f1_population_sd": 0.014646900148058528,
+      "weighted_precision_mean": 0.6506082943901583,
+      "weighted_precision_population_sd": 0.01839715869952835,
+      "weighted_recall_mean": 0.6486733760292772,
+      "weighted_recall_population_sd": 0.019213174748398898,
+      "weighted_f1_mean": 0.6445295437334991,
+      "weighted_f1_population_sd": 0.016252431001572254,
+      "micro_precision_mean": 0.6486733760292772,
+      "micro_precision_population_sd": 0.019213174748398898,
+      "micro_recall_mean": 0.6486733760292772,
+      "micro_recall_population_sd": 0.019213174748398898,
+      "micro_f1_mean": 0.6486733760292772,
+      "micro_f1_population_sd": 0.019213174748398898
+    },
+    {
+      "dataset": "iscx_vpn",
+      "method": "Trident-early8-86D",
+      "num_seeds": 2,
+      "accuracy_mean": 0.6134492223238792,
+      "accuracy_population_sd": 0.0022872827081427127,
+      "macro_precision_mean": 0.6296736647027225,
+      "macro_precision_population_sd": 0.0030265650901151187,
+      "macro_recall_mean": 0.6391168091168091,
+      "macro_recall_population_sd": 0.0026171976171975864,
+      "macro_f1_mean": 0.6322065979756106,
+      "macro_f1_population_sd": 0.0006153989655843795,
+      "weighted_precision_mean": 0.6042322794850477,
+      "weighted_precision_population_sd": 0.0004962797298971311,
+      "weighted_recall_mean": 0.6134492223238792,
+      "weighted_recall_population_sd": 0.0022872827081427127,
+      "weighted_f1_mean": 0.6064842593649424,
+      "weighted_f1_population_sd": 0.00046555728041797195,
+      "micro_precision_mean": 0.6134492223238792,
+      "micro_precision_population_sd": 0.0022872827081427127,
+      "micro_recall_mean": 0.6134492223238792,
+      "micro_recall_population_sd": 0.0022872827081427127,
+      "micro_f1_mean": 0.6134492223238792,
+      "micro_f1_population_sd": 0.0022872827081427127
+    },
+    {
+      "dataset": "iscx_vpn",
+      "method": "OURS-E3-T8-pretrained",
+      "num_seeds": 2,
+      "accuracy_mean": 0.8499542543458372,
+      "accuracy_population_sd": 0.008234217749313821,
+      "macro_precision_mean": 0.8576488065224079,
+      "macro_precision_population_sd": 0.007251890524947513,
+      "macro_recall_mean": 0.8630451955451954,
+      "macro_recall_population_sd": 0.007514892514892513,
+      "macro_f1_mean": 0.8594926220789258,
+      "macro_f1_population_sd": 0.007014773974772404,
+      "weighted_precision_mean": 0.8448053415165822,
+      "weighted_precision_population_sd": 0.0074300780454636395,
+      "weighted_recall_mean": 0.8499542543458372,
+      "weighted_recall_population_sd": 0.008234217749313821,
+      "weighted_f1_mean": 0.8464479051836756,
+      "weighted_f1_population_sd": 0.007424403197273444,
+      "micro_precision_mean": 0.8499542543458372,
+      "micro_precision_population_sd": 0.008234217749313821,
+      "micro_recall_mean": 0.8499542543458372,
+      "micro_recall_population_sd": 0.008234217749313821,
+      "micro_f1_mean": 0.8499542543458372,
+      "micro_f1_population_sd": 0.008234217749313821
+    },
+    {
+      "dataset": "iscx_vpn",
+      "method": "OURS-current-threeview-equal",
+      "num_seeds": 2,
+      "accuracy_mean": 0.8847209515096066,
+      "accuracy_population_sd": 0.006404391582799651,
+      "macro_precision_mean": 0.8930739319094203,
+      "macro_precision_population_sd": 0.005337153711716891,
+      "macro_recall_mean": 0.8947160709660711,
+      "macro_recall_population_sd": 0.0058310670810670095,
+      "macro_f1_mean": 0.8936925827386688,
+      "macro_f1_population_sd": 0.005450505294003982,
+      "weighted_precision_mean": 0.8829938015847604,
+      "weighted_precision_population_sd": 0.00580719442878086,
+      "weighted_recall_mean": 0.8847209515096066,
+      "weighted_recall_population_sd": 0.006404391582799651,
+      "weighted_f1_mean": 0.8836361675609187,
+      "weighted_f1_population_sd": 0.0059594194129506395,
+      "micro_precision_mean": 0.8847209515096066,
+      "micro_precision_population_sd": 0.006404391582799651,
+      "micro_recall_mean": 0.8847209515096066,
+      "micro_recall_population_sd": 0.006404391582799651,
+      "micro_f1_mean": 0.8847209515096066,
+      "micro_f1_population_sd": 0.006404391582799651
+    },
+    {
+      "dataset": "iscx_tor",
+      "method": "TrafficFormer-pretrained",
+      "num_seeds": 2,
+      "accuracy_mean": 0.8312444046553268,
+      "accuracy_population_sd": 0.005819158460161122,
+      "macro_precision_mean": 0.8237360841218824,
+      "macro_precision_population_sd": 0.008136252076010264,
+      "macro_recall_mean": 0.8208763726037596,
+      "macro_recall_population_sd": 0.0040995819042300985,
+      "macro_f1_mean": 0.8212590438545695,
+      "macro_f1_population_sd": 0.006375600625997069,
+      "weighted_precision_mean": 0.835637943971586,
+      "weighted_precision_population_sd": 0.004079603767510209,
+      "weighted_recall_mean": 0.8312444046553268,
+      "weighted_recall_population_sd": 0.005819158460161122,
+      "weighted_f1_mean": 0.8323779117566872,
+      "weighted_f1_population_sd": 0.005144579855866638,
+      "micro_precision_mean": 0.8312444046553268,
+      "micro_precision_population_sd": 0.005819158460161122,
+      "micro_recall_mean": 0.8312444046553268,
+      "micro_recall_population_sd": 0.005819158460161122,
+      "micro_f1_mean": 0.8312444046553268,
+      "micro_f1_population_sd": 0.005819158460161122
+    },
+    {
+      "dataset": "iscx_tor",
+      "method": "YaTC-official-pretrained-Stage20",
+      "num_seeds": 2,
+      "accuracy_mean": 0.8437779767233662,
+      "accuracy_population_sd": 0.0013428827215756778,
+      "macro_precision_mean": 0.8278047921372039,
+      "macro_precision_population_sd": 0.002453034293309009,
+      "macro_recall_mean": 0.8278621945707373,
+      "macro_recall_population_sd": 0.0005209745819042544,
+      "macro_f1_mean": 0.8273933736836748,
+      "macro_f1_population_sd": 0.000774363809302625,
+      "weighted_precision_mean": 0.8441416835376948,
+      "weighted_precision_population_sd": 0.0016307878963631728,
+      "weighted_recall_mean": 0.8437779767233662,
+      "weighted_recall_population_sd": 0.0013428827215756778,
+      "weighted_f1_mean": 0.8436405539530106,
+      "weighted_f1_population_sd": 0.0015362625857250345,
+      "micro_precision_mean": 0.8437779767233662,
+      "micro_precision_population_sd": 0.0013428827215756778,
+      "micro_recall_mean": 0.8437779767233662,
+      "micro_recall_population_sd": 0.0013428827215756778,
+      "micro_f1_mean": 0.8437779767233662,
+      "micro_f1_population_sd": 0.0013428827215756778
+    },
+    {
+      "dataset": "iscx_tor",
+      "method": "Open-Detect corrected-paper",
+      "num_seeds": 2,
+      "accuracy_mean": 0.6284691136974038,
+      "accuracy_population_sd": 0.08325872873769025,
+      "macro_precision_mean": 0.6106180793787566,
+      "macro_precision_population_sd": 0.08899751249447996,
+      "macro_recall_mean": 0.5811899527398899,
+      "macro_recall_population_sd": 0.09615477353699717,
+      "macro_f1_mean": 0.5765626970923942,
+      "macro_f1_population_sd": 0.09970092034794498,
+      "weighted_precision_mean": 0.6261008090615272,
+      "weighted_precision_population_sd": 0.08700380123650353,
+      "weighted_recall_mean": 0.6284691136974038,
+      "weighted_recall_population_sd": 0.08325872873769025,
+      "weighted_f1_mean": 0.6147622849547086,
+      "weighted_f1_population_sd": 0.09129706742485744,
+      "micro_precision_mean": 0.6284691136974038,
+      "micro_precision_population_sd": 0.08325872873769025,
+      "micro_recall_mean": 0.6284691136974038,
+      "micro_recall_population_sd": 0.08325872873769025,
+      "micro_f1_mean": 0.6284691136974038,
+      "micro_f1_population_sd": 0.08325872873769025
+    },
+    {
+      "dataset": "iscx_tor",
+      "method": "RoNeTC-runnable-reconstruction",
+      "num_seeds": 2,
+      "accuracy_mean": 0.6042972247090421,
+      "accuracy_population_sd": 0.0107430617726052,
+      "macro_precision_mean": 0.5652689367701501,
+      "macro_precision_population_sd": 0.017910445045744572,
+      "macro_recall_mean": 0.5277857043152269,
+      "macro_recall_population_sd": 0.015195105820105859,
+      "macro_f1_mean": 0.5340105825337778,
+      "macro_f1_population_sd": 0.019843961391050102,
+      "weighted_precision_mean": 0.5927485310025347,
+      "weighted_precision_population_sd": 0.020873739431145732,
+      "weighted_recall_mean": 0.6042972247090421,
+      "weighted_recall_population_sd": 0.0107430617726052,
+      "weighted_f1_mean": 0.5934279247525687,
+      "weighted_f1_population_sd": 0.017391978709286326,
+      "micro_precision_mean": 0.6042972247090421,
+      "micro_precision_population_sd": 0.0107430617726052,
+      "micro_recall_mean": 0.6042972247090421,
+      "micro_recall_population_sd": 0.0107430617726052,
+      "micro_f1_mean": 0.6042972247090421,
+      "micro_f1_population_sd": 0.0107430617726052
+    },
+    {
+      "dataset": "iscx_tor",
+      "method": "TFE-GNN-8-UDP-short",
+      "num_seeds": 2,
+      "accuracy_mean": 0.6007162041181737,
+      "accuracy_population_sd": 0.0008952551477171,
+      "macro_precision_mean": 0.6168247063831604,
+      "macro_precision_population_sd": 0.035840915728647005,
+      "macro_recall_mean": 0.5607550733163171,
+      "macro_recall_population_sd": 0.009928536531865706,
+      "macro_f1_mean": 0.5536112631951547,
+      "macro_f1_population_sd": 0.01383316135148327,
+      "weighted_precision_mean": 0.6207031604390176,
+      "weighted_precision_population_sd": 0.01683248226728734,
+      "weighted_recall_mean": 0.6007162041181737,
+      "weighted_recall_population_sd": 0.0008952551477171,
+      "weighted_f1_mean": 0.588108434510574,
+      "weighted_f1_population_sd": 0.008732548940166618,
+      "micro_precision_mean": 0.6007162041181737,
+      "micro_precision_population_sd": 0.0008952551477171,
+      "micro_recall_mean": 0.6007162041181737,
+      "micro_recall_population_sd": 0.0008952551477171,
+      "micro_f1_mean": 0.6007162041181737,
+      "micro_f1_population_sd": 0.0008952551477171
+    },
+    {
+      "dataset": "iscx_tor",
+      "method": "Trident-early8-86D",
+      "num_seeds": 2,
+      "accuracy_mean": 0.6329453894359893,
+      "accuracy_population_sd": 0.0026857654431513,
+      "macro_precision_mean": 0.5967511327386743,
+      "macro_precision_population_sd": 0.0015869996589757407,
+      "macro_recall_mean": 0.6254025168833586,
+      "macro_recall_population_sd": 0.0018026724229613933,
+      "macro_f1_mean": 0.6052582507376679,
+      "macro_f1_population_sd": 0.0018748014693823478,
+      "weighted_precision_mean": 0.6392807525741093,
+      "weighted_precision_population_sd": 0.0030715491018889485,
+      "weighted_recall_mean": 0.6329453894359893,
+      "weighted_recall_population_sd": 0.0026857654431513,
+      "weighted_f1_mean": 0.6323551118263416,
+      "weighted_f1_population_sd": 0.003313588416119506,
+      "micro_precision_mean": 0.6329453894359893,
+      "micro_precision_population_sd": 0.0026857654431513,
+      "micro_recall_mean": 0.6329453894359893,
+      "micro_recall_population_sd": 0.0026857654431513,
+      "micro_f1_mean": 0.6329453894359893,
+      "micro_f1_population_sd": 0.0026857654431513
+    },
+    {
+      "dataset": "iscx_tor",
+      "method": "OURS-E3-T8-pretrained",
+      "num_seeds": 2,
+      "accuracy_mean": 0.8321396598030439,
+      "accuracy_population_sd": 0.006714413607878222,
+      "macro_precision_mean": 0.8223147780662006,
+      "macro_precision_population_sd": 0.009204997867570786,
+      "macro_recall_mean": 0.8246263726037596,
+      "macro_recall_population_sd": 0.004813867618515877,
+      "macro_f1_mean": 0.8221775012760784,
+      "macro_f1_population_sd": 0.007643452238053627,
+      "weighted_precision_mean": 0.8379415810749851,
+      "weighted_precision_population_sd": 0.004635905091550707,
+      "weighted_recall_mean": 0.8321396598030439,
+      "weighted_recall_population_sd": 0.006714413607878222,
+      "weighted_f1_mean": 0.8339034992439058,
+      "weighted_f1_population_sd": 0.0059908927436158055,
+      "micro_precision_mean": 0.8321396598030439,
+      "micro_precision_population_sd": 0.006714413607878222,
+      "micro_recall_mean": 0.8321396598030439,
+      "micro_recall_population_sd": 0.006714413607878222,
+      "micro_f1_mean": 0.8321396598030439,
+      "micro_f1_population_sd": 0.006714413607878222
+    },
+    {
+      "dataset": "iscx_tor",
+      "method": "OURS-current-threeview-equal",
+      "num_seeds": 2,
+      "accuracy_mean": 0.8782452999104745,
+      "accuracy_population_sd": 0.0035810205908684,
+      "macro_precision_mean": 0.8657896457732475,
+      "macro_precision_population_sd": 0.0006689328751597889,
+      "macro_recall_mean": 0.8677422412990881,
+      "macro_recall_population_sd": 0.0036196608040200973,
+      "macro_f1_mean": 0.8663175019405943,
+      "macro_f1_population_sd": 0.001480666449347412,
+      "weighted_precision_mean": 0.8803118236126839,
+      "weighted_precision_population_sd": 0.003100212608953712,
+      "weighted_recall_mean": 0.8782452999104745,
+      "weighted_recall_population_sd": 0.0035810205908684,
+      "weighted_f1_mean": 0.8788184460003481,
+      "weighted_f1_population_sd": 0.0034174542830176513,
+      "micro_precision_mean": 0.8782452999104745,
+      "micro_precision_population_sd": 0.0035810205908684,
+      "micro_recall_mean": 0.8782452999104745,
+      "micro_recall_population_sd": 0.0035810205908684,
+      "micro_f1_mean": 0.8782452999104745,
+      "micro_f1_population_sd": 0.0035810205908684
+    }
+  ],
+  "artifacts": [
+    {
+      "scope": "external",
+      "role": "frozen-input",
+      "path": "../stage20_dual_coarse_service_protocol/closed_service_manifest.csv",
+      "size_bytes": 9706981,
+      "sha256": "6404d496f50a6f7f6f397d125ad0cd653c9df152d8db1b9ed2ad2310967950bb",
+      "hash_status": "verified"
+    },
+    {
+      "scope": "external",
+      "role": "frozen-input",
+      "path": "../stage22_pretrained_trafficformer_e3_closed_set_comparison/runs/iscx_tor/seed2022/predictions.csv",
+      "size_bytes": 769071,
+      "sha256": "e3c348c9e7b49b86d3603cb8ece97a393c945ebbd0e2c7a219f3b7d894953202",
+      "hash_status": "verified"
+    },
+    {
+      "scope": "external",
+      "role": "frozen-input",
+      "path": "../stage22_pretrained_trafficformer_e3_closed_set_comparison/runs/iscx_tor/seed2023/predictions.csv",
+      "size_bytes": 768732,
+      "sha256": "f6be77bb302b26f19b57f37688431d9114ec136503b9bd2440ab56ceeb8e9405",
+      "hash_status": "verified"
+    },
+    {
+      "scope": "external",
+      "role": "frozen-input",
+      "path": "../stage22_pretrained_trafficformer_e3_closed_set_comparison/runs/iscx_vpn/seed2022/predictions.csv",
+      "size_bytes": 750307,
+      "sha256": "7e2bcd8c410e6e195c8301e625287432fe51def7e64894bec984257ea4596732",
+      "hash_status": "verified"
+    },
+    {
+      "scope": "external",
+      "role": "frozen-input",
+      "path": "../stage22_pretrained_trafficformer_e3_closed_set_comparison/runs/iscx_vpn/seed2023/predictions.csv",
+      "size_bytes": 750241,
+      "sha256": "f1fcf7ac98d50d2ce1ef660c5ca7400761cc8f4c634d28f41cba76fc1119c217",
+      "hash_status": "verified"
+    },
+    {
+      "scope": "external",
+      "role": "frozen-input",
+      "path": "../stage23_closed_set_method_table/runs/opendetect_corrected_paper/iscx_tor/seed2022/predictions.csv",
+      "size_bytes": 313538,
+      "sha256": "e89508160fc7d29c669108749cc0db5c831797af12e90d8bc78308b4a078bba7",
+      "hash_status": "verified"
+    },
+    {
+      "scope": "external",
+      "role": "frozen-input",
+      "path": "../stage23_closed_set_method_table/runs/opendetect_corrected_paper/iscx_tor/seed2023/predictions.csv",
+      "size_bytes": 313803,
+      "sha256": "561f42b63abee765c2529fefbbc7bd3994640afa81d3f15ee3b0a7131beddc72",
+      "hash_status": "verified"
+    },
+    {
+      "scope": "external",
+      "role": "frozen-input",
+      "path": "../stage23_closed_set_method_table/runs/opendetect_corrected_paper/iscx_vpn/seed2022/predictions.csv",
+      "size_bytes": 305039,
+      "sha256": "6b14fd57c9a1bc1305a2bff32de09bc416f902c9807792a6384a6f0609e19d31",
+      "hash_status": "verified"
+    },
+    {
+      "scope": "external",
+      "role": "frozen-input",
+      "path": "../stage23_closed_set_method_table/runs/opendetect_corrected_paper/iscx_vpn/seed2023/predictions.csv",
+      "size_bytes": 304870,
+      "sha256": "fdbe987253c1f941929d783017068019de9be42e2bd006b39d7b9639ad7d928b",
+      "hash_status": "verified"
+    },
+    {
+      "scope": "external",
+      "role": "frozen-input",
+      "path": "../stage23_closed_set_method_table/runs/ronetc_stage20/iscx_tor/seed2022_formal/predictions.csv",
+      "size_bytes": 319932,
+      "sha256": "e2de9793333d77720d613636f88169f0316f5d72dcac1ad167d127cf36f374b8",
+      "hash_status": "verified"
+    },
+    {
+      "scope": "external",
+      "role": "frozen-input",
+      "path": "../stage23_closed_set_method_table/runs/ronetc_stage20/iscx_tor/seed2023_formal/predictions.csv",
+      "size_bytes": 320261,
+      "sha256": "b01b5432e29d606b14dd2cbeeb502866867ef0ca543bfedb4812d2bc1ff5f36e",
+      "hash_status": "verified"
+    },
+    {
+      "scope": "external",
+      "role": "frozen-input",
+      "path": "../stage23_closed_set_method_table/runs/ronetc_stage20/iscx_vpn/seed2022_formal/predictions.csv",
+      "size_bytes": 312307,
+      "sha256": "fc9231b403c9e7602d2665653442335ed33f9dd65f8cd17166b14d508946c7de",
+      "hash_status": "verified"
+    },
+    {
+      "scope": "external",
+      "role": "frozen-input",
+      "path": "../stage23_closed_set_method_table/runs/ronetc_stage20/iscx_vpn/seed2023_formal/predictions.csv",
+      "size_bytes": 312423,
+      "sha256": "8a5f4c7b7463a23cb82b34d119eea5b4e830d52f3d3c5c6424ad061c6fd2c420",
+      "hash_status": "verified"
+    },
+    {
+      "scope": "external",
+      "role": "frozen-input",
+      "path": "../stage23_closed_set_method_table/runs/yatc_stage20/iscx_tor/seed2022_formal/test_predictions_cuda.csv",
+      "size_bytes": 158837,
+      "sha256": "ee982fc30e0dbd9c2094561e2c9d520c9c05c75a851d592316fc0b1f57f874d8",
+      "hash_status": "verified"
+    },
+    {
+      "scope": "external",
+      "role": "frozen-input",
+      "path": "../stage23_closed_set_method_table/runs/yatc_stage20/iscx_tor/seed2023_formal/test_predictions_cuda.csv",
+      "size_bytes": 158846,
+      "sha256": "9af4b0a13444fa326e05111b7879ded4d895f1e3f823b741b436baea8727dd46",
+      "hash_status": "verified"
+    },
+    {
+      "scope": "external",
+      "role": "frozen-input",
+      "path": "../stage23_closed_set_method_table/runs/yatc_stage20/iscx_vpn/seed2022_formal/test_predictions_cuda.csv",
+      "size_bytes": 154473,
+      "sha256": "339006025c1f51936087d3258565df5332c2841e07f56ec52eaf78d8e30de6e4",
+      "hash_status": "verified"
+    },
+    {
+      "scope": "external",
+      "role": "frozen-input",
+      "path": "../stage23_closed_set_method_table/runs/yatc_stage20/iscx_vpn/seed2023_formal/test_predictions_cuda.csv",
+      "size_bytes": 154390,
+      "sha256": "85137e6b345354ef6edf3486f3a4f19b3ce482aaadcb5d0c52bd9dbc369cf7bc",
+      "hash_status": "verified"
+    },
+    {
+      "scope": "external",
+      "role": "frozen-input",
+      "path": "../stage23b_tfe_trident_same_flow_adaptation/runs/tfe/iscx_tor/seed2022/known_test_predictions.csv",
+      "size_bytes": 306689,
+      "sha256": "163d3755362dcd0d1f74e5419c0eda846c06f5c72264c88a6c65f4f9921bcbc1",
+      "hash_status": "verified"
+    },
+    {
+      "scope": "external",
+      "role": "frozen-input",
+      "path": "../stage23b_tfe_trident_same_flow_adaptation/runs/tfe/iscx_tor/seed2023/known_test_predictions.csv",
+      "size_bytes": 304811,
+      "sha256": "9013932a9a9f5f7efb720e05559b9a902bb2624821f3ffbdcf0f1b0ca97d96de",
+      "hash_status": "verified"
+    },
+    {
+      "scope": "external",
+      "role": "frozen-input",
+      "path": "../stage23b_tfe_trident_same_flow_adaptation/runs/tfe/iscx_vpn/seed2022/known_test_predictions.csv",
+      "size_bytes": 275031,
+      "sha256": "64f2f0007b58ec1cc6d9b5197a9ea2e573c1c928324f2ab98f964b5c60b8faa1",
+      "hash_status": "verified"
+    },
+    {
+      "scope": "external",
+      "role": "frozen-input",
+      "path": "../stage23b_tfe_trident_same_flow_adaptation/runs/tfe/iscx_vpn/seed2023/known_test_predictions.csv",
+      "size_bytes": 275755,
+      "sha256": "13c1bf3443590682692d274dbaa8eb0a69030fbf014a477b248eb6f5bdb847e1",
+      "hash_status": "verified"
+    },
+    {
+      "scope": "external",
+      "role": "frozen-input",
+      "path": "../stage23b_tfe_trident_same_flow_adaptation/runs/trident/iscx_tor/seed2022/known_test_predictions.csv",
+      "size_bytes": 267385,
+      "sha256": "16455db30ef10061c524de4312e87bf05c57ff6950ac34d8d0e0ed63fc064bf9",
+      "hash_status": "verified"
+    },
+    {
+      "scope": "external",
+      "role": "frozen-input",
+      "path": "../stage23b_tfe_trident_same_flow_adaptation/runs/trident/iscx_tor/seed2023/known_test_predictions.csv",
+      "size_bytes": 266525,
+      "sha256": "e93a2db42fd2e65e1c13da96f3946c093ed83ad6b2e5da21edeb1963cab2cfab",
+      "hash_status": "verified"
+    },
+    {
+      "scope": "external",
+      "role": "frozen-input",
+      "path": "../stage23b_tfe_trident_same_flow_adaptation/runs/trident/iscx_vpn/seed2022/known_test_predictions.csv",
+      "size_bytes": 246420,
+      "sha256": "d9e1cece21544a42d1e41d71c25d0bc5c6accbffa6f1b4895071b0eb289faf2b",
+      "hash_status": "verified"
+    },
+    {
+      "scope": "external",
+      "role": "frozen-input",
+      "path": "../stage23b_tfe_trident_same_flow_adaptation/runs/trident/iscx_vpn/seed2023/known_test_predictions.csv",
+      "size_bytes": 247893,
+      "sha256": "60b18fbd1166cf6168d238b7bc8f0aad918381b7004fcb5a4da267f61e384256",
+      "hash_status": "verified"
+    },
+    {
+      "scope": "external",
+      "role": "frozen-input",
+      "path": "../stage47_original_service_current_three_view/all_methods_run_results.csv",
+      "size_bytes": 5007,
+      "sha256": "41064a804b4e5aac812304cab5aa7fb930d29f9c174fde552d25c93f0f7b213b",
+      "hash_status": "verified"
+    },
+    {
+      "scope": "external",
+      "role": "frozen-input",
+      "path": "../stage47_original_service_current_three_view/method_summary.csv",
+      "size_bytes": 2664,
+      "sha256": "14537be54f151d883ff68e54d29389b5d4a922f485fb0ed17e26ed6d56fe9f57",
+      "hash_status": "verified"
+    },
+    {
+      "scope": "external",
+      "role": "frozen-input",
+      "path": "../stage47_original_service_current_three_view/runs/iscx_tor/seed2022/known_test/predictions.csv",
+      "size_bytes": 121943,
+      "sha256": "5c9de8cf01c9fb204b56eb977939b22e0f75a774dcac9215a30d2773b8c36c86",
+      "hash_status": "verified"
+    },
+    {
+      "scope": "external",
+      "role": "frozen-input",
+      "path": "../stage47_original_service_current_three_view/runs/iscx_tor/seed2023/known_test/predictions.csv",
+      "size_bytes": 121985,
+      "sha256": "2c403ea9624fb3bec35e6f7060ba87d956813d5f14997b933e83d454e7fba628",
+      "hash_status": "verified"
+    },
+    {
+      "scope": "external",
+      "role": "frozen-input",
+      "path": "../stage47_original_service_current_three_view/runs/iscx_vpn/seed2022/known_test/predictions.csv",
+      "size_bytes": 118382,
+      "sha256": "3aed35d387e9bb4909d83dc68cbccc575156ba157db0f2e994facaa063a7eff4",
+      "hash_status": "verified"
+    },
+    {
+      "scope": "external",
+      "role": "frozen-input",
+      "path": "../stage47_original_service_current_three_view/runs/iscx_vpn/seed2023/known_test/predictions.csv",
+      "size_bytes": 118399,
+      "sha256": "54840761166a26ca539a9bfb8a48086dc649e1a6fb2d2eaaa741582d76e9018f",
+      "hash_status": "verified"
+    },
+    {
+      "path": "archive_failure_manifest.json",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 44962,
+      "sha256": "f290d72acb03b690411a13ade52fe7a075a7902e9a7bf9303d8512f79835656c",
+      "hash_status": "verified"
+    },
+    {
+      "path": "archive_schema_correction.md",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 650,
+      "sha256": "9f803f553ec660bb195c2ae2ce5a938899fd1b538060a0e1942bef6e5e879b62",
+      "hash_status": "verified"
+    },
+    {
+      "path": "completion_verification.json",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 464,
+      "sha256": "067585770310943627e6d23ca65fb0b254efd87f03f28dca1d3c2531f6332fee",
+      "hash_status": "verified"
+    },
+    {
+      "path": "confusion_matrices.csv",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 79361,
+      "sha256": "0172caa1d88300f0f1a30f433d5407037efdbf9369cadfbd0443e48e620568ac",
+      "hash_status": "verified"
+    },
+    {
+      "path": "method_summary.csv",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 7442,
+      "sha256": "6728e136092c5d88a1f6ccd192e3bf90995da62555fabbb234d00e9039ab65a0",
+      "hash_status": "verified"
+    },
+    {
+      "path": "per_class_metrics.csv",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 20309,
+      "sha256": "19596527916ac87088c3458afe2ea046b81af1b86f4d73c66f467d0e49a99f3a",
+      "hash_status": "verified"
+    },
+    {
+      "path": "recompute.py",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 19317,
+      "sha256": "e182835243eab4f59da901e4a5814e9212bff43d617713c8a02604630092894d",
+      "hash_status": "verified"
+    },
+    {
+      "path": "run_metrics.csv",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 10968,
+      "sha256": "c0a5d44b4b6c2af3f333c6aaae39b977681fb327978bf0b8386d9aeebce7e2be",
+      "hash_status": "verified"
+    },
+    {
+      "path": "source_audit.csv",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 7333,
+      "sha256": "f059d5482fa792f1aef2279da0ba37985505f5084156f222970238147e0c474a",
+      "hash_status": "verified"
+    },
+    {
+      "path": "source_hashes_after.json",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 5182,
+      "sha256": "2b295d0213d7aabc0db634c7f2c418e30ac73f12b5e16204afdfa0cf2c168150",
+      "hash_status": "verified"
+    },
+    {
+      "path": "source_hashes_before.json",
+      "scope": "bundle",
+      "role": "metrics-or-data",
+      "size_bytes": 5182,
+      "sha256": "2b295d0213d7aabc0db634c7f2c418e30ac73f12b5e16204afdfa0cf2c168150",
+      "hash_status": "verified"
+    },
+    {
+      "path": "table_precision_recall.md",
+      "scope": "bundle",
+      "role": "artifact",
+      "size_bytes": 3866,
+      "sha256": "89d59d1cfb5609d3bf9d2b48c0b2bdc894a7d0c765af75b1dfa5d7701a319c6b",
+      "hash_status": "verified"
+    }
+  ],
+  "limitations": [
+    "two seeds; development Test previously exposed",
+    "method adaptations preserved",
+    "VPN6/Tor7 task"
+  ],
+  "next_step": "none; metric supplement complete"
+}

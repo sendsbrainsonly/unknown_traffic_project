@@ -1,0 +1,22 @@
+{
+  "status": "PASS",
+  "timestamp_shanghai": "2026-11-04T00:08:29.947513+08:00",
+  "display_cells_verified": 80,
+  "methods": 8,
+  "datasets": [
+    "VPN6",
+    "Tor7"
+  ],
+  "seeds": [
+    2022,
+    2023
+  ],
+  "source_files_unchanged": 31,
+  "unrelated_manuscript_sections_unchanged": true,
+  "line_endings_preserved": true,
+  "chapter_sha256_after": "57937729d4c7a558b8f6ae9bfc22ddb179881327fa73eeb8b374c5155535e125",
+  "readme_sha256_after": "90582ec9a4ea3a2251127ea43a84b3e91b6fb911cedb8177975f69feb96b22bf",
+  "metrics_changed": false,
+  "frozen_experiments_changed": false,
+  "models_or_data_uploaded": false
+}

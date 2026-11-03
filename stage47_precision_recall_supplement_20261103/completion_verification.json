@@ -1,0 +1,16 @@
+{
+  "status": "PASS",
+  "verified_at_utc": "2026-11-03T15:57:51+00:00",
+  "runs": 32,
+  "summaries": 16,
+  "per_class_rows": 208,
+  "source_files_unchanged": 31,
+  "all_96_original_run_metrics_reproduced": true,
+  "all_96_original_summary_cells_reproduced": true,
+  "independent_confusion_metric_replay": true,
+  "weighted_recall_equals_accuracy": true,
+  "training_used": false,
+  "gpu_used": false,
+  "unknown_used": false,
+  "test_parameter_selection": false
+}

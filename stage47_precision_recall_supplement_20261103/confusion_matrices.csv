@@ -1,0 +1,1361 @@
+dataset,seed,method,true_class,predicted_class,count
+iscx_vpn,2022,TrafficFormer-pretrained,Chat,Chat,186
+iscx_vpn,2022,TrafficFormer-pretrained,Chat,Email,1
+iscx_vpn,2022,TrafficFormer-pretrained,Chat,File-Transfer,1
+iscx_vpn,2022,TrafficFormer-pretrained,Chat,P2P,0
+iscx_vpn,2022,TrafficFormer-pretrained,Chat,Streaming,1
+iscx_vpn,2022,TrafficFormer-pretrained,Chat,VoIP,6
+iscx_vpn,2022,TrafficFormer-pretrained,Email,Chat,0
+iscx_vpn,2022,TrafficFormer-pretrained,Email,Email,192
+iscx_vpn,2022,TrafficFormer-pretrained,Email,File-Transfer,6
+iscx_vpn,2022,TrafficFormer-pretrained,Email,P2P,0
+iscx_vpn,2022,TrafficFormer-pretrained,Email,Streaming,1
+iscx_vpn,2022,TrafficFormer-pretrained,Email,VoIP,1
+iscx_vpn,2022,TrafficFormer-pretrained,File-Transfer,Chat,5
+iscx_vpn,2022,TrafficFormer-pretrained,File-Transfer,Email,6
+iscx_vpn,2022,TrafficFormer-pretrained,File-Transfer,File-Transfer,153
+iscx_vpn,2022,TrafficFormer-pretrained,File-Transfer,P2P,0
+iscx_vpn,2022,TrafficFormer-pretrained,File-Transfer,Streaming,3
+iscx_vpn,2022,TrafficFormer-pretrained,File-Transfer,VoIP,33
+iscx_vpn,2022,TrafficFormer-pretrained,P2P,Chat,0
+iscx_vpn,2022,TrafficFormer-pretrained,P2P,Email,0
+iscx_vpn,2022,TrafficFormer-pretrained,P2P,File-Transfer,0
+iscx_vpn,2022,TrafficFormer-pretrained,P2P,P2P,100
+iscx_vpn,2022,TrafficFormer-pretrained,P2P,Streaming,0
+iscx_vpn,2022,TrafficFormer-pretrained,P2P,VoIP,0
+iscx_vpn,2022,TrafficFormer-pretrained,Streaming,Chat,1
+iscx_vpn,2022,TrafficFormer-pretrained,Streaming,Email,0
+iscx_vpn,2022,TrafficFormer-pretrained,Streaming,File-Transfer,1
+iscx_vpn,2022,TrafficFormer-pretrained,Streaming,P2P,0
+iscx_vpn,2022,TrafficFormer-pretrained,Streaming,Streaming,195
+iscx_vpn,2022,TrafficFormer-pretrained,Streaming,VoIP,1
+iscx_vpn,2022,TrafficFormer-pretrained,VoIP,Chat,14
+iscx_vpn,2022,TrafficFormer-pretrained,VoIP,Email,15
+iscx_vpn,2022,TrafficFormer-pretrained,VoIP,File-Transfer,52
+iscx_vpn,2022,TrafficFormer-pretrained,VoIP,P2P,0
+iscx_vpn,2022,TrafficFormer-pretrained,VoIP,Streaming,8
+iscx_vpn,2022,TrafficFormer-pretrained,VoIP,VoIP,111
+iscx_vpn,2023,TrafficFormer-pretrained,Chat,Chat,182
+iscx_vpn,2023,TrafficFormer-pretrained,Chat,Email,1
+iscx_vpn,2023,TrafficFormer-pretrained,Chat,File-Transfer,5
+iscx_vpn,2023,TrafficFormer-pretrained,Chat,P2P,0
+iscx_vpn,2023,TrafficFormer-pretrained,Chat,Streaming,3
+iscx_vpn,2023,TrafficFormer-pretrained,Chat,VoIP,4
+iscx_vpn,2023,TrafficFormer-pretrained,Email,Chat,4
+iscx_vpn,2023,TrafficFormer-pretrained,Email,Email,189
+iscx_vpn,2023,TrafficFormer-pretrained,Email,File-Transfer,3
+iscx_vpn,2023,TrafficFormer-pretrained,Email,P2P,0
+iscx_vpn,2023,TrafficFormer-pretrained,Email,Streaming,1
+iscx_vpn,2023,TrafficFormer-pretrained,Email,VoIP,3
+iscx_vpn,2023,TrafficFormer-pretrained,File-Transfer,Chat,8
+iscx_vpn,2023,TrafficFormer-pretrained,File-Transfer,Email,2
+iscx_vpn,2023,TrafficFormer-pretrained,File-Transfer,File-Transfer,156
+iscx_vpn,2023,TrafficFormer-pretrained,File-Transfer,P2P,0
+iscx_vpn,2023,TrafficFormer-pretrained,File-Transfer,Streaming,3
+iscx_vpn,2023,TrafficFormer-pretrained,File-Transfer,VoIP,31
+iscx_vpn,2023,TrafficFormer-pretrained,P2P,Chat,0
+iscx_vpn,2023,TrafficFormer-pretrained,P2P,Email,0
+iscx_vpn,2023,TrafficFormer-pretrained,P2P,File-Transfer,0
+iscx_vpn,2023,TrafficFormer-pretrained,P2P,P2P,100
+iscx_vpn,2023,TrafficFormer-pretrained,P2P,Streaming,0
+iscx_vpn,2023,TrafficFormer-pretrained,P2P,VoIP,0
+iscx_vpn,2023,TrafficFormer-pretrained,Streaming,Chat,2
+iscx_vpn,2023,TrafficFormer-pretrained,Streaming,Email,0
+iscx_vpn,2023,TrafficFormer-pretrained,Streaming,File-Transfer,0
+iscx_vpn,2023,TrafficFormer-pretrained,Streaming,P2P,0
+iscx_vpn,2023,TrafficFormer-pretrained,Streaming,Streaming,195
+iscx_vpn,2023,TrafficFormer-pretrained,Streaming,VoIP,1
+iscx_vpn,2023,TrafficFormer-pretrained,VoIP,Chat,19
+iscx_vpn,2023,TrafficFormer-pretrained,VoIP,Email,15
+iscx_vpn,2023,TrafficFormer-pretrained,VoIP,File-Transfer,57
+iscx_vpn,2023,TrafficFormer-pretrained,VoIP,P2P,0
+iscx_vpn,2023,TrafficFormer-pretrained,VoIP,Streaming,3
+iscx_vpn,2023,TrafficFormer-pretrained,VoIP,VoIP,106
+iscx_vpn,2022,YaTC-official-pretrained-Stage20,Chat,Chat,179
+iscx_vpn,2022,YaTC-official-pretrained-Stage20,Chat,Email,9
+iscx_vpn,2022,YaTC-official-pretrained-Stage20,Chat,File-Transfer,1
+iscx_vpn,2022,YaTC-official-pretrained-Stage20,Chat,P2P,0
+iscx_vpn,2022,YaTC-official-pretrained-Stage20,Chat,Streaming,0
+iscx_vpn,2022,YaTC-official-pretrained-Stage20,Chat,VoIP,6
+iscx_vpn,2022,YaTC-official-pretrained-Stage20,Email,Chat,3
+iscx_vpn,2022,YaTC-official-pretrained-Stage20,Email,Email,193
+iscx_vpn,2022,YaTC-official-pretrained-Stage20,Email,File-Transfer,0
+iscx_vpn,2022,YaTC-official-pretrained-Stage20,Email,P2P,0
+iscx_vpn,2022,YaTC-official-pretrained-Stage20,Email,Streaming,0
+iscx_vpn,2022,YaTC-official-pretrained-Stage20,Email,VoIP,4
+iscx_vpn,2022,YaTC-official-pretrained-Stage20,File-Transfer,Chat,0
+iscx_vpn,2022,YaTC-official-pretrained-Stage20,File-Transfer,Email,1
+iscx_vpn,2022,YaTC-official-pretrained-Stage20,File-Transfer,File-Transfer,159
+iscx_vpn,2022,YaTC-official-pretrained-Stage20,File-Transfer,P2P,0
+iscx_vpn,2022,YaTC-official-pretrained-Stage20,File-Transfer,Streaming,4
+iscx_vpn,2022,YaTC-official-pretrained-Stage20,File-Transfer,VoIP,36
+iscx_vpn,2022,YaTC-official-pretrained-Stage20,P2P,Chat,0
+iscx_vpn,2022,YaTC-official-pretrained-Stage20,P2P,Email,0
+iscx_vpn,2022,YaTC-official-pretrained-Stage20,P2P,File-Transfer,0
+iscx_vpn,2022,YaTC-official-pretrained-Stage20,P2P,P2P,100
+iscx_vpn,2022,YaTC-official-pretrained-Stage20,P2P,Streaming,0
+iscx_vpn,2022,YaTC-official-pretrained-Stage20,P2P,VoIP,0
+iscx_vpn,2022,YaTC-official-pretrained-Stage20,Streaming,Chat,1
+iscx_vpn,2022,YaTC-official-pretrained-Stage20,Streaming,Email,0
+iscx_vpn,2022,YaTC-official-pretrained-Stage20,Streaming,File-Transfer,1
+iscx_vpn,2022,YaTC-official-pretrained-Stage20,Streaming,P2P,0
+iscx_vpn,2022,YaTC-official-pretrained-Stage20,Streaming,Streaming,195
+iscx_vpn,2022,YaTC-official-pretrained-Stage20,Streaming,VoIP,1
+iscx_vpn,2022,YaTC-official-pretrained-Stage20,VoIP,Chat,10
+iscx_vpn,2022,YaTC-official-pretrained-Stage20,VoIP,Email,7
+iscx_vpn,2022,YaTC-official-pretrained-Stage20,VoIP,File-Transfer,32
+iscx_vpn,2022,YaTC-official-pretrained-Stage20,VoIP,P2P,0
+iscx_vpn,2022,YaTC-official-pretrained-Stage20,VoIP,Streaming,4
+iscx_vpn,2022,YaTC-official-pretrained-Stage20,VoIP,VoIP,147
+iscx_vpn,2023,YaTC-official-pretrained-Stage20,Chat,Chat,179
+iscx_vpn,2023,YaTC-official-pretrained-Stage20,Chat,Email,10
+iscx_vpn,2023,YaTC-official-pretrained-Stage20,Chat,File-Transfer,0
+iscx_vpn,2023,YaTC-official-pretrained-Stage20,Chat,P2P,0
+iscx_vpn,2023,YaTC-official-pretrained-Stage20,Chat,Streaming,2
+iscx_vpn,2023,YaTC-official-pretrained-Stage20,Chat,VoIP,4
+iscx_vpn,2023,YaTC-official-pretrained-Stage20,Email,Chat,8
+iscx_vpn,2023,YaTC-official-pretrained-Stage20,Email,Email,188
+iscx_vpn,2023,YaTC-official-pretrained-Stage20,Email,File-Transfer,0
+iscx_vpn,2023,YaTC-official-pretrained-Stage20,Email,P2P,0
+iscx_vpn,2023,YaTC-official-pretrained-Stage20,Email,Streaming,0
+iscx_vpn,2023,YaTC-official-pretrained-Stage20,Email,VoIP,4
+iscx_vpn,2023,YaTC-official-pretrained-Stage20,File-Transfer,Chat,2
+iscx_vpn,2023,YaTC-official-pretrained-Stage20,File-Transfer,Email,1
+iscx_vpn,2023,YaTC-official-pretrained-Stage20,File-Transfer,File-Transfer,149
+iscx_vpn,2023,YaTC-official-pretrained-Stage20,File-Transfer,P2P,0
+iscx_vpn,2023,YaTC-official-pretrained-Stage20,File-Transfer,Streaming,4
+iscx_vpn,2023,YaTC-official-pretrained-Stage20,File-Transfer,VoIP,44
+iscx_vpn,2023,YaTC-official-pretrained-Stage20,P2P,Chat,0
+iscx_vpn,2023,YaTC-official-pretrained-Stage20,P2P,Email,0
+iscx_vpn,2023,YaTC-official-pretrained-Stage20,P2P,File-Transfer,0
+iscx_vpn,2023,YaTC-official-pretrained-Stage20,P2P,P2P,100
+iscx_vpn,2023,YaTC-official-pretrained-Stage20,P2P,Streaming,0
+iscx_vpn,2023,YaTC-official-pretrained-Stage20,P2P,VoIP,0
+iscx_vpn,2023,YaTC-official-pretrained-Stage20,Streaming,Chat,0
+iscx_vpn,2023,YaTC-official-pretrained-Stage20,Streaming,Email,0
+iscx_vpn,2023,YaTC-official-pretrained-Stage20,Streaming,File-Transfer,1
+iscx_vpn,2023,YaTC-official-pretrained-Stage20,Streaming,P2P,0
+iscx_vpn,2023,YaTC-official-pretrained-Stage20,Streaming,Streaming,196
+iscx_vpn,2023,YaTC-official-pretrained-Stage20,Streaming,VoIP,1
+iscx_vpn,2023,YaTC-official-pretrained-Stage20,VoIP,Chat,17
+iscx_vpn,2023,YaTC-official-pretrained-Stage20,VoIP,Email,10
+iscx_vpn,2023,YaTC-official-pretrained-Stage20,VoIP,File-Transfer,30
+iscx_vpn,2023,YaTC-official-pretrained-Stage20,VoIP,P2P,0
+iscx_vpn,2023,YaTC-official-pretrained-Stage20,VoIP,Streaming,8
+iscx_vpn,2023,YaTC-official-pretrained-Stage20,VoIP,VoIP,135
+iscx_vpn,2022,Open-Detect corrected-paper,Chat,Chat,151
+iscx_vpn,2022,Open-Detect corrected-paper,Chat,Email,16
+iscx_vpn,2022,Open-Detect corrected-paper,Chat,File-Transfer,12
+iscx_vpn,2022,Open-Detect corrected-paper,Chat,P2P,0
+iscx_vpn,2022,Open-Detect corrected-paper,Chat,Streaming,4
+iscx_vpn,2022,Open-Detect corrected-paper,Chat,VoIP,12
+iscx_vpn,2022,Open-Detect corrected-paper,Email,Chat,6
+iscx_vpn,2022,Open-Detect corrected-paper,Email,Email,174
+iscx_vpn,2022,Open-Detect corrected-paper,Email,File-Transfer,4
+iscx_vpn,2022,Open-Detect corrected-paper,Email,P2P,0
+iscx_vpn,2022,Open-Detect corrected-paper,Email,Streaming,9
+iscx_vpn,2022,Open-Detect corrected-paper,Email,VoIP,7
+iscx_vpn,2022,Open-Detect corrected-paper,File-Transfer,Chat,10
+iscx_vpn,2022,Open-Detect corrected-paper,File-Transfer,Email,7
+iscx_vpn,2022,Open-Detect corrected-paper,File-Transfer,File-Transfer,104
+iscx_vpn,2022,Open-Detect corrected-paper,File-Transfer,P2P,2
+iscx_vpn,2022,Open-Detect corrected-paper,File-Transfer,Streaming,20
+iscx_vpn,2022,Open-Detect corrected-paper,File-Transfer,VoIP,57
+iscx_vpn,2022,Open-Detect corrected-paper,P2P,Chat,0
+iscx_vpn,2022,Open-Detect corrected-paper,P2P,Email,0
+iscx_vpn,2022,Open-Detect corrected-paper,P2P,File-Transfer,2
+iscx_vpn,2022,Open-Detect corrected-paper,P2P,P2P,96
+iscx_vpn,2022,Open-Detect corrected-paper,P2P,Streaming,2
+iscx_vpn,2022,Open-Detect corrected-paper,P2P,VoIP,0
+iscx_vpn,2022,Open-Detect corrected-paper,Streaming,Chat,9
+iscx_vpn,2022,Open-Detect corrected-paper,Streaming,Email,5
+iscx_vpn,2022,Open-Detect corrected-paper,Streaming,File-Transfer,14
+iscx_vpn,2022,Open-Detect corrected-paper,Streaming,P2P,0
+iscx_vpn,2022,Open-Detect corrected-paper,Streaming,Streaming,168
+iscx_vpn,2022,Open-Detect corrected-paper,Streaming,VoIP,2
+iscx_vpn,2022,Open-Detect corrected-paper,VoIP,Chat,17
+iscx_vpn,2022,Open-Detect corrected-paper,VoIP,Email,22
+iscx_vpn,2022,Open-Detect corrected-paper,VoIP,File-Transfer,32
+iscx_vpn,2022,Open-Detect corrected-paper,VoIP,P2P,0
+iscx_vpn,2022,Open-Detect corrected-paper,VoIP,Streaming,10
+iscx_vpn,2022,Open-Detect corrected-paper,VoIP,VoIP,119
+iscx_vpn,2023,Open-Detect corrected-paper,Chat,Chat,149
+iscx_vpn,2023,Open-Detect corrected-paper,Chat,Email,15
+iscx_vpn,2023,Open-Detect corrected-paper,Chat,File-Transfer,9
+iscx_vpn,2023,Open-Detect corrected-paper,Chat,P2P,1
+iscx_vpn,2023,Open-Detect corrected-paper,Chat,Streaming,4
+iscx_vpn,2023,Open-Detect corrected-paper,Chat,VoIP,17
+iscx_vpn,2023,Open-Detect corrected-paper,Email,Chat,5
+iscx_vpn,2023,Open-Detect corrected-paper,Email,Email,157
+iscx_vpn,2023,Open-Detect corrected-paper,Email,File-Transfer,6
+iscx_vpn,2023,Open-Detect corrected-paper,Email,P2P,1
+iscx_vpn,2023,Open-Detect corrected-paper,Email,Streaming,10
+iscx_vpn,2023,Open-Detect corrected-paper,Email,VoIP,21
+iscx_vpn,2023,Open-Detect corrected-paper,File-Transfer,Chat,14
+iscx_vpn,2023,Open-Detect corrected-paper,File-Transfer,Email,5
+iscx_vpn,2023,Open-Detect corrected-paper,File-Transfer,File-Transfer,94
+iscx_vpn,2023,Open-Detect corrected-paper,File-Transfer,P2P,2
+iscx_vpn,2023,Open-Detect corrected-paper,File-Transfer,Streaming,24
+iscx_vpn,2023,Open-Detect corrected-paper,File-Transfer,VoIP,61
+iscx_vpn,2023,Open-Detect corrected-paper,P2P,Chat,0
+iscx_vpn,2023,Open-Detect corrected-paper,P2P,Email,1
+iscx_vpn,2023,Open-Detect corrected-paper,P2P,File-Transfer,1
+iscx_vpn,2023,Open-Detect corrected-paper,P2P,P2P,91
+iscx_vpn,2023,Open-Detect corrected-paper,P2P,Streaming,6
+iscx_vpn,2023,Open-Detect corrected-paper,P2P,VoIP,1
+iscx_vpn,2023,Open-Detect corrected-paper,Streaming,Chat,3
+iscx_vpn,2023,Open-Detect corrected-paper,Streaming,Email,6
+iscx_vpn,2023,Open-Detect corrected-paper,Streaming,File-Transfer,13
+iscx_vpn,2023,Open-Detect corrected-paper,Streaming,P2P,2
+iscx_vpn,2023,Open-Detect corrected-paper,Streaming,Streaming,170
+iscx_vpn,2023,Open-Detect corrected-paper,Streaming,VoIP,4
+iscx_vpn,2023,Open-Detect corrected-paper,VoIP,Chat,15
+iscx_vpn,2023,Open-Detect corrected-paper,VoIP,Email,23
+iscx_vpn,2023,Open-Detect corrected-paper,VoIP,File-Transfer,35
+iscx_vpn,2023,Open-Detect corrected-paper,VoIP,P2P,0
+iscx_vpn,2023,Open-Detect corrected-paper,VoIP,Streaming,7
+iscx_vpn,2023,Open-Detect corrected-paper,VoIP,VoIP,120
+iscx_vpn,2022,RoNeTC-runnable-reconstruction,Chat,Chat,149
+iscx_vpn,2022,RoNeTC-runnable-reconstruction,Chat,Email,5
+iscx_vpn,2022,RoNeTC-runnable-reconstruction,Chat,File-Transfer,20
+iscx_vpn,2022,RoNeTC-runnable-reconstruction,Chat,P2P,0
+iscx_vpn,2022,RoNeTC-runnable-reconstruction,Chat,Streaming,7
+iscx_vpn,2022,RoNeTC-runnable-reconstruction,Chat,VoIP,14
+iscx_vpn,2022,RoNeTC-runnable-reconstruction,Email,Chat,11
+iscx_vpn,2022,RoNeTC-runnable-reconstruction,Email,Email,148
+iscx_vpn,2022,RoNeTC-runnable-reconstruction,Email,File-Transfer,16
+iscx_vpn,2022,RoNeTC-runnable-reconstruction,Email,P2P,3
+iscx_vpn,2022,RoNeTC-runnable-reconstruction,Email,Streaming,8
+iscx_vpn,2022,RoNeTC-runnable-reconstruction,Email,VoIP,14
+iscx_vpn,2022,RoNeTC-runnable-reconstruction,File-Transfer,Chat,15
+iscx_vpn,2022,RoNeTC-runnable-reconstruction,File-Transfer,Email,9
+iscx_vpn,2022,RoNeTC-runnable-reconstruction,File-Transfer,File-Transfer,121
+iscx_vpn,2022,RoNeTC-runnable-reconstruction,File-Transfer,P2P,7
+iscx_vpn,2022,RoNeTC-runnable-reconstruction,File-Transfer,Streaming,12
+iscx_vpn,2022,RoNeTC-runnable-reconstruction,File-Transfer,VoIP,36
+iscx_vpn,2022,RoNeTC-runnable-reconstruction,P2P,Chat,0
+iscx_vpn,2022,RoNeTC-runnable-reconstruction,P2P,Email,1
+iscx_vpn,2022,RoNeTC-runnable-reconstruction,P2P,File-Transfer,0
+iscx_vpn,2022,RoNeTC-runnable-reconstruction,P2P,P2P,96
+iscx_vpn,2022,RoNeTC-runnable-reconstruction,P2P,Streaming,3
+iscx_vpn,2022,RoNeTC-runnable-reconstruction,P2P,VoIP,0
+iscx_vpn,2022,RoNeTC-runnable-reconstruction,Streaming,Chat,4
+iscx_vpn,2022,RoNeTC-runnable-reconstruction,Streaming,Email,1
+iscx_vpn,2022,RoNeTC-runnable-reconstruction,Streaming,File-Transfer,5
+iscx_vpn,2022,RoNeTC-runnable-reconstruction,Streaming,P2P,2
+iscx_vpn,2022,RoNeTC-runnable-reconstruction,Streaming,Streaming,185
+iscx_vpn,2022,RoNeTC-runnable-reconstruction,Streaming,VoIP,1
+iscx_vpn,2022,RoNeTC-runnable-reconstruction,VoIP,Chat,34
+iscx_vpn,2022,RoNeTC-runnable-reconstruction,VoIP,Email,10
+iscx_vpn,2022,RoNeTC-runnable-reconstruction,VoIP,File-Transfer,58
+iscx_vpn,2022,RoNeTC-runnable-reconstruction,VoIP,P2P,3
+iscx_vpn,2022,RoNeTC-runnable-reconstruction,VoIP,Streaming,14
+iscx_vpn,2022,RoNeTC-runnable-reconstruction,VoIP,VoIP,81
+iscx_vpn,2023,RoNeTC-runnable-reconstruction,Chat,Chat,138
+iscx_vpn,2023,RoNeTC-runnable-reconstruction,Chat,Email,8
+iscx_vpn,2023,RoNeTC-runnable-reconstruction,Chat,File-Transfer,22
+iscx_vpn,2023,RoNeTC-runnable-reconstruction,Chat,P2P,2
+iscx_vpn,2023,RoNeTC-runnable-reconstruction,Chat,Streaming,8
+iscx_vpn,2023,RoNeTC-runnable-reconstruction,Chat,VoIP,17
+iscx_vpn,2023,RoNeTC-runnable-reconstruction,Email,Chat,3
+iscx_vpn,2023,RoNeTC-runnable-reconstruction,Email,Email,164
+iscx_vpn,2023,RoNeTC-runnable-reconstruction,Email,File-Transfer,14
+iscx_vpn,2023,RoNeTC-runnable-reconstruction,Email,P2P,2
+iscx_vpn,2023,RoNeTC-runnable-reconstruction,Email,Streaming,7
+iscx_vpn,2023,RoNeTC-runnable-reconstruction,Email,VoIP,10
+iscx_vpn,2023,RoNeTC-runnable-reconstruction,File-Transfer,Chat,12
+iscx_vpn,2023,RoNeTC-runnable-reconstruction,File-Transfer,Email,15
+iscx_vpn,2023,RoNeTC-runnable-reconstruction,File-Transfer,File-Transfer,109
+iscx_vpn,2023,RoNeTC-runnable-reconstruction,File-Transfer,P2P,4
+iscx_vpn,2023,RoNeTC-runnable-reconstruction,File-Transfer,Streaming,21
+iscx_vpn,2023,RoNeTC-runnable-reconstruction,File-Transfer,VoIP,39
+iscx_vpn,2023,RoNeTC-runnable-reconstruction,P2P,Chat,0
+iscx_vpn,2023,RoNeTC-runnable-reconstruction,P2P,Email,1
+iscx_vpn,2023,RoNeTC-runnable-reconstruction,P2P,File-Transfer,6
+iscx_vpn,2023,RoNeTC-runnable-reconstruction,P2P,P2P,80
+iscx_vpn,2023,RoNeTC-runnable-reconstruction,P2P,Streaming,13
+iscx_vpn,2023,RoNeTC-runnable-reconstruction,P2P,VoIP,0
+iscx_vpn,2023,RoNeTC-runnable-reconstruction,Streaming,Chat,6
+iscx_vpn,2023,RoNeTC-runnable-reconstruction,Streaming,Email,3
+iscx_vpn,2023,RoNeTC-runnable-reconstruction,Streaming,File-Transfer,7
+iscx_vpn,2023,RoNeTC-runnable-reconstruction,Streaming,P2P,3
+iscx_vpn,2023,RoNeTC-runnable-reconstruction,Streaming,Streaming,179
+iscx_vpn,2023,RoNeTC-runnable-reconstruction,Streaming,VoIP,0
+iscx_vpn,2023,RoNeTC-runnable-reconstruction,VoIP,Chat,13
+iscx_vpn,2023,RoNeTC-runnable-reconstruction,VoIP,Email,22
+iscx_vpn,2023,RoNeTC-runnable-reconstruction,VoIP,File-Transfer,57
+iscx_vpn,2023,RoNeTC-runnable-reconstruction,VoIP,P2P,2
+iscx_vpn,2023,RoNeTC-runnable-reconstruction,VoIP,Streaming,11
+iscx_vpn,2023,RoNeTC-runnable-reconstruction,VoIP,VoIP,95
+iscx_vpn,2022,TFE-GNN-8-UDP-short,Chat,Chat,134
+iscx_vpn,2022,TFE-GNN-8-UDP-short,Chat,Email,16
+iscx_vpn,2022,TFE-GNN-8-UDP-short,Chat,File-Transfer,15
+iscx_vpn,2022,TFE-GNN-8-UDP-short,Chat,P2P,1
+iscx_vpn,2022,TFE-GNN-8-UDP-short,Chat,Streaming,5
+iscx_vpn,2022,TFE-GNN-8-UDP-short,Chat,VoIP,24
+iscx_vpn,2022,TFE-GNN-8-UDP-short,Email,Chat,17
+iscx_vpn,2022,TFE-GNN-8-UDP-short,Email,Email,111
+iscx_vpn,2022,TFE-GNN-8-UDP-short,Email,File-Transfer,16
+iscx_vpn,2022,TFE-GNN-8-UDP-short,Email,P2P,0
+iscx_vpn,2022,TFE-GNN-8-UDP-short,Email,Streaming,4
+iscx_vpn,2022,TFE-GNN-8-UDP-short,Email,VoIP,52
+iscx_vpn,2022,TFE-GNN-8-UDP-short,File-Transfer,Chat,8
+iscx_vpn,2022,TFE-GNN-8-UDP-short,File-Transfer,Email,31
+iscx_vpn,2022,TFE-GNN-8-UDP-short,File-Transfer,File-Transfer,85
+iscx_vpn,2022,TFE-GNN-8-UDP-short,File-Transfer,P2P,7
+iscx_vpn,2022,TFE-GNN-8-UDP-short,File-Transfer,Streaming,16
+iscx_vpn,2022,TFE-GNN-8-UDP-short,File-Transfer,VoIP,53
+iscx_vpn,2022,TFE-GNN-8-UDP-short,P2P,Chat,1
+iscx_vpn,2022,TFE-GNN-8-UDP-short,P2P,Email,0
+iscx_vpn,2022,TFE-GNN-8-UDP-short,P2P,File-Transfer,4
+iscx_vpn,2022,TFE-GNN-8-UDP-short,P2P,P2P,84
+iscx_vpn,2022,TFE-GNN-8-UDP-short,P2P,Streaming,11
+iscx_vpn,2022,TFE-GNN-8-UDP-short,P2P,VoIP,0
+iscx_vpn,2022,TFE-GNN-8-UDP-short,Streaming,Chat,5
+iscx_vpn,2022,TFE-GNN-8-UDP-short,Streaming,Email,5
+iscx_vpn,2022,TFE-GNN-8-UDP-short,Streaming,File-Transfer,7
+iscx_vpn,2022,TFE-GNN-8-UDP-short,Streaming,P2P,15
+iscx_vpn,2022,TFE-GNN-8-UDP-short,Streaming,Streaming,164
+iscx_vpn,2022,TFE-GNN-8-UDP-short,Streaming,VoIP,2
+iscx_vpn,2022,TFE-GNN-8-UDP-short,VoIP,Chat,14
+iscx_vpn,2022,TFE-GNN-8-UDP-short,VoIP,Email,40
+iscx_vpn,2022,TFE-GNN-8-UDP-short,VoIP,File-Transfer,29
+iscx_vpn,2022,TFE-GNN-8-UDP-short,VoIP,P2P,1
+iscx_vpn,2022,TFE-GNN-8-UDP-short,VoIP,Streaming,6
+iscx_vpn,2022,TFE-GNN-8-UDP-short,VoIP,VoIP,110
+iscx_vpn,2023,TFE-GNN-8-UDP-short,Chat,Chat,130
+iscx_vpn,2023,TFE-GNN-8-UDP-short,Chat,Email,19
+iscx_vpn,2023,TFE-GNN-8-UDP-short,Chat,File-Transfer,10
+iscx_vpn,2023,TFE-GNN-8-UDP-short,Chat,P2P,7
+iscx_vpn,2023,TFE-GNN-8-UDP-short,Chat,Streaming,6
+iscx_vpn,2023,TFE-GNN-8-UDP-short,Chat,VoIP,23
+iscx_vpn,2023,TFE-GNN-8-UDP-short,Email,Chat,6
+iscx_vpn,2023,TFE-GNN-8-UDP-short,Email,Email,139
+iscx_vpn,2023,TFE-GNN-8-UDP-short,Email,File-Transfer,10
+iscx_vpn,2023,TFE-GNN-8-UDP-short,Email,P2P,6
+iscx_vpn,2023,TFE-GNN-8-UDP-short,Email,Streaming,10
+iscx_vpn,2023,TFE-GNN-8-UDP-short,Email,VoIP,29
+iscx_vpn,2023,TFE-GNN-8-UDP-short,File-Transfer,Chat,6
+iscx_vpn,2023,TFE-GNN-8-UDP-short,File-Transfer,Email,23
+iscx_vpn,2023,TFE-GNN-8-UDP-short,File-Transfer,File-Transfer,72
+iscx_vpn,2023,TFE-GNN-8-UDP-short,File-Transfer,P2P,13
+iscx_vpn,2023,TFE-GNN-8-UDP-short,File-Transfer,Streaming,19
+iscx_vpn,2023,TFE-GNN-8-UDP-short,File-Transfer,VoIP,67
+iscx_vpn,2023,TFE-GNN-8-UDP-short,P2P,Chat,0
+iscx_vpn,2023,TFE-GNN-8-UDP-short,P2P,Email,0
+iscx_vpn,2023,TFE-GNN-8-UDP-short,P2P,File-Transfer,8
+iscx_vpn,2023,TFE-GNN-8-UDP-short,P2P,P2P,89
+iscx_vpn,2023,TFE-GNN-8-UDP-short,P2P,Streaming,3
+iscx_vpn,2023,TFE-GNN-8-UDP-short,P2P,VoIP,0
+iscx_vpn,2023,TFE-GNN-8-UDP-short,Streaming,Chat,1
+iscx_vpn,2023,TFE-GNN-8-UDP-short,Streaming,Email,3
+iscx_vpn,2023,TFE-GNN-8-UDP-short,Streaming,File-Transfer,7
+iscx_vpn,2023,TFE-GNN-8-UDP-short,Streaming,P2P,5
+iscx_vpn,2023,TFE-GNN-8-UDP-short,Streaming,Streaming,180
+iscx_vpn,2023,TFE-GNN-8-UDP-short,Streaming,VoIP,2
+iscx_vpn,2023,TFE-GNN-8-UDP-short,VoIP,Chat,12
+iscx_vpn,2023,TFE-GNN-8-UDP-short,VoIP,Email,35
+iscx_vpn,2023,TFE-GNN-8-UDP-short,VoIP,File-Transfer,25
+iscx_vpn,2023,TFE-GNN-8-UDP-short,VoIP,P2P,2
+iscx_vpn,2023,TFE-GNN-8-UDP-short,VoIP,Streaming,6
+iscx_vpn,2023,TFE-GNN-8-UDP-short,VoIP,VoIP,120
+iscx_vpn,2022,Trident-early8-86D,Chat,Chat,130
+iscx_vpn,2022,Trident-early8-86D,Chat,Email,22
+iscx_vpn,2022,Trident-early8-86D,Chat,File-Transfer,16
+iscx_vpn,2022,Trident-early8-86D,Chat,P2P,0
+iscx_vpn,2022,Trident-early8-86D,Chat,Streaming,7
+iscx_vpn,2022,Trident-early8-86D,Chat,VoIP,20
+iscx_vpn,2022,Trident-early8-86D,Email,Chat,30
+iscx_vpn,2022,Trident-early8-86D,Email,Email,112
+iscx_vpn,2022,Trident-early8-86D,Email,File-Transfer,19
+iscx_vpn,2022,Trident-early8-86D,Email,P2P,3
+iscx_vpn,2022,Trident-early8-86D,Email,Streaming,7
+iscx_vpn,2022,Trident-early8-86D,Email,VoIP,29
+iscx_vpn,2022,Trident-early8-86D,File-Transfer,Chat,22
+iscx_vpn,2022,Trident-early8-86D,File-Transfer,Email,30
+iscx_vpn,2022,Trident-early8-86D,File-Transfer,File-Transfer,87
+iscx_vpn,2022,Trident-early8-86D,File-Transfer,P2P,1
+iscx_vpn,2022,Trident-early8-86D,File-Transfer,Streaming,30
+iscx_vpn,2022,Trident-early8-86D,File-Transfer,VoIP,30
+iscx_vpn,2022,Trident-early8-86D,P2P,Chat,0
+iscx_vpn,2022,Trident-early8-86D,P2P,Email,0
+iscx_vpn,2022,Trident-early8-86D,P2P,File-Transfer,1
+iscx_vpn,2022,Trident-early8-86D,P2P,P2P,92
+iscx_vpn,2022,Trident-early8-86D,P2P,Streaming,6
+iscx_vpn,2022,Trident-early8-86D,P2P,VoIP,1
+iscx_vpn,2022,Trident-early8-86D,Streaming,Chat,1
+iscx_vpn,2022,Trident-early8-86D,Streaming,Email,2
+iscx_vpn,2022,Trident-early8-86D,Streaming,File-Transfer,11
+iscx_vpn,2022,Trident-early8-86D,Streaming,P2P,9
+iscx_vpn,2022,Trident-early8-86D,Streaming,Streaming,173
+iscx_vpn,2022,Trident-early8-86D,Streaming,VoIP,2
+iscx_vpn,2022,Trident-early8-86D,VoIP,Chat,34
+iscx_vpn,2022,Trident-early8-86D,VoIP,Email,37
+iscx_vpn,2022,Trident-early8-86D,VoIP,File-Transfer,39
+iscx_vpn,2022,Trident-early8-86D,VoIP,P2P,0
+iscx_vpn,2022,Trident-early8-86D,VoIP,Streaming,11
+iscx_vpn,2022,Trident-early8-86D,VoIP,VoIP,79
+iscx_vpn,2023,Trident-early8-86D,Chat,Chat,121
+iscx_vpn,2023,Trident-early8-86D,Chat,Email,21
+iscx_vpn,2023,Trident-early8-86D,Chat,File-Transfer,18
+iscx_vpn,2023,Trident-early8-86D,Chat,P2P,2
+iscx_vpn,2023,Trident-early8-86D,Chat,Streaming,7
+iscx_vpn,2023,Trident-early8-86D,Chat,VoIP,26
+iscx_vpn,2023,Trident-early8-86D,Email,Chat,24
+iscx_vpn,2023,Trident-early8-86D,Email,Email,125
+iscx_vpn,2023,Trident-early8-86D,Email,File-Transfer,17
+iscx_vpn,2023,Trident-early8-86D,Email,P2P,0
+iscx_vpn,2023,Trident-early8-86D,Email,Streaming,5
+iscx_vpn,2023,Trident-early8-86D,Email,VoIP,29
+iscx_vpn,2023,Trident-early8-86D,File-Transfer,Chat,19
+iscx_vpn,2023,Trident-early8-86D,File-Transfer,Email,29
+iscx_vpn,2023,Trident-early8-86D,File-Transfer,File-Transfer,88
+iscx_vpn,2023,Trident-early8-86D,File-Transfer,P2P,0
+iscx_vpn,2023,Trident-early8-86D,File-Transfer,Streaming,23
+iscx_vpn,2023,Trident-early8-86D,File-Transfer,VoIP,41
+iscx_vpn,2023,Trident-early8-86D,P2P,Chat,1
+iscx_vpn,2023,Trident-early8-86D,P2P,Email,3
+iscx_vpn,2023,Trident-early8-86D,P2P,File-Transfer,2
+iscx_vpn,2023,Trident-early8-86D,P2P,P2P,91
+iscx_vpn,2023,Trident-early8-86D,P2P,Streaming,2
+iscx_vpn,2023,Trident-early8-86D,P2P,VoIP,1
+iscx_vpn,2023,Trident-early8-86D,Streaming,Chat,7
+iscx_vpn,2023,Trident-early8-86D,Streaming,Email,4
+iscx_vpn,2023,Trident-early8-86D,Streaming,File-Transfer,15
+iscx_vpn,2023,Trident-early8-86D,Streaming,P2P,3
+iscx_vpn,2023,Trident-early8-86D,Streaming,Streaming,168
+iscx_vpn,2023,Trident-early8-86D,Streaming,VoIP,1
+iscx_vpn,2023,Trident-early8-86D,VoIP,Chat,37
+iscx_vpn,2023,Trident-early8-86D,VoIP,Email,48
+iscx_vpn,2023,Trident-early8-86D,VoIP,File-Transfer,29
+iscx_vpn,2023,Trident-early8-86D,VoIP,P2P,1
+iscx_vpn,2023,Trident-early8-86D,VoIP,Streaming,10
+iscx_vpn,2023,Trident-early8-86D,VoIP,VoIP,75
+iscx_vpn,2022,OURS-E3-T8-pretrained,Chat,Chat,183
+iscx_vpn,2022,OURS-E3-T8-pretrained,Chat,Email,1
+iscx_vpn,2022,OURS-E3-T8-pretrained,Chat,File-Transfer,1
+iscx_vpn,2022,OURS-E3-T8-pretrained,Chat,P2P,0
+iscx_vpn,2022,OURS-E3-T8-pretrained,Chat,Streaming,2
+iscx_vpn,2022,OURS-E3-T8-pretrained,Chat,VoIP,8
+iscx_vpn,2022,OURS-E3-T8-pretrained,Email,Chat,0
+iscx_vpn,2022,OURS-E3-T8-pretrained,Email,Email,192
+iscx_vpn,2022,OURS-E3-T8-pretrained,Email,File-Transfer,5
+iscx_vpn,2022,OURS-E3-T8-pretrained,Email,P2P,0
+iscx_vpn,2022,OURS-E3-T8-pretrained,Email,Streaming,1
+iscx_vpn,2022,OURS-E3-T8-pretrained,Email,VoIP,2
+iscx_vpn,2022,OURS-E3-T8-pretrained,File-Transfer,Chat,5
+iscx_vpn,2022,OURS-E3-T8-pretrained,File-Transfer,Email,6
+iscx_vpn,2022,OURS-E3-T8-pretrained,File-Transfer,File-Transfer,148
+iscx_vpn,2022,OURS-E3-T8-pretrained,File-Transfer,P2P,0
+iscx_vpn,2022,OURS-E3-T8-pretrained,File-Transfer,Streaming,3
+iscx_vpn,2022,OURS-E3-T8-pretrained,File-Transfer,VoIP,38
+iscx_vpn,2022,OURS-E3-T8-pretrained,P2P,Chat,0
+iscx_vpn,2022,OURS-E3-T8-pretrained,P2P,Email,0
+iscx_vpn,2022,OURS-E3-T8-pretrained,P2P,File-Transfer,0
+iscx_vpn,2022,OURS-E3-T8-pretrained,P2P,P2P,100
+iscx_vpn,2022,OURS-E3-T8-pretrained,P2P,Streaming,0
+iscx_vpn,2022,OURS-E3-T8-pretrained,P2P,VoIP,0
+iscx_vpn,2022,OURS-E3-T8-pretrained,Streaming,Chat,1
+iscx_vpn,2022,OURS-E3-T8-pretrained,Streaming,Email,0
+iscx_vpn,2022,OURS-E3-T8-pretrained,Streaming,File-Transfer,1
+iscx_vpn,2022,OURS-E3-T8-pretrained,Streaming,P2P,0
+iscx_vpn,2022,OURS-E3-T8-pretrained,Streaming,Streaming,196
+iscx_vpn,2022,OURS-E3-T8-pretrained,Streaming,VoIP,0
+iscx_vpn,2022,OURS-E3-T8-pretrained,VoIP,Chat,13
+iscx_vpn,2022,OURS-E3-T8-pretrained,VoIP,Email,13
+iscx_vpn,2022,OURS-E3-T8-pretrained,VoIP,File-Transfer,46
+iscx_vpn,2022,OURS-E3-T8-pretrained,VoIP,P2P,0
+iscx_vpn,2022,OURS-E3-T8-pretrained,VoIP,Streaming,9
+iscx_vpn,2022,OURS-E3-T8-pretrained,VoIP,VoIP,119
+iscx_vpn,2023,OURS-E3-T8-pretrained,Chat,Chat,182
+iscx_vpn,2023,OURS-E3-T8-pretrained,Chat,Email,1
+iscx_vpn,2023,OURS-E3-T8-pretrained,Chat,File-Transfer,3
+iscx_vpn,2023,OURS-E3-T8-pretrained,Chat,P2P,1
+iscx_vpn,2023,OURS-E3-T8-pretrained,Chat,Streaming,3
+iscx_vpn,2023,OURS-E3-T8-pretrained,Chat,VoIP,5
+iscx_vpn,2023,OURS-E3-T8-pretrained,Email,Chat,4
+iscx_vpn,2023,OURS-E3-T8-pretrained,Email,Email,183
+iscx_vpn,2023,OURS-E3-T8-pretrained,Email,File-Transfer,3
+iscx_vpn,2023,OURS-E3-T8-pretrained,Email,P2P,0
+iscx_vpn,2023,OURS-E3-T8-pretrained,Email,Streaming,1
+iscx_vpn,2023,OURS-E3-T8-pretrained,Email,VoIP,9
+iscx_vpn,2023,OURS-E3-T8-pretrained,File-Transfer,Chat,7
+iscx_vpn,2023,OURS-E3-T8-pretrained,File-Transfer,Email,2
+iscx_vpn,2023,OURS-E3-T8-pretrained,File-Transfer,File-Transfer,139
+iscx_vpn,2023,OURS-E3-T8-pretrained,File-Transfer,P2P,0
+iscx_vpn,2023,OURS-E3-T8-pretrained,File-Transfer,Streaming,4
+iscx_vpn,2023,OURS-E3-T8-pretrained,File-Transfer,VoIP,48
+iscx_vpn,2023,OURS-E3-T8-pretrained,P2P,Chat,0
+iscx_vpn,2023,OURS-E3-T8-pretrained,P2P,Email,0
+iscx_vpn,2023,OURS-E3-T8-pretrained,P2P,File-Transfer,0
+iscx_vpn,2023,OURS-E3-T8-pretrained,P2P,P2P,100
+iscx_vpn,2023,OURS-E3-T8-pretrained,P2P,Streaming,0
+iscx_vpn,2023,OURS-E3-T8-pretrained,P2P,VoIP,0
+iscx_vpn,2023,OURS-E3-T8-pretrained,Streaming,Chat,1
+iscx_vpn,2023,OURS-E3-T8-pretrained,Streaming,Email,0
+iscx_vpn,2023,OURS-E3-T8-pretrained,Streaming,File-Transfer,0
+iscx_vpn,2023,OURS-E3-T8-pretrained,Streaming,P2P,0
+iscx_vpn,2023,OURS-E3-T8-pretrained,Streaming,Streaming,195
+iscx_vpn,2023,OURS-E3-T8-pretrained,Streaming,VoIP,2
+iscx_vpn,2023,OURS-E3-T8-pretrained,VoIP,Chat,17
+iscx_vpn,2023,OURS-E3-T8-pretrained,VoIP,Email,12
+iscx_vpn,2023,OURS-E3-T8-pretrained,VoIP,File-Transfer,48
+iscx_vpn,2023,OURS-E3-T8-pretrained,VoIP,P2P,0
+iscx_vpn,2023,OURS-E3-T8-pretrained,VoIP,Streaming,2
+iscx_vpn,2023,OURS-E3-T8-pretrained,VoIP,VoIP,121
+iscx_vpn,2022,OURS-current-threeview-equal,Chat,Chat,182
+iscx_vpn,2022,OURS-current-threeview-equal,Chat,Email,7
+iscx_vpn,2022,OURS-current-threeview-equal,Chat,File-Transfer,0
+iscx_vpn,2022,OURS-current-threeview-equal,Chat,P2P,0
+iscx_vpn,2022,OURS-current-threeview-equal,Chat,Streaming,2
+iscx_vpn,2022,OURS-current-threeview-equal,Chat,VoIP,4
+iscx_vpn,2022,OURS-current-threeview-equal,Email,Chat,0
+iscx_vpn,2022,OURS-current-threeview-equal,Email,Email,196
+iscx_vpn,2022,OURS-current-threeview-equal,Email,File-Transfer,2
+iscx_vpn,2022,OURS-current-threeview-equal,Email,P2P,0
+iscx_vpn,2022,OURS-current-threeview-equal,Email,Streaming,0
+iscx_vpn,2022,OURS-current-threeview-equal,Email,VoIP,2
+iscx_vpn,2022,OURS-current-threeview-equal,File-Transfer,Chat,1
+iscx_vpn,2022,OURS-current-threeview-equal,File-Transfer,Email,2
+iscx_vpn,2022,OURS-current-threeview-equal,File-Transfer,File-Transfer,153
+iscx_vpn,2022,OURS-current-threeview-equal,File-Transfer,P2P,0
+iscx_vpn,2022,OURS-current-threeview-equal,File-Transfer,Streaming,3
+iscx_vpn,2022,OURS-current-threeview-equal,File-Transfer,VoIP,41
+iscx_vpn,2022,OURS-current-threeview-equal,P2P,Chat,0
+iscx_vpn,2022,OURS-current-threeview-equal,P2P,Email,0
+iscx_vpn,2022,OURS-current-threeview-equal,P2P,File-Transfer,0
+iscx_vpn,2022,OURS-current-threeview-equal,P2P,P2P,100
+iscx_vpn,2022,OURS-current-threeview-equal,P2P,Streaming,0
+iscx_vpn,2022,OURS-current-threeview-equal,P2P,VoIP,0
+iscx_vpn,2022,OURS-current-threeview-equal,Streaming,Chat,0
+iscx_vpn,2022,OURS-current-threeview-equal,Streaming,Email,0
+iscx_vpn,2022,OURS-current-threeview-equal,Streaming,File-Transfer,0
+iscx_vpn,2022,OURS-current-threeview-equal,Streaming,P2P,0
+iscx_vpn,2022,OURS-current-threeview-equal,Streaming,Streaming,197
+iscx_vpn,2022,OURS-current-threeview-equal,Streaming,VoIP,1
+iscx_vpn,2022,OURS-current-threeview-equal,VoIP,Chat,9
+iscx_vpn,2022,OURS-current-threeview-equal,VoIP,Email,5
+iscx_vpn,2022,OURS-current-threeview-equal,VoIP,File-Transfer,34
+iscx_vpn,2022,OURS-current-threeview-equal,VoIP,P2P,0
+iscx_vpn,2022,OURS-current-threeview-equal,VoIP,Streaming,6
+iscx_vpn,2022,OURS-current-threeview-equal,VoIP,VoIP,146
+iscx_vpn,2023,OURS-current-threeview-equal,Chat,Chat,183
+iscx_vpn,2023,OURS-current-threeview-equal,Chat,Email,3
+iscx_vpn,2023,OURS-current-threeview-equal,Chat,File-Transfer,0
+iscx_vpn,2023,OURS-current-threeview-equal,Chat,P2P,0
+iscx_vpn,2023,OURS-current-threeview-equal,Chat,Streaming,1
+iscx_vpn,2023,OURS-current-threeview-equal,Chat,VoIP,8
+iscx_vpn,2023,OURS-current-threeview-equal,Email,Chat,4
+iscx_vpn,2023,OURS-current-threeview-equal,Email,Email,189
+iscx_vpn,2023,OURS-current-threeview-equal,Email,File-Transfer,0
+iscx_vpn,2023,OURS-current-threeview-equal,Email,P2P,0
+iscx_vpn,2023,OURS-current-threeview-equal,Email,Streaming,0
+iscx_vpn,2023,OURS-current-threeview-equal,Email,VoIP,7
+iscx_vpn,2023,OURS-current-threeview-equal,File-Transfer,Chat,2
+iscx_vpn,2023,OURS-current-threeview-equal,File-Transfer,Email,1
+iscx_vpn,2023,OURS-current-threeview-equal,File-Transfer,File-Transfer,153
+iscx_vpn,2023,OURS-current-threeview-equal,File-Transfer,P2P,0
+iscx_vpn,2023,OURS-current-threeview-equal,File-Transfer,Streaming,4
+iscx_vpn,2023,OURS-current-threeview-equal,File-Transfer,VoIP,40
+iscx_vpn,2023,OURS-current-threeview-equal,P2P,Chat,0
+iscx_vpn,2023,OURS-current-threeview-equal,P2P,Email,0
+iscx_vpn,2023,OURS-current-threeview-equal,P2P,File-Transfer,0
+iscx_vpn,2023,OURS-current-threeview-equal,P2P,P2P,100
+iscx_vpn,2023,OURS-current-threeview-equal,P2P,Streaming,0
+iscx_vpn,2023,OURS-current-threeview-equal,P2P,VoIP,0
+iscx_vpn,2023,OURS-current-threeview-equal,Streaming,Chat,0
+iscx_vpn,2023,OURS-current-threeview-equal,Streaming,Email,0
+iscx_vpn,2023,OURS-current-threeview-equal,Streaming,File-Transfer,0
+iscx_vpn,2023,OURS-current-threeview-equal,Streaming,P2P,0
+iscx_vpn,2023,OURS-current-threeview-equal,Streaming,Streaming,195
+iscx_vpn,2023,OURS-current-threeview-equal,Streaming,VoIP,3
+iscx_vpn,2023,OURS-current-threeview-equal,VoIP,Chat,10
+iscx_vpn,2023,OURS-current-threeview-equal,VoIP,Email,5
+iscx_vpn,2023,OURS-current-threeview-equal,VoIP,File-Transfer,42
+iscx_vpn,2023,OURS-current-threeview-equal,VoIP,P2P,0
+iscx_vpn,2023,OURS-current-threeview-equal,VoIP,Streaming,3
+iscx_vpn,2023,OURS-current-threeview-equal,VoIP,VoIP,140
+iscx_tor,2022,TrafficFormer-pretrained,Browsing,Browsing,168
+iscx_tor,2022,TrafficFormer-pretrained,Browsing,Chat,7
+iscx_tor,2022,TrafficFormer-pretrained,Browsing,Email,0
+iscx_tor,2022,TrafficFormer-pretrained,Browsing,File-Transfer,0
+iscx_tor,2022,TrafficFormer-pretrained,Browsing,P2P,0
+iscx_tor,2022,TrafficFormer-pretrained,Browsing,Streaming,21
+iscx_tor,2022,TrafficFormer-pretrained,Browsing,VoIP,4
+iscx_tor,2022,TrafficFormer-pretrained,Chat,Browsing,2
+iscx_tor,2022,TrafficFormer-pretrained,Chat,Chat,37
+iscx_tor,2022,TrafficFormer-pretrained,Chat,Email,0
+iscx_tor,2022,TrafficFormer-pretrained,Chat,File-Transfer,3
+iscx_tor,2022,TrafficFormer-pretrained,Chat,P2P,2
+iscx_tor,2022,TrafficFormer-pretrained,Chat,Streaming,11
+iscx_tor,2022,TrafficFormer-pretrained,Chat,VoIP,9
+iscx_tor,2022,TrafficFormer-pretrained,Email,Browsing,2
+iscx_tor,2022,TrafficFormer-pretrained,Email,Chat,0
+iscx_tor,2022,TrafficFormer-pretrained,Email,Email,52
+iscx_tor,2022,TrafficFormer-pretrained,Email,File-Transfer,0
+iscx_tor,2022,TrafficFormer-pretrained,Email,P2P,0
+iscx_tor,2022,TrafficFormer-pretrained,Email,Streaming,0
+iscx_tor,2022,TrafficFormer-pretrained,Email,VoIP,0
+iscx_tor,2022,TrafficFormer-pretrained,File-Transfer,Browsing,0
+iscx_tor,2022,TrafficFormer-pretrained,File-Transfer,Chat,1
+iscx_tor,2022,TrafficFormer-pretrained,File-Transfer,Email,0
+iscx_tor,2022,TrafficFormer-pretrained,File-Transfer,File-Transfer,186
+iscx_tor,2022,TrafficFormer-pretrained,File-Transfer,P2P,0
+iscx_tor,2022,TrafficFormer-pretrained,File-Transfer,Streaming,1
+iscx_tor,2022,TrafficFormer-pretrained,File-Transfer,VoIP,12
+iscx_tor,2022,TrafficFormer-pretrained,P2P,Browsing,3
+iscx_tor,2022,TrafficFormer-pretrained,P2P,Chat,1
+iscx_tor,2022,TrafficFormer-pretrained,P2P,Email,0
+iscx_tor,2022,TrafficFormer-pretrained,P2P,File-Transfer,0
+iscx_tor,2022,TrafficFormer-pretrained,P2P,P2P,175
+iscx_tor,2022,TrafficFormer-pretrained,P2P,Streaming,1
+iscx_tor,2022,TrafficFormer-pretrained,P2P,VoIP,20
+iscx_tor,2022,TrafficFormer-pretrained,Streaming,Browsing,29
+iscx_tor,2022,TrafficFormer-pretrained,Streaming,Chat,7
+iscx_tor,2022,TrafficFormer-pretrained,Streaming,Email,2
+iscx_tor,2022,TrafficFormer-pretrained,Streaming,File-Transfer,1
+iscx_tor,2022,TrafficFormer-pretrained,Streaming,P2P,1
+iscx_tor,2022,TrafficFormer-pretrained,Streaming,Streaming,149
+iscx_tor,2022,TrafficFormer-pretrained,Streaming,VoIP,10
+iscx_tor,2022,TrafficFormer-pretrained,VoIP,Browsing,5
+iscx_tor,2022,TrafficFormer-pretrained,VoIP,Chat,6
+iscx_tor,2022,TrafficFormer-pretrained,VoIP,Email,0
+iscx_tor,2022,TrafficFormer-pretrained,VoIP,File-Transfer,5
+iscx_tor,2022,TrafficFormer-pretrained,VoIP,P2P,7
+iscx_tor,2022,TrafficFormer-pretrained,VoIP,Streaming,9
+iscx_tor,2022,TrafficFormer-pretrained,VoIP,VoIP,168
+iscx_tor,2023,TrafficFormer-pretrained,Browsing,Browsing,169
+iscx_tor,2023,TrafficFormer-pretrained,Browsing,Chat,6
+iscx_tor,2023,TrafficFormer-pretrained,Browsing,Email,0
+iscx_tor,2023,TrafficFormer-pretrained,Browsing,File-Transfer,0
+iscx_tor,2023,TrafficFormer-pretrained,Browsing,P2P,0
+iscx_tor,2023,TrafficFormer-pretrained,Browsing,Streaming,19
+iscx_tor,2023,TrafficFormer-pretrained,Browsing,VoIP,6
+iscx_tor,2023,TrafficFormer-pretrained,Chat,Browsing,3
+iscx_tor,2023,TrafficFormer-pretrained,Chat,Chat,39
+iscx_tor,2023,TrafficFormer-pretrained,Chat,Email,1
+iscx_tor,2023,TrafficFormer-pretrained,Chat,File-Transfer,1
+iscx_tor,2023,TrafficFormer-pretrained,Chat,P2P,3
+iscx_tor,2023,TrafficFormer-pretrained,Chat,Streaming,3
+iscx_tor,2023,TrafficFormer-pretrained,Chat,VoIP,14
+iscx_tor,2023,TrafficFormer-pretrained,Email,Browsing,2
+iscx_tor,2023,TrafficFormer-pretrained,Email,Chat,0
+iscx_tor,2023,TrafficFormer-pretrained,Email,Email,51
+iscx_tor,2023,TrafficFormer-pretrained,Email,File-Transfer,0
+iscx_tor,2023,TrafficFormer-pretrained,Email,P2P,0
+iscx_tor,2023,TrafficFormer-pretrained,Email,Streaming,0
+iscx_tor,2023,TrafficFormer-pretrained,Email,VoIP,1
+iscx_tor,2023,TrafficFormer-pretrained,File-Transfer,Browsing,0
+iscx_tor,2023,TrafficFormer-pretrained,File-Transfer,Chat,4
+iscx_tor,2023,TrafficFormer-pretrained,File-Transfer,Email,0
+iscx_tor,2023,TrafficFormer-pretrained,File-Transfer,File-Transfer,183
+iscx_tor,2023,TrafficFormer-pretrained,File-Transfer,P2P,1
+iscx_tor,2023,TrafficFormer-pretrained,File-Transfer,Streaming,0
+iscx_tor,2023,TrafficFormer-pretrained,File-Transfer,VoIP,12
+iscx_tor,2023,TrafficFormer-pretrained,P2P,Browsing,3
+iscx_tor,2023,TrafficFormer-pretrained,P2P,Chat,1
+iscx_tor,2023,TrafficFormer-pretrained,P2P,Email,0
+iscx_tor,2023,TrafficFormer-pretrained,P2P,File-Transfer,1
+iscx_tor,2023,TrafficFormer-pretrained,P2P,P2P,180
+iscx_tor,2023,TrafficFormer-pretrained,P2P,Streaming,3
+iscx_tor,2023,TrafficFormer-pretrained,P2P,VoIP,12
+iscx_tor,2023,TrafficFormer-pretrained,Streaming,Browsing,28
+iscx_tor,2023,TrafficFormer-pretrained,Streaming,Chat,13
+iscx_tor,2023,TrafficFormer-pretrained,Streaming,Email,1
+iscx_tor,2023,TrafficFormer-pretrained,Streaming,File-Transfer,0
+iscx_tor,2023,TrafficFormer-pretrained,Streaming,P2P,1
+iscx_tor,2023,TrafficFormer-pretrained,Streaming,Streaming,144
+iscx_tor,2023,TrafficFormer-pretrained,Streaming,VoIP,12
+iscx_tor,2023,TrafficFormer-pretrained,VoIP,Browsing,10
+iscx_tor,2023,TrafficFormer-pretrained,VoIP,Chat,11
+iscx_tor,2023,TrafficFormer-pretrained,VoIP,Email,0
+iscx_tor,2023,TrafficFormer-pretrained,VoIP,File-Transfer,2
+iscx_tor,2023,TrafficFormer-pretrained,VoIP,P2P,15
+iscx_tor,2023,TrafficFormer-pretrained,VoIP,Streaming,6
+iscx_tor,2023,TrafficFormer-pretrained,VoIP,VoIP,156
+iscx_tor,2022,YaTC-official-pretrained-Stage20,Browsing,Browsing,176
+iscx_tor,2022,YaTC-official-pretrained-Stage20,Browsing,Chat,2
+iscx_tor,2022,YaTC-official-pretrained-Stage20,Browsing,Email,2
+iscx_tor,2022,YaTC-official-pretrained-Stage20,Browsing,File-Transfer,0
+iscx_tor,2022,YaTC-official-pretrained-Stage20,Browsing,P2P,1
+iscx_tor,2022,YaTC-official-pretrained-Stage20,Browsing,Streaming,13
+iscx_tor,2022,YaTC-official-pretrained-Stage20,Browsing,VoIP,6
+iscx_tor,2022,YaTC-official-pretrained-Stage20,Chat,Browsing,1
+iscx_tor,2022,YaTC-official-pretrained-Stage20,Chat,Chat,37
+iscx_tor,2022,YaTC-official-pretrained-Stage20,Chat,Email,1
+iscx_tor,2022,YaTC-official-pretrained-Stage20,Chat,File-Transfer,0
+iscx_tor,2022,YaTC-official-pretrained-Stage20,Chat,P2P,2
+iscx_tor,2022,YaTC-official-pretrained-Stage20,Chat,Streaming,9
+iscx_tor,2022,YaTC-official-pretrained-Stage20,Chat,VoIP,14
+iscx_tor,2022,YaTC-official-pretrained-Stage20,Email,Browsing,2
+iscx_tor,2022,YaTC-official-pretrained-Stage20,Email,Chat,0
+iscx_tor,2022,YaTC-official-pretrained-Stage20,Email,Email,51
+iscx_tor,2022,YaTC-official-pretrained-Stage20,Email,File-Transfer,0
+iscx_tor,2022,YaTC-official-pretrained-Stage20,Email,P2P,0
+iscx_tor,2022,YaTC-official-pretrained-Stage20,Email,Streaming,1
+iscx_tor,2022,YaTC-official-pretrained-Stage20,Email,VoIP,0
+iscx_tor,2022,YaTC-official-pretrained-Stage20,File-Transfer,Browsing,0
+iscx_tor,2022,YaTC-official-pretrained-Stage20,File-Transfer,Chat,0
+iscx_tor,2022,YaTC-official-pretrained-Stage20,File-Transfer,Email,0
+iscx_tor,2022,YaTC-official-pretrained-Stage20,File-Transfer,File-Transfer,191
+iscx_tor,2022,YaTC-official-pretrained-Stage20,File-Transfer,P2P,2
+iscx_tor,2022,YaTC-official-pretrained-Stage20,File-Transfer,Streaming,1
+iscx_tor,2022,YaTC-official-pretrained-Stage20,File-Transfer,VoIP,6
+iscx_tor,2022,YaTC-official-pretrained-Stage20,P2P,Browsing,3
+iscx_tor,2022,YaTC-official-pretrained-Stage20,P2P,Chat,0
+iscx_tor,2022,YaTC-official-pretrained-Stage20,P2P,Email,0
+iscx_tor,2022,YaTC-official-pretrained-Stage20,P2P,File-Transfer,1
+iscx_tor,2022,YaTC-official-pretrained-Stage20,P2P,P2P,182
+iscx_tor,2022,YaTC-official-pretrained-Stage20,P2P,Streaming,1
+iscx_tor,2022,YaTC-official-pretrained-Stage20,P2P,VoIP,13
+iscx_tor,2022,YaTC-official-pretrained-Stage20,Streaming,Browsing,18
+iscx_tor,2022,YaTC-official-pretrained-Stage20,Streaming,Chat,5
+iscx_tor,2022,YaTC-official-pretrained-Stage20,Streaming,Email,2
+iscx_tor,2022,YaTC-official-pretrained-Stage20,Streaming,File-Transfer,1
+iscx_tor,2022,YaTC-official-pretrained-Stage20,Streaming,P2P,0
+iscx_tor,2022,YaTC-official-pretrained-Stage20,Streaming,Streaming,152
+iscx_tor,2022,YaTC-official-pretrained-Stage20,Streaming,VoIP,21
+iscx_tor,2022,YaTC-official-pretrained-Stage20,VoIP,Browsing,4
+iscx_tor,2022,YaTC-official-pretrained-Stage20,VoIP,Chat,12
+iscx_tor,2022,YaTC-official-pretrained-Stage20,VoIP,Email,1
+iscx_tor,2022,YaTC-official-pretrained-Stage20,VoIP,File-Transfer,3
+iscx_tor,2022,YaTC-official-pretrained-Stage20,VoIP,P2P,12
+iscx_tor,2022,YaTC-official-pretrained-Stage20,VoIP,Streaming,16
+iscx_tor,2022,YaTC-official-pretrained-Stage20,VoIP,VoIP,152
+iscx_tor,2023,YaTC-official-pretrained-Stage20,Browsing,Browsing,179
+iscx_tor,2023,YaTC-official-pretrained-Stage20,Browsing,Chat,7
+iscx_tor,2023,YaTC-official-pretrained-Stage20,Browsing,Email,1
+iscx_tor,2023,YaTC-official-pretrained-Stage20,Browsing,File-Transfer,0
+iscx_tor,2023,YaTC-official-pretrained-Stage20,Browsing,P2P,1
+iscx_tor,2023,YaTC-official-pretrained-Stage20,Browsing,Streaming,8
+iscx_tor,2023,YaTC-official-pretrained-Stage20,Browsing,VoIP,4
+iscx_tor,2023,YaTC-official-pretrained-Stage20,Chat,Browsing,4
+iscx_tor,2023,YaTC-official-pretrained-Stage20,Chat,Chat,35
+iscx_tor,2023,YaTC-official-pretrained-Stage20,Chat,Email,1
+iscx_tor,2023,YaTC-official-pretrained-Stage20,Chat,File-Transfer,0
+iscx_tor,2023,YaTC-official-pretrained-Stage20,Chat,P2P,0
+iscx_tor,2023,YaTC-official-pretrained-Stage20,Chat,Streaming,6
+iscx_tor,2023,YaTC-official-pretrained-Stage20,Chat,VoIP,18
+iscx_tor,2023,YaTC-official-pretrained-Stage20,Email,Browsing,1
+iscx_tor,2023,YaTC-official-pretrained-Stage20,Email,Chat,0
+iscx_tor,2023,YaTC-official-pretrained-Stage20,Email,Email,52
+iscx_tor,2023,YaTC-official-pretrained-Stage20,Email,File-Transfer,0
+iscx_tor,2023,YaTC-official-pretrained-Stage20,Email,P2P,0
+iscx_tor,2023,YaTC-official-pretrained-Stage20,Email,Streaming,1
+iscx_tor,2023,YaTC-official-pretrained-Stage20,Email,VoIP,0
+iscx_tor,2023,YaTC-official-pretrained-Stage20,File-Transfer,Browsing,1
+iscx_tor,2023,YaTC-official-pretrained-Stage20,File-Transfer,Chat,0
+iscx_tor,2023,YaTC-official-pretrained-Stage20,File-Transfer,Email,0
+iscx_tor,2023,YaTC-official-pretrained-Stage20,File-Transfer,File-Transfer,195
+iscx_tor,2023,YaTC-official-pretrained-Stage20,File-Transfer,P2P,1
+iscx_tor,2023,YaTC-official-pretrained-Stage20,File-Transfer,Streaming,1
+iscx_tor,2023,YaTC-official-pretrained-Stage20,File-Transfer,VoIP,2
+iscx_tor,2023,YaTC-official-pretrained-Stage20,P2P,Browsing,2
+iscx_tor,2023,YaTC-official-pretrained-Stage20,P2P,Chat,0
+iscx_tor,2023,YaTC-official-pretrained-Stage20,P2P,Email,0
+iscx_tor,2023,YaTC-official-pretrained-Stage20,P2P,File-Transfer,0
+iscx_tor,2023,YaTC-official-pretrained-Stage20,P2P,P2P,183
+iscx_tor,2023,YaTC-official-pretrained-Stage20,P2P,Streaming,0
+iscx_tor,2023,YaTC-official-pretrained-Stage20,P2P,VoIP,15
+iscx_tor,2023,YaTC-official-pretrained-Stage20,Streaming,Browsing,17
+iscx_tor,2023,YaTC-official-pretrained-Stage20,Streaming,Chat,7
+iscx_tor,2023,YaTC-official-pretrained-Stage20,Streaming,Email,1
+iscx_tor,2023,YaTC-official-pretrained-Stage20,Streaming,File-Transfer,1
+iscx_tor,2023,YaTC-official-pretrained-Stage20,Streaming,P2P,0
+iscx_tor,2023,YaTC-official-pretrained-Stage20,Streaming,Streaming,153
+iscx_tor,2023,YaTC-official-pretrained-Stage20,Streaming,VoIP,20
+iscx_tor,2023,YaTC-official-pretrained-Stage20,VoIP,Browsing,5
+iscx_tor,2023,YaTC-official-pretrained-Stage20,VoIP,Chat,15
+iscx_tor,2023,YaTC-official-pretrained-Stage20,VoIP,Email,1
+iscx_tor,2023,YaTC-official-pretrained-Stage20,VoIP,File-Transfer,2
+iscx_tor,2023,YaTC-official-pretrained-Stage20,VoIP,P2P,12
+iscx_tor,2023,YaTC-official-pretrained-Stage20,VoIP,Streaming,18
+iscx_tor,2023,YaTC-official-pretrained-Stage20,VoIP,VoIP,147
+iscx_tor,2022,Open-Detect corrected-paper,Browsing,Browsing,145
+iscx_tor,2022,Open-Detect corrected-paper,Browsing,Chat,0
+iscx_tor,2022,Open-Detect corrected-paper,Browsing,Email,5
+iscx_tor,2022,Open-Detect corrected-paper,Browsing,File-Transfer,0
+iscx_tor,2022,Open-Detect corrected-paper,Browsing,P2P,1
+iscx_tor,2022,Open-Detect corrected-paper,Browsing,Streaming,39
+iscx_tor,2022,Open-Detect corrected-paper,Browsing,VoIP,10
+iscx_tor,2022,Open-Detect corrected-paper,Chat,Browsing,6
+iscx_tor,2022,Open-Detect corrected-paper,Chat,Chat,12
+iscx_tor,2022,Open-Detect corrected-paper,Chat,Email,1
+iscx_tor,2022,Open-Detect corrected-paper,Chat,File-Transfer,0
+iscx_tor,2022,Open-Detect corrected-paper,Chat,P2P,2
+iscx_tor,2022,Open-Detect corrected-paper,Chat,Streaming,27
+iscx_tor,2022,Open-Detect corrected-paper,Chat,VoIP,16
+iscx_tor,2022,Open-Detect corrected-paper,Email,Browsing,5
+iscx_tor,2022,Open-Detect corrected-paper,Email,Chat,0
+iscx_tor,2022,Open-Detect corrected-paper,Email,Email,47
+iscx_tor,2022,Open-Detect corrected-paper,Email,File-Transfer,0
+iscx_tor,2022,Open-Detect corrected-paper,Email,P2P,0
+iscx_tor,2022,Open-Detect corrected-paper,Email,Streaming,1
+iscx_tor,2022,Open-Detect corrected-paper,Email,VoIP,1
+iscx_tor,2022,Open-Detect corrected-paper,File-Transfer,Browsing,3
+iscx_tor,2022,Open-Detect corrected-paper,File-Transfer,Chat,1
+iscx_tor,2022,Open-Detect corrected-paper,File-Transfer,Email,3
+iscx_tor,2022,Open-Detect corrected-paper,File-Transfer,File-Transfer,171
+iscx_tor,2022,Open-Detect corrected-paper,File-Transfer,P2P,3
+iscx_tor,2022,Open-Detect corrected-paper,File-Transfer,Streaming,1
+iscx_tor,2022,Open-Detect corrected-paper,File-Transfer,VoIP,18
+iscx_tor,2022,Open-Detect corrected-paper,P2P,Browsing,2
+iscx_tor,2022,Open-Detect corrected-paper,P2P,Chat,2
+iscx_tor,2022,Open-Detect corrected-paper,P2P,Email,0
+iscx_tor,2022,Open-Detect corrected-paper,P2P,File-Transfer,1
+iscx_tor,2022,Open-Detect corrected-paper,P2P,P2P,171
+iscx_tor,2022,Open-Detect corrected-paper,P2P,Streaming,3
+iscx_tor,2022,Open-Detect corrected-paper,P2P,VoIP,21
+iscx_tor,2022,Open-Detect corrected-paper,Streaming,Browsing,31
+iscx_tor,2022,Open-Detect corrected-paper,Streaming,Chat,4
+iscx_tor,2022,Open-Detect corrected-paper,Streaming,Email,4
+iscx_tor,2022,Open-Detect corrected-paper,Streaming,File-Transfer,2
+iscx_tor,2022,Open-Detect corrected-paper,Streaming,P2P,0
+iscx_tor,2022,Open-Detect corrected-paper,Streaming,Streaming,141
+iscx_tor,2022,Open-Detect corrected-paper,Streaming,VoIP,17
+iscx_tor,2022,Open-Detect corrected-paper,VoIP,Browsing,5
+iscx_tor,2022,Open-Detect corrected-paper,VoIP,Chat,5
+iscx_tor,2022,Open-Detect corrected-paper,VoIP,Email,0
+iscx_tor,2022,Open-Detect corrected-paper,VoIP,File-Transfer,7
+iscx_tor,2022,Open-Detect corrected-paper,VoIP,P2P,34
+iscx_tor,2022,Open-Detect corrected-paper,VoIP,Streaming,41
+iscx_tor,2022,Open-Detect corrected-paper,VoIP,VoIP,108
+iscx_tor,2023,Open-Detect corrected-paper,Browsing,Browsing,134
+iscx_tor,2023,Open-Detect corrected-paper,Browsing,Chat,0
+iscx_tor,2023,Open-Detect corrected-paper,Browsing,Email,10
+iscx_tor,2023,Open-Detect corrected-paper,Browsing,File-Transfer,23
+iscx_tor,2023,Open-Detect corrected-paper,Browsing,P2P,7
+iscx_tor,2023,Open-Detect corrected-paper,Browsing,Streaming,25
+iscx_tor,2023,Open-Detect corrected-paper,Browsing,VoIP,1
+iscx_tor,2023,Open-Detect corrected-paper,Chat,Browsing,19
+iscx_tor,2023,Open-Detect corrected-paper,Chat,Chat,1
+iscx_tor,2023,Open-Detect corrected-paper,Chat,Email,0
+iscx_tor,2023,Open-Detect corrected-paper,Chat,File-Transfer,9
+iscx_tor,2023,Open-Detect corrected-paper,Chat,P2P,5
+iscx_tor,2023,Open-Detect corrected-paper,Chat,Streaming,14
+iscx_tor,2023,Open-Detect corrected-paper,Chat,VoIP,16
+iscx_tor,2023,Open-Detect corrected-paper,Email,Browsing,18
+iscx_tor,2023,Open-Detect corrected-paper,Email,Chat,0
+iscx_tor,2023,Open-Detect corrected-paper,Email,Email,25
+iscx_tor,2023,Open-Detect corrected-paper,Email,File-Transfer,0
+iscx_tor,2023,Open-Detect corrected-paper,Email,P2P,5
+iscx_tor,2023,Open-Detect corrected-paper,Email,Streaming,4
+iscx_tor,2023,Open-Detect corrected-paper,Email,VoIP,2
+iscx_tor,2023,Open-Detect corrected-paper,File-Transfer,Browsing,45
+iscx_tor,2023,Open-Detect corrected-paper,File-Transfer,Chat,0
+iscx_tor,2023,Open-Detect corrected-paper,File-Transfer,Email,0
+iscx_tor,2023,Open-Detect corrected-paper,File-Transfer,File-Transfer,125
+iscx_tor,2023,Open-Detect corrected-paper,File-Transfer,P2P,10
+iscx_tor,2023,Open-Detect corrected-paper,File-Transfer,Streaming,1
+iscx_tor,2023,Open-Detect corrected-paper,File-Transfer,VoIP,19
+iscx_tor,2023,Open-Detect corrected-paper,P2P,Browsing,7
+iscx_tor,2023,Open-Detect corrected-paper,P2P,Chat,0
+iscx_tor,2023,Open-Detect corrected-paper,P2P,Email,0
+iscx_tor,2023,Open-Detect corrected-paper,P2P,File-Transfer,4
+iscx_tor,2023,Open-Detect corrected-paper,P2P,P2P,171
+iscx_tor,2023,Open-Detect corrected-paper,P2P,Streaming,0
+iscx_tor,2023,Open-Detect corrected-paper,P2P,VoIP,18
+iscx_tor,2023,Open-Detect corrected-paper,Streaming,Browsing,89
+iscx_tor,2023,Open-Detect corrected-paper,Streaming,Chat,2
+iscx_tor,2023,Open-Detect corrected-paper,Streaming,Email,4
+iscx_tor,2023,Open-Detect corrected-paper,Streaming,File-Transfer,19
+iscx_tor,2023,Open-Detect corrected-paper,Streaming,P2P,5
+iscx_tor,2023,Open-Detect corrected-paper,Streaming,Streaming,66
+iscx_tor,2023,Open-Detect corrected-paper,Streaming,VoIP,14
+iscx_tor,2023,Open-Detect corrected-paper,VoIP,Browsing,21
+iscx_tor,2023,Open-Detect corrected-paper,VoIP,Chat,1
+iscx_tor,2023,Open-Detect corrected-paper,VoIP,Email,0
+iscx_tor,2023,Open-Detect corrected-paper,VoIP,File-Transfer,28
+iscx_tor,2023,Open-Detect corrected-paper,VoIP,P2P,43
+iscx_tor,2023,Open-Detect corrected-paper,VoIP,Streaming,20
+iscx_tor,2023,Open-Detect corrected-paper,VoIP,VoIP,87
+iscx_tor,2022,RoNeTC-runnable-reconstruction,Browsing,Browsing,141
+iscx_tor,2022,RoNeTC-runnable-reconstruction,Browsing,Chat,3
+iscx_tor,2022,RoNeTC-runnable-reconstruction,Browsing,Email,1
+iscx_tor,2022,RoNeTC-runnable-reconstruction,Browsing,File-Transfer,3
+iscx_tor,2022,RoNeTC-runnable-reconstruction,Browsing,P2P,8
+iscx_tor,2022,RoNeTC-runnable-reconstruction,Browsing,Streaming,37
+iscx_tor,2022,RoNeTC-runnable-reconstruction,Browsing,VoIP,7
+iscx_tor,2022,RoNeTC-runnable-reconstruction,Chat,Browsing,12
+iscx_tor,2022,RoNeTC-runnable-reconstruction,Chat,Chat,10
+iscx_tor,2022,RoNeTC-runnable-reconstruction,Chat,Email,3
+iscx_tor,2022,RoNeTC-runnable-reconstruction,Chat,File-Transfer,2
+iscx_tor,2022,RoNeTC-runnable-reconstruction,Chat,P2P,6
+iscx_tor,2022,RoNeTC-runnable-reconstruction,Chat,Streaming,11
+iscx_tor,2022,RoNeTC-runnable-reconstruction,Chat,VoIP,20
+iscx_tor,2022,RoNeTC-runnable-reconstruction,Email,Browsing,9
+iscx_tor,2022,RoNeTC-runnable-reconstruction,Email,Chat,9
+iscx_tor,2022,RoNeTC-runnable-reconstruction,Email,Email,19
+iscx_tor,2022,RoNeTC-runnable-reconstruction,Email,File-Transfer,0
+iscx_tor,2022,RoNeTC-runnable-reconstruction,Email,P2P,4
+iscx_tor,2022,RoNeTC-runnable-reconstruction,Email,Streaming,8
+iscx_tor,2022,RoNeTC-runnable-reconstruction,Email,VoIP,5
+iscx_tor,2022,RoNeTC-runnable-reconstruction,File-Transfer,Browsing,1
+iscx_tor,2022,RoNeTC-runnable-reconstruction,File-Transfer,Chat,6
+iscx_tor,2022,RoNeTC-runnable-reconstruction,File-Transfer,Email,0
+iscx_tor,2022,RoNeTC-runnable-reconstruction,File-Transfer,File-Transfer,154
+iscx_tor,2022,RoNeTC-runnable-reconstruction,File-Transfer,P2P,14
+iscx_tor,2022,RoNeTC-runnable-reconstruction,File-Transfer,Streaming,2
+iscx_tor,2022,RoNeTC-runnable-reconstruction,File-Transfer,VoIP,23
+iscx_tor,2022,RoNeTC-runnable-reconstruction,P2P,Browsing,6
+iscx_tor,2022,RoNeTC-runnable-reconstruction,P2P,Chat,2
+iscx_tor,2022,RoNeTC-runnable-reconstruction,P2P,Email,1
+iscx_tor,2022,RoNeTC-runnable-reconstruction,P2P,File-Transfer,13
+iscx_tor,2022,RoNeTC-runnable-reconstruction,P2P,P2P,146
+iscx_tor,2022,RoNeTC-runnable-reconstruction,P2P,Streaming,2
+iscx_tor,2022,RoNeTC-runnable-reconstruction,P2P,VoIP,30
+iscx_tor,2022,RoNeTC-runnable-reconstruction,Streaming,Browsing,35
+iscx_tor,2022,RoNeTC-runnable-reconstruction,Streaming,Chat,8
+iscx_tor,2022,RoNeTC-runnable-reconstruction,Streaming,Email,3
+iscx_tor,2022,RoNeTC-runnable-reconstruction,Streaming,File-Transfer,8
+iscx_tor,2022,RoNeTC-runnable-reconstruction,Streaming,P2P,10
+iscx_tor,2022,RoNeTC-runnable-reconstruction,Streaming,Streaming,110
+iscx_tor,2022,RoNeTC-runnable-reconstruction,Streaming,VoIP,25
+iscx_tor,2022,RoNeTC-runnable-reconstruction,VoIP,Browsing,6
+iscx_tor,2022,RoNeTC-runnable-reconstruction,VoIP,Chat,11
+iscx_tor,2022,RoNeTC-runnable-reconstruction,VoIP,Email,0
+iscx_tor,2022,RoNeTC-runnable-reconstruction,VoIP,File-Transfer,13
+iscx_tor,2022,RoNeTC-runnable-reconstruction,VoIP,P2P,29
+iscx_tor,2022,RoNeTC-runnable-reconstruction,VoIP,Streaming,34
+iscx_tor,2022,RoNeTC-runnable-reconstruction,VoIP,VoIP,107
+iscx_tor,2023,RoNeTC-runnable-reconstruction,Browsing,Browsing,142
+iscx_tor,2023,RoNeTC-runnable-reconstruction,Browsing,Chat,0
+iscx_tor,2023,RoNeTC-runnable-reconstruction,Browsing,Email,0
+iscx_tor,2023,RoNeTC-runnable-reconstruction,Browsing,File-Transfer,6
+iscx_tor,2023,RoNeTC-runnable-reconstruction,Browsing,P2P,11
+iscx_tor,2023,RoNeTC-runnable-reconstruction,Browsing,Streaming,28
+iscx_tor,2023,RoNeTC-runnable-reconstruction,Browsing,VoIP,13
+iscx_tor,2023,RoNeTC-runnable-reconstruction,Chat,Browsing,7
+iscx_tor,2023,RoNeTC-runnable-reconstruction,Chat,Chat,0
+iscx_tor,2023,RoNeTC-runnable-reconstruction,Chat,Email,1
+iscx_tor,2023,RoNeTC-runnable-reconstruction,Chat,File-Transfer,7
+iscx_tor,2023,RoNeTC-runnable-reconstruction,Chat,P2P,9
+iscx_tor,2023,RoNeTC-runnable-reconstruction,Chat,Streaming,16
+iscx_tor,2023,RoNeTC-runnable-reconstruction,Chat,VoIP,24
+iscx_tor,2023,RoNeTC-runnable-reconstruction,Email,Browsing,5
+iscx_tor,2023,RoNeTC-runnable-reconstruction,Email,Chat,0
+iscx_tor,2023,RoNeTC-runnable-reconstruction,Email,Email,20
+iscx_tor,2023,RoNeTC-runnable-reconstruction,Email,File-Transfer,1
+iscx_tor,2023,RoNeTC-runnable-reconstruction,Email,P2P,11
+iscx_tor,2023,RoNeTC-runnable-reconstruction,Email,Streaming,7
+iscx_tor,2023,RoNeTC-runnable-reconstruction,Email,VoIP,10
+iscx_tor,2023,RoNeTC-runnable-reconstruction,File-Transfer,Browsing,3
+iscx_tor,2023,RoNeTC-runnable-reconstruction,File-Transfer,Chat,0
+iscx_tor,2023,RoNeTC-runnable-reconstruction,File-Transfer,Email,0
+iscx_tor,2023,RoNeTC-runnable-reconstruction,File-Transfer,File-Transfer,143
+iscx_tor,2023,RoNeTC-runnable-reconstruction,File-Transfer,P2P,18
+iscx_tor,2023,RoNeTC-runnable-reconstruction,File-Transfer,Streaming,6
+iscx_tor,2023,RoNeTC-runnable-reconstruction,File-Transfer,VoIP,30
+iscx_tor,2023,RoNeTC-runnable-reconstruction,P2P,Browsing,6
+iscx_tor,2023,RoNeTC-runnable-reconstruction,P2P,Chat,0
+iscx_tor,2023,RoNeTC-runnable-reconstruction,P2P,Email,0
+iscx_tor,2023,RoNeTC-runnable-reconstruction,P2P,File-Transfer,25
+iscx_tor,2023,RoNeTC-runnable-reconstruction,P2P,P2P,135
+iscx_tor,2023,RoNeTC-runnable-reconstruction,P2P,Streaming,6
+iscx_tor,2023,RoNeTC-runnable-reconstruction,P2P,VoIP,28
+iscx_tor,2023,RoNeTC-runnable-reconstruction,Streaming,Browsing,29
+iscx_tor,2023,RoNeTC-runnable-reconstruction,Streaming,Chat,0
+iscx_tor,2023,RoNeTC-runnable-reconstruction,Streaming,Email,2
+iscx_tor,2023,RoNeTC-runnable-reconstruction,Streaming,File-Transfer,11
+iscx_tor,2023,RoNeTC-runnable-reconstruction,Streaming,P2P,16
+iscx_tor,2023,RoNeTC-runnable-reconstruction,Streaming,Streaming,110
+iscx_tor,2023,RoNeTC-runnable-reconstruction,Streaming,VoIP,31
+iscx_tor,2023,RoNeTC-runnable-reconstruction,VoIP,Browsing,10
+iscx_tor,2023,RoNeTC-runnable-reconstruction,VoIP,Chat,0
+iscx_tor,2023,RoNeTC-runnable-reconstruction,VoIP,Email,0
+iscx_tor,2023,RoNeTC-runnable-reconstruction,VoIP,File-Transfer,30
+iscx_tor,2023,RoNeTC-runnable-reconstruction,VoIP,P2P,24
+iscx_tor,2023,RoNeTC-runnable-reconstruction,VoIP,Streaming,23
+iscx_tor,2023,RoNeTC-runnable-reconstruction,VoIP,VoIP,113
+iscx_tor,2022,TFE-GNN-8-UDP-short,Browsing,Browsing,150
+iscx_tor,2022,TFE-GNN-8-UDP-short,Browsing,Chat,0
+iscx_tor,2022,TFE-GNN-8-UDP-short,Browsing,Email,19
+iscx_tor,2022,TFE-GNN-8-UDP-short,Browsing,File-Transfer,1
+iscx_tor,2022,TFE-GNN-8-UDP-short,Browsing,P2P,5
+iscx_tor,2022,TFE-GNN-8-UDP-short,Browsing,Streaming,20
+iscx_tor,2022,TFE-GNN-8-UDP-short,Browsing,VoIP,5
+iscx_tor,2022,TFE-GNN-8-UDP-short,Chat,Browsing,27
+iscx_tor,2022,TFE-GNN-8-UDP-short,Chat,Chat,2
+iscx_tor,2022,TFE-GNN-8-UDP-short,Chat,Email,1
+iscx_tor,2022,TFE-GNN-8-UDP-short,Chat,File-Transfer,2
+iscx_tor,2022,TFE-GNN-8-UDP-short,Chat,P2P,0
+iscx_tor,2022,TFE-GNN-8-UDP-short,Chat,Streaming,9
+iscx_tor,2022,TFE-GNN-8-UDP-short,Chat,VoIP,23
+iscx_tor,2022,TFE-GNN-8-UDP-short,Email,Browsing,7
+iscx_tor,2022,TFE-GNN-8-UDP-short,Email,Chat,0
+iscx_tor,2022,TFE-GNN-8-UDP-short,Email,Email,46
+iscx_tor,2022,TFE-GNN-8-UDP-short,Email,File-Transfer,0
+iscx_tor,2022,TFE-GNN-8-UDP-short,Email,P2P,0
+iscx_tor,2022,TFE-GNN-8-UDP-short,Email,Streaming,1
+iscx_tor,2022,TFE-GNN-8-UDP-short,Email,VoIP,0
+iscx_tor,2022,TFE-GNN-8-UDP-short,File-Transfer,Browsing,3
+iscx_tor,2022,TFE-GNN-8-UDP-short,File-Transfer,Chat,0
+iscx_tor,2022,TFE-GNN-8-UDP-short,File-Transfer,Email,2
+iscx_tor,2022,TFE-GNN-8-UDP-short,File-Transfer,File-Transfer,173
+iscx_tor,2022,TFE-GNN-8-UDP-short,File-Transfer,P2P,6
+iscx_tor,2022,TFE-GNN-8-UDP-short,File-Transfer,Streaming,1
+iscx_tor,2022,TFE-GNN-8-UDP-short,File-Transfer,VoIP,15
+iscx_tor,2022,TFE-GNN-8-UDP-short,P2P,Browsing,20
+iscx_tor,2022,TFE-GNN-8-UDP-short,P2P,Chat,0
+iscx_tor,2022,TFE-GNN-8-UDP-short,P2P,Email,1
+iscx_tor,2022,TFE-GNN-8-UDP-short,P2P,File-Transfer,25
+iscx_tor,2022,TFE-GNN-8-UDP-short,P2P,P2P,136
+iscx_tor,2022,TFE-GNN-8-UDP-short,P2P,Streaming,12
+iscx_tor,2022,TFE-GNN-8-UDP-short,P2P,VoIP,6
+iscx_tor,2022,TFE-GNN-8-UDP-short,Streaming,Browsing,86
+iscx_tor,2022,TFE-GNN-8-UDP-short,Streaming,Chat,1
+iscx_tor,2022,TFE-GNN-8-UDP-short,Streaming,Email,7
+iscx_tor,2022,TFE-GNN-8-UDP-short,Streaming,File-Transfer,4
+iscx_tor,2022,TFE-GNN-8-UDP-short,Streaming,P2P,12
+iscx_tor,2022,TFE-GNN-8-UDP-short,Streaming,Streaming,67
+iscx_tor,2022,TFE-GNN-8-UDP-short,Streaming,VoIP,22
+iscx_tor,2022,TFE-GNN-8-UDP-short,VoIP,Browsing,43
+iscx_tor,2022,TFE-GNN-8-UDP-short,VoIP,Chat,2
+iscx_tor,2022,TFE-GNN-8-UDP-short,VoIP,Email,4
+iscx_tor,2022,TFE-GNN-8-UDP-short,VoIP,File-Transfer,22
+iscx_tor,2022,TFE-GNN-8-UDP-short,VoIP,P2P,10
+iscx_tor,2022,TFE-GNN-8-UDP-short,VoIP,Streaming,23
+iscx_tor,2022,TFE-GNN-8-UDP-short,VoIP,VoIP,96
+iscx_tor,2023,TFE-GNN-8-UDP-short,Browsing,Browsing,151
+iscx_tor,2023,TFE-GNN-8-UDP-short,Browsing,Chat,1
+iscx_tor,2023,TFE-GNN-8-UDP-short,Browsing,Email,1
+iscx_tor,2023,TFE-GNN-8-UDP-short,Browsing,File-Transfer,2
+iscx_tor,2023,TFE-GNN-8-UDP-short,Browsing,P2P,8
+iscx_tor,2023,TFE-GNN-8-UDP-short,Browsing,Streaming,27
+iscx_tor,2023,TFE-GNN-8-UDP-short,Browsing,VoIP,10
+iscx_tor,2023,TFE-GNN-8-UDP-short,Chat,Browsing,21
+iscx_tor,2023,TFE-GNN-8-UDP-short,Chat,Chat,7
+iscx_tor,2023,TFE-GNN-8-UDP-short,Chat,Email,0
+iscx_tor,2023,TFE-GNN-8-UDP-short,Chat,File-Transfer,1
+iscx_tor,2023,TFE-GNN-8-UDP-short,Chat,P2P,3
+iscx_tor,2023,TFE-GNN-8-UDP-short,Chat,Streaming,16
+iscx_tor,2023,TFE-GNN-8-UDP-short,Chat,VoIP,16
+iscx_tor,2023,TFE-GNN-8-UDP-short,Email,Browsing,22
+iscx_tor,2023,TFE-GNN-8-UDP-short,Email,Chat,0
+iscx_tor,2023,TFE-GNN-8-UDP-short,Email,Email,31
+iscx_tor,2023,TFE-GNN-8-UDP-short,Email,File-Transfer,0
+iscx_tor,2023,TFE-GNN-8-UDP-short,Email,P2P,0
+iscx_tor,2023,TFE-GNN-8-UDP-short,Email,Streaming,1
+iscx_tor,2023,TFE-GNN-8-UDP-short,Email,VoIP,0
+iscx_tor,2023,TFE-GNN-8-UDP-short,File-Transfer,Browsing,4
+iscx_tor,2023,TFE-GNN-8-UDP-short,File-Transfer,Chat,0
+iscx_tor,2023,TFE-GNN-8-UDP-short,File-Transfer,Email,0
+iscx_tor,2023,TFE-GNN-8-UDP-short,File-Transfer,File-Transfer,129
+iscx_tor,2023,TFE-GNN-8-UDP-short,File-Transfer,P2P,48
+iscx_tor,2023,TFE-GNN-8-UDP-short,File-Transfer,Streaming,2
+iscx_tor,2023,TFE-GNN-8-UDP-short,File-Transfer,VoIP,17
+iscx_tor,2023,TFE-GNN-8-UDP-short,P2P,Browsing,15
+iscx_tor,2023,TFE-GNN-8-UDP-short,P2P,Chat,1
+iscx_tor,2023,TFE-GNN-8-UDP-short,P2P,Email,0
+iscx_tor,2023,TFE-GNN-8-UDP-short,P2P,File-Transfer,0
+iscx_tor,2023,TFE-GNN-8-UDP-short,P2P,P2P,153
+iscx_tor,2023,TFE-GNN-8-UDP-short,P2P,Streaming,21
+iscx_tor,2023,TFE-GNN-8-UDP-short,P2P,VoIP,10
+iscx_tor,2023,TFE-GNN-8-UDP-short,Streaming,Browsing,78
+iscx_tor,2023,TFE-GNN-8-UDP-short,Streaming,Chat,2
+iscx_tor,2023,TFE-GNN-8-UDP-short,Streaming,Email,2
+iscx_tor,2023,TFE-GNN-8-UDP-short,Streaming,File-Transfer,0
+iscx_tor,2023,TFE-GNN-8-UDP-short,Streaming,P2P,10
+iscx_tor,2023,TFE-GNN-8-UDP-short,Streaming,Streaming,93
+iscx_tor,2023,TFE-GNN-8-UDP-short,Streaming,VoIP,14
+iscx_tor,2023,TFE-GNN-8-UDP-short,VoIP,Browsing,28
+iscx_tor,2023,TFE-GNN-8-UDP-short,VoIP,Chat,3
+iscx_tor,2023,TFE-GNN-8-UDP-short,VoIP,Email,0
+iscx_tor,2023,TFE-GNN-8-UDP-short,VoIP,File-Transfer,1
+iscx_tor,2023,TFE-GNN-8-UDP-short,VoIP,P2P,29
+iscx_tor,2023,TFE-GNN-8-UDP-short,VoIP,Streaming,31
+iscx_tor,2023,TFE-GNN-8-UDP-short,VoIP,VoIP,108
+iscx_tor,2022,Trident-early8-86D,Browsing,Browsing,112
+iscx_tor,2022,Trident-early8-86D,Browsing,Chat,9
+iscx_tor,2022,Trident-early8-86D,Browsing,Email,17
+iscx_tor,2022,Trident-early8-86D,Browsing,File-Transfer,0
+iscx_tor,2022,Trident-early8-86D,Browsing,P2P,10
+iscx_tor,2022,Trident-early8-86D,Browsing,Streaming,36
+iscx_tor,2022,Trident-early8-86D,Browsing,VoIP,16
+iscx_tor,2022,Trident-early8-86D,Chat,Browsing,8
+iscx_tor,2022,Trident-early8-86D,Chat,Chat,19
+iscx_tor,2022,Trident-early8-86D,Chat,Email,1
+iscx_tor,2022,Trident-early8-86D,Chat,File-Transfer,2
+iscx_tor,2022,Trident-early8-86D,Chat,P2P,1
+iscx_tor,2022,Trident-early8-86D,Chat,Streaming,12
+iscx_tor,2022,Trident-early8-86D,Chat,VoIP,21
+iscx_tor,2022,Trident-early8-86D,Email,Browsing,4
+iscx_tor,2022,Trident-early8-86D,Email,Chat,1
+iscx_tor,2022,Trident-early8-86D,Email,Email,47
+iscx_tor,2022,Trident-early8-86D,Email,File-Transfer,0
+iscx_tor,2022,Trident-early8-86D,Email,P2P,1
+iscx_tor,2022,Trident-early8-86D,Email,Streaming,1
+iscx_tor,2022,Trident-early8-86D,Email,VoIP,0
+iscx_tor,2022,Trident-early8-86D,File-Transfer,Browsing,1
+iscx_tor,2022,Trident-early8-86D,File-Transfer,Chat,3
+iscx_tor,2022,Trident-early8-86D,File-Transfer,Email,2
+iscx_tor,2022,Trident-early8-86D,File-Transfer,File-Transfer,169
+iscx_tor,2022,Trident-early8-86D,File-Transfer,P2P,7
+iscx_tor,2022,Trident-early8-86D,File-Transfer,Streaming,1
+iscx_tor,2022,Trident-early8-86D,File-Transfer,VoIP,17
+iscx_tor,2022,Trident-early8-86D,P2P,Browsing,13
+iscx_tor,2022,Trident-early8-86D,P2P,Chat,7
+iscx_tor,2022,Trident-early8-86D,P2P,Email,0
+iscx_tor,2022,Trident-early8-86D,P2P,File-Transfer,25
+iscx_tor,2022,Trident-early8-86D,P2P,P2P,132
+iscx_tor,2022,Trident-early8-86D,P2P,Streaming,9
+iscx_tor,2022,Trident-early8-86D,P2P,VoIP,14
+iscx_tor,2022,Trident-early8-86D,Streaming,Browsing,24
+iscx_tor,2022,Trident-early8-86D,Streaming,Chat,19
+iscx_tor,2022,Trident-early8-86D,Streaming,Email,6
+iscx_tor,2022,Trident-early8-86D,Streaming,File-Transfer,5
+iscx_tor,2022,Trident-early8-86D,Streaming,P2P,9
+iscx_tor,2022,Trident-early8-86D,Streaming,Streaming,127
+iscx_tor,2022,Trident-early8-86D,Streaming,VoIP,9
+iscx_tor,2022,Trident-early8-86D,VoIP,Browsing,11
+iscx_tor,2022,Trident-early8-86D,VoIP,Chat,21
+iscx_tor,2022,Trident-early8-86D,VoIP,Email,6
+iscx_tor,2022,Trident-early8-86D,VoIP,File-Transfer,18
+iscx_tor,2022,Trident-early8-86D,VoIP,P2P,13
+iscx_tor,2022,Trident-early8-86D,VoIP,Streaming,27
+iscx_tor,2022,Trident-early8-86D,VoIP,VoIP,104
+iscx_tor,2023,Trident-early8-86D,Browsing,Browsing,114
+iscx_tor,2023,Trident-early8-86D,Browsing,Chat,14
+iscx_tor,2023,Trident-early8-86D,Browsing,Email,17
+iscx_tor,2023,Trident-early8-86D,Browsing,File-Transfer,0
+iscx_tor,2023,Trident-early8-86D,Browsing,P2P,11
+iscx_tor,2023,Trident-early8-86D,Browsing,Streaming,38
+iscx_tor,2023,Trident-early8-86D,Browsing,VoIP,6
+iscx_tor,2023,Trident-early8-86D,Chat,Browsing,7
+iscx_tor,2023,Trident-early8-86D,Chat,Chat,22
+iscx_tor,2023,Trident-early8-86D,Chat,Email,1
+iscx_tor,2023,Trident-early8-86D,Chat,File-Transfer,3
+iscx_tor,2023,Trident-early8-86D,Chat,P2P,4
+iscx_tor,2023,Trident-early8-86D,Chat,Streaming,12
+iscx_tor,2023,Trident-early8-86D,Chat,VoIP,15
+iscx_tor,2023,Trident-early8-86D,Email,Browsing,6
+iscx_tor,2023,Trident-early8-86D,Email,Chat,2
+iscx_tor,2023,Trident-early8-86D,Email,Email,45
+iscx_tor,2023,Trident-early8-86D,Email,File-Transfer,0
+iscx_tor,2023,Trident-early8-86D,Email,P2P,1
+iscx_tor,2023,Trident-early8-86D,Email,Streaming,0
+iscx_tor,2023,Trident-early8-86D,Email,VoIP,0
+iscx_tor,2023,Trident-early8-86D,File-Transfer,Browsing,2
+iscx_tor,2023,Trident-early8-86D,File-Transfer,Chat,0
+iscx_tor,2023,Trident-early8-86D,File-Transfer,Email,3
+iscx_tor,2023,Trident-early8-86D,File-Transfer,File-Transfer,169
+iscx_tor,2023,Trident-early8-86D,File-Transfer,P2P,9
+iscx_tor,2023,Trident-early8-86D,File-Transfer,Streaming,0
+iscx_tor,2023,Trident-early8-86D,File-Transfer,VoIP,17
+iscx_tor,2023,Trident-early8-86D,P2P,Browsing,13
+iscx_tor,2023,Trident-early8-86D,P2P,Chat,6
+iscx_tor,2023,Trident-early8-86D,P2P,Email,0
+iscx_tor,2023,Trident-early8-86D,P2P,File-Transfer,25
+iscx_tor,2023,Trident-early8-86D,P2P,P2P,140
+iscx_tor,2023,Trident-early8-86D,P2P,Streaming,11
+iscx_tor,2023,Trident-early8-86D,P2P,VoIP,5
+iscx_tor,2023,Trident-early8-86D,Streaming,Browsing,19
+iscx_tor,2023,Trident-early8-86D,Streaming,Chat,20
+iscx_tor,2023,Trident-early8-86D,Streaming,Email,7
+iscx_tor,2023,Trident-early8-86D,Streaming,File-Transfer,5
+iscx_tor,2023,Trident-early8-86D,Streaming,P2P,10
+iscx_tor,2023,Trident-early8-86D,Streaming,Streaming,124
+iscx_tor,2023,Trident-early8-86D,Streaming,VoIP,14
+iscx_tor,2023,Trident-early8-86D,VoIP,Browsing,26
+iscx_tor,2023,Trident-early8-86D,VoIP,Chat,23
+iscx_tor,2023,Trident-early8-86D,VoIP,Email,2
+iscx_tor,2023,Trident-early8-86D,VoIP,File-Transfer,20
+iscx_tor,2023,Trident-early8-86D,VoIP,P2P,15
+iscx_tor,2023,Trident-early8-86D,VoIP,Streaming,24
+iscx_tor,2023,Trident-early8-86D,VoIP,VoIP,90
+iscx_tor,2022,OURS-E3-T8-pretrained,Browsing,Browsing,169
+iscx_tor,2022,OURS-E3-T8-pretrained,Browsing,Chat,7
+iscx_tor,2022,OURS-E3-T8-pretrained,Browsing,Email,0
+iscx_tor,2022,OURS-E3-T8-pretrained,Browsing,File-Transfer,0
+iscx_tor,2022,OURS-E3-T8-pretrained,Browsing,P2P,0
+iscx_tor,2022,OURS-E3-T8-pretrained,Browsing,Streaming,20
+iscx_tor,2022,OURS-E3-T8-pretrained,Browsing,VoIP,4
+iscx_tor,2022,OURS-E3-T8-pretrained,Chat,Browsing,2
+iscx_tor,2022,OURS-E3-T8-pretrained,Chat,Chat,39
+iscx_tor,2022,OURS-E3-T8-pretrained,Chat,Email,0
+iscx_tor,2022,OURS-E3-T8-pretrained,Chat,File-Transfer,3
+iscx_tor,2022,OURS-E3-T8-pretrained,Chat,P2P,2
+iscx_tor,2022,OURS-E3-T8-pretrained,Chat,Streaming,11
+iscx_tor,2022,OURS-E3-T8-pretrained,Chat,VoIP,7
+iscx_tor,2022,OURS-E3-T8-pretrained,Email,Browsing,2
+iscx_tor,2022,OURS-E3-T8-pretrained,Email,Chat,0
+iscx_tor,2022,OURS-E3-T8-pretrained,Email,Email,52
+iscx_tor,2022,OURS-E3-T8-pretrained,Email,File-Transfer,0
+iscx_tor,2022,OURS-E3-T8-pretrained,Email,P2P,0
+iscx_tor,2022,OURS-E3-T8-pretrained,Email,Streaming,0
+iscx_tor,2022,OURS-E3-T8-pretrained,Email,VoIP,0
+iscx_tor,2022,OURS-E3-T8-pretrained,File-Transfer,Browsing,0
+iscx_tor,2022,OURS-E3-T8-pretrained,File-Transfer,Chat,3
+iscx_tor,2022,OURS-E3-T8-pretrained,File-Transfer,Email,0
+iscx_tor,2022,OURS-E3-T8-pretrained,File-Transfer,File-Transfer,185
+iscx_tor,2022,OURS-E3-T8-pretrained,File-Transfer,P2P,0
+iscx_tor,2022,OURS-E3-T8-pretrained,File-Transfer,Streaming,1
+iscx_tor,2022,OURS-E3-T8-pretrained,File-Transfer,VoIP,11
+iscx_tor,2022,OURS-E3-T8-pretrained,P2P,Browsing,3
+iscx_tor,2022,OURS-E3-T8-pretrained,P2P,Chat,2
+iscx_tor,2022,OURS-E3-T8-pretrained,P2P,Email,0
+iscx_tor,2022,OURS-E3-T8-pretrained,P2P,File-Transfer,0
+iscx_tor,2022,OURS-E3-T8-pretrained,P2P,P2P,174
+iscx_tor,2022,OURS-E3-T8-pretrained,P2P,Streaming,2
+iscx_tor,2022,OURS-E3-T8-pretrained,P2P,VoIP,19
+iscx_tor,2022,OURS-E3-T8-pretrained,Streaming,Browsing,28
+iscx_tor,2022,OURS-E3-T8-pretrained,Streaming,Chat,8
+iscx_tor,2022,OURS-E3-T8-pretrained,Streaming,Email,2
+iscx_tor,2022,OURS-E3-T8-pretrained,Streaming,File-Transfer,1
+iscx_tor,2022,OURS-E3-T8-pretrained,Streaming,P2P,0
+iscx_tor,2022,OURS-E3-T8-pretrained,Streaming,Streaming,149
+iscx_tor,2022,OURS-E3-T8-pretrained,Streaming,VoIP,11
+iscx_tor,2022,OURS-E3-T8-pretrained,VoIP,Browsing,4
+iscx_tor,2022,OURS-E3-T8-pretrained,VoIP,Chat,6
+iscx_tor,2022,OURS-E3-T8-pretrained,VoIP,Email,0
+iscx_tor,2022,OURS-E3-T8-pretrained,VoIP,File-Transfer,5
+iscx_tor,2022,OURS-E3-T8-pretrained,VoIP,P2P,7
+iscx_tor,2022,OURS-E3-T8-pretrained,VoIP,Streaming,9
+iscx_tor,2022,OURS-E3-T8-pretrained,VoIP,VoIP,169
+iscx_tor,2023,OURS-E3-T8-pretrained,Browsing,Browsing,169
+iscx_tor,2023,OURS-E3-T8-pretrained,Browsing,Chat,6
+iscx_tor,2023,OURS-E3-T8-pretrained,Browsing,Email,0
+iscx_tor,2023,OURS-E3-T8-pretrained,Browsing,File-Transfer,0
+iscx_tor,2023,OURS-E3-T8-pretrained,Browsing,P2P,0
+iscx_tor,2023,OURS-E3-T8-pretrained,Browsing,Streaming,19
+iscx_tor,2023,OURS-E3-T8-pretrained,Browsing,VoIP,6
+iscx_tor,2023,OURS-E3-T8-pretrained,Chat,Browsing,3
+iscx_tor,2023,OURS-E3-T8-pretrained,Chat,Chat,41
+iscx_tor,2023,OURS-E3-T8-pretrained,Chat,Email,1
+iscx_tor,2023,OURS-E3-T8-pretrained,Chat,File-Transfer,1
+iscx_tor,2023,OURS-E3-T8-pretrained,Chat,P2P,3
+iscx_tor,2023,OURS-E3-T8-pretrained,Chat,Streaming,3
+iscx_tor,2023,OURS-E3-T8-pretrained,Chat,VoIP,12
+iscx_tor,2023,OURS-E3-T8-pretrained,Email,Browsing,2
+iscx_tor,2023,OURS-E3-T8-pretrained,Email,Chat,0
+iscx_tor,2023,OURS-E3-T8-pretrained,Email,Email,51
+iscx_tor,2023,OURS-E3-T8-pretrained,Email,File-Transfer,0
+iscx_tor,2023,OURS-E3-T8-pretrained,Email,P2P,0
+iscx_tor,2023,OURS-E3-T8-pretrained,Email,Streaming,0
+iscx_tor,2023,OURS-E3-T8-pretrained,Email,VoIP,1
+iscx_tor,2023,OURS-E3-T8-pretrained,File-Transfer,Browsing,0
+iscx_tor,2023,OURS-E3-T8-pretrained,File-Transfer,Chat,6
+iscx_tor,2023,OURS-E3-T8-pretrained,File-Transfer,Email,0
+iscx_tor,2023,OURS-E3-T8-pretrained,File-Transfer,File-Transfer,183
+iscx_tor,2023,OURS-E3-T8-pretrained,File-Transfer,P2P,1
+iscx_tor,2023,OURS-E3-T8-pretrained,File-Transfer,Streaming,0
+iscx_tor,2023,OURS-E3-T8-pretrained,File-Transfer,VoIP,10
+iscx_tor,2023,OURS-E3-T8-pretrained,P2P,Browsing,3
+iscx_tor,2023,OURS-E3-T8-pretrained,P2P,Chat,1
+iscx_tor,2023,OURS-E3-T8-pretrained,P2P,Email,1
+iscx_tor,2023,OURS-E3-T8-pretrained,P2P,File-Transfer,1
+iscx_tor,2023,OURS-E3-T8-pretrained,P2P,P2P,178
+iscx_tor,2023,OURS-E3-T8-pretrained,P2P,Streaming,3
+iscx_tor,2023,OURS-E3-T8-pretrained,P2P,VoIP,13
+iscx_tor,2023,OURS-E3-T8-pretrained,Streaming,Browsing,28
+iscx_tor,2023,OURS-E3-T8-pretrained,Streaming,Chat,14
+iscx_tor,2023,OURS-E3-T8-pretrained,Streaming,Email,1
+iscx_tor,2023,OURS-E3-T8-pretrained,Streaming,File-Transfer,0
+iscx_tor,2023,OURS-E3-T8-pretrained,Streaming,P2P,1
+iscx_tor,2023,OURS-E3-T8-pretrained,Streaming,Streaming,144
+iscx_tor,2023,OURS-E3-T8-pretrained,Streaming,VoIP,11
+iscx_tor,2023,OURS-E3-T8-pretrained,VoIP,Browsing,9
+iscx_tor,2023,OURS-E3-T8-pretrained,VoIP,Chat,13
+iscx_tor,2023,OURS-E3-T8-pretrained,VoIP,Email,0
+iscx_tor,2023,OURS-E3-T8-pretrained,VoIP,File-Transfer,2
+iscx_tor,2023,OURS-E3-T8-pretrained,VoIP,P2P,14
+iscx_tor,2023,OURS-E3-T8-pretrained,VoIP,Streaming,6
+iscx_tor,2023,OURS-E3-T8-pretrained,VoIP,VoIP,156
+iscx_tor,2022,OURS-current-threeview-equal,Browsing,Browsing,184
+iscx_tor,2022,OURS-current-threeview-equal,Browsing,Chat,2
+iscx_tor,2022,OURS-current-threeview-equal,Browsing,Email,1
+iscx_tor,2022,OURS-current-threeview-equal,Browsing,File-Transfer,0
+iscx_tor,2022,OURS-current-threeview-equal,Browsing,P2P,1
+iscx_tor,2022,OURS-current-threeview-equal,Browsing,Streaming,7
+iscx_tor,2022,OURS-current-threeview-equal,Browsing,VoIP,5
+iscx_tor,2022,OURS-current-threeview-equal,Chat,Browsing,1
+iscx_tor,2022,OURS-current-threeview-equal,Chat,Chat,43
+iscx_tor,2022,OURS-current-threeview-equal,Chat,Email,1
+iscx_tor,2022,OURS-current-threeview-equal,Chat,File-Transfer,0
+iscx_tor,2022,OURS-current-threeview-equal,Chat,P2P,1
+iscx_tor,2022,OURS-current-threeview-equal,Chat,Streaming,6
+iscx_tor,2022,OURS-current-threeview-equal,Chat,VoIP,12
+iscx_tor,2022,OURS-current-threeview-equal,Email,Browsing,2
+iscx_tor,2022,OURS-current-threeview-equal,Email,Chat,0
+iscx_tor,2022,OURS-current-threeview-equal,Email,Email,52
+iscx_tor,2022,OURS-current-threeview-equal,Email,File-Transfer,0
+iscx_tor,2022,OURS-current-threeview-equal,Email,P2P,0
+iscx_tor,2022,OURS-current-threeview-equal,Email,Streaming,0
+iscx_tor,2022,OURS-current-threeview-equal,Email,VoIP,0
+iscx_tor,2022,OURS-current-threeview-equal,File-Transfer,Browsing,0
+iscx_tor,2022,OURS-current-threeview-equal,File-Transfer,Chat,0
+iscx_tor,2022,OURS-current-threeview-equal,File-Transfer,Email,0
+iscx_tor,2022,OURS-current-threeview-equal,File-Transfer,File-Transfer,191
+iscx_tor,2022,OURS-current-threeview-equal,File-Transfer,P2P,1
+iscx_tor,2022,OURS-current-threeview-equal,File-Transfer,Streaming,2
+iscx_tor,2022,OURS-current-threeview-equal,File-Transfer,VoIP,6
+iscx_tor,2022,OURS-current-threeview-equal,P2P,Browsing,3
+iscx_tor,2022,OURS-current-threeview-equal,P2P,Chat,0
+iscx_tor,2022,OURS-current-threeview-equal,P2P,Email,0
+iscx_tor,2022,OURS-current-threeview-equal,P2P,File-Transfer,0
+iscx_tor,2022,OURS-current-threeview-equal,P2P,P2P,184
+iscx_tor,2022,OURS-current-threeview-equal,P2P,Streaming,1
+iscx_tor,2022,OURS-current-threeview-equal,P2P,VoIP,12
+iscx_tor,2022,OURS-current-threeview-equal,Streaming,Browsing,17
+iscx_tor,2022,OURS-current-threeview-equal,Streaming,Chat,4
+iscx_tor,2022,OURS-current-threeview-equal,Streaming,Email,1
+iscx_tor,2022,OURS-current-threeview-equal,Streaming,File-Transfer,0
+iscx_tor,2022,OURS-current-threeview-equal,Streaming,P2P,0
+iscx_tor,2022,OURS-current-threeview-equal,Streaming,Streaming,160
+iscx_tor,2022,OURS-current-threeview-equal,Streaming,VoIP,17
+iscx_tor,2022,OURS-current-threeview-equal,VoIP,Browsing,4
+iscx_tor,2022,OURS-current-threeview-equal,VoIP,Chat,13
+iscx_tor,2022,OURS-current-threeview-equal,VoIP,Email,0
+iscx_tor,2022,OURS-current-threeview-equal,VoIP,File-Transfer,0
+iscx_tor,2022,OURS-current-threeview-equal,VoIP,P2P,5
+iscx_tor,2022,OURS-current-threeview-equal,VoIP,Streaming,15
+iscx_tor,2022,OURS-current-threeview-equal,VoIP,VoIP,163
+iscx_tor,2023,OURS-current-threeview-equal,Browsing,Browsing,181
+iscx_tor,2023,OURS-current-threeview-equal,Browsing,Chat,6
+iscx_tor,2023,OURS-current-threeview-equal,Browsing,Email,0
+iscx_tor,2023,OURS-current-threeview-equal,Browsing,File-Transfer,0
+iscx_tor,2023,OURS-current-threeview-equal,Browsing,P2P,1
+iscx_tor,2023,OURS-current-threeview-equal,Browsing,Streaming,7
+iscx_tor,2023,OURS-current-threeview-equal,Browsing,VoIP,5
+iscx_tor,2023,OURS-current-threeview-equal,Chat,Browsing,4
+iscx_tor,2023,OURS-current-threeview-equal,Chat,Chat,44
+iscx_tor,2023,OURS-current-threeview-equal,Chat,Email,1
+iscx_tor,2023,OURS-current-threeview-equal,Chat,File-Transfer,0
+iscx_tor,2023,OURS-current-threeview-equal,Chat,P2P,1
+iscx_tor,2023,OURS-current-threeview-equal,Chat,Streaming,4
+iscx_tor,2023,OURS-current-threeview-equal,Chat,VoIP,10
+iscx_tor,2023,OURS-current-threeview-equal,Email,Browsing,1
+iscx_tor,2023,OURS-current-threeview-equal,Email,Chat,0
+iscx_tor,2023,OURS-current-threeview-equal,Email,Email,52
+iscx_tor,2023,OURS-current-threeview-equal,Email,File-Transfer,0
+iscx_tor,2023,OURS-current-threeview-equal,Email,P2P,0
+iscx_tor,2023,OURS-current-threeview-equal,Email,Streaming,0
+iscx_tor,2023,OURS-current-threeview-equal,Email,VoIP,1
+iscx_tor,2023,OURS-current-threeview-equal,File-Transfer,Browsing,0
+iscx_tor,2023,OURS-current-threeview-equal,File-Transfer,Chat,0
+iscx_tor,2023,OURS-current-threeview-equal,File-Transfer,Email,0
+iscx_tor,2023,OURS-current-threeview-equal,File-Transfer,File-Transfer,197
+iscx_tor,2023,OURS-current-threeview-equal,File-Transfer,P2P,0
+iscx_tor,2023,OURS-current-threeview-equal,File-Transfer,Streaming,1
+iscx_tor,2023,OURS-current-threeview-equal,File-Transfer,VoIP,2
+iscx_tor,2023,OURS-current-threeview-equal,P2P,Browsing,3
+iscx_tor,2023,OURS-current-threeview-equal,P2P,Chat,0
+iscx_tor,2023,OURS-current-threeview-equal,P2P,Email,0
+iscx_tor,2023,OURS-current-threeview-equal,P2P,File-Transfer,0
+iscx_tor,2023,OURS-current-threeview-equal,P2P,P2P,187
+iscx_tor,2023,OURS-current-threeview-equal,P2P,Streaming,1
+iscx_tor,2023,OURS-current-threeview-equal,P2P,VoIP,9
+iscx_tor,2023,OURS-current-threeview-equal,Streaming,Browsing,17
+iscx_tor,2023,OURS-current-threeview-equal,Streaming,Chat,7
+iscx_tor,2023,OURS-current-threeview-equal,Streaming,Email,1
+iscx_tor,2023,OURS-current-threeview-equal,Streaming,File-Transfer,1
+iscx_tor,2023,OURS-current-threeview-equal,Streaming,P2P,0
+iscx_tor,2023,OURS-current-threeview-equal,Streaming,Streaming,162
+iscx_tor,2023,OURS-current-threeview-equal,Streaming,VoIP,11
+iscx_tor,2023,OURS-current-threeview-equal,VoIP,Browsing,4
+iscx_tor,2023,OURS-current-threeview-equal,VoIP,Chat,13
+iscx_tor,2023,OURS-current-threeview-equal,VoIP,Email,1
+iscx_tor,2023,OURS-current-threeview-equal,VoIP,File-Transfer,2
+iscx_tor,2023,OURS-current-threeview-equal,VoIP,P2P,8
+iscx_tor,2023,OURS-current-threeview-equal,VoIP,Streaming,10
+iscx_tor,2023,OURS-current-threeview-equal,VoIP,VoIP,162
