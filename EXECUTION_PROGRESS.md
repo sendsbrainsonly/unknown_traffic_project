@@ -4,6 +4,24 @@
 
 - 2026-11-04 — [agent:codex] `a2-current-result-registration-20261104` complete: A2_CURRENT_RESULTS.md is the project-facing A-2 current result, linked from README/status/index/handoff.30display cells verified against frozen CSV; counts/source links/provenance PASS. Documentation only; original full-Test controls, frozen data/weights/scores and historical manuscript tables retained.
 
+## Current handoff — Remote pull and A-2 result publication (2026-11-04)
+
+- 2026-11-04 — [agent:codex] `a2-remote-pull-push-20261104` complete: fast-forward pulled remote commit199e982 (paper/md/ch2/1.md), then pushed scoped A-2 result/index commit6261553 via SSH443. Remote refs/heads/main and local HEAD both6261553fc84ea2486e9bb3ee7179f6e39caad34c after verification/fetch. Only five selected documents were published; experiment artifacts/weights/caches/per-sample scores and unrelated untracked files were excluded. Initial HTTPS push waited for unavailable credential input and was interrupted; no remote mutation occurred until SSH push succeeded.
+
+### Run a2-remote-pull-push-20261104
+
+- Agent: [agent:codex]
+- Status: complete
+- Objective: pull the latest remote file, then publish the local A-2 current result update.
+- Starting state: local HEAD0243455, remote main199e982 after fetch; dirty project documentation and numerous untracked historical/experiment artifacts.
+- Actions performed: fast-forward pulled the remote chapter-two revision; reviewed/staged only A2_CURRENT_RESULTS.md, README.md, CURRENT_PROGRESS.md, EXECUTION_PROGRESS.md and EXPERIMENT_RESULTS.md; committed as6261553; pushed via SSH on port443; fetched tracking ref and independently compared remote SHA.
+- Commands run: project tmux sessions a2_sync_preflight_20261104, a2_remote_ff_20261104, a2_stage_review_20261104, a2_stage_refresh_20261104, a2_commit_publish_20261104, a2_push_publish_20261104 (HTTPS attempt interrupted at credential prompt), a2_push_ssh443_20261104 and a2_remote_publish_verify_20261104.
+- Files changed: remote paper/md/ch2/1.md fast-forwarded locally; five result/index documents committed and pushed. Unrelated untracked experiment files were not staged.
+- Validation and observed results: fast-forward from0243455 to199e982 succeeded; SSH push199e982→6261553 succeeded; `git ls-remote` returned6261553fc84ea2486e9bb3ee7179f6e39caad34c, matching local HEAD; origin/main refreshed to same commit.
+- Decisions and assumptions: interpreted “local updates” as the A-2 result entry and project-facing indexes from the immediately preceding task; excluded generated weights, caches, predictions and unrelated untracked artifacts.
+- Errors or blockers: HTTPS remote required interactive username and did not complete; canceled that exact waiting session, then SSH443 succeeded.
+- Next step: none for sync; this execution record will be included in a small follow-up metadata commit.
+
 ### Run a2-current-result-registration-20261104
 
 - Agent: [agent:codex]
