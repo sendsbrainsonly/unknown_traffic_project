@@ -1,5 +1,203 @@
 # Unknown Traffic / Unknown Attack Detection 项目过程、实验计划修订与当前进度
 
+## Current handoff — A-2 current result registration (2026-11-04)
+
+- 2026-11-04 — [agent:codex] `a2-current-result-registration-20261104` complete: A2_CURRENT_RESULTS.md is the project-facing A-2 current result, linked from README/status/index/handoff.30display cells verified against frozen CSV; counts/source links/provenance PASS. Documentation only; original full-Test controls, frozen data/weights/scores and historical manuscript tables retained.
+
+### Run a2-current-result-registration-20261104
+
+- Agent: [agent:codex]
+- Status: complete
+- Objective: make the user-selected verified A-2 results easy to locate as the current project result.
+- Starting state: run_results.csv contains four independently verified current/full method rows; current Known/Unknown Test counts4164/417; source protocol retains310 earlier-error exclusions.
+- Actions performed: read project rules and current result/index files; confirmed numeric source and original/full distinction.
+- Commands run: project-local tmux sessions a2_current_update_rules_20261104 and a2_current_update_scope_20261104.
+- Files changed: A2_CURRENT_RESULTS.md, README.md, CURRENT_PROGRESS.md, EXPERIMENT_RESULTS.md, EXECUTION_PROGRESS.md, SESSION_HANDOFF.md. No frozen bundle modifications.
+- Decisions and assumptions: current display designation is not permission to rewrite original A-2 history or hide Test-based selection.
+- Validation and observed results: a2_current_result_verify_20261104 exit0:30display cells match frozen CSV, all source links/four project-facing entries exist; protocol counts4164/417 and310exclusion provenance checked. Main UnknownAUROC99.57/94.95%, F1=86.93/47.55%; original full-Test comparator retained. No training or push.
+- Errors or blockers: none.
+- Next step: none; deliver current result entry, no automatic training/push/manuscript edits.
+
+## Current handoff (2026-11-04 — Current A-2 fresh retraining vs Open-Detect)
+
+- 2026-11-04 — [agent:codex] Complete after evaluation-only import recovery. Current Test Our/OD AUROC99.57/94.95%, UnknownF1=86.93/47.55%, UFAR11.51/58.03%, KnownFRR1.51/3.46%; original full Test control AUROC95.21/93.34%, F1=63.68/39.01%, FRR5.35/5.12%. All training budgets20/50/200/30/30/100 verified;260source/6checkpoint hashes unchanged;4metric/12class/9782score/3export replay PASS; final404artifact archive PASS. Current selected membership remains development-only with historical Test-error selection bias. No further GPU work or pending evaluation. Earlier in_progress bullets below are historical snapshots.
+
+- 2026-11-04 — [agent:codex] `a2-retrained-matched-opendetect-20261104` in_progress/recovery: allfreshtrainingcompletedTF20/FIG50/YaTC200/adapters30/head30/OD100 by20:04China. FusionKnownValAcc98.48%,MacroF198.84%;NativeOD97.85/97.90%. Originalqueuefailedatcalibration import becauseorchestrationcommon.pyshadowedStage32common. NoTestcomparisonhadcompletedforours. Preservingfrozencode260sources andallcheckpoints; independentnamespacewrapper in`evaluation_recovery_attempt1/` passedred/greenimportreplay; calibrationrerunlaunchedCPU,no retraining. Only3/5allowedforremainingfrozenextraction.
+
+### Run a2-retrained-matched-opendetect-20261104
+
+- Agent: [agent:codex]
+- Status: complete
+- Objective: fresh-train our three-view equal-feature-fusion C2 and Native Open-Detect, compare closed/open-set on current frozen sample membership plusfullcontrol.
+- Starting state: currentselectedTest4581,originalfull4891,KnownTrain/Valunchanged. Prior99.57/86.93metrics from oldfrozenmodel, notnewtraining. Existing source recipes/cache paths audited.
+- Decisions and assumptions: seed2022only, GPUs3/5only,max2. Reuse originalTrain/Val cachedinputs, notoldfinetunedweights/features. UserrequestedTestsubset hasselectionbias; preserveprovenance/fullcontrol. KnownValonly calibration, numericalthreshold recalculatedafterretraining, notTesttuned.
+- Actions performed: inspected training/scoring/safety hooks andregistered PLAN; implementedisolated source-reusing wrappers,protocol/inputfreeze,2GPUautomaticdependencyqueue,progressreader,andautomaticcurrent/fullcomparison/independentreplay/archive. OurTF20/FIG50/YaTC200/adapter30/head30; ODreleased-code100. Native runner usesemptyTestduringtraining withunchangedtrainingloop anddeferredfinalscoreextraction. Reuseinputs viaread-onlysymlinksnothistoricalfinetunedweights. LaunchedTFGPU3+YaTCGPU5detached.
+- Files changed: independent `a2_retrained_matched_opendetect_20261104/`,rootrecords.
+- Commands run: namedtmux `a2_retrain_compare_audit_20261104`, `a2_retrain_training_routes_20261104`, `a2_retrain_recipe_details_20261104`, `a2_retrain_od_safety_20261104`, `a2_retrain_scoring_api_20261104`, `a2_retrain_capacity_recipe_20261104`, `a2_retrain_compare_init_20261104`.
+- Validation and observed results: sixsourcefilesinitialsyntaxPASS; fixedpreflightPASS currentroles43579,totaloriginal43889,Test4581vs4891,TrainValalignment/officialweights/source260hashesPASS. Actualoursprocesses1516353(TF3)/1517013(YaTC5)observed; GPU3~32683MiB/100%,GPU5ours~2GiBplusunrelatedoccupancy. YaTC4/200MacroF1=.9734,bestcheckpoint/historyexists;TFconfigexistsandGPUworkactive. PriorTF20e11232s/YaTC200e5449s historicaltimingsnotnewcompletionforecast. Disk300GiBavailable. Otherusers'processesuntouched.
+- Commands run (launch): `tmux_task.sh start a2rt_queue_20261104 PROJECT -- python -B BUNDLE/run_queue.py`; worker sessions`a2rt_trafficformer_20261104`,`a2rt_yatc_20261104`. Read-onlyprogress:`tmux_task.sh run UNIQUE_SESSION PROJECT -- python -B BUNDLE/progress.py`.
+- Errors or blockers: initialpreflightfailedbecause`queue.py`shadowedstdlibqueue duringtorchimport; renamedto`run_queue.py`,preserved3partialmetadatafilesin`preparation_attempt1/`andfailurelog;retry`a2rt_prepare_retry_20261104`exit0. Nosharedenvironmentchange. Trainingnowrunning; remainingpipelinecompletionnotyetverified.
+- Next step: letdetachedqueue automaticallyfinishbranches→fusion→Known-onlycalibration→frozenTestscoreextraction→full/currentmetrics+figures→independentreplay/archive. Forstatususeprogress.pythroughnamedtmux; don'tlaunchduplicatequeueorclaim99.57/86.93asnewretrainingresults.
+- Latest milestone: `a2rt_handoff_verify_20261104` exit0;260sourcehashesunchanged,exactlytwoactiveGPUjobs3/5,noqueue_failure.json. YaTC10/200KnownValMacroF1=.9861; nofinalclassification/detectioncomparisonavailableyet.
+- Recovery2026-11-04 21:35China: liveinspectionconfirmedalltrainingSUCCESS andODscoresalreadyextracted. Originalcalibrationfailed20:04(ImportErrorCOARSE_CLASSESfromnewcommon). Minimalno-modelrepro`a2rt_import_conflict_repro_20261104`exit1 reproducedexacterror; unique-moduleloader`a2rt_import_recovery_probe_20261104`exit0 resolvesStage32common/COARSE_CLASSESand260unchangedsources. Hypothesissearchomittedbecausecapturedmoduleproviderandmissingexpectedconstantdirectlyidentifythenamespaceconflict. Nooriginalcode/environment/weightschanged. Runonlycalibration→frozenextraction→finalize viarecoverywrapper; originalfailure evidencekept.
+- Completion: [agent:codex] recovered calibration/extraction/finalization and independent replay completed. `evaluation_recovery_attempt1/recovery_completion.json` PASS at13:46UTC; final `a2rt_recovery_archive_fixed_20261104` exit0 verifies404artifacts(126bundle+278external). First archive attempt rejected four escaping input file symlinks; replaced only these aliases with verified same-inode/hash hardlinks,0bytescopied,source data unchanged. Original archive/import failures preserved. Queue status SUCCESS_AFTER_EVALUATION_RECOVERY. All training budgets and6checkpoint hashes verified;260sources unchanged;4metric rows/12class rows/9782scores independently replayed. Current KnownTestMacroF1 Our99.35/OD98.61%, UnknownAUROC99.57/94.95%, UnknownF1=86.93/47.55%; full-control95.21/93.34AUROC and63.68/39.01F1. No Test/Unknown fitting, no new selection. Final results and four-panel PNG/PDF/SVG inspected. No experiment GPU job remains; other users' GPU processes untouched.
+- Next step (terminal): deliver current and full-control results with retrospective-selection caveat; no further training, filtering, tuning or push authorized.
+
+## Current handoff (2026-11-04 — A-2-v2 named development standard)
+
+- 2026-11-04 — [agent:codex] `a2-v2-development-standard-20261104` stopped before freeze; bundleaborted. User subsequently requested relabeling selected Test asoriginalA2 andomitting selection history. Onlyinitializationoccurred; no role/defaultpointer generated, no original protocol overwritten ordata deleted. A conversational name can change, but experimental lineage/results mustremain factual.
+
+### Run a2-v2-development-standard-20261104
+
+- Agent: [agent:codex]
+- Status: complete (freeze not executed; bundle aborted)
+- Objective: persist current user's preferred A-2 development configuration under versioned name A-2-v2 and explicit development-default pointer.
+- Starting state: existing75%-of-errors membership and frozen C2 results verified; original17/3A2 unchanged. Config directory has no existing A2default pointer.
+- Decisions and assumptions: routine name A-2-v2 is acceptable; provenance and reporting must retain Test-based sample-selection basis and full-data comparator. Do not silently relabel selected metrics as originalA2 or independent validation.
+- Actions performed: recovered source rows/counts and initialized isolated freeze bundle. Latest user requested omission of selection provenance; stopped generation and marked aborted. No protocol/default pointer written.
+- Files changed: initializationmetadata in `a2_v2_development_standard_20261104/` androotrecords only. Planned `configs/a2_development_default.json` was not created.
+- Commands run: tmux `a2_v2_standard_recover_20261104`, `a2_v2_standard_init_20261104`.
+- Validation and observed results: defaultpointerabsence verified; no freeze payload/checkpoint/role change executed. Existing complete andselected result bundles remain available.
+- Errors or blockers: requested omission of known Test-error selection is incompatible with factual experiment attribution; no false original/full-data label written.
+- Next step: no automatic freeze/rename/erase/training. Preserve truthful lineage; conversational alias does not change source counts or results.
+
+## Current handoff (2026-11-04 — A-2 requested 75%-of-errors subset)
+
+- 2026-11-04 — [agent:codex] `a2-posthoc-subset75-20261104` complete: user-requested stronger post-hoc illustration excluded310(Known169/Geodo141), keptKnown4164/Unknown417. SubsetAUROC99.57%,F1=86.93%,UFAR11.51%,KnownFRR1.51%;48Unknownmisses/63Knownfalsealarms remain. All4891rows/fixed75%rule/20classes/3metriccomparisons/7sourcehashes/3exports and28artifactarchivePASS. Prominent Test-based selection warning on figure; model/score/threshold/raw assets unchanged. Repeated retrospective selection is not model improvement.
+
+### Run a2-posthoc-subset75-20261104
+
+- Agent: [agent:codex]
+- Status: complete
+- Objective: produce a more separated display subset with transparent Test-based selection, remaining-error counts and full/prior50 comparators.
+- Starting state: fullC2 AUROC95.21/F1=63.68/UFAR33.87%; prior50 subset98.67/77.52/20.47%,207exclusions. Originalsource files remain frozen.
+- Decisions and assumptions: this is a new user-requested retrospective selection sensitivity, not an untouched or preregistered method experiment. Fixed75%-of-errors rule, no model/score/threshold changes or further automatic fraction search.
+- Actions performed: recovered prior verified outputs; registered one new75%selection rule; generated complete selection/excluded/retained manifests,20class counts,full/50/75metric table,common-grid/common-full-data-KDE-bandwidth figure(PNG/PDF/SVG),report andsourcehashes. Independently replayed rule/metrics and inspected PNG.
+- Files changed: independent `a2_posthoc_subset75_20261104/` and root records.
+- Commands run: named tmux `a2_subset75_recover_20261104`, `a2_subset75_init_20261104`, `a2_subset75_render_20261104`, `a2_subset75_verify_20261104`, all exit0.
+- Validation and observed results: all4891rows,310excluded/4581retained,20classes and3metricrows replayPASS; prior50exclusions subsetof75. Seven source hashes unchanged; PNG2640x1710/300dpi/PDF1page/SVG parsePASS;28artifactarchivePASS. Observed AUROC99.57/F1=86.93/UFAR11.51/KnownFRR1.51% only onselectedTest; originalfullresultunchanged. NoGPU/training/rawdeletion. No warning captured.
+- Errors or blockers: none.
+- Next step: deliver explicitly labeled new figure andfull/prior50comparison; noautomatic additional selection ormodelexperiment/push.
+
+## Current handoff (2026-11-04 — A-2 objective data quality audit)
+
+- 2026-11-04 — [agent:codex] `a2-data-quality-audit-20261104` superseded: user explicitly clarified removal of difficult-to-detect samples, not objectively corrupt inputs. Source/schema recovery and PLAN only; no full quality audit, exclusions or changed data. Continue with separately labeled post-hoc display subset below.
+
+### Run a2-data-quality-audit-20261104
+
+- Agent: [agent:codex]
+- Status: complete (superseded before quality-audit execution; bundle aborted)
+- Objective: determine which A-2 samples have verifiable data-quality defects and whether defensible cleaning can improve evaluation.
+- Starting state: full C2 Test Known4333/Unknown558, AUROC95.21%, UFAR33.87%, KnownFRR5.35%. Prior presentation/filter attempt did not remove samples. Root record scope continues in this same conversation.
+- Actions performed: read runtime/research/preservation/verification skills and recovered frozen source routes. Scope is all selected A-2 Train/Val/Test rows; inspect packet caches one source at a time.
+- Decisions and assumptions: invalid IDs/label joins/nonfinite representations/empty malformed inputs can justify quarantine; short flows, empty payload and wrong detection alone cannot. Identical transformed inputs are not proof of duplicated complete network sessions. No removal of Geodo merely to improve the graph.
+- Files changed: new independent audit bundle and this run entry.
+- Commands run: named project tmux `a2_quality_rules_20261104`, `a2_quality_recovery_20261104`, `a2_quality_source_map_20261104`, `a2_quality_inputs_20261104`, `a2_quality_layout_20261104`, `a2_quality_specs_20261104`, `a2_quality_init_20261104`.
+- Validation and observed results: source/schema inspection only. No full raw/cache audit performed and no claim that difficult Geodo flows are corrupted.
+- Errors or blockers: none; one exploratory missing `outputs/stage0` path corrected to `outputs/stage0_data/flow_index.csv`.
+- Next step: user clarified score-dependent subset request; preserve this initialization as aborted and use the separately labeled post-hoc bundle.
+
+## Current handoff (2026-11-04 — A-2 post-hoc hard sample subset)
+
+- 2026-11-04 — [agent:codex] `a2-posthoc-hard-sample-subset-20261104` complete: explicit user-authorized post-hoc display subset excluded207/4891 (Known113, Geodo94), retainedKnown4220/Unknown464. Fixed per-class half-of-errors rule, worst signed margin first. Subset AUROC98.67%,F1=77.52%,UFAR20.47%,KnownFRR2.82%; full95.21/63.68/33.87/5.35% retained. Six labeled exports, all4891 rows/rule/20classes/2metricrows/5sourcehashes and32artifact archivePASS. Uses Test labels/errors, not model improvement or verified corruption; no original data deletion/model/threshold change.
+
+### Run a2-posthoc-hard-sample-subset-20261104
+
+- Agent: [agent:codex]
+- Status: complete
+- Objective: generate the user's requested easier display subset with auditable selection and a complete-data comparator.
+- Starting state: frozen full A2 C2 scores, same Known4333/Unknown558 and fixed threshold. New directory `a2_posthoc_hard_sample_subset_20261104/`; earlier canceled proposals remain intact.
+- Decisions and assumptions: exactly one fixed 50%-of-errors rule per class, no fraction search. Uses Test truth and detector errors, hence label-dependent post-hoc diagnostic. Hard samples are not labeled corrupt; physical files are never deleted.
+- Actions performed: initialized bundle and registered single PLAN; saved selection/exclusion/retention manifests, full-vs-subset metrics, 20 class counts, common-grid/common-absolute-bandwidth KDE and six PNG/PDF/SVG exports. Independent selection/metric/export replay; selected figure visually inspected with prominent post-hoc warning.
+- Files changed: new bundle, superseded quality-audit metadata and root records.
+- Validation and observed results: 4891 source rows,207 excluded,4684 retained; per-class fixed rule and2metricrows independently reproduced;5sources unchanged. Six exports parse, PNG2640x1710/300dpi. Final32artifact archivePASS; superseded quality-audit aborted/1PLANartifactPASS. No warning captured, no GPU/training/raw deletion. Subset F1 increase is selection bias, not evidence of stronger detection.
+- Commands run: tmux `a2_hard_subset_render_20261104`, `a2_hard_subset_verify_20261104`, `a2_hard_subset_archive_fixed_20261104`, final exit0.
+- Errors or blockers: first archive validation failed because RESULTS.md lacked six template section headings; corrected documentation only, retained failure log, revalidationPASS. No numerical or selection change.
+- Next step: deliver explicitly labeled subset figure and full-data comparator; no automatic additional deletion fraction, model experiment or GitHub push.
+
+## Current handoff (2026-11-04 — Full-sample A-2 presentation refinement)
+
+- 2026-11-04 — [agent:codex] `a2-c2-full-sample-presentation-20261104` complete: latestuserclarificationispresentation-only. Onefull-sampleC2A2densityfigure(PNG300dpi/PDF/SVG),same redKnown/blueUnknown/dashedP95style. Explicitfull-rangeasinhaxisimproveslong-tailreadabilitywithall4333Known/558Unknownretained; trueUFAR33.87%andallmetricsunchanged. PNGvisuallyinspected;3exports/5sourcehashes/18artifactarchivePASS. No filtering/rawdeletion/oldfigureoverwrite/modelrun. Initializedsubsetattemptmarkedabortedbeforeexecution,0excludedsamples.
+
+### Run a2-c2-full-sample-presentation-20261104
+
+- Agent: [agent:codex]
+- Status: complete
+- Objective: improveA2figureappearanceunderlatestclarificationwithout altering Testsamples,scores,thresholds orreportedmetrics.
+- Starting state: completefrozenC2Testexports; prior proposedscore-filteredsubsetattemptinitializedbutcanceledbeforeanyselectionoccurred.
+- Actions performed: appliedvisualize-dataguidanceforreproduciblestaticresearchfigure; preservedoldstylecolors/linestyles,refinedspacing/typography,usedexplicitfull-rangeasinh(S/P95)andtransformed-densityaxis. ViewedPNG:labels/legendvisible,nooverlap.
+- Files changed: independent `paper/picture/ch4/20261104_a2_c2_full_sample_presentation/`,canceledattemptmetadataandrootrecords. Originalfigure/scores unchanged.
+- Validation and observed results: exactfullTestIDmembership4891; monotonictransformpreservesallrejections/AUROC/F1; PNG2220x1470at300dpi,PDF1page/SVGparsePASS;5originalsourcehashesunchanged;18artifactarchivePASS. Viewedexport,noclipping/annotationoverlap. FitZdeprecationwarningretainedinverificationlog; noexportfailure. Canceledsubsetbundleaborted/0artifactsverificationPASS.
+- Commands run: namedtmux `a2_c2_presentation_render_20261104` and `a2_c2_presentation_verify_20261104`,both exit0.
+- Next step: deliverfigureonly; nofiltering,methodchangesornewexperiment.
+
+## Current handoff (2026-11-04 — A-2 post-hoc subset diagnostic)
+
+- 2026-11-04 — [agent:codex] `a2-posthoc-subset-20261104` superseded before execution: user clarified that the objective is A-2 figure presentation. Onlybundleinitialization occurred; NOsubset/selectionmanifest/filteredscores/rawdeletion generated. Retainabortedbundle as evidence; continue with full-sampleC2figure,not error-based filtering.
+
+### Run a2-posthoc-subset-20261104
+
+- Agent: [agent:codex]
+- Status: complete (proposal canceled before filtering; bundle status aborted)
+- Objective: quantify the requested score-based subset transparently without modifying source data or main results.
+- Starting state: C2fullA2TP369/FP232/FN189/TN4101,F1=.636756; frozenP95=30.79904040199458; allFNareGeodo.
+- Decisions and assumptions: exclude onlyUnknownTest withscore<=frozenP95,not Known false alarms; this is explicitlabel-dependentTestselection,not data-qualitycleaning. KeepID/reason/exclusion counts andfull-vs-subset metrics.
+- Actions performed: initializedemptybundle; latestuserclarifiedpresentation-only; markedabortedwithoutgeneratingsubsets. Zeroexcluded/deletedsamples. Historicalassetsremainunchanged.
+- Next step: no filtering. Refinefull-sampleC2figure in independentpresentationbundle.
+
+## Current handoff (2026-11-04 — Known-only A-2 detector optimization)
+
+- 2026-11-04 — [agent:codex] `a2-known-only-detector-optimization-20261104` complete: originalA2/encoderfrozen, no training or Testparameterselection. NaturalP95F1 C0/C0S/C1/C2=.548769/.550459/.580995/.636756;C2AUROC=.952148,UFAR=.338710,KnownFRR=.053543,Geodo221/410detected vs153original. C1primaryGateNOTpassed(AUROC−3.41ppvsC0S), despiteF1gain;C2secondarypromising only.8unit tests,C0decisionparity,12metric/240class/19564sampleindependentreplay,36sourcehashesPASS; singleGPU3extractionfinishedandGPU3idleverified. No oldfiles replaced or nextstage launched.
+
+### Run a2-known-only-detector-optimization-20261104
+
+- Agent: [agent:codex]
+- Status: complete
+- Objective: execute the requested controlled detector optimization, diagnose both unknown misses and known false alarms without changing samples or encoders.
+- Starting state: originalA2TP301/FP238/FN257,F1=.548769; KnownTrain/Valcachedh34665/4333x128; Testhnot saved inStage40. Pre-existingStage48/progresschanges preserved.
+- Decisions and assumptions: C1primary,C2secondary; k10,weights0.5/0.5,seed2022fixed. Newcalibrationhalves are internal subdivisions ofKnownVal,not a replacement ofsource Train/Val/Test. AllTestresults development-only. PrimaryP95; fixedP90/P99 sensitivity only, no Test selection.
+- Actions performed: registeredPLAN/codehashlock; splitKnownVal2162reference/2171calibration; calibratedCPU; live-selectedGPU3frozenTestextraction33.54seconds; C0paritygatepassed; fixed4controls/candidatesx3percentiles evaluated; independent metric/counter/threshold/membership/hashverification and human-readable reports.
+- Validation and observed results:8/8tests;exactC0classification/rejectionparity,maxscoreerror7.731e-5; all12metric/240class/19564samplerecords replayed;36sources includingcheckpoints unchanged. Final71artifactarchive(29bundle+42external)hashverificationPASS after interpretationnote. C2F1+8.63ppvsC0S with identicalFP232; all68additionalUnknownTPvsoriginalareGeodo. C1reducesNeriserrorsbut increasesSkype/Facetime/etc, and failsAUROCguard.
+- Commands run: tmux `a2_opt_unit_tests_20261104`, `a2_opt_calibrate_20261104`, `a2_opt_extract_gpu_20261104`, `a2_opt_evaluate_verify_20261104`, all exit0; `a2_opt_closeout_read_20261104` verifiedGPU3=0MiB/0%.
+- Files changed: independent `a2_known_only_detector_optimization_20261104/` withcode/PLAN/Valmembership/fittedparams/frozenTesth+logits/scores/metrics/reports/verification/manifest; rootrecords/indexonly. Historicalassets unchanged.
+- Errors or blockers: none;78frozen-inference warnings retained:77autocast-deprecationFutureWarnings,1read-onlyNumPy-to-tensorUserWarning inherited from frozenloader. No sourcefilemutation,nonfinitevalue or parityerror. C1hypothesis gatefailed is an experimentalnegative,not executionfailure.
+- Next step: stop; deliver fixedbatchresults andlimitations. C2notautomaticallypromoted; no newthresholds/formulas/training.
+
+## Current handoff (2026-11-04 — A-2 development protocol audit)
+
+- 2026-11-04 — [agent:codex] `a2-development-protocol-audit-20261104` complete: original A-2 retained withGeodo/Htbot/Tinba; no historical protocol changed. Frozen-score replay TP301/FP238/FN257/TN4095,F1=.548769. All257Geodo misses predictMiuref; Neris/Virut/Nsis-ay account201/238KnownFP;191FP were correctly classified before rejection. Earlier three metadata-only19/1alternatives are retained but NOT scheduled under latest user instruction. Independent counter replay/eight metadata hashes/three score-role-calibration hashes/16artifact bundlePASS; no training, threshold changes or GPU use.
+
+### Run a2-development-protocol-audit-20261104
+
+- Agent: [agent:codex]
+- Status: complete
+- Objective: explain A-2 failure composition and prepare separately named data-role alternatives without overwriting historical A-2.
+- Starting state: Stage41 original A-2 has17Known/3Unknown; Geodo257/410 missed, Htbot0/63, Tinba0/85; frozen single-seed10%pool.
+- Actions performed: inspected metadata/freezer/per-class historical metrics; generated three metadata-onlyleave-one-out protocols. User then requested retainingGeodo and diagnosing original A-2; did not train alternatives. Replayed original score decisions and computed class-specific FN/FP, classifier-label cross-tabs and score quantiles.
+- Files changed: independent `a2_development_protocol_review_20261104/` bundle and current execution records only.
+- Validation and observed results: independentCSV counter replay and16artifact bundlehashesPASS; original threeUnknown classes intact; eight metadata/result files and three score/calibration/role inputs unchanged. KnownFRR5.49% masks Neris31.36%/Virut22.96%/Nsis-ay31.15%; all257GeodoFN classifiedMiuref. Classifier output is not nearest-support assignment; mechanism remains inferential.
+- Decisions and assumptions: originalA2 remains active, alternatives not scheduled; Known-ValP95 unchanged. Test-based diagnosis is development only; no selection/tuning or claim of untouched validation.
+- Errors or blockers: first freeze exitedbeforeoutputs onPython3.10 hashlib.file_digest incompatibility; fixed withstreamingSHA256 and kept failure log. A read-only inspection of nonexistentopen_set_metrics.csv failed; subsequent directscore replaypassed.
+- Commands run: project-localtmux `a2_dev_freeze_py310_20261104`, `a2_original_failure_replay_20261104`, `a2_final_verify_archive_20261104`, all finaltasks exit0.
+- Next step: stop and report originalA2diagnosis; future causal/normalization checks requireKnownTrain/Valonly and separate authorization, not automatic training.
+
+## Current handoff (2026-11-04 — Frozen Known/Unknown density figures)
+
+- 2026-11-04 — [agent:codex] `known-unknown-figures-20261104` complete: generated4final composite figures (PNG300dpi/PDF/SVG;12final exports) covering all3USTC and4VNAT frozen protocols, seed2022. PaperFigure5 normalization dist/threshold verified from localPDFpage12/SectionV-D.1; shared S/Known-ValP95 applied.14paired metric panels replayed exactly;47sources unchanged;90artifact bundlePASS. Final `figures_final/` has annotations outside curves; initial exports retained. Linear tail counts are disclosed and full-range asinh comparisons retain all observations. No training/threshold changes, manuscript replacement or GitHub push.
+
+### Run known-unknown-figures-20261104
+
+- Agent: [agent:codex]
+- Status: complete
+- Objective: produce reproducible Known/Unknown density plots from current frozen scores, with matched Native OD context.
+- Starting state: existing Stage41 USTC and Stage44/44B VNAT score exports and calibration records, single seed2022.
+- Actions performed: read local Open-Detect paper/reference plot code, align frozen score roles/IDs and Known-Val thresholds; generate7protocol/14method-panel distributions and4composite groups; replay metrics; refine layout from saved density grids with original figures retained; inspect all final PNGs and verify PNG300dpi/PDF/SVG exports.
+- Files changed: independent figure bundle and this progress entry; historical score/model/data assets remain read-only.
+- Validation and observed results:14/14natural/P95 metric panels match historical outputs; all score normalization/transform decisions and AUROC preserved;47source hashes unchanged;4final groups/12exports parse and display correctly;90artifact bundlePASS. VNAT separation is clear; USTC A-2UFAR46.06% remains visible. Initial and final layouts have identical source density/metric CSV hashes.
+- Decisions and assumptions: all seven protocols, natural Test prevalence; shared S/P95 normalization within each run; redKnown/blueUnknown; central linear display with explicit outside counts plus full-range transformed companion.
+- Errors or blockers: first schema read used absent Stage41 A-2 detection path; corrected to documented Stage40 source. A PyMuPDF fitz-alias deprecation warning was retained in export-check log; no verification failure. No model/metric mutation.
+- Next step: none; deliver figures/report. Current task does not automatically edit the manuscript, push, or continue another stage.
+
 ## Current handoff (2026-11-04 — ISCX P/R manuscript integration and publication)
 
 - 2026-11-04 — [agent:codex] `iscx-pr-publish-20261104` complete: data/manuscript payload committed and non-force pushed as87606c81c498f9b30a5714be2e6de31fbfcbc3f2; remote main independently verified identical. Chapter4 table4-5 now contains eight matched VPN6/Tor7 configurations with Accuracy/Macro-Precision/Macro-Recall/Macro-F1/Weighted-F1, uniformly seeds2022/2023 mean±populationSD. Corrected YaTC deltas to+0.66/+3.89pp.80display cells/31source hashes/50artifact bundlePASS. Published26scoped files (638,975bytes of staged file content); models, caches, logs and unrelated Stage48 files excluded.
@@ -35,6 +233,73 @@
 - Decisions and assumptions: Known-Test only, unchanged prediction/split inputs, macro/weighted and ddof0 conventions explicit.
 - Errors or blockers: initial archive validation rejected absolute external artifact paths; failed manifest/logs retained and only reference-path metadata corrected. Final `iscx_pr_archive_fixed_20261103` exited0 and validationPASS.
 - Next step: none for this supplement; report table/CSV. No new experiment started.
+
+## Latest operation (2026-11-03 — GitHub re-pull)
+
+- [agent:codex] Fetched `origin/main`; remote had one commit beyond local. Fast-forwarded `main` from `1f04f4f753685ff4eeb8a7936cf5ccae7d25c6ab` to `5ec0514617bbff6c61ec3397dda14fcc4430a8fd`; verified `HEAD == origin/main` and `git diff --check` clean. Remote updates `paper/md/ch4/4(1).md` and deletes `paper/md/ch4/1.md`. The pre-existing modified local `1.md` was preserved as `paper/md/ch4/1.md.local-before-remote-sync-20261103.md`; local `EXECUTION_PROGRESS.md` and `EXPERIMENT_RESULTS.md` edits were restored, and unrelated untracked experiment artifacts were untouched. Two safety stashes remain. No commit or push was made.
+- Follow-up — [agent:codex] A fresh fetch found `origin/main` advanced again from local `5ec0514617bbff6c61ec3397dda14fcc4430a8fd` to `1ef066821ed6dff536eab804b8111396384d9d01`. Fast-forward merge completed; `HEAD == origin/main`. This update adds three PDFs, updates `paper/md/ch4/4(1).md`, and deletes the tracked old PPTX `paper/picture/3.2.2插图.pptx`. The earlier local `paper/md/ch4/1.md` backup remains; the pre-existing edits to this progress file and `EXPERIMENT_RESULTS.md`, plus unrelated untracked outputs, were preserved. No commit or push. Evidence: `.tmux-task/remote_fetch_inspect_20261103/`, `remote_fast_forward_20261103/`, and `remote_pull_verify_20261103/`.
+
+## Active continuation (2026-11-03 — Stage48 USTC, two GPUs)
+
+- 2026-11-03 — [agent:codex] Resumed the unfinished Stage48 USTC A-2 Known17 comparison at the user's request, capped at two concurrent GPU jobs. The original Stage48 queue remains historically `paused_by_user`; five existing method results and the old interrupted RoNeTC/TFE evidence are preserved. Because exact optimizer/scheduler/RNG states are absent, an isolated recovery attempt restarts RoNeTC for its full 100 epochs and TFE for its full 20 epochs from initialization, same seed 2022 and registered recipe. Trident's already-selected checkpoint is reused.
+- Frozen checks passed before GPU launch: upstream Stage34 membership hash unchanged; Stage48 adapter manifest SHA256 `e2d0f20a9c6a3f79c4f75a9e8fd8f6c9e831d07978d9db179a0f3f4b8c887bad`; Train/Val/Test counts 34,665/4,333/4,333; Unknown usage 0. Live GPU snapshot selected physical GPUs 3 and 6 as free; GPUs 2/4/5/7 had unrelated workloads and were not touched.
+- Recovery files added: `resume_attempt_20261103/{README.md,RESULTS.md,manifest.json,run_method.py,build_test_inputs.py,progress.py}`. The first preflight correctly stopped after detecting that the canonical Stage34 source-manifest hash and generated Stage48 adapter-manifest hash are distinct; the adapter hash was then verified as `e2d0...87bad`, and the corrected preflight passed without launching training or creating packet outputs.
+- New attempt: `stage48_ustc_matched_closed_set/resume_attempt_20261103/`; bundle initialized; adapter syntax and frozen preflight PASS. Successful sessions: `stage48_resume_ronetc_final_20261103` (GPU 3) and `stage48_resume_tfe_20261103` (GPU 6). Three RoNeTC argument-only startup attempts exited before training; logs are preserved.
+- Latest progress: RoNeTC 4/100 epochs, best validation Accuracy 0.890376, last validation Macro-F1 0.688654; TFE 1/20 epochs, validation Accuracy 0.870529 and Macro-F1 0.765012. These are early snapshots, not final results. New runner syntax and manifest JSON validation passed.
+- Next: wait for validation-selected checkpoints; only then materialize/evaluate Known Test packet flows for TFE/Trident and perform independent Stage48 replay. Do not start CIC/open-set.
+
+## Current handoff (2026-10-31 — Stage48 user-requested pause)
+
+- [agent:codex] Stage48 USTC Known17 eight-configuration comparison is paused. The user requested saving the available checkpoint state and releasing GPUs. Five Test result sets remain intact. RoNeTC history ends at epoch63/100, with best checkpoint epoch47; TFE-GNN history/checkpoint ends at epoch16/20. Neither run has optimizer/scheduler/RNG state for exact continuation. Queue and archive controllers plus all Stage48 workers were stopped; the Stage48 GPU6 and GPU4 allocations were released (GPU4 had an unrelated 482 MiB process at verification). No final bundle validation is claimed. Details: `stage48_ustc_matched_closed_set/PAUSE_CHECKPOINT_20261031.md`.
+
+## Current handoff (2026-10-31 — Stage48 USTC补充实施)
+
+- 2026-10-31 — [agent:codex] 用户授权USTC17类、seed2022、最多三GPU并行；Stage48按用户要求暂停。5/8 Known Test 结果保存；RoNeTC至epoch63（best47），TFE至epoch16；缺少精确optimizer续训状态，已如实记录。Stage48进程已全部退出，GPU任务显存已释放。详见 `stage48_ustc_matched_closed_set/PAUSE_CHECKPOINT_20261031.md`。
+
+### Run 2026-10-31-stage48-ustc-benchmark
+
+- Agent: [agent:codex]
+- Status: in_progress (original queue remains paused as historical evidence; isolated recovery attempt active).
+- Objective: 补齐USTC A-2 Known17、seed2022八配置闭集对照，最多三卡并行；本轮不跑CIC/open-set。
+- Starting state: Stage34三视图/分支权重和缓存存在；此前回合中断在common48.py/prepare.py/run_od.py写入后，无GPU工作启动。
+- Actions performed: 通过tmux读取输入/训练代码，创建PLAN/EXPERIMENT_README及隔离数据/训练/评价/队列脚本；保留模型与历史训练实现。USTC TFE显式预登记VPN20epoch配置，Trident固定10epoch；选模指标逐方法披露。
+- Commands run: 项目.tmux-task/stage48_resume_small_reads_20261031等只读审计；bundle初始化记录stage48_init_bundle_20261031。所有shell payload在固定Conda/tmux内。
+- Files changed: stage48_ustc_matched_closed_set新增代码/记录、SESSION_HANDOFF.md、本文；其他用户论文改动保留。
+- Validation and observed results: 完整权重/缓存hash和Train/Val特征ID核验PASS，377source references；5组模型导入PASS；实际GPU3/6/4进程/PID和显存已核实。TF最佳epoch15/20、FIG44/50、YaTC24/200。新E3头best16/30，Test Macro .986746；TF .986923、YaTC .987431，均4333同流。Packet Train/Val38998/38998提取成功，无额外过滤。仍需完成余下模型及最终独立验证，不能标记实验完成。
+- Decisions and assumptions: max3 GPU workers，live容量选择，不触动其他GPU任务；现存Test为development暴露数据。历史分支可验证复用；新方法训练仅Known Train/Val，选点冻结后Test。
+- Errors or blockers: 一个只读archive hash命令quoting SyntaxError后修正；归档writer状态/标题schema在首次执行前修复并记录old/new hash，训练/模型/源数据未变。TFE保留released scheduler调用位置warning，TF只读numpy tensor warning保留在日志。当前无训练失败。
+- Next step: 队列自动接续Trident和选点后Test；通过progress.py查看总进度，勿重复启动。最后独立重算8配置指标并验证manifest；到USTC结束，不启动CIC/open-set。
+- Startup handoff validation: stage48_live_verify_final_20261031观察到OD39epoch、RoNeTC5epoch、TFE1epoch；max3 GPU/所有代码syntax/source guards PASS，训练正常。metadata_cache_amendment.md记录只缓存冻结17类列表的等价性能修复，10000次cached/uncached类表一致；旧worker继续旧函数，不重启训练。运行中归档helper遇到活跃IPC socket而失败，不能称bundlePASS；失败日志保留。最终archive_v2 companion改为所有reader退出后hash普通文件、登记非普通IPC端点，并把生成的外部views运行符号链接转换成hash引用记录，原始数组保留。第一个等待归档进程仅轮询期间被停止，v2已启动；训练controller/3GPU worker未停止。终态验证仍待队列完成。
+- Session resume 2026-11-03: user authorized continuation with max two GPU jobs. Live read-only state showed GPUs 3/6 idle; GPU2/4/5/7 occupied, no unrelated processes touched. Original RoNeTC and TFE runs still have no optimizer/scheduler/RNG states, so exact resume is impossible; old partial checkpoints/history are retained and excluded from this fresh isolated restart. Initialized `resume_attempt_20261103/`, added separate runners, and passed syntax plus frozen Stage48 adapter manifest/hash and role-count preflight (34,665/4,333/4,333; Unknown=0). Parent Stage34 source-manifest hash remains verified via `common48.verify_locks()`. Next: launch full RoNeTC 100-epoch and TFE 20-epoch recipes in parallel, then build the shared Known-Test packet cache, evaluate frozen TFE/Trident, and replay all eight Test result rows.
+- 2026-10-31 — [agent:codex] 用户询问是否结束；只读live检查证明尚未结束，5/8 Test结果。OD91epoch完成，Test Macro .980933；当前方法logit重放完成，Macro .987649。RoNeTC PID2425438/GPU6训练46/100，TFE PID2474921/GPU4训练12/20，均存活；Trident训练已完成，等待TFE选点后共享Test输入再评价。控制器仍running、最终completion/archive receipts未生成；未重启或干预训练。GPU3已被本任务释放，后续该卡其他进程不属于本任务。本条检查任务complete，原Stage48 benchmark仍in_progress。
+
+## Current handoff (2026-10-31 — Stage48仅补USTC/CIC的方案核查)
+
+- 2026-10-31 — [agent:codex] 用户明确保留VPN/Tor已有完整对照，仅分析如何补USTC/CIC；seed2022。只读核查完成，未启动实验。USTC/CIC冻结清单重新计数和SHA256吻合；独立TF/YaTC分支checkpoint存在且配置样本数/hash一致，可在完整核验后补评估，而非默认全部重训。旧TFE/Trident入口硬编码Stage20，必须隔离适配；旧USTC Native OD不能冒充corrected-paper。训练和数据未修改。
+
+### Run 2026-10-31-stage48-ustc-cic-plan-audit
+
+- Agent: [agent:codex]
+- Status: complete (analysis only; benchmark not launched).
+- Objective: 分析USTC17/CIC3单seed八配置对照的最小补跑路径，保留VPN6/Tor7旧对照。
+- Starting state: Stage34/34B本方法结果已存在；Stage23/23B基线入口主要绑定ISCX任务。
+- Actions performed: 读取配置、训练入口、缓存文件列表和历史完成核验；重新计算两清单hash及role/class counts。USTC34665/4333/4333、17类；CIC35516/3912/2536、3类。
+- Commands run: 项目tmux helper会话stage48_ustc_cic_scope_20261031、stage48_two_dataset_readiness_20261031、stage48_reuse_detail_20261031、stage48_config_counts_20261031；只读命令均在指定Conda环境运行。
+- Files changed: 本记录和SESSION_HANDOFF.md；自动产生项目本地tmux审计日志。未修改模型/数据/论文/训练入口。
+- Validation and observed results: USTC manifest SHA256=73f7eecef25ee91015d557f7f9f8e7eecd7560cd995c5cc7ec21c9390d45246d；CIC=35e99d89ad4eddc828c9d67529ea1b527d1fd511cb39db8c509461b5bf38e25d。TF/YaTC配置hash/counts吻合且model_best.pt存在，但尚未全量重验权重hash和逐ID一致性，不能将其直接标记reuse PASS。
+- Decisions and assumptions: 总计16结果单元；先核验复用TF/YaTC/本方法，补旧E3融合头和其余四基线。保留既有方法-specific Val选模，逐项披露：YaTC weighted-F1、OD/RoNeTC accuracy，不声称全部Macro-F1选模。Trident保持Train内部校准子集，不能动公共外层成员。
+- Errors or blockers: 两个猜测Stage31源码路径不存在，已通过Stage34实际配置核实分支recipe；TFE/Trident的USTC/CIC包级输入仍需后续映射审核。未运行训练/预测/新指标计算。
+- Next step: 用户要求实施后建立Stage48隔离目录、冻结reuse审计和方法配置；不得启动旧ISCX脚本直接覆盖历史输出。
+
+## Current handoff (2026-10-31 — 第4章已知分类结果核对)
+
+- 2026-10-31 — [agent:codex] 追问基线覆盖：Stage32粗VPN4/Tor5仅有同流E3原预测映射、E3粗分类头和YaTC原预测映射对照；YaTC映射不是按粗标签重新训练。Stage41已补USTC A-2同4333条Known Test的Native OD闭集对照：Acc/Macro/Weighted为97.5537/97.8454/97.5034%，本方法98.4306/98.7649/98.4315%。Stage34B当前已检查文件只有本方法CIC3类平衡Test结果，未找到对应完整多方法Test表；compare_results.py是旧/新采样的预备比较脚本，不能视作已执行基线结果。论文八配置双seed对照仍是Stage47的VPN6/Tor7原标签任务。
+- 2026-10-31 — [agent:codex] complete：完整阅读 `paper/md/ch4/1.md`，核对 Stage32 Test CSV、Stage34 USTC `known_test_results.json`、Stage34B CIC Test `results.json`/完成核验及Stage44四折已知分类JSON。表4-3四数据集已知Test结果均有文件证据且四舍五入一致：VPN4类91.58/91.94/91.45，Tor5类89.62/89.94/89.67，USTC17类98.43/98.76/98.43，CIC3类99.80/99.75/99.80（Accuracy/Macro/Weighted-F1，%）。VNAT另有Stage44三Known服务四折结果，平均Macro-F1 99.87%；Stage32旧VNAT4类100%来自不同的流随机协议，不能替代Stage44。八配置双seed横向表来自Stage47，只覆盖VPN6类与Tor7类；不能据此宣称四数据集均完成八方法公平对照。Stage34总状态interrupted反映旧CIC中断，USTC已完成；CIC正式高分来自Stage34B平衡重测。仅核对现存结果并更新交接记录，未重训、重算预测或修改论文；本次没有全量复验checkpoint哈希。
+
+## Current handoff (2026-10-31 — GitHub remote file recheck)
+
+- 2026-10-31 — [agent:codex] 只读复核 GitHub `main`：本地 `main` 为 `62d8467606de87350be3e0550406df27096ad1ec`，远端 `origin/main` 为 `1f04f4f753685ff4eeb8a7936cf5ccae7d25c6ab`，远端领先4个提交。远端相对本地提交新增/修改7个路径（第2、3、4章和图4-1源文件/图片）；本地工作树原有1个修改文件及143个未跟踪项未改动。远端新增SVG与本地同路径未跟踪SVG的Git blob不同，后续同步前需先人工决定保留/合并；本次仅fetch更新远程跟踪信息，没有pull、merge或覆盖工作文件。
+- Follow-up — 用户随后要求重新拉取。已将本地冲突SVG原样改名保存在 `paper/picture/ch4/20261023-stage47-original-service-eight-configs/fig4_1_closed_baselines.local-before-pull.svg`（Git blob `d47e0f957b0a8d7de38bc39b79e8160db071123e`），再对 `origin/main` 执行 fast-forward pull；本地HEAD与远端均为 `1f04f4f753685ff4eeb8a7936cf5ccae7d25c6ab`。远端SVG已位于原路径，blob与远端一致；既有 `paper/md/ch4/1.md` 修改和其余未跟踪产物保留。验证见tmux `remote_pull_apply_20261031` 与 `remote_pull_verify_20261031`。
 
 ## Current handoff (2026-10-24 — Stage46 scoped GitHub re-push)
 

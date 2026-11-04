@@ -1,5 +1,9 @@
 # Current Project Status
 
+## 2026-11-04 — A-2 current result designation
+
+The project-facing A-2 current result is now [A2_CURRENT_RESULTS.md](A2_CURRENT_RESULTS.md), using the completed fresh retraining comparison on4,164 Known/417 Unknown Test flows, seed2022. Our/Native OD AUROC is99.57/94.95%, Unknown F1 is86.93/47.55%, and Known Macro-F1 is99.35/98.61%. Both thresholds use Known-Val P95. This Test membership was selected retrospectively from earlier C2 errors and remains a development configuration; original full-Test controls and exclusion provenance are retained on that page. No frozen experiment or manuscript table is overwritten by this designation.
+
 ## 2026-10-23 update — Stage47 original-service matched closed-set comparison
 
 The current three-view method is now included in the original-service VPN-6 / Tor-7 comparison used for Table 4-2. Across seeds 2022 and 2023, mean ± population SD Macro-F1 is VPN `89.37±0.55%` and Tor `86.63±0.15%`; the corresponding YaTC differences are `+0.66` and `+3.89` percentage points. The 4-run supplement and independent checks are recorded in [Stage47](stage47_original_service_current_three_view/RESULTS.md). Chapter 4 and Figure 4-1 were updated. This is a two-seed development comparison on previously exposed Test data; it does not establish statistical significance or open-set improvement. The separate Stage46 long-budget run remains its own task; consult its execution record for the latest live status.
