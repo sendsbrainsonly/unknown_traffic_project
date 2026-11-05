@@ -1,0 +1,8 @@
+{
+  "paper/picture/ch4/20261105_a123_known_unknown_separability/generate_distributions.py": "73a1873bcce5c39e6be75ab1110d20c63053e6b1d96a62da20a5e1b53cd505bd",
+  "paper/picture/ch4/20261105_a123_known_unknown_separability/sample_scores.csv": "da402b3a947a9b78f5a04b950fc2b2cf308ed2c7d531e2a16eaf069b29446396",
+  "paper/picture/ch4/20261105_a123_known_unknown_separability/score_metrics.csv": "37e09a984622013956ba509cdfae11487ddb913642a39950c82afd83b9437268",
+  "a2_retrained_matched_opendetect_20261104/sample_scores.csv": "bde9c664f9657e888db0611bfab458484140bf8ca99f600891111c7003d1ea31",
+  "a2_retrained_matched_opendetect_20261104/run_results.csv": "21631f9c74e6c12f5651f89ab2788e7b630dd0e453d3be6c08a11e103d5be4b7",
+  "a2_retrained_matched_opendetect_20261104/roles.csv": "96fe60a38d4b65aa66b256a3bb0f74302abe07aeb90157615e86847bf21484b9"
+}

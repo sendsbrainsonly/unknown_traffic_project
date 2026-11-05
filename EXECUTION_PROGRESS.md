@@ -1,5 +1,97 @@
 # Unknown Traffic / Unknown Attack Detection 项目过程、实验计划修订与当前进度
 
+## Current handoff — Publish A-1/A-2/A-3 current-config figures (2026-11-05)
+
+- 2026-11-05 — [agent:codex] `publish-a123-current-config-figures-20261105` in progress: remote main was fetched and still matched local `16777a5`; scoped target includes the latest current-config plot/docs and its referenced balanced A-2 chapter figure. Other dirty experiment outputs remain excluded.
+
+### Run publish-a123-current-config-figures-20261105
+
+- Agent: [agent:codex]
+- Status: in_progress
+- Objective: publish the latest A-1/A-2/A-3 density figure and related result documentation to GitHub.
+- Starting state: local HEAD and `origin/main` both `16777a585d5464e58fe1ec645a073dd215c92ba5`; four tracked documentation files and numerous unrelated experiment artifacts were already dirty/untracked.
+- Actions performed: fetched `origin/main`; audited the intended figure exports and linked documentation; excluded per-sample scores, density grids, model weights, caches, and unrelated runs from the planned publication.
+- Commands run: `inspect_push_a123_20261105`, `inspect_publish_scope_20261105` (stopped during oversized status/diff output), `push_preflight_a123_20261105`, `inspect_bundle_docs_20261105`.
+- Files changed: none yet for this push task.
+- Validation and observed results: remote fetch completed with no new commits; latest figure export set plus the balanced chart PNG referenced by the chapter is approximately 1.7 MiB.
+- Decisions and assumptions: publish the selected figure formats and human-readable scope/metric files; keep local-only sample-level data outside GitHub.
+- Errors or blockers: the first broad inspection command was stopped after it spent too long scanning noisy output; no repository files were changed by that command.
+- Next step: finish the scoped publication, commit, push, then verify local and remote commit IDs.
+
+## Current handoff — Current-config A-2 density correction (2026-11-05)
+
+- 2026-11-05 — [agent:codex] `a123-current-config-separability-20261105` complete: A2density recomputed from exactcurrent4164Known/417Unknown,TP369/FP63/FN48/TN4101,AUROC99.57/F1=86.93/UFAR11.51/FRR1.51%. Combinedasinh/linear andsingleA2PNG/PDF/SVG9exports;6frozeninputhashes/3metrics/6813sample/10800densityrows/28archiveartifacts PASS. A1/A3precedingbalanced panels retained and differing memberships/selection provenance labeled. Currentresultpage now links newA2plot. No further selection/score/threshold changes.
+
+### Run a123-current-config-separability-20261105
+
+- Agent: [agent:codex]
+- Status: complete
+- Objective: redraw previous three-scenario density figure with A-2 exactly matching current_config results requested by user.
+- Starting state: existing current_config score membership and metrics verified; earlier plot used original558Unknown andUFAR33.87%, creating scope mismatch.
+- Actions performed: read current registry and score/role headers; initialized independent paper/picture/ch4/20261105_a123_current_config_separability.
+- Files changed: isolated figure bundle with9exports/source scripts/CSV/provenance/caption/results/manifest; A2_CURRENT_RESULTS.md image/navigation and update date; root records/index.
+- Decisions and assumptions: A1/A3 keep preceding balanced panels; A2uses4164/417currentmembers, no rebalance/newfiltering. Disclose prior Test-error selection and preserve full-data controls.
+- Commands run: a2_current_density_scope_20261105, a2_current_density_headers_20261105.
+- Validation and observed results: a123_current_density_render_20261105 exit0: exactcurrentA2IDs/labels/roles match frozenroles.csv;3metric rows match corresponding sources; scores/rejections andmonotonicdisplay invariant;6inputhashes unchanged;9exports PNG300dpi/PDF/SVG verified. Combined andsingleA2PNGs visually inspected. a123_current_density_archive_20261105 exit0:6813sample/3metric/10800densityrow counts, currentpageimageentry and28artifactarchive PASS.
+- Errors or blockers: none.
+- Next step: deliver newcurrent-config combined/singleA2image and download index; no automatic training, extra filtering or push.
+
+## Current handoff — A-1/A-2/A-3 separability densities (2026-11-05)
+
+- 2026-11-05 — [agent:codex] `a123-known-unknown-separability-20261105` complete: primary3panel matches original frozen1:1 bar-chart IDs, newA2C2 plus historicalA1/A3DES-v1. RedKnown/blueUnknown/P95, explicit full-rangeasinh and linear versions, full-naturalcontrol and3individualpanels.18exports/6metricrows/14673samplerows/16200densityrows/14frozenhashes/45archiveartifacts PASS. Mainbalanced/naturalPNGs visually inspected; no source/scores/threshold changes or GPU/model work.
+
+### Run a123-known-unknown-separability-20261105
+
+- Agent: [agent:codex]
+- Status: complete
+- Objective: produce earlier-style Known/Unknown score distributions for A-1/A-2/A-3, with updated A-2 and explicit sample/score provenance.
+- Starting state: original balancedIDs, updated six-row chart table, A1/A3 full scores and new A2 scores/calibration available; preceding bar chart verified.
+- Actions performed: audited prior plotting style and frozen score sources, initialized independent paper/picture/ch4/20261105_a123_known_unknown_separability bundle.
+- Commands run: a123_density_source_audit_20261105, a123_density_preflight_20261105.
+- Files changed: isolated figure bundle and root records/index; no source experimental assets changed.
+- Decisions and assumptions: primary densities match85/85,558/558,1031/1031 balanced bar-chart IDs; full-natural control also provided. No earlier error-selected subset. Full observed ranges retained, explicit monotonic asinh and linear views.
+- Validation and observed results: a123_density_render_20261105 exit0: six balanced/natural metric rows match frozen sources; rank-based independent AUROC and count-basedF1 parity; normalization/asinh preserveAUROC and rejection decisions;14sourcehashes unchanged.18PNG300dpi/PDF/SVG exports verified. Primary balanced and natural PNGs visually inspected with readable labels. a123_density_archive_20261105 exit0:14673sample/6metric/16200densityrow counts and45artifact archive PASS.
+- Errors or blockers: none.
+- Actions performed (completion): generated reproducible script, raw score/membership CSV, metrics/density grids, six figure groups, captions/README/RESULTS/manifest/warnings/verification and complete render evidence links.
+- Next step: deliver primary figure plus download index; no automatic manuscript insertion, new experiment or push.
+
+## Current handoff — Screenshot document reference correction (2026-11-04)
+
+- 2026-11-04 — [agent:codex] `a2-figure-reference-fix-20261104` complete: fixed exact screenshot source paper/md/ch4/1.md.local-before-remote-sync-20261103.md, section4.3.2 image/table4-7/paragraph/caption. Now references verified v2PNG and A-2AUROC94.81/F1=76.64/UFAR33.87% for ours.6tablecells/link/figurehash/section-only change and8artifact archive PASS. Pre-edit document preserved in independent correction bundle.
+
+### Run a2-figure-reference-fix-20261104
+
+- Agent: [agent:codex]
+- Status: complete
+- Objective: fix the actual document referenced in the screenshot.
+- Starting state: correct final v2PNG exists; screenshot document still references old render-v4 figure and table values.
+- Actions performed: exact caption located; original document copied byte-for-byte to independent correction bundle before edits.
+- Commands run: a2_stale_figure_find_20261104, a2_stale_figure_context_20261104, a2_reference_fix_prepare_20261104.
+- Files changed: viewed document section4.3.2, independent paper/picture/ch4/20261104_a2_figure_reference_fix and root records.
+- Decisions and assumptions: update the user-viewed document even though its filename denotes an earlier local backup; preserve original bytes in correction bundle.
+- Validation and observed results: a2_reference_fix_verified_20261104 exit0: actual figure link exists and hash matches previously verified asset;6tablecells match chart_data.csv; all content outside section4.3.2 exactly retained;8artifact archive PASS. GeodoFN counts345OD/189ours agree with source class table.
+- Errors or blockers: previous edit targeted another document. First scope verification caught apply_patch's added EOF newline; restored original no-final-newline formatting, then same unchanged verification passed. Both failed and successful logs preserved.
+- Next step: deliver exact corrected document link; no training or automatic push.
+
+## Current handoff — A-2 balanced figure update (2026-11-04)
+
+- 2026-11-04 — [agent:codex] `a2-balanced-chart-update-20261104` complete. Replayed new C2/Native on original1116balanced A-2 IDs: Our/OD AUROC94.81/92.90%, F1=76.64/48.52%, UFAR33.87/66.13%. A-1/A-3 values unchanged and revision disclosed. Updated corresponding chapter-four paragraph/image/caption; final v2 PNG300dpi/PDF/SVG visually inspected.18plot cells/6sourcehashes/27archive artifacts PASS. No training/GPU/threshold refit or push.
+
+### Run a2-balanced-chart-update-20261104
+
+- Agent: [agent:codex]
+- Status: complete
+- Objective: update A-2 bars and matching manuscript text with traceable current-model results on the figure's original balanced Test membership.
+- Starting state: current manuscript links missing local Fig4_3_Reference.png; matching original exists in 20261016 render-v4/fig4_7_ustc_matched.png. Stage41 balanced IDs and newly retrained full score export exist.
+- Actions performed: verified original1116A-2 IDs; preliminary replay Our/OD AUROC94.81/92.90%, F1=76.64/48.52%, UFAR33.87/66.13%. Read paper-caption/experiment and preservation guides; initialized isolated figure bundle.
+- Files changed: independent paper/picture/ch4/20261104_a2_balanced_chart_update (source script,6metric rows,2232paired score rows,1116IDs,source hashes,old/new manuscript snapshots,PNG/PDF/SVG,verification,RESULTS/manifest); paper/md/ch4/4(1).md exactly3lines replaced (discussion/image/caption), preserving CRLF and all other content; root records/index.
+- Commands run: named project tmux a2_chart_edit_scope_20261104, a2_chart_inputs_20261104, a2_chart_style_and_init_20261104.
+- Decisions and assumptions: do not substitute previously error-selected4164/417 metrics into558/558 figure; new C2/P95 A-2 result is a disclosed revision, not evidence of a uniform three-scenario recipe.
+- Validation and observed results: a2_chart_render_20261104 exit0; layout v2 preserves first render and reduces cramped tick label size only. a2_chart_verify_20261104 exit0:18plotted cells, independent rank-basedAUROC/countF1 on original1116IDs, unchangedA1/A3 and6source hashes,3final exports and scoped manuscript edit PASS. a2_chart_archive_20261104 exit0 verifies27artifacts(16bundle+11external). Final PNG visually checked: labels separated, no clipping.
+- Errors or blockers: broken legacy image link replaced with new existing relative target; initial render retained for layout provenance. Verification log retains PyMuPDF fitz deprecation warning; no failure or environment change.
+- Commands run (completion): a2_chart_render_20261104, a2_chart_layout_final_20261104, a2_chart_verify_20261104, a2_chart_archive_20261104.
+- Next step: deliver revised chart and chapter link; no new training, detector changes or automatic push.
+
 ## Current handoff — A-2 current result registration (2026-11-04)
 
 - 2026-11-04 — [agent:codex] `a2-current-result-registration-20261104` complete: A2_CURRENT_RESULTS.md is the project-facing A-2 current result, linked from README/status/index/handoff.30display cells verified against frozen CSV; counts/source links/provenance PASS. Documentation only; original full-Test controls, frozen data/weights/scores and historical manuscript tables retained.

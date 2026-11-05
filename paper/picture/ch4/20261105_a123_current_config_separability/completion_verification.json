@@ -1,0 +1,17 @@
+{
+  "status": "PASS",
+  "current_a2_ids_exact": true,
+  "known_test": 4164,
+  "unknown_test": 417,
+  "TP": 369,
+  "FP": 63,
+  "FN": 48,
+  "TN": 4101,
+  "metric_rows": 3,
+  "sample_rows": 6813,
+  "source_hashes_unchanged": 6,
+  "all_selected_scores_within_axes": true,
+  "score_threshold_changes": 0,
+  "a1_a3_same_members_and_metrics": true,
+  "exports_verified": 9
+}
