@@ -2,21 +2,21 @@
 
 ## Current handoff — Publish A-1/A-2/A-3 current-config figures (2026-11-05)
 
-- 2026-11-05 — [agent:codex] `publish-a123-current-config-figures-20261105` in progress: remote main was fetched and still matched local `16777a5`; scoped target includes the latest current-config plot/docs and its referenced balanced A-2 chapter figure. Other dirty experiment outputs remain excluded.
+- 2026-11-05 — [agent:codex] `publish-a123-current-config-figures-20261105` complete: commit `0344fdcb0767ee26d8764cd465ebc9ab4d54f08b` pushed to GitHub `main`; post-push fetch and `git ls-remote` independently matched local and remote HEAD. 22 scoped files, about 1.7 MiB of figure exports; no weights, caches, per-sample score CSVs or density grids.
 
 ### Run publish-a123-current-config-figures-20261105
 
 - Agent: [agent:codex]
-- Status: in_progress
+- Status: complete
 - Objective: publish the latest A-1/A-2/A-3 density figure and related result documentation to GitHub.
 - Starting state: local HEAD and `origin/main` both `16777a585d5464e58fe1ec645a073dd215c92ba5`; four tracked documentation files and numerous unrelated experiment artifacts were already dirty/untracked.
-- Actions performed: fetched `origin/main`; audited the intended figure exports and linked documentation; excluded per-sample scores, density grids, model weights, caches, and unrelated runs from the planned publication.
-- Commands run: `inspect_push_a123_20261105`, `inspect_publish_scope_20261105` (stopped during oversized status/diff output), `push_preflight_a123_20261105`, `inspect_bundle_docs_20261105`.
-- Files changed: none yet for this push task.
-- Validation and observed results: remote fetch completed with no new commits; latest figure export set plus the balanced chart PNG referenced by the chapter is approximately 1.7 MiB.
+- Actions performed: fetched `origin/main`; published the current-config density figure, its human-readable scope/results and verification summaries, and the balanced A-2 chart required by the revised chapter. Excluded per-sample scores, density grids, model weights, caches, and unrelated runs.
+- Commands run: `inspect_push_a123_20261105`, `push_preflight_a123_20261105`, `inspect_bundle_docs_20261105`, `validate_publication_bundle_v2_20261105`, `validate_publication_bundle_v3_20261105`, `locate_bundle_scripts_20261105`, `read_push_workflow_skills_20261105`, `verify_scoped_stage_20261105`, `commit_publish_a123_20261105`, `push_publish_a123_20261105`, `verify_remote_publish_a123_20261105`.
+- Files changed: `A2_CURRENT_RESULTS.md`, `EXECUTION_PROGRESS.md`, `EXPERIMENT_RESULTS.md`, `paper/md/ch4/4(1).md`, and selected figure/documentation assets under `paper/picture/ch4/20261104_a2_balanced_chart_update/` and `paper/picture/ch4/20261105_a123_current_config_separability/`. `SESSION_HANDOFF.md` updated locally but remains gitignored.
+- Validation and observed results: complete local bundle verification passed (`status=success`, 28 artifacts, 20 bundle files); staged path audit passed with no sample scores, density grids, weights or caches. Commit `0344fdcb0767ee26d8764cd465ebc9ab4d54f08b` pushed successfully; post-push `git fetch` and `git ls-remote` report identical local/remote main SHA. Tracked worktree and index are clean.
 - Decisions and assumptions: publish the selected figure formats and human-readable scope/metric files; keep local-only sample-level data outside GitHub.
-- Errors or blockers: the first broad inspection command was stopped after it spent too long scanning noisy output; no repository files were changed by that command.
-- Next step: finish the scoped publication, commit, push, then verify local and remote commit IDs.
+- Errors or blockers: one initial validation command used an incorrect script path and one staging attempt encountered intentionally ignored `SESSION_HANDOFF.md` and `score_metrics.csv`; both were excluded from GitHub. The correct bundle validator passed. No unrelated changes were staged.
+- Next step: none; publication complete.
 
 ## Current handoff — Current-config A-2 density correction (2026-11-05)
 
