@@ -1,4 +1,4 @@
-\section{Method}
+\section{Method}\label{sec:method}
 TriGLE combines representation learning with global and local empirical support for open-set encrypted-traffic recognition. The method characterizes traffic through byte sequences, packet interactions, and multilevel byte organization, and constructs a unified representation through Gaussian adaptation and deterministic fusion. It then combines empirical class centroids with within-class sample neighborhoods to measure deviations from known classes in terms of both global position and local neighborhood relationships. The resulting rejection score integrates global and local information for known-class classification and unknown-class rejection. Fig.~3-1 presents the overall framework.
 \begin{figure*}[!t]
 \centering
@@ -9,7 +9,7 @@ TriGLE combines representation learning with global and local empirical support 
 \end{figure*}
 
 \subsection{Problem Definition and Notation}
-In open-set encrypted-traffic recognition, the labeled training set contains $N$ samples, $\mathcal{D}_{\mathrm{tr}}=\{(x_i,y_i)\}_{i=1}^{N}$. Here, $x_i\in\mathcal{X}$ denotes a bidirectional flow, $\mathcal{X}$ is the traffic sample space, and $y_i\in\mathcal{C}_K=\{1,\ldots,C\}$ is its class label, with $C$ known classes. The known-class validation set is $\mathcal{D}_{\mathrm{val}}$, whose labels also belong to $\mathcal{C}_K$.
+Following the open-set recognition setting~\bluecite{classic-osr}, the labeled training set for encrypted traffic contains $N$ samples, $\mathcal{D}_{\mathrm{tr}}=\{(x_i,y_i)\}_{i=1}^{N}$. Here, $x_i\in\mathcal{X}$ denotes a bidirectional flow, $\mathcal{X}$ is the traffic sample space, and $y_i\in\mathcal{C}_K=\{1,\ldots,C\}$ is its class label, with $C$ known classes. The known-class validation set is $\mathcal{D}_{\mathrm{val}}$, whose labels also belong to $\mathcal{C}_K$.
 
 At test time, the model processes traffic from both the known-class set $\mathcal{C}_K$ and the unknown-class set $\mathcal{C}_U$. Unknown classes appear in neither the training set nor the validation set, and $\mathcal{C}_K\cap\mathcal{C}_U=\varnothing$. Test samples therefore extend beyond the classes observed during training.
 
@@ -40,7 +40,7 @@ $s(x),\tau$ & Combined rejection score and rejection threshold \\\hline
 Encrypted-traffic class characteristics appear in byte combinations and contextual relationships, interactions between packets, and the internal hierarchical structure of packets. We construct byte-sequence, flow-interaction-graph, and byte-image views to learn byte-context dependencies, packet interactions, and multilevel byte organization, respectively. Let $x=\{p_1,p_2,\ldots,p_{n_x}\}$ denote the chronologically ordered packet sequence of a bidirectional flow, where $n_x$ is the packet count. The sending direction of the first packet defines the forward direction. Each branch constructs its input from the same flow and extracts complementary flow-level features for subsequent Gaussian adaptation and fusion.
 
 \subsubsection{Byte-Sequence Branch}
-The byte-sequence branch captures local byte-combination patterns and contextual dependencies along the packet-byte sequence. We use pretrained TrafficFormer~\cite{ch2-2} as the byte-sequence encoder to map raw packet bytes to a flow-level sequence representation.
+The byte-sequence branch captures local byte-combination patterns and contextual dependencies along the packet-byte sequence. We use pretrained TrafficFormer~\bluecite{ch2-2} as the byte-sequence encoder to map raw packet bytes to a flow-level sequence representation.
 
 For the chronologically ordered flow $x=\{p_1,p_2,\ldots,p_{n_x}\}$, we select the first $\min(5,n_x)$ packets. After removing the Ethernet header, we retain at most 64 bytes per packet and form hexadecimal byte bigrams following the TrafficFormer input representation. For a byte sequence $(b_1,b_2,\ldots,b_m)$, the bigram representation is $(b_1\Vert b_2,b_2\Vert b_3,\ldots,b_{m-1}\Vert b_m)$, where $\Vert$ denotes concatenation of adjacent bytes. TrafficFormer's token mapping converts these combinations into discrete tokens, which form a flow-level sequence in the original packet order. After adding the $[\mathrm{CLS}]$ token, we truncate or pad the input to a maximum of 320 tokens.
 
@@ -53,7 +53,7 @@ z_t(x)=E_{\mathrm{TF}}\!\left(T(x)\right)_{\mathrm{CLS}}
 Here, $E_{\mathrm{TF}}$ is the fine-tuned TrafficFormer encoder, and $z_t(x)$ is the 768-dimensional byte-sequence representation used by the subsequent multiview adaptation and fusion module.
 
 \subsubsection{Flow-Interaction-Graph Branch}
-The flow-interaction-graph branch characterizes communication behavior through relationships between packets, complementing the low-level content features of the byte-sequence branch. Following existing Flow Interaction Graph (FIG) modeling approaches~\cite{ch2-10,ch2-5}, we represent a bidirectional flow as a packet-level graph. A Topology Adaptive Graph Convolutional Network (TAGCN) learns a structured interaction representation that captures transmission direction, timing, and interaction topology.
+The flow-interaction-graph branch characterizes communication behavior through relationships between packets, complementing the low-level content features of the byte-sequence branch. Following existing Flow Interaction Graph (FIG) modeling approaches~\bluecite{ch2-10,ch2-5}, we represent a bidirectional flow as a packet-level graph. A Topology Adaptive Graph Convolutional Network (TAGCN)~\bluecite{tagcn} learns a structured interaction representation that captures transmission direction, timing, and interaction topology.
 
 For the chronologically ordered flow $x=\{p_1,p_2,\ldots,p_{n_x}\}$, we construct a graph from the first $\min(30,n_x)$ packets, with one node per packet. Consecutive packets with the same sending direction form a burst. Within each burst, edges connect consecutive packets in temporal order. Between adjacent bursts, edges connect their first nodes and their last nodes, capturing transmission continuity and direction changes. This procedure produces an undirected flow interaction graph $G(x)=(V,E)$, where $V$ and $E$ denote the node and edge sets. Fig.~3-2 illustrates burst segmentation, graph construction, node features, and neighborhood aggregation.
 
@@ -81,7 +81,7 @@ z_g(x)=\frac{1}{|V|}\sum_{u\in V}H[u,:]
 The resulting 128-dimensional representation $z_g(x)$ serves as input to multiview adaptation and fusion.
 
 \subsubsection{Byte-Image Branch}
-Packet headers and payloads exhibit hierarchical byte organization beyond byte-sequence patterns and packet interactions. Direct concatenation of raw bytes can allocate excessive representation space to longer packets and discard structural information from other packets. Following YaTC's Multi-Level Flow Representation (MFR)~\cite{ch2-4}, we organize raw bytes into a two-dimensional matrix with a fixed layout. Hierarchical encoding captures byte-, packet-, and flow-level structure.
+Packet headers and payloads exhibit hierarchical byte organization beyond byte-sequence patterns and packet interactions. Direct concatenation of raw bytes can allocate excessive representation space to longer packets and discard structural information from other packets. Following YaTC's Multi-Level Flow Representation (MFR)~\bluecite{ch2-4}, we organize raw bytes into a two-dimensional matrix with a fixed layout. Hierarchical encoding captures byte-, packet-, and flow-level structure.
 
 For a bidirectional flow $x$, we select the first five packets and retain an 80-byte header region and a 240-byte payload region per packet, padding missing content with zeros. The fixed header and payload positions form an $8\times40$ packet-level matrix. Stacking these matrices in chronological order yields the $40\times40$ flow-level MFR matrix:
 \begin{equation}
@@ -121,7 +121,7 @@ q_v(u\mid x)
 \end{equation}
 Here, $\mu_v(x)$ and $a_v(x)$ denote the latent mean and log variance, respectively. All views share latent dimension $d_u$.
 
-Gaussian adaptation jointly optimizes class discrimination and latent-distribution constraints. During training, reparameterized sampling from $q_v(u\mid x)$ produces latent representations. Classification cross-entropy preserves information relevant to known classes, while KL divergence from the standard normal distribution regularizes the latent distribution. The adaptation objective is
+Following the variational regularization principle used in the deep variational information bottleneck~\bluecite{vib}, Gaussian adaptation jointly optimizes class discrimination and latent-distribution constraints. During training, reparameterized sampling from $q_v(u\mid x)$ produces latent representations. Classification cross-entropy preserves information relevant to known classes, while KL divergence from the standard normal distribution regularizes the latent distribution. The adaptation objective is
 \begin{equation}
 \begin{aligned}
 \mathcal{L}_{\mathrm{adapt}}={}&\frac{1}{3M}\sum_{i=1}^{M}\sum_{v\in\{t,g,y\}}\Bigl[\mathcal L^{\mathrm{CE}}_{iv}\\
@@ -148,7 +148,7 @@ h(x)&=F_{\varphi}(r(x))\in\mathbb{R}^{128},\\
 Here, $r(x)$ is the concatenated representation, $F_{\varphi}$ learns combinations of features across views, and $g_{\psi}$ is the known-class classification head. The score $\ell_c(x)$ corresponds to class $c$. Global and local empirical support modeling also uses $h(x)$, placing known-class classification and unknown-class discrimination in the same representation space.
 
 \subsection{Global and Local Empirical Support Modeling}
-Known-class classification distinguishes classes, whereas unknown-class discrimination must also assess a test sample's relationship to known training samples. Class centroids summarize the overall location of training representations but cannot fully characterize within-class distributions. A sample near a centroid may still lie far from actual training samples. We therefore combine class centroids and within-class nearest neighbors in the fused space to characterize deviations in global position and local proximity. In the learned, fixed representation space, known training samples define a reference set for each class:
+Known-class classification distinguishes classes, whereas unknown-class discrimination must also assess a test sample's relationship to known training samples. Mean-based class prototypes are a standard reference in metric-based classification~\bluecite{protonet}. They summarize the overall location of training representations but cannot fully characterize within-class distributions. A sample near a centroid may still lie far from actual training samples. We therefore combine class centroids and within-class nearest neighbors in the fused space to characterize deviations in global position and local proximity. In the learned, fixed representation space, known training samples define a reference set for each class:
 \begin{equation*}
 \begin{gathered}
 \mathcal{T}_c=\{h(x_i):y_i=c,(x_i,y_i)\in\mathcal{D}_{\mathrm{tr}}\},
@@ -166,7 +166,7 @@ d_G(x)&=\|h(x)-b_{c^*(x)}\|_2^2.
 \end{aligned}
 \tag{11}
 \end{equation}
-The global distance measures deviation from the nearest class centroid. To characterize proximity to actual training representations, we select the $k$ representations nearest to $h(x)$ in Euclidean distance from $\mathcal{T}_{c^*(x)}$. These representations form the local neighborhood $\mathcal{N}_k(x)$. The local distance is their mean distance to the test representation:
+The global distance measures deviation from the nearest class centroid. Nonparametric nearest-neighbor distances provide a sample-based criterion for OOD detection~\bluecite{classic-knn}. Here, we restrict the neighborhood to the nearest-centroid class and use the mean neighbor distance. Specifically, we select the $k$ representations nearest to $h(x)$ in Euclidean distance from $\mathcal{T}_{c^*(x)}$. These representations form the local neighborhood $\mathcal{N}_k(x)$. The local distance is their mean distance to the test representation:
 \begin{equation}
 d_L(x)=
 \frac{1}{k}

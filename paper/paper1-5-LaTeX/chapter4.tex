@@ -1,6 +1,6 @@
 % Complete English translation of the specified Chapter 4 attachment.
 % Source numbering and inconsistencies intentionally preserved; see REVIEW-NOTES.md.
-\section{Experimental Results and Analysis}
+\section{Experimental Results and Analysis}\label{sec:experiments}
 We evaluate the proposed method through three research questions (RQs) concerning known-class recognition, unknown-class rejection, and component contributions:
 \begin{itemize}
 \item \textbf{RQ1: Does the proposed method offer advantages in known-class recognition?}
@@ -11,7 +11,7 @@ We design corresponding experiments to address these questions. For RQ1, Section
 
 \subsection{Experimental Setup}
 \subsubsection{Datasets and Task Splits}
-We use bidirectional flows as samples and evaluate on ISCX-VPN, ISCX-Tor, USTC-TFC2016, CIC-IDS2017, and VNAT.
+We use bidirectional flows as samples and evaluate on ISCX-VPN~\bluecite{data-vpn}, ISCX-Tor~\bluecite{data-tor}, USTC-TFC2016~\bluecite{data-ustc}, CIC-IDS2017~\bluecite{data-cic}, and VNAT~\bluecite{data-vnat}.
 
 ISCX-VPN and ISCX-Tor retain six and seven original service labels for the main closed-set comparison. USTC-TFC2016 supplies three class-holdout settings. CIC-IDS2017 supports both known-class classification and unknown-attack diagnosis. VNAT supplies four service-level holdout folds. Table~4-1 lists the class and ID mappings for USTC-TFC2016, ISCX-VPN, and ISCX-Tor; Table~4-2 specifies the USTC and coarse-service class splits.
 
@@ -97,7 +97,7 @@ We compare representative encrypted-traffic recognition methods covering closed-
 DES-v0 and DES-v1 are the proposed method's centroid-only and centroid-plus-neighbor rejection rules, respectively; Section~III defines them.
 
 \subsubsection{Evaluation Metrics and Statistical Conventions}
-We use accuracy, Macro-F1, and Weighted-F1 to evaluate known-class classification. For unknown-class detection, we report AUROC, AUPRC, unknown-class F1, the unknown false acceptance rate (UFAR), and the known false rejection rate (Known FRR), treating unknown samples as positive.
+We use accuracy, Macro-F1, and Weighted-F1 to evaluate known-class classification. For unknown-class detection, we report AUROC, AUPRC, unknown-class F1, the unknown false acceptance rate (UFAR), and the known false rejection rate (Known FRR), treating unknown samples as positive. ROC and precision-recall curves offer complementary views of detection performance under class imbalance~\bluecite{prroc}.
 
 Let $D_U$ denote the unknown test set, $D_K^{test}$ the known test set, $s(x)$ the unknown-detection score, and $\tau$ the rejection threshold. Then,
 \begin{equation*}
@@ -254,7 +254,7 @@ Bot & 1,228 & 62.91 & \textbf{94.64} & 87.58 & 50.90 \\
 
 DES-v1 achieves UFAR no greater than 0.24\% for eight of the ten unknown attacks, indicating effective rejection overall. Known FRR is 7.13\% for every attack category. For Hulk, MSP achieves only 9.38\% AUROC, whereas DES-v1 reaches 97.38\%, indicating that empirical support distance can compensate for classification-confidence failures on some unknown attacks. Bot and DDoS remain challenging, with UFAR values of 50.90\% and 16.61\%, respectively. This variation indicates that feature overlap between attack types and known classes affects rejection performance.
 
-DDoS achieves 99.45\% AUPRC, but unknown samples account for 97.12\% of its original test pool and UFAR remains 16.61\%. Thus, under class imbalance, high AUPRC does not imply a low false acceptance rate at a fixed threshold. Rejection performance therefore requires joint assessment using ranking and threshold-dependent metrics. Together with VNAT and USTC, these results show effective overall unknown detection and recognition for most classes, while leaving room for improvement on unknown attacks whose feature distributions overlap those of known classes. We will address these difficult unknown classes in future work.
+DDoS achieves 99.45\% AUPRC, but unknown samples account for 97.12\% of its original test pool and UFAR remains 16.61\%. Thus, under class imbalance, high AUPRC does not imply a low false acceptance rate at a fixed threshold; precision-recall behavior depends on class prevalence~\bluecite{prroc}. Rejection performance therefore requires joint assessment using ranking and threshold-dependent metrics. Together with VNAT and USTC, these results show effective overall unknown detection and recognition for most classes, while leaving room for improvement on unknown attacks whose feature distributions overlap those of known classes. We will address these difficult unknown classes in future work.
 
 \subsection{Rejection Mechanism and Component Ablations}
 \subsubsection{Roles of Global and Local Empirical Support}
@@ -370,7 +370,7 @@ Fig.~4-5 shows AUROC, AUPRC, UFAR, and Known FRR at five proportions of unknown 
 
 Ranking performance and conditional error rates remain relatively stable as the proportion of unknown samples changes. With the ten unknown classes balanced internally and the known-to-unknown ratio varying from 9:1 to 1:9, Fig.~4-5 shows AUROC ranging from approximately 92.0\% to 98.0\% and UFAR from approximately 6.7\% to 7.0\%. AUPRC increases from approximately 85.3\% to 99.7\% as the unknown proportion rises. At a fixed 1:1 ratio, mixing only Bot and DDoS attack samples increases UFAR to 33.84\%. Changes in the composition of normal traffic and PortScan also affect Known FRR. Together with the per-attack results, these findings indicate that the detector is more sensitive to unknown-class composition than to the overall proportion of unknown samples.
 
-\section{Conclusion}
+\section{Conclusion}\label{sec:conclusion}
 The experiments show that TriGLE classifies known traffic and rejects many unknown services and attacks under the stated protocols.\par\smallskip
 \textbf{Limitations:} We validate the proposed method on multiple public datasets and under different unknown-class holdout settings, but dataset provenance and traffic distributions constrain the experiments. The datasets differ in capture environments, application types, and traffic composition. Unknown-class feature distributions also strongly affect rejection performance. The model still falsely accepts some unknown traffic whose features resemble those of known classes.
 
