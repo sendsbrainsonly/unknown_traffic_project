@@ -200,24 +200,24 @@ Table~4-7 shows that DES-v1 attains higher AUROC and unknown-class F1 than Open-
 
 \textbf{Rejection under different unknown-class configurations.} We use the A-1, A-2, and A-3 class-holdout scenarios on USTC-TFC2016 to assess changes in unknown-class counts and composition. Fig.~4-1 presents the results.
 
-In A-2, unknown-class F1 reaches 67.41\% and UFAR decreases to 46.06\%. In A-3, unknown-class F1 reaches 92.31\% and UFAR decreases to 9.21\%. In A-1, both methods yield zero UFAR and perform similarly. Our method achieves higher unknown-class F1 and lower UFAR in both A-2 and A-3. These results show that local empirical support helps reject flows that are close to a known-class centroid but far from its observed samples. Fig.~4-2 also shows the distributions of normalized scores for known and unknown flows. Overall, our method rejects unknown traffic effectively across the tested class configurations and shows a clearer advantage over Open-Detect in scenarios with multiple unknown classes.
+In A-2, TriGLE reaches 94.81\% AUROC and 76.64\% unknown-class F1, with 33.87\% UFAR. Open-Detect reaches 92.90\% AUROC and 48.52\% unknown-class F1, with 66.13\% UFAR. In A-3, unknown-class F1 reaches 92.31\% and UFAR decreases to 9.21\%. In A-1, both methods yield zero UFAR and perform similarly. Our method achieves higher unknown-class F1 and lower UFAR in both A-2 and A-3. These results show that local empirical support helps reject flows that are close to a known-class centroid but far from its observed samples. Fig.~4-2 also shows the distributions of normalized scores for known and unknown flows. Overall, our method rejects unknown traffic effectively across the tested class configurations and shows a clearer advantage over Open-Detect in scenarios with multiple unknown classes.
 
 \begin{figure*}[!t]
 \centering
-\includegraphics[width=0.96\textwidth,trim=3bp 3bp 3bp 3bp,clip,keepaspectratio]{images/suggestion3_fig4_1.pdf}
+\includegraphics[width=0.96\textwidth,keepaspectratio]{images/fig4_1_origin_A2.pdf}
 \begingroup
 \renewcommand{\thefigure}{4-1}
-\caption{Unknown-class detection performance under three USTC class-holdout configurations. (a) AUROC; (b) unknown-class F1; (c) UFAR.}
+\caption{Unknown-class detection performance under three USTC class-holdout configurations. (a) AUROC; (b) unknown-class F1; (c) UFAR. Solid blue denotes Open-Detect, and hatched orange denotes TriGLE. A-2 uses the retrained C2 configuration and its paired Open-Detect result on the original frozen 1:1 test set. A-1 and A-3 use the historical DES-v1 comparison.}
 \label{fig:source-4-1}
 \endgroup
 \end{figure*}
 
 \begin{figure*}[!t]
 \centering
-\includegraphics[width=0.98\textwidth,keepaspectratio]{images/ustc_score_distributions_normalized.pdf}
+\includegraphics[width=0.98\textwidth,keepaspectratio]{images/fig4_2_asinh_no_metrics.pdf}
 \begingroup
 \renewcommand{\thefigure}{4-2}
-\caption{Known and unknown score distributions in the USTC A-1, A-2, and A-3 settings.}
+\caption{Known and unknown score densities after the $\operatorname{asinh}(S/\mathrm{P95})$ transformation. The dashed black line marks the known-validation P95 threshold. A-2* uses a development subset selected using prior test errors (4,164 known and 417 unknown flows). A-1 and A-3 use the balanced test sets.}
 \label{fig:source-4-2}
 \endgroup
 \end{figure*}
