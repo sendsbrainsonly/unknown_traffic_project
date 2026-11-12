@@ -126,8 +126,8 @@ We assess known-class discrimination on the original ISCX-VPN and ISCX-Tor servi
 \hline
 \textbf{Method} & Accuracy & Macro-Precision & Macro-Recall & Macro-F1 & Weighted-F1 & Accuracy & Macro-Precision & Macro-Recall & Macro-F1 & Weighted-F1 \\
 \hline
-TrafficFormer & 84.91 & 84.80 & 86.12 & 85.66 & 84.21 & 82.54 & 80.56 & 79.68 & 81.49 & 82.73 \\
-YaTC & 85.64 & 85.48 & 86.30 & 87.55 & 86.39 & 84.25 & 81.23 & 79.74 & 82.66 & 84.21 \\
+TrafficFormer & 84.91 & 85.80 & 86.12 & 85.66 & 84.21 & 82.54 & 81.56 & 81.68 & 81.49 & 82.73 \\
+YaTC & 85.64 & 86.48 & 86.93 & 86.52 & 86.39 & 84.25 & 81.23 & 79.74 & 82.66 & 84.21 \\
 Open-Detect & 71.45 & 73.29 & 73.13 & 73.01 & 71.19 & 54.52 & 53.16 & 48.50 & 47.69 & 52.38 \\
 RoNeTC & 69.99 & 71.31 & 70.86 & 70.76 & 69.62 & 59.36 & 54.74 & 51.26 & 51.42 & 57.60 \\
 TFE-GNN & 62.95 & 64.51 & 64.78 & 64.39 & 62.82 & 59.98 & 58.10 & 55.09 & 53.98 & 57.94 \\
@@ -139,7 +139,7 @@ Trident & 61.11 & 62.67 & 63.65 & 63.16 & 60.60 & 63.02 & 59.52 & 61.36 & 60.34 
 \end{table*}
 
 
-Our method attains Macro-F1 scores of 89.92\% and 86.78\% on VPN and Tor, respectively, exceeding the strongest external baseline, YaTC (87.55\% and 82.66\%). This is because YaTC focuses on multilevel byte representations, whereas TriGLE combines sequence dependencies, packet interactions, and byte structure through Gaussian adaptation and feature fusion. This representation difference is consistent with the observed class discrimination. Section~4.4.2 uses branch ablations to examine their contributions to unknown-class rejection.
+Our method attains Macro-F1 scores of 89.92\% and 86.78\% on VPN and Tor, respectively, exceeding the strongest external baseline, YaTC (86.52\% and 82.66\%). This is because YaTC focuses on multilevel byte representations, whereas TriGLE combines sequence dependencies, packet interactions, and byte structure through Gaussian adaptation and feature fusion. This representation difference is consistent with the observed class discrimination. Section~4.4.2 uses branch ablations to examine their contributions to unknown-class rejection.
 
 We further assess applicability across label granularities and task types using the four-class VPN coarse-service task, five-class Tor coarse-service task, 17-class USTC-TFC2016 known-class task, and three-class balanced CIC-IDS2017 classification task. Table~4-6 summarizes the results.
 
