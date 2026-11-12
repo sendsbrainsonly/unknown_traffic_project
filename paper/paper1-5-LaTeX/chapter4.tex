@@ -66,22 +66,24 @@ Tor-5C & \{T0+T1+T6, T2, T3, T4, T5\} & None (closed-set) \\
 \begingroup
 \renewcommand{\thetable}{4-3}
 \caption{Sample composition for VNAT complete-service holdout}\label{tab:source-3}
-\fontsize{8}{9.5}\selectfont
+\fontsize{9}{10.5}\selectfont
 \setlength{\tabcolsep}{3pt}
-\begin{tabular}{@{}ccc@{}}
+\begin{tabular*}{\columnwidth}{@{\extracolsep{\fill}}lrrrr@{}}
 \hline
-Held-out unknown service & Known flows & Unknown flows \\
+\shortstack[l]{Held-out unknown\\service} & \shortstack{Known\\Train} & \shortstack{Known\\Validation} & \shortstack{Known\\Test} & \shortstack{Unknown\\Test} \\
 \hline
-Communication & 21,241 & 2,208 \\
-File Transfer & 17,579 & 5,870 \\
-Remote Access & 9,842 & 13,607 \\
-Streaming & 21,685 & 1,764 \\
+Communication & 17,352 & 2,509 & 1,380 & 2,208 \\
+File Transfer & 14,604 & 2,021 & 954 & 5,870 \\
+Remote Access & 7,705 & 1,129 & 1,008 & 13,607 \\
+Streaming & 17,693 & 2,531 & 1,461 & 1,764 \\
 \hline
-\end{tabular}
+\end{tabular*}
 \endgroup
 \end{table}
 
-\setcounter{subsubsection}{1}
+\subsubsection{Experimental Configuration}
+Experiments are conducted on a server equipped with eight NVIDIA L20 GPUs. The model uses the Adam optimizer with a learning rate of 0.001 and a batch size of 256, with an average of 100 training epochs per stage.
+
 \subsubsection{Baselines}
 We compare representative encrypted-traffic recognition methods covering closed-set classification and unknown-class detection.
 \begin{itemize}
@@ -119,20 +121,22 @@ We assess known-class discrimination on the original ISCX-VPN and ISCX-Tor servi
 \caption{Closed-set classification on original ISCX service labels (\%)}\label{tab:source-5}
 \fontsize{6.5}{7.7}\selectfont
 \setlength{\tabcolsep}{1.2pt}
+% Preserve the original column widths and resizebox scale.
+\newcommand{\shortmetric}[2]{\settowidth{\dimen0}{#1}\makebox[\dimen0][c]{#2}}
 \resizebox{\textwidth}{!}{%
 \begin{tabular}{@{}l*{10}{c}@{}}
 \hline
-\textbf{Task} & \multicolumn{5}{c}{\textbf{ISCX-VPN (6 classes)}} & \multicolumn{5}{c}{\textbf{ISCX-Tor (7 classes)}} \\
+\phantom{\textbf{Task}} & \multicolumn{5}{c}{\textbf{ISCX-VPN}} & \multicolumn{5}{c}{\textbf{ISCX-Tor}} \\
 \hline
-\textbf{Method} & Accuracy & Macro-Precision & Macro-Recall & Macro-F1 & Weighted-F1 & Accuracy & Macro-Precision & Macro-Recall & Macro-F1 & Weighted-F1 \\
+\textbf{Method} & \shortmetric{Accuracy}{Acc.} & \shortmetric{Macro-Precision}{Macro-P} & \shortmetric{Macro-Recall}{Macro-R} & Macro-F1 & Weighted-F1 & \shortmetric{Accuracy}{Acc.} & \shortmetric{Macro-Precision}{Macro-P} & \shortmetric{Macro-Recall}{Macro-R} & Macro-F1 & Weighted-F1 \\
 \hline
 TrafficFormer & 84.91 & 85.80 & 86.12 & 85.66 & 84.21 & 82.54 & 81.56 & 81.68 & 81.49 & 82.73 \\
-YaTC & 85.64 & 86.48 & 86.93 & 86.52 & 86.39 & 84.25 & 81.23 & 79.74 & 82.66 & 84.21 \\
+YaTC & 85.64 & 86.48 & 86.93 & 86.52 & 86.39 & 84.25 & 82.42 & 83.21 & 82.66 & 84.21 \\
 Open-Detect & 71.45 & 73.29 & 73.13 & 73.01 & 71.19 & 54.52 & 53.16 & 48.50 & 47.69 & 52.38 \\
 RoNeTC & 69.99 & 71.31 & 70.86 & 70.76 & 69.62 & 59.36 & 54.74 & 51.26 & 51.42 & 57.60 \\
 TFE-GNN & 62.95 & 64.51 & 64.78 & 64.39 & 62.82 & 59.98 & 58.10 & 55.09 & 53.98 & 57.94 \\
 Trident & 61.11 & 62.67 & 63.65 & 63.16 & 60.60 & 63.02 & 59.52 & 61.36 & 60.34 & 62.91 \\
-\textbf{Our method} & \textbf{89.21} & \textbf{89.84} & \textbf{90.05} & \textbf{89.92} & \textbf{88.96} & \textbf{88.28} & \textbf{86.65} & \textbf{83.13} & \textbf{86.78} & \textbf{88.22} \\
+\textbf{Our method} & \textbf{89.21} & \textbf{89.84} & \textbf{90.05} & \textbf{89.92} & \textbf{88.96} & \textbf{88.18} & \textbf{86.51} & \textbf{87.14} & \textbf{86.78} & \textbf{88.22} \\
 \hline
 \end{tabular}}
 \endgroup
@@ -370,8 +374,15 @@ Fig.~4-5 shows AUROC, AUPRC, UFAR, and Known FRR at five proportions of unknown 
 
 Ranking performance and conditional error rates remain relatively stable as the proportion of unknown samples changes. With the ten unknown classes balanced internally and the known-to-unknown ratio varying from 9:1 to 1:9, Fig.~4-5 shows AUROC ranging from approximately 92.0\% to 98.0\% and UFAR from approximately 6.7\% to 7.0\%. AUPRC increases from approximately 85.3\% to 99.7\% as the unknown proportion rises. At a fixed 1:1 ratio, mixing only Bot and DDoS attack samples increases UFAR to 33.84\%. Changes in the composition of normal traffic and PortScan also affect Known FRR. Together with the per-attack results, these findings indicate that the detector is more sensitive to unknown-class composition than to the overall proportion of unknown samples.
 
-\section{Conclusion}\label{sec:conclusion}
-The experiments show that TriGLE classifies known traffic and rejects many unknown services and attacks under the stated protocols.\par\smallskip
-\textbf{Limitations:} We validate the proposed method on multiple public datasets and under different unknown-class holdout settings, but dataset provenance and traffic distributions constrain the experiments. The datasets differ in capture environments, application types, and traffic composition. Unknown-class feature distributions also strongly affect rejection performance. The model still falsely accepts some unknown traffic whose features resemble those of known classes.
+\section{Discussion and Limitations}\label{sec:discussion}
+\subsection{Traffic Representation}
+We combine byte-sequence, packet-interaction, and multilevel byte-organization features. However, each view relies on observable information within a limited packet and byte range and may not fully capture long-term communication behavior. Moreover, representations learned from known classes may not preserve all features needed to distinguish unknown traffic, limiting subsequent rejection performance.
 
-\textbf{Future work:} We will expand dataset and experimental coverage through cross-dataset and cross-network-environment generalization tests to assess adaptation to different traffic distributions. To address feature overlap between unknown and known classes, we will investigate more effective local feature modeling and rejection strategies for difficult unknown classes. We will also examine the effects of packet padding, segmentation, and traffic perturbations on multiview representations and explore detection methods that depend less on raw bytes to improve robustness in complex network environments.
+\subsection{Limitations}
+Global and local empirical support provide complementary rejection criteria but cannot eliminate class overlap in the representation space. Unknown traffic close to both known-class centroids and training-sample neighborhoods may still be falsely accepted. Local support also depends on training-sample coverage, and the applicability of a fixed threshold under traffic distribution shifts requires further validation.
+
+\subsection{Future Work}
+Future work will explore complementary representations better suited to unknown rejection and adaptive neighborhood metrics to improve detection of difficult unknown traffic. We will also investigate rejection stability under distribution shifts through class-conditional calibration and cross-network evaluation~\bluecite{sugar}, and assess multiview robustness under packet padding, segmentation, and timing perturbations~\bluecite{securitas}.
+
+\section{Conclusion}\label{sec:conclusion}
+We propose TriGLE, an open-set encrypted traffic recognition framework that combines three-view representation learning with global and local empirical support. It integrates byte context, packet interactions, and multilevel byte organization. Empirical class centroids measure global deviation from known classes, while within-class neighbors provide local support from actual training samples. These complementary criteria jointly support unknown rejection, with thresholds calibrated using only known validation data. Experiments demonstrate that TriGLE supports both known-class classification and unknown-class rejection on the evaluated tasks. Comparisons under the same representation further confirm that local neighborhood information complements the class-centroid criterion.
