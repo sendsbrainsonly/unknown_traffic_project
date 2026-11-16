@@ -1,5 +1,5 @@
 \section{Method}\label{sec:method}
-TriGLE combines representation learning with global and local empirical support for open-set encrypted-traffic recognition. The method characterizes traffic through byte sequences, packet interactions, and multilevel byte organization, and constructs a unified representation through Gaussian adaptation and deterministic fusion. It then combines empirical class centroids with within-class sample neighborhoods to measure deviations from known classes in terms of both global position and local neighborhood relationships. The resulting rejection score integrates global and local information for known-class classification and unknown-class rejection. Fig.~3-1 presents the overall framework.
+TriGLE combines representation learning with global and local empirical support for open-set encrypted-traffic recognition. The method characterizes traffic through byte sequences, packet interactions, and multilevel byte organization, and constructs a unified representation through Gaussian adaptation and deterministic fusion. It then combines empirical class centroids with within-class sample neighborhoods to measure deviations from known classes in terms of both global position and local neighborhood relationships. The resulting rejection score integrates global and local information for known-class classification and unknown-class rejection. \hyperref[fig:framework]{Fig.~\ref*{fig:framework}} presents the overall framework.
 \begin{figure*}[!t]
 \centering
 \includegraphics[width=\textwidth,trim=70bp 145bp 132bp 105bp,clip,keepaspectratio]{images/framework_flowchart_replacement.pdf}
@@ -18,7 +18,7 @@ Our objective is to learn an open-set recognition model $f$ that maps an input f
 f:\mathcal{X}\rightarrow\mathcal{C}_K\cup\{\bot\},
 \tag{1}
 \end{equation}
-Here, $\bot$ denotes the unknown label. The learning objective has two parts: (1) accurately distinguish flows in $\mathcal{C}_K$ and output their known-class labels; and (2) identify flows in $\mathcal{C}_U$ and assign them the unified unknown label. The model thus addresses both known-class classification and unknown-class rejection. Table~3-1 summarizes the main notation; other symbols are defined at first use.
+Here, $\bot$ denotes the unknown label. The learning objective has two parts: (1) accurately distinguish flows in $\mathcal{C}_K$ and output their known-class labels; and (2) identify flows in $\mathcal{C}_U$ and assign them the unified unknown label. The model thus addresses both known-class classification and unknown-class rejection. \hyperref[tab:notation]{Table~\ref*{tab:notation}} summarizes the main notation; other symbols are defined at first use.
 
 \begin{table}[!t]\centering\begingroup
 \renewcommand{\thetable}{3-1}
@@ -55,7 +55,7 @@ Here, $E_{\mathrm{TF}}$ is the fine-tuned TrafficFormer encoder, and $z_t(x)$ is
 \subsubsection{Flow-Interaction-Graph Branch}
 The flow-interaction-graph branch characterizes communication behavior through relationships between packets, complementing the low-level content features of the byte-sequence branch. Following existing Flow Interaction Graph (FIG) modeling approaches~\bluecite{ch2-10,ch2-5}, we represent a bidirectional flow as a packet-level graph. A Topology Adaptive Graph Convolutional Network (TAGCN)~\bluecite{tagcn} learns a structured interaction representation that captures transmission direction, timing, and interaction topology.
 
-For the chronologically ordered flow $x=\{p_1,p_2,\ldots,p_{n_x}\}$, we construct a graph from the first $\min(30,n_x)$ packets, with one node per packet. Consecutive packets with the same sending direction form a burst. Within each burst, edges connect consecutive packets in temporal order. Between adjacent bursts, edges connect their first nodes and their last nodes, capturing transmission continuity and direction changes. This procedure produces an undirected flow interaction graph $G(x)=(V,E)$, where $V$ and $E$ denote the node and edge sets. Fig.~3-2 illustrates burst segmentation, graph construction, node features, and neighborhood aggregation.
+For the chronologically ordered flow $x=\{p_1,p_2,\ldots,p_{n_x}\}$, we construct a graph from the first $\min(30,n_x)$ packets, with one node per packet. Consecutive packets with the same sending direction form a burst. Within each burst, edges connect consecutive packets in temporal order. Between adjacent bursts, edges connect their first nodes and their last nodes, capturing transmission continuity and direction changes. This procedure produces an undirected flow interaction graph $G(x)=(V,E)$, where $V$ and $E$ denote the node and edge sets. \hyperref[fig:flow-graph]{Fig.~\ref*{fig:flow-graph}} illustrates burst segmentation, graph construction, node features, and neighborhood aggregation.
 
 \begin{figure}[H]\centering
 \includegraphics[width=\columnwidth,keepaspectratio]{images/flow-interaction-graph.pdf}
