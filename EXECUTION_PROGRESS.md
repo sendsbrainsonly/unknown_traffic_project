@@ -2,21 +2,21 @@
 
 ## Current handoff — Stage49 GitHub publication (2026-11-17)
 
-- 2026-11-17 — [agent:codex] `publish-stage49-20261117` in_progress: user requested push of the completed Stage49 result. Local main3af0b15; fetched origin/main b9a04bf(10paper/figure commits ahead). No overlap with local Stage49 and root execution/index edits; fast-forward planned. Publish selected source/config/report/aggregate CSV/figure/verification files and root entry points, excluding weights, caches, flow manifests, per-sample predictions, logs, live queue state and unrelated untracked experiments. No experiment rerun.
+- 2026-11-17 — [agent:codex] `publish-stage49-20261117` complete: fast-forwarded10remote paper/figure commits3af0b15→b9a04bf; published Stage49 in38af3619ab8e2e7fa4b35a90c433aa6f415c240d. Independent ls-remote matched local main; all44published blobs matched allowlist hashes(872,028content bytes). No weights/cache/flow membership/sample predictions/logs/live state/unrelated experiments uploaded. Full local Stage49 bundle144artifacts/121files PASS. This documentation-only closeout records the verified publication; no experiment rerun.
 
 ### Run publish-stage49-20261117
 
 - Agent: [agent:codex]
-- Status: in_progress
+- Status: complete
 - Objective: synchronize remote main, publish completed Stage49 code/results and verify remote HEAD.
 - Starting state: completed Stage49 Test11688,Accuracy98.8193%,Macro-F198.5877%; local main3af0b15,remote b9a04bf. Existing unrelated untracked experiments preserved.
-- Actions performed: inspected status/remotes, fetched and fast-forwarded main to b9a04bf, preserved unrelated local changes, added Stage49 README and root result entry points, refreshed/verified the full local bundle, prepared an explicit44-file publication allowlist.
-- Commands run: stage49_push_preflight_20261117,stage49_push_fetch_20261117,stage49_push_inventory_20261117,stage49_push_publication_context_20261117,stage49_push_remote_diff_20261117.
+- Actions performed: fetched/fast-forwarded remote updates, preserved unrelated local files, updated Stage49/root entry points, refreshed and validated the local bundle, explicitly staged44scoped files, committed38af361 and non-force pushed through SSH443. Independently verified remote main and every published blob hash; recorded publication completion.
+- Commands run: stage49_push_preflight_20261117,stage49_push_fetch_20261117,stage49_push_inventory_20261117,stage49_push_publication_context_20261117,stage49_push_remote_diff_20261117,stage49_push_fast_forward_20261117,stage49_push_bundle_verify_20261117,stage49_push_stage_verify_20261117,stage49_push_stage_final_verify_20261117,stage49_push_commit_20261117,stage49_push_remote_20261117,stage49_push_remote_verify_20261117.
 - Files changed: README.md,CURRENT_PROGRESS.md,PUBLIC_REPOSITORY_CONTENTS.md,EXECUTION_PROGRESS.md,EXPERIMENT_RESULTS.md,Stage49 README.md and refreshed manifest.json; existing selected Stage49 source/config/aggregate/figure/verification files ready to publish. SESSION_HANDOFF.md remains local-only.
-- Validation and observed results: remote10commits affecting paper assets fast-forwarded successfully. Full local bundle144artifacts/121bundlefiles PASS;44allowed publication files total approximately0.83MiB. Weight/cache/sample/log/live-state paths excluded. Stage49 frozen source/model/data unchanged.
+- Validation and observed results: remote10commits affecting paper assets fast-forwarded successfully. Full local bundle144artifacts/121bundlefiles PASS. Published44files,872,028content bytes; every committed blob matches the allowlistSHA256/size snapshot. git ls-remote confirms remote main=local38af3619ab8e2e7fa4b35a90c433aa6f415c240d and remote baselineb9a04bf remains its ancestor. Staged index empty after commit. Weight/cache/sample/log/live-state paths excluded; Stage49 frozen source/model/data unchanged.
 - Decisions and assumptions: use ordinary non-force push; publish Stage49 only plus necessary root documentation; preserve all other changes.
 - Errors or blockers: initial staged whitespace check treated the existing frozen CSV CRLF line endings as trailing whitespace. Preserve those hashed CSV bytes and check with cr-at-eol; removed one extra EOF blank line from recovery README. No experimental code/data/metric changes.
-- Next step: fast-forward remote updates, prepare explicit allowlist, verify staged scope/size and bundle, commit/push then independently verify remote main SHA.
+- Next step: none; publication complete. Final documentation-only commit records the completed verification; do not restart any experiment.
 
 ## Current handoff — CIC eleven-class closed-set retest (2026-11-17)
 
