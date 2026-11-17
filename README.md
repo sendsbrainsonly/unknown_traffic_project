@@ -1,5 +1,7 @@
 # Unknown Traffic / Unknown Attack Detection
 
+> **CIC多分类更新（2026-11-17）**：Stage49已完成当前三视图等权特征融合方法的CIC-IDS-2017十一类闭集测试，seed2022，Train/Val/Test=`99,922/8,438/11,688`。Test Accuracy=`98.8193%`、Macro-Precision=`98.2042%`、Macro-Recall=`99.0148%`、Macro-F1=`98.5877%`、Weighted-F1=`98.8232%`。五分钟采集组互不重叠；属于单seed开发实验，仍有日期/端点混杂，XSS Test仅17条。本次只测试当前方法。详见[Stage49结果与发布范围](stage49_cic_multiclass_closed_set_20261117/README.md)、[逐类指标](stage49_cic_multiclass_closed_set_20261117/per_class_results.csv)和[完整报告](stage49_cic_multiclass_closed_set_20261117/RESULTS.md)。普通Git不包含权重、缓存或逐样本数据。
+
 > **A-2 当前结果（2026-11-04）**：当前配置统一引用 [A-2 当前结果登记](A2_CURRENT_RESULTS.md)。三视图+C2／Open-Detect Native 的 Unknown AUROC 为 `99.57%／94.95%`，Unknown F1 为 `86.93%／47.55%`，Known Macro-F1 为 `99.35%／98.61%`；当前Test为Known4,164／Unknown417条。该成员集来自此前测试错误的事后筛选，是开发配置，不替代原始全量A-2；原始全量对照及筛选来源在登记页保留。
 
 > **指标补充与论文同步（2026-11-04）**：ISCX-VPN六类／ISCXTor七类的八配置、双seed闭集对照已补全Macro和Weighted Precision／Recall，并并入[第4章表4-5](<paper/md/ch4/4(1).md>)。原Accuracy／F1与冻结预测一致重现；表格统一为seeds2022、2023的均值±总体标准差。详见[完整七指标表](stage47_precision_recall_supplement_20261103/table_precision_recall.md)、[逐run CSV](stage47_precision_recall_supplement_20261103/run_metrics.csv)、[汇总CSV](stage47_precision_recall_supplement_20261103/method_summary.csv)及[本次修订记录](paper/md/ch4/修订记录_20261104_Precision_Recall补充.md)。

@@ -1,0 +1,42 @@
+{
+  "status": "PASS",
+  "selected_epoch": 1,
+  "parity": {
+    "train_loss": {
+      "reference": 0.15858232707716655,
+      "replayed": 0.15858232707716655,
+      "difference": 0.0,
+      "tolerance": 1e-07
+    },
+    "train_accuracy": {
+      "reference": 0.9925541922699705,
+      "replayed": 0.9925541922699705,
+      "difference": 0.0,
+      "tolerance": 1e-12
+    },
+    "train_macro_f1": {
+      "reference": 0.9926211936183659,
+      "replayed": 0.9926211936183659,
+      "difference": 0.0,
+      "tolerance": 1e-12
+    },
+    "val_accuracy": {
+      "reference": 0.9898080113771036,
+      "replayed": 0.9898080113771036,
+      "difference": 0.0,
+      "tolerance": 1e-12
+    },
+    "val_macro_f1": {
+      "reference": 0.9681137865062471,
+      "replayed": 0.9681137865062471,
+      "difference": 0.0,
+      "tolerance": 1e-12
+    }
+  },
+  "protocol_unchanged": true,
+  "original_sources_unchanged": true,
+  "scheduler_horizon_epochs": 20,
+  "training_epochs_executed": 1,
+  "weights_directly_exported_from_original_process": false,
+  "checkpoint_sha256": "2ea6b1d1d8a4cc46347542cec1cd6a4e073718488cb08e236d9c22bbc75ca78b"
+}

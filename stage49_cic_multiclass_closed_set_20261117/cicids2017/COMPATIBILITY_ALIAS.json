@@ -1,0 +1,22 @@
+{
+  "actual_dataset": "CIC-IDS-2017",
+  "actual_task": "Stage49 eleven-class closed-set",
+  "actual_classes": [
+    "BENIGN",
+    "Bot",
+    "DDoS",
+    "DoS Hulk",
+    "DoS Slowhttptest",
+    "DoS slowloris",
+    "FTP-Patator",
+    "PortScan",
+    "SSH-Patator",
+    "Web Attack - Brute Force",
+    "Web Attack - XSS"
+  ],
+  "seed": 2022,
+  "sample_manifest": "/home/birkenwald/data/SEU-WXY/WXY-SEU/TrafficClassifier/Projects/unknown_traffic_project/stage49_cic_multiclass_closed_set_20261117/split_manifest.csv",
+  "sample_manifest_sha256": "cbe0add00f38b4a43fd35e9185822b952d21843ba798f02889f80f105de2f988",
+  "internal_path_alias": "ustc/A-2",
+  "meaning": "inherited CLI/path compatibility only"
+}

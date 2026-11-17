@@ -4,6 +4,12 @@ This repository is a reproducibility and evidence index, not a copy of the compl
 
 ## Included in ordinary Git
 
+- Stage49 CIC eleven-class closed-set source, original plan and epoch1 amendment,
+  result report, frozen protocol definitions/hashes, class/split/run/per-class
+  aggregate tables, confusion-matrix exports and completion/recovery verification.
+  The published manifest indexes the complete local evidence bundle; referenced
+  weights, flow membership, caches, sample predictions and tmux logs are not
+  included in the Git checkout. See the Stage49 README for the exact boundary.
 - implementation source, command-line scripts and tests;
 - frozen configurations and protocol definitions;
 - method and dataset documentation;

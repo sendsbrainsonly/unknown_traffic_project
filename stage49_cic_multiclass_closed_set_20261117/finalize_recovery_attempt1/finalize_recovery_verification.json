@@ -1,0 +1,32 @@
+{
+  "status": "PASS",
+  "recovery_scope": "metadata-only",
+  "completion_verification_reused": true,
+  "completion_metrics": {
+    "accuracy": 0.9881930184804928,
+    "macro_precision": 0.9820418276836065,
+    "macro_recall": 0.9901482403823499,
+    "macro_f1": 0.985876820625926,
+    "weighted_precision": 0.9884211236625443,
+    "weighted_recall": 0.9881930184804928,
+    "weighted_f1": 0.9882321384105669
+  },
+  "source_hashes_unchanged": 55,
+  "checkpoint_hashes_unchanged": 5,
+  "successful_completed_sessions": {
+    "stage49_cic_protocol_20261117": 0,
+    "stage49_cic_preflight_20261117": 0,
+    "stage49_cic_trainval_inputs_20261117": 0,
+    "stage49_selected_epoch1_replay_20261117": 0,
+    "stage49_cic_yatc_20261117": 0,
+    "stage49_cic_graph_20261117": 0,
+    "stage49_selected_fusion_20261117": 0,
+    "stage49_selected_test_inputs_20261117": 0,
+    "stage49_selected_evaluate_20261117": 0
+  },
+  "original_finalize_exit1_preserved": true,
+  "duplicate_stage49_workers": [],
+  "training_rerun": false,
+  "feature_extraction_rerun": false,
+  "gpu_inference_rerun": false
+}

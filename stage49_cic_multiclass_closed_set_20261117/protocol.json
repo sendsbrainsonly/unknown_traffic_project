@@ -1,0 +1,76 @@
+{
+  "status": "FROZEN",
+  "dataset": "CIC-IDS-2017",
+  "task": "eleven-class closed-set",
+  "seed": 2022,
+  "classes": [
+    "BENIGN",
+    "Bot",
+    "DDoS",
+    "DoS Hulk",
+    "DoS Slowhttptest",
+    "DoS slowloris",
+    "FTP-Patator",
+    "PortScan",
+    "SSH-Patator",
+    "Web Attack - Brute Force",
+    "Web Attack - XSS"
+  ],
+  "group_rule": "source_pcap|floor(flow_start_epoch_utc/300)",
+  "solver": {
+    "method": "scipy.optimize.milp / HiGHS",
+    "status": 0,
+    "message": "Optimization terminated successfully. (HiGHS Status 7: Optimal)",
+    "objective": 1.073077556186894,
+    "time_limit_seconds": 120,
+    "relative_gap_target": 0.01,
+    "mip_gap": 0.006327995108641859,
+    "used_model_outcomes": false
+  },
+  "large_attack_threshold": 10000,
+  "large_attack_sample_rate": 0.1,
+  "small_attack_sample_rate": 1,
+  "benign_rule": "equal to total selected attacks per split",
+  "sample_rank": "SHA256(seed|class|split|flow_id)",
+  "total_samples": 120048,
+  "split_counts": {
+    "train": 99922,
+    "validation": 8438,
+    "test": 11688
+  },
+  "matched_labelled": 2087440,
+  "independently_verified": 2086657,
+  "quarantined": 783,
+  "unmatched": 22656,
+  "unknown_samples_used": 0,
+  "test_values_used_for_protocol_selection": 0,
+  "sample_manifest_sha256": "cbe0add00f38b4a43fd35e9185822b952d21843ba798f02889f80f105de2f988",
+  "pcaps_read_only": [
+    {
+      "path": "/home/birkenwald/data/SEU-WXY/WXY-SEU/TrafficClassifier/Dataset/CIC-IDS-2017/CIC-IDS-2017(whole)/PCAPs/Friday-WorkingHours.pcap",
+      "size_bytes": 8839309056,
+      "mtime_ns": 1787376188000000000
+    },
+    {
+      "path": "/home/birkenwald/data/SEU-WXY/WXY-SEU/TrafficClassifier/Dataset/CIC-IDS-2017/CIC-IDS-2017(whole)/PCAPs/Monday-WorkingHours.pcap",
+      "size_bytes": 10822507416,
+      "mtime_ns": 1787377780000000000
+    },
+    {
+      "path": "/home/birkenwald/data/SEU-WXY/WXY-SEU/TrafficClassifier/Dataset/CIC-IDS-2017/CIC-IDS-2017(whole)/PCAPs/Thursday-WorkingHours.pcap",
+      "size_bytes": 8302500180,
+      "mtime_ns": 1787379190000000000
+    },
+    {
+      "path": "/home/birkenwald/data/SEU-WXY/WXY-SEU/TrafficClassifier/Dataset/CIC-IDS-2017/CIC-IDS-2017(whole)/PCAPs/Tuesday-WorkingHours.pcap",
+      "size_bytes": 11048283608,
+      "mtime_ns": 1787388150000000000
+    },
+    {
+      "path": "/home/birkenwald/data/SEU-WXY/WXY-SEU/TrafficClassifier/Dataset/CIC-IDS-2017/CIC-IDS-2017(whole)/PCAPs/Wednesday-workingHours.pcap",
+      "size_bytes": 13420789612,
+      "mtime_ns": 1787391944000000000
+    }
+  ],
+  "limitation": "previously exposed development dataset; class-day and endpoint confounding remains"
+}

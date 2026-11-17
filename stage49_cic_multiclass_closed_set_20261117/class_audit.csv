@@ -1,0 +1,16 @@
+class,official_csv_rows,matched_flows,label_disagreement_removed,verified_flows,included,selected_flows,reason
+BENIGN,2273097,1668300,406,1667894,True,60024,retained; endpoint/schedule warnings disclosed
+Bot,1966,1228,0,1228,True,1228,retained; endpoint/schedule warnings disclosed
+DDoS,128027,76613,351,76262,True,7626,retained; endpoint/schedule warnings disclosed
+DoS GoldenEye,10293,7441,0,7441,False,0,two five-minute groups cannot populate three roles
+DoS Hulk,231073,155168,26,155142,True,15514,retained; endpoint/schedule warnings disclosed
+DoS Slowhttptest,5499,5096,0,5096,True,5096,retained; endpoint/schedule warnings disclosed
+DoS slowloris,5796,5709,0,5709,True,5709,retained; endpoint/schedule warnings disclosed
+FTP-Patator,7938,3985,0,3985,True,3985,retained; endpoint/schedule warnings disclosed
+Heartbleed,11,11,0,11,False,0,only11-34 reliable flows; insufficient sample support
+Infiltration,36,34,0,34,False,0,only11-34 reliable flows; insufficient sample support
+PortScan,158930,158863,0,158863,True,15886,retained; endpoint/schedule warnings disclosed
+SSH-Patator,5897,2987,0,2987,True,2987,retained; endpoint/schedule warnings disclosed
+Web Attack - Brute Force,1507,1364,0,1364,True,1364,retained; endpoint/schedule warnings disclosed
+Web Attack - Sql Injection,21,12,0,12,False,0,only11-34 reliable flows; insufficient sample support
+Web Attack - XSS,652,629,0,629,True,629,retained; endpoint/schedule warnings disclosed

@@ -1,0 +1,12 @@
+true_class,BENIGN,Bot,DDoS,DoS Hulk,DoS Slowhttptest,DoS slowloris,FTP-Patator,PortScan,SSH-Patator,Web Attack - Brute Force,Web Attack - XSS
+BENIGN,5771,6,58,8,0,0,1,0,0,0,0
+Bot,0,119,0,0,0,0,0,0,0,0,0
+DDoS,8,0,1315,0,0,0,0,0,0,0,0
+DoS Hulk,19,0,0,723,0,0,0,0,0,0,0
+DoS Slowhttptest,0,0,0,0,1049,5,0,0,0,1,0
+DoS slowloris,4,0,0,0,0,706,0,0,0,1,0
+FTP-Patator,11,0,0,0,0,0,324,0,0,1,0
+PortScan,4,0,1,0,0,0,0,1116,4,5,0
+SSH-Patator,1,0,0,0,0,0,0,0,293,0,0
+Web Attack - Brute Force,0,0,0,0,0,0,0,0,0,117,0
+Web Attack - XSS,0,0,0,0,0,0,0,0,0,0,17

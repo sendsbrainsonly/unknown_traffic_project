@@ -1,0 +1,2 @@
+dataset,method,classes,seed,train_samples,validation_samples,test_samples,accuracy,macro_precision,macro_recall,macro_f1,weighted_precision,weighted_recall,weighted_f1,protocol_sha256,status
+CIC-IDS-2017,Three-view equal-feature fusion,11,2022,99922,8438,11688,0.9881930184804928,0.9820418276836065,0.9901482403823499,0.985876820625926,0.9884211236625443,0.9881930184804928,0.9882321384105669,370f12a3571dd51cbb1644359c72f2a63d0e3d0fa98142583091dab528040409,PASS

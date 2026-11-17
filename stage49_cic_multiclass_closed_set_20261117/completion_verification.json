@@ -1,0 +1,19 @@
+{
+  "status": "PASS",
+  "classes": 11,
+  "test_samples": 11688,
+  "saved_logit_metric_replay": true,
+  "per_class_replay": true,
+  "group_disjoint_protocol": true,
+  "source_hashes_unchanged": 55,
+  "checkpoint_hashes_unchanged": 5,
+  "unknown_samples_used": 0,
+  "test_parameter_selection": 0,
+  "accuracy": 0.9881930184804928,
+  "macro_precision": 0.9820418276836065,
+  "macro_recall": 0.9901482403823499,
+  "macro_f1": 0.985876820625926,
+  "weighted_precision": 0.9884211236625443,
+  "weighted_recall": 0.9881930184804928,
+  "weighted_f1": 0.9882321384105669
+}
