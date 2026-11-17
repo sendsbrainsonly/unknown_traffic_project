@@ -1,0 +1,11 @@
+{
+  "frozen_outputs": {
+    "split_manifest.csv": "cbe0add00f38b4a43fd35e9185822b952d21843ba798f02889f80f105de2f988",
+    "group_assignments.csv": "0bcdd766bfd8204ee08e92aba5e6b5734b611b2d538c6fa27207b50c44414bf0",
+    "protocol.json": "370f12a3571dd51cbb1644359c72f2a63d0e3d0fa98142583091dab528040409",
+    "cicids2017_protocol_v2_audit.json": "da993845b376bbc48609a617e221ebd5020ff3183710de9aa64aa83cfd10f196",
+    "class_audit.csv": "e1bf678dce13709eecdeb434621c1604d1b92ed1f629a9c4913abc694d98271d",
+    "split_counts.csv": "143349048774b7697be2bf41f4742d2cc0aca9f5ab6492d7d5271d9980761dd4"
+  },
+  "source_count": 55
+}

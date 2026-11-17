@@ -1,0 +1,7 @@
+{
+  "cicids2017/runs/ustc/A-2/trafficformer/model_best.pt": "2ea6b1d1d8a4cc46347542cec1cd6a4e073718488cb08e236d9c22bbc75ca78b",
+  "cicids2017/runs/ustc/A-2/graph/model_best.pt": "ee0dc66508bbc67fc41a510845904ce1c9950943c60d9fbe2021e2c42fbf57d5",
+  "cicids2017/runs/ustc/A-2/yatc/model_best.pt": "0113701df4d69cff9efec07f4829fbfa8de6f077fa804eef375c85f0121b62dc",
+  "cicids2017/runs/ustc/A-2/T0_equal/T0_equal_best.pt": "af4a7952ddf4df65b5b5529b87d78e0fcbad2d2b0b77c3862ff0199445de0dc7",
+  "cicids2017/runs/ustc/A-2/T0_equal/adapters_best.pt": "b62eee6a93424c901e64a145d27003e11c601694b5986c2cb669458f86fafa3b"
+}

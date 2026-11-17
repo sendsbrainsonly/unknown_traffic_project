@@ -1,0 +1,29 @@
+{
+  "status": "PRESERVED",
+  "original_finalize_session": "stage49_selected_finalize_20261117",
+  "original_exit_code": 1,
+  "root_cause": "absolute external artifact paths rejected by bundle validator",
+  "numerical_completion_preceded_failure": true,
+  "files": [
+    {
+      "path": "../.tmux-task/stage49_selected_finalize_20261117/output.log",
+      "size_bytes": 5430,
+      "sha256": "77921075ff219338e6e4bcc8584586b791c70c706741b81c029ce60286638451"
+    },
+    {
+      "path": "../.tmux-task/stage49_selected_finalize_20261117/exit.status",
+      "size_bytes": 2,
+      "sha256": "4355a46b19d348dc2f57c046f8ef63d4538ebb936000f3c9ee954a27460dd865"
+    },
+    {
+      "path": "../.tmux-task/stage49_epoch1_controller_20261117/output.log",
+      "size_bytes": 28713,
+      "sha256": "c0f842790d69c364b06b7e9dd0a005eb9af8e1c8b7801259bdc0c98f3a54868a"
+    },
+    {
+      "path": "../.tmux-task/stage49_epoch1_controller_20261117/exit.status",
+      "size_bytes": 2,
+      "sha256": "4355a46b19d348dc2f57c046f8ef63d4538ebb936000f3c9ee954a27460dd865"
+    }
+  ]
+}

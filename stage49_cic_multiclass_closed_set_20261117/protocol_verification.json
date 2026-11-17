@@ -1,0 +1,14 @@
+{
+  "status": "PASS",
+  "groups_disjoint": true,
+  "classes_in_every_role": true,
+  "label_audit_counts_match": true,
+  "selected_samples": 120048,
+  "split_counts": {
+    "train": 99922,
+    "validation": 8438,
+    "test": 11688
+  },
+  "selected_quarantined_samples": 0,
+  "test_feature_values_read": 0
+}

@@ -1,0 +1,4 @@
+{
+  "error": "RuntimeError('child failed stage49_selected_finalize_20261117: exit1')",
+  "traceback": "Traceback (most recent call last):\n  File \"/home/birkenwald/data/SEU-WXY/WXY-SEU/TrafficClassifier/Projects/unknown_traffic_project/stage49_cic_multiclass_closed_set_20261117/epoch1_selection_20261117/controller.py\", line 209, in main\n    wait(session)\n  File \"/home/birkenwald/data/SEU-WXY/WXY-SEU/TrafficClassifier/Projects/unknown_traffic_project/stage49_cic_multiclass_closed_set_20261117/epoch1_selection_20261117/controller.py\", line 48, in wait\n    raise RuntimeError(f\"child failed {session}: exit{code(session)}\")\nRuntimeError: child failed stage49_selected_finalize_20261117: exit1\n"
+}

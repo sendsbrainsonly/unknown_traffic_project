@@ -1,0 +1,13 @@
+{
+  "original_epoch1": {
+    "encoder": "E1",
+    "epoch": 1,
+    "train_loss": 0.15858232707716655,
+    "train_accuracy": 0.9925541922699705,
+    "train_macro_f1": 0.9926211936183659,
+    "val_accuracy": 0.9898080113771036,
+    "val_macro_f1": 0.9681137865062471
+  },
+  "user_request": "use the first TrafficFormer epoch",
+  "test_used_for_selection": 0
+}

@@ -1,0 +1,19 @@
+{
+  "status": "PASS",
+  "v2_manifest_sha256": "cbe0add00f38b4a43fd35e9185822b952d21843ba798f02889f80f105de2f988",
+  "actual_protocol": "Stage49-eleven-class-group-disjoint",
+  "classes": [
+    "BENIGN",
+    "Bot",
+    "DDoS",
+    "DoS Hulk",
+    "DoS Slowhttptest",
+    "DoS slowloris",
+    "FTP-Patator",
+    "PortScan",
+    "SSH-Patator",
+    "Web Attack - Brute Force",
+    "Web Attack - XSS"
+  ],
+  "meaning": "Stage34 builder API compatibility only"
+}

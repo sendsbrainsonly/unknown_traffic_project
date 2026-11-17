@@ -1,0 +1,34 @@
+class,split,whole_group_flows,selected_flows,selected_groups
+BENIGN,train,1334307,49961,364
+BENIGN,validation,167168,4219,68
+BENIGN,test,166419,5844,61
+Bot,train,983,983,25
+Bot,validation,126,126,6
+Bot,test,119,119,6
+DDoS,train,58430,5843,3
+DDoS,validation,4605,460,1
+DDoS,test,13227,1323,1
+DoS Hulk,train,132715,13272,3
+DoS Hulk,validation,15003,1500,2
+DoS Hulk,test,7424,742,1
+DoS Slowhttptest,train,3909,3909,3
+DoS Slowhttptest,validation,132,132,1
+DoS Slowhttptest,test,1055,1055,1
+DoS slowloris,train,4893,4893,4
+DoS slowloris,validation,105,105,3
+DoS slowloris,test,711,711,1
+FTP-Patator,train,3260,3260,10
+FTP-Patator,validation,389,389,3
+FTP-Patator,test,336,336,2
+PortScan,train,138491,13849,2
+PortScan,validation,9070,907,2
+PortScan,test,11302,1130,6
+SSH-Patator,train,2389,2389,10
+SSH-Patator,validation,304,304,2
+SSH-Patator,test,294,294,2
+Web Attack - Brute Force,train,1076,1076,8
+Web Attack - Brute Force,validation,171,171,1
+Web Attack - Brute Force,test,117,117,1
+Web Attack - XSS,train,487,487,3
+Web Attack - XSS,validation,125,125,1
+Web Attack - XSS,test,17,17,1

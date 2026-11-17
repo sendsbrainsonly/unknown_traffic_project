@@ -1,5 +1,11 @@
 # Current Project Status
 
+## 2026-11-17 — Stage49 CIC eleven-class closed-set retest complete
+
+The current three-view equal-feature-fusion method completed the frozen CIC-IDS-2017 eleven-class task, seed2022, Train/Validation/Test=`99,922/8,438/11,688`. Test Accuracy=`98.8193%`, Macro-Precision=`98.2042%`, Macro-Recall=`99.0148%`, Macro-F1=`98.5877%`, Weighted-F1=`98.8232%`. All saved Test metrics and per-class results were independently replayed. Five-minute capture groups are disjoint; class/day/endpoint confounding and XSS Test support17 limit interpretation. This is a single-method closed-set development result, with no new baseline or open-set comparison.
+
+TrafficFormer uses the user-selected epoch1 replay with its original20-epoch scheduler horizon; FIG/YaTC completed50/200epochs and adapters/head30/30. The finalizer's absolute-external-path metadata error was repaired without repeating training, extraction or inference. Existing completion verification,55source hashes,5checkpoint hashes and the full local evidence bundle passed; no Stage49 workers remain. [Result entry](stage49_cic_multiclass_closed_set_20261117/README.md), [aggregate metrics](stage49_cic_multiclass_closed_set_20261117/run_results.csv), [per-class metrics](stage49_cic_multiclass_closed_set_20261117/per_class_results.csv), [finalization recovery](stage49_cic_multiclass_closed_set_20261117/finalize_recovery_attempt1/README.md). No automatic follow-up experiment.
+
 ## 2026-11-04 — A-2 current result designation
 
 The project-facing A-2 current result is now [A2_CURRENT_RESULTS.md](A2_CURRENT_RESULTS.md), using the completed fresh retraining comparison on4,164 Known/417 Unknown Test flows, seed2022. Our/Native OD AUROC is99.57/94.95%, Unknown F1 is86.93/47.55%, and Known Macro-F1 is99.35/98.61%. Both thresholds use Known-Val P95. This Test membership was selected retrospectively from earlier C2 errors and remains a development configuration; original full-Test controls and exclusion provenance are retained on that page. No frozen experiment or manuscript table is overwritten by this designation.
